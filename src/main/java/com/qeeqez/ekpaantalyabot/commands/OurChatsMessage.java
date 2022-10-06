@@ -4,19 +4,28 @@ import com.qeeqez.ekpaantalyabot.markup.OurChatsMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 
 @Getter
 @Setter
-public class OurChatsMessage extends SendMessage {
+public class OurChatsMessage extends EditMessageText {
 
     private final String text = "Выберите чат, в который хотите вступить";
 
-    public OurChatsMessage(long chatId) {
+    private OurChatsMessage() {
         super();
-        setChatId(String.valueOf(chatId));
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new OurChatsMarkup());
+    }
+
+    private OurChatsMessage(long chatId) {
+        this();
+        setChatId(String.valueOf(chatId));
+    }
+
+    public OurChatsMessage(long chatId, long messageId) {
+        this(chatId);
+        setMessageId((int) messageId);
     }
 }

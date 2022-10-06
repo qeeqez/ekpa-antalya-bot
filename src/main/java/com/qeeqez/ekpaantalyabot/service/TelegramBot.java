@@ -2,6 +2,7 @@ package com.qeeqez.ekpaantalyabot.service;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.OurChatsButton;
+import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlockChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.AddressButton;
 
 import com.qeeqez.ekpaantalyabot.commands.*;
@@ -76,6 +77,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case MainMenuButton.MAIN_MENU_BUTTON -> menuCommandReceived(chatId, messageId);
                 case OurChatsButton.OUR_CHATS_BUTTON -> ourChatsCommandReceived(chatId, messageId);
                 case AddressButton.ADDRESS_BUTTON -> addressCommandReceived(chatId, messageId);
+                case BlockChatsButton.BLOCKS_CHAT_BUTTON -> blocksChatCommandReceived(chatId, messageId);
             }
         }
     }
@@ -94,6 +96,10 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private void addressCommandReceived(long chatId, long messageId) {
         executeEditMessageText(new AddressMessage(chatId, messageId));
+    }
+
+    private void blocksChatCommandReceived(long chatId, long messageId) {
+        executeEditMessageText(new BlockChatsMessage(chatId, messageId));
     }
 
     private void executeMessage(SendMessage message) {

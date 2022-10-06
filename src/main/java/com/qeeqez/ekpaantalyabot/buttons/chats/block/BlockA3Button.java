@@ -1,0 +1,18 @@
+package com.qeeqez.ekpaantalyabot.buttons.chats.block;
+
+import lombok.Getter;
+import lombok.Setter;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
+
+@Getter
+@Setter
+public class BlockA3Button extends InlineKeyboardButton {
+    private final String openURL = "https://t.me/EKPAntalya1207";
+    private final String text = "A3";
+
+    public BlockA3Button() {
+        super();
+        setText(text);
+        setUrl(openURL);
+    }
+}

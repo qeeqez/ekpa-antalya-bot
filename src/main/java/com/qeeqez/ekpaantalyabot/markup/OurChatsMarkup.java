@@ -1,0 +1,30 @@
+package com.qeeqez.ekpaantalyabot.markup;
+
+import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
+import com.qeeqez.ekpaantalyabot.buttons.chats.*;
+import lombok.Getter;
+import lombok.Setter;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
+public class OurChatsMarkup extends InlineKeyboardMarkup{
+
+    public OurChatsMarkup() {
+        super();
+
+        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
+
+        rowsInLine.add(List.of(new EkpaMainChatButton()));
+        rowsInLine.add(List.of(new TradeChatButton()));
+        rowsInLine.add(List.of(new PartyChatButton()));
+        rowsInLine.add(List.of(new BasketballChatButton(), new MafiaChatButton()));
+        rowsInLine.add(List.of(new MainMenuButton()));
+
+        setKeyboard(rowsInLine);
+    }
+}

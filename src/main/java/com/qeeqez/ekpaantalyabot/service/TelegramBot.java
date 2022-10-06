@@ -5,6 +5,9 @@ import com.qeeqez.ekpaantalyabot.buttons.OurChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlockChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.AddressButton;
 
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.MarketsButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.PhoneNumbersButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
 import com.qeeqez.ekpaantalyabot.commands.*;
 import com.qeeqez.ekpaantalyabot.commands.MainMenuMessage;
 import com.qeeqez.ekpaantalyabot.commands.OurChatsMessage;
@@ -75,9 +78,16 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             switch (callbackData) {
                 case MainMenuButton.MAIN_MENU_BUTTON -> menuCommandReceived(chatId, messageId);
+
                 case OurChatsButton.OUR_CHATS_BUTTON -> ourChatsCommandReceived(chatId, messageId);
-                case AddressButton.ADDRESS_BUTTON -> addressCommandReceived(chatId, messageId);
                 case BlockChatsButton.BLOCKS_CHAT_BUTTON -> blocksChatCommandReceived(chatId, messageId);
+
+                case AddressButton.ADDRESS_BUTTON -> addressCommandReceived(chatId, messageId);
+
+                case UsefulInfoButton.USEFUL_INFO_BUTTON -> usefulInfoCommandReceived(chatId, messageId);
+                case MarketsButton.MARKETS_BUTTON -> marketsCommandReceived(chatId, messageId);
+                case PhoneNumbersButton.PHONE_NUMBERS_BUTTON -> phoneNumbersCommandReceived(chatId, messageId);
+
             }
         }
     }
@@ -96,6 +106,18 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private void addressCommandReceived(long chatId, long messageId) {
         executeEditMessageText(new AddressMessage(chatId, messageId));
+    }
+
+    private void usefulInfoCommandReceived(long chatId, long messageId) {
+        executeEditMessageText(new UsefulInfoMessage(chatId, messageId));
+    }
+
+    private void marketsCommandReceived(long chatId, long messageId) {
+        executeEditMessageText(new MarketsMessage(chatId, messageId));
+    }
+
+    private void phoneNumbersCommandReceived(long chatId, long messageId) {
+        executeEditMessageText(new PhoneNumbersMessage(chatId, messageId));
     }
 
     private void blocksChatCommandReceived(long chatId, long messageId) {

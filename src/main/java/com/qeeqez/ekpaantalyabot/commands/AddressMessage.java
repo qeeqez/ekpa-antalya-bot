@@ -23,6 +23,7 @@ public class AddressMessage extends EditMessageText {
             Daire: ___ (Квартира)
             Kat:   ___ (Этаж)
             ```
+            *Индекс:* 07260
             
             *Нумерация Блоков:*
             

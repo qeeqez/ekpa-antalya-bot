@@ -5,13 +5,22 @@ import com.qeeqez.ekpaantalyabot.buttons.OurChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlockChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.AddressButton;
 
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.EmbassyButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.MarketsButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.PhoneNumbersButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.BelarusEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.KazakhstanEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.RussiaEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.UkraineEmbassyButton;
 import com.qeeqez.ekpaantalyabot.commands.*;
 import com.qeeqez.ekpaantalyabot.commands.MainMenuMessage;
 import com.qeeqez.ekpaantalyabot.commands.OurChatsMessage;
 import com.qeeqez.ekpaantalyabot.commands.StartMessage;
+import com.qeeqez.ekpaantalyabot.commands.embassy.BelarusEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.commands.embassy.KazakhstanEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.commands.embassy.RussiaEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.commands.embassy.UkraineEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.config.BotConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -86,7 +95,14 @@ public class TelegramBot extends TelegramLongPollingBot {
 
                 case UsefulInfoButton.USEFUL_INFO_BUTTON -> usefulInfoCommandReceived(chatId, messageId);
                 case MarketsButton.MARKETS_BUTTON -> marketsCommandReceived(chatId, messageId);
+
                 case PhoneNumbersButton.PHONE_NUMBERS_BUTTON -> phoneNumbersCommandReceived(chatId, messageId);
+
+                case EmbassyButton.EMBASSY_BUTTON -> executeEditMessageText(new EmbassyMessage(chatId, messageId));
+                case RussiaEmbassyButton.RUSSIA_EMBASSY_BUTTON -> executeEditMessageText(new RussiaEmbassyMessage(chatId, messageId));
+                case UkraineEmbassyButton.UKRAINE_EMBASSY_BUTTON -> executeEditMessageText(new UkraineEmbassyMessage(chatId, messageId));
+                case KazakhstanEmbassyButton.KAZAKHSTAN_EMBASSY_BUTTON -> executeEditMessageText(new KazakhstanEmbassyMessage(chatId, messageId));
+                case BelarusEmbassyButton.BELARUS_EMBASSY_BUTTON -> executeEditMessageText(new BelarusEmbassyMessage(chatId, messageId));
 
             }
         }

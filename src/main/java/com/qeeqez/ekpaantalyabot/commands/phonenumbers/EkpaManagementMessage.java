@@ -13,11 +13,11 @@ public class EkpaManagementMessage extends EditMessageText {
     private final String text = """
             <b>Ekpa:</b>
 
-            <b>Управляющая компания</b>
+            <b>🧑‍💼Управляющая компания</b>
             Али: +90 (532) 228 38 27
             Сибель: +90 (541) 850 96 06
             
-            <b>Охрана</b>
+            <b>👮 Охрана</b>
             Ayşegül BASUT: +90 (531) 279 94 19
             """;
 

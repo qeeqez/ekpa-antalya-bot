@@ -7,7 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class BlockBButton extends InlineKeyboardButton {
-    private final String openURL = "https://t.me/EKPAntalya1207";
+    private final String openURL = "https://chat.whatsapp.com/HZ0uPnAEuW62Ef7B17Ob50";
     private final String text = "B";
 
     public BlockBButton() {

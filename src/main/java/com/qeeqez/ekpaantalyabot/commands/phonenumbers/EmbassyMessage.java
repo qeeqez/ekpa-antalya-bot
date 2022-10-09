@@ -1,6 +1,6 @@
-package com.qeeqez.ekpaantalyabot.commands;
+package com.qeeqez.ekpaantalyabot.commands.phonenumbers;
 
-import com.qeeqez.ekpaantalyabot.markup.EmbassyMarkup;
+import com.qeeqez.ekpaantalyabot.markup.phonenumbers.EmbassyMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;

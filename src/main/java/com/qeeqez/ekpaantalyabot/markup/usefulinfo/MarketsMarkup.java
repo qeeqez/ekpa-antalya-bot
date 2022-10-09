@@ -1,7 +1,7 @@
-package com.qeeqez.ekpaantalyabot.markup;
+package com.qeeqez.ekpaantalyabot.markup.usefulinfo;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.EmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -12,14 +12,14 @@ import java.util.List;
 
 @Getter
 @Setter
-public class CountryEmbassyMarkup extends InlineKeyboardMarkup {
+public class MarketsMarkup extends InlineKeyboardMarkup {
 
-    public CountryEmbassyMarkup() {
+    public MarketsMarkup() {
         super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new EmbassyButton(), new MainMenuButton()));
+        rowsInLine.add(List.of(new UsefulInfoButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);
     }

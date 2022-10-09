@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.commands;
 
-import com.qeeqez.ekpaantalyabot.markup.MarketsMarkup;
+import com.qeeqez.ekpaantalyabot.markup.usefulinfo.MarketsMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;

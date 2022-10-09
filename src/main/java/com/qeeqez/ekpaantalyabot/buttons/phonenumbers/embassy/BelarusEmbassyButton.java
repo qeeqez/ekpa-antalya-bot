@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy;
+package com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,11 +1,11 @@
-package com.qeeqez.ekpaantalyabot.markup;
+package com.qeeqez.ekpaantalyabot.markup.phonenumbers;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.PhoneNumbersButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.BelarusEmbassyButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.KazakhstanEmbassyButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.RussiaEmbassyButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.embassy.UkraineEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.PhoneNumbersButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.BelarusEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.KazakhstanEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.RussiaEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.UkraineEmbassyButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;

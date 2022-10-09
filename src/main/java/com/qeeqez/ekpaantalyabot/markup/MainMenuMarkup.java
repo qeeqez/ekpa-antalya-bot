@@ -4,6 +4,7 @@ import com.qeeqez.ekpaantalyabot.buttons.AddressButton;
 import com.qeeqez.ekpaantalyabot.buttons.NeighborServicesButton;
 import com.qeeqez.ekpaantalyabot.buttons.OurChatsButton;
 import com.qeeqez.ekpaantalyabot.buttons.SuggestChangesButton;
+import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.PhoneNumbersButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class MainMenuMarkup extends InlineKeyboardMarkup{
 
         rowsInLine.add(List.of(new OurChatsButton()));
         rowsInLine.add(List.of(new AddressButton()));
+        rowsInLine.add(List.of(new PhoneNumbersButton()));
         rowsInLine.add(List.of(new UsefulInfoButton()));
         rowsInLine.add(List.of(new NeighborServicesButton()));
         rowsInLine.add(List.of(new SuggestChangesButton()));

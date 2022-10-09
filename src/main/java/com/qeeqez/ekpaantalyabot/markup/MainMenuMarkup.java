@@ -25,8 +25,8 @@ public class MainMenuMarkup extends InlineKeyboardMarkup{
 
         rowsInLine.add(List.of(new OurChatsButton()));
         rowsInLine.add(List.of(new AddressButton()));
-        rowsInLine.add(List.of(new PhoneNumbersButton()));
-        rowsInLine.add(List.of(new UsefulInfoButton()));
+        rowsInLine.add(List.of(new PhoneNumbersButton(), new UsefulInfoButton()));
+//        rowsInLine.add(List.of(new UsefulInfoButton()));
         rowsInLine.add(List.of(new NeighborServicesButton()));
         rowsInLine.add(List.of(new SuggestChangesButton()));
 

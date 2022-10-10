@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtoconnect;
 
-import com.qeeqez.ekpaantalyabot.markup.usefulinfo.ManagementOfficeMarkup;
+import com.qeeqez.ekpaantalyabot.markup.usefulinfo.HowToConnectMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -17,7 +17,7 @@ public class HowToConnectMessage extends EditMessageText {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
-        setReplyMarkup(new ManagementOfficeMarkup());
+        setReplyMarkup(new HowToConnectMarkup());
     }
 
     private HowToConnectMessage(long chatId) {

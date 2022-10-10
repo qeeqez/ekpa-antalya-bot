@@ -14,6 +14,10 @@ import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.RussiaEmbassyButto
 import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.UkraineEmbassyButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.ManagementOfficeButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtoconnect.HowToConnectButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtoconnect.HowToConnectDaskInsuranceButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtoconnect.HowToConnectElectricityButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtoconnect.HowToConnectWaterButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayAidatButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayConditionerButton;
@@ -28,6 +32,10 @@ import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.RussiaEmbassyMess
 import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.UkraineEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.ManagementOfficeMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.UsefulInfoMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtoconnect.HowToConnectDaskInsuranceMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtoconnect.HowToConnectElectricityMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtoconnect.HowToConnectMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtoconnect.HowToConnectWaterMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayAidatMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayConditionerMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayMessage;
@@ -127,6 +135,10 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case HowToPayAidatButton.HOW_TO_PAY_AIDAT_BUTTON -> executeEditMessageText(new HowToPayAidatMessage(chatId, messageId));
                 case HowToPayConditionerButton.HOW_TO_PAY_CONDITIONER_BUTTON -> executeEditMessageText(new HowToPayConditionerMessage(chatId, messageId));
 
+                case HowToConnectButton.HOW_TO_CONNECT_BUTTON -> executeEditMessageText(new HowToConnectMessage(chatId, messageId));
+                case HowToConnectDaskInsuranceButton.HOW_TO_CONNECT_DASK_INSURANCE_BUTTON -> executeEditMessageText(new HowToConnectDaskInsuranceMessage(chatId, messageId));
+                case HowToConnectElectricityButton.HOW_TO_CONNECT_ELECTRICITY_BUTTON -> executeEditMessageText(new HowToConnectElectricityMessage(chatId, messageId));
+                case HowToConnectWaterButton.HOW_TO_CONNECT_WATER_BUTTON -> executeEditMessageText(new HowToConnectWaterMessage(chatId, messageId));
             }
         }
     }

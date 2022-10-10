@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class HowToPayAidatMessage extends EditMessageText {
 
     private final String text = """
-            *Aйдат* \\
+            *Aйдат*
             
             ℹ️ Ежемесячная плата за обслуживание комплекса\\.
             ⚠️ Оплачивать обязательно, даже если вы не живете в квартире\\.

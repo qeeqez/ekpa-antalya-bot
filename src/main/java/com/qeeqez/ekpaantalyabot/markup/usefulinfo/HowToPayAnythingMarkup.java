@@ -1,7 +1,6 @@
 package com.qeeqez.ekpaantalyabot.markup.usefulinfo;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.ManagementOfficeButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayButton;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,16 +12,14 @@ import java.util.List;
 
 @Getter
 @Setter
-public class UsefulInfoMarkup extends InlineKeyboardMarkup {
+public class HowToPayAnythingMarkup extends InlineKeyboardMarkup {
 
-    public UsefulInfoMarkup() {
+    public HowToPayAnythingMarkup() {
         super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new ManagementOfficeButton()));
-        rowsInLine.add(List.of(new HowToPayButton()));
-        rowsInLine.add(List.of(new MainMenuButton()));
+        rowsInLine.add(List.of(new HowToPayButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);
     }

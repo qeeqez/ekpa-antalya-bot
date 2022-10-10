@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.commands;
+package com.qeeqez.ekpaantalyabot.commands.usefulinfo;
 
 import com.qeeqez.ekpaantalyabot.markup.usefulinfo.UsefulInfoMarkup;
 import lombok.Getter;

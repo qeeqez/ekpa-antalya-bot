@@ -12,7 +12,10 @@ import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.BelarusEmbassyButt
 import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.KazakhstanEmbassyButton;
 import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.RussiaEmbassyButton;
 import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy.UkraineEmbassyButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.ManagementOfficeButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayAidatButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayButton;
 import com.qeeqez.ekpaantalyabot.commands.*;
 import com.qeeqez.ekpaantalyabot.commands.directions.AllMarketsMessage;
 import com.qeeqez.ekpaantalyabot.commands.directions.DirectionsMessage;
@@ -22,6 +25,10 @@ import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.BelarusEmbassyMes
 import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.KazakhstanEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.RussiaEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.UkraineEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.ManagementOfficeMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.UsefulInfoMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayAidatMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayMessage;
 import com.qeeqez.ekpaantalyabot.config.BotConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -95,7 +102,6 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case AddressButton.ADDRESS_BUTTON -> addressCommandReceived(chatId, messageId);
                 case DirectionsButton.DIRECTIONS_BUTTON -> executeEditMessageText(new DirectionsMessage(chatId, messageId));
 
-                case UsefulInfoButton.USEFUL_INFO_BUTTON -> usefulInfoCommandReceived(chatId, messageId);
                 case MarketsButton.MARKETS_BUTTON -> executeEditMessageText(new MarketsMessage(chatId, messageId));
                 case AllMarketsButton.ALL_MARKETS_BUTTON -> executeEditMessageText(new AllMarketsMessage(chatId, messageId));
 
@@ -111,6 +117,12 @@ public class TelegramBot extends TelegramLongPollingBot {
                 case BelarusEmbassyButton.BELARUS_EMBASSY_BUTTON -> executeEditMessageText(new BelarusEmbassyMessage(chatId, messageId));
 
                 case OtherPhonesButton.OTHER_PHONES_BUTTON -> executeEditMessageText(new OtherPhonesMessage(chatId, messageId));
+
+                case UsefulInfoButton.USEFUL_INFO_BUTTON -> executeEditMessageText(new UsefulInfoMessage(chatId, messageId));
+                case ManagementOfficeButton.MANAGEMENT_OFFICE_BUTTON -> executeEditMessageText(new ManagementOfficeMessage(chatId, messageId));
+
+                case HowToPayButton.HOW_TO_PAY_BUTTON -> executeEditMessageText(new HowToPayMessage(chatId, messageId));
+                case HowToPayAidatButton.HOW_TO_PAY_AIDAT_BUTTON -> executeEditMessageText(new HowToPayAidatMessage(chatId, messageId));
 
             }
         }
@@ -130,10 +142,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private void addressCommandReceived(long chatId, long messageId) {
         executeEditMessageText(new AddressMessage(chatId, messageId));
-    }
-
-    private void usefulInfoCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new UsefulInfoMessage(chatId, messageId));
     }
 
     private void phoneNumbersCommandReceived(long chatId, long messageId) {

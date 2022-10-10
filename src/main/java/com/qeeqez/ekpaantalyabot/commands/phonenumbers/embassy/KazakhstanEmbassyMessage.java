@@ -30,6 +30,7 @@ public class KazakhstanEmbassyMessage extends EditMessageText {
         super();
         setText(text);
         setParseMode(ParseMode.HTML);
+        setDisableWebPagePreview(true);
         setReplyMarkup(new CountryEmbassyMarkup());
     }
 

@@ -31,6 +31,7 @@ public class RussiaEmbassyMessage extends EditMessageText {
         super();
         setText(text);
         setParseMode(ParseMode.HTML);
+        setDisableWebPagePreview(true);
         setReplyMarkup(new CountryEmbassyMarkup());
     }
 

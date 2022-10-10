@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.usefulinfo;
+package com.qeeqez.ekpaantalyabot.buttons.directions;
 
 import lombok.Getter;
 import lombok.Setter;

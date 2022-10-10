@@ -16,6 +16,7 @@ import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.ManagementOfficeButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayAidatButton;
 import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayButton;
+import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtopay.HowToPayConditionerButton;
 import com.qeeqez.ekpaantalyabot.commands.*;
 import com.qeeqez.ekpaantalyabot.commands.directions.AllMarketsMessage;
 import com.qeeqez.ekpaantalyabot.commands.directions.DirectionsMessage;
@@ -28,6 +29,7 @@ import com.qeeqez.ekpaantalyabot.commands.phonenumbers.embassy.UkraineEmbassyMes
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.ManagementOfficeMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.UsefulInfoMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayAidatMessage;
+import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayConditionerMessage;
 import com.qeeqez.ekpaantalyabot.commands.usefulinfo.howtopay.HowToPayMessage;
 import com.qeeqez.ekpaantalyabot.config.BotConfig;
 import lombok.extern.slf4j.Slf4j;
@@ -123,6 +125,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
                 case HowToPayButton.HOW_TO_PAY_BUTTON -> executeEditMessageText(new HowToPayMessage(chatId, messageId));
                 case HowToPayAidatButton.HOW_TO_PAY_AIDAT_BUTTON -> executeEditMessageText(new HowToPayAidatMessage(chatId, messageId));
+                case HowToPayConditionerButton.HOW_TO_PAY_CONDITIONER_BUTTON -> executeEditMessageText(new HowToPayConditionerMessage(chatId, messageId));
 
             }
         }

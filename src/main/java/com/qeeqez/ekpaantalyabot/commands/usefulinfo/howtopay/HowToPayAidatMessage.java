@@ -36,9 +36,9 @@ public class HowToPayAidatMessage extends EditMessageText {
             
             *Имя получателя и описание платежа*
             🧑 `EKPA 1207 SITESI YONETIMI`
-            ℹ️ `Aidat Ekpa 1207` Блок Квартира
+            ℹ️ `Aidat Ekpa 1207` Блок Квартира Месяц
             
-            ⚠️ Обязательно указывайте номер блока и квартиры в поле "Описание платежа"
+            ⚠️ Обязательно указывайте номера блока, квартиры и месяца за который оплачиваете
             """;
 
     private HowToPayAidatMessage() {

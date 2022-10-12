@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 public class TradeChatButton extends InlineKeyboardButton{
     private final String openURL = "https://t.me/+byY0Ch0N5NthZDVi";
-    private final String text = "\uD83E\uDDF6 Барахолка";
+    private final String text = "🛍 Барахолка";
 
     public TradeChatButton() {
         super();

@@ -29,9 +29,9 @@ public class HowToPayConditionerMessage extends EditMessageText {
             
             *Имя получателя и описание платежа*
             🧑 `EKPA 1207 SITESI YONETIMI`
-            ℹ️ `Klima Ekpa 1207` Блок Квартира
+            ℹ️ `Klima Ekpa 1207` Блок Квартира Месяц
             
-            ⚠️ Обязательно указывайте номер блока и квартиры в поле "Описание платежа"
+            ⚠️ Обязательно указывайте номера блока, квартиры и месяца за который оплачиваете
             """;
 
     private HowToPayConditionerMessage() {

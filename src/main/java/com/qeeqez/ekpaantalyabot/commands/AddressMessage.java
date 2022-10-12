@@ -12,32 +12,30 @@ public class AddressMessage extends EditMessageText {
 
     private final String text = """
             *Наш адрес:*
-            
-            ```
-            il:    Antalya
-            ilçe:  Kepez
-            Mah:   Güneş
-            Cad:   Şehit Astsubay Ömer Halis Demir
-            Site:  Ekpa 1207
-            Block: ___
-            Daire: ___ (Квартира)
-            Kat:   ___ (Этаж)
-            ```
-            *Индекс:* 07260
+
+            *il:*\s\s\s\s\s\s\s\s\s\s\s\s\s\s`Antalya`
+            *ilçe:*\s\s\s\s\s\s\s\s\s\s`Kepez`
+            *Mahalle:*\s\s\s`Güneş`
+            *Caddesi:*\s\s`Şehit Astsubay Ömer Halis Demir`
+            *Site:*\s\s\s\s\s\s\s\s\s\s`Ekpa 1207`
+            *Block* \\(Блок\\), *Daire* \\(Квартира\\), *Kat* \\(Этаж\\)
+
+            *Индекс:* `07260`
             
             *Нумерация Блоков:*
+
+            `А1` \\- `95А`
+            `А2` \\- `95АА`
+            `А3` \\- `95АВ`
+            `А4` \\- `95АС`
+            `В`\s\s\s\\- `95В`
+            `С`\s\s\s\\- `95С`
+            `D`\s\s\s\\- `95D`
+            `E1` \\- `95E`
+            `E2` \\- `95EA`
             
-            ```
-            А1 - 95А
-            А2 - 95АА
-            А3 - 95АВ
-            А4 - 95АС
-            В  - 95В
-            С  - 95С
-            D  - 95D
-            E1 - 95E
-            E2 - 95EA
-            ```
+            *Нажми меня:*
+            `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
             """;
 
     private AddressMessage() {

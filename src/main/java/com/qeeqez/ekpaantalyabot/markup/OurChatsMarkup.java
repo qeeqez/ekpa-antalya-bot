@@ -21,10 +21,10 @@ public class OurChatsMarkup extends InlineKeyboardMarkup{
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
         rowsInLine.add(List.of(new EkpaMainChatButton()));
-        rowsInLine.add(List.of(new BlockChatsButton()));
-        rowsInLine.add(List.of(new TradeChatButton()));
+        rowsInLine.add(List.of(new BlockChatsButton(), new TradeChatButton()));
         rowsInLine.add(List.of(new PartyChatButton()));
-        rowsInLine.add(List.of(new BasketballChatButton(), new MafiaChatButton()));
+        rowsInLine.add(List.of(new SportChatButton()));
+        rowsInLine.add(List.of(new BasketballChatButton(), new BoardGamesChatButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 
         setKeyboard(rowsInLine);

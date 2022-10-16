@@ -104,18 +104,18 @@ public class TelegramBot extends TelegramLongPollingBot {
             long chatId = update.getCallbackQuery().getMessage().getChatId();
 
             switch (callbackData) {
-                case MainMenuButton.MAIN_MENU_BUTTON -> menuCommandReceived(chatId, messageId);
+                case MainMenuButton.MAIN_MENU_BUTTON -> executeEditMessageText(new MainMenuMessage(chatId, messageId));
 
-                case OurChatsButton.OUR_CHATS_BUTTON -> ourChatsCommandReceived(chatId, messageId);
-                case BlockChatsButton.BLOCKS_CHAT_BUTTON -> blocksChatCommandReceived(chatId, messageId);
+                case OurChatsButton.OUR_CHATS_BUTTON -> executeEditMessageText(new OurChatsMessage(chatId, messageId));
+                case BlockChatsButton.BLOCKS_CHAT_BUTTON -> executeEditMessageText(new BlockChatsMessage(chatId, messageId));
 
-                case AddressButton.ADDRESS_BUTTON -> addressCommandReceived(chatId, messageId);
+                case AddressButton.ADDRESS_BUTTON -> executeEditMessageText(new AddressMessage(chatId, messageId));
                 case DirectionsButton.DIRECTIONS_BUTTON -> executeEditMessageText(new DirectionsMessage(chatId, messageId));
 
                 case MarketsButton.MARKETS_BUTTON -> executeEditMessageText(new MarketsMessage(chatId, messageId));
                 case AllMarketsButton.ALL_MARKETS_BUTTON -> executeEditMessageText(new AllMarketsMessage(chatId, messageId));
 
-                case PhoneNumbersButton.PHONE_NUMBERS_BUTTON -> phoneNumbersCommandReceived(chatId, messageId);
+                case PhoneNumbersButton.PHONE_NUMBERS_BUTTON -> executeEditMessageText(new PhoneNumbersMessage(chatId, messageId));
 
                 case EkpaManagementButton.EKPA_MANAGEMENT_BUTTON -> executeEditMessageText(new EkpaManagementMessage(chatId, messageId));
                 case EmerjencyButton.EMERJENCY_BUTTON -> executeEditMessageText(new EmerjencyMessage(chatId, messageId));
@@ -145,26 +145,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private void startCommandReceived(long chatId) {
         executeMessage(new StartMessage(chatId));
-    }
-
-    private void menuCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new MainMenuMessage(chatId, messageId));
-    }
-
-    private void ourChatsCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new OurChatsMessage(chatId, messageId));
-    }
-
-    private void addressCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new AddressMessage(chatId, messageId));
-    }
-
-    private void phoneNumbersCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new PhoneNumbersMessage(chatId, messageId));
-    }
-
-    private void blocksChatCommandReceived(long chatId, long messageId) {
-        executeEditMessageText(new BlockChatsMessage(chatId, messageId));
     }
 
     private void executeMessage(SendMessage message) {

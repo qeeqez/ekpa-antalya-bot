@@ -7,8 +7,8 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class SportChatButton extends InlineKeyboardButton {
-    private final String openURL = "https://t.me/ekpasport";
-    private final String text = "🏃 Спорт (Бег, Вело, Тренажеры)";
+    private final String openURL = "https://t.me/+fG2kg-vSwQFjMWYy";
+    private final String text = "🏃‍♂️ Sport (Бег, Вело, Воркаут)";
 
     public SportChatButton() {
         super();

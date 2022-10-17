@@ -7,7 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PartyChatButton extends InlineKeyboardButton {
-    private final String openURL = "https://t.me/+IGOqSk2zjsgwZWUy";
+    private final String openURL = "https://t.me/+J2ZE1JvT2NY1ZGQy";
     private final String text = "\uD83C\uDF89 Party";
 
     public PartyChatButton() {

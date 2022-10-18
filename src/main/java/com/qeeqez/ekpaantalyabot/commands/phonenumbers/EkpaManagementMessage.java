@@ -22,7 +22,6 @@ public class EkpaManagementMessage extends EditMessageText {
             """;
 
     private EkpaManagementMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.HTML);
         setReplyMarkup(new EkpaManagementMarkup());

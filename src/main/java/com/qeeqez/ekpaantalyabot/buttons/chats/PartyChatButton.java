@@ -11,7 +11,6 @@ public class PartyChatButton extends InlineKeyboardButton {
     private final String text = "\uD83C\uDF89 Party";
 
     public PartyChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

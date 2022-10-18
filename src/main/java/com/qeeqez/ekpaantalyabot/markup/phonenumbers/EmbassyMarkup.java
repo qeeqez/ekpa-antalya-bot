@@ -19,7 +19,6 @@ import java.util.List;
 public class EmbassyMarkup extends InlineKeyboardMarkup {
 
     public EmbassyMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

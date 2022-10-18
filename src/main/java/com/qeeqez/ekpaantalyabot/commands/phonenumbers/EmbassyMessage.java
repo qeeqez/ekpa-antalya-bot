@@ -13,7 +13,6 @@ public class EmbassyMessage extends EditMessageText {
     private final String text = "*Посольства:*";
 
     private EmbassyMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new EmbassyMarkup());

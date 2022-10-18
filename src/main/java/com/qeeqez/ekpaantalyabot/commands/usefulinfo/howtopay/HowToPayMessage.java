@@ -13,7 +13,6 @@ public class HowToPayMessage extends EditMessageText {
     private final String text = "*Как оплатить?*";
 
     private HowToPayMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

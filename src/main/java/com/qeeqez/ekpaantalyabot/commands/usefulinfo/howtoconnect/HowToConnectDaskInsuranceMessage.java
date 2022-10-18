@@ -24,7 +24,6 @@ public class HowToConnectDaskInsuranceMessage extends EditMessageText {
             """;
 
     private HowToConnectDaskInsuranceMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

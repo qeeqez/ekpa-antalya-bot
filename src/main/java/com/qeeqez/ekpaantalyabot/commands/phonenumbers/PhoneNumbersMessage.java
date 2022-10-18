@@ -13,7 +13,6 @@ public class PhoneNumbersMessage extends EditMessageText {
     private final String text = "*Полезные телефоны:*";
 
     private PhoneNumbersMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new PhoneNumbersMarkup());

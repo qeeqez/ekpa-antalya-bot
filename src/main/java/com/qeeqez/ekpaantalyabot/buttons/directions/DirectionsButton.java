@@ -1,5 +1,6 @@
 package com.qeeqez.ekpaantalyabot.buttons.directions;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -7,12 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class DirectionsButton extends InlineKeyboardButton{
-    public static final String DIRECTIONS_BUTTON = "DIRECTIONS_BUTTON";
     private final String text = "✈️ Как добраться";
 
     public DirectionsButton() {
-        super();
         setText(text);
-        setCallbackData(DIRECTIONS_BUTTON);
+        setCallbackData(InlineButtonEnum.DIRECTIONS_BUTTON.name());
     }
 }

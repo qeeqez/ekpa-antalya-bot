@@ -30,7 +30,6 @@ public class HowToConnectElectricityMessage extends EditMessageText {
             """;
 
     private HowToConnectElectricityMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

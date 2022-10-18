@@ -37,7 +37,6 @@ public class AllMarketsMessage extends EditMessageText {
             """;
 
     private AllMarketsMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

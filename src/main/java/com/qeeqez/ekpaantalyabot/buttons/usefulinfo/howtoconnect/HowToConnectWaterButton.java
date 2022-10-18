@@ -1,5 +1,6 @@
 package com.qeeqez.ekpaantalyabot.buttons.usefulinfo.howtoconnect;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -7,12 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToConnectWaterButton extends InlineKeyboardButton{
-    public static final String HOW_TO_CONNECT_WATER_BUTTON = "HOW_TO_CONNECT_WATER_BUTTON";
     private final String text = "\uD83D\uDCA7 Воду";
 
     public HowToConnectWaterButton() {
-        super();
         setText(text);
-        setCallbackData(HOW_TO_CONNECT_WATER_BUTTON);
+        setCallbackData(InlineButtonEnum.HOW_TO_CONNECT_WATER_BUTTON.name());
     }
 }

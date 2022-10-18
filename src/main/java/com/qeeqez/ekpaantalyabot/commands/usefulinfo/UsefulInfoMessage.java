@@ -13,7 +13,6 @@ public class UsefulInfoMessage extends EditMessageText {
     private final String text = "*Полезная информация*";
 
     private UsefulInfoMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new UsefulInfoMarkup());

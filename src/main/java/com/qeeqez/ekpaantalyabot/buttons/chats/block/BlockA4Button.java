@@ -11,7 +11,6 @@ public class BlockA4Button extends InlineKeyboardButton {
     private final String text = "A4";
 
     public BlockA4Button() {
-        super();
         setText(text);
         setUrl(openURL);
     }

@@ -11,7 +11,6 @@ public class BasketballChatButton extends InlineKeyboardButton {
     private final String text = "\uD83C\uDFC0 Баскетбол";
 
     public BasketballChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

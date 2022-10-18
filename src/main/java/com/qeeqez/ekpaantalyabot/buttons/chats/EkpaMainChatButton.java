@@ -11,7 +11,6 @@ public class EkpaMainChatButton extends InlineKeyboardButton{
     private final String text = "\uD83C\uDFE0 Ekpa 1207";
 
     public EkpaMainChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

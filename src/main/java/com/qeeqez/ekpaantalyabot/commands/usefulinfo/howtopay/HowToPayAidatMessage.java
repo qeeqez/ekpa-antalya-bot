@@ -42,7 +42,6 @@ public class HowToPayAidatMessage extends EditMessageText {
             """;
 
     private HowToPayAidatMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

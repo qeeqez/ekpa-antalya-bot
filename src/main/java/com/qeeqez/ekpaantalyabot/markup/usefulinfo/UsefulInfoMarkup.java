@@ -17,7 +17,6 @@ import java.util.List;
 public class UsefulInfoMarkup extends InlineKeyboardMarkup {
 
     public UsefulInfoMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

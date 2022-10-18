@@ -15,7 +15,6 @@ import java.util.List;
 public class HowToConnectAnythingMarkup extends InlineKeyboardMarkup {
 
     public HowToConnectAnythingMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

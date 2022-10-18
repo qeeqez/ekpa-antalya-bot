@@ -15,7 +15,6 @@ import java.util.List;
 public class DirectionsMarkup extends InlineKeyboardMarkup{
 
     public DirectionsMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

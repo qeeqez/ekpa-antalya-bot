@@ -13,7 +13,6 @@ public class DirectionsMessage extends EditMessageText {
     private final String text = "*Как добраться*";
 
     private DirectionsMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new DirectionsMarkup());

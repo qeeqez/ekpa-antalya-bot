@@ -41,7 +41,6 @@ public class OtherPhonesMessage extends EditMessageText {
             """;
 
     private OtherPhonesMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new OtherPhonesMarkup());

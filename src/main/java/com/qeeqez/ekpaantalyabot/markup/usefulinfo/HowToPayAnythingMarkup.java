@@ -15,7 +15,6 @@ import java.util.List;
 public class HowToPayAnythingMarkup extends InlineKeyboardMarkup {
 
     public HowToPayAnythingMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

@@ -20,7 +20,6 @@ import java.util.List;
 public class MainMenuMarkup extends InlineKeyboardMarkup{
 
     public MainMenuMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

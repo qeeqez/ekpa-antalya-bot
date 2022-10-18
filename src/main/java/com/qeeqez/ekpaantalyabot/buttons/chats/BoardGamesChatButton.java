@@ -11,7 +11,6 @@ public class BoardGamesChatButton extends InlineKeyboardButton {
     private final String text = "\uD83C\uDFB2 Настолки";
 
     public BoardGamesChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

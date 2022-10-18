@@ -1,5 +1,6 @@
 package com.qeeqez.ekpaantalyabot.buttons.directions;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -7,12 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class MarketsButton extends InlineKeyboardButton{
-    public static final String MARKETS_BUTTON = "MARKETS_BUTTON";
     private final String text = "\uD83D\uDECD️ Рынки";
 
     public MarketsButton() {
-        super();
         setText(text);
-        setCallbackData(MARKETS_BUTTON);
+        setCallbackData(InlineButtonEnum.MARKETS_BUTTON.name());
     }
 }

@@ -11,7 +11,6 @@ public class BlockBButton extends InlineKeyboardButton {
     private final String text = "B";
 
     public BlockBButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

@@ -13,7 +13,6 @@ public class MainMenuMessage extends EditMessageText {
     private final String text = "*Главное меню*";
 
     private MainMenuMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new MainMenuMarkup());

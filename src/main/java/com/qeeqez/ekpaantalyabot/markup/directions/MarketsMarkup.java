@@ -16,7 +16,6 @@ import java.util.List;
 public class MarketsMarkup extends InlineKeyboardMarkup {
 
     public MarketsMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

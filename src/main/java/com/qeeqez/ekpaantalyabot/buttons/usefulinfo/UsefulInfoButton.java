@@ -1,5 +1,6 @@
 package com.qeeqez.ekpaantalyabot.buttons.usefulinfo;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -7,12 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class UsefulInfoButton extends InlineKeyboardButton{
-    public static final String USEFUL_INFO_BUTTON = "USEFUL_INFO_BUTTON";
     private final String text = "⭐ Информация";
 
     public UsefulInfoButton() {
-        super();
         setText(text);
-        setCallbackData(USEFUL_INFO_BUTTON);
+        setCallbackData(InlineButtonEnum.USEFUL_INFO_BUTTON.name());
     }
 }

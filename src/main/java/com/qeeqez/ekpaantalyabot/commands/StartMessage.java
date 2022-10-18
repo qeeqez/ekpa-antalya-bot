@@ -13,7 +13,6 @@ public class StartMessage extends SendMessage {
     private final String text = "*Главное меню*";
 
     private StartMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new MainMenuMarkup());

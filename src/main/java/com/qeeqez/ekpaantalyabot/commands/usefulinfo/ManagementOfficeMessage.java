@@ -24,7 +24,6 @@ public class ManagementOfficeMessage extends EditMessageText {
             """;
 
     private ManagementOfficeMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

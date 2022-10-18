@@ -39,7 +39,6 @@ public class AddressMessage extends EditMessageText {
             """;
 
     private AddressMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new AddressMarkup());

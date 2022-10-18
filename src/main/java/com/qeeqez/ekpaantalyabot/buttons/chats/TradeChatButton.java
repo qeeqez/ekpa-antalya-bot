@@ -11,7 +11,6 @@ public class TradeChatButton extends InlineKeyboardButton{
     private final String text = "🛍 Барахолка";
 
     public TradeChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

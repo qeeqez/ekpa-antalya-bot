@@ -15,7 +15,6 @@ import java.util.List;
 public class OtherPhonesMarkup extends InlineKeyboardMarkup {
 
     public OtherPhonesMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

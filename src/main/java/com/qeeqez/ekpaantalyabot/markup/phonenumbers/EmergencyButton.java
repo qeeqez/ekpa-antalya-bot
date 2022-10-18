@@ -15,7 +15,6 @@ import java.util.List;
 public class EmergencyButton extends InlineKeyboardMarkup {
 
     public EmergencyButton() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

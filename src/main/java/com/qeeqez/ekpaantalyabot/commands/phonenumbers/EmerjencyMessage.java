@@ -25,7 +25,6 @@ public class EmerjencyMessage extends EditMessageText {
             """;
 
     private EmerjencyMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new EmergencyButton());

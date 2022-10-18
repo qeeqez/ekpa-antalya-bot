@@ -14,7 +14,6 @@ import java.util.List;
 public class AddressMarkup extends InlineKeyboardMarkup {
 
     public AddressMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

@@ -6,12 +6,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class SuggestChangesButton extends InlineKeyboardButton{
+public class SuggestChangesButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/qeeqez";
     private final String text = "✍️ Предложить изменения";
 
     public SuggestChangesButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

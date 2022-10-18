@@ -13,7 +13,6 @@ public class HowToConnectMessage extends EditMessageText {
     private final String text = "*Как подключить?*";
 
     private HowToConnectMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

@@ -15,7 +15,6 @@ import java.util.List;
 public class ManagementOfficeMarkup extends InlineKeyboardMarkup {
 
     public ManagementOfficeMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

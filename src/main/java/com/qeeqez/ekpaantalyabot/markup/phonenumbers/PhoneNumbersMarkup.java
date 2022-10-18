@@ -18,7 +18,6 @@ import java.util.List;
 public class PhoneNumbersMarkup extends InlineKeyboardMarkup {
 
     public PhoneNumbersMarkup() {
-        super();
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

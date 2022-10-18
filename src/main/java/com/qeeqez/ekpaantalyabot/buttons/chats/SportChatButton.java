@@ -11,7 +11,6 @@ public class SportChatButton extends InlineKeyboardButton {
     private final String text = "🏃‍♂️ Sport (Бег, Вело, Воркаут)";
 
     public SportChatButton() {
-        super();
         setText(text);
         setUrl(openURL);
     }

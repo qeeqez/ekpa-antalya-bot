@@ -28,7 +28,6 @@ public class UkraineEmbassyMessage extends EditMessageText {
             """;
 
     private UkraineEmbassyMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);

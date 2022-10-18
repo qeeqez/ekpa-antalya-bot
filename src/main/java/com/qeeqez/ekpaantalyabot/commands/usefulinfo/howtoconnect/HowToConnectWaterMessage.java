@@ -31,7 +31,6 @@ public class HowToConnectWaterMessage extends EditMessageText {
             """;
 
     private HowToConnectWaterMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

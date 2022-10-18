@@ -35,7 +35,6 @@ public class HowToPayConditionerMessage extends EditMessageText {
             """;
 
     private HowToPayConditionerMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);

@@ -29,7 +29,6 @@ public class BelarusEmbassyMessage extends EditMessageText {
             """;
 
     private BelarusEmbassyMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);

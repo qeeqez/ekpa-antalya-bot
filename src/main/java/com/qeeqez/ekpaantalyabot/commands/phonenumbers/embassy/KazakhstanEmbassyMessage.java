@@ -27,7 +27,6 @@ public class KazakhstanEmbassyMessage extends EditMessageText {
             """;
 
     private KazakhstanEmbassyMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);

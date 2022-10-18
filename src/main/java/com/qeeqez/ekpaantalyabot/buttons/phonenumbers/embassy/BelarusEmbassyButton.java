@@ -1,5 +1,6 @@
 package com.qeeqez.ekpaantalyabot.buttons.phonenumbers.embassy;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
@@ -7,12 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class BelarusEmbassyButton extends InlineKeyboardButton{
-    public static final String BELARUS_EMBASSY_BUTTON = "BELARUS_EMBASSY_BUTTON";
     private final String text = "\uD83C\uDDE7\uD83C\uDDFE️️️ Беларусь";
 
     public BelarusEmbassyButton() {
-        super();
         setText(text);
-        setCallbackData(BELARUS_EMBASSY_BUTTON);
+        setCallbackData(InlineButtonEnum.BELARUS_EMBASSY_BUTTON.name());
     }
 }

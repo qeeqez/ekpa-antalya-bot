@@ -2,7 +2,7 @@ package com.qeeqez.ekpaantalyabot.markup;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.chats.*;
-import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlockChatsButton;
+import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlocksChatButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -16,12 +16,10 @@ import java.util.List;
 public class OurChatsMarkup extends InlineKeyboardMarkup{
 
     public OurChatsMarkup() {
-        super();
-
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
         rowsInLine.add(List.of(new EkpaMainChatButton()));
-        rowsInLine.add(List.of(new BlockChatsButton(), new TradeChatButton()));
+        rowsInLine.add(List.of(new BlocksChatButton(), new TradeChatButton()));
         rowsInLine.add(List.of(new PartyChatButton()));
         rowsInLine.add(List.of(new SportChatButton()));
         rowsInLine.add(List.of(new BasketballChatButton(), new BoardGamesChatButton()));

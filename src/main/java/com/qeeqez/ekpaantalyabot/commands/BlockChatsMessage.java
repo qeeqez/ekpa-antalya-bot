@@ -1,7 +1,6 @@
 package com.qeeqez.ekpaantalyabot.commands;
 
 import com.qeeqez.ekpaantalyabot.markup.BlockChatsMarkup;
-import com.qeeqez.ekpaantalyabot.markup.OurChatsMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -14,7 +13,6 @@ public class BlockChatsMessage extends EditMessageText {
     private final String text = "Выберите чат, в который хотите вступить";
 
     private BlockChatsMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new BlockChatsMarkup());

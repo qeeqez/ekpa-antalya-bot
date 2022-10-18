@@ -1,18 +1,19 @@
 package com.qeeqez.ekpaantalyabot.buttons;
 
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
+import jakarta.inject.Singleton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 @Getter
 @Setter
-public class AddressButton extends InlineKeyboardButton{
-    public static final String ADDRESS_BUTTON = "ADDRESS_BUTTON";
+@Singleton
+public class AddressButton extends InlineKeyboardButton {
     private final String text = "\uD83D\uDCCD Наш Адрес";
 
     public AddressButton() {
-        super();
         setText(text);
-        setCallbackData(ADDRESS_BUTTON);
+        setCallbackData(InlineButtonEnum.ADDRESS_BUTTON.name());
     }
 }

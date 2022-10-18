@@ -13,7 +13,6 @@ public class OurChatsMessage extends EditMessageText {
     private final String text = "Выберите чат, в который хотите вступить";
 
     private OurChatsMessage() {
-        super();
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new OurChatsMarkup());

@@ -7,11 +7,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class DirectionsButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDE80️ Что рядом?";
+public class ResidenceCafeButton extends InlineKeyboardButton{
+    private final String text = "☕ Кафе в Комплексе";
 
-    public DirectionsButton() {
+    public ResidenceCafeButton() {
         setText(text);
-        setCallbackData(InlineButtonEnum.DIRECTIONS_BUTTON.name());
+        setCallbackData(InlineButtonEnum.RESIDENCE_CAFE_BUTTON.name());
     }
 }

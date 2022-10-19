@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.messages.directions;
 
-import com.qeeqez.ekpaantalyabot.markup.directions.ComplexCafeMarkup;
+import com.qeeqez.ekpaantalyabot.markup.directions.ResidenceCafeMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -8,30 +8,28 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 
 @Getter
 @Setter
-public class ComplexCafeMessage extends EditMessageText {
+public class ResidenceCafeMessage extends EditMessageText {
 
     private final String text = """
-            *Кафе Enjoy в нашем комплексе:*
+            *Кафе Enjoy*
             
             WiFi: EnjoyCafeBistro
             Пароль: `Enjoy2022`
-            
-            Меню: [Нажми меня](https://qrmenuapp.akinsoft.com.tr/E4FM0P/enjoy-cafe)
             """;
 
-    private ComplexCafeMessage() {
+    private ResidenceCafeMessage() {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
-        setReplyMarkup(new ComplexCafeMarkup());
+        setReplyMarkup(new ResidenceCafeMarkup());
     }
 
-    private ComplexCafeMessage(long chatId) {
+    private ResidenceCafeMessage(long chatId) {
         this();
         setChatId(String.valueOf(chatId));
     }
 
-    public ComplexCafeMessage(long chatId, long messageId) {
+    public ResidenceCafeMessage(long chatId, long messageId) {
         this(chatId);
         setMessageId((int) messageId);
     }

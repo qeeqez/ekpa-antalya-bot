@@ -15,6 +15,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Log4j2
 @Service
@@ -24,6 +26,8 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     @Autowired
     private UpdateHandler updateHandler;
+
+    private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 
     public TelegramBotService(TelegramBotConfig telegramBotConfig) {
         super(new DefaultBotOptions());
@@ -45,7 +49,7 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        updateHandler.handle(update);
+        executorService.submit(() -> updateHandler.handle(update));
     }
 
     @Override

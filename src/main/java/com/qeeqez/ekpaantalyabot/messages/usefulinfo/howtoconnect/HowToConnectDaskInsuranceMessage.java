@@ -17,7 +17,9 @@ public class HowToConnectDaskInsuranceMessage extends EditMessageText {
                         
             💼 *Взять с собой:*
             1\\. Тапу или договор аренды
-            2\\. Полный адрес / Сказать Ekpa
+            2\\. Паспорт или Икамет
+            3\\. Турецкий налоговый номер \\(Достаточно самого номера\\)
+            4\\. Полный адрес / Сказать Ekpa
                         
             📍 *Оформить Dask в [Nkolay](https://goo.gl/maps/nyumU39FQYJTnFZt9)*
             ℹ️ Здесь же можно подключить электричество

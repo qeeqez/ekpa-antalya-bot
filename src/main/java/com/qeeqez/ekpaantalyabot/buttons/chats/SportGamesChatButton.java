@@ -6,11 +6,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class BasketballChatButton extends InlineKeyboardButton {
+public class SportGamesChatButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/+PyO3tLtwJs05MWM6";
-    private final String text = "\uD83C\uDFC0 Баскетбол";
+    private final String text = "\uD83C\uDFC0 Sport Games";
 
-    public BasketballChatButton() {
+    public SportGamesChatButton() {
         setText(text);
         setUrl(openURL);
     }

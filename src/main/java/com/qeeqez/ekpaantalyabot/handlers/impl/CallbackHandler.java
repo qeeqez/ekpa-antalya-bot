@@ -1,5 +1,8 @@
 package com.qeeqez.ekpaantalyabot.handlers.impl;
 
+import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
+import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
+import com.qeeqez.ekpaantalyabot.handlers.IHandler;
 import com.qeeqez.ekpaantalyabot.messages.AddressMessage;
 import com.qeeqez.ekpaantalyabot.messages.BlockChatsMessage;
 import com.qeeqez.ekpaantalyabot.messages.MainMenuMessage;
@@ -19,12 +22,7 @@ import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectDa
 import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectElectricityMessage;
 import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectMessage;
 import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectWaterMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtopay.HowToPayAidatMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtopay.HowToPayConditionerMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtopay.HowToPayMessage;
-import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
-import com.qeeqez.ekpaantalyabot.handlers.IHandler;
-import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
+import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtopay.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -105,6 +103,11 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToPayAidatMessage(chatId, messageId));
                 case HOW_TO_PAY_CONDITIONER_BUTTON ->
                         messageSender.editMessage(new HowToPayConditionerMessage(chatId, messageId));
+                case HOW_TO_PAY_ELECTRICITY_BUTTON ->
+                        messageSender.editMessage(new HowToPayElectricityMessage(chatId, messageId));
+                case HOW_TO_PAY_WATER_BUTTON ->
+                        messageSender.editMessage(new HowToPayWaterMessage(chatId, messageId));
+
                 case HOW_TO_CONNECT_BUTTON -> messageSender.editMessage(new HowToConnectMessage(chatId, messageId));
 
                 case HOW_TO_CONNECT_DASK_INSURANCE_BUTTON ->

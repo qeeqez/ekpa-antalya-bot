@@ -14,7 +14,7 @@ public class ResidenceCafeMessage extends EditMessageText {
             *Кафе Enjoy*
             
             WiFi: EnjoyCafeBistro
-            Пароль: `Enjoy2022`
+            Пароль: `EnjoyCafe2022`
             
             Время работы: 09:00 \\- 02:00
             """;

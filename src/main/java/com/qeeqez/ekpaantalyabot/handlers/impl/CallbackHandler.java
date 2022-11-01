@@ -3,10 +3,11 @@ package com.qeeqez.ekpaantalyabot.handlers.impl;
 import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
-import com.qeeqez.ekpaantalyabot.messages.AddressMessage;
-import com.qeeqez.ekpaantalyabot.messages.BlockChatsMessage;
-import com.qeeqez.ekpaantalyabot.messages.MainMenuMessage;
-import com.qeeqez.ekpaantalyabot.messages.OurChatsMessage;
+import com.qeeqez.ekpaantalyabot.messages.*;
+import com.qeeqez.ekpaantalyabot.messages.delivery.DeliveryMessage;
+import com.qeeqez.ekpaantalyabot.messages.delivery.FoodDeliveryMessage;
+import com.qeeqez.ekpaantalyabot.messages.delivery.GoodsDeliveryMessage;
+import com.qeeqez.ekpaantalyabot.messages.delivery.ProductsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.directions.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.BelarusEmbassyMessage;
@@ -116,6 +117,13 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToConnectElectricityMessage(chatId, messageId));
                 case HOW_TO_CONNECT_WATER_BUTTON ->
                         messageSender.editMessage(new HowToConnectWaterMessage(chatId, messageId));
+
+
+                case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));
+                case FOOD_DELIVERY_BUTTON -> messageSender.editMessage(new FoodDeliveryMessage(chatId, messageId));
+                case PRODUCTS_DELIVERY_BUTTON -> messageSender.editMessage(new ProductsDeliveryMessage(chatId, messageId));
+                case GOODS_DELIVERY_BUTTON -> messageSender.editMessage(new GoodsDeliveryMessage(chatId, messageId));
+
             }
         } catch (IllegalArgumentException e) {
             log.error("Message Handle Error: " + e.getMessage());

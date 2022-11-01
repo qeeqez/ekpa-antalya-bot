@@ -1,9 +1,6 @@
 package com.qeeqez.ekpaantalyabot.markup;
 
-import com.qeeqez.ekpaantalyabot.buttons.AddressButton;
-import com.qeeqez.ekpaantalyabot.buttons.NeighborServicesButton;
-import com.qeeqez.ekpaantalyabot.buttons.OurChatsButton;
-import com.qeeqez.ekpaantalyabot.buttons.SuggestChangesButton;
+import com.qeeqez.ekpaantalyabot.buttons.*;
 import com.qeeqez.ekpaantalyabot.buttons.chats.EkpaMainChatAttentionButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsButton;
 import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.PhoneNumbersButton;
@@ -28,6 +25,7 @@ public class MainMenuMarkup extends InlineKeyboardMarkup{
         rowsInLine.add(List.of(new OurChatsButton()));
         rowsInLine.add(List.of(new AddressButton(), new DirectionsButton()));
         rowsInLine.add(List.of(new PhoneNumbersButton(), new UsefulInfoButton()));
+        rowsInLine.add(List.of(new DeliveryButton()));
         rowsInLine.add(List.of(new NeighborServicesButton()));
         rowsInLine.add(List.of(new SuggestChangesButton()));
 

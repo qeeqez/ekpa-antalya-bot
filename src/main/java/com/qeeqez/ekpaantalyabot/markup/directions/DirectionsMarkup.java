@@ -1,10 +1,7 @@
 package com.qeeqez.ekpaantalyabot.markup.directions;
 
 import com.qeeqez.ekpaantalyabot.buttons.*;
-import com.qeeqez.ekpaantalyabot.buttons.directions.BarberButton;
-import com.qeeqez.ekpaantalyabot.buttons.directions.MarketsButton;
-import com.qeeqez.ekpaantalyabot.buttons.directions.PrintAndPhotoButton;
-import com.qeeqez.ekpaantalyabot.buttons.directions.ResidenceCafeButton;
+import com.qeeqez.ekpaantalyabot.buttons.directions.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -22,7 +19,7 @@ public class DirectionsMarkup extends InlineKeyboardMarkup{
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
         rowsInLine.add(List.of(new ResidenceCafeButton()));
-        rowsInLine.add(List.of(new MarketsButton()));
+        rowsInLine.add(List.of(new MarketsButton(), new ShopsButton()));
         rowsInLine.add(List.of(new PrintAndPhotoButton()));
         rowsInLine.add(List.of(new BarberButton()));
         rowsInLine.add(List.of(new MainMenuButton()));

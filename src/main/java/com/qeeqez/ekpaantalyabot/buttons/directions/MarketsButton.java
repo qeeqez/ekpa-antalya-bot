@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class MarketsButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDECD️ Рынки";
+    private final String text = "🧺 Рынки";
 
     public MarketsButton() {
         setText(text);

@@ -19,6 +19,7 @@ public enum InlineButtonEnum {
     PRINT_AND_PHOTO_BUTTON,
     BARBER_BUTTON,
     SHOPS_BUTTON,
+    SHOPPING_CENTERS_BUTTON,
 
     // Phones
     PHONE_NUMBERS_BUTTON,

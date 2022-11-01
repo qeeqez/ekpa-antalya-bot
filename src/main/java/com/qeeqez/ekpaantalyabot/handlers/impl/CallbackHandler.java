@@ -7,10 +7,7 @@ import com.qeeqez.ekpaantalyabot.messages.AddressMessage;
 import com.qeeqez.ekpaantalyabot.messages.BlockChatsMessage;
 import com.qeeqez.ekpaantalyabot.messages.MainMenuMessage;
 import com.qeeqez.ekpaantalyabot.messages.OurChatsMessage;
-import com.qeeqez.ekpaantalyabot.messages.directions.AllMarketsMessage;
-import com.qeeqez.ekpaantalyabot.messages.directions.DirectionsMessage;
-import com.qeeqez.ekpaantalyabot.messages.directions.MarketsMessage;
-import com.qeeqez.ekpaantalyabot.messages.directions.ResidenceCafeMessage;
+import com.qeeqez.ekpaantalyabot.messages.directions.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.BelarusEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.KazakhstanEmbassyMessage;
@@ -75,6 +72,7 @@ public class CallbackHandler implements IHandler {
                 case RESIDENCE_CAFE_BUTTON -> messageSender.editMessage(new ResidenceCafeMessage(chatId, messageId));
                 case MARKETS_BUTTON -> messageSender.editMessage(new MarketsMessage(chatId, messageId));
                 case ALL_MARKETS_BUTTON -> messageSender.editMessage(new AllMarketsMessage(chatId, messageId));
+                case PRINT_AND_PHOTO_BUTTON -> messageSender.editMessage(new PrintAndPhotoMessage(chatId, messageId));
 
 
                 case PHONE_NUMBERS_BUTTON -> messageSender.editMessage(new PhoneNumbersMessage(chatId, messageId));

@@ -2,6 +2,7 @@ package com.qeeqez.ekpaantalyabot.markup.directions;
 
 import com.qeeqez.ekpaantalyabot.buttons.*;
 import com.qeeqez.ekpaantalyabot.buttons.directions.MarketsButton;
+import com.qeeqez.ekpaantalyabot.buttons.directions.PrintAndPhotoButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.ResidenceCafeButton;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,6 +22,7 @@ public class DirectionsMarkup extends InlineKeyboardMarkup{
 
         rowsInLine.add(List.of(new ResidenceCafeButton()));
         rowsInLine.add(List.of(new MarketsButton()));
+        rowsInLine.add(List.of(new PrintAndPhotoButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 
         setKeyboard(rowsInLine);

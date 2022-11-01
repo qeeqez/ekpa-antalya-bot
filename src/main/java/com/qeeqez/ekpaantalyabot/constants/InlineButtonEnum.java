@@ -16,6 +16,8 @@ public enum InlineButtonEnum {
     MARKETS_BUTTON,
     ALL_MARKETS_BUTTON,
 
+    PRINT_AND_PHOTO_BUTTON,
+
     // Phones
     PHONE_NUMBERS_BUTTON,
     EKPA_MANAGEMENT_BUTTON,

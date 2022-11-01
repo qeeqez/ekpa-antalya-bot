@@ -12,17 +12,17 @@ public class BarberMessage extends EditMessageText {
 
     private final String text = """
             *Барбершопы*
-            
+                        
             📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
             Стрижка \\+ Мойка головы 60 TL\\.
             Стрижка \\+ Мойка \\+ Бритье 80 TL\\.
                         
             📍 [Yigit Erkek Kuaforu](https://goo.gl/maps/KUYj8pheja9Y2QST6)
             Стрижка \\+ Мойка \\+ Массаж \\+ Скраб \\+ Бритье 100 TL\\.
-            
+                        
             📍 [Barber by Ahmet](https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
-            Стоимость неизвестна\\.
-            
+            Стрижка без бороды 60 TL\\.
+                        
             ℹ️ В локации рядом с тахтакале возможно есть и другие барбершопы
             """;
 

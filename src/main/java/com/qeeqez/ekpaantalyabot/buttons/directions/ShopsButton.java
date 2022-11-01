@@ -12,6 +12,6 @@ public class ShopsButton extends InlineKeyboardButton{
 
     public ShopsButton() {
         setText(text);
-        setCallbackData(InlineButtonEnum.SHOPPING_CENTERS_BUTTON.name());
+        setCallbackData(InlineButtonEnum.SHOPS_BUTTON.name());
     }
 }

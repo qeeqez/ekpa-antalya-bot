@@ -35,6 +35,7 @@ public class HowToPayElectricityMessage extends EditMessageText {
             ⚠️ Если счет еще не выставлен \\- приложение выдаст ошибку\\.
                
             🪙 *Наличными или картой*
+            \\- В отделении Turkcell с небольшой комиссией [Ближайший 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Ближайший 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
             \\- В отделении почты PTT, [Ближайшая почта](https://goo.gl/maps/fwskNzeEbtX9hspz6)
             \\- В любом офисе CK Akdeniz Elektrik, [Ближайший офис](https://goo.gl/maps/nyumU39FQYJTnFZt9)
             """;

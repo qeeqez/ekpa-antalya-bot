@@ -30,7 +30,8 @@ public class ShopsMessage extends EditMessageText {
 
             *Большие сетевые магазины*
             🛒 [Metro](https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \\(4\\.4 км\\)
-            🛒 [5M Migros](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \\(10\\.6 км\\)
+            🛒 [5M Migros Kepez](https://goo.gl/maps/exzze46k7XUkAYPVA) \\(10\\.6 км\\)
+            🛒 [5M Migros Konyaaltı](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \\(10\\.6 км\\)
             """;
 
     private ShopsMessage() {

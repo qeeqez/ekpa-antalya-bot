@@ -20,7 +20,7 @@ public class ShoppingCentersMessage extends EditMessageText {
             📍 [5M Migros AVM Konyaaltı](https://g.page/AntalyaMigrosAVM) \\(10\\.4 км\\)
             
             📍 [Ozdilek Park](https://g.page/ozdilekparkantalya) \\(6\\.6 км\\)
-            📍 [Kipa AVM (5M Migros Kepez)](https://goo.gl/maps/FwRYmYLhETHsdX458) \\(7\\.0 км\\)
+            📍 [Kipa AVM \\(5M Migros Kepez\\)](https://goo.gl/maps/FwRYmYLhETHsdX458) \\(7\\.0 км\\)
             📍 [Erasta AVM](https://g.page/erastaantalyaavm) \\(8\\.3 км\\)
             
             *Строительные*

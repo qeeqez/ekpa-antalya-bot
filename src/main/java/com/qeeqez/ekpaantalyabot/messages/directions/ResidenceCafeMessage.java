@@ -13,13 +13,10 @@ public class ResidenceCafeMessage extends EditMessageText {
     private final String text = """
             *Кафе Enjoy*
             
-            *Доставка, Whatsapp:*
+            📦 *Доставка, Whatsapp:*
             `+90 507 7670007`
             
-            WiFi: EnjoyCafeBistro
-            Пароль: `EnjoyCafe2022`
-            
-            Время работы: 09:00 \\- 02:00
+            🕘 *Время работы:* 09:00 \\- 02:00
             """;
 
     private ResidenceCafeMessage() {

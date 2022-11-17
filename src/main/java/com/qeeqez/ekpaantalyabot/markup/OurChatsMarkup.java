@@ -23,7 +23,7 @@ public class OurChatsMarkup extends InlineKeyboardMarkup{
         rowsInLine.add(List.of(new TaxiChatButton(), new TradeChatButton()));
         rowsInLine.add(List.of(new PartyChatButton()));
         rowsInLine.add(List.of(new SportChatButton(), new SportGamesChatButton()));
-        rowsInLine.add(List.of(new BoardGamesChatButton()));
+        rowsInLine.add(List.of(new GamingChatButton(), new BoardGamesChatButton()));
         rowsInLine.add(List.of(new ParentsChatButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 

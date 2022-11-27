@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.messages.directions;
 
-import com.qeeqez.ekpaantalyabot.markup.directions.ShopsMarkup;
+import com.qeeqez.ekpaantalyabot.markup.directions.DirectionsDefaultMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -38,7 +38,7 @@ public class ShopsMessage extends EditMessageText {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
-        setReplyMarkup(new ShopsMarkup());
+        setReplyMarkup(new DirectionsDefaultMarkup());
     }
 
     private ShopsMessage(long chatId) {

@@ -12,9 +12,9 @@ import java.util.List;
 
 @Getter
 @Setter
-public class ShoppingCentersMarkup extends InlineKeyboardMarkup {
+public class DirectionsDefaultMarkup extends InlineKeyboardMarkup {
 
-    public ShoppingCentersMarkup() {
+    public DirectionsDefaultMarkup() {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 

@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.messages.directions;
 
-import com.qeeqez.ekpaantalyabot.markup.directions.PrintAndPhotoMarkup;
+import com.qeeqez.ekpaantalyabot.markup.directions.DirectionsDefaultMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -23,7 +23,7 @@ public class PopulationOfficeMessage extends EditMessageText {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
-        setReplyMarkup(new PrintAndPhotoMarkup());
+        setReplyMarkup(new DirectionsDefaultMarkup());
     }
 
     private PopulationOfficeMessage(long chatId) {

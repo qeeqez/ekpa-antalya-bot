@@ -14,13 +14,18 @@ public class ManagementOfficeMessage extends EditMessageText {
             *Офис УК*
 
             *Как найти:*
-            [Блок С](https://goo.gl/maps/6GBmdg7VeaWgvKMA9)
-            0 этаж
-            Cо входа Налево
+            [Блок С](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 этаж, со входа налево
             
             *Время работы:*
             08:30 \\- 12:30
             13:30 \\- 18:00
+            
+            *🧑‍💼Управляющая компания*
+            Али: \\+90 \\(532\\) 228 38 27
+            Сибель: \\+90 \\(541\\) 850 96 06
+            
+            *👮 Охрана*
+            Ayşegül BASUT: \\+90 \\(531\\) 279 94 19
             """;
 
     private ManagementOfficeMessage() {

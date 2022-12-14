@@ -23,7 +23,7 @@ public class GoodsDeliveryMessage extends EditMessageText {
                         
             *Самые крупные маркеты*
             [Trendyol](https://www.trendyol.com/)
-            [Hepsiburada](https://www.hepsiburada.com) 🪪
+            [Hepsiburada](https://www.hepsiburada.com)
                         
             *Другие*
             [Amazon](https://www.amazon.com.tr) 🪪

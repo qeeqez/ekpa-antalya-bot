@@ -45,6 +45,7 @@ public class CommandHandler implements IHandler {
 
         switch (command) {
             case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chatId));
+            case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
             default -> messageSender.sendMessage(chatId, ERROR_COMMAND_WAS_NOT_RECOGNIZED);
         }
     }

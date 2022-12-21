@@ -16,6 +16,7 @@ public class MarketsMessage extends EditMessageText {
             📍[Рынок Ersoy](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \\(Понедельник, 2\\.5 км\\)
             📍[Рынок Beşkonaklılar](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \\(Среда до обеда, 500 м\\)
             📍[Рынок Demirgül](https://goo.gl/maps/uqxp8L4RscSe2jpM7) \\(Среда, 1\\.7 км\\)
+            📍[Рынок Sütçüler](https://goo.gl/maps/68DWmnXecWeFLbj4A) \\(Четверг, 2\\.2 км\\)
             📍[Рынок Güneş](https://goo.gl/maps/TjswY6NAtn8e6G6v6) \\(Суббота, 1\\.4 км\\)
             📍[Рынок Teomanpaşa](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \\(Пятница, 2\\.5 км\\)
             """;

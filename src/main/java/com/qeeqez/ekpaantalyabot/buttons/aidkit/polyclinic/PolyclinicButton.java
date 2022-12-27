@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.aidkit;
+package com.qeeqez.ekpaantalyabot.buttons.aidkit.polyclinic;
 
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PolyclinicButton extends InlineKeyboardButton {
-    private final String text = "🧬 Привязка к поликлинике";
+    private final String text = "🧑‍⚕️ Бесплатная медицина";
 
     public PolyclinicButton() {
         setText(text);

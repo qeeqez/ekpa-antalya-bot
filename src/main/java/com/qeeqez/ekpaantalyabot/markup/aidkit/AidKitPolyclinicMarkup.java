@@ -2,9 +2,9 @@ package com.qeeqez.ekpaantalyabot.markup.aidkit;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.aidkit.AidKitButton;
-import com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies.PharmaciesAndroidButton;
-import com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies.PharmaciesIphoneButton;
-import com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies.PharmaciesSiteButton;
+import com.qeeqez.ekpaantalyabot.buttons.aidkit.polyclinic.PolyclinicAndroidButton;
+import com.qeeqez.ekpaantalyabot.buttons.aidkit.polyclinic.PolyclinicIphoneButton;
+import com.qeeqez.ekpaantalyabot.buttons.aidkit.polyclinic.PolyclinicSiteButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -15,14 +15,14 @@ import java.util.List;
 
 @Getter
 @Setter
-public class AidKitPharmaciesMarkup extends InlineKeyboardMarkup{
+public class AidKitPolyclinicMarkup extends InlineKeyboardMarkup{
 
-    public AidKitPharmaciesMarkup() {
+    public AidKitPolyclinicMarkup() {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new PharmaciesSiteButton()));
-        rowsInLine.add(List.of(new PharmaciesAndroidButton(), new PharmaciesIphoneButton()));
+        rowsInLine.add(List.of(new PolyclinicSiteButton()));
+        rowsInLine.add(List.of(new PolyclinicAndroidButton(), new PolyclinicIphoneButton()));
         rowsInLine.add(List.of(new AidKitButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);

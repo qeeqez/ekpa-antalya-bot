@@ -4,6 +4,10 @@ import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
 import com.qeeqez.ekpaantalyabot.messages.*;
+import com.qeeqez.ekpaantalyabot.messages.aidkit.AidKitMessage;
+import com.qeeqez.ekpaantalyabot.messages.aidkit.HospitalsMessage;
+import com.qeeqez.ekpaantalyabot.messages.aidkit.MedicineMessage;
+import com.qeeqez.ekpaantalyabot.messages.aidkit.PolyclinicMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.DeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.FoodDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.GoodsDeliveryMessage;
@@ -125,6 +129,10 @@ public class CallbackHandler implements IHandler {
                 case HOW_TO_CONNECT_WATER_BUTTON ->
                         messageSender.editMessage(new HowToConnectWaterMessage(chatId, messageId));
 
+                case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
+                case MEDICINE_BUTTON -> messageSender.editMessage(new MedicineMessage(chatId, messageId));
+                case HOSPITALS_BUTTON -> messageSender.editMessage(new HospitalsMessage(chatId, messageId));
+                case POLYCLINIC_BUTTON -> messageSender.editMessage(new PolyclinicMessage(chatId, messageId));
 
                 case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));
                 case FOOD_DELIVERY_BUTTON -> messageSender.editMessage(new FoodDeliveryMessage(chatId, messageId));

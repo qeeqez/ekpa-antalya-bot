@@ -62,6 +62,8 @@ public enum InlineButtonEnum {
 
     AID_KIT_BUTTON,
     MEDICINE_BUTTON,
+    PHARMACIES_BUTTON,
+
     HOSPITALS_BUTTON,
     POLYCLINIC_BUTTON,
 

@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class PolyclinicMessage extends EditMessageText {
 
     private final String text = """
-            *💊 Турецкие лекарства*
+            *🧬 Привязка к поликлинике*
             
             """;
 

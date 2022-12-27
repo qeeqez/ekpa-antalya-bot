@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.aidkit;
+package com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies;
 
 import lombok.Getter;
 import lombok.Setter;

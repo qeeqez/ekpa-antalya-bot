@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.aidkit;
+package com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies;
 
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PharmaciesButton extends InlineKeyboardButton {
-    private final String text = "🧑‍⚕️ Аптеки";
+    private final String text = "🧬 Аптеки";
 
     public PharmaciesButton() {
         setText(text);

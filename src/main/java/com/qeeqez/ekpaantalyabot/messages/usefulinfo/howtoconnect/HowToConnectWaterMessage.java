@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class HowToConnectWaterMessage extends EditMessageText {
 
     private final String text = """
-            *Вода*
+            *💧 Вода*
             
             💼 *Взять с собой:*
             1\\. *Тапу* или *договор аренды*
@@ -29,8 +29,8 @@ public class HowToConnectWaterMessage extends EditMessageText {
             ℹ️ При проблемах с водой или напором в кранах \\- сообщите в УК\\.
 
             ⚠️ В квартире есть вентиль для перекрытия воды\\.
-            В 1\\+1 ищите под раковиной\\.
-            В 2\\+1 находится в душе\\.
+            \\- В 1\\+1 ищите под раковиной\\.
+            \\- В 2\\+1 находится в душе\\.
             """;
 
     private HowToConnectWaterMessage() {

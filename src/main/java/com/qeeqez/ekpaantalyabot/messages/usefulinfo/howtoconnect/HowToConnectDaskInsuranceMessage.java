@@ -11,9 +11,13 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class HowToConnectDaskInsuranceMessage extends EditMessageText {
 
     private final String text = """
-            *Страховка от землетрясений Dask*
+            *🛡️ Страховка от землетрясений Dask*
                         
-            ℹ️ Требуется для открытия счета на воду и электричество
+            ℹ️ *Информация:*
+            \\- Требуется для открытия счета на воду и электричество\\.
+            \\- Перед походом в Asat или CK Akdeniz Elektrik у вас *уже должен быть Dask*\\.
+            \\- В Банке Dask сделать нельзя\\.
+            \\- Сделать можно в любой страховой или в Nkolay по ссылке ниже\\.
                         
             💼 *Взять с собой:*
             1\\. Тапу или договор аренды
@@ -22,7 +26,6 @@ public class HowToConnectDaskInsuranceMessage extends EditMessageText {
             4\\. Полный адрес / Сказать Ekpa
                         
             📍 *Оформить Dask в [Nkolay](https://goo.gl/maps/nyumU39FQYJTnFZt9)*
-            ℹ️ Здесь же можно подключить электричество
             """;
 
     private HowToConnectDaskInsuranceMessage() {

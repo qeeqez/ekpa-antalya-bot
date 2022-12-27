@@ -11,18 +11,17 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class HowToConnectElectricityMessage extends EditMessageText {
 
     private final String text = """
-            *Электричество*
+            *⚡️Электричество*
             
             💼 *Взять с собой:*
             1\\. *Тапу* или *договор аренды*
             2\\. *Паспорт* или *Икамет*
             3\\. Турецкий *налоговый номер* \\(Достаточно самого номера\\)
-            4\\. Страховку от землетрясения *Dask* \\(Сделают на месте\\)
+            4\\. Страховку от землетрясения *Dask*
             5\\. *Деньги* для залога \\(Возвращаются при отключении\\)
 
-            📍 *Подключить электричество в [CK Akdeniz Elektrik](https://goo.gl/maps/nyumU39FQYJTnFZt9)*
-            ℹ️ Здесь же можно оформить DASK
-
+            📍 *Подключить можно только в [головном офисе CK Akdeniz Elektrik](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+            
             🧑‍💼*Сообщить в УК:*
             Блок и номер квартиры, а так же абонентский номер на электричество\\.
             
@@ -30,6 +29,7 @@ public class HowToConnectElectricityMessage extends EditMessageText {
             ℹ️ При проблемах с электричеством \\- сообщите в УК\\.
 
             ⚠️ Щиток на электричество находится в шкафу\\.
+            ⚠️ Электрический счетчик находится в подвале за закрытой дверью\\.
             """;
 
     private HowToConnectElectricityMessage() {

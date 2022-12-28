@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class PostOfficeMessage extends EditMessageText {
 
     private final String text = """
-            *Почта \\(PTT\\)*
+            *✉️ Почта \\(PTT\\)*
             
             📍 [PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \\(2\\.6 км\\)
             Почта нашего комплекса, сюда приходят икаметы

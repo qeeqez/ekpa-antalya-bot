@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class MigrationOfficeMessage extends EditMessageText {
 
     private final String text = """
-            *Goc Idaresi \\(Управление миграции Анталии\\)*
+            *👮 Goc Idaresi \\(Управление миграции Анталии\\)*
             
             1️⃣ Здесь нужно сделать прописку\\.
             2️⃣ Здесь происходит рандеву \\(подача на ВНЖ\\) и решаются все вопросы связанные с ВНЖ\\.

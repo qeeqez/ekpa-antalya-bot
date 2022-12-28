@@ -76,6 +76,7 @@ public class CallbackHandler implements IHandler {
                 case MARKETS_BUTTON -> messageSender.editMessage(new MarketsMessage(chatId, messageId));
                 case ALL_MARKETS_BUTTON -> messageSender.editMessage(new AllMarketsMessage(chatId, messageId));
                 case POST_OFFICE_BUTTON -> messageSender.editMessage(new PostOfficeMessage(chatId, messageId));
+                case TAX_OFFICE_BUTTON -> messageSender.editMessage(new TaxOfficeMessage(chatId, messageId));
 
                 case CITY_HALL_BUTTON -> messageSender.editMessage(new CityHallMessage(chatId, messageId));
                 case POPULATION_OFFICE_BUTTON -> messageSender.editMessage(new PopulationOfficeMessage(chatId, messageId));

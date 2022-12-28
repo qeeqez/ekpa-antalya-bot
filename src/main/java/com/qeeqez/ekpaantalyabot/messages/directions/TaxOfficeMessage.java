@@ -8,29 +8,32 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 
 @Getter
 @Setter
-public class CityHallMessage extends EditMessageText {
+public class TaxOfficeMessage extends EditMessageText {
 
     private final String text = """
-            *🏛 Belediye \\(Муниципалитет\\)*
+            *💸 Налоговая \\(Vergi Dairesi\\)*
             
-            ℹ️ В данном заведении можно получить справку *Нумаратаж* \\(Numarataj\\), необходимую для получения ВНЖ
-
-            📍 [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \\(3\\.5 км\\)
+            ℹ️ *Тут можно:*
+            \\- Получить Турецкий налоговый номер ИНН
+            \\- Оплатить пошлину за разблокировку телефона
+            \\- Оплатить штраф за авто на иностранных номерах
+            
+            📍 [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \\(7\\.7 км\\)
             """;
 
-    private CityHallMessage() {
+    private TaxOfficeMessage() {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());
     }
 
-    private CityHallMessage(long chatId) {
+    private TaxOfficeMessage(long chatId) {
         this();
         setChatId(String.valueOf(chatId));
     }
 
-    public CityHallMessage(long chatId, long messageId) {
+    public TaxOfficeMessage(long chatId, long messageId) {
         this(chatId);
         setMessageId((int) messageId);
     }

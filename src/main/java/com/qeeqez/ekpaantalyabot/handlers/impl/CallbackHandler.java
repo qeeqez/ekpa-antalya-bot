@@ -136,6 +136,8 @@ public class CallbackHandler implements IHandler {
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
                 case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
+
+                case TAX_NUMBER_BUTTON -> messageSender.editMessage(new TaxNumberMessage(chatId, messageId));
                 case ADDRESS_NUMARATAJ_BUTTON -> messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));
                 case ADDRESS_REGISTRATION_BUTTON -> messageSender.editMessage(new AddressRegistrationMessage(chatId, messageId));
 

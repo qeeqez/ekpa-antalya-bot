@@ -10,12 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class AidKitMessage extends EditMessageText {
 
-    private final String text = """
-            *❤️ Аптечка*
-            
-            `112` \\- 🚑 Телефон скорой помощи
-            `+90 850 288 38 38` \\- 😷 Горячая линия для иностранцев \\(на всех языках\\)
-            """;
+    private final String text = "*❤️ Аптечка*";
 
     private AidKitMessage() {
         setText(text);

@@ -1,7 +1,8 @@
 package com.qeeqez.ekpaantalyabot.markup.aidkit;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.aidkit.HospitalsButton;
+import com.qeeqez.ekpaantalyabot.buttons.aidkit.AmbulanceButton;
+import com.qeeqez.ekpaantalyabot.buttons.aidkit.hospitals.HospitalsButton;
 import com.qeeqez.ekpaantalyabot.buttons.aidkit.MedicineButton;
 import com.qeeqez.ekpaantalyabot.buttons.aidkit.pharmacies.PharmaciesButton;
 import com.qeeqez.ekpaantalyabot.buttons.aidkit.polyclinic.PolyclinicButton;
@@ -21,8 +22,9 @@ public class AidKitMarkup extends InlineKeyboardMarkup{
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new MedicineButton()));
+        rowsInLine.add(List.of(new AmbulanceButton()));
         rowsInLine.add(List.of(new HospitalsButton(), new PharmaciesButton()));
+        rowsInLine.add(List.of(new MedicineButton()));
         rowsInLine.add(List.of(new PolyclinicButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 

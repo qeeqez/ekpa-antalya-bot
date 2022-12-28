@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.aidkit;
+package com.qeeqez.ekpaantalyabot.buttons.aidkit.hospitals;
 
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;

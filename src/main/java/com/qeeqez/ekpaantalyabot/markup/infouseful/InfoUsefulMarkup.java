@@ -8,6 +8,7 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.TaxNumberButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phonenumbers.PhoneNumbersButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.transport.TransportButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -24,8 +25,9 @@ public class InfoUsefulMarkup extends InlineKeyboardMarkup {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new EdevletButton()));
-        rowsInLine.add(List.of(new TaxNumberButton(), new AddressNumaratajButton(), new AddressRegistrationButton()));
+        rowsInLine.add(List.of(new TransportButton()));
+        rowsInLine.add(List.of(new TaxNumberButton(), new EdevletButton()));
+        rowsInLine.add(List.of(new AddressNumaratajButton(), new AddressRegistrationButton()));
         rowsInLine.add(List.of(new PhoneUnlockButton()));
         rowsInLine.add(List.of(new CarFineButton()));
         rowsInLine.add(List.of(new PhoneNumbersButton()));

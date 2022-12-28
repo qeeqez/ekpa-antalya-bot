@@ -17,6 +17,8 @@ import com.qeeqez.ekpaantalyabot.messages.infoekpa.InfoEkpaMessage;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.ManagementOfficeMessage;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.*;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtopay.*;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.AddressNumaratajMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.AddressRegistrationMessage;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.EdevletMessage;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.InfoUsefulMessage;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.*;
@@ -137,6 +139,8 @@ public class CallbackHandler implements IHandler {
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
                 case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
+                case ADDRESS_NUMARATAJ_BUTTON -> messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));
+                case ADDRESS_REGISTRATION_BUTTON -> messageSender.editMessage(new AddressRegistrationMessage(chatId, messageId));
 
                 case PHONE_UNLOCK_BUTTON -> messageSender.editMessage(new PhoneUnlockMessage(chatId, messageId));
                 case PHONE_UNLOCK_SIM_BUTTON -> messageSender.editMessage(new PhoneUnlockSimMessage(chatId, messageId));

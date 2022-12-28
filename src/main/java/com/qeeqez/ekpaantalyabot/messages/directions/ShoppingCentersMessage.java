@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class ShoppingCentersMessage extends EditMessageText {
 
     private final String text = """
-            *Торговые центры*
+            *🛍 Торговые центры*
                         
             📍 [Agora](https://goo.gl/maps/TshggHds8sAVBACV6) \\(3\\.8 км\\)
             📍 [Mall of Antalya](https://g.page/MallOfAntalya) \\(4\\.8 км\\)

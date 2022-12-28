@@ -20,10 +20,10 @@ public class DirectionsMarkup extends InlineKeyboardMarkup{
 
         rowsInLine.add(List.of(new ResidenceCafeButton()));
         rowsInLine.add(List.of(new MarketsButton(), new ShopsButton(), new ShoppingCentersButton()));
-        rowsInLine.add(List.of(new PostOfficeButton()));
-        rowsInLine.add(List.of(new CityHallButton(), new PopulationOfficeButton(), new MigrationOfficeButton()));
         rowsInLine.add(List.of(new PrintAndPhotoButton()));
         rowsInLine.add(List.of(new BarberButton()));
+        rowsInLine.add(List.of(new TaxOfficeButton(), new PostOfficeButton()));
+        rowsInLine.add(List.of(new CityHallButton(), new PopulationOfficeButton(), new MigrationOfficeButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 
         setKeyboard(rowsInLine);

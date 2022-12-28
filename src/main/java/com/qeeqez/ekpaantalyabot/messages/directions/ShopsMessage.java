@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class ShopsMessage extends EditMessageText {
 
     private final String text = """
-            *Ближайшие магазины*
+            *🍎 Ближайшие магазины*
             
             *Сетевики*
             📍 [Tahtakale](https://goo.gl/maps/trZCbiCLrSVKujrm7) \\(900 м\\)

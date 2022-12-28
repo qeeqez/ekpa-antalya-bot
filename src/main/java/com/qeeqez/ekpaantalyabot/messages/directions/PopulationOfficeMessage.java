@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class PopulationOfficeMessage extends EditMessageText {
 
     private final String text = """
-            *Nufus \\(Министерство регистрации населения\\)*
+            *🧑‍💼 Nufus \\(Министерство регистрации населения\\)*
             
             ℹ️ В данном заведении оформляют Тапу, прописывают Турецких граждан, регистрируют новорожденных и решают другие вопросы народонаселения\\.
             ⚠️ Иностранцы должны прописываться в Goc, а не Nufus\\.

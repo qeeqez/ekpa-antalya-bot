@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class MarketsMessage extends EditMessageText {
 
     private final String text = """
-            *Ближайшие рынки:*
+            *🧺 Ближайшие рынки:*
             
             📍[Рынок Ersoy](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \\(Понедельник, 2\\.5 км\\)
             📍[Рынок Beşkonaklılar](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \\(Среда до обеда, 500 м\\)

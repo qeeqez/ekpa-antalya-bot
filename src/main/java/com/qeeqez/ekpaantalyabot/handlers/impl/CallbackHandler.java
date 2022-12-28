@@ -24,6 +24,7 @@ import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.Kazakh
 import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.RussiaEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.UkraineEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.phoneunlock.*;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.transport.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -136,6 +137,12 @@ public class CallbackHandler implements IHandler {
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
                 case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
+
+                case TRANSPORT_BUTTON -> messageSender.editMessage(new TransportMessage(chatId, messageId));
+                case BUS_BUTTON -> messageSender.editMessage(new BusMessage(chatId, messageId));
+                case ANTALYA_CARD_BUTTON -> messageSender.editMessage(new AntalyaCardMessage(chatId, messageId));
+                case TAXI_BUTTON -> messageSender.editMessage(new TaxiMessage(chatId, messageId));
+                case KICK_SCOOTER_BUTTON -> messageSender.editMessage(new KickScooterMessage(chatId, messageId));
 
                 case TAX_NUMBER_BUTTON -> messageSender.editMessage(new TaxNumberMessage(chatId, messageId));
                 case ADDRESS_NUMARATAJ_BUTTON -> messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));

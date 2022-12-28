@@ -3,24 +3,28 @@ package com.qeeqez.ekpaantalyabot.handlers.impl;
 import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
-import com.qeeqez.ekpaantalyabot.messages.*;
+import com.qeeqez.ekpaantalyabot.messages.AddressMessage;
+import com.qeeqez.ekpaantalyabot.messages.BlockChatsMessage;
+import com.qeeqez.ekpaantalyabot.messages.MainMenuMessage;
+import com.qeeqez.ekpaantalyabot.messages.OurChatsMessage;
 import com.qeeqez.ekpaantalyabot.messages.aidkit.*;
 import com.qeeqez.ekpaantalyabot.messages.delivery.DeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.FoodDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.GoodsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.ProductsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.directions.*;
-import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.*;
-import com.qeeqez.ekpaantalyabot.messages.infouseful.InfoUsefulMessage;
-import com.qeeqez.ekpaantalyabot.messages.infouseful.phoneunlock.*;
-import com.qeeqez.ekpaantalyabot.messages.phonenumbers.*;
-import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.BelarusEmbassyMessage;
-import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.KazakhstanEmbassyMessage;
-import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.RussiaEmbassyMessage;
-import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.UkraineEmbassyMessage;
-import com.qeeqez.ekpaantalyabot.messages.infoekpa.ManagementOfficeMessage;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.InfoEkpaMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.ManagementOfficeMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.*;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtopay.*;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.EdevletMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.InfoUsefulMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.*;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.BelarusEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.KazakhstanEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.RussiaEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phonenumbers.embassy.UkraineEmbassyMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phoneunlock.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -131,6 +135,8 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToConnectInternetMessage(chatId, messageId));
 
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
+
+                case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
 
                 case PHONE_UNLOCK_BUTTON -> messageSender.editMessage(new PhoneUnlockMessage(chatId, messageId));
                 case PHONE_UNLOCK_SIM_BUTTON -> messageSender.editMessage(new PhoneUnlockSimMessage(chatId, messageId));

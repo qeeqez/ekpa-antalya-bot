@@ -1,7 +1,7 @@
 package com.qeeqez.ekpaantalyabot.markup.infouseful;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockIMEIButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -12,14 +12,13 @@ import java.util.List;
 
 @Getter
 @Setter
-public class InfoUsefulMarkup extends InlineKeyboardMarkup {
+public class PhoneUnlockIMEIDetailedMarkup extends InlineKeyboardMarkup {
 
-    public InfoUsefulMarkup() {
+    public PhoneUnlockIMEIDetailedMarkup() {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new PhoneUnlockButton()));
-        rowsInLine.add(List.of(new MainMenuButton()));
+        rowsInLine.add(List.of(new PhoneUnlockIMEIButton(),new MainMenuButton()));
 
         setKeyboard(rowsInLine);
     }

@@ -45,7 +45,8 @@ public enum InlineButtonEnum {
     BELARUS_EMBASSY_BUTTON,
 
     // Useful Info
-    USEFUL_INFO_BUTTON,
+    INFO_EKPA_BUTTON,
+    INFO_USEFUL_BUTTON,
     MANAGEMENT_OFFICE_BUTTON,
 
     // How To Pay

@@ -10,18 +10,19 @@ import com.qeeqez.ekpaantalyabot.messages.delivery.FoodDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.GoodsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.delivery.ProductsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.directions.*;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.InfoUsefulMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.BelarusEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.KazakhstanEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.RussiaEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.UkraineEmbassyMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.ManagementOfficeMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.UsefulInfoMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectDaskInsuranceMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectElectricityMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtoconnect.HowToConnectWaterMessage;
-import com.qeeqez.ekpaantalyabot.messages.usefulinfo.howtopay.*;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.ManagementOfficeMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.InfoEkpaMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.HowToConnectDaskInsuranceMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.HowToConnectElectricityMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.HowToConnectMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.HowToConnectWaterMessage;
+import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtopay.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -104,7 +105,7 @@ public class CallbackHandler implements IHandler {
                 case OTHER_PHONES_BUTTON -> messageSender.editMessage(new OtherPhonesMessage(chatId, messageId));
 
 
-                case USEFUL_INFO_BUTTON -> messageSender.editMessage(new UsefulInfoMessage(chatId, messageId));
+                case INFO_EKPA_BUTTON -> messageSender.editMessage(new InfoEkpaMessage(chatId, messageId));
                 case MANAGEMENT_OFFICE_BUTTON ->
                         messageSender.editMessage(new ManagementOfficeMessage(chatId, messageId));
 
@@ -126,6 +127,8 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToConnectElectricityMessage(chatId, messageId));
                 case HOW_TO_CONNECT_WATER_BUTTON ->
                         messageSender.editMessage(new HowToConnectWaterMessage(chatId, messageId));
+
+                case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
                 case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
                 case AMBULANCE_BUTTON -> messageSender.editMessage(new AmbulanceMessage(chatId, messageId));

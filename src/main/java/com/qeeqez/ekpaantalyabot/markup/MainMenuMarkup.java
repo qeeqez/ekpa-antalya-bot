@@ -4,8 +4,8 @@ import com.qeeqez.ekpaantalyabot.buttons.*;
 import com.qeeqez.ekpaantalyabot.buttons.aidkit.AidKitButton;
 import com.qeeqez.ekpaantalyabot.buttons.chats.EkpaMainChatAttentionButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsButton;
-import com.qeeqez.ekpaantalyabot.buttons.phonenumbers.PhoneNumbersButton;
-import com.qeeqez.ekpaantalyabot.buttons.usefulinfo.UsefulInfoButton;
+import com.qeeqez.ekpaantalyabot.buttons.infoekpa.InfoEkpaButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.InfoUsefulButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -25,9 +25,9 @@ public class MainMenuMarkup extends InlineKeyboardMarkup{
         rowsInLine.add(List.of(new EkpaMainChatAttentionButton()));
         rowsInLine.add(List.of(new OurChatsButton()));
         rowsInLine.add(List.of(new AddressButton(), new DirectionsButton()));
-        rowsInLine.add(List.of(new PhoneNumbersButton(), new UsefulInfoButton()));
-        rowsInLine.add(List.of(new DeliveryButton()));
         rowsInLine.add(List.of(new AidKitButton()));
+        rowsInLine.add(List.of(new InfoUsefulButton(), new InfoEkpaButton()));
+        rowsInLine.add(List.of(new DeliveryButton()));
         rowsInLine.add(List.of(new NeighborServicesButton()));
         rowsInLine.add(List.of(new SuggestChangesButton()));
 

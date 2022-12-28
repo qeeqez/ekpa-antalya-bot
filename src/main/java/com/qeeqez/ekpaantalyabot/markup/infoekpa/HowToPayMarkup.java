@@ -22,6 +22,7 @@ public class HowToPayMarkup extends InlineKeyboardMarkup {
         rowsInLine.add(List.of(new HowToPayAidatButton()));
         rowsInLine.add(List.of(new HowToPayConditionerButton()));
         rowsInLine.add(List.of(new HowToPayElectricityButton(), new HowToPayWaterButton()));
+        rowsInLine.add(List.of(new HowToPayMobilePhoneAndInternetButton()));
         rowsInLine.add(List.of(new InfoEkpaButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);

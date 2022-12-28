@@ -4,6 +4,7 @@ import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.infoekpa.InfoEkpaButton;
 import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtoconnect.HowToConnectDaskInsuranceButton;
 import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtoconnect.HowToConnectElectricityButton;
+import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtoconnect.HowToConnectInternetButton;
 import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtoconnect.HowToConnectWaterButton;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class HowToConnectMarkup extends InlineKeyboardMarkup {
         rowsInLine.add(List.of(new HowToConnectDaskInsuranceButton()));
         rowsInLine.add(List.of(new HowToConnectElectricityButton()));
         rowsInLine.add(List.of(new HowToConnectWaterButton()));
+        rowsInLine.add(List.of(new HowToConnectInternetButton()));
         rowsInLine.add(List.of(new InfoEkpaButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);

@@ -127,9 +127,10 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToConnectWaterMessage(chatId, messageId));
 
                 case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
-                case MEDICINE_BUTTON -> messageSender.editMessage(new MedicineMessage(chatId, messageId));
+                case AMBULANCE_BUTTON -> messageSender.editMessage(new AmbulanceMessage(chatId, messageId));
                 case PHARMACIES_BUTTON -> messageSender.editMessage(new PharmaciesMessage(chatId, messageId));
                 case HOSPITALS_BUTTON -> messageSender.editMessage(new HospitalsMessage(chatId, messageId));
+                case MEDICINE_BUTTON -> messageSender.editMessage(new MedicineMessage(chatId, messageId));
                 case POLYCLINIC_BUTTON -> messageSender.editMessage(new PolyclinicMessage(chatId, messageId));
 
                 case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));

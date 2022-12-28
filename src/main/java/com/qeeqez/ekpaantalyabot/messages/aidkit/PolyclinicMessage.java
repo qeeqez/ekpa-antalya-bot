@@ -1,6 +1,5 @@
 package com.qeeqez.ekpaantalyabot.messages.aidkit;
 
-import com.qeeqez.ekpaantalyabot.markup.aidkit.AidKitAnythingMarkup;
 import com.qeeqez.ekpaantalyabot.markup.aidkit.AidKitPolyclinicMarkup;
 import lombok.Getter;
 import lombok.Setter;

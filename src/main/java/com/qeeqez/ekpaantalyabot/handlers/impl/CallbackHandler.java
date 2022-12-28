@@ -12,6 +12,7 @@ import com.qeeqez.ekpaantalyabot.messages.delivery.ProductsDeliveryMessage;
 import com.qeeqez.ekpaantalyabot.messages.directions.*;
 import com.qeeqez.ekpaantalyabot.messages.infoekpa.howtoconnect.*;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.InfoUsefulMessage;
+import com.qeeqez.ekpaantalyabot.messages.infouseful.phoneunlock.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.*;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.BelarusEmbassyMessage;
 import com.qeeqez.ekpaantalyabot.messages.phonenumbers.embassy.KazakhstanEmbassyMessage;
@@ -130,6 +131,12 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new HowToConnectInternetMessage(chatId, messageId));
 
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
+
+                case PHONE_UNLOCK_BUTTON -> messageSender.editMessage(new PhoneUnlockMessage(chatId, messageId));
+                case PHONE_UNLOCK_SIM_BUTTON -> messageSender.editMessage(new PhoneUnlockSimMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_FREE_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIFreeMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_PAID_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIPaidMessage(chatId, messageId));
 
                 case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
                 case AMBULANCE_BUTTON -> messageSender.editMessage(new AmbulanceMessage(chatId, messageId));

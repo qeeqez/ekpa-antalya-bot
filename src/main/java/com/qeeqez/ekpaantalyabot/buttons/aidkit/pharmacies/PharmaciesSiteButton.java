@@ -10,7 +10,7 @@ public class PharmaciesSiteButton extends InlineKeyboardButton {
 
     private final String openURL = "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler";
 
-    private final String text = "🌎 Сайт с дежурными аптеками\n";
+    private final String text = "🌎 Сайт с дежурными аптеками";
 
     public PharmaciesSiteButton() {
         setText(text);

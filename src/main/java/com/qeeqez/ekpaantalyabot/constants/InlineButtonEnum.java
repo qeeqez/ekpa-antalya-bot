@@ -66,6 +66,8 @@ public enum InlineButtonEnum {
     // Useful Info
     INFO_USEFUL_BUTTON,
 
+    EDEVLET_BUTTON,
+
     PHONE_UNLOCK_BUTTON,
     PHONE_UNLOCK_SIM_BUTTON,
     PHONE_UNLOCK_IMEI_BUTTON,

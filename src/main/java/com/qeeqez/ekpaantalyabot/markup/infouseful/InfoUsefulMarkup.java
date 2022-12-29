@@ -1,10 +1,10 @@
 package com.qeeqez.ekpaantalyabot.markup.infouseful;
 
+import com.qeeqez.ekpaantalyabot.buttons.DeliveryButton;
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.AddressNumaratajButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.AddressRegistrationButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.CarFineButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.TaxNumberButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.aidkit.AidKitButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.infoekpa.InfoEkpaButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.*;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phonenumbers.PhoneNumbersButton;
@@ -25,12 +25,13 @@ public class InfoUsefulMarkup extends InlineKeyboardMarkup {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new TransportButton()));
+        rowsInLine.add(List.of(new InfoEkpaButton()));
+        rowsInLine.add(List.of(new DeliveryButton(), new AidKitButton(), new TransportButton()));
+        rowsInLine.add(List.of(new PhoneNumbersButton()));
         rowsInLine.add(List.of(new TaxNumberButton(), new EdevletButton()));
         rowsInLine.add(List.of(new AddressNumaratajButton(), new AddressRegistrationButton()));
         rowsInLine.add(List.of(new PhoneUnlockButton()));
         rowsInLine.add(List.of(new CarFineButton()));
-        rowsInLine.add(List.of(new PhoneNumbersButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 
         setKeyboard(rowsInLine);

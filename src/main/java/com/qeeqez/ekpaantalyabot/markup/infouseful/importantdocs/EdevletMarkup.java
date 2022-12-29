@@ -1,7 +1,7 @@
-package com.qeeqez.ekpaantalyabot.markup.infouseful;
+package com.qeeqez.ekpaantalyabot.markup.infouseful.importantdocs;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.InfoUsefulButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.ImportantDocsButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletAndroidButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletIphoneButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletSiteButton;
@@ -23,7 +23,7 @@ public class EdevletMarkup extends InlineKeyboardMarkup {
 
         rowsInLine.add(List.of(new EdevletSiteButton()));
         rowsInLine.add(List.of(new EdevletAndroidButton(), new EdevletIphoneButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton(), new MainMenuButton()));
+        rowsInLine.add(List.of(new ImportantDocsButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);
     }

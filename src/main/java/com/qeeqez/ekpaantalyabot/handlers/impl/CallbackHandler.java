@@ -136,7 +136,17 @@ public class CallbackHandler implements IHandler {
 
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
-                case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
+                case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));
+                case FOOD_DELIVERY_BUTTON -> messageSender.editMessage(new FoodDeliveryMessage(chatId, messageId));
+                case PRODUCTS_DELIVERY_BUTTON -> messageSender.editMessage(new ProductsDeliveryMessage(chatId, messageId));
+                case GOODS_DELIVERY_BUTTON -> messageSender.editMessage(new GoodsDeliveryMessage(chatId, messageId));
+
+                case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
+                case AMBULANCE_BUTTON -> messageSender.editMessage(new AmbulanceMessage(chatId, messageId));
+                case PHARMACIES_BUTTON -> messageSender.editMessage(new PharmaciesMessage(chatId, messageId));
+                case HOSPITALS_BUTTON -> messageSender.editMessage(new HospitalsMessage(chatId, messageId));
+                case MEDICINE_BUTTON -> messageSender.editMessage(new MedicineMessage(chatId, messageId));
+                case POLYCLINIC_BUTTON -> messageSender.editMessage(new PolyclinicMessage(chatId, messageId));
 
                 case TRANSPORT_BUTTON -> messageSender.editMessage(new TransportMessage(chatId, messageId));
                 case BUS_BUTTON -> messageSender.editMessage(new BusMessage(chatId, messageId));
@@ -144,6 +154,8 @@ public class CallbackHandler implements IHandler {
                 case TAXI_BUTTON -> messageSender.editMessage(new TaxiMessage(chatId, messageId));
                 case KICK_SCOOTER_BUTTON -> messageSender.editMessage(new KickScooterMessage(chatId, messageId));
 
+                case IMPORTANT_DOCUMENTS_BUTTON -> messageSender.editMessage(new ImportantDocsMessage(chatId, messageId));
+                case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
                 case TAX_NUMBER_BUTTON -> messageSender.editMessage(new TaxNumberMessage(chatId, messageId));
                 case ADDRESS_NUMARATAJ_BUTTON -> messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));
                 case ADDRESS_REGISTRATION_BUTTON -> messageSender.editMessage(new AddressRegistrationMessage(chatId, messageId));
@@ -155,19 +167,6 @@ public class CallbackHandler implements IHandler {
                 case PHONE_UNLOCK_IMEI_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIMessage(chatId, messageId));
                 case PHONE_UNLOCK_IMEI_FREE_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIFreeMessage(chatId, messageId));
                 case PHONE_UNLOCK_IMEI_PAID_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIPaidMessage(chatId, messageId));
-
-                case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
-                case AMBULANCE_BUTTON -> messageSender.editMessage(new AmbulanceMessage(chatId, messageId));
-                case PHARMACIES_BUTTON -> messageSender.editMessage(new PharmaciesMessage(chatId, messageId));
-                case HOSPITALS_BUTTON -> messageSender.editMessage(new HospitalsMessage(chatId, messageId));
-                case MEDICINE_BUTTON -> messageSender.editMessage(new MedicineMessage(chatId, messageId));
-                case POLYCLINIC_BUTTON -> messageSender.editMessage(new PolyclinicMessage(chatId, messageId));
-
-                case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));
-                case FOOD_DELIVERY_BUTTON -> messageSender.editMessage(new FoodDeliveryMessage(chatId, messageId));
-                case PRODUCTS_DELIVERY_BUTTON -> messageSender.editMessage(new ProductsDeliveryMessage(chatId, messageId));
-                case GOODS_DELIVERY_BUTTON -> messageSender.editMessage(new GoodsDeliveryMessage(chatId, messageId));
-
             }
         } catch (IllegalArgumentException e) {
             log.error("Message Handle Error: " + e.getMessage());

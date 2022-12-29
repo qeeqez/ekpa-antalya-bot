@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.messages.infouseful;
 
-import com.qeeqez.ekpaantalyabot.markup.infouseful.InfoUsefulAnythingMarkup;
+import com.qeeqez.ekpaantalyabot.markup.infouseful.importantdocs.ImportantDocsAnythingMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
@@ -48,7 +48,7 @@ public class AddressRegistrationMessage extends EditMessageText {
         setText(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
-        setReplyMarkup(new InfoUsefulAnythingMarkup());
+        setReplyMarkup(new ImportantDocsAnythingMarkup());
     }
 
     private AddressRegistrationMessage(long chatId) {

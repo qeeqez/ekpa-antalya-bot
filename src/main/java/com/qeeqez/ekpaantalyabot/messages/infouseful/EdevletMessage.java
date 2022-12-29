@@ -1,6 +1,6 @@
 package com.qeeqez.ekpaantalyabot.messages.infouseful;
 
-import com.qeeqez.ekpaantalyabot.markup.infouseful.EdevletMarkup;
+import com.qeeqez.ekpaantalyabot.markup.infouseful.importantdocs.EdevletMarkup;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;

@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 public class SuggestChangesButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/qeeqez";
-    private final String text = "✍️ Предложить изменения";
+    private final String text = "🧧 Предложить изменения";
 
     public SuggestChangesButton() {
         setText(text);

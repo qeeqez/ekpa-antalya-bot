@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class MainMenuButton extends InlineKeyboardButton {
-    private final String text = "\uD83C\uDFE0 В главное меню";
+    private final String text = "🎄 В главное меню";
 
     public MainMenuButton() {
         setText(text);

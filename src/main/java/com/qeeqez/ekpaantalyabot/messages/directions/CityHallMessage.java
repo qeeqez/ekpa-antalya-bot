@@ -16,7 +16,7 @@ public class CityHallMessage extends EditMessageText {
             ℹ️ В данном заведении можно получить справку *Нумаратаж* \\(Numarataj\\), необходимую для получения ВНЖ
             ⚡️ На первом этаже можно сделать копии документов за 0\\.5 TR
 
-            📍 [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \\(3\\.5 км\\)
+            📍 [Kepez Belediye](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \\(3\\.5 км\\)
             """;
 
     private CityHallMessage() {

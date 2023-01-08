@@ -1,7 +1,7 @@
 package com.qeeqez.ekpaantalyabot.markup.infouseful.importantdocs;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.ImportantDocsButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.ImportantDocsButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletAndroidButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletIphoneButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletSiteButton;

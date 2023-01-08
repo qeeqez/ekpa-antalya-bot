@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ImportantDocsMessage extends EditMessageText {
 
-    private final String text = "*📝 Важные документы*";
+    private final String text = "*📝 ВНЖ / Прописка / Документы*";
 
     private ImportantDocsMessage() {
         setText(text);

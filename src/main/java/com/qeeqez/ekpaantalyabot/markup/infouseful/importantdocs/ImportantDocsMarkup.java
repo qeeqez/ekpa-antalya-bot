@@ -2,7 +2,11 @@ package com.qeeqez.ekpaantalyabot.markup.infouseful.importantdocs;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.*;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.GetIDNumberButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.TaxNumberButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.AddressNumaratajButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.AddressRegistrationButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -19,6 +23,7 @@ public class ImportantDocsMarkup extends InlineKeyboardMarkup {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
+        rowsInLine.add(List.of(new GetIDNumberButton()));
         rowsInLine.add(List.of(new TaxNumberButton(), new EdevletButton()));
         rowsInLine.add(List.of(new AddressNumaratajButton(), new AddressRegistrationButton()));
         rowsInLine.add(List.of(new InfoUsefulButton(), new MainMenuButton()));

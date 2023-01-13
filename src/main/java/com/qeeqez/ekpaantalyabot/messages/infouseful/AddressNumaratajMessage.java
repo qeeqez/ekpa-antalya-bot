@@ -33,7 +33,7 @@ public class AddressNumaratajMessage extends EditMessageText {
             ⚠️ Если вас несколько человек,то дайте копии паспортов всех, кто должен быть прописан в этой справке
             
             📍 Делается все в [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \\(3\\.5 км\\)
-            ⚡️ На первом этаже можно сделать копии документов за 0\\.5 TR
+            ⚡️ На первом этаже можно сделать копии документов за 1 TL
             """;
 
     private AddressNumaratajMessage() {

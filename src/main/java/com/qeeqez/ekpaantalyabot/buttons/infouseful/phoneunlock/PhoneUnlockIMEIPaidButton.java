@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PhoneUnlockIMEIPaidButton extends InlineKeyboardButton{
-    private final String text = "💰 Платный вариант (6090 TR)";
+    private final String text = "💰 Платный вариант (6090 TL)";
 
     public PhoneUnlockIMEIPaidButton() {
         setText(text);

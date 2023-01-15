@@ -25,7 +25,7 @@ public class HowToPayConditionerMessage extends EditMessageText {
             
             💳 Онлайн переводом с карты турецкого банка на счет:
             
-            🏦 `TR40 0013 4000 0203 8787 9000 04`
+            🏦 `TR21 0003 2000 0000 0109 1233 79`
             
             *Имя получателя и описание платежа*
             🧑 `EKPA 1207 SITESI YONETIMI`

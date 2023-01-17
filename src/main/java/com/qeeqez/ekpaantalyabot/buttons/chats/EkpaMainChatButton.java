@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 public class EkpaMainChatButton extends InlineKeyboardButton{
     private final String openURL = "https://t.me/+J4GQGNZF_t82ZDc6";
-    private final String text = "🎄 Ekpa 1207 NEW";
+    private final String text = "🏠 Ekpa 1207 NEW";
 
     public EkpaMainChatButton() {
         setText(text);

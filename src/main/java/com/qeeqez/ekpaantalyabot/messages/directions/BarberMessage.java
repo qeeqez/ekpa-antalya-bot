@@ -14,7 +14,7 @@ public class BarberMessage extends EditMessageText {
             *Барбершопы*
                         
             📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
-            Стрижка \\+ Мойка головы 70 TL\\.
+            Стрижка \\+ Мойка головы 80 TL\\.
             Стрижка \\+ Мойка \\+ Бритье 100 TL\\.
                         
             📍 [Yigit Erkek Kuaforu](https://goo.gl/maps/KUYj8pheja9Y2QST6)

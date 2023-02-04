@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 @Singleton
 public class AddressButton extends InlineKeyboardButton {
-    private final String text = "📍 Наш Адрес";
+    private final String text = "💌 Наш Адрес";
 
     public AddressButton() {
         setText(text);

@@ -6,9 +6,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class EkpaMainChatAttentionButton extends InlineKeyboardButton{
+public class EkpaMainChatAttentionButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/+14s_2-3hZzVmODAy";
-    private final String text = "🎄 ЧАТ БЕЗ РЕКЛАМЫ 🎄";
+    private final String text = "🏠 ЧАТ БЕЗ РЕКЛАМЫ 🏠";
 
     public EkpaMainChatAttentionButton() {
         setText(text);

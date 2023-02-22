@@ -3,6 +3,7 @@ package com.qeeqez.ekpaantalyabot.markup;
 import com.qeeqez.ekpaantalyabot.buttons.*;
 import com.qeeqez.ekpaantalyabot.buttons.chats.EkpaMainChatAttentionButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsButton;
+import com.qeeqez.ekpaantalyabot.buttons.infoekpa.InfoEkpaButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.InfoUsefulButton;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +24,7 @@ public class MainMenuMarkup extends InlineKeyboardMarkup{
         rowsInLine.add(List.of(new EkpaMainChatAttentionButton()));
         rowsInLine.add(List.of(new OurChatsButton()));
         rowsInLine.add(List.of(new AddressButton(), new DirectionsButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton()));
+        rowsInLine.add(List.of(new InfoUsefulButton(), new InfoEkpaButton()));
         rowsInLine.add(List.of(new NeighborServicesButton()));
         rowsInLine.add(List.of(new SuggestChangesButton()));
 

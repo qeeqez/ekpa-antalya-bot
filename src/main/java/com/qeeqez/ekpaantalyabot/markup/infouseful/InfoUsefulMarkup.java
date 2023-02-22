@@ -5,7 +5,6 @@ import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.CarFineButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.aidkit.AidKitButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.docs.ImportantDocsButton;
-import com.qeeqez.ekpaantalyabot.buttons.infouseful.infoekpa.InfoEkpaButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phonenumbers.PhoneNumbersButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.transport.TransportButton;
@@ -25,9 +24,8 @@ public class InfoUsefulMarkup extends InlineKeyboardMarkup {
 
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new InfoEkpaButton()));
-        rowsInLine.add(List.of(new DeliveryButton(), new AidKitButton(), new TransportButton()));
         rowsInLine.add(List.of(new ImportantDocsButton()));
+        rowsInLine.add(List.of(new DeliveryButton(), new AidKitButton(), new TransportButton()));
         rowsInLine.add(List.of(new PhoneUnlockButton()));
         rowsInLine.add(List.of(new CarFineButton()));
         rowsInLine.add(List.of(new PhoneNumbersButton()));

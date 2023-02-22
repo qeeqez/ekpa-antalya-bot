@@ -1,4 +1,4 @@
-package com.qeeqez.ekpaantalyabot.buttons.infouseful.infoekpa.howtopay;
+package com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtopay;
 
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import lombok.Getter;

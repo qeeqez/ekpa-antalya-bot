@@ -15,11 +15,8 @@ import java.io.Serializable;
 @Component
 public class TelegramMessageSender extends DefaultAbsSender {
 
-    private final TelegramBotConfig botConfig;
-
     public TelegramMessageSender(TelegramBotConfig telegramBotConfig) {
-        super(new DefaultBotOptions());
-        this.botConfig = telegramBotConfig;
+        super(new DefaultBotOptions(), telegramBotConfig.getToken());
     }
 
     public void editMessage(BotApiMethod<? extends Serializable> message) {
@@ -48,8 +45,4 @@ public class TelegramMessageSender extends DefaultAbsSender {
         }
     }
 
-    @Override
-    public String getBotToken() {
-        return botConfig.getToken();
-    }
 }

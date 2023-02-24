@@ -22,16 +22,17 @@ import java.util.concurrent.Executors;
 @Service
 public class TelegramBotService extends TelegramLongPollingBot {
 
-    private final TelegramBotConfig botConfig;
+    @Autowired
+    private TelegramBotConfig botConfig;
 
     @Autowired
     private UpdateHandler updateHandler;
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-    public TelegramBotService(TelegramBotConfig telegramBotConfig) {
-        super(new DefaultBotOptions());
-        this.botConfig = telegramBotConfig;
+    public TelegramBotService(TelegramBotConfig botConfig) {
+        super(new DefaultBotOptions(), botConfig.getToken());
+        this.botConfig = botConfig;
         setBotMenuCommands();
     }
 
@@ -57,8 +58,4 @@ public class TelegramBotService extends TelegramLongPollingBot {
         return botConfig.getUserName();
     }
 
-    @Override
-    public String getBotToken() {
-        return botConfig.getToken();
-    }
 }

@@ -20,7 +20,7 @@ public class PostOfficeMessage extends EditMessageText {
             📍 [PTT Sutculer](https://goo.gl/maps/nd8XwFx2EbUYSCj57) \\(2\\.9 км\\)
             
             ℹ️ Где еще можно оплатить коммунальные услуги читайте в разделе:
-            ⭐️ Информация \\-\\> 🌟 Все о Ekpa \\-\\> 💰 Как Оплатить?
+            🌟 Все о Ekpa \\-\\> 💰 Как Оплатить?
             """;
 
     private PostOfficeMessage() {

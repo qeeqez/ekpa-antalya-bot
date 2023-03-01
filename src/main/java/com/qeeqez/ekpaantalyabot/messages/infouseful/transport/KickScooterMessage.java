@@ -13,11 +13,15 @@ public class KickScooterMessage extends EditMessageText {
     private final String text = """
             *🛴 Самокаты*
             
-            ℹ️ *В Анталии работают 3 службы проката самокатов*
+            ℹ️ *Службы проката самокатов в Анталии:*
             \\- *BinBin* \\(ездят у нашего комплекса\\)
             \\- *Marti*
             \\- *Hop*
-            
+            \\- *Beam*
+            \\- *Hop*
+            \\- *Gez*
+            \\- *Tornet*
+
             ℹ️ Вдоль берега работает служба проката велосипедов *Antbis*
             """;
 

@@ -11,16 +11,16 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class ManagementOfficeMessage extends EditMessageText {
 
     private final String text = """
-            *Офис УК*
+            *Управляющая Компания*
 
-            *Как найти:*
+            💼 *Офис*
             [Блок С](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 этаж, со входа налево
             
-            *Время работы:*
+            🕘 *Понедельник \\- Суббота*
             08:30 \\- 12:30
             13:30 \\- 18:00
             
-            *🧑‍💼Управляющая компания*
+            *🧑‍💼Управляющие*
             Али: \\+90 \\(532\\) 228 38 27
             Сибель: \\+90 \\(541\\) 850 96 06
             

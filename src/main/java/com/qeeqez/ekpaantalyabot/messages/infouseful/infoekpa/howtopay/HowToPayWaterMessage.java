@@ -27,7 +27,7 @@ public class HowToPayWaterMessage extends EditMessageText {
             *Оплата:*
             
             💳 *Онлайн в турецком интернет банке*
-            1\\. Fatura \\(Bill Payment\\) \\-\\> Su \\(Water\\) \\-\\> *Antalya Su*
+            1\\. Fatura \\(Bill Payment\\) \\-\\> Su \\(Water\\) \\-\\> *Antalya Su (ASAT)*
             2\\. Ввести свой *абонентский номер* \\(Добавьте несколько нулей слева от номера\\)
             3\\. Вы увидите сумму и сможете оплатить
             ⚠️ Если счет еще не выставлен \\- приложение выдаст ошибку\\.

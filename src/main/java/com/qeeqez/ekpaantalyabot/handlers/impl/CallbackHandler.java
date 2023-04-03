@@ -80,6 +80,10 @@ public class CallbackHandler implements IHandler {
 
                 case RESIDENCE_FITNESS_SPA_BUTTON ->
                         messageSender.editMessage(new ResidenceFitnessSpaMessage(chatId, messageId));
+                case RESIDENCE_FITNESS_SPA_PRICE_BUTTON ->
+                        messageSender.editMessage(new ResidenceFitnessSpaPriceMessage(chatId, messageId));
+                case RESIDENCE_FITNESS_SPA_PRICE_MASSAGE_BUTTON ->
+                        messageSender.editMessage(new ResidenceFitnessSpaPriceMassageMessage(chatId, messageId));
 
                 case MARKETS_BUTTON -> messageSender.editMessage(new MarketsMessage(chatId, messageId));
                 case ALL_MARKETS_BUTTON -> messageSender.editMessage(new AllMarketsMessage(chatId, messageId));
@@ -95,21 +99,19 @@ public class CallbackHandler implements IHandler {
                 case PRINT_AND_PHOTO_BUTTON -> messageSender.editMessage(new PrintAndPhotoMessage(chatId, messageId));
                 case BARBER_BUTTON -> messageSender.editMessage(new BarberMessage(chatId, messageId));
                 case SHOPS_BUTTON -> messageSender.editMessage(new ShopsMessage(chatId, messageId));
-                case SHOPPING_CENTERS_BUTTON -> messageSender.editMessage(new ShoppingCentersMessage(chatId, messageId));
+                case SHOPPING_CENTERS_BUTTON ->
+                        messageSender.editMessage(new ShoppingCentersMessage(chatId, messageId));
 
                 case PHONE_NUMBERS_BUTTON -> messageSender.editMessage(new PhoneNumbersMessage(chatId, messageId));
-                case EKPA_MANAGEMENT_BUTTON ->
-                        messageSender.editMessage(new EkpaManagementMessage(chatId, messageId));
+                case EKPA_MANAGEMENT_BUTTON -> messageSender.editMessage(new EkpaManagementMessage(chatId, messageId));
                 case EMERJENCY_BUTTON -> messageSender.editMessage(new EmerjencyMessage(chatId, messageId));
 
                 case EMBASSY_BUTTON -> messageSender.editMessage(new EmbassyMessage(chatId, messageId));
                 case RUSSIA_EMBASSY_BUTTON -> messageSender.editMessage(new RussiaEmbassyMessage(chatId, messageId));
-                case UKRAINE_EMBASSY_BUTTON ->
-                        messageSender.editMessage(new UkraineEmbassyMessage(chatId, messageId));
+                case UKRAINE_EMBASSY_BUTTON -> messageSender.editMessage(new UkraineEmbassyMessage(chatId, messageId));
                 case KAZAKHSTAN_EMBASSY_BUTTON ->
                         messageSender.editMessage(new KazakhstanEmbassyMessage(chatId, messageId));
-                case BELARUS_EMBASSY_BUTTON ->
-                        messageSender.editMessage(new BelarusEmbassyMessage(chatId, messageId));
+                case BELARUS_EMBASSY_BUTTON -> messageSender.editMessage(new BelarusEmbassyMessage(chatId, messageId));
 
                 case OTHER_PHONES_BUTTON -> messageSender.editMessage(new OtherPhonesMessage(chatId, messageId));
 
@@ -119,14 +121,12 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new ManagementOfficeMessage(chatId, messageId));
 
                 case HOW_TO_PAY_BUTTON -> messageSender.editMessage(new HowToPayMessage(chatId, messageId));
-                case HOW_TO_PAY_AIDAT_BUTTON ->
-                        messageSender.editMessage(new HowToPayAidatMessage(chatId, messageId));
+                case HOW_TO_PAY_AIDAT_BUTTON -> messageSender.editMessage(new HowToPayAidatMessage(chatId, messageId));
                 case HOW_TO_PAY_CONDITIONER_BUTTON ->
                         messageSender.editMessage(new HowToPayConditionerMessage(chatId, messageId));
                 case HOW_TO_PAY_ELECTRICITY_BUTTON ->
                         messageSender.editMessage(new HowToPayElectricityMessage(chatId, messageId));
-                case HOW_TO_PAY_WATER_BUTTON ->
-                        messageSender.editMessage(new HowToPayWaterMessage(chatId, messageId));
+                case HOW_TO_PAY_WATER_BUTTON -> messageSender.editMessage(new HowToPayWaterMessage(chatId, messageId));
                 case HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON ->
                         messageSender.editMessage(new HowToPayMobilePhoneAndInternetMessage(chatId, messageId));
 
@@ -145,7 +145,8 @@ public class CallbackHandler implements IHandler {
 
                 case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));
                 case FOOD_DELIVERY_BUTTON -> messageSender.editMessage(new FoodDeliveryMessage(chatId, messageId));
-                case PRODUCTS_DELIVERY_BUTTON -> messageSender.editMessage(new ProductsDeliveryMessage(chatId, messageId));
+                case PRODUCTS_DELIVERY_BUTTON ->
+                        messageSender.editMessage(new ProductsDeliveryMessage(chatId, messageId));
                 case GOODS_DELIVERY_BUTTON -> messageSender.editMessage(new GoodsDeliveryMessage(chatId, messageId));
 
                 case AID_KIT_BUTTON -> messageSender.editMessage(new AidKitMessage(chatId, messageId));
@@ -161,19 +162,25 @@ public class CallbackHandler implements IHandler {
                 case TAXI_BUTTON -> messageSender.editMessage(new TaxiMessage(chatId, messageId));
                 case KICK_SCOOTER_BUTTON -> messageSender.editMessage(new KickScooterMessage(chatId, messageId));
 
-                case IMPORTANT_DOCUMENTS_BUTTON -> messageSender.editMessage(new ImportantDocsMessage(chatId, messageId));
+                case IMPORTANT_DOCUMENTS_BUTTON ->
+                        messageSender.editMessage(new ImportantDocsMessage(chatId, messageId));
                 case EDEVLET_BUTTON -> messageSender.editMessage(new EdevletMessage(chatId, messageId));
                 case TAX_NUMBER_BUTTON -> messageSender.editMessage(new TaxNumberMessage(chatId, messageId));
-                case ADDRESS_NUMARATAJ_BUTTON -> messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));
-                case ADDRESS_REGISTRATION_BUTTON -> messageSender.editMessage(new AddressRegistrationMessage(chatId, messageId));
+                case ADDRESS_NUMARATAJ_BUTTON ->
+                        messageSender.editMessage(new AddressNumaratajMessage(chatId, messageId));
+                case ADDRESS_REGISTRATION_BUTTON ->
+                        messageSender.editMessage(new AddressRegistrationMessage(chatId, messageId));
 
                 case CAR_FINE_BUTTON -> messageSender.editMessage(new CarFineMessage(chatId, messageId));
 
                 case PHONE_UNLOCK_BUTTON -> messageSender.editMessage(new PhoneUnlockMessage(chatId, messageId));
                 case PHONE_UNLOCK_SIM_BUTTON -> messageSender.editMessage(new PhoneUnlockSimMessage(chatId, messageId));
-                case PHONE_UNLOCK_IMEI_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIMessage(chatId, messageId));
-                case PHONE_UNLOCK_IMEI_FREE_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIFreeMessage(chatId, messageId));
-                case PHONE_UNLOCK_IMEI_PAID_BUTTON -> messageSender.editMessage(new PhoneUnlockIMEIPaidMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_BUTTON ->
+                        messageSender.editMessage(new PhoneUnlockIMEIMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_FREE_BUTTON ->
+                        messageSender.editMessage(new PhoneUnlockIMEIFreeMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_PAID_BUTTON ->
+                        messageSender.editMessage(new PhoneUnlockIMEIPaidMessage(chatId, messageId));
             }
         } catch (IllegalArgumentException e) {
             log.error("Message Handle Error: " + e.getMessage());

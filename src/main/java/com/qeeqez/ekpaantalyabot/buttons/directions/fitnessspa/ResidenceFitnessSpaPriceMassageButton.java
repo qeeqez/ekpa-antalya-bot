@@ -7,11 +7,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class ResidenceFitnessSpaButton extends InlineKeyboardButton {
-    private final String text = "💪 Fitness & SPA 🧖‍♀️ в Комплексе";
+public class ResidenceFitnessSpaPriceMassageButton extends InlineKeyboardButton {
+    private final String text = "💆‍♀️ Массаж";
 
-    public ResidenceFitnessSpaButton() {
+    public ResidenceFitnessSpaPriceMassageButton() {
         setText(text);
-        setCallbackData(InlineButtonEnum.RESIDENCE_FITNESS_SPA_BUTTON.name());
+        setCallbackData(InlineButtonEnum.RESIDENCE_FITNESS_SPA_PRICE_MASSAGE_BUTTON.name());
     }
 }

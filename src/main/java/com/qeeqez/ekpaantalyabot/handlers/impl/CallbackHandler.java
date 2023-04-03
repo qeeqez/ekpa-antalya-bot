@@ -75,15 +75,22 @@ public class CallbackHandler implements IHandler {
 
                 case DIRECTIONS_BUTTON -> messageSender.editMessage(new DirectionsMessage(chatId, messageId));
                 case RESIDENCE_CAFE_BUTTON -> messageSender.editMessage(new ResidenceCafeMessage(chatId, messageId));
-                case RESIDENCE_CAFE_WIFI_BUTTON -> messageSender.editMessage(new ResidenceCafeWiFiMessage(chatId, messageId));
+                case RESIDENCE_CAFE_WIFI_BUTTON ->
+                        messageSender.editMessage(new ResidenceCafeWiFiMessage(chatId, messageId));
+
+                case RESIDENCE_FITNESS_SPA_BUTTON ->
+                        messageSender.editMessage(new ResidenceFitnessSpaMessage(chatId, messageId));
+
                 case MARKETS_BUTTON -> messageSender.editMessage(new MarketsMessage(chatId, messageId));
                 case ALL_MARKETS_BUTTON -> messageSender.editMessage(new AllMarketsMessage(chatId, messageId));
                 case POST_OFFICE_BUTTON -> messageSender.editMessage(new PostOfficeMessage(chatId, messageId));
                 case TAX_OFFICE_BUTTON -> messageSender.editMessage(new TaxOfficeMessage(chatId, messageId));
 
                 case CITY_HALL_BUTTON -> messageSender.editMessage(new CityHallMessage(chatId, messageId));
-                case POPULATION_OFFICE_BUTTON -> messageSender.editMessage(new PopulationOfficeMessage(chatId, messageId));
-                case MIGRATION_OFFICE_BUTTON -> messageSender.editMessage(new MigrationOfficeMessage(chatId, messageId));
+                case POPULATION_OFFICE_BUTTON ->
+                        messageSender.editMessage(new PopulationOfficeMessage(chatId, messageId));
+                case MIGRATION_OFFICE_BUTTON ->
+                        messageSender.editMessage(new MigrationOfficeMessage(chatId, messageId));
 
                 case PRINT_AND_PHOTO_BUTTON -> messageSender.editMessage(new PrintAndPhotoMessage(chatId, messageId));
                 case BARBER_BUTTON -> messageSender.editMessage(new BarberMessage(chatId, messageId));

@@ -3,7 +3,6 @@ package com.qeeqez.ekpaantalyabot.service;
 import com.qeeqez.ekpaantalyabot.config.TelegramBotConfig;
 import com.qeeqez.ekpaantalyabot.handlers.impl.UpdateHandler;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -13,8 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -22,27 +20,22 @@ import java.util.concurrent.Executors;
 @Service
 public class TelegramBotService extends TelegramLongPollingBot {
 
-    @Autowired
-    private TelegramBotConfig botConfig;
-
-    @Autowired
-    private UpdateHandler updateHandler;
-
+    private final TelegramBotConfig botConfig;
+    private final UpdateHandler updateHandler;
     private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-    public TelegramBotService(TelegramBotConfig botConfig) {
+    public TelegramBotService(TelegramBotConfig botConfig, UpdateHandler updateHandler) {
         super(new DefaultBotOptions(), botConfig.getToken());
         this.botConfig = botConfig;
+        this.updateHandler = updateHandler;
         setBotMenuCommands();
     }
 
     private void setBotMenuCommands() {
-        List<BotCommand> botMenuCommands = new ArrayList<>();
         BotCommand menuCommand = new BotCommand("/menu", "Главное меню");
-        botMenuCommands.add(menuCommand);
-
+        SetMyCommands setMyCommands = new SetMyCommands(Collections.singletonList(menuCommand), new BotCommandScopeDefault(), null);
         try {
-            execute(new SetMyCommands(botMenuCommands, new BotCommandScopeDefault(), null));
+            execute(setMyCommands);
         } catch (TelegramApiException e) {
             log.error("Error setting bot's command list: " + e.getMessage());
         }
@@ -57,5 +50,4 @@ public class TelegramBotService extends TelegramLongPollingBot {
     public String getBotUsername() {
         return botConfig.getUserName();
     }
-
 }

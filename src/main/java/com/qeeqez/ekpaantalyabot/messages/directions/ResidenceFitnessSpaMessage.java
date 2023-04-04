@@ -13,8 +13,10 @@ public class ResidenceFitnessSpaMessage extends EditMessageText {
     private final String text = """
             *🧖‍♀ Ata Wellness Fitness & Spa*
                         
+            📍 *Блок E1, \\-1 этаж*
+                        
             🕘 *Время Работы*
-            *Понедельник \\- Суббота:* 08:00 \\- 12:30
+            *Понедельник \\- Суббота:* 08:00 \\- 22:00
             *Воскресенье:* 12:00 \\- 22:00
                         
             📶 WiFi: *Ata\\_Spa\\_Fitness*

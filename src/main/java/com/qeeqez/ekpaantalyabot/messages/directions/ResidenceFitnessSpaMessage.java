@@ -21,6 +21,9 @@ public class ResidenceFitnessSpaMessage extends EditMessageText {
                         
             📶 WiFi: *Ata\\_Spa\\_Fitness*
             ℹ️ Пароль: `ataspafitnes1207`
+                        
+            👨‍💻 Приложение для входа
+            [📱 iPhone](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)
             """;
 
     private ResidenceFitnessSpaMessage() {

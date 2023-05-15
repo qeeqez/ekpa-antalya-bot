@@ -22,7 +22,7 @@ public class HowToPayWaterMessage extends EditMessageText {
             *Как узнать свой счет за воду:*
             \\- В турецком интернет банке при оплате
             \\- В платежке, которая приходит по адресу, кладут в ящик на стене на первом этаже
-            \\- Онлайн на сайте [ASAT](https://online.asat.gov.tr/webportal/index.php)\\. Нажать Fatura Odeme
+            \\- Онлайн на сайте [ASAT](https://online.asat.gov.tr/webportal/index.php)\\. Нажать HIZLI ÖDEME
 
             *Оплата:*
                         

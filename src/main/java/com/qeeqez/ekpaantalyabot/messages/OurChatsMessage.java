@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class OurChatsMessage extends EditMessageText {
 
-    private final String text = "Нажмите на чат, в который хотите вступить\\.    ";
+    private final String text = "*💬 Наши Чаты:*";
 
     private OurChatsMessage() {
         setText(text);

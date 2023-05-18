@@ -4,6 +4,7 @@ import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.config.TelegramBotConfig;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
 import com.qeeqez.ekpaantalyabot.messages.BotLinkMessage;
+import com.qeeqez.ekpaantalyabot.messages.OurChatsInfoMessage;
 import com.qeeqez.ekpaantalyabot.messages.StartMessage;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,18 +40,26 @@ public class CommandHandler implements IHandler {
         String command = message.getText();
 
         if (isCommand(command)) {
-            command = command.substring(1, command.indexOf("@"));
-        }
 
-        switch (command) {
-            case "start", "menu" -> messageSender.sendMessage(new StartMessage(chatId));
-            case "kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
-            case "botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
-            default -> log.info("Command was not recognised, command: \"{}\"", command);
+            if (isCommandFromRegisteredBot(command)) {
+                command = command.substring(0, command.indexOf("@"));
+            }
+
+            switch (command) {
+                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chatId));
+                case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
+                case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
+                case "/ourchats" -> messageSender.sendMessage(new OurChatsInfoMessage(chatId));
+                default -> log.info("Command was not recognised, command: \"{}\"", command);
+            }
         }
     }
 
     private boolean isCommand(String command) {
-        return command.startsWith("/") && command.replace("Test", "").contains("@" + botConfig.getUserName());
+        return command.startsWith("/");
+    }
+
+    private boolean isCommandFromRegisteredBot(String command) {
+        return command.replace("Test", "").contains("@" + botConfig.getUserName());
     }
 }

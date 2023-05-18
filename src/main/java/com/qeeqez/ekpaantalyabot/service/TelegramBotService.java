@@ -33,9 +33,10 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     private void setBotMenuCommands() {
         BotCommand menuCommand = new BotCommand("/menu", "Главное меню");
-        BotCommand botLinkCommand = new BotCommand("/botlink", "Ссылка на бота");
+        BotCommand botLinkCommand = new BotCommand("/botlink", "Ссылка на Бота");
+        BotCommand ourChatsCommand = new BotCommand("/ourchats", "Наши Чаты");
 
-        SetMyCommands setMyCommands = new SetMyCommands(List.of(menuCommand, botLinkCommand), new BotCommandScopeDefault(), null);
+        SetMyCommands setMyCommands = new SetMyCommands(List.of(menuCommand, botLinkCommand, ourChatsCommand), new BotCommandScopeDefault(), null);
 
         try {
             execute(setMyCommands);

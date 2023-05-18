@@ -12,7 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScopeDefault;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -33,7 +33,10 @@ public class TelegramBotService extends TelegramLongPollingBot {
 
     private void setBotMenuCommands() {
         BotCommand menuCommand = new BotCommand("/menu", "Главное меню");
-        SetMyCommands setMyCommands = new SetMyCommands(Collections.singletonList(menuCommand), new BotCommandScopeDefault(), null);
+        BotCommand botLinkCommand = new BotCommand("/botlink", "Ссылка на бота");
+
+        SetMyCommands setMyCommands = new SetMyCommands(List.of(menuCommand, botLinkCommand), new BotCommandScopeDefault(), null);
+
         try {
             execute(setMyCommands);
         } catch (TelegramApiException e) {

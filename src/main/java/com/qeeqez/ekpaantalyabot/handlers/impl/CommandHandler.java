@@ -22,8 +22,6 @@ public class CommandHandler implements IHandler {
     @Autowired
     private TelegramBotConfig botConfig;
 
-    final String ERROR_COMMAND_WAS_NOT_RECOGNIZED = "Sorry, command was not recognized";
-
     @Override
     public boolean supports(Update update) {
         return update.hasMessage() && update.getMessage().hasText() && update.getMessage().getText().startsWith("/");
@@ -40,15 +38,19 @@ public class CommandHandler implements IHandler {
         Long chatId = message.getChatId();
         String command = message.getText();
 
-        if(command.contains("@" + botConfig.getUserName())) {
-            command = command.substring(0, command.indexOf("@"));
+        if (isCommand(command)) {
+            command = command.substring(1, command.indexOf("@"));
         }
 
         switch (command) {
-            case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chatId));
-            case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
-            case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
-            default -> messageSender.sendMessage(chatId, ERROR_COMMAND_WAS_NOT_RECOGNIZED);
+            case "start", "menu" -> messageSender.sendMessage(new StartMessage(chatId));
+            case "kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
+            case "botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
+            default -> log.info("Command was not recognised, command: \"{}\"", command);
         }
+    }
+
+    private boolean isCommand(String command) {
+        return command.startsWith("/") && command.replace("Test", "").contains("@" + botConfig.getUserName());
     }
 }

@@ -11,12 +11,12 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 public class ResidenceCafeMessage extends EditMessageText {
 
     private final String text = """
-            *Кафе Enjoy*
+            *☕️ Кафе Enjoy*
             
             📦 *Доставка, Whatsapp:*
-            `+90 507 7670007`
+            [\\+90 \\(532\\) 1005590](https://wa.me/+905321005590)
             
-            🕘 *Время работы:* 09:00 \\- 02:00
+            🕘 *Время работы:* 09:00 \\- 00:00
             """;
 
     private ResidenceCafeMessage() {

@@ -20,7 +20,7 @@ public class TaxiMessage extends EditMessageText {
             2\\. Приложение BiTaksi
             3\\. Приложение Uber
             
-            💵 *Стоимость: Посадка 10TL \\+ 12TL/км*
+            💵 *Стоимость: Посадка 10TL \\+ 14TL/км*
             
             🪙 *Оплата*
             \\- По счетчику в зеркале

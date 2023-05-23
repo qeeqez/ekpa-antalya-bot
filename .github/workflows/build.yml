@@ -54,9 +54,8 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: 🔑 Login to Amazon ECR
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-        with:
-          registry: ${{ env.ECR_REGISTRY }}
 
       - name: ⬇️ Download jar
         uses: actions/cache@v3
@@ -69,4 +68,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/ekpa-bot:${{ github.ref_name }}
+          tags: ${{ steps.login-ecr.outputs.registry }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/ekpa-bot:${{ github.ref_name }}

@@ -1,5 +1,9 @@
 name: Build Bot
 
+permissions:
+  id-token: write
+  contents: read
+
 on:
   push:
 

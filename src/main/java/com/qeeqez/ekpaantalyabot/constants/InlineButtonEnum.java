@@ -80,6 +80,7 @@ public enum InlineButtonEnum {
     // Transport
     TRANSPORT_BUTTON,
     BUS_BUTTON,
+    BUS_CONCESSIONARY_BUTTON,
     ANTALYA_CARD_BUTTON,
     TAXI_BUTTON,
     KICK_SCOOTER_BUTTON,

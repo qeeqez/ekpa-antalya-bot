@@ -159,6 +159,8 @@ public class CallbackHandler implements IHandler {
                 case TRANSPORT_BUTTON -> messageSender.editMessage(new TransportMessage(chatId, messageId));
                 case BUS_BUTTON -> messageSender.editMessage(new BusMessage(chatId, messageId));
                 case ANTALYA_CARD_BUTTON -> messageSender.editMessage(new AntalyaCardMessage(chatId, messageId));
+                case BUS_CONCESSIONARY_BUTTON ->
+                        messageSender.editMessage(new BusConcessionaryMessage(chatId, messageId));
                 case TAXI_BUTTON -> messageSender.editMessage(new TaxiMessage(chatId, messageId));
                 case KICK_SCOOTER_BUTTON -> messageSender.editMessage(new KickScooterMessage(chatId, messageId));
 

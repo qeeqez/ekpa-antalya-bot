@@ -19,7 +19,6 @@ public class BusMessage extends EditMessageText {
             💵 *Стоимость проезда*
             AntalyaKart \\- 9\\.6 TL
             Банковская карта \\- 9\\.85 TL
-            Студентам и школьникам \\- 4 TL
             
             🪙️ *Стоимость пересадки*
             AntalyaKart \\- 3 TL

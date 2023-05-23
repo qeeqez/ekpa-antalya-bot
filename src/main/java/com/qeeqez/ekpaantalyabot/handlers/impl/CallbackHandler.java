@@ -141,6 +141,13 @@ public class CallbackHandler implements IHandler {
                 case HOW_TO_CONNECT_INTERNET_BUTTON ->
                         messageSender.editMessage(new HowToConnectInternetMessage(chatId, messageId));
 
+                case HOW_TO_DISCONNECT_BUTTON ->
+                        messageSender.editMessage(new HowToDisConnectMessage(chatId, messageId));
+                case HOW_TO_DISCONNECT_ELECTRICITY_BUTTON ->
+                        messageSender.editMessage(new HowToDisConnectElectricityMessage(chatId, messageId));
+                case HOW_TO_DISCONNECT_WATER_BUTTON ->
+                        messageSender.editMessage(new HowToDisConnectWaterMessage(chatId, messageId));
+
                 case INFO_USEFUL_BUTTON -> messageSender.editMessage(new InfoUsefulMessage(chatId, messageId));
 
                 case DELIVERY_BUTTON -> messageSender.editMessage(new DeliveryMessage(chatId, messageId));

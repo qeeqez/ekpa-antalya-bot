@@ -69,4 +69,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/ekpa-bot:{{ github.ref }}
+          tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/ekpa-bot:${{ github.ref_name }}

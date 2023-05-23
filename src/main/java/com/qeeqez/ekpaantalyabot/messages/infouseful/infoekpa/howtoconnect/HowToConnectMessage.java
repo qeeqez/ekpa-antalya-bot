@@ -10,7 +10,12 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToConnectMessage extends EditMessageText {
 
-    private final String text = "*Как подключить?*";
+    private final String text = """
+            *🧑‍🔧 Как подключить / переоформить? ♻️*
+                        
+            1️⃣ Процесс первого подключения от переоформления ничем не отличается
+            2️⃣ При переоформлении предыдущему плательщику отдельно ездить отключаться не нужно
+            """;
 
     private HowToConnectMessage() {
         setText(text);

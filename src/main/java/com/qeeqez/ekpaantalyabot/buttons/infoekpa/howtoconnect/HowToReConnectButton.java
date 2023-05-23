@@ -7,10 +7,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class HowToConnectButton extends InlineKeyboardButton{
-    private final String text = "🧑‍🔧 Как подключить?";
+public class HowToReConnectButton extends InlineKeyboardButton {
+    private final String text = "♻️ Как Переоформить?";
 
-    public HowToConnectButton() {
+    public HowToReConnectButton() {
         setText(text);
         setCallbackData(InlineButtonEnum.HOW_TO_CONNECT_BUTTON.name());
     }

@@ -4,7 +4,14 @@
     {
       "name": "ekpa-antalya-bot",
       "cpu": 256,
-      "memory": 512
+      "memory": 512,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
     }
   ]
 }

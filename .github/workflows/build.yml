@@ -88,6 +88,8 @@ jobs:
           context: .
           push: true
           tags: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
+          cache-from: type=gha,src=/tmp/.buildx-cache
+          cache-to: type=gha,dest=/tmp/.buildx-cache
 
   deploy:
     name: Deploy docker image to AWS ECS
@@ -125,6 +127,7 @@ jobs:
 
       - name: 🚀 Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        timeout-minutes: 2
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ekpa-antalya-bot-service

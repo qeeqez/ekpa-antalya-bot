@@ -1,0 +1,9 @@
+{
+  "family": "ekpa-antalya-bot-task-family",
+  "containerDefinitions": [
+    {
+      "cpu": 1024,
+      "memory": 1024
+    }
+  ]
+}

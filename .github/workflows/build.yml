@@ -5,7 +5,7 @@ on:
 
 env:
   AWS_IAM: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/iam-github-oidc
-  DOCKER_IMAGE_NAME: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/${{ github.event.repository.name }}
+  DOCKER_IMAGE_NAME: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ vars.AWS_REGION }}.amazonaws.com/${{ github.event.repository.name }}
   DOCKER_IMAGE_TAG: ${{ contains(github.ref, 'refs/heads/main') && 'latest' || github.ref_name }}
 
 # These permissions are needed to interact with GitHub's OIDC Token endpoint.
@@ -62,7 +62,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ env.AWS_IAM }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
       - name: 🔑 Login to Amazon ECR
         id: login-ecr
@@ -101,7 +101,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ env.AWS_IAM }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ${{ vars.AWS_REGION }}
 
       - name: 🔑 Login to Amazon ECR
         id: login-ecr

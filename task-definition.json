@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-region": "eu-central-1",
-          "awslogs-stream-prefix": "ecs"
+          "awslogs-group": "ekpa-antalya-bot-log-group"
         }
       }
     }

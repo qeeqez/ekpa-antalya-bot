@@ -1,5 +1,5 @@
 {
-  "family": "ekpa-antalya-bot-task-family",
+  "family": "ekpa-antalya-bot",
   "containerDefinitions": [
     {
       "name": "ekpa-antalya-bot",

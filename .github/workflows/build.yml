@@ -122,6 +122,9 @@ jobs:
           task-definition: task-definition.json
           container-name: ekpa-antalya-bot
           image: ${{ env.DOCKER_IMAGE_NAME }}:${{ env.DOCKER_IMAGE_TAG }}
+          environment-variables: |
+            telegram-bot.owner=${{ secrets.BOT_OWNER }}
+            telegram-bot.token=${{ secrets.BOT_TOKEN }}
 
       - name: 🚀 Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1

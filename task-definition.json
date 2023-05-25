@@ -4,12 +4,13 @@
     {
       "name": "ekpa-antalya-bot",
       "cpu": 256,
-      "memory": 512,
+      "memory": 400,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
+          "awslogs-group": "qeeqez-ecs",
           "awslogs-region": "eu-central-1",
-          "awslogs-group": "ekpa-antalya-bot-log-group"
+          "awslogs-stream-prefix": "ekpa-antalya-bot"
         }
       }
     }

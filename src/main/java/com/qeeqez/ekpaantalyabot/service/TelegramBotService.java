@@ -2,6 +2,7 @@ package com.qeeqez.ekpaantalyabot.service;
 
 import com.qeeqez.ekpaantalyabot.config.TelegramBotConfig;
 import com.qeeqez.ekpaantalyabot.handlers.impl.UpdateHandler;
+import com.qeeqez.ekpaantalyabot.utils.MD5;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.DefaultBotOptions;
@@ -28,6 +29,12 @@ public class TelegramBotService extends TelegramLongPollingBot {
         super(new DefaultBotOptions(), botConfig.getToken());
         this.botConfig = botConfig;
         this.updateHandler = updateHandler;
+        log.info("Bot username: {}", botConfig.getUserName());
+        if (botConfig.getToken().isEmpty()) {
+            log.error("BOT TOKEN COULD NOT BE EMPTY!");
+        } else {
+            log.info("Bot token: {}", MD5.getMD5(botConfig.getToken()));
+        }
         setBotMenuCommands();
     }
 

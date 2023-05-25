@@ -132,5 +132,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ekpa-antalya-bot-service
-          cluster: ecs-cluster
+          cluster: qeeqez-ecs
           wait-for-service-stability: true

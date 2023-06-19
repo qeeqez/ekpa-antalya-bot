@@ -24,9 +24,8 @@ public class InfoEkpaMarkup extends InlineKeyboardMarkup {
 
         rowsInLine.add(List.of(new ManagementOfficeButton()));
         rowsInLine.add(List.of(new HowToPayButton()));
-        rowsInLine.add(List.of(new HowToConnectButton()));
+        rowsInLine.add(List.of(new HowToConnectButton(), new HowToDisConnectButton()));
         rowsInLine.add(List.of(new HowToReConnectButton()));
-        rowsInLine.add(List.of(new HowToDisConnectButton()));
         rowsInLine.add(List.of(new MainMenuButton()));
 
         setKeyboard(rowsInLine);

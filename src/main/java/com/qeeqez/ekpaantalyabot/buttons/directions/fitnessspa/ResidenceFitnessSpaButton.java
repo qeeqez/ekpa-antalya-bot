@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class ResidenceFitnessSpaButton extends InlineKeyboardButton {
-    private final String text = "💪 Fitness & SPA 🧖‍♀️ в Комплексе";
+    private final String text = "💪 Fitness & SPA 🧖‍♀️";
 
     public ResidenceFitnessSpaButton() {
         setText(text);

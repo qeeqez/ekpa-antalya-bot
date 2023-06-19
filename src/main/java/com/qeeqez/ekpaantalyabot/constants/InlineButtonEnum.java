@@ -12,6 +12,7 @@ public enum InlineButtonEnum {
 
     // Directions
     DIRECTIONS_BUTTON,
+    DIRECTIONS_SITE_BUTTON,
     RESIDENCE_CAFE_BUTTON,
     RESIDENCE_CAFE_WIFI_BUTTON,
 

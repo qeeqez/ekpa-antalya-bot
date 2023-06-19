@@ -1,7 +1,7 @@
 package com.qeeqez.ekpaantalyabot.markup.directions;
 
 import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
-import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsButton;
+import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsSiteButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.ResidenceCafeMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.directions.ResidenceCafeWiFiButton;
 import lombok.Getter;
@@ -22,7 +22,7 @@ public class ResidenceCafeMarkup extends InlineKeyboardMarkup {
 
         rowsInLine.add(List.of(new ResidenceCafeMenuButton()));
         rowsInLine.add(List.of(new ResidenceCafeWiFiButton()));
-        rowsInLine.add(List.of(new DirectionsButton(), new MainMenuButton()));
+        rowsInLine.add(List.of(new DirectionsSiteButton(), new MainMenuButton()));
 
         setKeyboard(rowsInLine);
     }

@@ -13,14 +13,13 @@ public class ProductsDeliveryMessage extends EditMessageText {
     private final String text = """
             *Доставка Продуктов*
                         
-            ❗️Используйте встроенный в chrome переводчик
-            💵 \\- оплата возможна наличкой
-            🪪 \\- только с внж
+            ❗️ Используйте встроенный в chrome переводчик
+            💵 Возможна оплата наличкой
                         
-            🍌 [Migros](https://www.migros.com.tr) 💵
-            🍌 [Tahtakale](https://tahtakalespot.com) 💵
-            🍌 [Carrefour](https://www.carrefoursa.com) 💵
-            🧻 [Sok](https://www.sokmarket.com.tr) 💵
+            🍌 [Migros](https://www.migros.com.tr)
+            🍌 [Tahtakale](https://tahtakalespot.com)
+            🍌 [Carrefour](https://www.carrefoursa.com)
+            🧻 [Sok](https://www.sokmarket.com.tr)
             """;
 
     private ProductsDeliveryMessage() {

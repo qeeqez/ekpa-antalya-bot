@@ -14,7 +14,7 @@ public class FoodDeliveryMessage extends EditMessageText {
             *Доставка Еды*
                         
             ❗️Используйте встроенный в chrome переводчик
-            💵 \\- оплата возможна наличкой
+            💵 \\- возможна оплата наличкой
             🪪 \\- только с внж
             
             🍔 [Yemeksepeti](https://www.yemeksepeti.com/) 💵

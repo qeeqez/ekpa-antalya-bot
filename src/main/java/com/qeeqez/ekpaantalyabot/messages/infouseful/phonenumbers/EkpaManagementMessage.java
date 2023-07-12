@@ -16,6 +16,7 @@ public class EkpaManagementMessage extends EditMessageText {
             <b>🧑‍💼Управляющая компания</b>
             Али: +90 (532) 228 38 27
             Сибель: +90 (541) 850 96 06
+            Гази: +90 (541) 783 25 46
             
             <b>👮 Охрана</b>
             Ayşegül BASUT: +90 (531) 279 94 19

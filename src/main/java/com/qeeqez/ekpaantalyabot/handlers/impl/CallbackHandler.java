@@ -118,8 +118,10 @@ public class CallbackHandler implements IHandler {
 
 
                 case INFO_EKPA_BUTTON -> messageSender.editMessage(new InfoEkpaMessage(chatId, messageId));
-                case MANAGEMENT_OFFICE_BUTTON ->
-                        messageSender.editMessage(new ManagementOfficeMessage(chatId, messageId));
+                case MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON ->
+                        messageSender.editMessage(new ManagementOfficeMessage(chatId, messageId, InlineButtonEnum.MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON));
+                case MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON ->
+                        messageSender.editMessage(new ManagementOfficeMessage(chatId, messageId, InlineButtonEnum.MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON));
 
                 case HOW_TO_PAY_BUTTON -> messageSender.editMessage(new HowToPayMessage(chatId, messageId));
                 case HOW_TO_PAY_AIDAT_BUTTON -> messageSender.editMessage(new HowToPayAidatMessage(chatId, messageId));

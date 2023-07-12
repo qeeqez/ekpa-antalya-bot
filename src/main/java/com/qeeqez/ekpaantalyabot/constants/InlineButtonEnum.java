@@ -73,7 +73,8 @@ public enum InlineButtonEnum {
 
     // Ekpa Info
     INFO_EKPA_BUTTON,
-    MANAGEMENT_OFFICE_BUTTON,
+    MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON,
+    MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON,
 
     // Important Documents
     IMPORTANT_DOCUMENTS_BUTTON,

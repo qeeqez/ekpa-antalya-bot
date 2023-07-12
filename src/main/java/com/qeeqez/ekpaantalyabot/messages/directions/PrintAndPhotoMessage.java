@@ -15,7 +15,7 @@ public class PrintAndPhotoMessage extends EditMessageText {
             
             📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \\(750 м\\)
             Цветная печать \\(5 TL \\- 1 страница\\, 3 TL \\- несколько\\)
-            Биометрические фото 100 TL\\.
+            Биометрические фото 150 TL\\.
             
             📍 [Fotokopi](https://goo.gl/maps/T6UtpDPoSSve3p58A) \\(900 м\\)
             Стоимость неизвестна\\.

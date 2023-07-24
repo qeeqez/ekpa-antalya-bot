@@ -4,6 +4,7 @@ import com.qeeqez.ekpaantalyabot.buttons.MainMenuButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockIMEIFreeButton;
 import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockIMEIPaidButton;
+import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockIMEIReBlockButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
@@ -22,6 +23,7 @@ public class PhoneUnlockIMEIMarkup extends InlineKeyboardMarkup {
 
         rowsInLine.add(List.of(new PhoneUnlockIMEIFreeButton()));
         rowsInLine.add(List.of(new PhoneUnlockIMEIPaidButton()));
+        rowsInLine.add(List.of(new PhoneUnlockIMEIReBlockButton()));
         rowsInLine.add(List.of(new PhoneUnlockButton(),new MainMenuButton()));
 
         setKeyboard(rowsInLine);

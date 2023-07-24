@@ -7,11 +7,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class PhoneUnlockIMEIPaidButton extends InlineKeyboardButton{
-    private final String text = "💰 Платный вариант (20000 TL)";
+public class PhoneUnlockIMEIReBlockButton extends InlineKeyboardButton {
+    private final String text = "🤯 Если телефон повторно заблокировали";
 
-    public PhoneUnlockIMEIPaidButton() {
+    public PhoneUnlockIMEIReBlockButton() {
         setText(text);
-        setCallbackData(InlineButtonEnum.PHONE_UNLOCK_IMEI_PAID_BUTTON.name());
+        setCallbackData(InlineButtonEnum.PHONE_UNLOCK_IMEI_REBLOCK_BUTTON.name());
     }
 }

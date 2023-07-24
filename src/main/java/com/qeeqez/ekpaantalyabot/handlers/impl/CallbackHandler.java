@@ -193,6 +193,8 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new PhoneUnlockIMEIFreeMessage(chatId, messageId));
                 case PHONE_UNLOCK_IMEI_PAID_BUTTON ->
                         messageSender.editMessage(new PhoneUnlockIMEIPaidMessage(chatId, messageId));
+                case PHONE_UNLOCK_IMEI_REBLOCK_BUTTON ->
+                        messageSender.editMessage(new PhoneUnlockIMEIReBlockMessage(chatId, messageId));
             }
         } catch (IllegalArgumentException e) {
             log.error("Message Handle Error: " + e.getMessage());

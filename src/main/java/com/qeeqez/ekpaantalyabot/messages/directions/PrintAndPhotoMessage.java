@@ -12,6 +12,10 @@ public class PrintAndPhotoMessage extends EditMessageText {
 
     private final String text = """
             *Печать и Фото*
+                        
+            📍 [Коворкинг BusyBee](https://goo.gl/maps/XDe15AtGq6emzSSaA) \\(Снаружи комплекса\\)
+            Цветная печать 3 TL
+            ЧБ печать 1 TL
             
             📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \\(350 м\\)
                         
@@ -20,10 +24,7 @@ public class PrintAndPhotoMessage extends EditMessageText {
             Биометрические фото 150 TL\\.
             
             📍 [Fotokopi](https://goo.gl/maps/T6UtpDPoSSve3p58A) \\(900 м\\)
-            Стоимость неизвестна\\.
-            
             📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \\(1\\.2 км\\)
-            Стоимость неизвестна\\.
             """;
 
     private PrintAndPhotoMessage() {

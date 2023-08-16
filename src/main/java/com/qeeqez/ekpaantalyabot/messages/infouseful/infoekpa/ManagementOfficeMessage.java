@@ -21,14 +21,13 @@ public class ManagementOfficeMessage extends EditMessageText {
             🕘 *Понедельник \\- Суббота*
             08:30 \\- 12:30
             13:30 \\- 18:00
+                                  
+            *📱 WhatsApp*
+            \\+90 \\(539\\) 6703316
+            \\+90 \\(589\\) 6703320
                         
             *🧑‍💼Управляющие*
-            Али: \\+90 \\(532\\) 228 38 27
-            Сибель: \\+90 \\(541\\) 850 96 06
-            Гази: \\+90 \\(541\\) 783 25 46
-                        
-            *👮 Охрана*
-            Ayşegül BASUT: \\+90 \\(531\\) 279 94 19
+            Deniz Tolan, Sibel, Gazi
             """;
 
     private ManagementOfficeMessage(InlineButtonEnum type) {

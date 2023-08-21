@@ -29,7 +29,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots:6.7.0")
+    implementation("org.telegram:telegrambots:6.8.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")

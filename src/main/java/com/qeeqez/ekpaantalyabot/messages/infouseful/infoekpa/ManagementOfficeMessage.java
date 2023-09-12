@@ -24,6 +24,8 @@ public class ManagementOfficeMessage extends EditMessageText {
                                   
             *📱 WhatsApp*
             \\+90 \\(539\\) 6703316
+                        
+            *☎️ Офис*
             \\+90 \\(589\\) 6703320
                         
             *🧑‍💼Управляющие*

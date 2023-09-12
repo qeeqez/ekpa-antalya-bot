@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class ManagementOfficeButton extends InlineKeyboardButton{
-    private final String text = "\uD83E\uDDD1\u200D\uD83D\uDCBC Офис УК";
+    private final String text = "🧑‍💼Офис УК";
 
     public ManagementOfficeButton() {
         setText(text);

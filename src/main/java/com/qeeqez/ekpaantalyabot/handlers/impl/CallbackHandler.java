@@ -81,10 +81,6 @@ public class CallbackHandler implements IHandler {
 
                 case RESIDENCE_FITNESS_SPA_BUTTON ->
                         messageSender.editMessage(new ResidenceFitnessSpaMessage(chatId, messageId));
-                case RESIDENCE_FITNESS_SPA_PRICE_BUTTON ->
-                        messageSender.editMessage(new ResidenceFitnessSpaPriceMessage(chatId, messageId));
-                case RESIDENCE_FITNESS_SPA_PRICE_MASSAGE_BUTTON ->
-                        messageSender.editMessage(new ResidenceFitnessSpaPriceMassageMessage(chatId, messageId));
 
                 case MARKETS_BUTTON -> messageSender.editMessage(new MarketsMessage(chatId, messageId));
                 case ALL_MARKETS_BUTTON -> messageSender.editMessage(new AllMarketsMessage(chatId, messageId));

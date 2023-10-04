@@ -28,8 +28,8 @@ public class ManagementOfficeMessage extends EditMessageText {
             *📱 Айдат и Кондиционеры*
             \\+90 \\(539\\) 6703320
                         
-            *🧑‍💼Управляющие*
-            Deniz Tolan, Sibel, Gazi
+            *🧑‍💼Управляющая*
+            Deniz Tolan
             """;
 
     private ManagementOfficeMessage(InlineButtonEnum type) {

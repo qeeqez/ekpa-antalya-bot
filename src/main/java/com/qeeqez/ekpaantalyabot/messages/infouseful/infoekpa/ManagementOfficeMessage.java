@@ -22,11 +22,11 @@ public class ManagementOfficeMessage extends EditMessageText {
             08:30 \\- 12:30
             13:30 \\- 18:00
                                   
-            *📱 WhatsApp*
+            *📱 Поломки и Жалобы*
             \\+90 \\(539\\) 6703316
                         
-            *☎️ Офис*
-            \\+90 \\(589\\) 6703320
+            *📱 Айдат и Кондиционеры*
+            \\+90 \\(539\\) 6703320
                         
             *🧑‍💼Управляющие*
             Deniz Tolan, Sibel, Gazi

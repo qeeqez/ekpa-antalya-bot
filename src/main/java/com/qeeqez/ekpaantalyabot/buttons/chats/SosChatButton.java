@@ -7,7 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class SosChatButton extends InlineKeyboardButton {
-    private final String openURL = "https://t.me/ekpa1207sos";
+    private final String openURL = "https://t.me/+zyR7dwJTY5g5ZTli";
     private final String text = "🚨 SOS";
 
     public SosChatButton() {

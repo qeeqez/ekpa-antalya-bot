@@ -16,6 +16,9 @@ public class EkpaManagementMessage extends EditMessageText {
             <b>🧑‍💼Управляющая Компания</b>
             +90 (539) 6703316
             +90 (539) 6703320
+                        
+            <b>👮 Охрана</b>
+            +90 (539) 6703833
             """;
 
     private EkpaManagementMessage() {

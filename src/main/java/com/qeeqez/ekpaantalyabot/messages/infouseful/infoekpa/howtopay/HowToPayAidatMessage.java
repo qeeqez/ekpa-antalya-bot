@@ -31,7 +31,7 @@ public class HowToPayAidatMessage extends EditMessageText {
             
             💳 Онлайн переводом с карты турецкого банка на счет:
             
-            🏦 `TR86 0004 6008 4488 8000 1167 33`
+            🏦 `TR24 0013 4000 0203 8787 9000 01`
             
             *Имя получателя и описание платежа*
             🧑 `EKPA 1207 SITESI YONETIMI`

@@ -18,7 +18,7 @@ public class OurChatsMarkup extends InlineKeyboardMarkup {
     public OurChatsMarkup() {
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
 
-        rowsInLine.add(List.of(new BeautyChatButton(), new TradeChatButton()));
+        rowsInLine.add(List.of(new TradeChatButton()));
         rowsInLine.add(List.of(new SosChatButton(), new TaxiChatButton()));
         rowsInLine.add(List.of(new BlocksChatButton()));
         rowsInLine.add(List.of(new ParentsChatButton()));

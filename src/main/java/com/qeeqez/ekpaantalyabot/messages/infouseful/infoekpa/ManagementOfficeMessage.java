@@ -20,7 +20,7 @@ public class ManagementOfficeMessage extends EditMessageText {
                         
             🕘 *Понедельник \\- Суббота*
             08:30 \\- 12:30
-            13:30 \\- 18:00
+            13:30 \\- 17:30
                                   
             *🛠️ Поломки и Жалобы*
             \\+90 \\(539\\) 6703316

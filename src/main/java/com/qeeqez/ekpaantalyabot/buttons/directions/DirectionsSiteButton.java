@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class DirectionsSiteButton extends InlineKeyboardButton {
-    private final String text = "️🏡 В Комплексе";
+    private final String text = "️🛷 В Комплексе";
 
     public DirectionsSiteButton() {
         setText(text);

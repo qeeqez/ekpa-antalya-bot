@@ -27,7 +27,7 @@ jobs:
         run: ./gradlew bootJar
 
       - name: 🚀 Cache jar
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: build/libs/
           key: ekpa-bot-jar-${{ github.run_number }}
@@ -51,7 +51,7 @@ jobs:
           password: ${{ secrets.CONTAINER_REGISTRY_SECRET }}
 
       - name: ⬇️ Download jar
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: build/libs/
           key: ekpa-bot-jar-${{ github.run_number }}

@@ -55,7 +55,12 @@ public class CallbackHandler implements IHandler {
     public void handle(Update update) {
         CallbackQuery callbackQuery = update.getCallbackQuery();
         String callbackData = callbackQuery.getData();
-        Message message = callbackQuery.getMessage();
+
+        if (!(callbackQuery.getMessage() instanceof Message message)) {
+            log.info("Message is inaccessible {}", callbackQuery.getMessage());
+            return;
+        }
+
         Integer messageId = message.getMessageId();
         Long chatId = message.getChatId();
 
@@ -193,7 +198,7 @@ public class CallbackHandler implements IHandler {
                         messageSender.editMessage(new PhoneUnlockIMEIReBlockMessage(chatId, messageId));
             }
         } catch (IllegalArgumentException e) {
-            log.error("Message Handle Error: " + e.getMessage());
+            log.error("Message Handle Error: {}", e.getMessage());
             messageSender.sendMessage(chatId, ERROR_UNHANDLED_MESSAGE);
         }
     }

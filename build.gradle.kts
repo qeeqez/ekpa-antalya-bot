@@ -29,7 +29,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots:6.8.0") {
+    implementation("org.telegram:telegrambots:6.9.7.0") {
         exclude(group = "commons-logging", module = "commons-logging")
     }
 

@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class InfoUsefulButton extends InlineKeyboardButton{
-    private final String text = "🎁 Информация";
+    private final String text = "⭐️ Информация";
 
     public InfoUsefulButton() {
         setText(text);

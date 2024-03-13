@@ -6,11 +6,11 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 
 @Getter
 @Setter
-public class EkpaMainChatAttentionButton extends InlineKeyboardButton {
+public class OnlyResidentsChatButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/+14s_2-3hZzVmODAy";
-    private final String text = "🏠 Ekpa 1207 NEW 🏠";
+    private final String text = "🏠 ЧАТ ТОЛЬКО ДЛЯ ЖИТЕЛЕЙ 🏠";
 
-    public EkpaMainChatAttentionButton() {
+    public OnlyResidentsChatButton() {
         setText(text);
         setUrl(openURL);
     }

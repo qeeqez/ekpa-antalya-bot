@@ -15,12 +15,8 @@ public class PrintAndPhotoMessage extends EditMessageText {
             
             📍 @DmitriiF1 \\(В комплексе\\)
             
-            📍 [Коворкинг BusyBee](https://goo.gl/maps/XDe15AtGq6emzSSaA) \\(Снаружи комплекса\\)
-            Цветная печать 3\\.5 TL
-            ЧБ печать 1\\.5 TL
-            
             📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \\(350 м\\)
-                        
+            
             📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \\(750 м\\)
             Цветная печать \\(5 TL \\- 1 страница\\, 3 TL \\- несколько\\)
             Биометрические фото 150 TL\\.

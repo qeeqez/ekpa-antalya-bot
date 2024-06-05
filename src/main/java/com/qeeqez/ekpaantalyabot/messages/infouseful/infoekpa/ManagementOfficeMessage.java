@@ -17,23 +17,23 @@ public class ManagementOfficeMessage extends EditMessageText {
 
             💼 *Офис*
             [Блок С](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 этаж, со входа налево
-                        
+           
             🕘 *Понедельник \\- Суббота*
             08:30 \\- 12:30
             13:30 \\- 17:30
-                                  
+           
             *🛠️ Поломки и Жалобы*
             \\+90 \\(539\\) 6703316
-                        
+           
             *💰 Оплата \\- Айдат и Кондиционеры*
             \\+90 \\(539\\) 6703320
-                        
+           
             *👮 Охрана*
             \\+90 \\(539\\) 6703833
-                        
+           
             *🧑‍💼Управляющая*
-            Deniz Tolan
-            """;
+            EBRU HANIM
+           """;
 
     private ManagementOfficeMessage(InlineButtonEnum type) {
         setText(text);

@@ -8,23 +8,18 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.edevlet.EdevletSiteButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class EdevletMarkup extends InlineKeyboardMarkup {
 
     public EdevletMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new EdevletSiteButton()));
-        rowsInLine.add(List.of(new EdevletAndroidButton(), new EdevletIphoneButton()));
-        rowsInLine.add(List.of(new ImportantDocsButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new EdevletSiteButton()))
+                .keyboardRow(new InlineKeyboardRow(new EdevletAndroidButton(), new EdevletIphoneButton()))
+                .keyboardRow(new InlineKeyboardRow(new ImportantDocsButton(),new MainMenuButton()))
+        );
     }
 }

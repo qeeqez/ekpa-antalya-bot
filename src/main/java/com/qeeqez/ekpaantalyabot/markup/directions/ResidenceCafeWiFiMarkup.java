@@ -5,21 +5,18 @@ import com.qeeqez.ekpaantalyabot.buttons.directions.ResidenceCafeButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class ResidenceCafeWiFiMarkup extends InlineKeyboardMarkup {
 
     public ResidenceCafeWiFiMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new ResidenceCafeButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(
+                        new ResidenceCafeButton(), new MainMenuButton()
+                ))
+        );
     }
 }

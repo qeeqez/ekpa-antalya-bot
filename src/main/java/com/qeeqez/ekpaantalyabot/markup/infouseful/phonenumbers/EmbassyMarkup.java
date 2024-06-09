@@ -9,26 +9,20 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.phonenumbers.embassy.Ukraine
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class EmbassyMarkup extends InlineKeyboardMarkup {
 
     public EmbassyMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new RussiaEmbassyButton()));
-        rowsInLine.add(List.of(new UkraineEmbassyButton()));
-        rowsInLine.add(List.of(new KazakhstanEmbassyButton()));
-        rowsInLine.add(List.of(new BelarusEmbassyButton()));
-
-        rowsInLine.add(List.of(new PhoneNumbersButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new RussiaEmbassyButton()))
+                .keyboardRow(new InlineKeyboardRow(new UkraineEmbassyButton()))
+                .keyboardRow(new InlineKeyboardRow(new KazakhstanEmbassyButton()))
+                .keyboardRow(new InlineKeyboardRow(new BelarusEmbassyButton()))
+                .keyboardRow(new InlineKeyboardRow(new PhoneNumbersButton(), new MainMenuButton()))
+        );
     }
 }

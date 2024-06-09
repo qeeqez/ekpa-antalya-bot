@@ -6,24 +6,19 @@ import com.qeeqez.ekpaantalyabot.buttons.chats.block.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
-public class BlockChatsMarkup extends InlineKeyboardMarkup{
+public class BlockChatsMarkup extends InlineKeyboardMarkup {
 
     public BlockChatsMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new BlockA1Button(), new BlockA2Button(), new BlockA3Button(), new BlockA4Button()));
-        rowsInLine.add(List.of(new BlockBButton(), new BlockCButton(), new BlockDButton()));
-        rowsInLine.add(List.of(new BlockE1Button(), new BlockE2Button()));
-        rowsInLine.add(List.of(new OurChatsButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new BlockA1Button(), new BlockA2Button(), new BlockA3Button(), new BlockA4Button()))
+                .keyboardRow(new InlineKeyboardRow(new BlockBButton(), new BlockCButton(), new BlockDButton()))
+                .keyboardRow(new InlineKeyboardRow(new BlockE1Button(), new BlockE2Button()))
+                .keyboardRow(new InlineKeyboardRow(new OurChatsButton(), new MainMenuButton()))
+        );
     }
 }

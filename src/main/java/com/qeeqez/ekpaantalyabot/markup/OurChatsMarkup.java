@@ -6,29 +6,25 @@ import com.qeeqez.ekpaantalyabot.buttons.chats.block.BlocksChatButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class OurChatsMarkup extends InlineKeyboardMarkup {
 
     public OurChatsMarkup() {
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new OnlyResidentsChatButton()));
-        rowsInLine.add(List.of(new TradeChatButton()));
-        rowsInLine.add(List.of(new SosChatButton(), new TaxiChatButton()));
-        rowsInLine.add(List.of(new BlocksChatButton()));
-        rowsInLine.add(List.of(new ParentsChatButton()));
-        rowsInLine.add(List.of(new AnimalsChatButton()));
-        rowsInLine.add(List.of(new SportChatButton(), new SportGamesChatButton()));
-        rowsInLine.add(List.of(new PartyChatButton(), new BoardGamesChatButton()));
-        rowsInLine.add(List.of(new GamingChatButton(), new ITChatButton()));
-        rowsInLine.add(List.of(new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new OnlyResidentsChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new TradeChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new SosChatButton(), new TaxiChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new BlocksChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new ParentsChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new AnimalsChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new SportChatButton(), new SportGamesChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new PartyChatButton(), new BoardGamesChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new GamingChatButton(), new ITChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new MainMenuButton()))
+        );
     }
 }

@@ -8,23 +8,18 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.aidkit.polyclinic.Polyclinic
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class AidKitPolyclinicMarkup extends InlineKeyboardMarkup{
 
     public AidKitPolyclinicMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new PolyclinicSiteButton()));
-        rowsInLine.add(List.of(new PolyclinicAndroidButton(), new PolyclinicIphoneButton()));
-        rowsInLine.add(List.of(new AidKitButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new PolyclinicSiteButton()))
+                .keyboardRow(new InlineKeyboardRow(new PolyclinicAndroidButton(), new PolyclinicIphoneButton()))
+                .keyboardRow(new InlineKeyboardRow(new AidKitButton(),new MainMenuButton()))
+        );
     }
 }

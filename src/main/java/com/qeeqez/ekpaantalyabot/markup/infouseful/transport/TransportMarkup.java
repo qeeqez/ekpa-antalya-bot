@@ -9,25 +9,20 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.transport.TaxiButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class TransportMarkup extends InlineKeyboardMarkup {
 
     public TransportMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new BusButton()));
-        rowsInLine.add(List.of(new TaxiButton()));
-        rowsInLine.add(List.of(new KickScooterButton()));
-        rowsInLine.add(List.of(new TaxiChatButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new BusButton()))
+                .keyboardRow(new InlineKeyboardRow(new TaxiButton()))
+                .keyboardRow(new InlineKeyboardRow(new KickScooterButton()))
+                .keyboardRow(new InlineKeyboardRow(new TaxiChatButton()))
+                .keyboardRow(new InlineKeyboardRow(new InfoUsefulButton(), new MainMenuButton()))
+        );
     }
 }

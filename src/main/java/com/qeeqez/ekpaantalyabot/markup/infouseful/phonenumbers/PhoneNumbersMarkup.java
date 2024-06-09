@@ -9,24 +9,19 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.phonenumbers.OtherPhonesButt
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class PhoneNumbersMarkup extends InlineKeyboardMarkup {
 
     public PhoneNumbersMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new EkpaManagementButton()));
-        rowsInLine.add(List.of(new EmerjencyButton(), new OtherPhonesButton()));
-        rowsInLine.add(List.of(new EmbassyButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new EkpaManagementButton()))
+                .keyboardRow(new InlineKeyboardRow(new EmerjencyButton(), new OtherPhonesButton()))
+                .keyboardRow(new InlineKeyboardRow(new EmbassyButton()))
+                .keyboardRow(new InlineKeyboardRow(new InfoUsefulButton(), new MainMenuButton()))
+        );
     }
 }

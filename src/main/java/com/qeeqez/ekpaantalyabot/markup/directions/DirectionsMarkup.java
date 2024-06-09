@@ -5,26 +5,21 @@ import com.qeeqez.ekpaantalyabot.buttons.directions.*;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
-public class DirectionsMarkup extends InlineKeyboardMarkup{
+public class DirectionsMarkup extends InlineKeyboardMarkup {
 
     public DirectionsMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new MarketsButton(), new ShopsButton(), new ShoppingCentersButton()));
-        rowsInLine.add(List.of(new PrintAndPhotoButton()));
-        rowsInLine.add(List.of(new BarberButton()));
-        rowsInLine.add(List.of(new TaxOfficeButton(), new PostOfficeButton()));
-        rowsInLine.add(List.of(new CityHallButton(), new PopulationOfficeButton(), new MigrationOfficeButton()));
-        rowsInLine.add(List.of(new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new MarketsButton(), new ShopsButton(), new ShoppingCentersButton()))
+                .keyboardRow(new InlineKeyboardRow(new PrintAndPhotoButton()))
+                .keyboardRow(new InlineKeyboardRow(new BarberButton()))
+                .keyboardRow(new InlineKeyboardRow(new TaxOfficeButton(), new PostOfficeButton()))
+                .keyboardRow(new InlineKeyboardRow(new CityHallButton(), new PopulationOfficeButton(), new MigrationOfficeButton()))
+                .keyboardRow(new InlineKeyboardRow(new MainMenuButton()))
+        );
     }
 }

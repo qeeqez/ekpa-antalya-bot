@@ -9,25 +9,20 @@ import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtopay.HowToPayButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class InfoEkpaMarkup extends InlineKeyboardMarkup {
 
     public InfoEkpaMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new ManagementOfficeButton()));
-        rowsInLine.add(List.of(new HowToPayButton()));
-        rowsInLine.add(List.of(new HowToConnectButton(), new HowToDisConnectButton()));
-        rowsInLine.add(List.of(new HowToReConnectButton()));
-        rowsInLine.add(List.of(new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new ManagementOfficeButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToPayButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToConnectButton(), new HowToDisConnectButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToReConnectButton()))
+                .keyboardRow(new InlineKeyboardRow(new MainMenuButton()))
+        );
     }
 }

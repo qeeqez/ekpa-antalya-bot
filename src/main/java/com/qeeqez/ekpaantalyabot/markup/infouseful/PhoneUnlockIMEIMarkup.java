@@ -8,24 +8,19 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockIMEIR
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class PhoneUnlockIMEIMarkup extends InlineKeyboardMarkup {
 
     public PhoneUnlockIMEIMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new PhoneUnlockIMEIFreeButton()));
-        rowsInLine.add(List.of(new PhoneUnlockIMEIPaidButton()));
-        rowsInLine.add(List.of(new PhoneUnlockIMEIReBlockButton()));
-        rowsInLine.add(List.of(new PhoneUnlockButton(),new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new PhoneUnlockIMEIFreeButton()))
+                .keyboardRow(new InlineKeyboardRow(new PhoneUnlockIMEIPaidButton()))
+                .keyboardRow(new InlineKeyboardRow(new PhoneUnlockIMEIReBlockButton()))
+                .keyboardRow(new InlineKeyboardRow(new PhoneUnlockButton(), new MainMenuButton()))
+        );
     }
 }

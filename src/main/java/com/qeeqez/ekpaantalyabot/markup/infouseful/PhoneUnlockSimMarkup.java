@@ -5,21 +5,16 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.phoneunlock.PhoneUnlockButto
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class PhoneUnlockSimMarkup extends InlineKeyboardMarkup {
 
     public PhoneUnlockSimMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new PhoneUnlockButton(),new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new PhoneUnlockButton(), new MainMenuButton()))
+        );
     }
 }

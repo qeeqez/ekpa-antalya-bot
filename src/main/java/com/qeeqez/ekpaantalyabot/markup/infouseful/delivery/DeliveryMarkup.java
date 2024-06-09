@@ -8,24 +8,19 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.delivery.ProductsDeliveryBut
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class DeliveryMarkup extends InlineKeyboardMarkup{
 
     public DeliveryMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new FoodDeliveryButton()));
-        rowsInLine.add(List.of(new ProductsDeliveryButton()));
-        rowsInLine.add(List.of(new GoodsDeliveryButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new FoodDeliveryButton()))
+                .keyboardRow(new InlineKeyboardRow(new ProductsDeliveryButton()))
+                .keyboardRow(new InlineKeyboardRow(new GoodsDeliveryButton()))
+                .keyboardRow(new InlineKeyboardRow(new InfoUsefulButton(),new MainMenuButton()))
+        );
     }
 }

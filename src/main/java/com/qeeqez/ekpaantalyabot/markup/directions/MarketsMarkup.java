@@ -6,22 +6,17 @@ import com.qeeqez.ekpaantalyabot.buttons.directions.DirectionsButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class MarketsMarkup extends InlineKeyboardMarkup {
 
     public MarketsMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new AllMarketsButton()));
-        rowsInLine.add(List.of(new DirectionsButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new AllMarketsButton()))
+                .keyboardRow(new InlineKeyboardRow(new DirectionsButton(), new MainMenuButton()))
+        );
     }
 }

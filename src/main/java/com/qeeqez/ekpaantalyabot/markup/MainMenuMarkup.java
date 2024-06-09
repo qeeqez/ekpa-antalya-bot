@@ -11,26 +11,21 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.InfoUsefulButton;
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
-public class MainMenuMarkup extends InlineKeyboardMarkup{
+public class MainMenuMarkup extends InlineKeyboardMarkup {
 
     public MainMenuMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new EkpaMainChatAttentionButton()));
-        rowsInLine.add(List.of(new OurChatsButton()));
-        rowsInLine.add(List.of(new DirectionsSiteButton(), new DirectionsButton()));
-        rowsInLine.add(List.of(new InfoUsefulButton(), new InfoEkpaButton()));
-        rowsInLine.add(List.of(new AddressButton()));
-        rowsInLine.add(List.of(new SuggestChangesButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new EkpaMainChatAttentionButton()))
+                .keyboardRow(new InlineKeyboardRow(new OurChatsButton()))
+                .keyboardRow(new InlineKeyboardRow(new DirectionsSiteButton(), new DirectionsButton()))
+                .keyboardRow(new InlineKeyboardRow(new InfoUsefulButton(), new InfoEkpaButton()))
+                .keyboardRow(new InlineKeyboardRow(new AddressButton()))
+                .keyboardRow(new InlineKeyboardRow(new SuggestChangesButton()))
+        );
     }
 }

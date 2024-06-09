@@ -9,25 +9,20 @@ import com.qeeqez.ekpaantalyabot.buttons.infoekpa.howtoconnect.HowToConnectWater
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class HowToConnectMarkup extends InlineKeyboardMarkup {
 
     public HowToConnectMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new HowToConnectDaskInsuranceButton()));
-        rowsInLine.add(List.of(new HowToConnectElectricityButton()));
-        rowsInLine.add(List.of(new HowToConnectWaterButton()));
-        rowsInLine.add(List.of(new HowToConnectInternetButton()));
-        rowsInLine.add(List.of(new InfoEkpaButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new HowToConnectDaskInsuranceButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToConnectElectricityButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToConnectWaterButton()))
+                .keyboardRow(new InlineKeyboardRow(new HowToConnectInternetButton()))
+                .keyboardRow(new InlineKeyboardRow(new InfoEkpaButton(),new MainMenuButton()))
+        );
     }
 }

@@ -6,22 +6,17 @@ import com.qeeqez.ekpaantalyabot.buttons.infouseful.aidkit.hospitals.HospitalsIn
 import lombok.Getter;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
-import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardRow;
 
 @Getter
 @Setter
 public class AidKitHospitalsMarkup extends InlineKeyboardMarkup{
 
     public AidKitHospitalsMarkup() {
-
-        List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        rowsInLine.add(List.of(new HospitalsInsuranceSiteButton()));
-        rowsInLine.add(List.of(new AidKitButton(), new MainMenuButton()));
-
-        setKeyboard(rowsInLine);
+        super(InlineKeyboardMarkup
+                .builder()
+                .keyboardRow(new InlineKeyboardRow(new HospitalsInsuranceSiteButton()))
+                .keyboardRow(new InlineKeyboardRow(new AidKitButton(),new MainMenuButton()))
+        );
     }
 }

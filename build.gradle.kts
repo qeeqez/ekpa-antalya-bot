@@ -29,9 +29,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots:6.9.7.1") {
-        exclude(group = "commons-logging", module = "commons-logging")
-    }
+    implementation("org.telegram:telegrambots-longpolling:7.0.0")
+    implementation("org.telegram:telegrambots-client:7.0.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")

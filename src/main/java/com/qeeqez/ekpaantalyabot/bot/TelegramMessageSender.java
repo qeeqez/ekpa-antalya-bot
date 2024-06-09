@@ -3,20 +3,24 @@ package com.qeeqez.ekpaantalyabot.bot;
 import com.qeeqez.ekpaantalyabot.config.TelegramBotConfig;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Component;
-import org.telegram.telegrambots.bots.DefaultAbsSender;
-import org.telegram.telegrambots.bots.DefaultBotOptions;
-import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
+import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
+import org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.meta.generics.TelegramClient;
 
 import java.io.Serializable;
 
 @Log4j2
 @Component
-public class TelegramMessageSender extends DefaultAbsSender {
+public class TelegramMessageSender {
 
-    public TelegramMessageSender(TelegramBotConfig telegramBotConfig) {
-        super(new DefaultBotOptions(), telegramBotConfig.getToken());
+    final TelegramBotConfig config;
+    final TelegramClient telegramClient;
+
+    public TelegramMessageSender(TelegramBotConfig config) {
+        this.config = config;
+        telegramClient = new OkHttpTelegramClient(config.getToken());
     }
 
     public void editMessage(BotApiMethod<? extends Serializable> message) {
@@ -39,7 +43,7 @@ public class TelegramMessageSender extends DefaultAbsSender {
 
     private void executeMessage(BotApiMethod<? extends Serializable> message) {
         try {
-            execute(message);
+            telegramClient.execute(message);
         } catch (TelegramApiException e) {
             log.error("Error executing message: " + e.getMessage());
         }

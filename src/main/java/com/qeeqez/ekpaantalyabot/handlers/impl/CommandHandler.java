@@ -10,8 +10,8 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.message.Message;
 
 @Log4j2
 @Service
@@ -46,7 +46,7 @@ public class CommandHandler implements IHandler {
             }
 
             switch (command) {
-                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chatId));
+                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(String.valueOf(chatId)));
                 case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
                 case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
                 case "/ourchats" -> messageSender.sendMessage(new OurChatsInfoMessage(chatId));

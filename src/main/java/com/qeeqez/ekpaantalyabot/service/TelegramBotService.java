@@ -5,6 +5,10 @@ import com.qeeqez.ekpaantalyabot.handlers.impl.UpdateHandler;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
+import org.telegram.telegrambots.longpolling.BotSession;
+import org.telegram.telegrambots.longpolling.interfaces.LongPollingUpdateConsumer;
+import org.telegram.telegrambots.longpolling.starter.AfterBotRegistration;
+import org.telegram.telegrambots.longpolling.starter.SpringLongPollingBot;
 import org.telegram.telegrambots.longpolling.util.LongPollingSingleThreadUpdateConsumer;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -19,16 +23,18 @@ import java.util.concurrent.Executors;
 
 @Log4j2
 @Service
-public class TelegramBotService implements LongPollingSingleThreadUpdateConsumer {
+public class TelegramBotService implements SpringLongPollingBot, LongPollingSingleThreadUpdateConsumer {
 
+    private final TelegramBotConfig botConfig;
+    private final TelegramClient telegramClient;
     private final UpdateHandler updateHandler;
     private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 
-    TelegramClient telegramClient;
 
     public TelegramBotService(TelegramBotConfig botConfig, UpdateHandler updateHandler) {
+        this.botConfig = botConfig;
         this.updateHandler = updateHandler;
-        log.info("Bot username: {}", botConfig.getUserName());
+        log.info("Bot username: {}", this.botConfig.getUserName());
         if (botConfig.getToken().isEmpty()) {
             log.error("BOT TOKEN COULD NOT BE EMPTY!");
         }
@@ -47,12 +53,27 @@ public class TelegramBotService implements LongPollingSingleThreadUpdateConsumer
         try {
             telegramClient.execute(setMyCommands);
         } catch (TelegramApiException e) {
-            log.error("Error setting bot's command list: " + e.getMessage());
+            log.error("Error setting bot's command list: {}", e.getMessage());
         }
     }
 
     @Override
     public void consume(Update update) {
         executorService.submit(() -> updateHandler.handle(update));
+    }
+
+    @Override
+    public String getBotToken() {
+        return botConfig.getToken();
+    }
+
+    @Override
+    public LongPollingUpdateConsumer getUpdatesConsumer() {
+        return this;
+    }
+
+    @AfterBotRegistration
+    public void afterRegistration(BotSession botSession) {
+        log.info("Registered bot running state is: {}", botSession.isRunning());
     }
 }

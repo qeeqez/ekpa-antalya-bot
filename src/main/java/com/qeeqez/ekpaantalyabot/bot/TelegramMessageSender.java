@@ -45,7 +45,7 @@ public class TelegramMessageSender {
         try {
             telegramClient.execute(message);
         } catch (TelegramApiException e) {
-            log.error("Error executing message: " + e.getMessage());
+            log.error("Error executing message: {}", e.getMessage());
         }
     }
 

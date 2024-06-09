@@ -27,10 +27,12 @@ dependencies {
 //    Lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
+    testCompileOnly("org.projectlombok:lombok")
+    testAnnotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots-longpolling:7.0.0")
-    implementation("org.telegram:telegrambots-client:7.0.0")
+    implementation("org.telegram:telegrambots-springboot-longpolling-starter:7.2.1")
+    implementation("org.telegram:telegrambots-client:7.2.1")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")

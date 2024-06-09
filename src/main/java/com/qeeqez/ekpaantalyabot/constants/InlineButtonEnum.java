@@ -3,6 +3,7 @@ package com.qeeqez.ekpaantalyabot.constants;
 public enum InlineButtonEnum {
 
     MAIN_MENU_BUTTON,
+    MAIN_MENU_SINGLE_BUTTON,
 
     ADDRESS_BUTTON,
 

@@ -3,12 +3,11 @@ package com.qeeqez.ekpaantalyabot.handlers.impl;
 import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.config.TelegramBotConfig;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
-import com.qeeqez.ekpaantalyabot.messages.BotLinkMessage;
-import com.qeeqez.ekpaantalyabot.messages.OurChatsInfoMessage;
-import com.qeeqez.ekpaantalyabot.messages.StartMessage;
+import com.qeeqez.ekpaantalyabot.messages.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.telegram.telegrambots.meta.api.methods.pinnedmessages.PinChatMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.message.Message;
@@ -47,7 +46,13 @@ public class CommandHandler implements IHandler {
 
             String chat = String.valueOf(chatId);
             switch (command) {
-                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chat));
+                case "/start" -> {
+                    var linkMessage = messageSender.sendMessage(new MainMenuSingleMessage(chat));
+                    var pinChatMessage = new PinChatMessage(chat, linkMessage.getMessageId());
+                    messageSender.executeAction(pinChatMessage);
+                    messageSender.sendMessage(new MainMenuSendMessage(chat));
+                }
+                case "/menu" -> messageSender.sendMessage(new MainMenuSendMessage(chat));
                 case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
                 case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chat));
                 case "/ourchats" -> messageSender.sendMessage(new OurChatsInfoMessage(chat));

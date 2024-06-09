@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
 import org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.message.Message;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.generics.TelegramClient;
 
@@ -23,29 +24,38 @@ public class TelegramMessageSender {
         telegramClient = new OkHttpTelegramClient(config.getToken());
     }
 
-    public void editMessage(BotApiMethod<? extends Serializable> message) {
-        executeMessage(message);
+    public Message editMessage(BotApiMethod<? extends Serializable> message) {
+        return executeMessage(message);
     }
 
-    public void sendMessage(SendMessage message) {
-        executeMessage(message);
+    public Message sendMessage(SendMessage message) {
+        return executeMessage(message);
     }
 
-    public void sendMessage(Long chatId, String textToSend) {
+    public Message sendMessage(Long chatId, String textToSend) {
         String chatIdString = String.valueOf(chatId);
-        sendMessage(chatIdString, textToSend);
+        return sendMessage(chatIdString, textToSend);
     }
 
-    public void sendMessage(String chatId, String textToSend) {
+    public Message sendMessage(String chatId, String textToSend) {
         SendMessage message = new SendMessage(chatId, textToSend);
-        executeMessage(message);
+        return executeMessage(message);
     }
 
-    private void executeMessage(BotApiMethod<? extends Serializable> message) {
+    public Message executeMessage(BotApiMethod<? extends Serializable> message) {
+        try {
+            return (Message) telegramClient.execute(message);
+        } catch (TelegramApiException e) {
+            log.error("Error executing message: {}", e.getMessage());
+        }
+        return null;
+    }
+
+    public void executeAction(BotApiMethod<? extends Serializable> message) {
         try {
             telegramClient.execute(message);
         } catch (TelegramApiException e) {
-            log.error("Error executing message: {}", e.getMessage());
+            log.error("Error executing action: {}", e.getMessage());
         }
     }
 

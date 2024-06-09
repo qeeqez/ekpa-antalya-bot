@@ -3,10 +3,7 @@ package com.qeeqez.ekpaantalyabot.handlers.impl;
 import com.qeeqez.ekpaantalyabot.bot.TelegramMessageSender;
 import com.qeeqez.ekpaantalyabot.constants.InlineButtonEnum;
 import com.qeeqez.ekpaantalyabot.handlers.IHandler;
-import com.qeeqez.ekpaantalyabot.messages.AddressMessage;
-import com.qeeqez.ekpaantalyabot.messages.BlockChatsMessage;
-import com.qeeqez.ekpaantalyabot.messages.MainMenuMessage;
-import com.qeeqez.ekpaantalyabot.messages.OurChatsMessage;
+import com.qeeqez.ekpaantalyabot.messages.*;
 import com.qeeqez.ekpaantalyabot.messages.directions.*;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.*;
 import com.qeeqez.ekpaantalyabot.messages.infouseful.aidkit.*;
@@ -69,6 +66,7 @@ public class CallbackHandler implements IHandler {
 
             switch (buttonCallback) {
                 case MAIN_MENU_BUTTON -> messageSender.editMessage(new MainMenuMessage(chatId, messageId));
+                case MAIN_MENU_SINGLE_BUTTON -> messageSender.sendMessage(new MainMenuSendMessage(String.valueOf(chatId)));
 
 
                 case OUR_CHATS_BUTTON -> messageSender.editMessage(new OurChatsMessage(chatId, messageId));

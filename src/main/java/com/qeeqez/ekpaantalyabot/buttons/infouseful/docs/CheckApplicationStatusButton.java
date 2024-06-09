@@ -7,12 +7,12 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class CheckApplicationStatusButton extends InlineKeyboardButton{
-    private final String text = "✅ Проверить статус заявки ВНЖ";
+    private static final String text = "✅ Проверить статус заявки ВНЖ";
 
     private final String openURL = "https://e-ikamet.goc.gov.tr/Ikamet/DevamEdenBasvuruGiris";
 
     public CheckApplicationStatusButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

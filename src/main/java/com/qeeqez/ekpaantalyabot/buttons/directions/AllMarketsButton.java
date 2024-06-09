@@ -8,12 +8,12 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class AllMarketsButton extends InlineKeyboardButton{
-    private final String text = "🧺 Другие рынки";
+    private static final String text = "🧺 Другие рынки";
 
     private final String callbackData = InlineButtonEnum.ALL_MARKETS_BUTTON.name();
 
     public AllMarketsButton() {
-        setText(text);
+        super(text);
         setCallbackData(callbackData);
     }
 }

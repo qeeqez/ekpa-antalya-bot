@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PostOfficeButton extends InlineKeyboardButton{
-    private final String text = "✉️ Почта";
+    private static final String text = "✉️ Почта";
 
     public PostOfficeButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.POST_OFFICE_BUTTON.name());
     }
 }

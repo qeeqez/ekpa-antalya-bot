@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class EkpaManagementButton extends InlineKeyboardButton{
-    private final String text = "☎️️ Ekpa";
+    private static final String text = "☎️️ Ekpa";
 
     public EkpaManagementButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.EKPA_MANAGEMENT_BUTTON.name());
     }
 }

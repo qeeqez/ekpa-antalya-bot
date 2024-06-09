@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class GoodsDeliveryButton extends InlineKeyboardButton {
-    private final String text = "📦 Товары";
+    private static final String text = "📦 Товары";
 
     public GoodsDeliveryButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.GOODS_DELIVERY_BUTTON.name());
     }
 }

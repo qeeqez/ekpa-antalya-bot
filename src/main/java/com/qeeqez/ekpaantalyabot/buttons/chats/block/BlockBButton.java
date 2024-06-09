@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 public class BlockBButton extends InlineKeyboardButton {
     private final String openURL = "https://chat.whatsapp.com/HZ0uPnAEuW62Ef7B17Ob50";
-    private final String text = "B";
+    private static final String text = "B";
 
     public BlockBButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class OtherPhonesButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDCF2️ Другое";
+    private static final String text = "\uD83D\uDCF2️ Другое";
 
     public OtherPhonesButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.OTHER_PHONES_BUTTON.name());
     }
 }

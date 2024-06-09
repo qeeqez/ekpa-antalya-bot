@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 public class AntalyaCardIphoneButton extends InlineKeyboardButton{
     private final String openURL = "https://apps.apple.com/tr/app/antalyakart/id1076290540";
 
-    private final String text = "📱 iPhone";
+    private static final String text = "📱 iPhone";
 
     public AntalyaCardIphoneButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

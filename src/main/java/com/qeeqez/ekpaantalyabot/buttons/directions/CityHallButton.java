@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class CityHallButton extends InlineKeyboardButton{
-    private final String text = "🏛 Belediye";
+    private static final String text = "🏛 Belediye";
 
     public CityHallButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.CITY_HALL_BUTTON.name());
     }
 }

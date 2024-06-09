@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToDisConnectWaterButton extends InlineKeyboardButton {
-    private final String text = "\uD83D\uDCA7 Воду";
+    private static final String text = "\uD83D\uDCA7 Воду";
 
     public HowToDisConnectWaterButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.HOW_TO_DISCONNECT_WATER_BUTTON.name());
     }
 }

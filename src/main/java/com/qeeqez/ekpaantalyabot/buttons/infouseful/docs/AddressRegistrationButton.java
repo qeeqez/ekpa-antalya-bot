@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class AddressRegistrationButton extends InlineKeyboardButton{
-    private final String text = "📌 Прописка";
+    private static final String text = "📌 Прописка";
 
     public AddressRegistrationButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.ADDRESS_REGISTRATION_BUTTON.name());
     }
 }

@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 public class EdevletAndroidButton extends InlineKeyboardButton{
     private final String openURL = "https://play.google.com/store/apps/details?id=tr.gov.turkiye.edevlet.kapisi";
 
-    private final String text = "🤖 Android";
+    private static final String text = "🤖 Android";
 
     public EdevletAndroidButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

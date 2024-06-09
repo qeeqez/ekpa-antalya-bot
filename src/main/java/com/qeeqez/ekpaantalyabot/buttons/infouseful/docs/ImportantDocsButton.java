@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class ImportantDocsButton extends InlineKeyboardButton{
-    private final String text = "📝 ВНЖ / Прописка / Документы";
+    private static final String text = "📝 ВНЖ / Прописка / Документы";
 
     public ImportantDocsButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.IMPORTANT_DOCUMENTS_BUTTON.name());
     }
 }

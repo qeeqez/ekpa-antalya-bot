@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 public class PolyclinicAndroidButton extends InlineKeyboardButton {
 
     private final String openURL = "https://play.google.com/store/apps/details?id=tr.gov.saglik.enabiz";
-    private final String text = "🤖 Android";
+    private static final String text = "🤖 Android";
 
     public PolyclinicAndroidButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

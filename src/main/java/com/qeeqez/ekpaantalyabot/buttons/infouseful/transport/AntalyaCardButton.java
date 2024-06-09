@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class AntalyaCardButton extends InlineKeyboardButton{
-    private final String text = "💳 Подробнее про Antalya Kart";
+    private static final String text = "💳 Подробнее про Antalya Kart";
 
     public AntalyaCardButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.ANTALYA_CARD_BUTTON.name());
     }
 }

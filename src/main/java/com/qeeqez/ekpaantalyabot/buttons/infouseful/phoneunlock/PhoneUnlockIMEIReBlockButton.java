@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PhoneUnlockIMEIReBlockButton extends InlineKeyboardButton {
-    private final String text = "🤯 Если телефон повторно заблокировали";
+    private static final String text = "🤯 Если телефон повторно заблокировали";
 
     public PhoneUnlockIMEIReBlockButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.PHONE_UNLOCK_IMEI_REBLOCK_BUTTON.name());
     }
 }

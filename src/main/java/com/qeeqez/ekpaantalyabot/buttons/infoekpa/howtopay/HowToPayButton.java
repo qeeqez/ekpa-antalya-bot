@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToPayButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDCB0 Как оплатить?";
+    private static final String text = "\uD83D\uDCB0 Как оплатить?";
 
     public HowToPayButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.HOW_TO_PAY_BUTTON.name());
     }
 }

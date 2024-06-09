@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PopulationOfficeButton extends InlineKeyboardButton{
-    private final String text = "🧑‍💼 Nufus";
+    private static final String text = "🧑‍💼 Nufus";
 
     public PopulationOfficeButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.POPULATION_OFFICE_BUTTON.name());
     }
 }

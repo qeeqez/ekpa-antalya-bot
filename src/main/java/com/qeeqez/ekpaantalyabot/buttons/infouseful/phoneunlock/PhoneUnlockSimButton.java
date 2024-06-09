@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PhoneUnlockSimButton extends InlineKeyboardButton{
-    private final String text = "📱 Разблокировка СИМ (Туристической)";
+    private static final String text = "📱 Разблокировка СИМ (Туристической)";
 
     public PhoneUnlockSimButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.PHONE_UNLOCK_SIM_BUTTON.name());
     }
 }

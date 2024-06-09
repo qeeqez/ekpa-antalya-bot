@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class AddressNumaratajButton extends InlineKeyboardButton{
-    private final String text = "🔖 Нумаратаж";
+    private static final String text = "🔖 Нумаратаж";
 
     public AddressNumaratajButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.ADDRESS_NUMARATAJ_BUTTON.name());
     }
 }

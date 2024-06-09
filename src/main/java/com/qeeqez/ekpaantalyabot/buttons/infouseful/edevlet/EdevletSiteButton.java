@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 public class EdevletSiteButton extends InlineKeyboardButton{
     private final String openURL = "https://www.turkiye.gov.tr/";
 
-    private final String text = "🌎 Edevlet";
+    private static final String text = "🌎 Edevlet";
 
     public EdevletSiteButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

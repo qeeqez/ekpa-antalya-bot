@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToPayConditionerButton extends InlineKeyboardButton{
-    private final String text = "❄️ Кондиционер";
+    private static final String text = "❄️ Кондиционер";
 
     public HowToPayConditionerButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.HOW_TO_PAY_CONDITIONER_BUTTON.name());
     }
 }

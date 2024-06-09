@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class PrintAndPhotoButton extends InlineKeyboardButton{
-    private final String text = "🖨️ Печать и Фото 📸";
+    private static final String text = "🖨️ Печать и Фото 📸";
 
     public PrintAndPhotoButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.PRINT_AND_PHOTO_BUTTON.name());
     }
 }

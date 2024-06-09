@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToDisConnectElectricityButton extends InlineKeyboardButton {
-    private final String text = "⚡ Электричество";
+    private static final String text = "⚡ Электричество";
 
     public HowToDisConnectElectricityButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.HOW_TO_DISCONNECT_ELECTRICITY_BUTTON.name());
     }
 }

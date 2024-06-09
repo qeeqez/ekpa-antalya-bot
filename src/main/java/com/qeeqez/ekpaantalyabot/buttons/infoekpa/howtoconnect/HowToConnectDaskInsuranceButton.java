@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class HowToConnectDaskInsuranceButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDEE1️ Dask";
+    private static final String text = "\uD83D\uDEE1️ Dask";
 
     public HowToConnectDaskInsuranceButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.HOW_TO_CONNECT_DASK_INSURANCE_BUTTON.name());
     }
 }

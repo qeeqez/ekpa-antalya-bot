@@ -9,10 +9,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 public class EdevletIphoneButton extends InlineKeyboardButton{
     private final String openURL = "https://apps.apple.com/tr/app/e-devlet/id976505454";
 
-    private final String text = "📱 iPhone";
+    private static final String text = "📱 iPhone";
 
     public EdevletIphoneButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

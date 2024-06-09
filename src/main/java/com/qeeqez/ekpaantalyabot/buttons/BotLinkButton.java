@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Setter
 public class BotLinkButton extends InlineKeyboardButton {
     private final String openURL = "https://t.me/EkpaAntalyaBot";
-    private final String text = "🤖 БОТ";
+    private static final String text = "🤖 БОТ";
 
     public BotLinkButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

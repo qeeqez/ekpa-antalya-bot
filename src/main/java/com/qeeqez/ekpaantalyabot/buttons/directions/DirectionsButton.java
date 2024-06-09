@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class DirectionsButton extends InlineKeyboardButton{
-    private final String text = "\uD83D\uDE80️ Рядом";
+    private static final String text = "\uD83D\uDE80️ Рядом";
 
     public DirectionsButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.DIRECTIONS_BUTTON.name());
     }
 }

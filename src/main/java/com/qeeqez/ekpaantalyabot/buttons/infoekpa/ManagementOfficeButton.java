@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class ManagementOfficeButton extends InlineKeyboardButton{
-    private final String text = "🧑‍💼Офис УК";
+    private static final String text = "🧑‍💼Офис УК";
 
     public ManagementOfficeButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON.name());
     }
 }

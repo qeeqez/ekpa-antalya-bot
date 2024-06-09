@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class EdevletButton extends InlineKeyboardButton{
-    private final String text = "🧧 Edevlet";
+    private static final String text = "🧧 Edevlet";
 
     public EdevletButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.EDEVLET_BUTTON.name());
     }
 }

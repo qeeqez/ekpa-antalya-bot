@@ -10,10 +10,10 @@ public class PolyclinicSiteButton extends InlineKeyboardButton {
 
     private final String openURL = "https://enabiz.gov.tr/";
 
-    private final String text = "🌎 Сайт для записи к врачу\n";
+    private static final String text = "🌎 Сайт для записи к врачу\n";
 
     public PolyclinicSiteButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

@@ -7,12 +7,12 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class GetIDNumberButton extends InlineKeyboardButton{
-    private final String text = "🆔 Узнать номер ВНЖ";
+    private static final String text = "🆔 Узнать номер ВНЖ";
 
     private final String openURL = "https://tckimlik.nvi.gov.tr/Modul/YabanciKimlikNoSorgula";
 
     public GetIDNumberButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

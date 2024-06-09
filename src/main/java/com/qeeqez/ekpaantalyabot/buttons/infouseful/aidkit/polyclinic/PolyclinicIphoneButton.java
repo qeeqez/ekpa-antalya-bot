@@ -10,10 +10,10 @@ public class PolyclinicIphoneButton extends InlineKeyboardButton {
 
     private final String openURL = "https://apps.apple.com/tr/app/e-nab%C4%B1z/id980446169";
 
-    private final String text = "📱 iPhone";
+    private static final String text = "📱 iPhone";
 
     public PolyclinicIphoneButton() {
-        setText(text);
+        super(text);
         setUrl(openURL);
     }
 }

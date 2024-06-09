@@ -8,10 +8,10 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKe
 @Getter
 @Setter
 public class TaxNumberButton extends InlineKeyboardButton{
-    private final String text = "🪪 ИНН";
+    private static final String text = "🪪 ИНН";
 
     public TaxNumberButton() {
-        setText(text);
+        super(text);
         setCallbackData(InlineButtonEnum.TAX_NUMBER_BUTTON.name());
     }
 }

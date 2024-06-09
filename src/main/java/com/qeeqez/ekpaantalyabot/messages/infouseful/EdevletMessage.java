@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class EdevletMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🧧 Edevlet*
                         
             ℹ️ Сайт с самыми разными Гос Услугами:
@@ -31,7 +31,7 @@ public class EdevletMessage extends EditMessageText {
             """;
 
     private EdevletMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new EdevletMarkup());

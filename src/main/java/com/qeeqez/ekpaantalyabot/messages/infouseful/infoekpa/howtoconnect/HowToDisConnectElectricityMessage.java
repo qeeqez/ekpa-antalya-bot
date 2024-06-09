@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToDisConnectElectricityMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *⚡️Электричество*
                         
             💰 При отключении возвращается депозит, который платился при подключении, минус остаток для оплаты
@@ -35,7 +35,7 @@ public class HowToDisConnectElectricityMessage extends EditMessageText {
             """;
 
     private HowToDisConnectElectricityMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToDisConnectAnythingMarkup());

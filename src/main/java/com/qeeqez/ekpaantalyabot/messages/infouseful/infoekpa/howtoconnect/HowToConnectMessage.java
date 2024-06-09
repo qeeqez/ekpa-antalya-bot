@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToConnectMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🧑‍🔧 Как подключить / переоформить? ♻️*
                         
             1️⃣ Процесс первого подключения от переоформления ничем не отличается
@@ -18,7 +18,7 @@ public class HowToConnectMessage extends EditMessageText {
             """;
 
     private HowToConnectMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToConnectMarkup());

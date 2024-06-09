@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class TaxiMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🚖 Такси*
             
             ℹ️ Кнопки для вызова такси висят по всей Анталии, машина приезжает даже глубокой ночью
@@ -30,7 +30,7 @@ public class TaxiMessage extends EditMessageText {
             """;
 
     private TaxiMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new TransportAnythingMarkup());

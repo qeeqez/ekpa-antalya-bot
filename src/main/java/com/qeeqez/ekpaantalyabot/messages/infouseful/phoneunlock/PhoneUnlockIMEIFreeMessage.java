@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PhoneUnlockIMEIFreeMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             🆓 *Бесплатная разблокировка телефона*
             \\- Вставить симку во второй слот, если он есть \\(на некоторых телефонах можно сделать ESIM\\)
             \\- С этого момента пойдет отсчет 120 дней
@@ -24,7 +24,7 @@ public class PhoneUnlockIMEIFreeMessage extends EditMessageText {
             """;
 
     private PhoneUnlockIMEIFreeMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new PhoneUnlockIMEIDetailedMarkup());

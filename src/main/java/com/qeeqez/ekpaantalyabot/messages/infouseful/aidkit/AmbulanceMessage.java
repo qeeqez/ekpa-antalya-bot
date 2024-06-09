@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class AmbulanceMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🚑 Скорая помощь*
             
             ☎️ `112`
@@ -28,7 +28,7 @@ public class AmbulanceMessage extends EditMessageText {
             """;
 
     private AmbulanceMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new AidKitAnythingMarkup());

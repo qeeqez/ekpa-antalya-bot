@@ -45,11 +45,12 @@ public class CommandHandler implements IHandler {
                 command = command.substring(0, command.indexOf("@"));
             }
 
+            String chat = String.valueOf(chatId);
             switch (command) {
-                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(String.valueOf(chatId)));
+                case "/start", "/menu" -> messageSender.sendMessage(new StartMessage(chat));
                 case "/kek" -> messageSender.sendMessage(SendMessage.builder().chatId(chatId).text("cheburek").build());
-                case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chatId));
-                case "/ourchats" -> messageSender.sendMessage(new OurChatsInfoMessage(chatId));
+                case "/botlink" -> messageSender.sendMessage(new BotLinkMessage(chat));
+                case "/ourchats" -> messageSender.sendMessage(new OurChatsInfoMessage(chat));
                 default -> log.info("Command was not recognised, command: \"{}\"", command);
             }
         }

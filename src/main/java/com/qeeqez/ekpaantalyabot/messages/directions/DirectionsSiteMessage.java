@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class DirectionsSiteMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Что в комплексе?*
                     
             🍎 *Migros*
@@ -18,7 +18,7 @@ public class DirectionsSiteMessage extends EditMessageText {
             """;
 
     private DirectionsSiteMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new DirectionsSiteMarkup());
     }

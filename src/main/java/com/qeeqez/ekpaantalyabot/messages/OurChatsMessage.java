@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class OurChatsMessage extends EditMessageText {
 
-    private final String text = "*💬 Наши Чаты:*";
+    private static final String text = "*💬 Наши Чаты:*";
 
     private OurChatsMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new OurChatsMarkup());
     }

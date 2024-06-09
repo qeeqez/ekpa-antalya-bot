@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ResidenceFitnessSpaMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🧖‍♀ Ata Wellness Fitness & Spa*
                         
             📍 *Блок E1, \\-1 этаж*
@@ -28,7 +28,7 @@ public class ResidenceFitnessSpaMessage extends EditMessageText {
             """;
 
     private ResidenceFitnessSpaMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new ResidenceFitnessSpaMarkup());

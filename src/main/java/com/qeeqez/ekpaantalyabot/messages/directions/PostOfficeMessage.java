@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PostOfficeMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *✉️ Почта \\(PTT\\)*
             
             📍 [PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \\(2\\.6 км\\)
@@ -24,7 +24,7 @@ public class PostOfficeMessage extends EditMessageText {
             """;
 
     private PostOfficeMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());

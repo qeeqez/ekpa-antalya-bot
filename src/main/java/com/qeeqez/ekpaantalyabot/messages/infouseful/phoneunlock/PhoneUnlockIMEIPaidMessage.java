@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PhoneUnlockIMEIPaidMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *💰 Оффициальная платная разблокировка телефона*
             
             ℹ️ 1 Человек может зарегистрировать 1 телефон раз в 3 года\\.
@@ -40,7 +40,7 @@ public class PhoneUnlockIMEIPaidMessage extends EditMessageText {
             """;
 
     private PhoneUnlockIMEIPaidMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new PhoneUnlockIMEIDetailedMarkup());

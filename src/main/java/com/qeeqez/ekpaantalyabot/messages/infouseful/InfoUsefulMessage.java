@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class InfoUsefulMessage extends EditMessageText {
 
-    private final String text = "*⭐️ Полезная информация*";
+    private static final String text = "*⭐️ Полезная информация*";
 
     private InfoUsefulMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new InfoUsefulMarkup());
     }

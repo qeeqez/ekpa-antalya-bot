@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToPayElectricityMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Электричество*
             
             ℹ️ Кондиционер не включен в счет за оплату электричества\\.
@@ -41,7 +41,7 @@ public class HowToPayElectricityMessage extends EditMessageText {
             """;
 
     private HowToPayElectricityMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToPayAnythingMarkup());

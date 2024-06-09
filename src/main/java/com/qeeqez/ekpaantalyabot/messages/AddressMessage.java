@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class AddressMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Наш адрес:*
 
             *il:*\s\s\s\s\s\s\s\s\s\s\s\s\s\s`Antalya`
@@ -39,7 +39,7 @@ public class AddressMessage extends EditMessageText {
             """;
 
     private AddressMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new AddressMarkup());
     }

@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class MainMenuMessage extends EditMessageText {
 
-    private final String text = "*Главное меню*";
+    private static final String text = "*Главное меню*";
 
     private MainMenuMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new MainMenuMarkup());
     }

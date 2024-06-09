@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToConnectWaterMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *💧 Вода*
             
             💼 *Взять с собой:*
@@ -34,7 +34,7 @@ public class HowToConnectWaterMessage extends EditMessageText {
             """;
 
     private HowToConnectWaterMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToConnectAnythingMarkup());

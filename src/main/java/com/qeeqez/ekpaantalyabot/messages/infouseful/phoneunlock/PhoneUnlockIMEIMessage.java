@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PhoneUnlockIMEIMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *📱 Разблокировка телефона \\(IMEI\\)*
                         
             ℹ️ *Что за блокировка?*
@@ -22,7 +22,7 @@ public class PhoneUnlockIMEIMessage extends EditMessageText {
             """;
 
     private PhoneUnlockIMEIMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new PhoneUnlockIMEIMarkup());

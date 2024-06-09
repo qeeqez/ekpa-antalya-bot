@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class OtherPhonesMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Полезные телефоны:*
                         
             ```
@@ -41,7 +41,7 @@ public class OtherPhonesMessage extends EditMessageText {
             """;
 
     private OtherPhonesMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new OtherPhonesMarkup());
     }

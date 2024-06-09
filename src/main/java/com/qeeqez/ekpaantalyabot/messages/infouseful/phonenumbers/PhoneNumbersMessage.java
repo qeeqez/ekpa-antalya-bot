@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PhoneNumbersMessage extends EditMessageText {
 
-    private final String text = "*Полезные телефоны:*";
+    private static final String text = "*Полезные телефоны:*";
 
     private PhoneNumbersMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new PhoneNumbersMarkup());
     }

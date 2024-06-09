@@ -2,6 +2,7 @@ package com.qeeqez.ekpaantalyabot.messages;
 
 import com.qeeqez.ekpaantalyabot.markup.MainMenuMarkup;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -10,16 +11,11 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 @Setter
 public class StartMessage extends SendMessage {
 
-    private final String text = "*Главное меню*";
+    private static final String text = "*Главное меню*";
 
-    private StartMessage() {
-        setText(text);
+    public StartMessage(@NonNull String chatId) {
+        super(chatId, text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new MainMenuMarkup());
-    }
-
-    public StartMessage(long chatId) {
-        this();
-        setChatId(String.valueOf(chatId));
     }
 }

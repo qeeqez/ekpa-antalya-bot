@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ImportantDocsMessage extends EditMessageText {
 
-    private final String text = "*📝 ВНЖ / Прописка / Документы*";
+    private static final String text = "*📝 ВНЖ / Прописка / Документы*";
 
     private ImportantDocsMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new ImportantDocsMarkup());
     }

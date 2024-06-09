@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ProductsDeliveryMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Доставка Продуктов*
                         
             ❗️ Используйте встроенный в chrome переводчик
@@ -23,7 +23,7 @@ public class ProductsDeliveryMessage extends EditMessageText {
             """;
 
     private ProductsDeliveryMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DeliveryAnythingMarkup());

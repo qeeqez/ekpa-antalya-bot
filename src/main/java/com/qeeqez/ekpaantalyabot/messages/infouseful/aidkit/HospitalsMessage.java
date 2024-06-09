@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HospitalsMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🏥 Больницы \\- Hastane*
             
             🛡️ *По Страховке*
@@ -37,7 +37,7 @@ public class HospitalsMessage extends EditMessageText {
             """;
 
     private HospitalsMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new AidKitHospitalsMarkup());

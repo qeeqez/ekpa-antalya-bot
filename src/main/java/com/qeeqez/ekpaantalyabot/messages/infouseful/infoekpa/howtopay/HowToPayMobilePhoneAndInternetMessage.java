@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToPayMobilePhoneAndInternetMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *📱 Мобильный телефон и Интернет 🌎*
             
             💳 *Онлайн в приложении или на сайте вашего оператора*
@@ -24,7 +24,7 @@ public class HowToPayMobilePhoneAndInternetMessage extends EditMessageText {
             """;
 
     private HowToPayMobilePhoneAndInternetMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToPayAnythingMarkup());

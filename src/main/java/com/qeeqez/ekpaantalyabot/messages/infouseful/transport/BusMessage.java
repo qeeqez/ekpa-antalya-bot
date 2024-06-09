@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class BusMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🚎 Общественный транспорт*
 
             📍 Маршрут лучше всего планировать в *Google Maps*
@@ -29,7 +29,7 @@ public class BusMessage extends EditMessageText {
             """;
 
     private BusMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new BusMarkup());

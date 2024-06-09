@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class BarberMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Барбершопы*
                         
             📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
@@ -24,7 +24,7 @@ public class BarberMessage extends EditMessageText {
             """;
 
     private BarberMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());

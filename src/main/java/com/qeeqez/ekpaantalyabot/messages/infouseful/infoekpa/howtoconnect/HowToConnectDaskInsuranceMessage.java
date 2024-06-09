@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class HowToConnectDaskInsuranceMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🛡️ Страховка от землетрясений Dask*
                         
             ℹ️ *Информация:*
@@ -29,7 +29,7 @@ public class HowToConnectDaskInsuranceMessage extends EditMessageText {
             """;
 
     private HowToConnectDaskInsuranceMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new HowToConnectAnythingMarkup());

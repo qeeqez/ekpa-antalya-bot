@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class KazakhstanEmbassyMessage extends EditMessageText {
 
-    private final String text = """           
+    private static final String text = """           
             <u><b>Консульство Казахстана в Анталье</b></u>
             Консульство: +90 242 324 26 11
             Email: antalya@mfa.kz
@@ -27,7 +27,7 @@ public class KazakhstanEmbassyMessage extends EditMessageText {
             """;
 
     private KazakhstanEmbassyMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);
         setReplyMarkup(new CountryEmbassyMarkup());

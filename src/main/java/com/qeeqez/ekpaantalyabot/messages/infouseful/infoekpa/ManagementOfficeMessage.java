@@ -12,7 +12,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ManagementOfficeMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *Управляющая Компания*
 
             💼 *Офис*
@@ -36,7 +36,7 @@ public class ManagementOfficeMessage extends EditMessageText {
            """;
 
     private ManagementOfficeMessage(InlineButtonEnum type) {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         if (type == InlineButtonEnum.MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON) {

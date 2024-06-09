@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class BusConcessionaryMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             🧒👴 *Льготный проезд*
                         
             ℹ️ Для льготного проезда нужно сделать льготную карту
@@ -30,7 +30,7 @@ public class BusConcessionaryMessage extends EditMessageText {
             """;
 
     private BusConcessionaryMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new BusAnythingMarkup());

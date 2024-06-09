@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class AidKitMessage extends EditMessageText {
 
-    private final String text = "*❤️ Аптечка*";
+    private static final String text = "*❤️ Аптечка*";
 
     private AidKitMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new AidKitMarkup());

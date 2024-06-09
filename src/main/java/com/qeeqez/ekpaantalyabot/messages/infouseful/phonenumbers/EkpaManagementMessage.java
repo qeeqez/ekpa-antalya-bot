@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class EkpaManagementMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             <b>Ekpa:</b>
 
             <b>🧑‍💼Управляющая Компания</b>
@@ -22,7 +22,7 @@ public class EkpaManagementMessage extends EditMessageText {
             """;
 
     private EkpaManagementMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.HTML);
         setReplyMarkup(new EkpaManagementMarkup());
     }

@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class AddressRegistrationMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *📌 Прописка*
             
             ℹ️ *Прописку нужно сделать в течении 20 дней после получения ВНЖ*
@@ -40,7 +40,7 @@ public class AddressRegistrationMessage extends EditMessageText {
             """;
 
     private AddressRegistrationMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new ImportantDocsAnythingMarkup());

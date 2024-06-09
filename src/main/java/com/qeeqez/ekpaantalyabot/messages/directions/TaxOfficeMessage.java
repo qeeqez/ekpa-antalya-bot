@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class TaxOfficeMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *💸 Налоговая \\(Vergi Dairesi\\)*
             
             ℹ️ *Тут можно:*
@@ -22,7 +22,7 @@ public class TaxOfficeMessage extends EditMessageText {
             """;
 
     private TaxOfficeMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());

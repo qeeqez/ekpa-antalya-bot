@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class ShoppingCentersMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🛍 Торговые центры*
                         
             📍 [Agora](https://goo.gl/maps/TshggHds8sAVBACV6) \\(3\\.8 км\\)
@@ -30,7 +30,7 @@ public class ShoppingCentersMessage extends EditMessageText {
             """;
 
     private ShoppingCentersMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());

@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class RussiaEmbassyMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             <u><b>Генеральное Консульство России в Анталье</b></u>
             Консульство: +90 (242) 248 32 02
             Email: ruskonsant@yandex.ru
@@ -28,7 +28,7 @@ public class RussiaEmbassyMessage extends EditMessageText {
             """;
 
     private RussiaEmbassyMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);
         setReplyMarkup(new CountryEmbassyMarkup());

@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class BlockChatsMessage extends EditMessageText {
 
-    private final String text = "Выберите чат, в который хотите вступить";
+    private static final String text = "Выберите чат, в который хотите вступить";
 
     private BlockChatsMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new BlockChatsMarkup());
     }

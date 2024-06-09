@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class CityHallMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🏛 Belediye \\(Муниципалитет\\)*
             
             ℹ️ В данном заведении можно получить справку *Нумаратаж* \\(Numarataj\\), необходимую для получения ВНЖ
@@ -20,7 +20,7 @@ public class CityHallMessage extends EditMessageText {
             """;
 
     private CityHallMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new DirectionsDefaultMarkup());

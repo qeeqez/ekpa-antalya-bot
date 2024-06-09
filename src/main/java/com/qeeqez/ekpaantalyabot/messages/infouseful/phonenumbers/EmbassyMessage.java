@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class EmbassyMessage extends EditMessageText {
 
-    private final String text = "*Посольства:*";
+    private static final String text = "*Посольства:*";
 
     private EmbassyMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new EmbassyMarkup());
     }

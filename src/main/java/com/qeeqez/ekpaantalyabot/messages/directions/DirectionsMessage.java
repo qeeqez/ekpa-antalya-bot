@@ -10,10 +10,10 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class DirectionsMessage extends EditMessageText {
 
-    private final String text = "*Что рядом?*";
+    private static final String text = "*Что рядом?*";
 
     private DirectionsMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setReplyMarkup(new DirectionsMarkup());
     }

@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class BelarusEmbassyMessage extends EditMessageText {
 
-    private final String text = """           
+    private static final String text = """           
             <u><b>Посольство Беларуси в Анкаре</b></u>
             Посольство: +90 (312) 441 67 69 / +90 (312) 441 67 70
             Консульская служба: +90 (312) 441 64 50 (консультации и прием граждан с 9.00 до 13.00)
@@ -29,7 +29,7 @@ public class BelarusEmbassyMessage extends EditMessageText {
             """;
 
     private BelarusEmbassyMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.HTML);
         setDisableWebPagePreview(true);
         setReplyMarkup(new CountryEmbassyMarkup());

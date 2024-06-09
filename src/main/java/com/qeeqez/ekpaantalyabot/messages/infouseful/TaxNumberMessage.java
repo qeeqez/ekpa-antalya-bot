@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class TaxNumberMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🪪 ИНН \\(Турецкий Налоговый Номер\\)*
                         
             ℹ️ *Для чего нужен?*
@@ -31,7 +31,7 @@ public class TaxNumberMessage extends EditMessageText {
             """;
 
     private TaxNumberMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new ImportantDocsAnythingMarkup());

@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class CarFineMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🚗 Штраф на Автомобиль на Иностранных номерах*
                         
             ℹ️ *Проверить штрафы*
@@ -30,7 +30,7 @@ public class CarFineMessage extends EditMessageText {
             """;
 
     private CarFineMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new InfoUsefulAnythingMarkup());

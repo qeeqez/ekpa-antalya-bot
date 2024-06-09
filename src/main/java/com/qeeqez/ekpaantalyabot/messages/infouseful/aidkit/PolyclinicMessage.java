@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Setter
 public class PolyclinicMessage extends EditMessageText {
 
-    private final String text = """
+    private static final String text = """
             *🧑‍⚕️ Бесплатная медицина*
             
             💫 В Турции можно получать *базовую медицинскую помощь бесплатно*
@@ -46,7 +46,7 @@ public class PolyclinicMessage extends EditMessageText {
             """;
 
     private PolyclinicMessage() {
-        setText(text);
+        super(text);
         setParseMode(ParseMode.MARKDOWNV2);
         setDisableWebPagePreview(true);
         setReplyMarkup(new AidKitPolyclinicMarkup());

@@ -32,7 +32,7 @@ dependencies {
 
 //    Telegram Bot
     implementation("org.telegram:telegrambots-springboot-longpolling-starter:7.2.1")
-    implementation("org.telegram:telegrambots-client:7.2.1")
+    implementation("org.telegram:telegrambots-client:7.4.2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")

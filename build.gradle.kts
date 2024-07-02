@@ -31,7 +31,7 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots-springboot-longpolling-starter:7.2.1")
+    implementation("org.telegram:telegrambots-springboot-longpolling-starter:7.5.0")
     implementation("org.telegram:telegrambots-client:7.2.1")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")

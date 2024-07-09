@@ -18,8 +18,8 @@ public class PrintAndPhotoMessage extends EditMessageText {
             📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \\(350 м\\)
             
             📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \\(750 м\\)
-            Цветная печать \\(5 TL \\- 1 страница\\, 3 TL \\- несколько\\)
-            Биометрические фото 150 TL\\.
+            \\- Цветная печать 10 TL
+            \\- Биометрические фото 300 TL
             
             📍 [Fotokopi](https://goo.gl/maps/T6UtpDPoSSve3p58A) \\(900 м\\)
             📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \\(1\\.2 км\\)

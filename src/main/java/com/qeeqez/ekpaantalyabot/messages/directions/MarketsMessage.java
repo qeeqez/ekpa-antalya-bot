@@ -29,7 +29,7 @@ public class MarketsMessage extends EditMessageText {
             📍[Рынок Teomanpaşa](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \\(2\\.5 км\\)
                         
             *Суббота*
-            📍[Рынок Güneş](https://goo.gl/maps/AVoKnz9i1j2tqG898) \\(1\\.4 км\\)
+            📍[Рынок Güneş](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \\(1\\.4 км\\)
             """;
 
     private MarketsMessage() {

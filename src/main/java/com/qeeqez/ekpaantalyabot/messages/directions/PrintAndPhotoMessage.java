@@ -13,8 +13,6 @@ public class PrintAndPhotoMessage extends EditMessageText {
     private static final String text = """
             *Печать и Фото*
             
-            📍 @DmitriiF1 \\(В комплексе\\)
-            
             📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \\(350 м\\)
             
             📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \\(750 м\\)

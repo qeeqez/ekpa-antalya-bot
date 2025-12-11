@@ -4,3 +4,8 @@ bot:
 
 content:
   directory: "configs/content"
+
+health:
+  enabled: true
+  port: 8080
+  address: "0.0.0.0"

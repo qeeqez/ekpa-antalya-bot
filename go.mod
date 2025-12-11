@@ -3,6 +3,7 @@ module github.com/qeeqez/ekpaantalyabot
 go 1.25.5
 
 require (
+	github.com/caarlos0/env/v11 v11.3.1
 	github.com/mymmrac/telego v1.3.3
 	gopkg.in/yaml.v3 v3.0.1
 )

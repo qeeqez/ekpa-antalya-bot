@@ -2,33 +2,33 @@ version: "1.0"
 
 screens:
   - id: "INFO_EKPA"
-    text: "*🏘 Инфо по EKPA*"
+    text: "*🌟 Все о Ekpa*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
             - id: "management_office"
-              text: "🏢 Офис управления"
+              text: "🧑‍💼 Офис УК"
               type: "callback"
-              callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
+              callback: "MANAGEMENT_OFFICE_BUTTON"
         - buttons:
             - id: "how_to_pay"
-              text: "💳 Как оплачивать"
+              text: "💰 Оплатить"
               type: "callback"
               callback: "HOW_TO_PAY_BUTTON"
         - buttons:
             - id: "how_to_connect"
-              text: "🔌 Как подключить"
+              text: "🧑‍🔧 Подключить / Переоформить ♻️"
               type: "callback"
               callback: "HOW_TO_CONNECT_BUTTON"
         - buttons:
             - id: "how_to_disconnect"
-              text: "🔌 Как отключить"
+              text: "⛔️ Отключить"
               type: "callback"
               callback: "HOW_TO_DISCONNECT_BUTTON"
     navigation:
-      - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
-        target: "MANAGEMENT_OFFICE_ALL"
+      - callback: "MANAGEMENT_OFFICE_BUTTON"
+        target: "MANAGEMENT_OFFICE"
       - callback: "HOW_TO_PAY_BUTTON"
         target: "HOW_TO_PAY"
       - callback: "HOW_TO_CONNECT_BUTTON"
@@ -36,63 +36,38 @@ screens:
       - callback: "HOW_TO_DISCONNECT_BUTTON"
         target: "HOW_TO_DISCONNECT"
 
-  - id: "MANAGEMENT_OFFICE_ALL"
+  - id: "MANAGEMENT_OFFICE"
     text: |
-      *🏢 Офис управления комплексом*
+      *Управляющая Компания*
       
-      📍 Расположение: на территории комплекса
+      💼 *Офис*
+      [Блок С](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 этаж, со входа налево
       
-      📞 Телефон: \+90 XXX XXX XX XX
+      🕘 *Понедельник \- Суббота*
+      08:30 \- 12:30
+      13:30 \- 17:30
       
-      🌐 Сайт: ekpa1207\.com
+      *🛠️ Поломки и Жалобы*
+      \+90 \(539\) 6703316
+      
+      *💰 Оплата \- Айдат и Кондиционеры*
+      \+90 \(539\) 6703320
+      
+      *👮 Охрана*
+      \+90 \(539\) 6703833
+      
+      *🧑‍💼Управляющая*
+      EBRU HANIM
     parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "management_office_site"
-              text: "🌐 Сайт управления"
-              type: "url"
-              url: "https://ekpa1207.com"
-        - buttons:
-            - id: "management_office_complex"
-              text: "🏘 Офис в комплексе"
-              type: "callback"
-              callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
-    navigation:
-      - callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
-        target: "MANAGEMENT_OFFICE_COMPLEX"
-
-  - id: "MANAGEMENT_OFFICE_COMPLEX"
-    text: |
-      *🏢 Офис в комплексе*
-      
-      Находится на первом этаже блока C
-      
-      ⏰ Часы работы:
-      Пн\-Пт: 09:00 \- 18:00
-      Сб: 09:00 \- 13:00
-      Вс: Выходной
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "management_office_all"
-              text: "🏢 Офис управления"
-              type: "callback"
-              callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
-    navigation:
-      - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
-        target: "MANAGEMENT_OFFICE_ALL"
 
   - id: "HOW_TO_PAY"
-    text: "*💳 Как оплачивать*"
+    text: "*💰 Как оплатить?*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
             - id: "how_to_pay_aidat"
-              text: "🏠 Aidat"
+              text: "💸 Айдат"
               type: "callback"
               callback: "HOW_TO_PAY_AIDAT_BUTTON"
         - buttons:
@@ -105,14 +80,13 @@ screens:
               text: "⚡️ Электричество"
               type: "callback"
               callback: "HOW_TO_PAY_ELECTRICITY_BUTTON"
-        - buttons:
             - id: "how_to_pay_water"
-              text: "💧 Вода"
+              text: "💧 Воду"
               type: "callback"
               callback: "HOW_TO_PAY_WATER_BUTTON"
         - buttons:
             - id: "how_to_pay_phone_internet"
-              text: "📱 Телефон и интернет"
+              text: "📱 Мобильный телефон и Интернет 🌎"
               type: "callback"
               callback: "HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON"
     navigation:
@@ -129,66 +103,151 @@ screens:
 
   - id: "HOW_TO_PAY_AIDAT"
     text: |
-      *🏠 Оплата Aidat*
+      *Aйдат*
       
-      Aidat \- ежемесячный платеж за обслуживание комплекса
+      ℹ️ Ежемесячная плата за обслуживание комплекса\.
+      ⚠️ Оплачивать обязательно, даже если вы не живете в квартире\.
       
-      💰 Сумма: указана в вашем договоре
+      *Стоимость:*
+      ```
+      1\+1 \-  840 TL
+      2\+1 \-  1310 TL
+      2\+1 \- 1590 TL \(Отдельная кухня\)
+      3\+1 \- 1970 TL
+      ```
+      *Срок оплаты:*
+      ⏳ До 5 числа каждого месяца
       
-      📅 Срок оплаты: до 5 числа каждого месяца
+      *Оплата:*
+      🪙 Наличными или картой в Офисе УК
       
-      💳 Способы оплаты:
-      \- Через офис управления
-      \- Банковским переводом
-      \- Через банкомат
+      💳 Онлайн переводом с карты турецкого банка на счет:
+      
+      🏦 `TR24 0013 4000 0203 8787 9000 01`
+      
+      *Имя получателя и описание платежа*
+      🧑 `EKPA 1207 SITESI YONETIMI`
+      ℹ️ `Aidat Ekpa 1207` Блок Квартира Месяц
+      
+      ⚠️ Обязательно указывайте номера блока, квартиры и месяца за который оплачиваете
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_PAY_CONDITIONER"
     text: |
-      *❄️ Оплата кондиционера*
+      *Кондиционер*
       
-      Оплата за использование центрального кондиционирования
+      ℹ️ Cистема Центрального Кондиционирования не входит в счет за оплату электричества\.
+      ⚠️ Имейте ввиду, что Турция это жаркая страна, а электричество тут дорогое\.
       
-      💰 Оплата по счетчику
+      *Срок оплаты:*
+      ⏳ 7 дней со дня получения счета
+      ⚠️ При неоплате будет отключен\. На пульте появится значек замочка и надпись Centralized\.
       
-      📅 Счета приходят раз в месяц
+      *Оплата:*
+      🪙 Наличными или картой в Офисе УК
+      
+      💳 Онлайн переводом с карты турецкого банка на счет:
+      
+      🏦 `TR24 0013 4000 0203 8787 9000 01`
+      
+      *Имя получателя и описание платежа*
+      🧑 `EKPA 1207 SITESI YONETIMI`
+      ℹ️ `Klima Ekpa 1207` Блок Квартира
+      
+      ⚠️ Обязательно указывайте номера блока и квартиры за который оплачиваете
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_PAY_ELECTRICITY"
     text: |
-      *⚡️ Оплата электричества*
+      *Электричество*
       
-      💳 Оплата через банкомат или приложение банка
+      ℹ️ Кондиционер не включен в счет за оплату электричества\.
       
-      📱 Можно оплатить через мобильное приложение EDAŞ
+      ℹ️ *Aбонентский номер* выдается при подключении, так же он указан на платежке\.
+      
+      *Срок оплаты:*
+      ℹ️ Счет выставляется в конце месяца
+      ⏳ Оплатить нужно в течении 10 дней после выставления счета\.
+      
+      *Как узнать свой счет за электричество:*
+      \- В турецком интернет банке при оплате
+      \- В платежке, которая приходит по адресу, кладут в ящик на стене на первом этаже
+      \- Онлайн на сайте [CK Akdeniz](https://online.ckakdeniz.com.tr)
+      
+      *Оплата:*
+      
+      💳 *Онлайн в турецком интернет банке*
+      1\. Fatura \(Bill Payment\) \-\> Elektrik \(Electricity\) \-\> *CK Akdeniz Elektrik*
+      2\. Ввести свой *абонентский номер*
+      3\. Вы увидите сумму и сможете оплатить
+      ⚠️ Если счет еще не выставлен \- приложение выдаст ошибку\.
+      
+      🪙 *Наличными или картой*
+      \- В отделении Turkcell с небольшой комиссией [Ближайший 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Ближайший 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+      \- В отделении почты PTT, [Ближайшая почта](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+      \- В любом офисе CK Akdeniz Elektrik, [Ближайший офис](https://goo.gl/maps/nyumU39FQYJTnFZt9)
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_PAY_WATER"
     text: |
-      *💧 Оплата воды*
+      *Вода*
       
-      💳 Оплата через банкомат или приложение банка
+      ℹ️ *Aбонентский номер* выдается при подключении, так же он указан на платежке\.
       
-      📅 Счета приходят ежемесячно
+      *Срок оплаты:*
+      ℹ️ Счет выставляется в конце месяца
+      ⏳ Оплатить нужно в течении 10 дней после выставления счета\.
+      
+      *Как узнать свой счет за воду:*
+      \- В турецком интернет банке при оплате
+      \- В платежке, которая приходит по адресу, кладут в ящик на стене на первом этаже
+      \- Онлайн на сайте [ASAT](https://online.asat.gov.tr/webportal/index.php)\. Нажать HIZLI ÖDEME
+      
+      *Оплата:*
+      
+      💳 *Онлайн в турецком интернет банке*
+      1\. Fatura \(Bill Payment\) \-\> Su \(Water\) \-\> *Antalya Su \(ASAT\)*
+      2\. Ввести свой *абонентский номер* \(Добавьте несколько нулей слева от номера\)
+      3\. Вы увидите сумму и сможете оплатить
+      ⚠️ Если счет еще не выставлен \- приложение выдаст ошибку\.
+      
+      🪙 *Наличными или картой*
+      \- В отделении Turkcell с небольшой комиссией [Ближайший 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Ближайший 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+      \- В отделении почты PTT, [Ближайшая почта](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+      \- В [Головном офисе ASAT](https://goo.gl/maps/3GqKDPPnW8gUUz5q6)
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_PAY_PHONE_AND_INTERNET"
     text: |
-      *📱 Оплата телефона и интернета*
+      *📱 Мобильный телефон и Интернет 🌎*
       
-      💳 Оплата через приложение оператора или банкомат
+      💳 *Онлайн в приложении или на сайте вашего оператора*
+      \- Для телефона нужно выбрать пакет на следующий месяц
+      \- Можно просто пополнить баланс и позже оплачивать с него пакеты
+      \- Для интернета нужно оплатить счет за предыдущий месяц
       
-      Операторы: Turkcell, Vodafone, Türk Telekom
+      🪙 *Наличными или картой*
+      \- В отделении Turkcell с небольшой комиссией [Ближайший 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Ближайший 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+      \- В любом офисе вашего оператора связи
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_CONNECT"
-    text: "*🔌 Как подключить*"
+    text: |
+      *🧑‍🔧 Как подключить / переоформить? ♻️*
+
+      1️⃣ Процесс первого подключения от переоформления ничем не отличается
+      2️⃣ При переоформлении предыдущему плательщику отдельно ездить отключаться не нужно
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
             - id: "connect_dask"
-              text: "🏠 DASK страховка"
+              text: "🛡️ Dask"
               type: "callback"
               callback: "HOW_TO_CONNECT_DASK_INSURANCE_BUTTON"
         - buttons:
@@ -198,12 +257,12 @@ screens:
               callback: "HOW_TO_CONNECT_ELECTRICITY_BUTTON"
         - buttons:
             - id: "connect_water"
-              text: "💧 Вода"
+              text: "💧 Воду"
               type: "callback"
               callback: "HOW_TO_CONNECT_WATER_BUTTON"
         - buttons:
             - id: "connect_internet"
-              text: "🌐 Интернет"
+              text: "🌎 Интернет"
               type: "callback"
               callback: "HOW_TO_CONNECT_INTERNET_BUTTON"
     navigation:
@@ -218,58 +277,105 @@ screens:
 
   - id: "HOW_TO_CONNECT_DASK"
     text: |
-      *🏠 DASK \- обязательная страховка от землетрясений*
+      *🛡️ Страховка от землетрясений Dask*
       
-      📋 Необходимые документы:
-      \- Tapu \(документ на недвижимость\)
-      \- Паспорт
+      ℹ️ *Информация:*
+      \- Требуется для открытия счета на воду и электричество\.
+      \- Перед походом в Asat или CK Akdeniz Elektrik у вас *уже должен быть Dask*\.
+      \- В Банке Dask сделать нельзя\.
+      \- Сделать можно в любой страховой или в Nkolay по ссылке ниже\.
       
-      🏢 Где оформить:
-      \- Любая страховая компания
-      \- Онлайн через сайты страховых
+      💼 *Взять с собой:*
+      1\. Тапу или договор аренды
+      2\. Паспорт или Икамет
+      3\. Турецкий налоговый номер \(Достаточно самого номера\)
+      4\. Полный адрес / Сказать Ekpa
+      
+      📍 *Оформить Dask в [Nkolay](https://goo.gl/maps/nyumU39FQYJTnFZt9)*
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_CONNECT_ELECTRICITY"
     text: |
-      *⚡️ Подключение электричества*
+      *⚡️Электричество*
       
-      🏢 Компания: EDAŞ
+      💼 *Взять с собой:*
+      1\. *Тапу* или *договор аренды*
+      2\. *Паспорт* или *Икамет*
+      3\. Турецкий *налоговый номер* \(Достаточно самого номера\)
+      4\. Страховку от землетрясения *Dask*
+      5\. *Деньги* для залога \(Возвращаются при отключении\)
       
-      📋 Документы:
-      \- Tapu
-      \- Паспорт
-      \- DASK страховка
+      📍 *Подключить можно только в [головном офисе CK Akdeniz Elektrik](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
       
-      📍 Адрес офиса EDAŞ
+      🧑‍💼*Сообщить в УК:*
+      Блок и номер квартиры, а так же абонентский номер на электричество\.
+      
+      ℹ️ В течении 1 рабочего дня в квартире появится свет\.
+      ℹ️ При проблемах с электричеством \- сообщите в УК\.
+      
+      ⚠️ Щиток на электричество находится в шкафу\.
+      ⚠️ Электрический счетчик находится в подвале за закрытой дверью\.
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_CONNECT_WATER"
     text: |
-      *💧 Подключение воды*
+      *💧 Вода*
       
-      🏢 Компания: ASAT
+      💼 *Взять с собой:*
+      1\. *Тапу* или *договор аренды*
+      2\. *Паспорт* или *Икамет*
+      3\. Турецкий *налоговый номер* \(Достаточно самого номера\)
+      4\. Страховку от землетрясения *Dask*
+      5\. *Деньги* для залога \(Возвращаются при отключении\)
       
-      📋 Документы:
-      \- Tapu
-      \- Паспорт
+      📍 *Подключить воду в [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
       
-      📍 Адрес офиса ASAT
+      🧑‍💼*Сообщить в УК:*
+      Блок и номер квартиры, а так же абонентский номер на воду\.
+      
+      ℹ️ В течении 3 рабочих дней в квартире появится вода\.
+      ℹ️ При проблемах с водой или напором в кранах \- сообщите в УК\.
+      
+      ⚠️ В квартире есть вентиль для перекрытия воды\.
+      \- В 1\+1 ищите под раковиной\.
+      \- В 2\+1 находится в душе\.
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_CONNECT_INTERNET"
     text: |
-      *🌐 Подключение интернета*
+      *🌎 Интернет*
       
-      📡 Провайдеры:
-      \- Türk Telekom
-      \- Vodafone
-      \- Turkcell Superonline
+      ℹ️ *Для подключения Интернета вам нужен ВНЖ \(ikamet\)*
       
-      📞 Звоните оператору для подключения
+      ℹ️ *Домашний интернет в Турции по контракту*
+      \- Контракт заключается на год или два года
+      \- При досрочном расторжении контракта выплачивается неустойка
+      \- Оплата при этом производится помесячно
+      
+      🌐 *Операторы интернета*
+      \- [Turk Telekom](https://turktelekom.com.tr/)
+      \- [Turkcell Superonline](https://www.superonline.net/)
+      \- [Turksat Kablo](https://www.fiberkablonet.com/)
+      
+      ℹ️ Для подключения нужно обратиться с икаметом в офис оператора\. Цена как на сайте оператора\.
+      ⚠️ В офисе могут не найти наш адрес в системе, рекомендуем обращаться в ближайшие к комплексу офисы\.
+      
+      🏴‍☠️ *Подключение без ВНЖ*
+      \- Для подключения без ВНЖ вам нужно найти человека, который оформит интернет на себя\.
+      \- Обычно это дороже, многие "помогаторы" берут деньги за такую услугу\.
+      \- Помогатора можно найти через своего риэлтора или через офисы операторов интернета\.
+      
+      ⚡️ *Альтернативные способы*
+      \- Раздавать интернет с телефона
+      \- Обратиться к соседям за помощью, поделиться вайфаем
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_DISCONNECT"
-    text: "*🔌 Как отключить*"
+    text: "*⛔️ Как отключить?*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
@@ -280,24 +386,63 @@ screens:
               callback: "HOW_TO_DISCONNECT_ELECTRICITY_BUTTON"
         - buttons:
             - id: "disconnect_water"
-              text: "💧 Вода"
+              text: "💧 Воду"
               type: "callback"
               callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
+    navigation:
+      - callback: "HOW_TO_DISCONNECT_ELECTRICITY_BUTTON"
+        target: "HOW_TO_DISCONNECT_ELECTRICITY"
+      - callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
+        target: "HOW_TO_DISCONNECT_WATER"
 
   - id: "HOW_TO_DISCONNECT_ELECTRICITY"
     text: |
-      *⚡️ Отключение электричества*
+      *⚡️Электричество*
       
-      🏢 Обратитесь в офис EDAŞ с документами
+      💰 При отключении возвращается депозит, который платился при подключении, минус остаток для оплаты
       
-      ⚠️ Отключение может занять несколько дней
+      🌎 *Отключить онлайн*
+      \- Зайти в Edevlet
+      \- Перейти на страницу [Ck Akdeniz Feshi Başvurusu](https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
+      \- Или вбить в поиске `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu`
+      \- Нажать *"Новая заявка" \(Yeni Başvuru\)*, выбрать счет и заполнить свои данные
+      \- Заполнить IBAN на который будут перечислены деньги
+      ⚠️ *Отключить онлайн можно только если подключались на Икамет*
+      
+      📍 *Отключить электричество оффлайн в [головном офисе CK Akdeniz Elektrik](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+      
+      💼 *Взять с собой:*
+      1\. *Абонентский номер* \(с ним быстрее найдут в системе\)
+      2\. *Паспорт* или *Икамет*
+      3\. *IBAN* на который будут перечислены деньги
+      
+      ℹ️ В течении суток в квартире пропадет электричество\.
+      ℹ️ Деньги зачислятся на турецкий счет только после отключения, в течении 7\-30 дней\.
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_DISCONNECT_WATER"
     text: |
-      *💧 Отключение воды*
+      *💧 Вода*
       
-      🏢 Обратитесь в офис ASAT с документами
+      💰 При отключении возвращается депозит, который платился при подключении, минус остаток для оплаты
       
-      ⚠️ Отключение может занять несколько дней
+      🌎 *Отключить онлайн*
+      \- Зайти в Edevlet
+      \- Перейти на страницу [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu)
+      \- Или вбить в поиске `ASAT Abonelik Sözleşme Feshi Başvurusu`
+      \- Нажать *"Новая заявка" \(Yeni Başvuru\)*, выбрать счет и заполнить свои данные
+      \- Заполнить IBAN на который будут перечислены деньги
+      ⚠️ *Отключить онлайн можно только если подключались на Икамет*
+      
+      📍 *Отключить воду оффлайн в [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
+      
+      💼 *Взять с собой:*
+      1\. *Абонентский номер* \(с ним быстрее найдут в системе\)
+      2\. *Паспорт* или *Икамет*
+      3\. *IBAN* на который будут перечислены деньги
+      
+      ℹ️ В течении 3 рабочих дней в квартире пропадет вода\.
+      ℹ️ Деньги зачислятся на турецкий счет только после отключения, в течении 7\-30 дней\.
     parse_mode: "MarkdownV2"
+    disable_web_preview: true

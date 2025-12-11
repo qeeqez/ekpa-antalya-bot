@@ -45,19 +45,15 @@ screens:
               type: "url"
               url: "https://t.me/+PyO3tLtwJs05MWM6"
         - buttons:
-            - id: "party_chat"
-              text: "🎉 Party"
-              type: "url"
-              url: "https://t.me/+J2ZE1JvT2NY1ZGQy"
             - id: "board_games_chat"
               text: "🎲 Настолки"
               type: "url"
               url: "https://t.me/+qz0pTNWBiK4wYzAy"
-        - buttons:
             - id: "gaming_chat"
               text: "🎮 Gaming"
               type: "url"
-              url: "https://t.me/+dLY_cIPJCEBlNjgy"
+              url: "https://t.me/+Iq6NQv3hRDtkMTZi"
+        - buttons:
             - id: "it_chat"
               text: "🧑‍💻 IT"
               type: "url"

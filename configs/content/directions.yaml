@@ -1,0 +1,489 @@
+version: "1.0"
+
+screens:
+  - id: "DIRECTIONS"
+    text: "*Что рядом?*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "markets"
+              text: "🛒 Магазины продуктов"
+              type: "callback"
+              callback: "MARKETS_BUTTON"
+            - id: "shops"
+              text: "🏪 Магазины"
+              type: "callback"
+              callback: "SHOPS_BUTTON"
+            - id: "shopping_centers"
+              text: "🏬 ТЦ"
+              type: "callback"
+              callback: "SHOPPING_CENTERS_BUTTON"
+        - buttons:
+            - id: "print_photo"
+              text: "🖨 Печать и фото"
+              type: "callback"
+              callback: "PRINT_AND_PHOTO_BUTTON"
+        - buttons:
+            - id: "barber"
+              text: "💈 Барбершоп"
+              type: "callback"
+              callback: "BARBER_BUTTON"
+        - buttons:
+            - id: "tax_office"
+              text: "🏛 Налоговая"
+              type: "callback"
+              callback: "TAX_OFFICE_BUTTON"
+            - id: "post_office"
+              text: "📮 Почта"
+              type: "callback"
+              callback: "POST_OFFICE_BUTTON"
+        - buttons:
+            - id: "city_hall"
+              text: "🏛 Мэрия"
+              type: "callback"
+              callback: "CITY_HALL_BUTTON"
+            - id: "population_office"
+              text: "👥 ЗАГС"
+              type: "callback"
+              callback: "POPULATION_OFFICE_BUTTON"
+            - id: "migration_office"
+              text: "🛂 Миграция"
+              type: "callback"
+              callback: "MIGRATION_OFFICE_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MARKETS_BUTTON"
+        target: "MARKETS"
+      - callback: "SHOPS_BUTTON"
+        target: "SHOPS"
+      - callback: "SHOPPING_CENTERS_BUTTON"
+        target: "SHOPPING_CENTERS"
+      - callback: "PRINT_AND_PHOTO_BUTTON"
+        target: "PRINT_AND_PHOTO"
+      - callback: "BARBER_BUTTON"
+        target: "BARBER"
+      - callback: "TAX_OFFICE_BUTTON"
+        target: "TAX_OFFICE"
+      - callback: "POST_OFFICE_BUTTON"
+        target: "POST_OFFICE"
+      - callback: "CITY_HALL_BUTTON"
+        target: "CITY_HALL"
+      - callback: "POPULATION_OFFICE_BUTTON"
+        target: "POPULATION_OFFICE"
+      - callback: "MIGRATION_OFFICE_BUTTON"
+        target: "MIGRATION_OFFICE"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "DIRECTIONS_SITE"
+    text: "*🗺 Карта объектов*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "residence_cafe"
+              text: "☕️ Residence Cafe"
+              type: "callback"
+              callback: "RESIDENCE_CAFE_BUTTON"
+        - buttons:
+            - id: "residence_fitness_spa"
+              text: "💪 Residence Fitness & SPA"
+              type: "callback"
+              callback: "RESIDENCE_FITNESS_SPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "RESIDENCE_CAFE_BUTTON"
+        target: "RESIDENCE_CAFE"
+      - callback: "RESIDENCE_FITNESS_SPA_BUTTON"
+        target: "RESIDENCE_FITNESS_SPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "MARKETS"
+    text: |
+      *🛒 Магазины продуктов*
+      
+      📍 [Migros Jet \(5 мин пешком\)](https://goo\.gl/maps/JzpZYe8P7wXVqn7c6)
+      
+      📍 [Şok \(7 мин пешком\)](https://goo\.gl/maps/9SnX4Y3qPxPbj1oM8)
+      
+      📍 [A101 \(10 мин пешком\)](https://goo\.gl/maps/XwFDM8xjyeNKqWL88)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "all_markets"
+              text: "📋 Все магазины"
+              type: "callback"
+              callback: "ALL_MARKETS_BUTTON"
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "ALL_MARKETS_BUTTON"
+        target: "ALL_MARKETS"
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "ALL_MARKETS"
+    text: |
+      *🛒 Все магазины продуктов*
+      
+      📍 [Migros Jet](https://goo\.gl/maps/JzpZYe8P7wXVqn7c6)
+      📍 [Şok](https://goo\.gl/maps/9SnX4Y3qPxPbj1oM8)
+      📍 [A101](https://goo\.gl/maps/XwFDM8xjyeNKqWL88)
+      📍 [BIM](https://goo\.gl/maps/GhP7KtzNZ3pjR5JZ9)
+      📍 [Migros](https://goo\.gl/maps/UrQM6Pqm8PjsXTfH9)
+      📍 [Carrefour](https://goo\.gl/maps/DtzWMpjcRrm7qxKs7)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "markets"
+              text: "🛒 Магазины продуктов"
+              type: "callback"
+              callback: "MARKETS_BUTTON"
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MARKETS_BUTTON"
+        target: "MARKETS"
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "SHOPS"
+    text: |
+      *🏪 Магазины*
+      
+      📍 [LC Waikiki](https://goo\.gl/maps/8nKQShwJeV5fLMw96)
+      📍 [Koton](https://goo\.gl/maps/zAjjrC8VdkhzrRhX8)
+      📍 [DeFacto](https://goo\.gl/maps/8nKQShwJeV5fLMw96)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "SHOPPING_CENTERS"
+    text: |
+      *🏬 Торговые центры*
+      
+      📍 [MarkAntalya](https://goo\.gl/maps/fweBJYwH8eL6BTUK9)
+      📍 [Terra City](https://goo\.gl/maps/j8VPzBxDPVpGqkM9A)
+      📍 [Mall of Antalya](https://goo\.gl/maps/c4VxJBRx85FqxF2BA)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PRINT_AND_PHOTO"
+    text: |
+      *🖨 Печать и фото*
+      
+      📍 [Oto Kopyalama](https://goo\.gl/maps/8nKQShwJeV5fLMw96)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "BARBER"
+    text: |
+      *💈 Барбершоп*
+      
+      📍 [Berber Salonu](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "TAX_OFFICE"
+    text: |
+      *🏛 Налоговая \- Vergi Dairesi*
+      
+      📍 [Kepez Vergi Dairesi](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "POST_OFFICE"
+    text: |
+      *📮 Почта \- PTT*
+      
+      📍 [PTT Kepez](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "CITY_HALL"
+    text: |
+      *🏛 Мэрия \- Belediye*
+      
+      📍 [Kepez Belediyesi](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "POPULATION_OFFICE"
+    text: |
+      *👥 ЗАГС \- Nüfus Müdürlüğü*
+      
+      📍 [Nüfus Müdürlüğü](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "MIGRATION_OFFICE"
+    text: |
+      *🛂 Миграционная служба \- Göç İdaresi*
+      
+      📍 [Göç İdaresi Müdürlüğü](https://goo\.gl/maps/abc123)
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "RESIDENCE_CAFE"
+    text: "*☕️ Residence Cafe*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "residence_cafe_menu"
+              text: "📋 Меню"
+              type: "url"
+              url: "https://example.com/menu"
+        - buttons:
+            - id: "residence_cafe_wifi"
+              text: "📶 WiFi"
+              type: "callback"
+              callback: "RESIDENCE_CAFE_WIFI_BUTTON"
+        - buttons:
+            - id: "directions_site"
+              text: "🗺 Карта объектов"
+              type: "callback"
+              callback: "DIRECTIONS_SITE_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "RESIDENCE_CAFE_WIFI_BUTTON"
+        target: "RESIDENCE_CAFE_WIFI"
+      - callback: "DIRECTIONS_SITE_BUTTON"
+        target: "DIRECTIONS_SITE"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "RESIDENCE_CAFE_WIFI"
+    text: |
+      *📶 WiFi Residence Cafe*
+      
+      Пароль: `residencecafe`
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "residence_cafe"
+              text: "☕️ Residence Cafe"
+              type: "callback"
+              callback: "RESIDENCE_CAFE_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "RESIDENCE_CAFE_BUTTON"
+        target: "RESIDENCE_CAFE"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "RESIDENCE_FITNESS_SPA"
+    text: "*💪 Residence Fitness & SPA*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "directions_site"
+              text: "🗺 Карта объектов"
+              type: "callback"
+              callback: "DIRECTIONS_SITE_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DIRECTIONS_SITE_BUTTON"
+        target: "DIRECTIONS_SITE"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

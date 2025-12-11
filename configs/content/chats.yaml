@@ -1,0 +1,153 @@
+version: "1.0"
+
+screens:
+  - id: "OUR_CHATS"
+    text: "*💬 Наши Чаты*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "ekpa_main_chat_attention"
+              text: "📣 Основной чат EKPA"
+              type: "url"
+              url: "https://t.me/ekpa1207"
+        - buttons:
+            - id: "blocks_chat"
+              text: "🏘 Чаты по блокам"
+              type: "callback"
+              callback: "BLOCKS_CHAT_BUTTON"
+        - buttons:
+            - id: "animals_chat"
+              text: "🐾 Животные"
+              type: "url"
+              url: "https://t.me/+VqxKcXN7VoY2ZTky"
+        - buttons:
+            - id: "beauty_chat"
+              text: "💅 Красота"
+              type: "url"
+              url: "https://t.me/+zGOjxI7s6YNhMWEy"
+        - buttons:
+            - id: "board_games_chat"
+              text: "🎲 Настольные игры"
+              type: "url"
+              url: "https://t.me/+BYcODVNZHQ5jYTQy"
+        - buttons:
+            - id: "gaming_chat"
+              text: "🎮 Игры"
+              type: "url"
+              url: "https://t.me/+dLY_cIPJCEBlNjgy"
+        - buttons:
+            - id: "it_chat"
+              text: "💻 IT"
+              type: "url"
+              url: "https://t.me/+i9DZC9qUG3Q0OTEy"
+        - buttons:
+            - id: "only_residents_chat"
+              text: "🔒 Только жители"
+              type: "url"
+              url: "https://t.me/+K-7VBKkb9yE4MWMy"
+        - buttons:
+            - id: "parents_chat"
+              text: "👶 Родители"
+              type: "url"
+              url: "https://t.me/+H_JaPzQGT5dlZjUy"
+        - buttons:
+            - id: "party_chat"
+              text: "🎉 Вечеринки"
+              type: "url"
+              url: "https://t.me/+eWJD3pLvQx8xZjMy"
+        - buttons:
+            - id: "sos_chat"
+              text: "🆘 SOS"
+              type: "url"
+              url: "https://t.me/+5EqzcIv2p8M2MDQy"
+        - buttons:
+            - id: "sport_chat"
+              text: "⚽️ Спорт"
+              type: "url"
+              url: "https://t.me/+VvOWVYdfxe1lZWQy"
+        - buttons:
+            - id: "sport_games_chat"
+              text: "🏃 Спортивные игры"
+              type: "url"
+              url: "https://t.me/+LdKOtDqF1WxiNDMy"
+        - buttons:
+            - id: "taxi_chat"
+              text: "🚕 Такси"
+              type: "url"
+              url: "https://t.me/+KxZ7PBdWLFs5Yjgy"
+        - buttons:
+            - id: "trade_chat"
+              text: "🛒 Купить/Продать"
+              type: "url"
+              url: "https://t.me/+w3a2kUDnBnNiNTQy"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "BLOCKS_CHAT_BUTTON"
+        target: "BLOCKS_CHAT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "BLOCKS_CHAT"
+    text: "*🏘 Чаты по блокам*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "block_a1"
+              text: "Block A1"
+              type: "url"
+              url: "https://t.me/+SvPLtfcvBCxmYjEy"
+            - id: "block_a2"
+              text: "Block A2"
+              type: "url"
+              url: "https://t.me/+hYL6fDgxHQVjNGQy"
+            - id: "block_a3"
+              text: "Block A3"
+              type: "url"
+              url: "https://t.me/+XE_3DiKvvUYzNTAy"
+        - buttons:
+            - id: "block_a4"
+              text: "Block A4"
+              type: "url"
+              url: "https://t.me/+j5Z3JZdPAc4yMDky"
+            - id: "block_b"
+              text: "Block B"
+              type: "url"
+              url: "https://t.me/+gxTqQBFo8642Yzky"
+            - id: "block_c"
+              text: "Block C"
+              type: "url"
+              url: "https://t.me/+7C0_yJnHZ8liNjAy"
+        - buttons:
+            - id: "block_d"
+              text: "Block D"
+              type: "url"
+              url: "https://t.me/+6tNm7gDBCp1iYjQy"
+            - id: "block_e1"
+              text: "Block E1"
+              type: "url"
+              url: "https://t.me/+3tWhLRdGJQQxOWMy"
+            - id: "block_e2"
+              text: "Block E2"
+              type: "url"
+              url: "https://t.me/+wz4DxmnyYSBlNmEy"
+        - buttons:
+            - id: "our_chats"
+              text: "💬 Наши Чаты"
+              type: "callback"
+              callback: "OUR_CHATS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "OUR_CHATS_BUTTON"
+        target: "OUR_CHATS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

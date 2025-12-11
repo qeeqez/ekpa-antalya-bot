@@ -1,0 +1,6 @@
+bot:
+  username: "EkpaAntalyaBot"
+  token: "5650858881:AAHpuXQ7qUBgwy-pinis-u1uYkyT-ZXm7Ic"  # TEST TOKEN
+
+content:
+  directory: "configs/content"

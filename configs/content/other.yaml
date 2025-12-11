@@ -1,0 +1,261 @@
+version: "1.0"
+
+screens:
+  - id: "CAR_FINE"
+    text: |
+      *🚗 Проверка штрафов*
+      
+      Проверить и оплатить штрафы можно:
+      
+      🌐 На сайте E\-Devlet:
+      [turkiye\.gov\.tr](https://www\.turkiye\.gov\.tr)
+      
+      💳 Через банковское приложение
+      
+      🏦 В отделении банка
+      
+      ℹ️ Понадобится номер TC или паспорта
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "info_useful"
+              text: "⭐️ Полезная информация"
+              type: "callback"
+              callback: "INFO_USEFUL_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "INFO_USEFUL_BUTTON"
+        target: "INFO_USEFUL"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK"
+    text: "*📱 Разблокировка телефона*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock_sim"
+              text: "📲 Разблокировка SIM"
+              type: "callback"
+              callback: "PHONE_UNLOCK_SIM_BUTTON"
+        - buttons:
+            - id: "phone_unlock_imei"
+              text: "📱 Регистрация IMEI"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        - buttons:
+            - id: "info_useful"
+              text: "⭐️ Полезная информация"
+              type: "callback"
+              callback: "INFO_USEFUL_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_SIM_BUTTON"
+        target: "PHONE_UNLOCK_SIM"
+      - callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        target: "PHONE_UNLOCK_IMEI"
+      - callback: "INFO_USEFUL_BUTTON"
+        target: "INFO_USEFUL"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK_SIM"
+    text: |
+      *📲 Разблокировка SIM\-карты*
+      
+      Если SIM заблокирована из\-за неправильного PIN:
+      
+      🔐 Используйте PUK\-код
+      
+      📱 PUK\-код указан на упаковке SIM\-карты
+      
+      ℹ️ Если PUK утерян \- обратитесь к оператору
+      
+      Операторы:
+      \- Turkcell: 444 0 532
+      \- Vodafone: 444 0 542
+      \- Türk Telekom: 444 1 444
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock"
+              text: "📱 Разблокировка телефона"
+              type: "callback"
+              callback: "PHONE_UNLOCK_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_BUTTON"
+        target: "PHONE_UNLOCK"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK_IMEI"
+    text: |
+      *📱 Регистрация IMEI*
+      
+      Телефоны, привезенные из\-за границы, должны быть зарегистрированы
+      
+      ⏱ Срок: 120 дней с момента первого использования в Турции
+      
+      💰 Стоимость: ~3000 TL
+      
+      📋 Способы регистрации:
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock_imei_free"
+              text: "🆓 Бесплатный способ"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_FREE_BUTTON"
+        - buttons:
+            - id: "phone_unlock_imei_paid"
+              text: "💳 Платный способ"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_PAID_BUTTON"
+        - buttons:
+            - id: "phone_unlock_imei_reblock"
+              text: "⚠️ Повторная блокировка"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_REBLOCK_BUTTON"
+        - buttons:
+            - id: "phone_unlock"
+              text: "📱 Разблокировка телефона"
+              type: "callback"
+              callback: "PHONE_UNLOCK_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_IMEI_FREE_BUTTON"
+        target: "PHONE_UNLOCK_IMEI_FREE"
+      - callback: "PHONE_UNLOCK_IMEI_PAID_BUTTON"
+        target: "PHONE_UNLOCK_IMEI_PAID"
+      - callback: "PHONE_UNLOCK_IMEI_REBLOCK_BUTTON"
+        target: "PHONE_UNLOCK_IMEI_REBLOCK"
+      - callback: "PHONE_UNLOCK_BUTTON"
+        target: "PHONE_UNLOCK"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK_IMEI_FREE"
+    text: |
+      *🆓 Бесплатная регистрация IMEI*
+      
+      Доступна один раз каждые 3 года
+      
+      📋 Необходимо:
+      \- ВНЖ или гражданство Турции
+      \- Телефон привезен менее 120 дней назад
+      
+      🌐 Регистрация через:
+      [imei\.gov\.tr](https://imei\.gov\.tr)
+      
+      📄 Понадобится:
+      \- IMEI телефона \(\*\#06\#\)
+      \- Паспорт
+      \- Номер ВНЖ
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock_imei"
+              text: "📱 Регистрация IMEI"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        target: "PHONE_UNLOCK_IMEI"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK_IMEI_PAID"
+    text: |
+      *💳 Платная регистрация IMEI*
+      
+      💰 Стоимость: ~3000 TL
+      
+      Необходима если:
+      \- Уже использовали бесплатную квоту
+      \- Нет ВНЖ
+      \- Прошло более 120 дней
+      
+      🏦 Оплата:
+      1\. Получите счет на [imei\.gov\.tr](https://imei\.gov\.tr)
+      2\. Оплатите в банке или онлайн
+      3\. Телефон разблокируется автоматически
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock_imei"
+              text: "📱 Регистрация IMEI"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        target: "PHONE_UNLOCK_IMEI"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PHONE_UNLOCK_IMEI_REBLOCK"
+    text: |
+      *⚠️ Повторная блокировка*
+      
+      Телефон может быть заблокирован повторно если:
+      
+      ❌ Извлечена турецкая SIM\-карта
+      ❌ Установлена иностранная SIM
+      ❌ Телефон выезжал за границу
+      
+      💡 Чтобы избежать блокировки:
+      ✅ Всегда держите турецкую SIM активной
+      ✅ Не используйте роуминг длительное время
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "phone_unlock_imei"
+              text: "📱 Регистрация IMEI"
+              type: "callback"
+              callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "PHONE_UNLOCK_IMEI_BUTTON"
+        target: "PHONE_UNLOCK_IMEI"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

@@ -1,0 +1,572 @@
+version: "1.0"
+
+screens:
+  - id: "INFO_EKPA"
+    text: "*🏘 Инфо по EKPA*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "management_office"
+              text: "🏢 Офис управления"
+              type: "callback"
+              callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "how_to_connect"
+              text: "🔌 Как подключить"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_BUTTON"
+        - buttons:
+            - id: "how_to_disconnect"
+              text: "🔌 Как отключить"
+              type: "callback"
+              callback: "HOW_TO_DISCONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
+        target: "MANAGEMENT_OFFICE_ALL"
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "HOW_TO_CONNECT_BUTTON"
+        target: "HOW_TO_CONNECT"
+      - callback: "HOW_TO_DISCONNECT_BUTTON"
+        target: "HOW_TO_DISCONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "MANAGEMENT_OFFICE_ALL"
+    text: |
+      *🏢 Офис управления комплексом*
+      
+      📍 Расположение: на территории комплекса
+      
+      📞 Телефон: \+90 XXX XXX XX XX
+      
+      🌐 Сайт: ekpa1207\.com
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "management_office_site"
+              text: "🌐 Сайт управления"
+              type: "url"
+              url: "https://ekpa1207.com"
+        - buttons:
+            - id: "management_office_complex"
+              text: "🏘 Офис в комплексе"
+              type: "callback"
+              callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
+        - buttons:
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
+        target: "MANAGEMENT_OFFICE_COMPLEX"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "MANAGEMENT_OFFICE_COMPLEX"
+    text: |
+      *🏢 Офис в комплексе*
+      
+      Находится на первом этаже блока C
+      
+      ⏰ Часы работы:
+      Пн\-Пт: 09:00 \- 18:00
+      Сб: 09:00 \- 13:00
+      Вс: Выходной
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "management_office_all"
+              text: "🏢 Офис управления"
+              type: "callback"
+              callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
+        - buttons:
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
+        target: "MANAGEMENT_OFFICE_ALL"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY"
+    text: "*💳 Как оплачивать*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay_aidat"
+              text: "🏠 Aidat"
+              type: "callback"
+              callback: "HOW_TO_PAY_AIDAT_BUTTON"
+        - buttons:
+            - id: "how_to_pay_conditioner"
+              text: "❄️ Кондиционер"
+              type: "callback"
+              callback: "HOW_TO_PAY_CONDITIONER_BUTTON"
+        - buttons:
+            - id: "how_to_pay_electricity"
+              text: "⚡️ Электричество"
+              type: "callback"
+              callback: "HOW_TO_PAY_ELECTRICITY_BUTTON"
+        - buttons:
+            - id: "how_to_pay_water"
+              text: "💧 Вода"
+              type: "callback"
+              callback: "HOW_TO_PAY_WATER_BUTTON"
+        - buttons:
+            - id: "how_to_pay_phone_internet"
+              text: "📱 Телефон и интернет"
+              type: "callback"
+              callback: "HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON"
+        - buttons:
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_AIDAT_BUTTON"
+        target: "HOW_TO_PAY_AIDAT"
+      - callback: "HOW_TO_PAY_CONDITIONER_BUTTON"
+        target: "HOW_TO_PAY_CONDITIONER"
+      - callback: "HOW_TO_PAY_ELECTRICITY_BUTTON"
+        target: "HOW_TO_PAY_ELECTRICITY"
+      - callback: "HOW_TO_PAY_WATER_BUTTON"
+        target: "HOW_TO_PAY_WATER"
+      - callback: "HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON"
+        target: "HOW_TO_PAY_PHONE_AND_INTERNET"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY_AIDAT"
+    text: |
+      *🏠 Оплата Aidat*
+      
+      Aidat \- ежемесячный платеж за обслуживание комплекса
+      
+      💰 Сумма: указана в вашем договоре
+      
+      📅 Срок оплаты: до 5 числа каждого месяца
+      
+      💳 Способы оплаты:
+      \- Через офис управления
+      \- Банковским переводом
+      \- Через банкомат
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY_CONDITIONER"
+    text: |
+      *❄️ Оплата кондиционера*
+      
+      Оплата за использование центрального кондиционирования
+      
+      💰 Оплата по счетчику
+      
+      📅 Счета приходят раз в месяц
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY_ELECTRICITY"
+    text: |
+      *⚡️ Оплата электричества*
+      
+      💳 Оплата через банкомат или приложение банка
+      
+      📱 Можно оплатить через мобильное приложение EDAŞ
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY_WATER"
+    text: |
+      *💧 Оплата воды*
+      
+      💳 Оплата через банкомат или приложение банка
+      
+      📅 Счета приходят ежемесячно
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_PAY_PHONE_AND_INTERNET"
+    text: |
+      *📱 Оплата телефона и интернета*
+      
+      💳 Оплата через приложение оператора или банкомат
+      
+      Операторы: Turkcell, Vodafone, Türk Telekom
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_pay"
+              text: "💳 Как оплачивать"
+              type: "callback"
+              callback: "HOW_TO_PAY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_PAY_BUTTON"
+        target: "HOW_TO_PAY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_CONNECT"
+    text: "*🔌 Как подключить*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "connect_dask"
+              text: "🏠 DASK страховка"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_DASK_INSURANCE_BUTTON"
+        - buttons:
+            - id: "connect_electricity"
+              text: "⚡️ Электричество"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_ELECTRICITY_BUTTON"
+        - buttons:
+            - id: "connect_water"
+              text: "💧 Вода"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_WATER_BUTTON"
+        - buttons:
+            - id: "connect_internet"
+              text: "🌐 Интернет"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_INTERNET_BUTTON"
+        - buttons:
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_CONNECT_DASK_INSURANCE_BUTTON"
+        target: "HOW_TO_CONNECT_DASK"
+      - callback: "HOW_TO_CONNECT_ELECTRICITY_BUTTON"
+        target: "HOW_TO_CONNECT_ELECTRICITY"
+      - callback: "HOW_TO_CONNECT_WATER_BUTTON"
+        target: "HOW_TO_CONNECT_WATER"
+      - callback: "HOW_TO_CONNECT_INTERNET_BUTTON"
+        target: "HOW_TO_CONNECT_INTERNET"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_CONNECT_DASK"
+    text: |
+      *🏠 DASK \- обязательная страховка от землетрясений*
+      
+      📋 Необходимые документы:
+      \- Tapu \(документ на недвижимость\)
+      \- Паспорт
+      
+      🏢 Где оформить:
+      \- Любая страховая компания
+      \- Онлайн через сайты страховых
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_connect"
+              text: "🔌 Как подключить"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_CONNECT_BUTTON"
+        target: "HOW_TO_CONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_CONNECT_ELECTRICITY"
+    text: |
+      *⚡️ Подключение электричества*
+      
+      🏢 Компания: EDAŞ
+      
+      📋 Документы:
+      \- Tapu
+      \- Паспорт
+      \- DASK страховка
+      
+      📍 Адрес офиса EDAŞ
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_connect"
+              text: "🔌 Как подключить"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_CONNECT_BUTTON"
+        target: "HOW_TO_CONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_CONNECT_WATER"
+    text: |
+      *💧 Подключение воды*
+      
+      🏢 Компания: ASAT
+      
+      📋 Документы:
+      \- Tapu
+      \- Паспорт
+      
+      📍 Адрес офиса ASAT
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_connect"
+              text: "🔌 Как подключить"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_CONNECT_BUTTON"
+        target: "HOW_TO_CONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_CONNECT_INTERNET"
+    text: |
+      *🌐 Подключение интернета*
+      
+      📡 Провайдеры:
+      \- Türk Telekom
+      \- Vodafone
+      \- Turkcell Superonline
+      
+      📞 Звоните оператору для подключения
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_connect"
+              text: "🔌 Как подключить"
+              type: "callback"
+              callback: "HOW_TO_CONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_CONNECT_BUTTON"
+        target: "HOW_TO_CONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_DISCONNECT"
+    text: "*🔌 Как отключить*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "disconnect_electricity"
+              text: "⚡️ Электричество"
+              type: "callback"
+              callback: "HOW_TO_DISCONNECT_ELECTRICITY_BUTTON"
+        - buttons:
+            - id: "disconnect_water"
+              text: "💧 Вода"
+              type: "callback"
+              callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
+        - buttons:
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_DISCONNECT_ELECTRICITY_BUTTON"
+        target: "HOW_TO_DISCONNECT_ELECTRICITY"
+      - callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
+        target: "HOW_TO_DISCONNECT_WATER"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_DISCONNECT_ELECTRICITY"
+    text: |
+      *⚡️ Отключение электричества*
+      
+      🏢 Обратитесь в офис EDAŞ с документами
+      
+      ⚠️ Отключение может занять несколько дней
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_disconnect"
+              text: "🔌 Как отключить"
+              type: "callback"
+              callback: "HOW_TO_DISCONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_DISCONNECT_BUTTON"
+        target: "HOW_TO_DISCONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "HOW_TO_DISCONNECT_WATER"
+    text: |
+      *💧 Отключение воды*
+      
+      🏢 Обратитесь в офис ASAT с документами
+      
+      ⚠️ Отключение может занять несколько дней
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "how_to_disconnect"
+              text: "🔌 Как отключить"
+              type: "callback"
+              callback: "HOW_TO_DISCONNECT_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "HOW_TO_DISCONNECT_BUTTON"
+        target: "HOW_TO_DISCONNECT"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

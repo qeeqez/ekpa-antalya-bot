@@ -1,3 +1,5 @@
 telegram-bot:
   username: EkpaAntalyaBot
-  token:
+#  token: "7231105394:AAEGXIhe2Ps1xkBDtx_n7BpuSNZLz9ID51s" #  PROD
+  token: "5650858881:AAHpuXQ7qUBgwy-pinis-u1uYkyT-ZXm7Ic"
+#  token: 7488044852:AAEPvXmizCJebV3yOVUPc3dm87Frlhufv0o

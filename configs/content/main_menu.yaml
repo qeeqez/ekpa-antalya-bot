@@ -1,0 +1,156 @@
+version: "1.0"
+
+commands:
+  - command: "/start"
+    description: "Главное меню"
+    screen_id: "MAIN_MENU"
+    is_pinned: true
+  - command: "/menu"
+    description: "Главное меню"
+    screen_id: "MAIN_MENU"
+  - command: "/botlink"
+    description: "Ссылка на Бота"
+    screen_id: "BOT_LINK"
+  - command: "/ourchats"
+    description: "Наши Чаты"
+    screen_id: "OUR_CHATS_INFO"
+
+screens:
+  - id: "MAIN_MENU"
+    text: "*Главное меню*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "ekpa_main_chat"
+              text: "📣 Основной чат EKPA"
+              type: "url"
+              url: "https://t.me/ekpa1207"
+        - buttons:
+            - id: "our_chats"
+              text: "💬 Наши Чаты"
+              type: "callback"
+              callback: "OUR_CHATS_BUTTON"
+        - buttons:
+            - id: "directions_site"
+              text: "🗺 Карта объектов"
+              type: "callback"
+              callback: "DIRECTIONS_SITE_BUTTON"
+            - id: "directions"
+              text: "📍 Что рядом?"
+              type: "callback"
+              callback: "DIRECTIONS_BUTTON"
+        - buttons:
+            - id: "info_useful"
+              text: "⭐️ Полезная информация"
+              type: "callback"
+              callback: "INFO_USEFUL_BUTTON"
+            - id: "info_ekpa"
+              text: "🏘 Инфо по EKPA"
+              type: "callback"
+              callback: "INFO_EKPA_BUTTON"
+        - buttons:
+            - id: "address"
+              text: "🏠 Адрес"
+              type: "callback"
+              callback: "ADDRESS_BUTTON"
+        - buttons:
+            - id: "suggest_changes"
+              text: "💡 Предложить изменения"
+              type: "url"
+              url: "https://t.me/qeeqez"
+    navigation:
+      - callback: "OUR_CHATS_BUTTON"
+        target: "OUR_CHATS"
+      - callback: "DIRECTIONS_BUTTON"
+        target: "DIRECTIONS"
+      - callback: "DIRECTIONS_SITE_BUTTON"
+        target: "DIRECTIONS_SITE"
+      - callback: "INFO_USEFUL_BUTTON"
+        target: "INFO_USEFUL"
+      - callback: "INFO_EKPA_BUTTON"
+        target: "INFO_EKPA"
+      - callback: "ADDRESS_BUTTON"
+        target: "ADDRESS"
+
+  - id: "ADDRESS"
+    text: |
+      *Наш адрес:*
+
+      *il:*             `Antalya`
+      *ilçe:*          `Kepez`
+      *Mahalle:*    `Güneş`
+      *Caddesi:*  `Şehit Astsubay Ömer Halis Demir`
+      *Site:*          `Ekpa 1207`
+      *Block* \(Блок\), *Daire* \(Квартира\), *Kat* \(Этаж\)
+
+      *Индекс:* `07260`
+      
+      *Нумерация Блоков:*
+
+      `А1` \- `95А`
+      `А2` \- `95АА`
+      `А3` \- `95АВ`
+      `А4` \- `95АС`
+      `В`   \- `95В`
+      `С`   \- `95С`
+      `D`   \- `95D`
+      `E1` \- `95E`
+      `E2` \- `95EA`
+      
+      *Нажми меня:*
+      `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "BOT_LINK"
+    text: |
+      *Ссылка на бота:*
+      
+      https://t\.me/EkpaAntalyaBot
+      
+      Поделись ссылкой с соседями 😊
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "OUR_CHATS_INFO"
+    text: |
+      *💬 Наши Чаты*
+      
+      Выберите интересующий вас чат из меню ниже\.
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "our_chats_detailed"
+              text: "📋 Список чатов"
+              type: "callback"
+              callback: "OUR_CHATS_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "OUR_CHATS_BUTTON"
+        target: "OUR_CHATS"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

@@ -1,0 +1,143 @@
+version: "1.0"
+
+screens:
+  - id: "DELIVERY"
+    text: "*🚚 Доставка*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "food_delivery"
+              text: "🍕 Доставка еды"
+              type: "callback"
+              callback: "FOOD_DELIVERY_BUTTON"
+        - buttons:
+            - id: "products_delivery"
+              text: "🛒 Доставка продуктов"
+              type: "callback"
+              callback: "PRODUCTS_DELIVERY_BUTTON"
+        - buttons:
+            - id: "goods_delivery"
+              text: "📦 Доставка товаров"
+              type: "callback"
+              callback: "GOODS_DELIVERY_BUTTON"
+        - buttons:
+            - id: "info_useful"
+              text: "⭐️ Полезная информация"
+              type: "callback"
+              callback: "INFO_USEFUL_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "FOOD_DELIVERY_BUTTON"
+        target: "FOOD_DELIVERY"
+      - callback: "PRODUCTS_DELIVERY_BUTTON"
+        target: "PRODUCTS_DELIVERY"
+      - callback: "GOODS_DELIVERY_BUTTON"
+        target: "GOODS_DELIVERY"
+      - callback: "INFO_USEFUL_BUTTON"
+        target: "INFO_USEFUL"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "FOOD_DELIVERY"
+    text: |
+      *🍕 Доставка еды*
+      
+      Популярные сервисы:
+      
+      🍔 *Yemeksepeti*
+      📱 Приложение \+ сайт
+      
+      🍕 *Getir Yemek*
+      📱 Приложение
+      
+      🌯 *Migros Hemen*
+      📱 Приложение
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "delivery"
+              text: "🚚 Доставка"
+              type: "callback"
+              callback: "DELIVERY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DELIVERY_BUTTON"
+        target: "DELIVERY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "PRODUCTS_DELIVERY"
+    text: |
+      *🛒 Доставка продуктов*
+      
+      Сервисы доставки:
+      
+      🛒 *Getir*
+      Быстрая доставка за 10\-15 минут
+      
+      🛒 *Migros Hemen*
+      Доставка из Migros
+      
+      🛒 *Yemeksepeti Banabi*
+      Доставка продуктов
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "delivery"
+              text: "🚚 Доставка"
+              type: "callback"
+              callback: "DELIVERY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DELIVERY_BUTTON"
+        target: "DELIVERY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"
+
+  - id: "GOODS_DELIVERY"
+    text: |
+      *📦 Доставка товаров*
+      
+      Интернет\-магазины:
+      
+      🛍 *Trendyol*
+      Одежда, электроника, товары для дома
+      
+      🛍 *Hepsiburada*
+      Электроника, бытовая техника
+      
+      🛍 *Amazon\.tr*
+      Широкий ассортимент товаров
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows:
+        - buttons:
+            - id: "delivery"
+              text: "🚚 Доставка"
+              type: "callback"
+              callback: "DELIVERY_BUTTON"
+        - buttons:
+            - id: "main_menu"
+              text: "🏠 В главное меню"
+              type: "callback"
+              callback: "MAIN_MENU_BUTTON"
+    navigation:
+      - callback: "DELIVERY_BUTTON"
+        target: "DELIVERY"
+      - callback: "MAIN_MENU_BUTTON"
+        target: "MAIN_MENU"

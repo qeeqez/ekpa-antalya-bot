@@ -2,23 +2,23 @@ version: "1.0"
 
 screens:
   - id: "DELIVERY"
-    text: "*🚚 Доставка*"
+    text:  "*🛵📦 Онлайн доставка*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
             - id: "food_delivery"
-              text: "🍕 Доставка еды"
+              text: "🍔 Еда"
               type: "callback"
               callback: "FOOD_DELIVERY_BUTTON"
         - buttons:
             - id: "products_delivery"
-              text: "🛒 Доставка продуктов"
+              text: "🍎 Продукты"
               type: "callback"
               callback: "PRODUCTS_DELIVERY_BUTTON"
         - buttons:
             - id: "goods_delivery"
-              text: "📦 Доставка товаров"
+              text: "📦 Товары"
               type: "callback"
               callback: "GOODS_DELIVERY_BUTTON"
     navigation:
@@ -31,48 +31,61 @@ screens:
 
   - id: "FOOD_DELIVERY"
     text: |
-      *🍕 Доставка еды*
+      *Доставка Еды*
       
-      Популярные сервисы:
+      ❗️Используйте встроенный в chrome переводчик
+      💵 \- возможна оплата наличкой
+      🪪 \- только с внж
       
-      🍔 *Yemeksepeti*
-      📱 Приложение \+ сайт
-      
-      🍕 *Getir Yemek*
-      📱 Приложение
-      
-      🌯 *Migros Hemen*
-      📱 Приложение
+      🍔 [Yemeksepeti](https://www.yemeksepeti.com/) 💵
+      🍔 [TiklaGelsin](https://www.tiklagelsin.com)
+      🍔 [Getir](https://getir.com/)
+      🍕 [Dominos](https://www.dominos.com.tr) 💵
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "PRODUCTS_DELIVERY"
     text: |
-      *🛒 Доставка продуктов*
+      *Доставка Продуктов*
       
-      Сервисы доставки:
+      ❗️ Используйте встроенный в chrome переводчик
+      💵 Возможна оплата наличкой
       
-      🛒 *Getir*
-      Быстрая доставка за 10\-15 минут
-      
-      🛒 *Migros Hemen*
-      Доставка из Migros
-      
-      🛒 *Yemeksepeti Banabi*
-      Доставка продуктов
+      🍌 [Migros](https://www.migros.com.tr)
+      🍌 [Tahtakale](https://tahtakalespot.com)
+      🍌 [Carrefour](https://www.carrefoursa.com)
+      🧻 [Sok](https://www.sokmarket.com.tr)
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "GOODS_DELIVERY"
     text: |
-      *📦 Доставка товаров*
+      *Доставка Товаров*
       
-      Интернет\-магазины:
+      ❗️Используйте встроенный в chrome переводчик
+      💵 \- возможна оплата наличкой
+      🪪 \- только с внж
       
-      🛍 *Trendyol*
-      Одежда, электроника, товары для дома
+      *Агрегаторы низких цен*
+      [Akakce](https://www.akakce.com)
+      [Cimri](https://www.cimri.com)
       
-      🛍 *Hepsiburada*
-      Электроника, бытовая техника
+      *Самые крупные маркеты*
+      [Trendyol](https://www.trendyol.com/)
+      [Hepsiburada](https://www.hepsiburada.com)
       
-      🛍 *Amazon\.tr*
-      Широкий ассортимент товаров
+      *Другие*
+      [Amazon](https://www.amazon.com.tr) 🪪
+      [Aliexpress](https://tr.aliexpress.com/)
+      [n11](https://www.n11.com) 🪪
+      [Ciceksepeti](https://www.ciceksepeti.com)
+      
+      *Teхника*
+      [Teknosa](https://www.teknosa.com)
+      [A101](https://www.a101.com.tr)
+      [Turkcell Pasaj](https://www.turkcell.com.tr/pasaj)
+      [Mediamarkt](https://www.mediamarkt.com.tr)
+      💻 [Vatan](https://www.vatanbilgisayar.com)
+      🪛 [Samm Market](https://market.samm.com) 💵
     parse_mode: "MarkdownV2"
+    disable_web_preview: true

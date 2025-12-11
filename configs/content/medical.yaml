@@ -1,32 +1,32 @@
 version: "1.0"
 screens:
     - id: AID_KIT
-      text: "*\\U0001F3E5 Медицина*"
+      text: "*❤️ Аптечка*"
       parse_mode: MarkdownV2
       inline_keyboard:
         rows:
             - buttons:
                 - id: ambulance
-                  text: "\\U0001F691 Скорая помощь"
+                  text: "🚑 Скорая помощь"
                   type: callback
                   callback: AMBULANCE_BUTTON
             - buttons:
                 - id: hospitals
-                  text: "\\U0001F3E5 Больницы"
+                  text: "🏥 Больницы"
                   type: callback
                   callback: HOSPITALS_BUTTON
                 - id: pharmacies
-                  text: "\\U0001F48A Аптеки"
+                  text: "🧬 Аптеки"
                   type: callback
                   callback: PHARMACIES_BUTTON
             - buttons:
                 - id: medicine
-                  text: "\\U0001F48A Лекарства"
+                  text: "💊 Турецкие лекарства"
                   type: callback
                   callback: MEDICINE_BUTTON
             - buttons:
                 - id: polyclinic
-                  text: "\\U0001F3E5 Поликлиника"
+                  text: "🧑‍⚕️ Бесплатная медицина"
                   type: callback
                   callback: POLYCLINIC_BUTTON
       navigation:
@@ -41,75 +41,195 @@ screens:
         - callback: POLYCLINIC_BUTTON
           target: POLYCLINIC
     - id: AMBULANCE
-      text: "*\\U0001F691 Скорая помощь*\\n\\n\\U0001F4DE Номер: `112`\\n\\n\\U0001F3E5 Ближайшая больница:\\n\\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\\n\\n⚠️ При звонке в скорую, сообщите адрес четко\\n"
+      text: |
+        *🚑 Скорая помощь*
+
+        ☎️ `112`
+
+        ℹ️ *Скорую помощь вызывайте только в самом крайнем случае\.*
+        В Турции вызов скорой помощи может обойтись в огромную копеечку\.
+        При вызове скорой скажите English, должны переключить на английского оператора\.
+
+        😷️ *Горячая линия для иностранцев*
+
+        ☎️ `+90 850 288 38 38`
+
+        ℹ️ *В Горячей линии говорят на всех языках*
+        Помогают по всем вопросам медицины, в том числе и с вызовом скорой помощи\.
       parse_mode: MarkdownV2
-      disable_web_preview: true
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: aid_kit
-                  text: "\\U0001F3E5 Медицина"
-                  type: callback
-                  callback: AID_KIT_BUTTON
-                - id: main_menu
-                  text: "🏠 В главное меню"
-                  type: callback
-                  callback: MAIN_MENU_BUTTON
-      navigation:
-        - callback: AID_KIT_BUTTON
-          target: AID_KIT
     - id: PHARMACIES
-      text: "*\\U0001F9D1‍⚕️ Аптеки \\\\- Eczane*\\n            \\nℹ️ В воскресенье обычные аптеки не работают\\n\\n\\U0001F4CD Множество аптек находится по дороге к больнице:\\n\\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\\n            \\n*\\U0001F3E5 Дежурные аптеки \\\\- Nöbetçi Eczaneler*\\n\\n\\\\- Работают круглосуточно\\n\\\\- Каждый день они разные\\n\\\\- Актуальные можно посмотреть на сайте или в приложении\\n"
+      text: |
+        *🧑‍⚕️ Аптеки \- Eczane*
+
+        ℹ️ В воскресенье обычные аптеки не работают
+
+        📍 Множество аптек находится по дороге к больнице:
+        📍 [Kepez Devlet Hastanesi](https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+
+        *🏥 Дежурные аптеки \- Nöbetçi Eczaneler*
+
+        \- Работают круглосуточно
+        \- Каждый день они разные
+        \- Актуальные можно посмотреть на сайте или в приложении
       parse_mode: MarkdownV2
       disable_web_preview: true
       inline_keyboard:
         rows:
             - buttons:
                 - id: pharmacies_site
-                  text: "\\U0001F310 Сайт"
+                  text: "🌎 Сайт с дежурными аптеками"
                   type: url
-                  url: https://www.eczaneler.gen.tr
+                  url: "https://www.antalyaeo.org.tr/tr/nobetci-eczaneler"
             - buttons:
                 - id: pharmacies_android
-                  text: "\\U0001F916 Android"
+                  text: "🤖 Android"
                   type: url
-                  url: https://play.google.com/store/apps/details?id=com.eczane
+                  url: "https://play.google.com/store/apps/details?id=com.adcinteractive.eczane"
                 - id: pharmacies_iphone
-                  text: "\\U0001F34E iPhone"
+                  text: "📱 iPhone"
                   type: url
-                  url: https://apps.apple.com/app/eczane/id123456
+                  url: "https://apps.apple.com/tr/app/n%C3%B6bet%C3%A7i-eczane-pharmacies/id1315296205"
     - id: HOSPITALS
-      text: "*\\U0001F3E5 Больницы*\\n\\n\\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\\nГосударственная больница \\\\(по страховке\\\\)\\n\\n\\U0001F4CD Частные больницы:\\n\\\\- Medical Park\\n\\\\- Memorial\\n\\\\- Liv Hospital\\n\\n\\U0001F4A1 Проверьте покрытие вашей страховки\\n"
+      text: |
+        *🏥 Больницы \- Hastane*
+
+        🛡️ *По Страховке*
+
+        1️⃣️ Для обращения по страховке, для начала нужно узнать с какими больницами она работает
+        2️⃣ Страховка зачастую не покрывает всю сумму лечения, впрочем это зависит от вашего полиса и страховой компании
+
+        ⁉️ *Как узнать с какими больницами работает страховка:*
+        1\. Зайти на сайт [imecedestek](https://imecedestek.com/ContractedOrganizations)
+        2\. Указать название страховой компании и тип страховки
+        3\. Выбрать район, в котором вы хотите посмотреть контрактные организации
+        4\. Выбрать тип заведения
+        5\. Нажать *Ara / Search*
+
+        ⭐️ Таким образом вы получите список больниц и других мед учреждений, в которых у вас работает страховка\.
+
+        ❤️‍🩹 *Без Страховки*
+
+        \- Можно обращаться в больницы и частные клиники и не из списка страховой\.
+        \- В таком случае ваша страховка тоже может покрывать небольшую часть лечения\. \(Читайте об этом в ее описании и условиях страхования\)
+        \- Если у вас не будет никакой страховки, то готовтесь приготовить немаленькую сумму\.
+
+        📍 Ищите больницы на карте по турецкому слову *Hastane*\.
       parse_mode: MarkdownV2
       disable_web_preview: true
       inline_keyboard:
         rows:
             - buttons:
                 - id: hospitals_insurance_site
-                  text: "\\U0001F310 Проверить страховку"
+                  text: "🌎 Поиск мед учреждения по страховке"
                   type: url
-                  url: https://www.sgk.gov.tr
+                  url: "https://imecedestek.com/ContractedOrganizations"
     - id: POLYCLINIC
-      text: "*\\U0001F3E5 Поликлиника \\\\- Aile Sağlık Merkezi*\\n\\nБесплатное обслуживание по страховке SGK\\n\\n\\U0001F4CD Ближайшая поликлиника:\\nРасположение на карте\\n\\n\\U0001F4F1 Запись через приложение:\\n"
+      text: |
+        *🧑‍⚕️ Бесплатная медицина*
+
+        💫 В Турции можно получать *базовую медицинскую помощь бесплатно*
+        \- Для этого нужно после получения ВНЖ прикрепиться к семейному врачу
+
+        🆓️ *Что дает:*
+        \- У семейного врача можно сделать общий осмотр
+        \- Сдать базовые анализы
+        \- Получить рецепт на лекарства
+        \- Сделать прививки себе и детям
+        \- Получить рекомендации специалистов в больницах
+        \- История всех анализов и обследований будут отображаться в приложении e\-Nabız\.
+        \- Причем из всех больниц, включая частные\.
+
+        💼 *Что нужно:*
+        \- Турецкий номер телефона
+        \- e\-Devlet \(делается на почте\)
+        \- Прописка по вашему адресу
+
+        🌎 *Как прикрепиться:*
+        1\. Зарегистрироваться на [сайте enabiz](https://enabiz.gov.tr/)
+        2\. Выбрать функцию *Сменить семейного врача / Change your family physician*
+        3\. Выбрать город, район
+        4\. Откроется список доступных семейных клиник aile sağlık merkezi и специалистов\.
+        \- Врача, выделенного красным выбрать нельзя
+        \- Врачи, выделенные зелёным более свободные
+        \- Смена врача с 5 по 21 числа происходит в тот же день\. Заявки с 22 по 4 число будут обработаны 5\-го числа\.
+
+        ⚡️*Дополнительно:*
+        \- Зарегистрироваться на [сайте MHRS](https://www.mhrs.gov.tr/) \(сайт для записи к врачу\)
+
+        ⭐ Теперь вам доступна *Запись к врачу / Appointment / Randevu* через сайт и приложение e\-Nabız\
       parse_mode: MarkdownV2
       disable_web_preview: true
       inline_keyboard:
         rows:
             - buttons:
                 - id: polyclinic_site
-                  text: "\\U0001F310 Сайт"
+                  text: "🌎 Сайт для записи к врачу\n"
                   type: url
-                  url: https://www.mhrs.gov.tr
+                  url: "https://enabiz.gov.tr/"
             - buttons:
                 - id: polyclinic_android
-                  text: "\\U0001F916 Android"
+                  text: "🤖 Android"
                   type: url
-                  url: https://play.google.com/store/apps/details?id=tr.gov.saglik.mhrs
+                  url: "https://play.google.com/store/apps/details?id=tr.gov.saglik.enabiz"
                 - id: polyclinic_iphone
-                  text: "\\U0001F34E iPhone"
+                  text: "📱 iPhone"
                   type: url
-                  url: https://apps.apple.com/app/mhrs/id123456
+                  url: "https://apps.apple.com/tr/app/e-nab%C4%B1z/id980446169"
     - id: MEDICINE
-      text: "*\\U0001F48A Лекарства*\\n\\n\\U0001F4DD Рецепты выдаются врачами\\n\\n\\U0001F48A Многие лекарства продаются без рецепта\\n\\n\\U0001F4B0 Со страховкой SGK \\\\- скидка на лекарства\\n\\n⚠️ Названия могут отличаться от российских\\n"
+      text: |
+        *💊 Турецкие лекарства*
+
+        *Перекись водорода:*
+        Oksijenli Su
+
+        *Боль в горле:*
+        Tantum Verde \- спрей
+        Strepsils \- леденцы
+
+        *Кашель:*
+        Влажный:  Acetylcystein 600 mg \- 1 раз в день утром \(если гастрит \- после еды либо после омепразола\)
+        Сухой: здесь много сиропов от сухого кашля на травах \(например Fitospan\)
+
+        *Насморк:*
+        Sinus rinse kit \- промывать нос морской водой \(типа Долфина\)
+        Nasovine \- сосудосуживающий спрей \(Ксилометазолин\)
+        Risonel, 0,05% \- при аллергическом насморке, при длительном применении сосудосуживающих\. Убирает отек в носу, уменьшает течение \(Аналог Назонекс\), по 2 дозы в каждую ноздрю 2 раза в день 2 недели , далее по 1 дозе 2 раза в день 2 недели, далее по\. 1 дозе 1 раз в день 2 недели\.
+
+        *При болях:*
+        Nimes 100 mg \(Nimesulid\) \- найз
+        Brufen 400 mg \(Ibuprofen\) \- ибупрофен
+        Panadol \- парацетамол
+        Profenid jel \- Фастум гель
+        Artril \- обезболивающий гель для втираний в кожу в области суставов
+        Tylohot \- терафлю
+
+        *Для живота:*
+        Buscopan \- спазмолитик при коликах в животе \(ношпа\)
+        Reflor \- при диарее на длительную перспективу \(например при приеме антибиотиков\)
+        Linex \- туда же
+        Enterosgel \(Энтеросгель\) \- сорбент в виде геляs
+        Eucabon \- местный уголь
+        Omeprasol \- омепразол
+
+        *При запоре:*
+        Duphalac \(Дюфалак\)
+
+        *Тошнота:*
+        Metpamid \(типа Мотилиума\)
+
+        *Аллергия:*
+        Aerius \(Эриус\)
+        Cetrin \(Цетрин\)
+        Fenistil gel  \- при аллергии на коже и укусах против зуда
+
+        *Герпес:*
+        Zovirax \(крем, такой же как в рф\)
+        Bepanthen \- Бепантен \(ожоги, трещины\)
+
+        *Глаза:*
+        VİSİNE \(Визин\) \- из безрецептурного, при зуде, сухости в глазах
+
+        *Уши:*
+        Otipax \- капли с лидокаином, обезболивают, уменьшают воспаление, без рецепта
       parse_mode: MarkdownV2
       disable_web_preview: true

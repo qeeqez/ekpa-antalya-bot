@@ -2,43 +2,39 @@ version: "1.0"
 
 screens:
   - id: "IMPORTANT_DOCUMENTS"
-    text: "*📄 Важные документы*"
+    text: "*📝 ВНЖ / Прописка / Документы*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
             - id: "check_application_status"
-              text: "🔍 Проверить статус заявления"
-              type: "callback"
-              callback: "CHECK_APPLICATION_STATUS_BUTTON"
+              text: "✅ Проверить статус заявки ВНЖ"
+              type: "url"
+              url: "https://e-ikamet.goc.gov.tr/Ikamet/DevamEdenBasvuruGiris"
         - buttons:
             - id: "get_id_number"
-              text: "🆔 Получить ID номер"
-              type: "callback"
-              callback: "GET_ID_NUMBER_BUTTON"
+              text: "🆔 Узнать номер ВНЖ"
+              type: "url"
+              url: "https://tckimlik.nvi.gov.tr/Modul/YabanciKimlikNoSorgula"
         - buttons:
             - id: "tax_number"
-              text: "💼 Налоговый номер"
+              text: "🪪 ИНН"
               type: "callback"
               callback: "TAX_NUMBER_BUTTON"
             - id: "edevlet"
-              text: "🏛 E-Devlet"
+              text: "🧧 Edevlet"
               type: "callback"
               callback: "EDEVLET_BUTTON"
         - buttons:
             - id: "address_numarataj"
-              text: "🏠 Адрес (Numarataj)"
+              text: "🔖 Нумаратаж"
               type: "callback"
               callback: "ADDRESS_NUMARATAJ_BUTTON"
             - id: "address_registration"
-              text: "📝 Регистрация адреса"
+              text: "📌 Прописка"
               type: "callback"
               callback: "ADDRESS_REGISTRATION_BUTTON"
     navigation:
-      - callback: "CHECK_APPLICATION_STATUS_BUTTON"
-        target: "CHECK_APPLICATION_STATUS"
-      - callback: "GET_ID_NUMBER_BUTTON"
-        target: "GET_ID_NUMBER"
       - callback: "TAX_NUMBER_BUTTON"
         target: "TAX_NUMBER"
       - callback: "EDEVLET_BUTTON"
@@ -48,53 +44,25 @@ screens:
       - callback: "ADDRESS_REGISTRATION_BUTTON"
         target: "ADDRESS_REGISTRATION"
 
-  - id: "CHECK_APPLICATION_STATUS"
-    text: |
-      *🔍 Проверить статус заявления*
-      
-      Проверка статуса заявлений на ВНЖ, гражданство и другие документы
-      
-      🌐 Через сайт E\-Devlet:
-      [turkiye\.gov\.tr](https://www\.turkiye\.gov\.tr)
-      
-      📱 Или через мобильное приложение
-      
-      ℹ️ Понадобится номер заявления
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-
-  - id: "GET_ID_NUMBER"
-    text: |
-      *🆔 Получить ID номер \- TC Kimlik*
-      
-      TC Kimlik \- турецкий идентификационный номер
-      
-      📋 Выдается при:
-      \- Получении ВНЖ
-      \- Получении гражданства
-      
-      🏢 Где получить:
-      Nüfus Müdürlüğü \(ЗАГС\)
-      
-      📄 Документы:
-      \- Паспорт
-      \- ВНЖ или документ о гражданстве
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-
   - id: "EDEVLET"
     text: |
-      *🏛 E\\-Devlet \\- Портал госуслуг*
+      *🧧 Edevlet*
       
-      Через E\\-Devlet можно:
-      \\\\- Оплачивать штрафы
-      \\\\- Проверять документы
-      \\\\- Записываться к врачу
-      \\\\- Получать справки
+      ℹ️ Сайт с самыми разными Гос Услугами:
+      \- Получение справок и выписок
+      \- Бесплатная медицина
+      \- Разблокировка телефона
+      \- Многое другое
       
-      🔐 Вход по паролю или через банк
+      🌎 [Ссылка на сайт](https://www.turkiye.gov.tr)
       
-      📱 Доступно через приложение:
+      ⚡️ *Как подключить*
+      \- Получить ВНЖ \(ikamet\)
+      \- Иметь турецкий номер телефона
+      \- На почте \(PTT\), сказать EDevlet
+      \- За 20 лиры сделают пароль для едевлета, придет в смс
+      
+      📍 [Ближайшая почта](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
     inline_keyboard:
@@ -108,71 +76,89 @@ screens:
             - id: "edevlet_android"
               text: "🤖 Android"
               type: "url"
-              url: "https://play.google.com/store/apps/details?id=tr.gov.turkiye"
+              url: "https://play.google.com/store/apps/details?id=tr.gov.turkiye.edevlet.kapisi"
             - id: "edevlet_iphone"
-              text: "🍎 iPhone"
+              text: "📱 iPhone"
               type: "url"
-              url: "https://apps.apple.com/app/e-devlet/id123456"
+              url: "https://apps.apple.com/tr/app/e-devlet/id976505454"
 
   - id: "TAX_NUMBER"
     text: |
-      *💼 Налоговый номер \- Vergi Numarası*
+      *🪪 ИНН \(Турецкий Налоговый Номер\)*
       
-      📋 Необходим для:
-      \- Открытия банковского счета
-      \- Покупки недвижимости
-      \- Оформления страховки
+      ℹ️ *Для чего нужен?*
+      \- Оформление Dask и коммуналки на себя
+      \- ВНЖ
+      \- Открытие счета в банке
       
-      🏢 Где получить:
-      Налоговая служба \(Vergi Dairesi\)
+      🌎 *Получить онлайн*
+      \- Зайти на [сайт налоговой](https://ivd.gib.gov.tr/)
+      \- Выбрать центральную нижнюю кнопку
+      \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+      \- *APPLICATION FOR NON\-CITIZEN\'S POTENTIAL TAX NUMBER*
+      \- Заполнить свои данные
       
-      📄 Документы:
-      \- Паспорт
-      \- Заявление
-      
-      ⏱ Оформление: 10\-15 минут
+      💸 *Получить в налоговой*
+      \- Иногда онлайн система пишет ошибку и приходится ехать в налоговую
+      \- Отделение налоговой [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
 
   - id: "ADDRESS_NUMARATAJ"
     text: |
-      *🏠 Адрес \- Numarataj*
+      *🔖 Нумаратаж \(Numarataj\)*
       
-      Numarataj \- официальный документ с адресом квартиры
+      ℹ️ *Справка, подтверждающая адрес*
+      \- Требуется для прописки
+      \- Требуется для получения ВНЖ
       
-      📋 Необходим для:
-      \- Регистрации адреса
-      \- Подключения коммунальных услуг
-      \- Оформления документов
+      💼 *Взять с собой:*
+      1\. Паспорт
+      2\. Тапу
+      3\. Договор аренды
+      4\. Копии этих документов
       
-      🏢 Где получить:
-      Муниципалитет \(Belediye\)
+      ℹ️ *Инструкция по получению:*
+      1\. В [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) сделать копии документов
+      2\. Пройти на 2 этаж, по знакам Numarataj зайти в коридор блока D
+      3\. Взять талон, вас вызовут
+      4\. Отдать человеку все копии документов
+      5\. Спуститься на первый этаж, по живой очереди отдать документы в окно, поставят печати
+      6\. Вернуться на второй этаж, выдадут справку Нумаратаж
+      ⚠️ Если вас несколько человек,то дайте копии паспортов всех, кто должен быть прописан в этой справке
       
-      📄 Документы:
-      \- Паспорт
-      \- Tapu
+      📍 Делается все в [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 км\)
+      ⚡️ На первом этаже можно сделать копии документов за 1 TL
     parse_mode: "MarkdownV2"
     disable_web_preview: true
 
   - id: "ADDRESS_REGISTRATION"
     text: |
-      *📝 Регистрация адреса \- İkametgah*
+      *📌 Прописка*
       
-      İkametgah \- справка о регистрации по адресу
+      ℹ️ *Прописку нужно сделать в течении 20 дней после получения ВНЖ*
+      \- Детей с собой брать не обязательно, взрослым всем быть желательно
+      \- Без прописки не продлят ВНЖ
       
-      📋 Необходима для:
-      \- ВНЖ
-      \- Работы
-      \- Учебы
+      ℹ️ Прописка онлайн иностранцам больше не осуществляется
+      ℹ️ Прописка в Nufus иностранцам не делается, однако в особых случаях там могут вас прописать
       
-      🏢 Где получить:
-      Nüfus Müdürlüğü \(ЗАГС\)
+      📌 *Прописка в Goc*
       
-      📄 Документы:
-      \- Паспорт
-      \- Numarataj
-      \- Tapu или договор аренды
+      💼 *Взять с собой:*
+      1\. Икамет \(ВНЖ\)
+      2\. Тапу или договор аренды
+      3\. Нумаратаж \(Numarataj\)
+      4\. Ксерокопии Тапу / Договора и Нумаратажа
+      5\. Квитанцию за воду или свет на ваше имя
       
-      ⏱ Срок действия: 3 месяца
+      ⚡️ *Важно:*
+      \- Квитанция должна быть свежей, иначе откажут
+      \- Могут запросить копию кимлика и тапу хозяина квартиры
+      
+      📍 *Как добраться:*
+      \- Приехать в [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+      \- На входе сказать *Adres* и показать икамет, вас пропустят
+      \- В здании сказать *Adres*, ждать вызов в комнату слева от окон на рандеву
     parse_mode: "MarkdownV2"
     disable_web_preview: true

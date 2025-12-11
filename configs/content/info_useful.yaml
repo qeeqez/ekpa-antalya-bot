@@ -1,41 +1,41 @@
 version: "1.0"
 screens:
     - id: INFO_USEFUL
-      text: '*⭐️ Полезная информация*'
+      text: '*⭐️ Информация*'
       parse_mode: MarkdownV2
       inline_keyboard:
         rows:
             - buttons:
                 - id: important_docs
-                  text: "\U0001F4C4 Важные документы"
+                  text: "📝 ВНЖ / Прописка / Документы"
                   type: callback
                   callback: IMPORTANT_DOCUMENTS_BUTTON
             - buttons:
                 - id: delivery
-                  text: "\U0001F69A Доставка"
+                  text: "🚚 Доставка"
                   type: callback
                   callback: DELIVERY_BUTTON
                 - id: aid_kit
-                  text: "\U0001F3E5 Медицина"
+                  text: "❤️ Аптечка"
                   type: callback
                   callback: AID_KIT_BUTTON
                 - id: transport
-                  text: "\U0001F68C Транспорт"
+                  text: "🚌 Транспорт"
                   type: callback
                   callback: TRANSPORT_BUTTON
             - buttons:
                 - id: phone_unlock
-                  text: "\U0001F4F1 Разблокировка телефона"
+                  text: "📲 Разблокировка телефона"
                   type: callback
                   callback: PHONE_UNLOCK_BUTTON
             - buttons:
                 - id: car_fine
-                  text: "\U0001F697 Штрафы"
+                  text: "🚗 Штраф на Автомобиль"
                   type: callback
                   callback: CAR_FINE_BUTTON
             - buttons:
                 - id: phone_numbers
-                  text: "\U0001F4DE Телефоны"
+                  text: "📱️ Полезные номера телефонов"
                   type: callback
                   callback: PHONE_NUMBERS_BUTTON
       navigation:

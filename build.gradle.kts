@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.4.2"
+    id("org.springframework.boot") version "4.0.0"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -32,8 +32,8 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok")
 
 //    Telegram Bot
-    implementation("org.telegram:telegrambots-springboot-longpolling-starter:8.2.0")
-    implementation("org.telegram:telegrambots-client:8.2.0")
+    implementation("org.telegram:telegrambots-springboot-longpolling-starter:9.2.0")
+    implementation("org.telegram:telegrambots-client:9.2.0")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")

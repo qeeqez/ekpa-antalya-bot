@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"flag"
 	"log"
 	"os"
 	"os/signal"
@@ -10,21 +9,9 @@ import (
 
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/service"
-	"github.com/qeeqez/ekpaantalyabot/internal/version"
 )
 
 func main() {
-	// Parse command line flags
-	showVersion := flag.Bool("version", false, "Show version information")
-	flag.Parse()
-
-	// Show version and exit
-	if *showVersion {
-		log.Println(version.Info())
-		return
-	}
-
-	log.Printf("Starting %s", version.Info())
 
 	// Load configuration from environment variables
 	cfg, err := config.Load()

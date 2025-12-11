@@ -8,6 +8,8 @@ import (
 	"github.com/mymmrac/telego"
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/handler"
+	"github.com/qeeqez/ekpaantalyabot/internal/health"
+	"github.com/qeeqez/ekpaantalyabot/internal/middleware"
 )
 
 // BotService manages the Telegram bot lifecycle
@@ -16,6 +18,8 @@ type BotService struct {
 	content *config.ContentRepository
 	handler *handler.Chain
 	sender  *MessageSender
+	health  *health.Checker
+	config  *config.Config
 }
 
 // NewBotService creates a new bot service
@@ -42,11 +46,16 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 	// Create handler chain
 	handlerChain := handler.NewChain(commandHandler, callbackHandler)
 
+	// Create health checker
+	healthChecker := health.NewChecker()
+
 	service := &BotService{
 		bot:     bot,
 		content: content,
 		handler: handlerChain,
 		sender:  sender,
+		health:  healthChecker,
+		config:  cfg,
 	}
 
 	return service, nil
@@ -55,6 +64,16 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 // Start starts the bot
 func (s *BotService) Start(ctx context.Context) error {
 	log.Println("Starting bot...")
+
+	// Start health check server if enabled
+	if s.config.Health.Enabled {
+		addr := fmt.Sprintf("%s:%d", s.config.Health.Address, s.config.Health.Port)
+		go func() {
+			if err := s.health.StartServer(addr); err != nil {
+				log.Printf("Health check server error: %v", err)
+			}
+		}()
+	}
 
 	// Set bot commands
 	if err := s.setBotCommands(); err != nil {
@@ -88,8 +107,13 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 			log.Println("Stopping bot...")
 			return
 		case update := <-updates:
-			// Process update asynchronously
+			// Record update for health check
+			s.health.RecordUpdate()
+
+			// Process update asynchronously with panic recovery
 			go func(upd telego.Update) {
+				defer middleware.RecoverPanic()
+
 				if err := s.handler.Handle(ctx, upd); err != nil {
 					log.Printf("Error handling update: %v", err)
 				}

@@ -1,0 +1,48 @@
+name: Go Build
+
+on:
+  workflow_call:
+    inputs:
+      services:
+        required: true
+        type: string
+        description: 'JSON array of services to build, e.g. ["bot"]'
+      architectures:
+        required: true
+        type: string
+        description: 'JSON array of architectures, e.g. ["amd64", "arm64"]'
+      go-version:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ${{ matrix.arch == 'arm64' && 'blacksmith-4vcpu-ubuntu-2404-arm' || 'blacksmith-4vcpu-ubuntu-2404' }}
+    strategy:
+      matrix:
+        service: ${{ fromJson(inputs.services) }}
+        arch: ${{ fromJson(inputs.architectures) }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version: ${{ inputs.go-version }}
+          cache: true
+          cache-dependency-path: go.sum
+
+      - name: Download Go modules
+        run: go mod download
+        shell: bash
+
+      - name: 🛠️ Build ${{ matrix.service }} for ${{ matrix.arch }}
+        run: GOARCH=${{ matrix.arch }} CGO_ENABLED=0 go build -o ./build/${{ matrix.service }}-${{ matrix.arch }} ./cmd/${{ matrix.service }}
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: service-build-${{ matrix.service }}-${{ matrix.arch }}
+          path: |
+            ./build/${{ matrix.service }}-${{ matrix.arch }}
+            Dockerfile
+          if-no-files-found: error
+          retention-days: 1

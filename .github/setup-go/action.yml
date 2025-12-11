@@ -1,0 +1,20 @@
+name: Setup Go Environment
+description: Sets up Go with caching and private repo access
+
+inputs:
+  go-version:
+    description: 'Go version to use'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-go@v6
+      with:
+        go-version: ${{ inputs.go-version }}
+        cache: true
+        cache-dependency-path: go.sum
+
+    - name: Download Go modules
+      run: go mod download
+      shell: bash

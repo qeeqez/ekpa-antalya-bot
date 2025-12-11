@@ -25,20 +25,7 @@ func NewMessageSender(bot *telego.Bot) domain.MessageSender {
 // SendScreen sends a screen as a new message
 func (s *TelegramSender) SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error) {
 	msg := telegoutil.Message(chatID, screen.Text)
-
-	if screen.ParseMode != "" {
-		msg.ParseMode = string(screen.ParseMode)
-	}
-
-	if screen.DisableWebPreview {
-		msg.LinkPreviewOptions = &telego.LinkPreviewOptions{
-			IsDisabled: true,
-		}
-	}
-
-	if len(screen.InlineKeyboard.Rows) > 0 {
-		msg.ReplyMarkup = s.buildInlineKeyboard(screen.InlineKeyboard)
-	}
+	s.applyScreenSettingsToSendMessage(msg, screen)
 
 	message, err := s.bot.SendMessage(ctx, msg)
 	if err != nil {
@@ -55,7 +42,18 @@ func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, m
 		MessageID: messageID,
 		Text:      screen.Text,
 	}
+	s.applyScreenSettingsToEditMessage(msg, screen)
 
+	message, err := s.bot.EditMessageText(ctx, msg)
+	if err != nil {
+		return nil, fmt.Errorf("failed to edit message: %w", err)
+	}
+
+	return message, nil
+}
+
+// applyScreenSettingsToSendMessage applies screen settings to SendMessageParams
+func (s *TelegramSender) applyScreenSettingsToSendMessage(msg *telego.SendMessageParams, screen *domain.Screen) {
 	if screen.ParseMode != "" {
 		msg.ParseMode = string(screen.ParseMode)
 	}
@@ -69,13 +67,23 @@ func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, m
 	if len(screen.InlineKeyboard.Rows) > 0 {
 		msg.ReplyMarkup = s.buildInlineKeyboard(screen.InlineKeyboard)
 	}
+}
 
-	message, err := s.bot.EditMessageText(ctx, msg)
-	if err != nil {
-		return nil, fmt.Errorf("failed to edit message: %w", err)
+// applyScreenSettingsToEditMessage applies screen settings to EditMessageTextParams
+func (s *TelegramSender) applyScreenSettingsToEditMessage(msg *telego.EditMessageTextParams, screen *domain.Screen) {
+	if screen.ParseMode != "" {
+		msg.ParseMode = string(screen.ParseMode)
 	}
 
-	return message, nil
+	if screen.DisableWebPreview {
+		msg.LinkPreviewOptions = &telego.LinkPreviewOptions{
+			IsDisabled: true,
+		}
+	}
+
+	if len(screen.InlineKeyboard.Rows) > 0 {
+		msg.ReplyMarkup = s.buildInlineKeyboard(screen.InlineKeyboard)
+	}
 }
 
 // SendText sends a simple text message

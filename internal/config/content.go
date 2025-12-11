@@ -51,8 +51,17 @@ func (r *ContentRepository) loadContent(contentDir string) error {
 		return fmt.Errorf("failed to read content directory: %w", err)
 	}
 
+	if err := r.loadAllFiles(contentDir, entries); err != nil {
+		return err
+	}
+
+	return r.validateAllScreens()
+}
+
+// loadAllFiles loads all YAML files from the directory
+func (r *ContentRepository) loadAllFiles(contentDir string, entries []os.DirEntry) error {
 	for _, entry := range entries {
-		if entry.IsDir() || filepath.Ext(entry.Name()) != ".yaml" {
+		if !r.isYAMLFile(entry) {
 			continue
 		}
 
@@ -61,14 +70,21 @@ func (r *ContentRepository) loadContent(contentDir string) error {
 			return fmt.Errorf("failed to load %s: %w", entry.Name(), err)
 		}
 	}
+	return nil
+}
 
-	// Validate all screens
+// isYAMLFile checks if the entry is a YAML file
+func (r *ContentRepository) isYAMLFile(entry os.DirEntry) bool {
+	return !entry.IsDir() && filepath.Ext(entry.Name()) == ".yaml"
+}
+
+// validateAllScreens validates all loaded screens
+func (r *ContentRepository) validateAllScreens() error {
 	for _, screen := range r.screens {
 		if err := screen.Validate(); err != nil {
 			return fmt.Errorf("invalid screen %s: %w", screen.ID, err)
 		}
 	}
-
 	return nil
 }
 
@@ -79,24 +95,43 @@ func (r *ContentRepository) loadContentFile(path string) error {
 		return err
 	}
 
-	var content ContentFile
-	if err := yaml.Unmarshal(data, &content); err != nil {
-		return fmt.Errorf("failed to parse content: %w", err)
+	content, err := r.parseContentFile(data)
+	if err != nil {
+		return err
 	}
 
-	// Register screens
-	for i := range content.Screens {
-		screen := &content.Screens[i]
+	if err := r.registerScreens(content.Screens); err != nil {
+		return err
+	}
+
+	r.registerCommands(content.Commands)
+	return nil
+}
+
+// parseContentFile parses YAML content into ContentFile structure
+func (r *ContentRepository) parseContentFile(data []byte) (*ContentFile, error) {
+	var content ContentFile
+	if err := yaml.Unmarshal(data, &content); err != nil {
+		return nil, fmt.Errorf("failed to parse content: %w", err)
+	}
+	return &content, nil
+}
+
+// registerScreens registers all screens from a content file
+func (r *ContentRepository) registerScreens(screens []domain.Screen) error {
+	for i := range screens {
+		screen := &screens[i]
 		if _, exists := r.screens[screen.ID]; exists {
 			return fmt.Errorf("duplicate screen ID: %s", screen.ID)
 		}
 		r.screens[screen.ID] = screen
 	}
-
-	// Register commands
-	r.commands.Commands = append(r.commands.Commands, content.Commands...)
-
 	return nil
+}
+
+// registerCommands registers all commands from a content file
+func (r *ContentRepository) registerCommands(commands []domain.Command) {
+	r.commands.Commands = append(r.commands.Commands, commands...)
 }
 
 // GetScreen returns a screen by ID with automatic navigation buttons

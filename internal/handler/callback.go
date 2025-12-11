@@ -38,34 +38,47 @@ func (h *CallbackHandler) Priority() int {
 // Handle processes a callback query
 func (h *CallbackHandler) Handle(ctx context.Context, update telego.Update) error {
 	callback := update.CallbackQuery
-	callbackData := callback.Data
+	slog.Info("Handling callback", "callback", callback.Data, "user_id", callback.From.ID)
 
-	slog.Info("Handling callback", "callback", callbackData, "user_id", callback.From.ID)
+	message := h.validateCallbackMessage(callback)
+	if message == nil {
+		return nil
+	}
 
-	// Validate message exists
+	targetScreen, err := h.findTargetScreen(callback.Data)
+	if err != nil {
+		return h.handleScreenNotFound(ctx, message, callback.Data, err)
+	}
+
+	return h.updateMessageWithScreen(ctx, message, targetScreen)
+}
+
+// validateCallbackMessage validates that the callback has an associated message
+func (h *CallbackHandler) validateCallbackMessage(callback *telego.CallbackQuery) *telego.Message {
 	if callback.Message == nil {
 		slog.Warn("Callback query has no message")
 		return nil
 	}
+	return callback.Message.(*telego.Message)
+}
 
-	message := callback.Message.(*telego.Message)
+// handleScreenNotFound handles the case when a target screen cannot be found
+func (h *CallbackHandler) handleScreenNotFound(ctx context.Context, message *telego.Message, callbackData string, err error) error {
+	slog.Error("Failed to find target screen", "callback", callbackData, "error", err)
+
 	chatID := telegoutil.ID(message.Chat.ID)
-	messageID := message.MessageID
-
-	// Find the target screen based on callback data
-	targetScreen, err := h.findTargetScreen(callbackData)
-	if err != nil {
-		slog.Error("Failed to find target screen", "callback", callbackData, "error", err)
-		// Send error message to user
-		_, sendErr := h.sender.SendText(ctx, chatID, "Sorry, unhandled message was sent.")
-		if sendErr != nil {
-			slog.Error("Failed to send error message", "error", sendErr)
-		}
-		return nil
+	if _, sendErr := h.sender.SendText(ctx, chatID, "Sorry, unhandled message was sent."); sendErr != nil {
+		slog.Error("Failed to send error message", "error", sendErr)
 	}
 
-	// Edit the message with the new screen
-	if _, err := h.sender.EditScreen(ctx, chatID, messageID, targetScreen); err != nil {
+	return nil
+}
+
+// updateMessageWithScreen updates the message with a new screen
+func (h *CallbackHandler) updateMessageWithScreen(ctx context.Context, message *telego.Message, screen *domain.Screen) error {
+	chatID := telegoutil.ID(message.Chat.ID)
+
+	if _, err := h.sender.EditScreen(ctx, chatID, message.MessageID, screen); err != nil {
 		slog.Error("Failed to edit message", "error", err)
 		return fmt.Errorf("failed to edit message: %w", err)
 	}
@@ -80,7 +93,21 @@ func (h *CallbackHandler) findTargetScreen(callbackData string) (*domain.Screen,
 		return h.content.GetScreen("MAIN_MENU")
 	}
 
-	// Search through all screens to find one with matching callback
+	// Try to find screen through navigation rules
+	if screen, err := h.findScreenByNavigation(callbackData); err == nil {
+		return screen, nil
+	}
+
+	// Try to use callback data as screen ID directly
+	if screen, err := h.content.GetScreen(callbackData); err == nil {
+		return screen, nil
+	}
+
+	return nil, fmt.Errorf("no target screen found for callback: %s", callbackData)
+}
+
+// findScreenByNavigation searches for a screen by checking navigation rules
+func (h *CallbackHandler) findScreenByNavigation(callbackData string) (*domain.Screen, error) {
 	allScreens := h.content.GetAllScreens()
 
 	for _, screen := range allScreens {
@@ -89,18 +116,11 @@ func (h *CallbackHandler) findTargetScreen(callbackData string) (*domain.Screen,
 			return h.content.GetScreen(targetID)
 		}
 
-		// Also check if the screen ID directly matches the callback
-		// This handles cases where callback data is the screen ID itself
+		// Check if the screen ID directly matches the callback
 		if screen.ID == callbackData {
 			return screen, nil
 		}
 	}
 
-	// If no navigation found, try to use callback data as screen ID directly
-	// This is for backwards compatibility with the Java version
-	if screen, err := h.content.GetScreen(callbackData); err == nil {
-		return screen, nil
-	}
-
-	return nil, fmt.Errorf("no target screen found for callback: %s", callbackData)
+	return nil, fmt.Errorf("no screen found by navigation for: %s", callbackData)
 }

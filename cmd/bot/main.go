@@ -13,61 +13,92 @@ import (
 )
 
 func main() {
-	// Load configuration from environment variables
+	cfg := loadConfig()
+	setupLogging(cfg.Debug)
+
+	slog.Info("EKPA Antalya Bot starting")
+
+	botService := createBotService(cfg)
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	runBot(ctx, cancel, botService)
+}
+
+// loadConfig loads and validates configuration
+func loadConfig() *config.Config {
 	cfg, err := config.Load()
 	if err != nil {
 		slog.Error("Failed to load configuration", "error", err)
 		os.Exit(1)
 	}
+	return cfg
+}
 
-	// Setup structured logging
-	setupLogging(cfg.Debug)
-
-	slog.Info("EKPA Antalya Bot starting")
-
-	// Create bot service
+// createBotService creates the bot service or exits on error
+func createBotService(cfg *config.Config) *service.BotService {
 	botService, err := service.NewBotService(cfg)
 	if err != nil {
 		slog.Error("Failed to create bot service", "error", err)
 		os.Exit(1)
 	}
+	return botService
+}
 
-	// Create context with cancellation
-	ctx, cancel := context.WithCancel(context.Background())
-	defer cancel()
+// runBot starts the bot and handles shutdown
+func runBot(ctx context.Context, cancel context.CancelFunc, botService *service.BotService) {
+	sigChan := setupSignalHandler()
+	errChan := startBotAsync(ctx, botService)
 
-	// Handle shutdown signals
+	waitForShutdown(ctx, cancel, sigChan, errChan, botService)
+	slog.Info("Bot stopped gracefully")
+}
+
+// setupSignalHandler sets up OS signal handling
+func setupSignalHandler() chan os.Signal {
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, os.Interrupt, syscall.SIGTERM)
+	return sigChan
+}
 
-	// Start bot in goroutine
+// startBotAsync starts the bot in a goroutine
+func startBotAsync(ctx context.Context, botService *service.BotService) chan error {
 	errChan := make(chan error, 1)
 	go func() {
 		if err := botService.Start(ctx); err != nil {
 			errChan <- err
 		}
 	}()
+	return errChan
+}
 
-	// Wait for shutdown signal or error
+// waitForShutdown waits for shutdown signal or error and handles cleanup
+func waitForShutdown(ctx context.Context, cancel context.CancelFunc, sigChan chan os.Signal, errChan chan error, botService *service.BotService) {
 	select {
 	case <-sigChan:
-		slog.Info("Received shutdown signal")
-		cancel()
-
-		// Create shutdown context with timeout
-		shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
-		defer shutdownCancel()
-
-		// Stop bot gracefully
-		if err := botService.Stop(shutdownCtx); err != nil {
-			slog.Error("Error during shutdown", "error", err)
-		}
+		handleGracefulShutdown(cancel, botService)
 	case err := <-errChan:
-		slog.Error("Bot error", "error", err)
-		os.Exit(1)
+		handleBotError(err)
 	}
+}
 
-	slog.Info("Bot stopped gracefully")
+// handleGracefulShutdown performs graceful shutdown
+func handleGracefulShutdown(cancel context.CancelFunc, botService *service.BotService) {
+	slog.Info("Received shutdown signal")
+	cancel()
+
+	shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer shutdownCancel()
+
+	if err := botService.Stop(shutdownCtx); err != nil {
+		slog.Error("Error during shutdown", "error", err)
+	}
+}
+
+// handleBotError handles bot errors
+func handleBotError(err error) {
+	slog.Error("Bot error", "error", err)
+	os.Exit(1)
 }
 
 // setupLogging configures structured logging based on debug mode

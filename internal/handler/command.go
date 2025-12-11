@@ -44,15 +44,7 @@ func (h *CommandHandler) Priority() int {
 func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error {
 	message := update.Message
 	chatID := telegoutil.ID(message.Chat.ID)
-	command := message.Text
-
-	// Remove bot username from command if present
-	if strings.Contains(command, "@") {
-		parts := strings.Split(command, "@")
-		if len(parts) == 2 && strings.Contains(parts[1], h.botUsername) {
-			command = parts[0]
-		}
-	}
+	command := h.normalizeCommand(message.Text)
 
 	slog.Info("Handling command", "command", command, "chat_id", message.Chat.ID, "user_id", message.From.ID)
 
@@ -61,21 +53,37 @@ func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error
 		return h.handleStart(ctx, chatID)
 	}
 
-	// Look up command in registry
+	return h.handleRegisteredCommand(ctx, chatID, command)
+}
+
+// normalizeCommand removes bot username from command if present
+func (h *CommandHandler) normalizeCommand(command string) string {
+	if !strings.Contains(command, "@") {
+		return command
+	}
+
+	parts := strings.Split(command, "@")
+	if len(parts) == 2 && strings.Contains(parts[1], h.botUsername) {
+		return parts[0]
+	}
+
+	return command
+}
+
+// handleRegisteredCommand handles commands registered in the command registry
+func (h *CommandHandler) handleRegisteredCommand(ctx context.Context, chatID telego.ChatID, command string) error {
 	cmd, found := h.content.GetCommands().GetCommand(command)
 	if !found {
 		slog.Debug("Command not recognized", "command", command)
 		return nil
 	}
 
-	// Get the screen for this command
 	screen, err := h.content.GetScreen(cmd.ScreenID)
 	if err != nil {
 		slog.Error("Failed to get screen for command", "screen_id", cmd.ScreenID, "command", command, "error", err)
 		return fmt.Errorf("failed to get screen: %w", err)
 	}
 
-	// Send the screen
 	if _, err := h.sender.SendScreen(ctx, chatID, screen); err != nil {
 		return fmt.Errorf("failed to send screen: %w", err)
 	}
@@ -85,27 +93,45 @@ func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error
 
 // handleStart handles the /start command with special pinning logic
 func (h *CommandHandler) handleStart(ctx context.Context, chatID telego.ChatID) error {
-	// Get main menu screen
-	screen, err := h.content.GetScreen("MAIN_MENU")
+	screen, err := h.getMainMenuScreen()
 	if err != nil {
-		return fmt.Errorf("failed to get main menu: %w", err)
+		return err
 	}
 
-	// Send and pin the menu message
+	if err := h.sendAndPinMenu(ctx, chatID, screen); err != nil {
+		return err
+	}
+
+	h.sendSecondaryMenu(ctx, chatID, screen)
+	return nil
+}
+
+// getMainMenuScreen retrieves the main menu screen
+func (h *CommandHandler) getMainMenuScreen() (*domain.Screen, error) {
+	screen, err := h.content.GetScreen("MAIN_MENU")
+	if err != nil {
+		return nil, fmt.Errorf("failed to get main menu: %w", err)
+	}
+	return screen, nil
+}
+
+// sendAndPinMenu sends the main menu and attempts to pin it
+func (h *CommandHandler) sendAndPinMenu(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) error {
 	msg, err := h.sender.SendScreen(ctx, chatID, screen)
 	if err != nil {
 		return fmt.Errorf("failed to send main menu: %w", err)
 	}
 
-	// Try to pin the message
 	if err := h.sender.PinMessage(ctx, chatID, msg.MessageID); err != nil {
 		slog.Debug("Failed to pin message", "error", err)
 	}
 
-	// Send another menu message (not pinned)
+	return nil
+}
+
+// sendSecondaryMenu sends a second copy of the menu (not pinned)
+func (h *CommandHandler) sendSecondaryMenu(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) {
 	if _, err := h.sender.SendScreen(ctx, chatID, screen); err != nil {
 		slog.Warn("Failed to send second menu", "error", err)
 	}
-
-	return nil
 }

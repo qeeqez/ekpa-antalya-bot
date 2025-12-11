@@ -11,6 +11,7 @@ type Config struct {
 	Bot     BotConfig
 	Content ContentConfig
 	Health  HealthConfig
+	Debug   bool `env:"DEBUG" envDefault:"false"`
 }
 
 // BotConfig holds Telegram bot configuration

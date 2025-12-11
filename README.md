@@ -27,18 +27,29 @@ Telegram bot for EKPA 1207 residents in Antalya. Quick access to complex info, d
 | `BOT_TOKEN` | Yes | - | Your Telegram Bot token |
 | `CONTENT_DIR` | No | `content` | Content directory path |
 | `HEALTH_PORT` | No | `8080` | Health check port |
+| `DEBUG` | No | `false` | Enable debug logging (for development) |
 
 ### Run with Go
 
 ```bash
+# Production (clean logs)
 export BOT_TOKEN="YOUR_BOT_TOKEN"
+go run cmd/bot/main.go
+
+# Development (with debug logging)
+export BOT_TOKEN="YOUR_BOT_TOKEN"
+export DEBUG=true
 go run cmd/bot/main.go
 ```
 
 ### Run with Docker
 
 ```bash
+# Production
 docker run -e BOT_TOKEN="YOUR_TOKEN" -p 8080:8080 ekpa-bot
+
+# Development with debug logs
+docker run -e BOT_TOKEN="YOUR_TOKEN" -e DEBUG=true -p 8080:8080 ekpa-bot
 ```
 
 ## For Developers

@@ -23,8 +23,17 @@ type BotService struct {
 
 // NewBotService creates a new bot service
 func NewBotService(cfg *config.Config) (*BotService, error) {
-	// Create bot instance
-	bot, err := telego.NewBot(cfg.Bot.Token, telego.WithDefaultDebugLogger())
+	// Create bot instance with optional debug logging
+	var bot *telego.Bot
+	var err error
+
+	if cfg.Debug {
+		log.Println("Debug mode enabled - verbose logging active")
+		bot, err = telego.NewBot(cfg.Bot.Token, telego.WithDefaultDebugLogger())
+	} else {
+		bot, err = telego.NewBot(cfg.Bot.Token)
+	}
+
 	if err != nil {
 		return nil, fmt.Errorf("failed to create bot: %w", err)
 	}

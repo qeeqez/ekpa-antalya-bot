@@ -59,6 +59,7 @@ screens:
       *🧑‍💼Управляющая*
       EBRU HANIM
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "HOW_TO_PAY"
     text: "*💰 Как оплатить?*"

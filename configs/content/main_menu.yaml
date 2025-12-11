@@ -77,11 +77,11 @@ screens:
     text: |
       *Наш адрес:*
 
-      *il:*             `Antalya`
-      *ilçe:*          `Kepez`
-      *Mahalle:*    `Güneş`
-      *Caddesi:*  `Şehit Astsubay Ömer Halis Demir`
-      *Site:*          `Ekpa 1207`
+      *il:* `Antalya`
+      *ilçe:* `Kepez`
+      *Mahalle:* `Güneş`
+      *Caddesi:* `Şehit Astsubay Ömer Halis Demir`
+      *Site:* `Ekpa 1207`
       *Block* \(Блок\), *Daire* \(Квартира\), *Kat* \(Этаж\)
 
       *Индекс:* `07260`
@@ -92,9 +92,9 @@ screens:
       `А2` \- `95АА`
       `А3` \- `95АВ`
       `А4` \- `95АС`
-      `В`   \- `95В`
-      `С`   \- `95С`
-      `D`   \- `95D`
+      `В`  \- `95В`
+      `С`  \- `95С`
+      `D`  \- `95D`
       `E1` \- `95E`
       `E2` \- `95EA`
       

@@ -23,8 +23,8 @@ WORKDIR /app
 # Copy binary from builder
 COPY --from=builder /build/ekpabot .
 
-# Copy configuration files
-COPY configs/ ./configs/
+# Copy content files
+COPY content/ ./content/
 
 # Run as non-root user
 RUN adduser -D -u 1000 botuser

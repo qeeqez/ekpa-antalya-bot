@@ -15,7 +15,6 @@ import (
 
 func main() {
 	// Parse command line flags
-	configPath := flag.String("config", "configs/bot.yaml", "Path to configuration file")
 	showVersion := flag.Bool("version", false, "Show version information")
 	flag.Parse()
 
@@ -27,8 +26,8 @@ func main() {
 
 	log.Printf("Starting %s", version.Info())
 
-	// Load configuration
-	cfg, err := config.Load(*configPath)
+	// Load configuration from environment variables
+	cfg, err := config.Load()
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %v", err)
 	}

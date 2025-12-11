@@ -2,56 +2,40 @@ package config
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/caarlos0/env/v11"
-	"gopkg.in/yaml.v3"
 )
 
 // Config represents the main application configuration
 type Config struct {
-	Bot     BotConfig     `yaml:"bot"`
-	Content ContentConfig `yaml:"content"`
-	Health  HealthConfig  `yaml:"health"`
+	Bot     BotConfig
+	Content ContentConfig
+	Health  HealthConfig
 }
 
 // BotConfig holds Telegram bot configuration
 type BotConfig struct {
-	Token    string `yaml:"token" env:"BOT_TOKEN"`
-	Username string `yaml:"username" env:"BOT_USERNAME" envDefault:"EkpaAntalyaBot"`
+	Token    string `env:"BOT_TOKEN"`
+	Username string `env:"BOT_USERNAME" envDefault:"EkpaAntalyaBot"`
 }
 
 // ContentConfig holds content-related configuration
 type ContentConfig struct {
-	Directory string `yaml:"directory" env:"CONTENT_DIR" envDefault:"configs/content"`
+	Directory string `env:"CONTENT_DIR" envDefault:"content"`
 }
 
 // HealthConfig holds health check configuration
 type HealthConfig struct {
-	Enabled bool   `yaml:"enabled" env:"HEALTH_ENABLED" envDefault:"true"`
-	Port    int    `yaml:"port" env:"HEALTH_PORT" envDefault:"8080"`
-	Address string `yaml:"address" env:"HEALTH_ADDRESS" envDefault:"0.0.0.0"`
+	Enabled bool   `env:"HEALTH_ENABLED" envDefault:"true"`
+	Port    int    `env:"HEALTH_PORT" envDefault:"8080"`
+	Address string `env:"HEALTH_ADDRESS" envDefault:"0.0.0.0"`
 }
 
-// Load loads configuration from a YAML file and environment variables
-func Load(path string) (*Config, error) {
+// Load loads configuration from environment variables
+func Load() (*Config, error) {
 	var cfg Config
 
-	// Try to load from YAML file if it exists
-	if path != "" {
-		data, err := os.ReadFile(path)
-		if err != nil && !os.IsNotExist(err) {
-			return nil, fmt.Errorf("failed to read config file: %w", err)
-		}
-
-		if err == nil {
-			if err := yaml.Unmarshal(data, &cfg); err != nil {
-				return nil, fmt.Errorf("failed to parse config file: %w", err)
-			}
-		}
-	}
-
-	// Override with environment variables (env vars take precedence)
+	// Parse environment variables
 	if err := env.Parse(&cfg); err != nil {
 		return nil, fmt.Errorf("failed to parse environment variables: %w", err)
 	}

@@ -1,0 +1,19 @@
+# Git files
+.git
+.gitignore
+
+# IDE and environment files
+.idea
+.vscode
+*.env
+
+# Documentation
+*.md
+
+# Build artifacts
+*.exe
+*.out
+service
+
+# OS-specific files
+.DS_Store

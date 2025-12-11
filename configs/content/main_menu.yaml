@@ -23,9 +23,9 @@ screens:
       rows:
         - buttons:
             - id: "ekpa_main_chat"
-              text: "📣 Основной чат EKPA"
+              text: "🏠 Основной чат EKPA"
               type: "url"
-              url: "https://t.me/ekpa1207"
+              url: "https://t.me/+14s_2-3hZzVmODAy"
         - buttons:
             - id: "our_chats"
               text: "💬 Наши Чаты"
@@ -33,30 +33,30 @@ screens:
               callback: "OUR_CHATS_BUTTON"
         - buttons:
             - id: "directions_site"
-              text: "🗺 Карта объектов"
+              text: "🏡 В Комплексе"
               type: "callback"
               callback: "DIRECTIONS_SITE_BUTTON"
             - id: "directions"
-              text: "📍 Что рядом?"
+              text: "🚀 Что рядом?"
               type: "callback"
               callback: "DIRECTIONS_BUTTON"
         - buttons:
             - id: "info_useful"
-              text: "⭐️ Полезная информация"
+              text: "⭐️ Информация"
               type: "callback"
               callback: "INFO_USEFUL_BUTTON"
             - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
+              text: "🌟 Все о EKPA"
               type: "callback"
               callback: "INFO_EKPA_BUTTON"
         - buttons:
             - id: "address"
-              text: "🏠 Адрес"
+              text: "📍 Наш Адрес"
               type: "callback"
               callback: "ADDRESS_BUTTON"
         - buttons:
             - id: "suggest_changes"
-              text: "💡 Предложить изменения"
+              text: "✍️ Предложить изменения"
               type: "url"
               url: "https://t.me/qeeqez"
     navigation:
@@ -98,7 +98,7 @@ screens:
       `E1` \- `95E`
       `E2` \- `95EA`
       
-      *Нажми меня:*
+      *Нажми чтобы скопировать:*
       `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
     parse_mode: "MarkdownV2"
     inline_keyboard:

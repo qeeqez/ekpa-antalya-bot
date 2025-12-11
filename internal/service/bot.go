@@ -29,11 +29,15 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 		return nil, fmt.Errorf("failed to create bot: %w", err)
 	}
 
+	// Create health checker first (so we can track content loading)
+	healthChecker := health.NewChecker()
+
 	// Load content (navigation hierarchy is built automatically)
 	content, err := config.NewContentRepository(cfg.Content.Directory)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load content: %w", err)
 	}
+	healthChecker.RecordContentLoad()
 
 	// Create message sender
 	sender := NewMessageSender(bot)
@@ -44,9 +48,6 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 
 	// Create handler chain
 	handlerChain := handler.NewChain(commandHandler, callbackHandler)
-
-	// Create health checker
-	healthChecker := health.NewChecker()
 
 	service := &BotService{
 		bot:     bot,
@@ -114,6 +115,7 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 
 				if err := s.handler.Handle(ctx, upd); err != nil {
 					log.Printf("Error handling update: %v", err)
+					s.health.RecordError()
 				}
 			}(update)
 		}
@@ -145,6 +147,15 @@ func (s *BotService) setBotCommands() error {
 }
 
 // Stop stops the bot gracefully
-func (s *BotService) Stop() {
+func (s *BotService) Stop(ctx context.Context) error {
+	log.Println("Stopping bot...")
+
+	// Shutdown health server
+	if err := s.health.Shutdown(ctx); err != nil {
+		log.Printf("Error shutting down health server: %v", err)
+		return err
+	}
+
 	log.Println("Bot stopped")
+	return nil
 }

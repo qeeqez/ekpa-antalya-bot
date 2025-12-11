@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/service"
@@ -46,7 +47,15 @@ func main() {
 	case <-sigChan:
 		log.Println("Received shutdown signal")
 		cancel()
-		botService.Stop()
+
+		// Create shutdown context with timeout
+		shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer shutdownCancel()
+
+		// Stop bot gracefully
+		if err := botService.Stop(shutdownCtx); err != nil {
+			log.Printf("Error during shutdown: %v", err)
+		}
 	case err := <-errChan:
 		log.Fatalf("Bot error: %v", err)
 	}

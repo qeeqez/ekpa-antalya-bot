@@ -17,7 +17,6 @@ type BotService struct {
 	bot     *telego.Bot
 	content *config.ContentRepository
 	handler *handler.Chain
-	sender  *MessageSender
 	health  *health.Checker
 	config  *config.Config
 }
@@ -53,7 +52,6 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 		bot:     bot,
 		content: content,
 		handler: handlerChain,
-		sender:  sender,
 		health:  healthChecker,
 		config:  cfg,
 	}

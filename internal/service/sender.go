@@ -10,20 +10,20 @@ import (
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 )
 
-// MessageSender handles sending messages to Telegram
-type MessageSender struct {
+// TelegramSender implements domain.MessageSender for Telegram
+type TelegramSender struct {
 	bot *telego.Bot
 }
 
-// NewMessageSender creates a new message sender
-func NewMessageSender(bot *telego.Bot) *MessageSender {
-	return &MessageSender{
+// NewMessageSender creates a new Telegram message sender
+func NewMessageSender(bot *telego.Bot) domain.MessageSender {
+	return &TelegramSender{
 		bot: bot,
 	}
 }
 
 // SendScreen sends a screen as a new message
-func (s *MessageSender) SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error) {
+func (s *TelegramSender) SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error) {
 	msg := telegoutil.Message(chatID, screen.Text)
 
 	if screen.ParseMode != "" {
@@ -49,7 +49,7 @@ func (s *MessageSender) SendScreen(ctx context.Context, chatID telego.ChatID, sc
 }
 
 // EditScreen edits an existing message with a screen
-func (s *MessageSender) EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error) {
+func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error) {
 	msg := &telego.EditMessageTextParams{
 		ChatID:    chatID,
 		MessageID: messageID,
@@ -79,7 +79,7 @@ func (s *MessageSender) EditScreen(ctx context.Context, chatID telego.ChatID, me
 }
 
 // SendText sends a simple text message
-func (s *MessageSender) SendText(ctx context.Context, chatID telego.ChatID, text string) (*telego.Message, error) {
+func (s *TelegramSender) SendText(ctx context.Context, chatID telego.ChatID, text string) (*telego.Message, error) {
 	msg := telegoutil.Message(chatID, text)
 
 	message, err := s.bot.SendMessage(ctx, msg)
@@ -91,7 +91,7 @@ func (s *MessageSender) SendText(ctx context.Context, chatID telego.ChatID, text
 }
 
 // PinMessage pins a message in a chat
-func (s *MessageSender) PinMessage(ctx context.Context, chatID telego.ChatID, messageID int) error {
+func (s *TelegramSender) PinMessage(ctx context.Context, chatID telego.ChatID, messageID int) error {
 	params := &telego.PinChatMessageParams{
 		ChatID:    chatID,
 		MessageID: messageID,
@@ -106,7 +106,7 @@ func (s *MessageSender) PinMessage(ctx context.Context, chatID telego.ChatID, me
 }
 
 // buildInlineKeyboard converts domain InlineKeyboard to Telegram InlineKeyboardMarkup
-func (s *MessageSender) buildInlineKeyboard(keyboard domain.InlineKeyboard) *telego.InlineKeyboardMarkup {
+func (s *TelegramSender) buildInlineKeyboard(keyboard domain.InlineKeyboard) *telego.InlineKeyboardMarkup {
 	rows := make([][]telego.InlineKeyboardButton, 0, len(keyboard.Rows))
 
 	for _, row := range keyboard.Rows {

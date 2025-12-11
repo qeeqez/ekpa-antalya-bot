@@ -12,21 +12,15 @@ import (
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 )
 
-// MessageSender interface for sending messages (to avoid import cycle)
-type MessageSenderCommand interface {
-	SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error)
-	PinMessage(ctx context.Context, chatID telego.ChatID, messageID int) error
-}
-
 // CommandHandler handles bot commands
 type CommandHandler struct {
 	content     *config.ContentRepository
-	sender      MessageSenderCommand
+	sender      domain.MessageSender
 	botUsername string
 }
 
 // NewCommandHandler creates a new command handler
-func NewCommandHandler(content *config.ContentRepository, sender MessageSenderCommand, botUsername string) *CommandHandler {
+func NewCommandHandler(content *config.ContentRepository, sender domain.MessageSender, botUsername string) *CommandHandler {
 	return &CommandHandler{
 		content:     content,
 		sender:      sender,

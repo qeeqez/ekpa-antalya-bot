@@ -1,5 +1,19 @@
 package domain
 
+import (
+	"context"
+
+	"github.com/mymmrac/telego"
+)
+
+// MessageSender is the interface for sending messages to users
+type MessageSender interface {
+	SendScreen(ctx context.Context, chatID telego.ChatID, screen *Screen) (*telego.Message, error)
+	EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *Screen) (*telego.Message, error)
+	SendText(ctx context.Context, chatID telego.ChatID, text string) (*telego.Message, error)
+	PinMessage(ctx context.Context, chatID telego.ChatID, messageID int) error
+}
+
 // ParseMode represents Telegram message parse mode
 type ParseMode string
 

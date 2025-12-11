@@ -121,39 +121,6 @@ func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
 	return r.screens
 }
 
-// NavigationHierarchyFile represents the navigation.yaml structure
-type NavigationHierarchyFile struct {
-	Version   string `yaml:"version"`
-	Hierarchy []struct {
-		Screen string `yaml:"screen"`
-		Level  int    `yaml:"level"`
-		Parent string `yaml:"parent,omitempty"`
-	} `yaml:"hierarchy"`
-}
-
-// loadNavigation loads the navigation hierarchy configuration
-func (r *ContentRepository) loadNavigation(path string) error {
-	data, err := os.ReadFile(path)
-	if err != nil {
-		return fmt.Errorf("failed to read navigation file: %w", err)
-	}
-
-	var navFile NavigationHierarchyFile
-	if err := yaml.Unmarshal(data, &navFile); err != nil {
-		return fmt.Errorf("failed to parse navigation file: %w", err)
-	}
-
-	// Register all hierarchies
-	for _, h := range navFile.Hierarchy {
-		r.navigation.Register(h.Screen, domain.NavigationHierarchy{
-			Parent: h.Parent,
-			Level:  h.Level,
-		})
-	}
-
-	return nil
-}
-
 // GetNavigationRegistry returns the navigation registry (for debugging/inspection)
 func (r *ContentRepository) GetNavigationRegistry() *domain.NavigationRegistry {
 	return r.navigation

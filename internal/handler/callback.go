@@ -11,21 +11,14 @@ import (
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 )
 
-// MessageSender interface for sending messages (to avoid import cycle)
-type MessageSender interface {
-	SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error)
-	EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error)
-	SendText(ctx context.Context, chatID telego.ChatID, text string) (*telego.Message, error)
-}
-
 // CallbackHandler handles callback queries from inline buttons
 type CallbackHandler struct {
 	content *config.ContentRepository
-	sender  MessageSender
+	sender  domain.MessageSender
 }
 
 // NewCallbackHandler creates a new callback handler
-func NewCallbackHandler(content *config.ContentRepository, sender MessageSender) *CallbackHandler {
+func NewCallbackHandler(content *config.ContentRepository, sender domain.MessageSender) *CallbackHandler {
 	return &CallbackHandler{
 		content: content,
 		sender:  sender,

@@ -32,12 +32,8 @@ screens:
               type: "callback"
               callback: "OUR_CHATS_BUTTON"
         - buttons:
-            - id: "directions_site"
-              text: "🏡 В Комплексе"
-              type: "callback"
-              callback: "DIRECTIONS_SITE_BUTTON"
             - id: "directions"
-              text: "🚀 Что рядом?"
+              text: "🏡 В Комплексе и рядом"
               type: "callback"
               callback: "DIRECTIONS_BUTTON"
         - buttons:
@@ -102,15 +98,7 @@ screens:
       `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
     parse_mode: "MarkdownV2"
     inline_keyboard:
-      rows:
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+      rows: []
 
   - id: "BOT_LINK"
     text: |
@@ -121,15 +109,7 @@ screens:
       Поделись ссылкой с соседями 😊
     parse_mode: "MarkdownV2"
     inline_keyboard:
-      rows:
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+      rows: []
 
   - id: "OUR_CHATS_INFO"
     text: |
@@ -144,13 +124,6 @@ screens:
               text: "📋 Список чатов"
               type: "callback"
               callback: "OUR_CHATS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "OUR_CHATS_BUTTON"
         target: "OUR_CHATS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"

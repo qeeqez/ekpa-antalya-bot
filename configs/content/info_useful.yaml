@@ -1,65 +1,57 @@
 version: "1.0"
-
 screens:
-  - id: "INFO_USEFUL"
-    text: "*⭐️ Полезная информация*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "phone_numbers"
-              text: "📞 Телефоны"
-              type: "callback"
-              callback: "PHONE_NUMBERS_BUTTON"
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "delivery"
-              text: "🚚 Доставка"
-              type: "callback"
-              callback: "DELIVERY_BUTTON"
-        - buttons:
-            - id: "important_docs"
-              text: "📄 Важные документы"
-              type: "callback"
-              callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        - buttons:
-            - id: "phone_unlock"
-              text: "📱 Разблокировка телефона"
-              type: "callback"
-              callback: "PHONE_UNLOCK_BUTTON"
-        - buttons:
-            - id: "car_fine"
-              text: "🚗 Штрафы"
-              type: "callback"
-              callback: "CAR_FINE_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "PHONE_NUMBERS_BUTTON"
-        target: "PHONE_NUMBERS"
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "DELIVERY_BUTTON"
-        target: "DELIVERY"
-      - callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        target: "IMPORTANT_DOCUMENTS"
-      - callback: "PHONE_UNLOCK_BUTTON"
-        target: "PHONE_UNLOCK"
-      - callback: "CAR_FINE_BUTTON"
-        target: "CAR_FINE"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+    - id: INFO_USEFUL
+      text: '*⭐️ Полезная информация*'
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: phone_numbers
+                  text: "\U0001F4DE Телефоны"
+                  type: callback
+                  callback: PHONE_NUMBERS_BUTTON
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+            - buttons:
+                - id: delivery
+                  text: "\U0001F69A Доставка"
+                  type: callback
+                  callback: DELIVERY_BUTTON
+            - buttons:
+                - id: important_docs
+                  text: "\U0001F4C4 Важные документы"
+                  type: callback
+                  callback: IMPORTANT_DOCUMENTS_BUTTON
+            - buttons:
+                - id: phone_unlock
+                  text: "\U0001F4F1 Разблокировка телефона"
+                  type: callback
+                  callback: PHONE_UNLOCK_BUTTON
+            - buttons:
+                - id: car_fine
+                  text: "\U0001F697 Штрафы"
+                  type: callback
+                  callback: CAR_FINE_BUTTON
+      navigation:
+        - callback: PHONE_NUMBERS_BUTTON
+          target: PHONE_NUMBERS
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT
+        - callback: DELIVERY_BUTTON
+          target: DELIVERY
+        - callback: IMPORTANT_DOCUMENTS_BUTTON
+          target: IMPORTANT_DOCUMENTS
+        - callback: PHONE_UNLOCK_BUTTON
+          target: PHONE_UNLOCK
+        - callback: CAR_FINE_BUTTON
+          target: CAR_FINE

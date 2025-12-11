@@ -11,8 +11,9 @@ import (
 
 // ContentRepository manages all bot content (screens, commands, etc.)
 type ContentRepository struct {
-	screens  map[string]*domain.Screen
-	commands *domain.CommandRegistry
+	screens    map[string]*domain.Screen
+	commands   *domain.CommandRegistry
+	navigation *domain.NavigationRegistry
 }
 
 // ContentFile represents a content YAML file structure
@@ -29,11 +30,16 @@ func NewContentRepository(contentDir string) (*ContentRepository, error) {
 		commands: &domain.CommandRegistry{
 			Commands: []domain.Command{},
 		},
+		navigation: domain.NewNavigationRegistry(),
 	}
 
+	// Load content first
 	if err := repo.loadContent(contentDir); err != nil {
 		return nil, err
 	}
+
+	// Automatically build navigation hierarchy from screen relationships
+	repo.navigation.BuildFromScreens(repo.screens)
 
 	return repo, nil
 }
@@ -93,13 +99,16 @@ func (r *ContentRepository) loadContentFile(path string) error {
 	return nil
 }
 
-// GetScreen returns a screen by ID
+// GetScreen returns a screen by ID with automatic navigation buttons
 func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
 	screen, ok := r.screens[screenID]
 	if !ok {
 		return nil, domain.ErrScreenNotFound(screenID)
 	}
-	return screen, nil
+
+	// Add automatic navigation buttons
+	enhancedScreen := r.navigation.AddAutoNavigation(screen)
+	return enhancedScreen, nil
 }
 
 // GetCommands returns the command registry
@@ -110,4 +119,42 @@ func (r *ContentRepository) GetCommands() *domain.CommandRegistry {
 // GetAllScreens returns all registered screens
 func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
 	return r.screens
+}
+
+// NavigationHierarchyFile represents the navigation.yaml structure
+type NavigationHierarchyFile struct {
+	Version   string `yaml:"version"`
+	Hierarchy []struct {
+		Screen string `yaml:"screen"`
+		Level  int    `yaml:"level"`
+		Parent string `yaml:"parent,omitempty"`
+	} `yaml:"hierarchy"`
+}
+
+// loadNavigation loads the navigation hierarchy configuration
+func (r *ContentRepository) loadNavigation(path string) error {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return fmt.Errorf("failed to read navigation file: %w", err)
+	}
+
+	var navFile NavigationHierarchyFile
+	if err := yaml.Unmarshal(data, &navFile); err != nil {
+		return fmt.Errorf("failed to parse navigation file: %w", err)
+	}
+
+	// Register all hierarchies
+	for _, h := range navFile.Hierarchy {
+		r.navigation.Register(h.Screen, domain.NavigationHierarchy{
+			Parent: h.Parent,
+			Level:  h.Level,
+		})
+	}
+
+	return nil
+}
+
+// GetNavigationRegistry returns the navigation registry (for debugging/inspection)
+func (r *ContentRepository) GetNavigationRegistry() *domain.NavigationRegistry {
+	return r.navigation
 }

@@ -1,279 +1,175 @@
 version: "1.0"
-
 screens:
-  - id: "PHONE_NUMBERS"
-    text: "*📞 Важные телефоны*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "ekpa_management"
-              text: "🏘 Управление EKPA"
-              type: "callback"
-              callback: "EKPA_MANAGEMENT_BUTTON"
-        - buttons:
-            - id: "emergency"
-              text: "🆘 Экстренные службы"
-              type: "callback"
-              callback: "EMERJENCY_BUTTON"
-        - buttons:
-            - id: "embassy"
-              text: "🏛 Посольства"
-              type: "callback"
-              callback: "EMBASSY_BUTTON"
-        - buttons:
-            - id: "other_phones"
-              text: "📱 Другие телефоны"
-              type: "callback"
-              callback: "OTHER_PHONES_BUTTON"
-        - buttons:
-            - id: "info_useful"
-              text: "⭐️ Полезная информация"
-              type: "callback"
-              callback: "INFO_USEFUL_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "EKPA_MANAGEMENT_BUTTON"
-        target: "EKPA_MANAGEMENT"
-      - callback: "EMERJENCY_BUTTON"
-        target: "EMERGENCY"
-      - callback: "EMBASSY_BUTTON"
-        target: "EMBASSY"
-      - callback: "OTHER_PHONES_BUTTON"
-        target: "OTHER_PHONES"
-      - callback: "INFO_USEFUL_BUTTON"
-        target: "INFO_USEFUL"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "EKPA_MANAGEMENT"
-    text: |
-      *🏘 Управление EKPA*
-      
-      📞 Телефон: `+90 242 999 99 99`
-      
-      📧 Email: info@ekpa1207\.com
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "phone_numbers"
-              text: "📞 Важные телефоны"
-              type: "callback"
-              callback: "PHONE_NUMBERS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "PHONE_NUMBERS_BUTTON"
-        target: "PHONE_NUMBERS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "EMERGENCY"
-    text: |
-      *🆘 Экстренные службы*
-      
-      🚨 Полиция: `155`
-      🚑 Скорая помощь: `112`
-      🚒 Пожарная: `110`
-      
-      🏥 Больница: `+90 242 999 99 99`
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "phone_numbers"
-              text: "📞 Важные телефоны"
-              type: "callback"
-              callback: "PHONE_NUMBERS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "PHONE_NUMBERS_BUTTON"
-        target: "PHONE_NUMBERS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "EMBASSY"
-    text: "*🏛 Посольства*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "russia_embassy"
-              text: "🇷🇺 России"
-              type: "callback"
-              callback: "RUSSIA_EMBASSY_BUTTON"
-        - buttons:
-            - id: "ukraine_embassy"
-              text: "🇺🇦 Украины"
-              type: "callback"
-              callback: "UKRAINE_EMBASSY_BUTTON"
-        - buttons:
-            - id: "kazakhstan_embassy"
-              text: "🇰🇿 Казахстана"
-              type: "callback"
-              callback: "KAZAKHSTAN_EMBASSY_BUTTON"
-        - buttons:
-            - id: "belarus_embassy"
-              text: "🇧🇾 Беларуси"
-              type: "callback"
-              callback: "BELARUS_EMBASSY_BUTTON"
-        - buttons:
-            - id: "phone_numbers"
-              text: "📞 Важные телефоны"
-              type: "callback"
-              callback: "PHONE_NUMBERS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "RUSSIA_EMBASSY_BUTTON"
-        target: "RUSSIA_EMBASSY"
-      - callback: "UKRAINE_EMBASSY_BUTTON"
-        target: "UKRAINE_EMBASSY"
-      - callback: "KAZAKHSTAN_EMBASSY_BUTTON"
-        target: "KAZAKHSTAN_EMBASSY"
-      - callback: "BELARUS_EMBASSY_BUTTON"
-        target: "BELARUS_EMBASSY"
-      - callback: "PHONE_NUMBERS_BUTTON"
-        target: "PHONE_NUMBERS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "RUSSIA_EMBASSY"
-    text: |
-      *🇷🇺 Посольство России*
-      
-      📞 Телефон: `+90 312 999 99 99`
-      📧 Email: embassy@russia\.tr
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "embassy"
-              text: "🏛 Посольства"
-              type: "callback"
-              callback: "EMBASSY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "EMBASSY_BUTTON"
-        target: "EMBASSY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "UKRAINE_EMBASSY"
-    text: |
-      *🇺🇦 Посольство Украины*
-      
-      📞 Телефон: `+90 312 999 99 99`
-      📧 Email: embassy@ukraine\.tr
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "embassy"
-              text: "🏛 Посольства"
-              type: "callback"
-              callback: "EMBASSY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "EMBASSY_BUTTON"
-        target: "EMBASSY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "KAZAKHSTAN_EMBASSY"
-    text: |
-      *🇰🇿 Посольство Казахстана*
-      
-      📞 Телефон: `+90 312 999 99 99`
-      📧 Email: embassy@kazakhstan\.tr
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "embassy"
-              text: "🏛 Посольства"
-              type: "callback"
-              callback: "EMBASSY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "EMBASSY_BUTTON"
-        target: "EMBASSY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "BELARUS_EMBASSY"
-    text: |
-      *🇧🇾 Посольство Беларуси*
-      
-      📞 Телефон: `+90 312 999 99 99`
-      📧 Email: embassy@belarus\.tr
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "embassy"
-              text: "🏛 Посольства"
-              type: "callback"
-              callback: "EMBASSY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "EMBASSY_BUTTON"
-        target: "EMBASSY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "OTHER_PHONES"
-    text: |
-      *📱 Другие полезные телефоны*
-      
-      🚕 Такси: `+90 242 999 99 99`
-      🍕 Доставка еды: `+90 242 999 99 99`
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "phone_numbers"
-              text: "📞 Важные телефоны"
-              type: "callback"
-              callback: "PHONE_NUMBERS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "PHONE_NUMBERS_BUTTON"
-        target: "PHONE_NUMBERS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+    - id: PHONE_NUMBERS
+      text: "*\U0001F4DE Важные телефоны*"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: ekpa_management
+                  text: "\U0001F3D8 Управление EKPA"
+                  type: callback
+                  callback: EKPA_MANAGEMENT_BUTTON
+            - buttons:
+                - id: emergency
+                  text: "\U0001F198 Экстренные службы"
+                  type: callback
+                  callback: EMERJENCY_BUTTON
+            - buttons:
+                - id: embassy
+                  text: "\U0001F3DB Посольства"
+                  type: callback
+                  callback: EMBASSY_BUTTON
+            - buttons:
+                - id: other_phones
+                  text: "\U0001F4F1 Другие телефоны"
+                  type: callback
+                  callback: OTHER_PHONES_BUTTON
+            - buttons:
+                - id: info_useful
+                  text: ⭐️ Полезная информация
+                  type: callback
+                  callback: INFO_USEFUL_BUTTON
+      navigation:
+        - callback: EKPA_MANAGEMENT_BUTTON
+          target: EKPA_MANAGEMENT
+        - callback: EMERJENCY_BUTTON
+          target: EMERGENCY
+        - callback: EMBASSY_BUTTON
+          target: EMBASSY
+        - callback: OTHER_PHONES_BUTTON
+          target: OTHER_PHONES
+        - callback: INFO_USEFUL_BUTTON
+          target: INFO_USEFUL
+    - id: EKPA_MANAGEMENT
+      text: "*\U0001F3D8 Управление EKPA*\n\n\U0001F4DE Телефон: `+90 242 999 99 99`\n\n\U0001F4E7 Email: info@ekpa1207\\.com\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: phone_numbers
+                  text: "\U0001F4DE Важные телефоны"
+                  type: callback
+                  callback: PHONE_NUMBERS_BUTTON
+      navigation:
+        - callback: PHONE_NUMBERS_BUTTON
+          target: PHONE_NUMBERS
+    - id: EMERGENCY
+      text: "*\U0001F198 Экстренные службы*\n\n\U0001F6A8 Полиция: `155`\n\U0001F691 Скорая помощь: `112`\n\U0001F692 Пожарная: `110`\n\n\U0001F3E5 Больница: `+90 242 999 99 99`\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: phone_numbers
+                  text: "\U0001F4DE Важные телефоны"
+                  type: callback
+                  callback: PHONE_NUMBERS_BUTTON
+      navigation:
+        - callback: PHONE_NUMBERS_BUTTON
+          target: PHONE_NUMBERS
+    - id: EMBASSY
+      text: "*\U0001F3DB Посольства*"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: russia_embassy
+                  text: "\U0001F1F7\U0001F1FA России"
+                  type: callback
+                  callback: RUSSIA_EMBASSY_BUTTON
+            - buttons:
+                - id: ukraine_embassy
+                  text: "\U0001F1FA\U0001F1E6 Украины"
+                  type: callback
+                  callback: UKRAINE_EMBASSY_BUTTON
+            - buttons:
+                - id: kazakhstan_embassy
+                  text: "\U0001F1F0\U0001F1FF Казахстана"
+                  type: callback
+                  callback: KAZAKHSTAN_EMBASSY_BUTTON
+            - buttons:
+                - id: belarus_embassy
+                  text: "\U0001F1E7\U0001F1FE Беларуси"
+                  type: callback
+                  callback: BELARUS_EMBASSY_BUTTON
+            - buttons:
+                - id: phone_numbers
+                  text: "\U0001F4DE Важные телефоны"
+                  type: callback
+                  callback: PHONE_NUMBERS_BUTTON
+      navigation:
+        - callback: RUSSIA_EMBASSY_BUTTON
+          target: RUSSIA_EMBASSY
+        - callback: UKRAINE_EMBASSY_BUTTON
+          target: UKRAINE_EMBASSY
+        - callback: KAZAKHSTAN_EMBASSY_BUTTON
+          target: KAZAKHSTAN_EMBASSY
+        - callback: BELARUS_EMBASSY_BUTTON
+          target: BELARUS_EMBASSY
+        - callback: PHONE_NUMBERS_BUTTON
+          target: PHONE_NUMBERS
+    - id: RUSSIA_EMBASSY
+      text: "*\U0001F1F7\U0001F1FA Посольство России*\n\n\U0001F4DE Телефон: `+90 312 999 99 99`\n\U0001F4E7 Email: embassy@russia\\.tr\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: embassy
+                  text: "\U0001F3DB Посольства"
+                  type: callback
+                  callback: EMBASSY_BUTTON
+      navigation:
+        - callback: EMBASSY_BUTTON
+          target: EMBASSY
+    - id: UKRAINE_EMBASSY
+      text: "*\U0001F1FA\U0001F1E6 Посольство Украины*\n\n\U0001F4DE Телефон: `+90 312 999 99 99`\n\U0001F4E7 Email: embassy@ukraine\\.tr\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: embassy
+                  text: "\U0001F3DB Посольства"
+                  type: callback
+                  callback: EMBASSY_BUTTON
+      navigation:
+        - callback: EMBASSY_BUTTON
+          target: EMBASSY
+    - id: KAZAKHSTAN_EMBASSY
+      text: "*\U0001F1F0\U0001F1FF Посольство Казахстана*\n\n\U0001F4DE Телефон: `+90 312 999 99 99`\n\U0001F4E7 Email: embassy@kazakhstan\\.tr\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: embassy
+                  text: "\U0001F3DB Посольства"
+                  type: callback
+                  callback: EMBASSY_BUTTON
+      navigation:
+        - callback: EMBASSY_BUTTON
+          target: EMBASSY
+    - id: BELARUS_EMBASSY
+      text: "*\U0001F1E7\U0001F1FE Посольство Беларуси*\n\n\U0001F4DE Телефон: `+90 312 999 99 99`\n\U0001F4E7 Email: embassy@belarus\\.tr\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: embassy
+                  text: "\U0001F3DB Посольства"
+                  type: callback
+                  callback: EMBASSY_BUTTON
+      navigation:
+        - callback: EMBASSY_BUTTON
+          target: EMBASSY
+    - id: OTHER_PHONES
+      text: "*\U0001F4F1 Другие полезные телефоны*\n\n\U0001F695 Такси: `+90 242 999 99 99`\n\U0001F355 Доставка еды: `+90 242 999 99 99`\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: phone_numbers
+                  text: "\U0001F4DE Важные телефоны"
+                  type: callback
+                  callback: PHONE_NUMBERS_BUTTON
+      navigation:
+        - callback: PHONE_NUMBERS_BUTTON
+          target: PHONE_NUMBERS

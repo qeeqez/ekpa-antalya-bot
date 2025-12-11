@@ -1,250 +1,150 @@
 version: "1.0"
-
 screens:
-  - id: "AID_KIT"
-    text: "*🏥 Медицина*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "ambulance"
-              text: "🚑 Скорая помощь"
-              type: "callback"
-              callback: "AMBULANCE_BUTTON"
-        - buttons:
-            - id: "pharmacies"
-              text: "💊 Аптеки"
-              type: "callback"
-              callback: "PHARMACIES_BUTTON"
-        - buttons:
-            - id: "hospitals"
-              text: "🏥 Больницы"
-              type: "callback"
-              callback: "HOSPITALS_BUTTON"
-        - buttons:
-            - id: "polyclinic"
-              text: "🏥 Поликлиника"
-              type: "callback"
-              callback: "POLYCLINIC_BUTTON"
-        - buttons:
-            - id: "medicine"
-              text: "💊 Лекарства"
-              type: "callback"
-              callback: "MEDICINE_BUTTON"
-        - buttons:
-            - id: "info_useful"
-              text: "⭐️ Полезная информация"
-              type: "callback"
-              callback: "INFO_USEFUL_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AMBULANCE_BUTTON"
-        target: "AMBULANCE"
-      - callback: "PHARMACIES_BUTTON"
-        target: "PHARMACIES"
-      - callback: "HOSPITALS_BUTTON"
-        target: "HOSPITALS"
-      - callback: "POLYCLINIC_BUTTON"
-        target: "POLYCLINIC"
-      - callback: "MEDICINE_BUTTON"
-        target: "MEDICINE"
-      - callback: "INFO_USEFUL_BUTTON"
-        target: "INFO_USEFUL"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "AMBULANCE"
-    text: |
-      *🚑 Скорая помощь*
-      
-      📞 Номер: `112`
-      
-      🏥 Ближайшая больница:
-      📍 [Kepez Devlet Hastanesi](https://goo\.gl/maps/b5cnrK2H4apXkqWw9)
-      
-      ⚠️ При звонке в скорую, сообщите адрес четко
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "PHARMACIES"
-    text: |
-      *🧑‍⚕️ Аптеки \- Eczane*
-                  
-      ℹ️ В воскресенье обычные аптеки не работают
-      
-      📍 Множество аптек находится по дороге к больнице:
-      📍 [Kepez Devlet Hastanesi](https://goo\.gl/maps/b5cnrK2H4apXkqWw9)
-                  
-      *🏥 Дежурные аптеки \- Nöbetçi Eczaneler*
-      
-      \- Работают круглосуточно
-      \- Каждый день они разные
-      \- Актуальные можно посмотреть на сайте или в приложении
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "pharmacies_site"
-              text: "🌐 Сайт"
-              type: "url"
-              url: "https://www.eczaneler.gen.tr"
-        - buttons:
-            - id: "pharmacies_android"
-              text: "🤖 Android"
-              type: "url"
-              url: "https://play.google.com/store/apps/details?id=com.eczane"
-        - buttons:
-            - id: "pharmacies_iphone"
-              text: "🍎 iPhone"
-              type: "url"
-              url: "https://apps.apple.com/app/eczane/id123456"
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "HOSPITALS"
-    text: |
-      *🏥 Больницы*
-      
-      📍 [Kepez Devlet Hastanesi](https://goo\.gl/maps/b5cnrK2H4apXkqWw9)
-      Государственная больница \(по страховке\)
-      
-      📍 Частные больницы:
-      \- Medical Park
-      \- Memorial
-      \- Liv Hospital
-      
-      💡 Проверьте покрытие вашей страховки
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "hospitals_insurance_site"
-              text: "🌐 Проверить страховку"
-              type: "url"
-              url: "https://www.sgk.gov.tr"
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "POLYCLINIC"
-    text: |
-      *🏥 Поликлиника \- Aile Sağlık Merkezi*
-      
-      Бесплатное обслуживание по страховке SGK
-      
-      📍 Ближайшая поликлиника:
-      Расположение на карте
-      
-      📱 Запись через приложение:
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "polyclinic_site"
-              text: "🌐 Сайт"
-              type: "url"
-              url: "https://www.mhrs.gov.tr"
-        - buttons:
-            - id: "polyclinic_android"
-              text: "🤖 Android"
-              type: "url"
-              url: "https://play.google.com/store/apps/details?id=tr.gov.saglik.mhrs"
-        - buttons:
-            - id: "polyclinic_iphone"
-              text: "🍎 iPhone"
-              type: "url"
-              url: "https://apps.apple.com/app/mhrs/id123456"
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "MEDICINE"
-    text: |
-      *💊 Лекарства*
-      
-      📝 Рецепты выдаются врачами
-      
-      💊 Многие лекарства продаются без рецепта
-      
-      💰 Со страховкой SGK \- скидка на лекарства
-      
-      ⚠️ Названия могут отличаться от российских
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "aid_kit"
-              text: "🏥 Медицина"
-              type: "callback"
-              callback: "AID_KIT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "AID_KIT_BUTTON"
-        target: "AID_KIT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+    - id: AID_KIT
+      text: "*\U0001F3E5 Медицина*"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: ambulance
+                  text: "\U0001F691 Скорая помощь"
+                  type: callback
+                  callback: AMBULANCE_BUTTON
+            - buttons:
+                - id: pharmacies
+                  text: "\U0001F48A Аптеки"
+                  type: callback
+                  callback: PHARMACIES_BUTTON
+            - buttons:
+                - id: hospitals
+                  text: "\U0001F3E5 Больницы"
+                  type: callback
+                  callback: HOSPITALS_BUTTON
+            - buttons:
+                - id: polyclinic
+                  text: "\U0001F3E5 Поликлиника"
+                  type: callback
+                  callback: POLYCLINIC_BUTTON
+            - buttons:
+                - id: medicine
+                  text: "\U0001F48A Лекарства"
+                  type: callback
+                  callback: MEDICINE_BUTTON
+            - buttons:
+                - id: info_useful
+                  text: ⭐️ Полезная информация
+                  type: callback
+                  callback: INFO_USEFUL_BUTTON
+      navigation:
+        - callback: AMBULANCE_BUTTON
+          target: AMBULANCE
+        - callback: PHARMACIES_BUTTON
+          target: PHARMACIES
+        - callback: HOSPITALS_BUTTON
+          target: HOSPITALS
+        - callback: POLYCLINIC_BUTTON
+          target: POLYCLINIC
+        - callback: MEDICINE_BUTTON
+          target: MEDICINE
+        - callback: INFO_USEFUL_BUTTON
+          target: INFO_USEFUL
+    - id: AMBULANCE
+      text: "*\U0001F691 Скорая помощь*\n\n\U0001F4DE Номер: `112`\n\n\U0001F3E5 Ближайшая больница:\n\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\n\n⚠️ При звонке в скорую, сообщите адрес четко\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+      navigation:
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT
+    - id: PHARMACIES
+      text: "*\U0001F9D1‍⚕️ Аптеки \\- Eczane*\n            \nℹ️ В воскресенье обычные аптеки не работают\n\n\U0001F4CD Множество аптек находится по дороге к больнице:\n\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\n            \n*\U0001F3E5 Дежурные аптеки \\- Nöbetçi Eczaneler*\n\n\\- Работают круглосуточно\n\\- Каждый день они разные\n\\- Актуальные можно посмотреть на сайте или в приложении\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: pharmacies_site
+                  text: "\U0001F310 Сайт"
+                  type: url
+                  url: https://www.eczaneler.gen.tr
+            - buttons:
+                - id: pharmacies_android
+                  text: "\U0001F916 Android"
+                  type: url
+                  url: https://play.google.com/store/apps/details?id=com.eczane
+            - buttons:
+                - id: pharmacies_iphone
+                  text: "\U0001F34E iPhone"
+                  type: url
+                  url: https://apps.apple.com/app/eczane/id123456
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+      navigation:
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT
+    - id: HOSPITALS
+      text: "*\U0001F3E5 Больницы*\n\n\U0001F4CD [Kepez Devlet Hastanesi](https://goo\\.gl/maps/b5cnrK2H4apXkqWw9)\nГосударственная больница \\(по страховке\\)\n\n\U0001F4CD Частные больницы:\n\\- Medical Park\n\\- Memorial\n\\- Liv Hospital\n\n\U0001F4A1 Проверьте покрытие вашей страховки\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: hospitals_insurance_site
+                  text: "\U0001F310 Проверить страховку"
+                  type: url
+                  url: https://www.sgk.gov.tr
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+      navigation:
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT
+    - id: POLYCLINIC
+      text: "*\U0001F3E5 Поликлиника \\- Aile Sağlık Merkezi*\n\nБесплатное обслуживание по страховке SGK\n\n\U0001F4CD Ближайшая поликлиника:\nРасположение на карте\n\n\U0001F4F1 Запись через приложение:\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: polyclinic_site
+                  text: "\U0001F310 Сайт"
+                  type: url
+                  url: https://www.mhrs.gov.tr
+            - buttons:
+                - id: polyclinic_android
+                  text: "\U0001F916 Android"
+                  type: url
+                  url: https://play.google.com/store/apps/details?id=tr.gov.saglik.mhrs
+            - buttons:
+                - id: polyclinic_iphone
+                  text: "\U0001F34E iPhone"
+                  type: url
+                  url: https://apps.apple.com/app/mhrs/id123456
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+      navigation:
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT
+    - id: MEDICINE
+      text: "*\U0001F48A Лекарства*\n\n\U0001F4DD Рецепты выдаются врачами\n\n\U0001F48A Многие лекарства продаются без рецепта\n\n\U0001F4B0 Со страховкой SGK \\- скидка на лекарства\n\n⚠️ Названия могут отличаться от российских\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: aid_kit
+                  text: "\U0001F3E5 Медицина"
+                  type: callback
+                  callback: AID_KIT_BUTTON
+      navigation:
+        - callback: AID_KIT_BUTTON
+          target: AID_KIT

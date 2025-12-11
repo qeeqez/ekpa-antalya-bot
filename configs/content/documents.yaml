@@ -18,7 +18,7 @@ screens:
               callback: "TAX_NUMBER_BUTTON"
         - buttons:
             - id: "address_numarataj"
-              text: "🏠 Адрес \(Numarataj\)"
+              text: "🏠 Адрес (Numarataj)"
               type: "callback"
               callback: "ADDRESS_NUMARATAJ_BUTTON"
         - buttons:
@@ -26,16 +26,6 @@ screens:
               text: "📝 Регистрация адреса"
               type: "callback"
               callback: "ADDRESS_REGISTRATION_BUTTON"
-        - buttons:
-            - id: "info_useful"
-              text: "⭐️ Полезная информация"
-              type: "callback"
-              callback: "INFO_USEFUL_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "EDEVLET_BUTTON"
         target: "EDEVLET"
@@ -45,20 +35,16 @@ screens:
         target: "ADDRESS_NUMARATAJ"
       - callback: "ADDRESS_REGISTRATION_BUTTON"
         target: "ADDRESS_REGISTRATION"
-      - callback: "INFO_USEFUL_BUTTON"
-        target: "INFO_USEFUL"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "EDEVLET"
     text: |
       *🏛 E\-Devlet \- Портал госуслуг*
       
       Через E\-Devlet можно:
-      \- Оплачивать штрафы
-      \- Проверять документы
-      \- Записываться к врачу
-      \- Получать справки
+      \\- Оплачивать штрафы
+      \\- Проверять документы
+      \\- Записываться к врачу
+      \\- Получать справки
       
       🔐 Вход по паролю или через банк
       
@@ -82,21 +68,6 @@ screens:
               text: "🍎 iPhone"
               type: "url"
               url: "https://apps.apple.com/app/e-devlet/id123456"
-        - buttons:
-            - id: "important_docs"
-              text: "📄 Важные документы"
-              type: "callback"
-              callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        target: "IMPORTANT_DOCUMENTS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "TAX_NUMBER"
     text: |
@@ -116,23 +87,6 @@ screens:
       
       ⏱ Оформление: 10\-15 минут
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "important_docs"
-              text: "📄 Важные документы"
-              type: "callback"
-              callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        target: "IMPORTANT_DOCUMENTS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "ADDRESS_NUMARATAJ"
     text: |
@@ -152,23 +106,6 @@ screens:
       \- Паспорт
       \- Tapu
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "important_docs"
-              text: "📄 Важные документы"
-              type: "callback"
-              callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        target: "IMPORTANT_DOCUMENTS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "ADDRESS_REGISTRATION"
     text: |
@@ -191,20 +128,3 @@ screens:
       
       ⏱ Срок действия: 3 месяца
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "important_docs"
-              text: "📄 Важные документы"
-              type: "callback"
-              callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "IMPORTANT_DOCUMENTS_BUTTON"
-        target: "IMPORTANT_DOCUMENTS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"

@@ -30,7 +30,7 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 		return nil, fmt.Errorf("failed to create bot: %w", err)
 	}
 
-	// Load content
+	// Load content (navigation hierarchy is built automatically)
 	content, err := config.NewContentRepository(cfg.Content.Directory)
 	if err != nil {
 		return nil, fmt.Errorf("failed to load content: %w", err)

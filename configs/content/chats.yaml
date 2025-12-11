@@ -58,16 +58,9 @@ screens:
               text: "🧑‍💻 IT"
               type: "url"
               url: "https://t.me/+Wzk69LQBwFs2YzAy"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "BLOCKS_CHAT_BUTTON"
         target: "BLOCKS_CHAT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "BLOCKS_CHAT"
     text: "*🏘 Чаты Блоков*"
@@ -113,17 +106,3 @@ screens:
               text: "E2"
               type: "url"
               url: "https://chat.whatsapp.com/KLQ8orDpKH3Aq0KkPRYN5o"
-        - buttons:
-            - id: "our_chats"
-              text: "💬 Наши Чаты"
-              type: "callback"
-              callback: "OUR_CHATS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "OUR_CHATS_BUTTON"
-        target: "OUR_CHATS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"

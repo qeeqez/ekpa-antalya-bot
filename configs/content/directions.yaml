@@ -2,7 +2,7 @@ version: "1.0"
 
 screens:
   - id: "DIRECTIONS"
-    text: "*Что рядом?*"
+    text: "*В комплексе и рядом*"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
@@ -30,6 +30,11 @@ screens:
               type: "callback"
               callback: "BARBER_BUTTON"
         - buttons:
+            - id: "residence_fitness_spa"
+              text: "💪 Residence Fitness & SPA"
+              type: "callback"
+              callback: "RESIDENCE_FITNESS_SPA_BUTTON"
+        - buttons:
             - id: "tax_office"
               text: "💸 Налоговая"
               type: "callback"
@@ -51,11 +56,6 @@ screens:
               text: "👮 Goc"
               type: "callback"
               callback: "MIGRATION_OFFICE_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "MARKETS_BUTTON"
         target: "MARKETS"
@@ -67,6 +67,8 @@ screens:
         target: "PRINT_AND_PHOTO"
       - callback: "BARBER_BUTTON"
         target: "BARBER"
+      - callback: "RESIDENCE_FITNESS_SPA_BUTTON"
+        target: "RESIDENCE_FITNESS_SPA"
       - callback: "TAX_OFFICE_BUTTON"
         target: "TAX_OFFICE"
       - callback: "POST_OFFICE_BUTTON"
@@ -77,36 +79,6 @@ screens:
         target: "POPULATION_OFFICE"
       - callback: "MIGRATION_OFFICE_BUTTON"
         target: "MIGRATION_OFFICE"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "DIRECTIONS_SITE"
-    text: "*🗺 Карта объектов*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "residence_cafe"
-              text: "☕️ Residence Cafe"
-              type: "callback"
-              callback: "RESIDENCE_CAFE_BUTTON"
-        - buttons:
-            - id: "residence_fitness_spa"
-              text: "💪 Residence Fitness & SPA"
-              type: "callback"
-              callback: "RESIDENCE_FITNESS_SPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "RESIDENCE_CAFE_BUTTON"
-        target: "RESIDENCE_CAFE"
-      - callback: "RESIDENCE_FITNESS_SPA_BUTTON"
-        target: "RESIDENCE_FITNESS_SPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "MARKETS"
     text: |
@@ -138,22 +110,9 @@ screens:
               text: "🧺 Другие рынки"
               type: "callback"
               callback: "ALL_MARKETS_BUTTON"
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "ALL_MARKETS_BUTTON"
         target: "ALL_MARKETS"
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "ALL_MARKETS"
     text: |
@@ -189,21 +148,18 @@ screens:
               text: "🧺 Рынки"
               type: "callback"
               callback: "MARKETS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "MARKETS_BUTTON"
         target: "MARKETS"
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "SHOPS"
     text: |
       *🍎 Ближайшие магазины*
+      
+      *В Комплексе*
+      🍎 *Migros* \- Время работы\: 09\:00 \- 22\:00
+      🍎 *A101* \- Время работы\: 09\:00 \- 21\:00
+      🍾 *Elit 0709* \- Круглосуточный
       
       *Сетевики*
       📍 [Tahtakale](https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 м\)
@@ -226,22 +182,6 @@ screens:
       🛒 [5M Migros Konyaaltı](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\.6 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "🚀 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "SHOPPING_CENTERS"
     text: |
@@ -263,22 +203,6 @@ screens:
       🪚 [Bauhaus Kepez](https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\.4 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "🚀 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "PRINT_AND_PHOTO"
     text: |
@@ -294,22 +218,6 @@ screens:
       📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \(1\.2 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "🚀 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "BARBER"
     text: |
@@ -325,22 +233,6 @@ screens:
       📍 [Рядом с Migros](https://goo.gl/maps/PiBvkRPMak7bNo23A)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "TAX_OFFICE"
     text: |
@@ -354,22 +246,6 @@ screens:
       📍 [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\.7 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "POST_OFFICE"
     text: |
@@ -385,22 +261,6 @@ screens:
       🌟 Все о Ekpa \-\> 💰 Как Оплатить?
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "CITY_HALL"
     text: |
@@ -412,22 +272,6 @@ screens:
       📍 [Kepez Belediye](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\.5 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "POPULATION_OFFICE"
     text: |
@@ -439,22 +283,6 @@ screens:
       📍 [Kepez Nufus](https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\.5 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "MIGRATION_OFFICE"
     text: |
@@ -467,97 +295,22 @@ screens:
       📍 [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\.1 км\)
     parse_mode: "MarkdownV2"
     disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions"
-              text: "📍 Что рядом?"
-              type: "callback"
-              callback: "DIRECTIONS_BUTTON"
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_BUTTON"
-        target: "DIRECTIONS"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "RESIDENCE_CAFE"
-    text: "*☕️ Residence Cafe*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "residence_cafe_menu"
-              text: "📋 Меню"
-              type: "url"
-              url: "https://example.com/menu"
-        - buttons:
-            - id: "residence_cafe_wifi"
-              text: "📶 WiFi"
-              type: "callback"
-              callback: "RESIDENCE_CAFE_WIFI_BUTTON"
-        - buttons:
-            - id: "directions_site"
-              text: "🗺 Карта объектов"
-              type: "callback"
-              callback: "DIRECTIONS_SITE_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "RESIDENCE_CAFE_WIFI_BUTTON"
-        target: "RESIDENCE_CAFE_WIFI"
-      - callback: "DIRECTIONS_SITE_BUTTON"
-        target: "DIRECTIONS_SITE"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "RESIDENCE_CAFE_WIFI"
-    text: |
-      *📶 WiFi Residence Cafe*
-      
-      Пароль: `residencecafe`
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "residence_cafe"
-              text: "☕️ Residence Cafe"
-              type: "callback"
-              callback: "RESIDENCE_CAFE_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "RESIDENCE_CAFE_BUTTON"
-        target: "RESIDENCE_CAFE"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "RESIDENCE_FITNESS_SPA"
-    text: "*💪 Residence Fitness & SPA*"
+    text: |
+      *🧖‍♀ Ata Wellness Fitness & Spa*
+
+      📍 *Блок E1, \-1 этаж*
+
+      🕗 *ПН \- СБ:* 08:00 \- 22:00
+      🕛 *ВС:* 12:00 \- 22:00
+
+      📞 \+90 \(537\) 658 07 17
+
+      📶 WiFi: *Ata\_Spa\_Fitness*
+      ℹ️ Пароль: `ataspafitnes1207`
+
+      👨‍💻 Приложение для входа
+      [📱 iPhone](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "directions_site"
-              text: "🗺 Карта объектов"
-              type: "callback"
-              callback: "DIRECTIONS_SITE_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DIRECTIONS_SITE_BUTTON"
-        target: "DIRECTIONS_SITE"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+    disable_web_preview: true

@@ -21,16 +21,6 @@ screens:
               text: "📦 Доставка товаров"
               type: "callback"
               callback: "GOODS_DELIVERY_BUTTON"
-        - buttons:
-            - id: "info_useful"
-              text: "⭐️ Полезная информация"
-              type: "callback"
-              callback: "INFO_USEFUL_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "FOOD_DELIVERY_BUTTON"
         target: "FOOD_DELIVERY"
@@ -38,10 +28,6 @@ screens:
         target: "PRODUCTS_DELIVERY"
       - callback: "GOODS_DELIVERY_BUTTON"
         target: "GOODS_DELIVERY"
-      - callback: "INFO_USEFUL_BUTTON"
-        target: "INFO_USEFUL"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "FOOD_DELIVERY"
     text: |
@@ -58,23 +44,6 @@ screens:
       🌯 *Migros Hemen*
       📱 Приложение
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "delivery"
-              text: "🚚 Доставка"
-              type: "callback"
-              callback: "DELIVERY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DELIVERY_BUTTON"
-        target: "DELIVERY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "PRODUCTS_DELIVERY"
     text: |
@@ -91,23 +60,6 @@ screens:
       🛒 *Yemeksepeti Banabi*
       Доставка продуктов
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "delivery"
-              text: "🚚 Доставка"
-              type: "callback"
-              callback: "DELIVERY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DELIVERY_BUTTON"
-        target: "DELIVERY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "GOODS_DELIVERY"
     text: |
@@ -124,20 +76,3 @@ screens:
       🛍 *Amazon\.tr*
       Широкий ассортимент товаров
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "delivery"
-              text: "🚚 Доставка"
-              type: "callback"
-              callback: "DELIVERY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "DELIVERY_BUTTON"
-        target: "DELIVERY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"

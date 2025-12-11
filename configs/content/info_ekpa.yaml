@@ -26,11 +26,6 @@ screens:
               text: "🔌 Как отключить"
               type: "callback"
               callback: "HOW_TO_DISCONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
         target: "MANAGEMENT_OFFICE_ALL"
@@ -40,8 +35,6 @@ screens:
         target: "HOW_TO_CONNECT"
       - callback: "HOW_TO_DISCONNECT_BUTTON"
         target: "HOW_TO_DISCONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "MANAGEMENT_OFFICE_ALL"
     text: |
@@ -66,23 +59,9 @@ screens:
               text: "🏘 Офис в комплексе"
               type: "callback"
               callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
-        - buttons:
-            - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
-              type: "callback"
-              callback: "INFO_EKPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "MANAGEMENT_OFFICE_IN_COMPLEX_BUTTON"
         target: "MANAGEMENT_OFFICE_COMPLEX"
-      - callback: "INFO_EKPA_BUTTON"
-        target: "INFO_EKPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "MANAGEMENT_OFFICE_COMPLEX"
     text: |
@@ -102,23 +81,9 @@ screens:
               text: "🏢 Офис управления"
               type: "callback"
               callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
-        - buttons:
-            - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
-              type: "callback"
-              callback: "INFO_EKPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "MANAGEMENT_OFFICE_ALL_ABOUT_BUTTON"
         target: "MANAGEMENT_OFFICE_ALL"
-      - callback: "INFO_EKPA_BUTTON"
-        target: "INFO_EKPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY"
     text: "*💳 Как оплачивать*"
@@ -150,16 +115,6 @@ screens:
               text: "📱 Телефон и интернет"
               type: "callback"
               callback: "HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON"
-        - buttons:
-            - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
-              type: "callback"
-              callback: "INFO_EKPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "HOW_TO_PAY_AIDAT_BUTTON"
         target: "HOW_TO_PAY_AIDAT"
@@ -171,10 +126,6 @@ screens:
         target: "HOW_TO_PAY_WATER"
       - callback: "HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON"
         target: "HOW_TO_PAY_PHONE_AND_INTERNET"
-      - callback: "INFO_EKPA_BUTTON"
-        target: "INFO_EKPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY_AIDAT"
     text: |
@@ -191,23 +142,6 @@ screens:
       \- Банковским переводом
       \- Через банкомат
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_pay"
-              text: "💳 Как оплачивать"
-              type: "callback"
-              callback: "HOW_TO_PAY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_PAY_BUTTON"
-        target: "HOW_TO_PAY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY_CONDITIONER"
     text: |
@@ -219,23 +153,6 @@ screens:
       
       📅 Счета приходят раз в месяц
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_pay"
-              text: "💳 Как оплачивать"
-              type: "callback"
-              callback: "HOW_TO_PAY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_PAY_BUTTON"
-        target: "HOW_TO_PAY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY_ELECTRICITY"
     text: |
@@ -245,23 +162,6 @@ screens:
       
       📱 Можно оплатить через мобильное приложение EDAŞ
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_pay"
-              text: "💳 Как оплачивать"
-              type: "callback"
-              callback: "HOW_TO_PAY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_PAY_BUTTON"
-        target: "HOW_TO_PAY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY_WATER"
     text: |
@@ -271,23 +171,6 @@ screens:
       
       📅 Счета приходят ежемесячно
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_pay"
-              text: "💳 Как оплачивать"
-              type: "callback"
-              callback: "HOW_TO_PAY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_PAY_BUTTON"
-        target: "HOW_TO_PAY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_PAY_PHONE_AND_INTERNET"
     text: |
@@ -297,23 +180,6 @@ screens:
       
       Операторы: Turkcell, Vodafone, Türk Telekom
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_pay"
-              text: "💳 Как оплачивать"
-              type: "callback"
-              callback: "HOW_TO_PAY_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_PAY_BUTTON"
-        target: "HOW_TO_PAY"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_CONNECT"
     text: "*🔌 Как подключить*"
@@ -340,16 +206,6 @@ screens:
               text: "🌐 Интернет"
               type: "callback"
               callback: "HOW_TO_CONNECT_INTERNET_BUTTON"
-        - buttons:
-            - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
-              type: "callback"
-              callback: "INFO_EKPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
     navigation:
       - callback: "HOW_TO_CONNECT_DASK_INSURANCE_BUTTON"
         target: "HOW_TO_CONNECT_DASK"
@@ -359,10 +215,6 @@ screens:
         target: "HOW_TO_CONNECT_WATER"
       - callback: "HOW_TO_CONNECT_INTERNET_BUTTON"
         target: "HOW_TO_CONNECT_INTERNET"
-      - callback: "INFO_EKPA_BUTTON"
-        target: "INFO_EKPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_CONNECT_DASK"
     text: |
@@ -376,23 +228,6 @@ screens:
       \- Любая страховая компания
       \- Онлайн через сайты страховых
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_connect"
-              text: "🔌 Как подключить"
-              type: "callback"
-              callback: "HOW_TO_CONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_CONNECT_BUTTON"
-        target: "HOW_TO_CONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_CONNECT_ELECTRICITY"
     text: |
@@ -407,23 +242,6 @@ screens:
       
       📍 Адрес офиса EDAŞ
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_connect"
-              text: "🔌 Как подключить"
-              type: "callback"
-              callback: "HOW_TO_CONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_CONNECT_BUTTON"
-        target: "HOW_TO_CONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_CONNECT_WATER"
     text: |
@@ -437,23 +255,6 @@ screens:
       
       📍 Адрес офиса ASAT
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_connect"
-              text: "🔌 Как подключить"
-              type: "callback"
-              callback: "HOW_TO_CONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_CONNECT_BUTTON"
-        target: "HOW_TO_CONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_CONNECT_INTERNET"
     text: |
@@ -466,23 +267,6 @@ screens:
       
       📞 Звоните оператору для подключения
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_connect"
-              text: "🔌 Как подключить"
-              type: "callback"
-              callback: "HOW_TO_CONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_CONNECT_BUTTON"
-        target: "HOW_TO_CONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_DISCONNECT"
     text: "*🔌 Как отключить*"
@@ -499,25 +283,6 @@ screens:
               text: "💧 Вода"
               type: "callback"
               callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
-        - buttons:
-            - id: "info_ekpa"
-              text: "🏘 Инфо по EKPA"
-              type: "callback"
-              callback: "INFO_EKPA_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_DISCONNECT_ELECTRICITY_BUTTON"
-        target: "HOW_TO_DISCONNECT_ELECTRICITY"
-      - callback: "HOW_TO_DISCONNECT_WATER_BUTTON"
-        target: "HOW_TO_DISCONNECT_WATER"
-      - callback: "INFO_EKPA_BUTTON"
-        target: "INFO_EKPA"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_DISCONNECT_ELECTRICITY"
     text: |
@@ -527,23 +292,6 @@ screens:
       
       ⚠️ Отключение может занять несколько дней
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_disconnect"
-              text: "🔌 Как отключить"
-              type: "callback"
-              callback: "HOW_TO_DISCONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_DISCONNECT_BUTTON"
-        target: "HOW_TO_DISCONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
 
   - id: "HOW_TO_DISCONNECT_WATER"
     text: |
@@ -553,20 +301,3 @@ screens:
       
       ⚠️ Отключение может занять несколько дней
     parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "how_to_disconnect"
-              text: "🔌 Как отключить"
-              type: "callback"
-              callback: "HOW_TO_DISCONNECT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "HOW_TO_DISCONNECT_BUTTON"
-        target: "HOW_TO_DISCONNECT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"

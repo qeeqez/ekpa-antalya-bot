@@ -82,6 +82,11 @@ func (h *CallbackHandler) Handle(ctx context.Context, update telego.Update) erro
 
 // findTargetScreen finds the target screen for a given callback data
 func (h *CallbackHandler) findTargetScreen(callbackData string) (*domain.Screen, error) {
+	// Special case: MAIN_MENU_BUTTON always goes to MAIN_MENU
+	if callbackData == "MAIN_MENU_BUTTON" {
+		return h.content.GetScreen("MAIN_MENU")
+	}
+
 	// Search through all screens to find one with matching callback
 	allScreens := h.content.GetAllScreens()
 

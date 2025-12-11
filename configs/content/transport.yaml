@@ -1,234 +1,132 @@
 version: "1.0"
-
 screens:
-  - id: "TRANSPORT"
-    text: "*🚌 Транспорт*"
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "bus"
-              text: "🚌 Автобус"
-              type: "callback"
-              callback: "BUS_BUTTON"
-        - buttons:
-            - id: "antalya_card"
-              text: "💳 Antalya Kart"
-              type: "callback"
-              callback: "ANTALYA_CARD_BUTTON"
-        - buttons:
-            - id: "taxi"
-              text: "🚕 Такси"
-              type: "callback"
-              callback: "TAXI_BUTTON"
-        - buttons:
-            - id: "kick_scooter"
-              text: "🛴 Самокаты"
-              type: "callback"
-              callback: "KICK_SCOOTER_BUTTON"
-        - buttons:
-            - id: "info_useful"
-              text: "⭐️ Полезная информация"
-              type: "callback"
-              callback: "INFO_USEFUL_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "BUS_BUTTON"
-        target: "BUS"
-      - callback: "ANTALYA_CARD_BUTTON"
-        target: "ANTALYA_CARD"
-      - callback: "TAXI_BUTTON"
-        target: "TAXI"
-      - callback: "KICK_SCOOTER_BUTTON"
-        target: "KICK_SCOOTER"
-      - callback: "INFO_USEFUL_BUTTON"
-        target: "INFO_USEFUL"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "BUS"
-    text: |
-      *🚌 Автобусы*
-      
-      Номера автобусов от EKPA:
-      
-      🚌 *KC06* \- в центр города
-      🚌 *KC07* \- в ТЦ
-      🚌 *KC08* \- в аэропорт
-      
-      💰 Стоимость: 15 TL
-      
-      📱 Расписание в приложении Antalya Kart
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "bus_concessionary"
-              text: "🎫 Льготы"
-              type: "callback"
-              callback: "BUS_CONCESSIONARY_BUTTON"
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "BUS_CONCESSIONARY_BUTTON"
-        target: "BUS_CONCESSIONARY"
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "BUS_CONCESSIONARY"
-    text: |
-      *🎫 Льготы на проезд*
-      
-      Льготный проезд для:
-      \- Студентов
-      \- Пенсионеров
-      \- Инвалидов
-      
-      📋 Оформление через офис UKOME
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "bus"
-              text: "🚌 Автобус"
-              type: "callback"
-              callback: "BUS_BUTTON"
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "BUS_BUTTON"
-        target: "BUS"
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "ANTALYA_CARD"
-    text: |
-      *💳 Antalya Kart*
-      
-      Транспортная карта для оплаты проезда
-      
-      🏪 Где купить:
-      \- Киоски
-      \- Магазины
-      \- Автостанции
-      
-      💰 Стоимость карты: 20 TL
-      
-      📱 Приложения:
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "antalya_card_android"
-              text: "🤖 Android"
-              type: "url"
-              url: "https://play.google.com/store/apps/details?id=com.antalyakart"
-        - buttons:
-            - id: "antalya_card_iphone"
-              text: "🍎 iPhone"
-              type: "url"
-              url: "https://apps.apple.com/app/antalya-kart/id123456"
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "TAXI"
-    text: |
-      *🚕 Такси*
-      
-      📱 Приложения для вызова:
-      \- BiTaksi
-      \- Uber
-      \- Martı Taksi
-      
-      💰 Примерная стоимость:
-      До аэропорта: ~200 TL
-      До центра: ~100 TL
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
-
-  - id: "KICK_SCOOTER"
-    text: |
-      *🛴 Электросамокаты*
-      
-      Доступные сервисы:
-      \- Martı
-      \- Hop
-      \- Palm
-      
-      💰 Стоимость: от 10 TL за поездку
-      
-      📱 Скачайте приложение и зарегистрируйтесь
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "transport"
-              text: "🚌 Транспорт"
-              type: "callback"
-              callback: "TRANSPORT_BUTTON"
-        - buttons:
-            - id: "main_menu"
-              text: "🏠 В главное меню"
-              type: "callback"
-              callback: "MAIN_MENU_BUTTON"
-    navigation:
-      - callback: "TRANSPORT_BUTTON"
-        target: "TRANSPORT"
-      - callback: "MAIN_MENU_BUTTON"
-        target: "MAIN_MENU"
+    - id: TRANSPORT
+      text: "*\U0001F68C Транспорт*"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: bus
+                  text: "\U0001F68C Автобус"
+                  type: callback
+                  callback: BUS_BUTTON
+            - buttons:
+                - id: antalya_card
+                  text: "\U0001F4B3 Antalya Kart"
+                  type: callback
+                  callback: ANTALYA_CARD_BUTTON
+            - buttons:
+                - id: taxi
+                  text: "\U0001F695 Такси"
+                  type: callback
+                  callback: TAXI_BUTTON
+            - buttons:
+                - id: kick_scooter
+                  text: "\U0001F6F4 Самокаты"
+                  type: callback
+                  callback: KICK_SCOOTER_BUTTON
+            - buttons:
+                - id: info_useful
+                  text: ⭐️ Полезная информация
+                  type: callback
+                  callback: INFO_USEFUL_BUTTON
+      navigation:
+        - callback: BUS_BUTTON
+          target: BUS
+        - callback: ANTALYA_CARD_BUTTON
+          target: ANTALYA_CARD
+        - callback: TAXI_BUTTON
+          target: TAXI
+        - callback: KICK_SCOOTER_BUTTON
+          target: KICK_SCOOTER
+        - callback: INFO_USEFUL_BUTTON
+          target: INFO_USEFUL
+    - id: BUS
+      text: "*\U0001F68C Автобусы*\n\nНомера автобусов от EKPA:\n\n\U0001F68C *KC06* \\- в центр города\n\U0001F68C *KC07* \\- в ТЦ\n\U0001F68C *KC08* \\- в аэропорт\n\n\U0001F4B0 Стоимость: 15 TL\n\n\U0001F4F1 Расписание в приложении Antalya Kart\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: bus_concessionary
+                  text: "\U0001F3AB Льготы"
+                  type: callback
+                  callback: BUS_CONCESSIONARY_BUTTON
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+      navigation:
+        - callback: BUS_CONCESSIONARY_BUTTON
+          target: BUS_CONCESSIONARY
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT
+    - id: BUS_CONCESSIONARY
+      text: "*\U0001F3AB Льготы на проезд*\n\nЛьготный проезд для:\n\\- Студентов\n\\- Пенсионеров\n\\- Инвалидов\n\n\U0001F4CB Оформление через офис UKOME\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: bus
+                  text: "\U0001F68C Автобус"
+                  type: callback
+                  callback: BUS_BUTTON
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+      navigation:
+        - callback: BUS_BUTTON
+          target: BUS
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT
+    - id: ANTALYA_CARD
+      text: "*\U0001F4B3 Antalya Kart*\n\nТранспортная карта для оплаты проезда\n\n\U0001F3EA Где купить:\n\\- Киоски\n\\- Магазины\n\\- Автостанции\n\n\U0001F4B0 Стоимость карты: 20 TL\n\n\U0001F4F1 Приложения:\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: antalya_card_android
+                  text: "\U0001F916 Android"
+                  type: url
+                  url: https://play.google.com/store/apps/details?id=com.antalyakart
+            - buttons:
+                - id: antalya_card_iphone
+                  text: "\U0001F34E iPhone"
+                  type: url
+                  url: https://apps.apple.com/app/antalya-kart/id123456
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+      navigation:
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT
+    - id: TAXI
+      text: "*\U0001F695 Такси*\n\n\U0001F4F1 Приложения для вызова:\n\\- BiTaksi\n\\- Uber\n\\- Martı Taksi\n\n\U0001F4B0 Примерная стоимость:\nДо аэропорта: ~200 TL\nДо центра: ~100 TL\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+      navigation:
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT
+    - id: KICK_SCOOTER
+      text: "*\U0001F6F4 Электросамокаты*\n\nДоступные сервисы:\n\\- Martı\n\\- Hop\n\\- Palm\n\n\U0001F4B0 Стоимость: от 10 TL за поездку\n\n\U0001F4F1 Скачайте приложение и зарегистрируйтесь\n"
+      parse_mode: MarkdownV2
+      inline_keyboard:
+        rows:
+            - buttons:
+                - id: transport
+                  text: "\U0001F68C Транспорт"
+                  type: callback
+                  callback: TRANSPORT_BUTTON
+      navigation:
+        - callback: TRANSPORT_BUTTON
+          target: TRANSPORT

@@ -7,44 +7,90 @@ screens:
     inline_keyboard:
       rows:
         - buttons:
-            - id: "edevlet"
-              text: "🏛 E-Devlet"
+            - id: "check_application_status"
+              text: "🔍 Проверить статус заявления"
               type: "callback"
-              callback: "EDEVLET_BUTTON"
+              callback: "CHECK_APPLICATION_STATUS_BUTTON"
+        - buttons:
+            - id: "get_id_number"
+              text: "🆔 Получить ID номер"
+              type: "callback"
+              callback: "GET_ID_NUMBER_BUTTON"
         - buttons:
             - id: "tax_number"
               text: "💼 Налоговый номер"
               type: "callback"
               callback: "TAX_NUMBER_BUTTON"
+            - id: "edevlet"
+              text: "🏛 E-Devlet"
+              type: "callback"
+              callback: "EDEVLET_BUTTON"
         - buttons:
             - id: "address_numarataj"
               text: "🏠 Адрес (Numarataj)"
               type: "callback"
               callback: "ADDRESS_NUMARATAJ_BUTTON"
-        - buttons:
             - id: "address_registration"
               text: "📝 Регистрация адреса"
               type: "callback"
               callback: "ADDRESS_REGISTRATION_BUTTON"
     navigation:
-      - callback: "EDEVLET_BUTTON"
-        target: "EDEVLET"
+      - callback: "CHECK_APPLICATION_STATUS_BUTTON"
+        target: "CHECK_APPLICATION_STATUS"
+      - callback: "GET_ID_NUMBER_BUTTON"
+        target: "GET_ID_NUMBER"
       - callback: "TAX_NUMBER_BUTTON"
         target: "TAX_NUMBER"
+      - callback: "EDEVLET_BUTTON"
+        target: "EDEVLET"
       - callback: "ADDRESS_NUMARATAJ_BUTTON"
         target: "ADDRESS_NUMARATAJ"
       - callback: "ADDRESS_REGISTRATION_BUTTON"
         target: "ADDRESS_REGISTRATION"
 
+  - id: "CHECK_APPLICATION_STATUS"
+    text: |
+      *🔍 Проверить статус заявления*
+      
+      Проверка статуса заявлений на ВНЖ, гражданство и другие документы
+      
+      🌐 Через сайт E\-Devlet:
+      [turkiye\.gov\.tr](https://www\.turkiye\.gov\.tr)
+      
+      📱 Или через мобильное приложение
+      
+      ℹ️ Понадобится номер заявления
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+
+  - id: "GET_ID_NUMBER"
+    text: |
+      *🆔 Получить ID номер \- TC Kimlik*
+      
+      TC Kimlik \- турецкий идентификационный номер
+      
+      📋 Выдается при:
+      \- Получении ВНЖ
+      \- Получении гражданства
+      
+      🏢 Где получить:
+      Nüfus Müdürlüğü \(ЗАГС\)
+      
+      📄 Документы:
+      \- Паспорт
+      \- ВНЖ или документ о гражданстве
+    parse_mode: "MarkdownV2"
+    disable_web_preview: true
+
   - id: "EDEVLET"
     text: |
-      *🏛 E\-Devlet \- Портал госуслуг*
+      *🏛 E\\-Devlet \\- Портал госуслуг*
       
-      Через E\-Devlet можно:
-      \\- Оплачивать штрафы
-      \\- Проверять документы
-      \\- Записываться к врачу
-      \\- Получать справки
+      Через E\\-Devlet можно:
+      \\\\- Оплачивать штрафы
+      \\\\- Проверять документы
+      \\\\- Записываться к врачу
+      \\\\- Получать справки
       
       🔐 Вход по паролю или через банк
       
@@ -63,7 +109,6 @@ screens:
               text: "🤖 Android"
               type: "url"
               url: "https://play.google.com/store/apps/details?id=tr.gov.turkiye"
-        - buttons:
             - id: "edevlet_iphone"
               text: "🍎 iPhone"
               type: "url"
@@ -87,6 +132,7 @@ screens:
       
       ⏱ Оформление: 10\-15 минут
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "ADDRESS_NUMARATAJ"
     text: |
@@ -106,6 +152,7 @@ screens:
       \- Паспорт
       \- Tapu
     parse_mode: "MarkdownV2"
+    disable_web_preview: true
 
   - id: "ADDRESS_REGISTRATION"
     text: |
@@ -128,3 +175,4 @@ screens:
       
       ⏱ Срок действия: 3 месяца
     parse_mode: "MarkdownV2"
+    disable_web_preview: true

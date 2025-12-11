@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"fmt"
-	"log"
+	"log/slog"
 
 	"github.com/mymmrac/telego"
 	"github.com/mymmrac/telego/telegoutil"
@@ -40,11 +40,11 @@ func (h *CallbackHandler) Handle(ctx context.Context, update telego.Update) erro
 	callback := update.CallbackQuery
 	callbackData := callback.Data
 
-	log.Printf("Handling callback: %s from user: %d", callbackData, callback.From.ID)
+	slog.Info("Handling callback", "callback", callbackData, "user_id", callback.From.ID)
 
 	// Validate message exists
 	if callback.Message == nil {
-		log.Printf("Callback query has no message")
+		slog.Warn("Callback query has no message")
 		return nil
 	}
 
@@ -55,18 +55,18 @@ func (h *CallbackHandler) Handle(ctx context.Context, update telego.Update) erro
 	// Find the target screen based on callback data
 	targetScreen, err := h.findTargetScreen(callbackData)
 	if err != nil {
-		log.Printf("Failed to find target screen for callback %s: %v", callbackData, err)
+		slog.Error("Failed to find target screen", "callback", callbackData, "error", err)
 		// Send error message to user
 		_, sendErr := h.sender.SendText(ctx, chatID, "Sorry, unhandled message was sent.")
 		if sendErr != nil {
-			log.Printf("Failed to send error message: %v", sendErr)
+			slog.Error("Failed to send error message", "error", sendErr)
 		}
 		return nil
 	}
 
 	// Edit the message with the new screen
 	if _, err := h.sender.EditScreen(ctx, chatID, messageID, targetScreen); err != nil {
-		log.Printf("Failed to edit message: %v", err)
+		slog.Error("Failed to edit message", "error", err)
 		return fmt.Errorf("failed to edit message: %w", err)
 	}
 

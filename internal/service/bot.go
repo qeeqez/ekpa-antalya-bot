@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
-	"log"
+	"log/slog"
 
 	"github.com/mymmrac/telego"
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
@@ -28,7 +28,7 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 	var err error
 
 	if cfg.Debug {
-		log.Println("Debug mode enabled - verbose logging active")
+		slog.Info("Debug mode enabled - verbose logging active")
 		bot, err = telego.NewBot(cfg.Bot.Token, telego.WithDefaultDebugLogger())
 	} else {
 		bot, err = telego.NewBot(cfg.Bot.Token)
@@ -71,21 +71,21 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 
 // Start starts the bot
 func (s *BotService) Start(ctx context.Context) error {
-	log.Println("Starting bot...")
+	slog.Info("Starting bot")
 
 	// Start health check server if enabled
 	if s.config.Health.Enabled {
 		addr := fmt.Sprintf("%s:%d", s.config.Health.Address, s.config.Health.Port)
 		go func() {
 			if err := s.health.StartServer(addr); err != nil {
-				log.Printf("Health check server error: %v", err)
+				slog.Error("Health check server error", "error", err)
 			}
 		}()
 	}
 
 	// Set bot commands
-	if err := s.setBotCommands(); err != nil {
-		log.Printf("Failed to set bot commands: %v", err)
+	if err := s.setBotCommands(ctx); err != nil {
+		slog.Warn("Failed to set bot commands", "error", err)
 	}
 
 	// Get bot info
@@ -93,7 +93,7 @@ func (s *BotService) Start(ctx context.Context) error {
 	if err != nil {
 		return fmt.Errorf("failed to get bot info: %w", err)
 	}
-	log.Printf("Bot started: @%s (ID: %d)", me.Username, me.ID)
+	slog.Info("Bot started", "username", me.Username, "id", me.ID)
 
 	// Get updates channel
 	updates, err := s.bot.UpdatesViaLongPolling(ctx, nil)
@@ -112,7 +112,7 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 	for {
 		select {
 		case <-ctx.Done():
-			log.Println("Stopping bot...")
+			slog.Info("Stopping bot")
 			return
 		case update := <-updates:
 			// Record update for health check
@@ -123,7 +123,7 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 				defer middleware.RecoverPanic()
 
 				if err := s.handler.Handle(ctx, upd); err != nil {
-					log.Printf("Error handling update: %v", err)
+					slog.Error("Error handling update", "error", err)
 					s.health.RecordError()
 				}
 			}(update)
@@ -132,7 +132,7 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 }
 
 // setBotCommands sets the bot's command menu
-func (s *BotService) setBotCommands() error {
+func (s *BotService) setBotCommands(ctx context.Context) error {
 	commands := s.content.GetCommands()
 
 	botCommands := make([]telego.BotCommand, 0, len(commands.Commands))
@@ -147,24 +147,24 @@ func (s *BotService) setBotCommands() error {
 		Commands: botCommands,
 	}
 
-	if err := s.bot.SetMyCommands(context.Background(), params); err != nil {
+	if err := s.bot.SetMyCommands(ctx, params); err != nil {
 		return fmt.Errorf("failed to set commands: %w", err)
 	}
 
-	log.Printf("Set %d bot commands", len(botCommands))
+	slog.Info("Bot commands configured", "count", len(botCommands))
 	return nil
 }
 
 // Stop stops the bot gracefully
 func (s *BotService) Stop(ctx context.Context) error {
-	log.Println("Stopping bot...")
+	slog.Info("Stopping bot")
 
 	// Shutdown health server
 	if err := s.health.Shutdown(ctx); err != nil {
-		log.Printf("Error shutting down health server: %v", err)
+		slog.Error("Error shutting down health server", "error", err)
 		return err
 	}
 
-	log.Println("Bot stopped")
+	slog.Info("Bot stopped successfully")
 	return nil
 }

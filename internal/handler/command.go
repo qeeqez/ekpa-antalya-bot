@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 	"fmt"
-	"log"
+	"log/slog"
 	"strings"
 
 	"github.com/mymmrac/telego"
@@ -54,7 +54,7 @@ func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error
 		}
 	}
 
-	log.Printf("Handling command: %s from chat: %d", command, message.Chat.ID)
+	slog.Info("Handling command", "command", command, "chat_id", message.Chat.ID, "user_id", message.From.ID)
 
 	// Handle special /start command
 	if command == "/start" {
@@ -64,14 +64,14 @@ func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error
 	// Look up command in registry
 	cmd, found := h.content.GetCommands().GetCommand(command)
 	if !found {
-		log.Printf("Command not recognized: %s", command)
+		slog.Debug("Command not recognized", "command", command)
 		return nil
 	}
 
 	// Get the screen for this command
 	screen, err := h.content.GetScreen(cmd.ScreenID)
 	if err != nil {
-		log.Printf("Failed to get screen %s for command %s: %v", cmd.ScreenID, command, err)
+		slog.Error("Failed to get screen for command", "screen_id", cmd.ScreenID, "command", command, "error", err)
 		return fmt.Errorf("failed to get screen: %w", err)
 	}
 
@@ -99,12 +99,12 @@ func (h *CommandHandler) handleStart(ctx context.Context, chatID telego.ChatID) 
 
 	// Try to pin the message
 	if err := h.sender.PinMessage(ctx, chatID, msg.MessageID); err != nil {
-		log.Printf("Failed to pin message: %v", err)
+		slog.Debug("Failed to pin message", "error", err)
 	}
 
 	// Send another menu message (not pinned)
 	if _, err := h.sender.SendScreen(ctx, chatID, screen); err != nil {
-		log.Printf("Failed to send second menu: %v", err)
+		slog.Warn("Failed to send second menu", "error", err)
 	}
 
 	return nil

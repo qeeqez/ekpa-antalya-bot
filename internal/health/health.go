@@ -3,7 +3,7 @@ package health
 import (
 	"context"
 	"encoding/json"
-	"log"
+	"log/slog"
 	"net/http"
 	"sync/atomic"
 	"time"
@@ -74,7 +74,7 @@ func (c *Checker) Handler() http.HandlerFunc {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
 		if err := json.NewEncoder(w).Encode(status); err != nil {
-			log.Printf("Error encoding health status: %v", err)
+			slog.Error("Error encoding health status", "error", err)
 		}
 	}
 }
@@ -91,7 +91,7 @@ func (c *Checker) StartServer(addr string) error {
 		Handler: mux,
 	}
 
-	log.Printf("Starting health check server on %s", addr)
+	slog.Info("Starting health check server", "address", addr)
 	return c.server.ListenAndServe()
 }
 
@@ -100,6 +100,6 @@ func (c *Checker) Shutdown(ctx context.Context) error {
 	if c.server == nil {
 		return nil
 	}
-	log.Println("Shutting down health check server...")
+	slog.Info("Shutting down health check server")
 	return c.server.Shutdown(ctx)
 }

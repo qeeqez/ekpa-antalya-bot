@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"log"
+	"log/slog"
 	"os"
 	"os/signal"
 	"syscall"
@@ -13,17 +13,23 @@ import (
 )
 
 func main() {
-
 	// Load configuration from environment variables
 	cfg, err := config.Load()
 	if err != nil {
-		log.Fatalf("Failed to load configuration: %v", err)
+		slog.Error("Failed to load configuration", "error", err)
+		os.Exit(1)
 	}
+
+	// Setup structured logging
+	setupLogging(cfg.Debug)
+
+	slog.Info("EKPA Antalya Bot starting")
 
 	// Create bot service
 	botService, err := service.NewBotService(cfg)
 	if err != nil {
-		log.Fatalf("Failed to create bot service: %v", err)
+		slog.Error("Failed to create bot service", "error", err)
+		os.Exit(1)
 	}
 
 	// Create context with cancellation
@@ -45,7 +51,7 @@ func main() {
 	// Wait for shutdown signal or error
 	select {
 	case <-sigChan:
-		log.Println("Received shutdown signal")
+		slog.Info("Received shutdown signal")
 		cancel()
 
 		// Create shutdown context with timeout
@@ -54,11 +60,32 @@ func main() {
 
 		// Stop bot gracefully
 		if err := botService.Stop(shutdownCtx); err != nil {
-			log.Printf("Error during shutdown: %v", err)
+			slog.Error("Error during shutdown", "error", err)
 		}
 	case err := <-errChan:
-		log.Fatalf("Bot error: %v", err)
+		slog.Error("Bot error", "error", err)
+		os.Exit(1)
 	}
 
-	log.Println("Bot stopped gracefully")
+	slog.Info("Bot stopped gracefully")
+}
+
+// setupLogging configures structured logging based on debug mode
+func setupLogging(debug bool) {
+	var handler slog.Handler
+
+	if debug {
+		// Development: text format with debug level
+		handler = slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
+			Level: slog.LevelDebug,
+		})
+	} else {
+		// Production: JSON format with info level
+		handler = slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{
+			Level: slog.LevelInfo,
+		})
+	}
+
+	logger := slog.New(handler)
+	slog.SetDefault(logger)
 }

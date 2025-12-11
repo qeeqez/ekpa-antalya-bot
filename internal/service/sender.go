@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
-	"log"
+	"log/slog"
 
 	"github.com/mymmrac/telego"
 	"github.com/mymmrac/telego/telegoutil"
@@ -98,7 +98,7 @@ func (s *TelegramSender) PinMessage(ctx context.Context, chatID telego.ChatID, m
 	}
 
 	if err := s.bot.PinChatMessage(ctx, params); err != nil {
-		log.Printf("Failed to pin message: %v", err)
+		slog.Debug("Failed to pin message", "error", err)
 		// Don't return error as pinning might fail due to permissions
 	}
 

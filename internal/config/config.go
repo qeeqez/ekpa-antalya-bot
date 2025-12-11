@@ -8,21 +8,15 @@ import (
 
 // Config represents the main application configuration
 type Config struct {
-	Bot     BotConfig
-	Content ContentConfig
-	Health  HealthConfig
-	Debug   bool `env:"DEBUG" envDefault:"false"`
+	Bot    BotConfig
+	Health HealthConfig
+	Debug  bool `env:"DEBUG" envDefault:"false"`
 }
 
 // BotConfig holds Telegram bot configuration
 type BotConfig struct {
 	Token    string `env:"BOT_TOKEN"`
 	Username string `env:"BOT_USERNAME" envDefault:"EkpaAntalyaBot"`
-}
-
-// ContentConfig holds content-related configuration
-type ContentConfig struct {
-	Directory string `env:"CONTENT_DIR" envDefault:"content"`
 }
 
 // HealthConfig holds health check configuration
@@ -55,9 +49,6 @@ func (c *Config) Validate() error {
 	}
 	if c.Bot.Username == "" {
 		return fmt.Errorf("bot username cannot be empty")
-	}
-	if c.Content.Directory == "" {
-		return fmt.Errorf("content directory cannot be empty")
 	}
 
 	// Set defaults for health check

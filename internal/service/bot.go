@@ -42,7 +42,7 @@ func NewBotService(cfg *config.Config) (*BotService, error) {
 	healthChecker := health.NewChecker()
 
 	// Load content (navigation hierarchy is built automatically)
-	content, err := config.NewContentRepository(cfg.Content.Directory)
+	content, err := config.NewContentRepository("content")
 	if err != nil {
 		return nil, fmt.Errorf("failed to load content: %w", err)
 	}

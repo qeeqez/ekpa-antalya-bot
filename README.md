@@ -25,7 +25,6 @@ Telegram bot for EKPA 1207 residents in Antalya. Quick access to complex info, d
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `BOT_TOKEN` | Yes | - | Your Telegram Bot token |
-| `CONTENT_DIR` | No | `content` | Content directory path |
 | `HEALTH_PORT` | No | `8080` | Health check port |
 | `DEBUG` | No | `false` | Enable debug logging (for development) |
 

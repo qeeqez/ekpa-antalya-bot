@@ -12,15 +12,6 @@ screens:
               type: "url"
               url: "https://t.me/+8YxsSs6NFfg0ZDIy"
         - buttons:
-            - id: "sos_chat"
-              text: "🆘 SOS"
-              type: "url"
-              url: "https://t.me/+zyR7dwJTY5g5ZTli"
-            - id: "taxi_chat"
-              text: "🚕 Попутчики"
-              type: "url"
-              url: "https://t.me/+TSTWZOfxzKVmMDNi"
-        - buttons:
             - id: "blocks_chat"
               text: "🏘 Чаты по блокам"
               type: "callback"

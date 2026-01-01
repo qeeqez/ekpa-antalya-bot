@@ -4,7 +4,7 @@ go 1.25.5
 
 require (
 	github.com/caarlos0/env/v11 v11.3.1
-	github.com/mymmrac/telego v1.3.3
+	github.com/mymmrac/telego v1.4.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -20,7 +20,7 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.68.0 // indirect
-	github.com/valyala/fastjson v1.6.5 // indirect
+	github.com/valyala/fastjson v1.6.7 // indirect
 	golang.org/x/arch v0.23.0 // indirect
 	golang.org/x/sys v0.39.0 // indirect
 )

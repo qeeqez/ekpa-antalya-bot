@@ -1,30 +1,98 @@
-name: Build and Publish Services
+name: Build, Lint, Test, Release, Publish Services
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [main, dev]
   pull_request:
-    branches: [ main, dev ]
+    branches: [main, dev]
 
 env:
-  GO_VERSION: '1.26.4'
+  IMAGE_NAME: ekpa-bot
 
 jobs:
-  build_publish:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
-      - name: 🐳️ Login to Scaleway Registry
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v9
+        with:
+          version: v2.12.2
+          args: --new
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Run tests
+        run: go test ./...
+
+  release:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: [lint, test]
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    outputs:
+      new_release_published: ${{ steps.semantic.outputs.new_release_published }}
+      new_release_version: ${{ steps.semantic.outputs.new_release_version }}
+      new_release_git_tag: ${{ steps.semantic.outputs.new_release_git_tag }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v6
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    needs: [release]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Login to Scaleway Registry
         uses: docker/login-action@v4
         with:
           registry: ${{ secrets.CONTAINER_REGISTRY_URL }}
           username: nologin
           password: ${{ secrets.CONTAINER_REGISTRY_SECRET }}
 
-      - name: 🐳️ Build and Push Image
+      - name: Prepare image tags
+        id: tags
+        shell: bash
+        run: |
+          image="${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}"
+          {
+            echo "tags<<EOF"
+            echo "${image}:latest"
+            if [[ "${{ needs.release.outputs.new_release_published }}" == "true" ]]; then
+              echo "${image}:${{ needs.release.outputs.new_release_version }}"
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build and Push Image
         uses: docker/build-push-action@v7
         with:
           context: .
           push: true
-          tags: ${{ secrets.CONTAINER_REGISTRY_URL }}/${{ secrets.CONTAINER_REGISTRY_NAME }}/ekpa-bot:latest
+          tags: ${{ steps.tags.outputs.tags }}

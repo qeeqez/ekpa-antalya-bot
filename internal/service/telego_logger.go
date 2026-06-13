@@ -12,8 +12,8 @@ type slogTelegoLogger struct {
 	debug bool
 }
 
-// newTelegoLogger creates a telego logger backed by structured slog output.
-func newTelegoLogger(debug bool) telego.Logger {
+// NewTelegoLogger creates a telego logger backed by structured slog output.
+func NewTelegoLogger(debug bool) telego.Logger {
 	return &slogTelegoLogger{debug: debug}
 }
 

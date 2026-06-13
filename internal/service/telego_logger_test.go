@@ -1,10 +1,12 @@
-package service
+package service_test
 
 import (
 	"bytes"
 	"log/slog"
 	"strings"
 	"testing"
+
+	"github.com/qeeqez/ekpaantalyabot/internal/service"
 )
 
 func TestTelegoLoggerEmitsStructuredLogs(t *testing.T) {
@@ -15,7 +17,7 @@ func TestTelegoLoggerEmitsStructuredLogs(t *testing.T) {
 		slog.SetDefault(previous)
 	})
 
-	logger := newTelegoLogger(false)
+	logger := service.NewTelegoLogger(false)
 	logger.Errorf("Getting updates: %s", "lookup api.telegram.org: i/o timeout")
 
 	got := buf.String()

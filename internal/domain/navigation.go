@@ -9,6 +9,7 @@ type NavigationHierarchy struct {
 // ScreenWithNavigation wraps a screen with automatic navigation
 type ScreenWithNavigation struct {
 	*Screen
+
 	Hierarchy NavigationHierarchy
 }
 

@@ -1,6 +1,7 @@
 package config
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/caarlos0/env/v11"
@@ -45,10 +46,10 @@ func Load() (*Config, error) {
 // Validate checks if the configuration is valid
 func (c *Config) Validate() error {
 	if c.Bot.Token == "" {
-		return fmt.Errorf("bot token cannot be empty")
+		return errors.New("bot token cannot be empty")
 	}
 	if c.Bot.Username == "" {
-		return fmt.Errorf("bot username cannot be empty")
+		return errors.New("bot username cannot be empty")
 	}
 
 	// Set defaults for health check

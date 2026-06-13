@@ -1,28 +1,37 @@
-package domain
+package domain_test
 
 import "testing"
+
+import "github.com/qeeqez/ekpaantalyabot/internal/domain"
+
+const (
+	messageTestID     = "TEST"
+	messageTestText   = "Test"
+	messageButtonID   = "btn1"
+	messageButtonText = "Button"
+)
 
 func TestScreenValidation(t *testing.T) {
 	tests := []struct {
 		name    string
-		screen  Screen
+		screen  domain.Screen
 		wantErr bool
 	}{
 		{
 			name: "valid screen",
-			screen: Screen{
-				ID:        "TEST",
+			screen: domain.Screen{
+				ID:        messageTestID,
 				Text:      "Test message",
-				ParseMode: ParseModeMarkdownV2,
-				InlineKeyboard: InlineKeyboard{
-					Rows: []ButtonRow{
+				ParseMode: domain.ParseModeMarkdownV2,
+				InlineKeyboard: domain.InlineKeyboard{
+					Rows: []domain.ButtonRow{
 						{
-							Buttons: []Button{
+							Buttons: []domain.Button{
 								{
-									ID:           "btn1",
-									Text:         "Button",
-									Type:         ButtonTypeCallback,
-									CallbackData: "TEST",
+									ID:           messageButtonID,
+									Text:         messageButtonText,
+									Type:         domain.ButtonTypeCallback,
+									CallbackData: messageTestID,
 								},
 							},
 						},
@@ -33,33 +42,33 @@ func TestScreenValidation(t *testing.T) {
 		},
 		{
 			name: "empty ID",
-			screen: Screen{
+			screen: domain.Screen{
 				ID:   "",
-				Text: "Test",
+				Text: messageTestText,
 			},
 			wantErr: true,
 		},
 		{
 			name: "empty text",
-			screen: Screen{
-				ID:   "TEST",
+			screen: domain.Screen{
+				ID:   messageTestID,
 				Text: "",
 			},
 			wantErr: true,
 		},
 		{
 			name: "invalid button",
-			screen: Screen{
-				ID:   "TEST",
-				Text: "Test",
-				InlineKeyboard: InlineKeyboard{
-					Rows: []ButtonRow{
+			screen: domain.Screen{
+				ID:   messageTestID,
+				Text: messageTestText,
+				InlineKeyboard: domain.InlineKeyboard{
+					Rows: []domain.ButtonRow{
 						{
-							Buttons: []Button{
+							Buttons: []domain.Button{
 								{
-									ID:   "btn1",
+									ID:   messageButtonID,
 									Text: "", // Invalid: empty text
-									Type: ButtonTypeCallback,
+									Type: domain.ButtonTypeCallback,
 								},
 							},
 						},
@@ -81,10 +90,10 @@ func TestScreenValidation(t *testing.T) {
 }
 
 func TestGetNavigationTarget(t *testing.T) {
-	screen := Screen{
-		ID:   "TEST",
-		Text: "Test",
-		NavigationTargets: []Navigation{
+	screen := domain.Screen{
+		ID:   messageTestID,
+		Text: messageTestText,
+		NavigationTargets: []domain.Navigation{
 			{Callback: "BTN1", Target: "TARGET1"},
 			{Callback: "BTN2", Target: "TARGET2"},
 		},

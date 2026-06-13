@@ -1,43 +1,49 @@
-package config
+package config_test
 
 import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"github.com/qeeqez/ekpaantalyabot/internal/config"
+)
+
+const (
+	testMainMenuID    = "MAIN_MENU"
+	testScreenID      = "TEST_SCREEN"
+	testButtonID      = "test_btn"
+	testButtonText    = "🧪 Test Screen"
+	testScreenText    = "Test message"
+	testContentButton = "content_btn"
 )
 
 func TestLoadContentFile(t *testing.T) {
-	// Create temporary directory
-	tmpDir, err := os.MkdirTemp("", "content-test-*")
-	if err != nil {
-		t.Fatalf("Failed to create temp dir: %v", err)
-	}
-	defer os.RemoveAll(tmpDir)
+	tmpDir := t.TempDir()
 
 	// Create test YAML file with MAIN_MENU and a child screen
 	testYAML := `version: "1.0"
 screens:
-  - id: "MAIN_MENU"
+  - id: "` + testMainMenuID + `"
     text: "Main Menu"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
-            - id: "test_btn"
-              text: "🧪 Test Screen"
+            - id: "` + testButtonID + `"
+              text: "` + testButtonText + `"
               type: "callback"
               callback: "TEST_SCREEN_BUTTON"
     navigation:
       - callback: "TEST_SCREEN_BUTTON"
-        target: "TEST_SCREEN"
+        target: "` + testScreenID + `"
   
-  - id: "TEST_SCREEN"
-    text: "Test message"
+  - id: "` + testScreenID + `"
+    text: "` + testScreenText + `"
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows:
         - buttons:
-            - id: "content_btn"
+            - id: "` + testContentButton + `"
               text: "Content Button"
               type: "callback"
               callback: "CONTENT_CALLBACK"
@@ -49,19 +55,19 @@ screens:
 	}
 
 	// Load content (navigation builds automatically)
-	repo, err := NewContentRepository(tmpDir)
+	repo, err := config.NewContentRepository(tmpDir)
 	if err != nil {
 		t.Fatalf("Failed to load content: %v", err)
 	}
 
 	// Test main menu screen retrieval (no navigation added)
-	mainMenu, err := repo.GetScreen("MAIN_MENU")
+	mainMenu, err := repo.GetScreen(testMainMenuID)
 	if err != nil {
 		t.Fatalf("Failed to get main menu: %v", err)
 	}
 
-	if mainMenu.ID != "MAIN_MENU" {
-		t.Errorf("Expected screen ID 'MAIN_MENU', got '%s'", mainMenu.ID)
+	if mainMenu.ID != testMainMenuID {
+		t.Errorf("Expected screen ID '%s', got '%s'", testMainMenuID, mainMenu.ID)
 	}
 
 	// Main menu should have only original buttons (no auto-navigation)
@@ -70,17 +76,17 @@ screens:
 	}
 
 	// Test child screen retrieval (should have auto-navigation)
-	screen, err := repo.GetScreen("TEST_SCREEN")
+	screen, err := repo.GetScreen(testScreenID)
 	if err != nil {
 		t.Fatalf("Failed to get test screen: %v", err)
 	}
 
-	if screen.ID != "TEST_SCREEN" {
-		t.Errorf("Expected screen ID 'TEST_SCREEN', got '%s'", screen.ID)
+	if screen.ID != testScreenID {
+		t.Errorf("Expected screen ID '%s', got '%s'", testScreenID, screen.ID)
 	}
 
-	if screen.Text != "Test message" {
-		t.Errorf("Expected text 'Test message', got '%s'", screen.Text)
+	if screen.Text != testScreenText {
+		t.Errorf("Expected text '%s', got '%s'", testScreenText, screen.Text)
 	}
 
 	// Should have original row + auto-navigation row
@@ -102,13 +108,9 @@ screens:
 }
 
 func TestGetNonExistentScreen(t *testing.T) {
-	tmpDir, err := os.MkdirTemp("", "content-test-*")
-	if err != nil {
-		t.Fatalf("Failed to create temp dir: %v", err)
-	}
-	defer os.RemoveAll(tmpDir)
+	tmpDir := t.TempDir()
 
-	repo, err := NewContentRepository(tmpDir)
+	repo, err := config.NewContentRepository(tmpDir)
 	if err != nil {
 		t.Fatalf("Failed to create repository: %v", err)
 	}
@@ -120,11 +122,7 @@ func TestGetNonExistentScreen(t *testing.T) {
 }
 
 func TestDuplicateScreenID(t *testing.T) {
-	tmpDir, err := os.MkdirTemp("", "content-test-*")
-	if err != nil {
-		t.Fatalf("Failed to create temp dir: %v", err)
-	}
-	defer os.RemoveAll(tmpDir)
+	tmpDir := t.TempDir()
 
 	// Create YAML with duplicate screen ID
 	testYAML := `version: "1.0"
@@ -141,7 +139,7 @@ screens:
 	}
 
 	// Should fail due to duplicate
-	_, err = NewContentRepository(tmpDir)
+	_, err := config.NewContentRepository(tmpDir)
 	if err == nil {
 		t.Error("Expected error for duplicate screen ID, got nil")
 	}

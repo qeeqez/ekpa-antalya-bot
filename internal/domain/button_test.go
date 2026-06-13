@@ -1,66 +1,75 @@
-package domain
+package domain_test
 
 import "testing"
+
+import "github.com/qeeqez/ekpaantalyabot/internal/domain"
+
+const (
+	buttonTestID       = "test"
+	buttonTestText     = "Test"
+	buttonCallbackData = "TEST_CALLBACK"
+	buttonEmptyData    = "TEST"
+)
 
 func TestButtonValidation(t *testing.T) {
 	tests := []struct {
 		name    string
-		button  Button
+		button  domain.Button
 		wantErr bool
 	}{
 		{
 			name: "valid callback button",
-			button: Button{
-				ID:           "test",
-				Text:         "Test",
-				Type:         ButtonTypeCallback,
-				CallbackData: "TEST_CALLBACK",
+			button: domain.Button{
+				ID:           buttonTestID,
+				Text:         buttonTestText,
+				Type:         domain.ButtonTypeCallback,
+				CallbackData: buttonCallbackData,
 			},
 			wantErr: false,
 		},
 		{
 			name: "valid URL button",
-			button: Button{
-				ID:   "test",
-				Text: "Test",
-				Type: ButtonTypeURL,
+			button: domain.Button{
+				ID:   buttonTestID,
+				Text: buttonTestText,
+				Type: domain.ButtonTypeURL,
 				URL:  "https://example.com",
 			},
 			wantErr: false,
 		},
 		{
 			name: "empty text",
-			button: Button{
-				ID:           "test",
+			button: domain.Button{
+				ID:           buttonTestID,
 				Text:         "",
-				Type:         ButtonTypeCallback,
-				CallbackData: "TEST",
+				Type:         domain.ButtonTypeCallback,
+				CallbackData: buttonEmptyData,
 			},
 			wantErr: true,
 		},
 		{
 			name: "callback without callback data",
-			button: Button{
-				ID:   "test",
-				Text: "Test",
-				Type: ButtonTypeCallback,
+			button: domain.Button{
+				ID:   buttonTestID,
+				Text: buttonTestText,
+				Type: domain.ButtonTypeCallback,
 			},
 			wantErr: true,
 		},
 		{
 			name: "URL without URL",
-			button: Button{
-				ID:   "test",
-				Text: "Test",
-				Type: ButtonTypeURL,
+			button: domain.Button{
+				ID:   buttonTestID,
+				Text: buttonTestText,
+				Type: domain.ButtonTypeURL,
 			},
 			wantErr: true,
 		},
 		{
 			name: "unknown type",
-			button: Button{
-				ID:   "test",
-				Text: "Test",
+			button: domain.Button{
+				ID:   buttonTestID,
+				Text: buttonTestText,
 				Type: "unknown",
 			},
 			wantErr: true,

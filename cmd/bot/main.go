@@ -76,18 +76,18 @@ func startBotAsync(ctx context.Context, botService *service.BotService) chan err
 func waitForShutdown(ctx context.Context, cancel context.CancelFunc, sigChan chan os.Signal, errChan chan error, botService *service.BotService) {
 	select {
 	case <-sigChan:
-		handleGracefulShutdown(cancel, botService)
+		handleGracefulShutdown(ctx, cancel, botService)
 	case err := <-errChan:
 		handleBotError(err)
 	}
 }
 
 // handleGracefulShutdown performs graceful shutdown
-func handleGracefulShutdown(cancel context.CancelFunc, botService *service.BotService) {
+func handleGracefulShutdown(ctx context.Context, cancel context.CancelFunc, botService *service.BotService) {
 	slog.Info("Received shutdown signal")
 	cancel()
 
-	shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
+	shutdownCtx, shutdownCancel := context.WithTimeout(context.WithoutCancel(ctx), 5*time.Second)
 	defer shutdownCancel()
 
 	if err := botService.Stop(shutdownCtx); err != nil {

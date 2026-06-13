@@ -1,4 +1,4 @@
-package service
+package service_test
 
 import (
 	"context"
@@ -6,19 +6,18 @@ import (
 	"time"
 
 	"github.com/mymmrac/telego"
+	"github.com/qeeqez/ekpaantalyabot/internal/service"
 )
 
 func TestProcessUpdatesReturnsWhenChannelCloses(t *testing.T) {
-	t.Parallel()
-
-	svc := &BotService{}
+	svc := &service.BotService{}
 	updates := make(chan telego.Update)
 	close(updates)
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
-	err := svc.processUpdates(ctx, updates)
+	err := svc.ProcessUpdates(ctx, updates)
 	if err == nil {
 		t.Fatal("expected an error when updates channel closes")
 	}

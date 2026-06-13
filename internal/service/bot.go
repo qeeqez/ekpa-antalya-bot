@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log/slog"
 
@@ -53,7 +54,7 @@ func createBot(cfg *config.Config) (*telego.Bot, error) {
 	var err error
 
 	opts := []telego.BotOption{
-		telego.WithLogger(newTelegoLogger(cfg.Debug)),
+		telego.WithLogger(NewTelegoLogger(cfg.Debug)),
 	}
 
 	if cfg.Debug {
@@ -104,7 +105,7 @@ func (s *BotService) Start(ctx context.Context) error {
 		return err
 	}
 
-	return s.processUpdates(ctx, updates)
+	return s.ProcessUpdates(ctx, updates)
 }
 
 // startHealthServer starts the health check server in a goroutine if enabled
@@ -147,8 +148,8 @@ func (s *BotService) startLongPolling(ctx context.Context) (<-chan telego.Update
 	return updates, nil
 }
 
-// processUpdates processes incoming updates
-func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.Update) error {
+// ProcessUpdates processes incoming updates
+func (s *BotService) ProcessUpdates(ctx context.Context, updates <-chan telego.Update) error {
 	for {
 		select {
 		case <-ctx.Done():
@@ -156,14 +157,7 @@ func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.U
 			return nil
 		case update, ok := <-updates:
 			if !ok {
-				select {
-				case <-ctx.Done():
-					slog.Info("Stopping bot")
-					return nil
-				default:
-				}
-
-				return fmt.Errorf("updates channel closed")
+				return errors.New("updates channel closed")
 			}
 			s.handleUpdateAsync(ctx, update)
 		}

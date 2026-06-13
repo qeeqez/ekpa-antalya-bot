@@ -37,11 +37,11 @@ func (s *TelegramSender) SendScreen(ctx context.Context, chatID telego.ChatID, s
 
 // EditScreen edits an existing message with a screen
 func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error) {
-	msg := &telego.EditMessageTextParams{
+	msg := new(telego.EditMessageTextParams{
 		ChatID:    chatID,
 		MessageID: messageID,
 		Text:      screen.Text,
-	}
+	})
 	s.applyScreenSettingsToEditMessage(msg, screen)
 
 	message, err := s.bot.EditMessageText(ctx, msg)
@@ -59,9 +59,9 @@ func (s *TelegramSender) applyScreenSettingsToSendMessage(msg *telego.SendMessag
 	}
 
 	if screen.DisableWebPreview {
-		msg.LinkPreviewOptions = &telego.LinkPreviewOptions{
+		msg.LinkPreviewOptions = new(telego.LinkPreviewOptions{
 			IsDisabled: true,
-		}
+		})
 	}
 
 	if len(screen.InlineKeyboard.Rows) > 0 {
@@ -76,9 +76,9 @@ func (s *TelegramSender) applyScreenSettingsToEditMessage(msg *telego.EditMessag
 	}
 
 	if screen.DisableWebPreview {
-		msg.LinkPreviewOptions = &telego.LinkPreviewOptions{
+		msg.LinkPreviewOptions = new(telego.LinkPreviewOptions{
 			IsDisabled: true,
-		}
+		})
 	}
 
 	if len(screen.InlineKeyboard.Rows) > 0 {
@@ -100,10 +100,10 @@ func (s *TelegramSender) SendText(ctx context.Context, chatID telego.ChatID, tex
 
 // PinMessage pins a message in a chat
 func (s *TelegramSender) PinMessage(ctx context.Context, chatID telego.ChatID, messageID int) error {
-	params := &telego.PinChatMessageParams{
+	params := new(telego.PinChatMessageParams{
 		ChatID:    chatID,
 		MessageID: messageID,
-	}
+	})
 
 	if err := s.bot.PinChatMessage(ctx, params); err != nil {
 		slog.Debug("Failed to pin message", "error", err)
@@ -138,7 +138,7 @@ func (s *TelegramSender) buildInlineKeyboard(keyboard domain.InlineKeyboard) *te
 		rows = append(rows, buttons)
 	}
 
-	return &telego.InlineKeyboardMarkup{
+	return new(telego.InlineKeyboardMarkup{
 		InlineKeyboard: rows,
-	}
+	})
 }

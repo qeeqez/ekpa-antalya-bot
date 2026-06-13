@@ -213,9 +213,9 @@ func stripCommandPrefix(command string) string {
 
 // sendCommandsToTelegram sends the commands to Telegram API
 func (s *BotService) sendCommandsToTelegram(ctx context.Context, commands []telego.BotCommand) error {
-	params := &telego.SetMyCommandsParams{
+	params := new(telego.SetMyCommandsParams{
 		Commands: commands,
-	}
+	})
 
 	if err := s.bot.SetMyCommands(ctx, params); err != nil {
 		return fmt.Errorf("failed to set commands: %w", err)

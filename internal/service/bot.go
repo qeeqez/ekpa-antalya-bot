@@ -52,12 +52,16 @@ func createBot(cfg *config.Config) (*telego.Bot, error) {
 	var bot *telego.Bot
 	var err error
 
+	opts := []telego.BotOption{
+		telego.WithLogger(newTelegoLogger(cfg.Debug)),
+	}
+
 	if cfg.Debug {
 		slog.Info("Debug mode enabled - verbose logging active")
-		bot, err = telego.NewBot(cfg.Bot.Token, telego.WithDefaultDebugLogger())
-	} else {
-		bot, err = telego.NewBot(cfg.Bot.Token)
+		opts = append(opts, telego.WithDebugMode())
 	}
+
+	bot, err = telego.NewBot(cfg.Bot.Token, opts...)
 
 	if err != nil {
 		return nil, fmt.Errorf("failed to create bot: %w", err)
@@ -100,8 +104,7 @@ func (s *BotService) Start(ctx context.Context) error {
 		return err
 	}
 
-	s.processUpdates(ctx, updates)
-	return nil
+	return s.processUpdates(ctx, updates)
 }
 
 // startHealthServer starts the health check server in a goroutine if enabled
@@ -145,13 +148,23 @@ func (s *BotService) startLongPolling(ctx context.Context) (<-chan telego.Update
 }
 
 // processUpdates processes incoming updates
-func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.Update) {
+func (s *BotService) processUpdates(ctx context.Context, updates <-chan telego.Update) error {
 	for {
 		select {
 		case <-ctx.Done():
 			slog.Info("Stopping bot")
-			return
-		case update := <-updates:
+			return nil
+		case update, ok := <-updates:
+			if !ok {
+				select {
+				case <-ctx.Done():
+					slog.Info("Stopping bot")
+					return nil
+				default:
+				}
+
+				return fmt.Errorf("updates channel closed")
+			}
 			s.handleUpdateAsync(ctx, update)
 		}
 	}

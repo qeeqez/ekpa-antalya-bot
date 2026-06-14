@@ -55,7 +55,7 @@ screens:
 
     ℹ️ Frais d''entretien mensuels pour le complexe\.
 
-    ⚠️ Vous devez payer, même si vous n''habitez pas en appartement.
+    ⚠️ Vous devez payer, même si vous n''habitez pas en appartement\.
 
 
     *Coût :*
@@ -100,9 +100,9 @@ screens:
   text: '*Climatisation*
 
 
-    ℹ️ Le système de climatisation central n''est pas inclus dans la facture d''électricité.
+    ℹ️ Le système de climatisation central n''est pas inclus dans la facture d''électricité\.
 
-    ⚠️ Gardez à l''esprit que la Turquie est un pays chaud et que l''électricité y est chère.
+    ⚠️ Gardez à l''esprit que la Turquie est un pays chaud et que l''électricité y est chère\.
 
 
     *Délai de paiement :*
@@ -110,7 +110,7 @@ screens:
     ⏳ 7 jours à compter de la date de réception de la facture
 
     ⚠️ Si le paiement n''est pas effectué, il sera désactivé\. Une icône de verrouillage et Centralisé\ apparaîtront sur la
-    télécommande.
+    télécommande\.
 
 
     *Paiement :*
@@ -136,7 +136,7 @@ screens:
   text: '*Électricité*
 
 
-    ℹ️ La climatisation n''est pas incluse dans la facture d''électricité.
+    ℹ️ La climatisation n''est pas incluse dans la facture d''électricité\.
 
 
     ℹ️ Le *Numéro d''abonné* est délivré dès la connexion, il est également indiqué sur la carte de paiement\.
@@ -146,7 +146,7 @@ screens:
 
     ℹ️ La facture est émise en fin de mois
 
-    ⏳ Le paiement doit être effectué dans les 10 jours suivant l''émission de la facture.
+    ⏳ Le paiement doit être effectué dans les 10 jours suivant l''émission de la facture\.
 
 
     *Comment connaître votre facture d''électricité :*
@@ -169,7 +169,7 @@ screens:
 
     3\. Vous verrez le montant et pourrez payer
 
-    ⚠️ Si la facture n''a pas encore été émise, l''application affichera une erreur.
+    ⚠️ Si la facture n''a pas encore été émise, l''application affichera une erreur\.
 
 
     🪙 *Espèces ou carte*
@@ -191,7 +191,7 @@ screens:
 
     ℹ️ La facture est émise en fin de mois
 
-    ⏳ Le paiement doit être effectué dans les 10 jours suivant l''émission de la facture.
+    ⏳ Le paiement doit être effectué dans les 10 jours suivant l''émission de la facture\.
 
 
     *Comment connaître votre facture d''eau :*
@@ -214,7 +214,7 @@ screens:
 
     3\. Vous verrez le montant et pourrez payer
 
-    ⚠️ Si la facture n''a pas encore été émise, l''application affichera une erreur.
+    ⚠️ Si la facture n''a pas encore été émise, l''application affichera une erreur\.
 
 
     🪙 *Espèces ou carte*
@@ -308,12 +308,12 @@ screens:
     Numéro d''immeuble et d''appartement, ainsi que numéro d''abonné à l''électricité\.
 
 
-    ℹ️ La lumière apparaîtra dans l''appartement dans un délai d''un jour ouvrable.
+    ℹ️ La lumière apparaîtra dans l''appartement dans un délai d''un jour ouvrable\.
 
     ℹ️ S''il y a des problèmes avec l''électricité\- aviser le Code criminel\.
 
 
-    ⚠️ Le panneau électrique est dans le placard.
+    ⚠️ Le panneau électrique est dans le placard\.
 
     ⚠️ Le compteur électrique est situé au sous-sol derrière une porte fermée\.'
 - id: HOW_TO_CONNECT_WATER
@@ -338,15 +338,15 @@ screens:
 
     🧑‍💼*Déclaration au Code criminel :*
 
-    Numéro d''immeuble et d''appartement ainsi que numéro d''abonné à l''eau.
+    Numéro d''immeuble et d''appartement ainsi que numéro d''abonné à l''eau\.
 
 
-    ℹ️ Dans les 3 jours ouvrables, de l''eau apparaîtra dans l''appartement.
+    ℹ️ Dans les 3 jours ouvrables, de l''eau apparaîtra dans l''appartement\.
 
     ℹ️ Si vous avez des problèmes d''eau ou de pression dans les robinets\- prévenez le Code criminel\.
 
 
-    ⚠️ L''appartement dispose d''une vanne pour couper l''eau.
+    ⚠️ L''appartement dispose d''une vanne pour couper l''eau\.
 
     \- A 1\+1, regarde sous l''évier\.
 
@@ -377,10 +377,10 @@ screens:
 
 
     ℹ️ Pour vous connecter, vous devez contacter le bureau de l''opérateur avec un ikamet\. Le prix est le même que sur le
-    site de l''opérateur.
+    site de l''opérateur\.
 
     ⚠️ Il est possible que le bureau ne trouve pas notre adresse dans le système, nous vous recommandons de contacter les
-    bureaux les plus proches du complexe.
+    bureaux les plus proches du complexe\.
 
 
     🏴‍☠️ *Connectez-vous sans titre de séjour*

@@ -53,9 +53,9 @@ screens:
   text: '*Aidat*
 
 
-    ℹ️ Miesięczna opłata za utrzymanie kompleksu.
+    ℹ️ Miesięczna opłata za utrzymanie kompleksu\.
 
-    ⚠️ Musisz zapłacić, nawet jeśli nie mieszkasz w mieszkaniu.
+    ⚠️ Musisz zapłacić, nawet jeśli nie mieszkasz w mieszkaniu\.
 
 
     *Koszt:*
@@ -100,16 +100,16 @@ screens:
   text: '*Klimatyzacja*
 
 
-    ℹ️ Centralna klimatyzacja nie jest wliczona w rachunek za prąd.
+    ℹ️ Centralna klimatyzacja nie jest wliczona w rachunek za prąd\.
 
-    ⚠️ Należy pamiętać, że Turcja jest gorącym krajem, a prąd jest tutaj drogi.
+    ⚠️ Należy pamiętać, że Turcja jest gorącym krajem, a prąd jest tutaj drogi\.
 
 
     *Termin płatności:*
 
     ⏳ 7 dni od daty otrzymania faktury
 
-    ⚠️ Jeśli płatność nie zostanie dokonana, zostanie wyłączona. Na pilocie zdalnego sterowania pojawi się ikona kłódki oraz
+    ⚠️ Jeśli płatność nie zostanie dokonana, zostanie wyłączona\. Na pilocie zdalnego sterowania pojawi się ikona kłódki oraz
     opcja Scentralizowane\.
 
 
@@ -136,7 +136,7 @@ screens:
   text: '*prąd*
 
 
-    ℹ️ Klimatyzacja nie jest wliczona w rachunek za prąd.
+    ℹ️ Klimatyzacja nie jest wliczona w rachunek za prąd\.
 
 
     ℹ️ *Numer Abonenta* nadawany jest przy połączeniu, jest on także wskazany na karcie płatniczej\.
@@ -146,7 +146,7 @@ screens:
 
     ℹ️ Faktura wystawiana jest na koniec miesiąca
 
-    ⏳ Płatności należy dokonać w ciągu 10 dni od wystawienia faktury.
+    ⏳ Płatności należy dokonać w ciągu 10 dni od wystawienia faktury\.
 
 
     *Jak sprawdzić swój rachunek za prąd:*
@@ -169,7 +169,7 @@ screens:
 
     3\. Zobaczysz kwotę i będziesz mógł zapłacić
 
-    ⚠️ Jeżeli faktura nie została jeszcze wystawiona, aplikacja wyświetli błąd.
+    ⚠️ Jeżeli faktura nie została jeszcze wystawiona, aplikacja wyświetli błąd\.
 
 
     🪙 *Gotówka lub karta*
@@ -190,7 +190,7 @@ screens:
 
     ℹ️ Faktura wystawiana jest na koniec miesiąca
 
-    ⏳ Płatności należy dokonać w ciągu 10 dni od wystawienia faktury.
+    ⏳ Płatności należy dokonać w ciągu 10 dni od wystawienia faktury\.
 
 
     *Jak sprawdzić swój rachunek za wodę:*
@@ -213,7 +213,7 @@ screens:
 
     3\. Zobaczysz kwotę i będziesz mógł zapłacić
 
-    ⚠️ Jeżeli faktura nie została jeszcze wystawiona, aplikacja wyświetli błąd.
+    ⚠️ Jeżeli faktura nie została jeszcze wystawiona, aplikacja wyświetli błąd\.
 
 
     🪙 *Gotówka lub karta*
@@ -302,17 +302,17 @@ screens:
 
     🧑‍💼*Zgłoś do Kodeksu karnego:*
 
-    Numer bloku i mieszkania oraz numer abonenta energii elektrycznej.
+    Numer bloku i mieszkania oraz numer abonenta energii elektrycznej\.
 
 
-    ℹ️ Światło pojawi się w mieszkaniu w ciągu 1 dnia roboczego.
+    ℹ️ Światło pojawi się w mieszkaniu w ciągu 1 dnia roboczego\.
 
     ℹ️ Jeżeli występują problemy z prądem\- powiadom Kodeks Karny\.
 
 
-    ⚠️ Panel elektryczny znajduje się w szafie.
+    ⚠️ Panel elektryczny znajduje się w szafie\.
 
-    ⚠️Licznik energii elektrycznej znajduje się w piwnicy za zamkniętymi drzwiami.'
+    ⚠️Licznik energii elektrycznej znajduje się w piwnicy za zamkniętymi drzwiami\.'
 - id: HOW_TO_CONNECT_WATER
   text: '*💧Woda*
 
@@ -335,15 +335,15 @@ screens:
 
     🧑‍💼*Zgłoś do Kodeksu karnego:*
 
-    Numer bloku i mieszkania oraz numer abonenta wody.
+    Numer bloku i mieszkania oraz numer abonenta wody\.
 
 
-    ℹ️ W ciągu 3 dni roboczych w mieszkaniu pojawi się woda.
+    ℹ️ W ciągu 3 dni roboczych w mieszkaniu pojawi się woda\.
 
     ℹ️ Jeżeli masz problemy z wodą lub ciśnieniem w kranach\- powiadom Kodeks Karny\.
 
 
-    ⚠️Apartament posiada zawór odcinający dopływ wody.
+    ⚠️Apartament posiada zawór odcinający dopływ wody\.
 
     \- Przy 1\+1 zajrzyj pod zlew\.
 
@@ -373,9 +373,9 @@ screens:
     \- [Turksat Kablo](https://www.fiberkablonet.com/)
 
 
-    ℹ️ Aby się połączyć należy skontaktować się z biurem operatora za pomocą ikamet\. Cena jest taka sama jak na stronie operatora.
+    ℹ️ Aby się połączyć należy skontaktować się z biurem operatora za pomocą ikamet\. Cena jest taka sama jak na stronie operatora\.
 
-    ⚠️ Biuro może nie znaleźć naszego adresu w systemie, zalecamy kontakt z biurami położonymi najbliżej kompleksu.
+    ⚠️ Biuro może nie znaleźć naszego adresu w systemie, zalecamy kontakt z biurami położonymi najbliżej kompleksu\.
 
 
     🏴‍☠️ *Połącz się bez pozwolenia na pobyt*
@@ -384,7 +384,7 @@ screens:
 
     \- Jest to zazwyczaj droższe, wielu „pomocników” pobiera opłatę za taką usługę\.
 
-    \- Pomocnika można znaleźć u pośrednika w handlu nieruchomościami lub w biurach operatorów internetowych.
+    \- Pomocnika można znaleźć u pośrednika w handlu nieruchomościami lub w biurach operatorów internetowych\.
 
 
     ⚡️ *Metody alternatywne*
@@ -431,7 +431,7 @@ screens:
     3\. *IBAN*, na który zostaną przelane pieniądze
 
 
-    ℹ️ W ciągu 24 godzin w mieszkaniu zabraknie prądu.
+    ℹ️ W ciągu 24 godzin w mieszkaniu zabraknie prądu\.
 
     ℹ️ Pieniądze zostaną przelane na konto tureckie dopiero po odłączeniu, w ciągu 7\-30 dni\.'
 - id: HOW_TO_DISCONNECT_WATER
@@ -468,6 +468,6 @@ screens:
     3\. *IBAN*, na który zostaną przelane pieniądze
 
 
-    ℹ️ W ciągu 3 dni roboczych woda w mieszkaniu zniknie.
+    ℹ️ W ciągu 3 dni roboczych woda w mieszkaniu zniknie\.
 
     ℹ️ Pieniądze zostaną przelane na konto tureckie dopiero po odłączeniu, w ciągu 7\-30 dni\.'

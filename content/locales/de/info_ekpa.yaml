@@ -13,7 +13,7 @@ screens:
 
     💼 *Büro*
 
-    [Block C](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0. Etage, vom Eingang nach links
+    [Block C](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0\. Etage, vom Eingang nach links
 
 
     🕘 *Montag \- Samstag*
@@ -53,9 +53,9 @@ screens:
   text: '*Aidat*
 
 
-    ℹ️ Monatliche Wartungsgebühr für den Komplex.
+    ℹ️ Monatliche Wartungsgebühr für den Komplex\.
 
-    ⚠️ Sie müssen zahlen, auch wenn Sie nicht in einer Wohnung wohnen.
+    ⚠️ Sie müssen zahlen, auch wenn Sie nicht in einer Wohnung wohnen\.
 
 
     *Kosten:*
@@ -100,17 +100,17 @@ screens:
   text: '*Klimaanlage*
 
 
-    ℹ️ Die zentrale Klimaanlage ist nicht in der Stromrechnung enthalten.
+    ℹ️ Die zentrale Klimaanlage ist nicht in der Stromrechnung enthalten\.
 
-    ⚠️ Bedenken Sie, dass Türkiye ein heißes Land ist und Strom hier teuer ist.
+    ⚠️ Bedenken Sie, dass Türkiye ein heißes Land ist und Strom hier teuer ist\.
 
 
     *Zahlungsziel:*
 
     ⏳ 7 Tage ab Rechnungserhalt
 
-    ⚠️ Wenn die Zahlung nicht erfolgt, wird sie deaktiviert. Auf der Fernbedienung werden ein Schlosssymbol und „Zentralisiert“
-    angezeigt.
+    ⚠️ Wenn die Zahlung nicht erfolgt, wird sie deaktiviert\. Auf der Fernbedienung werden ein Schlosssymbol und „Zentralisiert“
+    angezeigt\.
 
 
     *Zahlung:*
@@ -136,17 +136,17 @@ screens:
   text: '*Strom*
 
 
-    ℹ️ Die Klimaanlage ist nicht in der Stromrechnung enthalten.
+    ℹ️ Die Klimaanlage ist nicht in der Stromrechnung enthalten\.
 
 
-    ℹ️ Die *Teilnehmernummer* wird bei der Verbindung vergeben und ist auch auf der Zahlungskarte angegeben.
+    ℹ️ Die *Teilnehmernummer* wird bei der Verbindung vergeben und ist auch auf der Zahlungskarte angegeben\.
 
 
     *Zahlungsziel:*
 
     ℹ️ Die Rechnung wird am Monatsende ausgestellt
 
-    ⏳ Die Zahlung muss innerhalb von 10 Tagen nach Rechnungsstellung erfolgen.
+    ⏳ Die Zahlung muss innerhalb von 10 Tagen nach Rechnungsstellung erfolgen\.
 
 
     *So finden Sie Ihre Stromrechnung heraus:*
@@ -169,7 +169,7 @@ screens:
 
     3\. Sie sehen den Betrag und können bezahlen
 
-    ⚠️ Wenn die Rechnung noch nicht ausgestellt wurde, zeigt die Anwendung einen Fehler an.
+    ⚠️ Wenn die Rechnung noch nicht ausgestellt wurde, zeigt die Anwendung einen Fehler an\.
 
 
     🪙 *Bargeld oder Karte*
@@ -183,14 +183,14 @@ screens:
   text: '*Wasser*
 
 
-    ℹ️ Die *Teilnehmernummer* wird bei der Verbindung vergeben und ist auch auf der Zahlungskarte angegeben.
+    ℹ️ Die *Teilnehmernummer* wird bei der Verbindung vergeben und ist auch auf der Zahlungskarte angegeben\.
 
 
     *Zahlungsziel:*
 
     ℹ️ Die Rechnung wird am Monatsende ausgestellt
 
-    ⏳ Die Zahlung muss innerhalb von 10 Tagen nach Rechnungsstellung erfolgen.
+    ⏳ Die Zahlung muss innerhalb von 10 Tagen nach Rechnungsstellung erfolgen\.
 
 
     *So finden Sie Ihre Wasserrechnung heraus:*
@@ -213,7 +213,7 @@ screens:
 
     3\. Sie sehen den Betrag und können bezahlen
 
-    ⚠️ Wenn die Rechnung noch nicht ausgestellt wurde, zeigt die Anwendung einen Fehler an.
+    ⚠️ Wenn die Rechnung noch nicht ausgestellt wurde, zeigt die Anwendung einen Fehler an\.
 
 
     🪙 *Bargeld oder Karte*
@@ -265,7 +265,7 @@ screens:
 
     \- Das ist in Dask Bank nicht möglich\.
 
-    \- Sie können dies bei jeder Versicherungsgesellschaft oder bei Nkolay über den untenstehenden Link tun.
+    \- Sie können dies bei jeder Versicherungsgesellschaft oder bei Nkolay über den untenstehenden Link tun\.
 
 
     💼 *Mitnehmen:*
@@ -302,17 +302,17 @@ screens:
 
     🧑‍💼*Anzeige beim Strafgesetzbuch:*
 
-    Block- und Wohnungsnummer, sowie Teilnehmernummer für Strom.
+    Block- und Wohnungsnummer, sowie Teilnehmernummer für Strom\.
 
 
-    ℹ️ Innerhalb eines Werktages wird in der Wohnung Licht erscheinen.
+    ℹ️ Innerhalb eines Werktages wird in der Wohnung Licht erscheinen\.
 
-    ℹ️ Bei Problemen mit der Elektrizität melden Sie das Strafgesetzbuch.
+    ℹ️ Bei Problemen mit der Elektrizität melden Sie das Strafgesetzbuch\.
 
 
-    ⚠️ Die Schalttafel befindet sich im Schrank.
+    ⚠️ Die Schalttafel befindet sich im Schrank\.
 
-    ⚠️Der Stromzähler befindet sich im Keller hinter einer verschlossenen Tür.'
+    ⚠️Der Stromzähler befindet sich im Keller hinter einer verschlossenen Tür\.'
 - id: HOW_TO_CONNECT_WATER
   text: '*💧Wasser*
 
@@ -335,15 +335,15 @@ screens:
 
     🧑‍💼*Anzeige beim Strafgesetzbuch:*
 
-    Block- und Wohnungsnummer, sowie Teilnehmernummer für Wasser.
+    Block- und Wohnungsnummer, sowie Teilnehmernummer für Wasser\.
 
 
-    ℹ️ Innerhalb von 3 Werktagen wird Wasser in der Wohnung erscheinen.
+    ℹ️ Innerhalb von 3 Werktagen wird Wasser in der Wohnung erscheinen\.
 
-    ℹ️ Wenn Sie Probleme mit Wasser oder Druck in den Wasserhähnen haben, benachrichtigen Sie das Strafgesetzbuch.
+    ℹ️ Wenn Sie Probleme mit Wasser oder Druck in den Wasserhähnen haben, benachrichtigen Sie das Strafgesetzbuch\.
 
 
-    ⚠️ Die Wohnung verfügt über ein Ventil zum Absperren des Wassers.
+    ⚠️ Die Wohnung verfügt über ein Ventil zum Absperren des Wassers\.
 
     \- Schauen Sie bei 1\+1 unter die Spüle\.
 
@@ -373,11 +373,11 @@ screens:
     \- [Turksat Kablo](https://www.fiberkablonet.com/)
 
 
-    ℹ️ Um eine Verbindung herzustellen, müssen Sie sich mit einem Ikamet an das Büro des Betreibers wenden. Der Preis ist
-    derselbe wie auf der Website des Betreibers.
+    ℹ️ Um eine Verbindung herzustellen, müssen Sie sich mit einem Ikamet an das Büro des Betreibers wenden\. Der Preis ist
+    derselbe wie auf der Website des Betreibers\.
 
-    ⚠️ Möglicherweise findet das Büro unsere Adresse nicht im System. Wir empfehlen Ihnen, sich an die Büros in der Nähe des
-    Komplexes zu wenden.
+    ⚠️ Möglicherweise findet das Büro unsere Adresse nicht im System\. Wir empfehlen Ihnen, sich an die Büros in der Nähe
+    des Komplexes zu wenden\.
 
 
     🏴‍☠️ *Anschließen ohne Aufenthaltserlaubnis*
@@ -387,7 +387,7 @@ screens:
 
     \- Das ist meist teurer, viele „Helfer“ verlangen Geld für einen solchen Service\.
 
-    \- Ein Helfer kann über Ihren Immobilienmakler oder über die Büros von Internetbetreibern gefunden werden.
+    \- Ein Helfer kann über Ihren Immobilienmakler oder über die Büros von Internetbetreibern gefunden werden\.
 
 
     ⚡️ *Alternative Methoden*
@@ -414,7 +414,7 @@ screens:
 
     \- Gehen Sie zur Seite [Ck Akdeniz Feshi Başvurusu](https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
 
-    \- Oder geben Sie als Suchbegriff `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu` ein.
+    \- Oder geben Sie als Suchbegriff `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu` ein\.
 
     \- Klicken Sie auf *"Neue Bewerbung" \(Yeni Başvuru\)*, wählen Sie ein Konto aus und geben Sie Ihre Daten ein
 
@@ -435,9 +435,9 @@ screens:
     3\. *IBAN*, auf die das Geld überwiesen wird
 
 
-    ℹ️ Innerhalb von 24 Stunden wird die Wohnung Strom verlieren.
+    ℹ️ Innerhalb von 24 Stunden wird die Wohnung Strom verlieren\.
 
-    ℹ️ Das Geld wird dem türkischen Konto erst nach der Trennung innerhalb von 7–30 Tagen gutgeschrieben.'
+    ℹ️ Das Geld wird dem türkischen Konto erst nach der Trennung innerhalb von 7–30 Tagen gutgeschrieben\.'
 - id: HOW_TO_DISCONNECT_WATER
   text: '*💧Wasser*
 
@@ -452,7 +452,7 @@ screens:
 
     \- Gehen Sie zur Seite [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu)
 
-    \- Oder geben Sie „Suche“ `ASAT Abonelik Sözleşme Feshi Başvurusu` ein.
+    \- Oder geben Sie „Suche“ `ASAT Abonelik Sözleşme Feshi Başvurusu` ein\.
 
     \- Klicken Sie auf *"Neue Bewerbung" \(Yeni Başvuru\)*, wählen Sie ein Konto aus und geben Sie Ihre Daten ein
 
@@ -473,6 +473,6 @@ screens:
     3\. *IBAN*, auf die das Geld überwiesen wird
 
 
-    ℹ️ Innerhalb von 3 Werktagen wird das Wasser in der Wohnung verschwinden.
+    ℹ️ Innerhalb von 3 Werktagen wird das Wasser in der Wohnung verschwinden\.
 
-    ℹ️ Das Geld wird dem türkischen Konto erst nach der Trennung innerhalb von 7–30 Tagen gutgeschrieben.'
+    ℹ️ Das Geld wird dem türkischen Konto erst nach der Trennung innerhalb von 7–30 Tagen gutgeschrieben\.'

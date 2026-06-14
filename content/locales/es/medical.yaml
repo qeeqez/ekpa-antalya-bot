@@ -17,7 +17,7 @@ screens:
 
     ℹ️ *Llame a una ambulancia solo como último recurso\.*
 
-    En Turquía, llamar a una ambulancia puede costar bastante dinero.
+    En Turquía, llamar a una ambulancia puede costar bastante dinero\.
 
     Cuando llame a una ambulancia, diga inglés, debe cambiar a un operador en inglés\.
 
@@ -30,12 +30,12 @@ screens:
 
     ℹ️ *En la línea directa se hablan todos los idiomas*
 
-    Ayudan con todos los problemas médicos, incluida la llamada a una ambulancia.'
+    Ayudan con todos los problemas médicos, incluida la llamada a una ambulancia\.'
 - id: PHARMACIES
   text: '*🧑‍⚕️ Farmacias \- Eczane*
 
 
-    ℹ️ Las farmacias habituales están cerradas los domingos.
+    ℹ️ Las farmacias habituales están cerradas los domingos\.
 
 
     📍 Muchas farmacias se encuentran en el camino al hospital:
@@ -50,7 +50,7 @@ screens:
 
     \- Cada día son diferentes
 
-    \- Los actuales se pueden ver en el sitio web o en la aplicación.'
+    \- Los actuales se pueden ver en el sitio web o en la aplicación\.'
   button_texts:
     pharmacies_site: 🌎 {{button_pharmacies_site}}
     pharmacies_android: 🤖 {{button_android}}
@@ -64,7 +64,7 @@ screens:
 
     1️⃣️ Para solicitar un seguro, primero debes averiguar con qué hospitales trabaja
 
-    2️⃣ El seguro a menudo no cubre el importe total del tratamiento, pero esto depende de su póliza y de su compañía de seguros.
+    2️⃣ El seguro a menudo no cubre el importe total del tratamiento, pero esto depende de su póliza y de su compañía de seguros\.
 
 
     ⁉️ *Cómo saber con qué hospitales trabaja tu seguro:*
@@ -103,12 +103,12 @@ screens:
 
     💫 En Turquía puedes obtener *atención médica básica gratis*
 
-    \- Para ello, después de recibir el permiso de residencia, es necesario que le asignen un médico de familia.
+    \- Para ello, después de recibir el permiso de residencia, es necesario que le asignen un médico de familia\.
 
 
     🆓️ *Qué da:*
 
-    \- Puede obtener un examen general de su médico de cabecera.
+    \- Puede obtener un examen general de su médico de cabecera\.
 
     \- Pasar pruebas básicas
 
@@ -116,7 +116,7 @@ screens:
 
     \- Vacúnese para usted y sus hijos
 
-    \- Obtenga recomendaciones de especialistas en hospitales.
+    \- Obtenga recomendaciones de especialistas en hospitales\.
 
     \- El historial de todos los análisis y exámenes se mostrará en la aplicación e\-Nabız\.
 
@@ -140,7 +140,7 @@ screens:
 
     3\. Seleccione ciudad, distrito
 
-    4\. Se abrirá una lista de clínicas familiares y especialistas disponibles.
+    4\. Se abrirá una lista de clínicas familiares y especialistas disponibles\.
 
     \- El médico resaltado en rojo no se puede seleccionar
 

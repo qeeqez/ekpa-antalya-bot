@@ -57,7 +57,7 @@ screens:
 
     \- Żadne karty SIM, połączenia ani SMS-y nie będą działać\. Telefon wyświetla komunikat „Brak sieci” i „Telefon niedozwolony”\.
 
-    \- Sam telefon w dalszym ciągu działa, łącznie z Wi-Fi i połączeniami w komunikatorach internetowych przez Internet.'
+    \- Sam telefon w dalszym ciągu działa, łącznie z Wi-Fi i połączeniami w komunikatorach internetowych przez Internet\.'
   button_texts:
     phone_unlock_imei_free: 🆓 Opcja bezpłatna
     phone_unlock_imei_paid: 💰 Opcja płatna (30000 TL)
@@ -82,7 +82,7 @@ screens:
     \- Kup modem 4G i rozpowszechniaj z niego, ale wtedy nie będzie można odbierać połączeń'
 - id: PHONE_UNLOCK_IMEI_PAID
   text: "*\U0001F4B0 Oficjalne płatne odblokowanie telefonu*\n\nℹ️ 1 Osoba może zarejestrować 1 telefon co 3 lata\\.\n*Wymagane:*\
-    \ osoba ta musiała przybyć z zagranicy nie później niż 365 dni temu\n\n\U0001F4B0 *Cena w 2024 r.: 30000 TL \U0001F92F\
+    \ osoba ta musiała przybyć z zagranicy nie później niż 365 dni temu\n\n\U0001F4B0 *Cena w 2024 r\\.: 30000 TL \U0001F92F\
     *\n\n\U0001F9E7 *Proces rejestracji:*\n\\- Zaloguj się do Edevlet za pomocą numeru ikamet i hasła otrzymanego pocztą\n\
     \\- Przejdź do strony [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet) \\(lub wyszukaj `IMEI Kaydet`\\)\n\\-\
     \ Podaj swoje dane \\(wszystkie IMEI w telefonie, paszport i datę wjazdu do kraju\\)\n\\- Zapłać\n\n\U0001FA99 *Płatność\

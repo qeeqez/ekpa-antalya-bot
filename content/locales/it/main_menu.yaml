@@ -63,7 +63,7 @@ screens:
 
     *Clicca per copiare:*
 
-    `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`'
+    `Antalya, Kepez, Gunes Mah\., Sehit Astsubay Omer Halis Demir Cad\., Ekpa 1207 Sitesi`'
 - id: BOT_LINK
   text: '*{{button_bot_link}}:*
 

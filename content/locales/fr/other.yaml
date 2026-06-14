@@ -56,7 +56,7 @@ screens:
 
     \- Ce n''est pas le téléphone lui-même qui est bloqué, mais l''IMEI, c''est-à-dire\. emplacement pour carte SIM spécifique\.
 
-    \- Aucune carte SIM, aucun appel ou SMS ne fonctionnera. Le téléphone indique « Pas de réseau » et « Téléphone non autorisé ».
+    \- Aucune carte SIM, aucun appel ou SMS ne fonctionnera\. Le téléphone indique « Pas de réseau » et « Téléphone non autorisé »\.
 
     \- Le téléphone lui-même continue de fonctionner, y compris le WiFi et les appels par messagerie instantanée via Internet\.'
   button_texts:

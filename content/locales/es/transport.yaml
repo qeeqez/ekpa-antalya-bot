@@ -37,14 +37,14 @@ screens:
 
     \- Tarjeta personalizada con foto
 
-    \- El niño necesita un certificado de la escuela que acredite que es estudiante.
+    \- El niño necesita un certificado de la escuela que acredite que es estudiante\.
 
     \- Solo se puede hacer en las sucursales principales de AntalyaKart
 
     \- [La sucursal más cercana está aquí](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), en el pasaje subterráneo'
 - id: ANTALYA_CARD
   text: "*\U0001F4B3 Kart Antalya*\n\n ℹ️ La tarifa es más económica con esta tarjeta\n ℹ️ Puedes pagar por dos personas,\
-    \ debes esperar después del primer pago.\n\n \U0001F4CD *¿Dónde comprar?*\n \\- En el [Mercado Soylu] más cercano(https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
+    \ debes esperar después del primer pago\\.\n\n \U0001F4CD *¿Dónde comprar?*\n \\- En el [Mercado Soylu] más cercano(https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
     \ \\- En la aplicación *Antalya Kart*, en la sección *Punto más cercano*, los puntos de venta están marcados en rojo\n\
     \n \U0001FA99 *¿Cómo recargar?*\n \\- Puedes recargar en efectivo en el mismo lugar donde compras\n \\- Recarga online\
     \ con una tarjeta bancaria turca en la aplicación Antalya Kart\n\n ⁉️ *Recargué la tarjeta, pero no apareció el dinero*\n\
@@ -77,7 +77,7 @@ screens:
 
     🪙 *Pago*
 
-    \- Según el contador en el espejo.
+    \- Según el contador en el espejo\.
 
     \- El costo en aplicaciones se calcula usando el mismo contador
 

@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: INFO_EKPA
-  text: '*🌟 كل شيء عن إيكبا*'
+  text: '*🌟 {{button_info_ekpa}}*'
   button_texts:
     management_office: 🧑‍💼مكتب الإدارة
     how_to_pay: 💰 ادفع

@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: INFO_EKPA
-  text: '*🌟 Ekpa hakkında her şey*'
+  text: '*🌟 {{button_info_ekpa}}*'
   button_texts:
     management_office: 🧑‍💼 Yönetim Ofisi
     how_to_pay: 💰 Ödeme

@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: IMPORTANT_DOCUMENTS
-  text: '*📝 Residence permit / Registration / Documents*'
+  text: '*📝 {{button_important_documents}}*'
   button_texts:
     check_application_status: ✅ Check the status of your residence permit application
     get_id_number: 🆔 Find out the residence permit number

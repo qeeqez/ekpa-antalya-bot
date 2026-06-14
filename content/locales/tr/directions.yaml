@@ -1,9 +1,9 @@
 version: '1.0'
 screens:
 - id: DIRECTIONS
-  text: '*Site içerisinde ve yakınında*'
+  text: '*{{button_directions}}*'
   button_texts:
-    markets: 🧺 Piyasalar
+    markets: 🧺 {{button_markets}}
     shops: 🍎 Mağazalar
     shopping_centers: 🛍 alışveriş merkezi
     print_photo: 🖨️Baskı ve Fotoğraf 📸
@@ -48,7 +48,7 @@ screens:
 
     📍[Güneş Market](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 km\)'
   button_texts:
-    all_markets: 🧺 Diğer pazarlar
+    all_markets: 🧺 {{button_other_markets}}
 - id: ALL_MARKETS
   text: '*Piyasalar:*
 

@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: PHONE_NUMBERS
-  text: '*📞أرقام هواتف مهمة*'
+  text: '*📞 {{button_phone_numbers}}*'
   button_texts:
-    ekpa_management: ☎️ إدارة EKPA
-    emergency: 🆘 خدمات الطوارئ
-    other_phones: 📲 أخرى
-    embassy: 🏛️ السفارات
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
 - id: EKPA_MANAGEMENT
   text: '*إيكبا:*
 
@@ -45,10 +45,10 @@ screens:
 - id: EMBASSY
   text: '*🏛️ السفارات*'
   button_texts:
-    russia_embassy: 🇷🇺 روسيا
-    ukraine_embassy: 🇺🇦 أوكرانيا
-    kazakhstan_embassy: 🇰🇿 كازاخستان
-    belarus_embassy: 🇧🇾 بيلاروسيا
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
 - id: RUSSIA_EMBASSY
   text: '<u><b>القنصلية العامة لروسيا في أنطاليا</b></u>
 

@@ -1,9 +1,9 @@
 version: '1.0'
 screens:
 - id: DIRECTIONS
-  text: '*في المجمع والقريب*'
+  text: '*{{button_directions}}*'
   button_texts:
-    markets: 🧺 الأسواق
+    markets: 🧺 {{button_markets}}
     shops: 🍎 متاجر
     shopping_centers: 🛍 مركز تسوق
     print_photo: 🖨️ طباعة وتصوير 📸
@@ -48,7 +48,7 @@ screens:
 
     📍[سوق جونيش](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 كم\)'
   button_texts:
-    all_markets: 🧺 أسواق أخرى
+    all_markets: 🧺 {{button_other_markets}}
 - id: ALL_MARKETS
   text: '*الأسواق:*
 

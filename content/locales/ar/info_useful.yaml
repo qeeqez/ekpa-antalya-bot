@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: INFO_USEFUL
-  text: '*⭐️ معلومات*'
+  text: '*⭐️ {{button_info_general}}*'
   button_texts:
-    important_docs: 📝 تصريح الإقامة / التسجيل / المستندات
-    delivery: 🚚 التوصيل
-    aid_kit: ❤️حقيبة الإسعافات الأولية
-    transport: 🚌 النقل
+    important_docs: 📝 {{button_important_documents}}
+    delivery: 🚚 {{button_delivery}}
+    aid_kit: ❤️ {{button_aid_kit}}
+    transport: 🚌 {{button_transport}}
     phone_unlock: 📲 فتح هاتفك
     car_fine: 🚗 غرامة السيارة
-    phone_numbers: 📱️ أرقام هواتف مفيدة
+    phone_numbers: 📱️ {{button_phone_numbers}}

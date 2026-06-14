@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: DELIVERY
-  text: '*🛵📦 Онлайн доставка*'
+  text: '*🛵📦 {{button_delivery}}*'
   button_texts:
     food_delivery: 🍔 Еда
     products_delivery: 🍎 Продукты

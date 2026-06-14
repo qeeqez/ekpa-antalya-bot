@@ -1,24 +1,24 @@
 version: '1.0'
 commands:
 - command: /start
-  description: Ana menü
+  description: '{{button_main_menu}}'
 - command: /menu
-  description: Ana menü
+  description: '{{button_main_menu}}'
 - command: /botlink
-  description: Bot'a bağlantı
+  description: '{{button_bot_link}}'
 - command: /ourchats
-  description: Sohbetlerimiz
+  description: '{{button_our_chats}}'
 screens:
 - id: MAIN_MENU
-  text: '*Ana menü*'
+  text: '*{{button_main_menu}}*'
   button_texts:
-    ekpa_main_chat: 🏠 EKPA ana sohbeti
-    our_chats: 💬 Sohbetlerimiz
-    directions: 🏡Site içi ve yakınında
-    info_useful: ⭐️ Bilgi
-    info_ekpa: 🌟EKPA hakkında her şey
-    address: 📍Adresimiz
-    suggest_changes: ✍️ Değişiklik öner
+    ekpa_main_chat: 🏠 {{button_main_chat}}
+    our_chats: 💬 {{button_our_chats}}
+    directions: 🏡 {{button_directions}}
+    info_useful: ⭐️ {{button_info_general}}
+    info_ekpa: 🌟 {{button_info_ekpa}}
+    address: 📍 {{button_address}}
+    suggest_changes: ✍️ {{button_suggest_changes}}
 - id: ADDRESS
   text: '*Adresimiz:*
 
@@ -65,7 +65,7 @@ screens:
 
     `Antalya, Kepez, Güneş Mah., Şehit Astsubay Ömer Halis Demir Cad., Ekpa 1207 Sitesi`'
 - id: BOT_LINK
-  text: '*Bot bağlantısı:*
+  text: '*{{button_bot_link}}:*
 
 
     https://t\.me/EkpaAntalyaBot
@@ -73,9 +73,6 @@ screens:
 
     Bağlantıyı komşularınızla paylaşın 😊'
 - id: OUR_CHATS_INFO
-  text: '*💬 Sohbetlerimiz*
-
-
-    Aşağıdaki menüden ilgilendiğiniz sohbeti seçin\.'
+  text: '*💬 {{button_our_chats}}*'
   button_texts:
-    our_chats_detailed: 📋 Sohbet listesi
+    our_chats_detailed: 📋 {{button_our_chats}}

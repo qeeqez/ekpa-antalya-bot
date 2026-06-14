@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: IMPORTANT_DOCUMENTS
-  text: '*📝 ВНЖ / Прописка / Документы*'
+  text: '*📝 {{button_important_documents}}*'
   button_texts:
     check_application_status: ✅ Проверить статус заявки ВНЖ
     get_id_number: 🆔 Узнать номер ВНЖ

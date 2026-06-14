@@ -1,19 +1,19 @@
 version: '1.0'
 screens:
 - id: TRANSPORT
-  text: '*🚌 النقل*'
+  text: '*🚌 {{button_transport}}*'
   button_texts:
-    bus: 🚌 باص
-    antalya_card: 🪪 أنطاليا كارت
-    taxi: 🚕 تاكسي
-    kick_scooter: 🛴سكوتر
+    bus: 🚌 {{button_bus}}
+    antalya_card: 🪪 {{button_antalya_card}}
+    taxi: 🚕 {{button_taxi}}
+    kick_scooter: 🛴 {{button_scooters}}
 - id: BUS
   text: "*\U0001F68Eالمواصلات العامة*\n\n \U0001F4CD من الأفضل تخطيط المسار في *خرائط Google*\n \U0001F9ED يمكن الاطلاع على\
     \ الموقع الحالي للحافلات في تطبيق *AntalyaKart*\n\n \U0001F4B5 *الأجرة*\n أنطاليا كارت \\- 9\\.6 ليرة تركية\n البطاقة\
     \ المصرفية \\- 9\\.85 ليرة تركية\n\n \U0001FA99️ *تكلفة النقل*\n أنطاليا كارت \\- 3 ليرة تركية\n البطاقة المصرفية \\-\
     \ 9\\.85 ليرة تركية\n\n ℹ️ *الأطفال أقل من 6 سنوات مجاناً*\n ⚠️ *يمنع الدفع نقدًا في وسائل النقل*"
   button_texts:
-    bus_concessionary: 🎫 الفوائد
+    bus_concessionary: 🎫 {{button_benefits}}
 - id: BUS_CONCESSIONARY
   text: '🧒👴 *السفر التفضيلي*
 
@@ -52,8 +52,8 @@ screens:
     \ أدخل رقم الطريق في البحث\n \\- سيتم عرض المسار بالكامل والحافلات الرمادية في الأماكن التي يسافرون بها حاليًا\n \\- العلم\
     \ \\-\\> نهاية المسار، المثلث \\-\\> البداية\n \\- يمكن تغيير اتجاه المسار بالضغط على الزر الأخضر"
   button_texts:
-    antalya_card_android: 🤖Android
-    antalya_card_iphone: 📱 ايفون
+    antalya_card_android: 🤖 {{button_android}}
+    antalya_card_iphone: 📱 {{button_iphone}}
 - id: TAXI
   text: '*🚖تاكسي*
 

@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: DELIVERY
-  text: '*🛵📦 Çevrimiçi teslimat*'
+  text: '*🛵📦 {{button_delivery}}*'
   button_texts:
     food_delivery: 🍔 Yiyecek
     products_delivery: 🍎Ürünler

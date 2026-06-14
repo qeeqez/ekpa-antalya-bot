@@ -3,11 +3,11 @@ screens:
 - id: AID_KIT
   text: '*❤️ First aid kit*'
   button_texts:
-    ambulance: 🚑 Ambulance
-    hospitals: 🏥Hospitals
-    pharmacies: 🧬 Pharmacies
-    medicine: 💊 Turkish medicines
-    polyclinic: 🧑‍⚕️ Free medicine
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
 - id: AMBULANCE
   text: '*🚑 Ambulance*
 
@@ -52,9 +52,9 @@ screens:
 
     \- Current ones can be viewed on the website or in the application'
   button_texts:
-    pharmacies_site: 🌎 Website with duty pharmacies
-    pharmacies_android: 🤖Android
-    pharmacies_iphone: 📱 iPhone
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
 - id: HOSPITALS
   text: '*🏥Hospitals\- Hastane*
 
@@ -96,7 +96,7 @@ screens:
 
     📍 Search for hospitals on the map using the Turkish word *Hastane*\.'
   button_texts:
-    hospitals_insurance_site: 🌎 Search for a medical institution with insurance
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
 - id: POLYCLINIC
   text: '*🧑‍⚕️ Free medicine*
 
@@ -157,9 +157,9 @@ screens:
 
     ⭐ Now you can *Make an appointment with a doctor / Appointment / Randevu* through the website and application e\-Nabız\'
   button_texts:
-    polyclinic_site: 🌎 Website for making an appointment with a doctor
-    polyclinic_android: 🤖Android
-    polyclinic_iphone: 📱 iPhone
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
 - id: MEDICINE
   text: '*💊 Turkish medicines*
 

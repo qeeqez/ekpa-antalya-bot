@@ -1,0 +1,20 @@
+version: '1.0'
+fragments:
+  button_main_menu: Главное меню
+  button_our_chats: Наши Чаты
+  button_info_general: Информация
+  button_info_ekpa: Все о EKPA
+  button_delivery: Доставка
+  button_transport: Транспорт
+  button_phone_numbers: Важные телефоны
+  button_important_documents: ВНЖ / Прописка / Документы
+  button_android: Android
+  button_iphone: iPhone
+  button_markets: Рынки
+  button_other_markets: Другие рынки
+  button_main_chat: Основной чат EKPA
+  button_suggest_changes: Предложить изменения
+  button_address: Наш Адрес
+  button_directions: В Комплексе и рядом
+  button_aid_kit: Аптечка
+  button_bot_link: Ссылка на бота

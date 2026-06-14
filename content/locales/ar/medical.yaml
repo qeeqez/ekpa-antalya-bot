@@ -3,11 +3,11 @@ screens:
 - id: AID_KIT
   text: '*❤️حقيبة الإسعافات الأولية*'
   button_texts:
-    ambulance: 🚑 سيارة إسعاف
-    hospitals: 🏥المستشفيات
-    pharmacies: 🧬 الصيدليات
-    medicine: 💊 الأدوية التركية
-    polyclinic: 🧑‍⚕️ دواء مجاني
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
 - id: AMBULANCE
   text: '*🚑 الإسعاف*
 
@@ -52,9 +52,9 @@ screens:
 
     \- يمكن الاطلاع على الحالية على الموقع أو في التطبيق'
   button_texts:
-    pharmacies_site: 🌎موقع به صيدليات المناوبة
-    pharmacies_android: 🤖Android
-    pharmacies_iphone: 📱 ايفون
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
 - id: HOSPITALS
   text: '*🏥المستشفيات\-الحستانة*
 
@@ -95,7 +95,7 @@ screens:
 
     📍البحث عن المستشفيات على الخريطة باستخدام الكلمة التركية *Hastane*\.'
   button_texts:
-    hospitals_insurance_site: 🌎 ابحث عن مؤسسة طبية مع التأمين
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
 - id: POLYCLINIC
   text: '*🧑‍⚕️ دواء مجاني*
 
@@ -155,9 +155,9 @@ screens:
 
     ⭐ الآن يمكنك *تحديد موعد مع الطبيب / موعد / Randevu* من خلال الموقع والتطبيق e\-Nabız\'
   button_texts:
-    polyclinic_site: 🌎 موقع لتحديد موعد مع الطبيب
-    polyclinic_android: 🤖Android
-    polyclinic_iphone: 📱 ايفون
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
 - id: MEDICINE
   text: '*💊 الأدوية التركية*
 

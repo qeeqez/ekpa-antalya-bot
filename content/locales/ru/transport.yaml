@@ -1,19 +1,19 @@
 version: '1.0'
 screens:
 - id: TRANSPORT
-  text: '*🚌 Транспорт*'
+  text: '*🚌 {{button_transport}}*'
   button_texts:
-    bus: 🚌 Автобус
-    antalya_card: 🪪 Antalya Kart
-    taxi: 🚕 Такси
-    kick_scooter: 🛴 Самокаты
+    bus: 🚌 {{button_bus}}
+    antalya_card: 🪪 {{button_antalya_card}}
+    taxi: 🚕 {{button_taxi}}
+    kick_scooter: 🛴 {{button_scooters}}
 - id: BUS
   text: "*\U0001F68E Общественный транспорт*\n\n \U0001F4CD Маршрут лучше всего планировать в *Google Maps*\n \U0001F9ED Текущее\
     \ местоположение автобусов можно посмотреть в приложении *AntalyaKart*\n\n \U0001F4B5 *Стоимость проезда*\n AntalyaKart\
     \ \\- 9\\.6 TL\n Банковская карта \\- 9\\.85 TL\n\n \U0001FA99️ *Стоимость пересадки*\n AntalyaKart \\- 3 TL\n Банковская\
     \ карта \\- 9\\.85 TL\n\n ℹ️ *Детям до 6 лет бесплатно*\n ⚠️ *Оплата наличными в транспорте запрещена*\n"
   button_texts:
-    bus_concessionary: 🎫 Льготы
+    bus_concessionary: 🎫 {{button_benefits}}
 - id: BUS_CONCESSIONARY
   text: '🧒👴 *Льготный проезд*
 
@@ -55,8 +55,8 @@ screens:
     \ в местах где они сейчас едут\n \\- Флажок \\-\\> конец маршрута, Треугольник \\-\\> начало\n \\- Направление маршрута\
     \ можно поменять нажав зеленую кнопку\n"
   button_texts:
-    antalya_card_android: 🤖 Android
-    antalya_card_iphone: 📱 iPhone
+    antalya_card_android: 🤖 {{button_android}}
+    antalya_card_iphone: 📱 {{button_iphone}}
 - id: TAXI
   text: '*🚖 Такси*
 

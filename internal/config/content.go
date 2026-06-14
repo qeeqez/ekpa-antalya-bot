@@ -6,6 +6,7 @@ import (
 	"maps"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
@@ -17,6 +18,7 @@ type ContentRepository struct {
 	screens    map[string]*domain.Screen
 	commands   *domain.CommandRegistry
 	navigation *domain.NavigationRegistry
+	fragments  map[string]map[string]string
 }
 
 // ContentFile represents a content YAML file structure
@@ -28,9 +30,10 @@ type ContentFile struct {
 
 // LocaleContentFile represents localized overrides for screens and commands.
 type LocaleContentFile struct {
-	Version  string             `yaml:"version"`
-	Screens  []LocalizedScreen  `yaml:"screens,omitempty"`
-	Commands []LocalizedCommand `yaml:"commands,omitempty"`
+	Version   string             `yaml:"version"`
+	Screens   []LocalizedScreen  `yaml:"screens,omitempty"`
+	Commands  []LocalizedCommand `yaml:"commands,omitempty"`
+	Fragments map[string]string  `yaml:"fragments,omitempty"`
 }
 
 // LocalizedScreen contains screen text and button label overrides for a locale.
@@ -54,6 +57,7 @@ func NewContentRepository(contentDir string) (*ContentRepository, error) {
 			Commands: []domain.Command{},
 		},
 		navigation: domain.NewNavigationRegistry(),
+		fragments:  make(map[string]map[string]string),
 	}
 
 	// Load content first
@@ -205,7 +209,11 @@ func (r *ContentRepository) loadLocalizedContentFile(path string, localeCode str
 		return err
 	}
 
-	return r.applyLocalizedCommands(content.Commands, localeCode, path)
+	if err := r.applyLocalizedCommands(content.Commands, localeCode, path); err != nil {
+		return err
+	}
+
+	return r.applyLocalizedFragments(content.Fragments, localeCode)
 }
 
 // parseContentFile parses YAML content into ContentFile structure
@@ -314,6 +322,20 @@ func (r *ContentRepository) applyLocalizedCommands(commands []LocalizedCommand, 
 	return nil
 }
 
+func (r *ContentRepository) applyLocalizedFragments(fragments map[string]string, localeCode string) error {
+	if len(fragments) == 0 {
+		return nil
+	}
+
+	normalized := locale.Normalize(localeCode)
+	if r.fragments[normalized] == nil {
+		r.fragments[normalized] = make(map[string]string, len(fragments))
+	}
+	maps.Copy(r.fragments[normalized], fragments)
+
+	return nil
+}
+
 // GetScreen returns a screen by ID with automatic navigation buttons
 func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
 	return r.GetScreenForLocale(screenID, locale.DefaultLocale)
@@ -334,6 +356,7 @@ func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*do
 
 	// Add automatic navigation buttons using localized labels.
 	enhancedScreen = r.navigation.AddAutoNavigation(enhancedScreen, locale.Normalize(localeCode))
+	r.expandScreenFragments(enhancedScreen, locale.Normalize(localeCode))
 	if err := enhancedScreen.Validate(); err != nil {
 		return nil, fmt.Errorf("invalid localized screen %s: %w", screenID, err)
 	}
@@ -362,6 +385,7 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 				localized.Description = localeData.Description
 			}
 		}
+		localized.Description = r.expandText(localized.Description, normalized)
 		registry.Commands = append(registry.Commands, localized)
 	}
 
@@ -397,6 +421,60 @@ func cloneStringMap(values map[string]string) map[string]string {
 	maps.Copy(clone, values)
 
 	return clone
+}
+
+func (r *ContentRepository) expandScreenFragments(screen *domain.Screen, localeCode string) {
+	screen.Text = r.expandText(screen.Text, localeCode)
+	for rowIdx := range screen.InlineKeyboard.Rows {
+		for btnIdx := range screen.InlineKeyboard.Rows[rowIdx].Buttons {
+			button := &screen.InlineKeyboard.Rows[rowIdx].Buttons[btnIdx]
+			button.Text = r.expandText(button.Text, localeCode)
+		}
+	}
+}
+
+func (r *ContentRepository) expandText(text, localeCode string) string {
+	if text == "" {
+		return text
+	}
+
+	expanded := text
+	for range 5 {
+		next := r.replaceFragmentRefs(expanded, localeCode)
+		if next == expanded {
+			break
+		}
+		expanded = next
+	}
+
+	return expanded
+}
+
+func (r *ContentRepository) replaceFragmentRefs(text, localeCode string) string {
+	fragments := r.fragmentSet(localeCode)
+	for key, value := range fragments {
+		text = replaceFragment(text, key, value)
+	}
+	return text
+}
+
+func (r *ContentRepository) fragmentSet(localeCode string) map[string]string {
+	normalized := locale.Normalize(localeCode)
+	merged := make(map[string]string)
+	if base, ok := r.fragments[locale.DefaultLocale]; ok {
+		maps.Copy(merged, base)
+	}
+	if normalized != locale.DefaultLocale {
+		if overlay, ok := r.fragments[normalized]; ok {
+			maps.Copy(merged, overlay)
+		}
+	}
+	return merged
+}
+
+func replaceFragment(text, key, value string) string {
+	placeholder := "{{" + key + "}}"
+	return strings.ReplaceAll(text, placeholder, value)
 }
 
 func (r *ContentRepository) applyScreenLocale(screen *domain.Screen, localeCode string) {

@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: DELIVERY
-  text: '*🛵📦التوصيل اون لاين*'
+  text: '*🛵📦 {{button_delivery}}*'
   button_texts:
     food_delivery: 🍔الطعام
     products_delivery: 🍎 المنتجات

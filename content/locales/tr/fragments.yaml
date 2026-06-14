@@ -1,0 +1,20 @@
+version: '1.0'
+fragments:
+  button_main_menu: Ana menü
+  button_our_chats: Sohbetlerimiz
+  button_info_general: Bilgi
+  button_info_ekpa: EKPA hakkında her şey
+  button_delivery: Teslimat
+  button_transport: Ulaşım
+  button_phone_numbers: Önemli telefon numaraları
+  button_important_documents: İkamet / Kayıt / Belgeler
+  button_android: Android
+  button_iphone: iPhone
+  button_markets: Pazarlar
+  button_other_markets: Diğer pazarlar
+  button_main_chat: EKPA Ana Sohbet
+  button_suggest_changes: Değişiklik öner
+  button_address: Adresimiz
+  button_directions: Sitede ve çevresinde
+  button_aid_kit: İlk yardım çantası
+  button_bot_link: Bot bağlantısı

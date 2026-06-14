@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: IMPORTANT_DOCUMENTS
-  text: '*📝 تصريح الإقامة / التسجيل / المستندات*'
+  text: '*📝 {{button_important_documents}}*'
   button_texts:
     check_application_status: ✅ التحقق من حالة طلب تصريح الإقامة الخاص بك
     get_id_number: 🆔 معرفة رقم تصريح الإقامة

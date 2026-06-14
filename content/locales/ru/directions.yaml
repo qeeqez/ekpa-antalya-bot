@@ -1,9 +1,9 @@
 version: '1.0'
 screens:
 - id: DIRECTIONS
-  text: '*В комплексе и рядом*'
+  text: '*{{button_directions}}*'
   button_texts:
-    markets: 🧺 Рынки
+    markets: 🧺 {{button_markets}}
     shops: 🍎 Магазины
     shopping_centers: 🛍 ТЦ
     print_photo: 🖨️ Печать и Фото 📸
@@ -50,7 +50,7 @@ screens:
 
     '
   button_texts:
-    all_markets: 🧺 Другие рынки
+    all_markets: 🧺 {{button_other_markets}}
 - id: ALL_MARKETS
   text: '*Рынки:*
 

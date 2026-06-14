@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: PHONE_NUMBERS
-  text: '*📞 Важные телефоны*'
+  text: '*📞 {{button_phone_numbers}}*'
   button_texts:
-    ekpa_management: ☎️ Управление EKPA
-    emergency: 🆘 Экстренные службы
-    other_phones: 📲 Другое
-    embassy: 🏛️ Посольства
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
 - id: EKPA_MANAGEMENT
   text: '*Ekpa:*
 
@@ -49,10 +49,10 @@ screens:
 - id: EMBASSY
   text: '*🏛️ Посольства*'
   button_texts:
-    russia_embassy: 🇷🇺 России
-    ukraine_embassy: 🇺🇦 Украины
-    kazakhstan_embassy: 🇰🇿 Казахстана
-    belarus_embassy: 🇧🇾 Беларуси
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
 - id: RUSSIA_EMBASSY
   text: '<u><b>Генеральное Консульство России в Анталье</b></u>
 

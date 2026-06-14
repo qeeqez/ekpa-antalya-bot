@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: PHONE_NUMBERS
-  text: '*📞 Önemli telefon numaraları*'
+  text: '*📞 {{button_phone_numbers}}*'
   button_texts:
-    ekpa_management: ☎️EKPA yönetimi
-    emergency: 🆘 Acil servisler
-    other_phones: 📲 Diğer
-    embassy: 🏛️ Elçilikler
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
 - id: EKPA_MANAGEMENT
   text: '*Ekpa:*
 
@@ -45,10 +45,10 @@ screens:
 - id: EMBASSY
   text: '*🏛️ Elçilikler*'
   button_texts:
-    russia_embassy: 🇷🇺 Rusya
-    ukraine_embassy: 🇺🇦 Ukrayna
-    kazakhstan_embassy: 🇰🇿Kazakistan
-    belarus_embassy: 🇧🇾 Beyaz Rusya
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
 - id: RUSSIA_EMBASSY
   text: '<u><b>Rusya''nın Antalya Başkonsolosluğu</b></u>
 

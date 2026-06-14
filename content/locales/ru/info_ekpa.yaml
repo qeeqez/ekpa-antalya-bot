@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: INFO_EKPA
-  text: '*🌟 Все о Ekpa*'
+  text: '*🌟 {{button_info_ekpa}}*'
   button_texts:
     management_office: 🧑‍💼 Офис УК
     how_to_pay: 💰 Оплатить

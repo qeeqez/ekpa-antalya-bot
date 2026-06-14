@@ -1,24 +1,24 @@
 version: '1.0'
 commands:
 - command: /start
-  description: Главное меню
+  description: '{{button_main_menu}}'
 - command: /menu
-  description: Главное меню
+  description: '{{button_main_menu}}'
 - command: /botlink
-  description: Ссылка на Бота
+  description: '{{button_bot_link}}'
 - command: /ourchats
-  description: Наши Чаты
+  description: '{{button_our_chats}}'
 screens:
 - id: MAIN_MENU
-  text: '*Главное меню*'
+  text: '*{{button_main_menu}}*'
   button_texts:
-    ekpa_main_chat: 🏠 Основной чат EKPA
-    our_chats: 💬 Наши Чаты
-    directions: 🏡 В Комплексе и рядом
-    info_useful: ⭐️ Информация
-    info_ekpa: 🌟 Все о EKPA
-    address: 📍 Наш Адрес
-    suggest_changes: ✍️ Предложить изменения
+    ekpa_main_chat: 🏠 {{button_main_chat}}
+    our_chats: 💬 {{button_our_chats}}
+    directions: 🏡 {{button_directions}}
+    info_useful: ⭐️ {{button_info_general}}
+    info_ekpa: 🌟 {{button_info_ekpa}}
+    address: 📍 {{button_address}}
+    suggest_changes: ✍️ {{button_suggest_changes}}
 - id: ADDRESS
   text: '*Наш адрес:*
 
@@ -67,21 +67,14 @@ screens:
 
     '
 - id: BOT_LINK
-  text: '*Ссылка на бота:*
+  text: '*{{button_bot_link}}:*
 
 
     https://t\.me/EkpaAntalyaBot
 
 
-    Поделись ссылкой с соседями 😊
-
-    '
+    Поделись ссылкой с соседями 😊'
 - id: OUR_CHATS_INFO
-  text: '*💬 Наши Чаты*
-
-
-    Выберите интересующий вас чат из меню ниже\.
-
-    '
+  text: '*💬 {{button_our_chats}}*'
   button_texts:
-    our_chats_detailed: 📋 Список чатов
+    our_chats_detailed: 📋 {{button_our_chats}}

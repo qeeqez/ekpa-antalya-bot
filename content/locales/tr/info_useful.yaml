@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: INFO_USEFUL
-  text: '*⭐️ Bilgi*'
+  text: '*⭐️ {{button_info_general}}*'
   button_texts:
-    important_docs: 📝 Oturma izni / Kayıt / Belgeler
-    delivery: 🚚 Teslimat
-    aid_kit: ❤️ İlk yardım çantası
-    transport: 🚌 Ulaşım
+    important_docs: 📝 {{button_important_documents}}
+    delivery: 🚚 {{button_delivery}}
+    aid_kit: ❤️ {{button_aid_kit}}
+    transport: 🚌 {{button_transport}}
     phone_unlock: 📲 Telefonunuzun kilidini açın
     car_fine: 🚗 Araba iyi
-    phone_numbers: 📱️ Faydalı telefon numaraları
+    phone_numbers: 📱️ {{button_phone_numbers}}

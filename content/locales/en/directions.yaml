@@ -1,9 +1,9 @@
 version: '1.0'
 screens:
 - id: DIRECTIONS
-  text: '*In the complex and nearby*'
+  text: '*{{button_directions}}*'
   button_texts:
-    markets: 🧺 Markets
+    markets: 🧺 {{button_markets}}
     shops: 🍎 Stores
     shopping_centers: 🛍 shopping center
     print_photo: 🖨️ Print and Photo 📸
@@ -48,7 +48,7 @@ screens:
 
     📍[Güneş Market](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 km\)'
   button_texts:
-    all_markets: 🧺 Other markets
+    all_markets: 🧺 {{button_other_markets}}
 - id: ALL_MARKETS
   text: '*Markets:*
 

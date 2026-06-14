@@ -3,11 +3,11 @@ screens:
 - id: AID_KIT
   text: '*❤️ İlk yardım çantası*'
   button_texts:
-    ambulance: 🚑 Ambulans
-    hospitals: 🏥Hastaneler
-    pharmacies: 🧬 Eczaneler
-    medicine: 💊Türk ilaçları
-    polyclinic: 🧑‍⚕️ Ücretsiz ilaç
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
 - id: AMBULANCE
   text: '*🚑 Ambulans*
 
@@ -52,9 +52,9 @@ screens:
 
     \- Güncel olanlar web sitesinde veya uygulamada görüntülenebilir'
   button_texts:
-    pharmacies_site: 🌎 Nöbetçi eczanelerin bulunduğu web sitesi
-    pharmacies_android: 🤖Android
-    pharmacies_iphone: 📱iPhone
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
 - id: HOSPITALS
   text: '*🏥Hastaneler\- Hastane*
 
@@ -96,7 +96,7 @@ screens:
 
     📍 Haritada hastaneleri *Hastane*\ kelimesini kullanarak arayın.'
   button_texts:
-    hospitals_insurance_site: 🌎 Sigortalı bir sağlık kurumu arayın
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
 - id: POLYCLINIC
   text: '*🧑‍⚕️ Ücretsiz ilaç*
 
@@ -157,9 +157,9 @@ screens:
 
     ⭐ Artık e\-Nabız\ web sitesi ve uygulaması üzerinden *Doktor randevusu / Randevu / Randevu* alabilirsiniz.'
   button_texts:
-    polyclinic_site: 🌎 Doktor randevusu alabileceğiniz web sitesi
-    polyclinic_android: 🤖Android
-    polyclinic_iphone: 📱iPhone
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
 - id: MEDICINE
   text: '*💊Türk ilaçları*
 

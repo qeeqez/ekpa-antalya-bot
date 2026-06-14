@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: INFO_USEFUL
-  text: '*⭐️ Information*'
+  text: '*⭐️ {{button_info_general}}*'
   button_texts:
-    important_docs: 📝 Residence permit / Registration / Documents
-    delivery: 🚚 Delivery
-    aid_kit: ❤️ First aid kit
-    transport: 🚌 Transport
+    important_docs: 📝 {{button_important_documents}}
+    delivery: 🚚 {{button_delivery}}
+    aid_kit: ❤️ {{button_aid_kit}}
+    transport: 🚌 {{button_transport}}
     phone_unlock: 📲 Unlock your phone
     car_fine: 🚗 Car fine
-    phone_numbers: 📱️ Useful phone numbers
+    phone_numbers: 📱️ {{button_phone_numbers}}

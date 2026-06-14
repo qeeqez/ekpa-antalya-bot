@@ -1,0 +1,20 @@
+version: '1.0'
+fragments:
+  button_main_menu: القائمة الرئيسية
+  button_our_chats: محادثاتنا
+  button_info_general: معلومات
+  button_info_ekpa: كل شيء عن EKPA
+  button_delivery: التوصيل
+  button_transport: النقل
+  button_phone_numbers: أرقام هواتف مهمة
+  button_important_documents: الإقامة / التسجيل / المستندات
+  button_android: Android
+  button_iphone: iPhone
+  button_markets: الأسواق
+  button_other_markets: أسواق أخرى
+  button_main_chat: الدردشة الرئيسية EKPA
+  button_suggest_changes: اقترح تغييرات
+  button_address: عنواننا
+  button_directions: في المجمع وما حوله
+  button_aid_kit: حقيبة الإسعافات الأولية
+  button_bot_link: رابط البوت

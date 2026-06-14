@@ -3,11 +3,11 @@ screens:
 - id: AID_KIT
   text: '*❤️ Аптечка*'
   button_texts:
-    ambulance: 🚑 Скорая помощь
-    hospitals: 🏥 Больницы
-    pharmacies: 🧬 Аптеки
-    medicine: 💊 Турецкие лекарства
-    polyclinic: 🧑‍⚕️ Бесплатная медицина
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
 - id: AMBULANCE
   text: '*🚑 Скорая помощь*
 
@@ -56,9 +56,9 @@ screens:
 
     '
   button_texts:
-    pharmacies_site: 🌎 Сайт с дежурными аптеками
-    pharmacies_android: 🤖 Android
-    pharmacies_iphone: 📱 iPhone
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
 - id: HOSPITALS
   text: '*🏥 Больницы \- Hastane*
 
@@ -102,7 +102,7 @@ screens:
 
     '
   button_texts:
-    hospitals_insurance_site: 🌎 Поиск мед учреждения по страховке
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
 - id: POLYCLINIC
   text: '*🧑‍⚕️ Бесплатная медицина*
 
@@ -164,11 +164,9 @@ screens:
 
     '
   button_texts:
-    polyclinic_site: '🌎 Сайт для записи к врачу
-
-      '
-    polyclinic_android: 🤖 Android
-    polyclinic_iphone: 📱 iPhone
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
 - id: MEDICINE
   text: '*💊 Турецкие лекарства*
 

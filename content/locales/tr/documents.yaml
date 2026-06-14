@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: IMPORTANT_DOCUMENTS
-  text: '*📝 İkamet izni / Kayıt / Belgeler*'
+  text: '*📝 {{button_important_documents}}*'
   button_texts:
     check_application_status: ✅ Oturma izni başvurunuzun durumunu kontrol edin
     get_id_number: 🆔 Oturma izni numarasını öğrenin

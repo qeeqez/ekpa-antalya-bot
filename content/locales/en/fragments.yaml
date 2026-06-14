@@ -1,0 +1,20 @@
+version: '1.0'
+fragments:
+  button_main_menu: Main menu
+  button_our_chats: Our Chats
+  button_info_general: Information
+  button_info_ekpa: All about EKPA
+  button_delivery: Delivery
+  button_transport: Transport
+  button_phone_numbers: Important phone numbers
+  button_important_documents: Residence permit / Registration / Documents
+  button_android: Android
+  button_iphone: iPhone
+  button_markets: Markets
+  button_other_markets: Other markets
+  button_main_chat: EKPA Main Chat
+  button_suggest_changes: Suggest changes
+  button_address: Our Address
+  button_directions: In and around the complex
+  button_aid_kit: First aid kit
+  button_bot_link: Bot link

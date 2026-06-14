@@ -1,12 +1,12 @@
 version: '1.0'
 screens:
 - id: PHONE_NUMBERS
-  text: '*📞 Important phone numbers*'
+  text: '*📞 {{button_phone_numbers}}*'
   button_texts:
-    ekpa_management: ☎️ EKPA management
-    emergency: 🆘 Emergency services
-    other_phones: 📲 Other
-    embassy: 🏛️ Embassies
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
 - id: EKPA_MANAGEMENT
   text: '*Ekpa:*
 
@@ -45,10 +45,10 @@ screens:
 - id: EMBASSY
   text: '*🏛️ Embassies*'
   button_texts:
-    russia_embassy: 🇷🇺 Russia
-    ukraine_embassy: 🇺🇦 Ukraine
-    kazakhstan_embassy: 🇰🇿 Kazakhstan
-    belarus_embassy: 🇧🇾 Belarus
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
 - id: RUSSIA_EMBASSY
   text: '<u><b>Consulate General of Russia in Antalya</b></u>
 

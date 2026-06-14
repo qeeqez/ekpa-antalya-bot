@@ -75,17 +75,6 @@ func (r *LocalizedContentRenderer) cloneScreen(screen *domain.Screen) *domain.Sc
 	return &clone
 }
 
-func cloneStringMap(values map[string]string) map[string]string {
-	if len(values) == 0 {
-		return nil
-	}
-
-	clone := make(map[string]string, len(values))
-	maps.Copy(clone, values)
-
-	return clone
-}
-
 func (r *LocalizedContentRenderer) expandScreenFragments(screen *domain.Screen, localeCode string) {
 	screen.Text = r.expandText(screen.Text, localeCode)
 	for rowIdx := range screen.InlineKeyboard.Rows {

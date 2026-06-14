@@ -1,19 +1,14 @@
 package config
 
 import (
-	"errors"
 	"fmt"
-	"maps"
 	"os"
 	"path/filepath"
-	"regexp"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"gopkg.in/yaml.v3"
 )
-
-var fragmentPattern = regexp.MustCompile(`\{\{([a-zA-Z0-9_]+)\}\}`)
 
 // ContentRepository manages all bot content (screens, commands, etc.)
 type ContentRepository struct {
@@ -166,32 +161,6 @@ func (r *ContentRepository) loadLocaleDirectory(localeDir string, localeCode str
 	return nil
 }
 
-func (r *ContentRepository) validateMergedScreens() error {
-	for _, screen := range r.catalog.Screens {
-		if err := r.validateSharedScreen(screen); err != nil {
-			return fmt.Errorf("invalid shared screen %s: %w", screen.ID, err)
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) validateLoadedCatalog() error {
-	if err := r.validateMergedScreens(); err != nil {
-		return err
-	}
-
-	if err := r.validateRequiredLocaleBundles(); err != nil {
-		return err
-	}
-
-	if err := r.validateDefaultFragments(); err != nil {
-		return err
-	}
-
-	return nil
-}
-
 // loadContentFile loads a single content file
 func (r *ContentRepository) loadContentFile(path string) error {
 	data, err := os.ReadFile(path)
@@ -248,180 +217,6 @@ func (r *ContentRepository) parseLocalizedContentFile(data []byte) (*LocaleConte
 		return nil, fmt.Errorf("failed to parse localized content: %w", err)
 	}
 	return &content, nil
-}
-
-// registerScreens registers all screens from a content file
-func (r *ContentRepository) registerScreens(screens []domain.ScreenTemplate) error {
-	for i := range screens {
-		screen := &screens[i]
-		if _, exists := r.catalog.Screens[screen.ID]; exists {
-			return fmt.Errorf("duplicate screen ID: %s", screen.ID)
-		}
-		r.catalog.Screens[screen.ID] = screen
-	}
-	return nil
-}
-
-func (r *ContentRepository) validateSharedScreen(screen *domain.ScreenTemplate) error {
-	if screen.ID == "" {
-		return errors.New("screen ID cannot be empty")
-	}
-
-	for rowIdx, row := range screen.InlineKeyboard.Rows {
-		for btnIdx, btn := range row.Buttons {
-			if err := r.validateSharedButton(btn); err != nil {
-				return fmt.Errorf("invalid button at row %d, position %d: %w", rowIdx, btnIdx, err)
-			}
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) validateSharedButton(button domain.Button) error {
-	switch button.Type {
-	case domain.ButtonTypeCallback:
-		if button.CallbackData == "" {
-			return domain.ErrInvalidButton("callback button must have callback data")
-		}
-	case domain.ButtonTypeURL:
-		if button.URL == "" {
-			return domain.ErrInvalidButton("URL button must have URL")
-		}
-	default:
-		return domain.ErrInvalidButton("unknown button type: " + string(button.Type))
-	}
-
-	return nil
-}
-
-// registerCommands registers all commands from a content file.
-func (r *ContentRepository) registerCommands(commands []domain.CommandTemplate) error {
-	for i := range commands {
-		command := &commands[i]
-		if _, exists := r.catalog.Commands[command.Command]; exists {
-			return fmt.Errorf("duplicate command: %s", command.Command)
-		}
-		r.catalog.Commands[command.Command] = command
-		r.catalog.CommandOrder = append(r.catalog.CommandOrder, command.Command)
-	}
-	return nil
-}
-
-func (r *ContentRepository) materializeScreens() map[string]*domain.Screen {
-	screens := make(map[string]*domain.Screen, len(r.catalog.Screens))
-	for id, template := range r.catalog.Screens {
-		screens[id] = template.ToScreen()
-	}
-	return screens
-}
-
-func (r *ContentRepository) validateRequiredLocaleBundles() error {
-	for _, localeCode := range locale.SupportedReleaseLocales() {
-		bundle, ok := r.catalog.Bundles[localeCode]
-		if !ok || bundle == nil {
-			return fmt.Errorf("missing locale bundle for %s", localeCode)
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) validateDefaultFragments() error {
-	defaultBundle, ok := r.catalog.Bundles[locale.DefaultLocale]
-	if !ok || defaultBundle == nil {
-		return fmt.Errorf("missing default locale bundle for %s", locale.DefaultLocale)
-	}
-
-	requiredFragments := r.collectFragmentReferences()
-	for key := range requiredFragments {
-		if _, ok := defaultBundle.Fragments[key]; !ok {
-			return fmt.Errorf("missing default fragment %q", key)
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) collectFragmentReferences() map[string]struct{} {
-	required := make(map[string]struct{})
-
-	for _, screen := range r.catalog.Screens {
-		r.collectFragmentReferencesFromText(required, screen.Text)
-		for _, row := range screen.InlineKeyboard.Rows {
-			for _, button := range row.Buttons {
-				r.collectFragmentReferencesFromText(required, button.Text)
-			}
-		}
-	}
-
-	for _, bundle := range r.catalog.Bundles {
-		for _, screen := range bundle.Screens {
-			r.collectFragmentReferencesFromText(required, screen.Text)
-			for _, text := range screen.ButtonTexts {
-				r.collectFragmentReferencesFromText(required, text)
-			}
-		}
-		for _, command := range bundle.Commands {
-			r.collectFragmentReferencesFromText(required, command.Description)
-		}
-		for _, text := range bundle.Fragments {
-			r.collectFragmentReferencesFromText(required, text)
-		}
-	}
-
-	return required
-}
-
-func (r *ContentRepository) collectFragmentReferencesFromText(required map[string]struct{}, text string) {
-	for _, match := range fragmentPattern.FindAllStringSubmatch(text, -1) {
-		if len(match) < 2 {
-			continue
-		}
-		required[match[1]] = struct{}{}
-	}
-}
-
-func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, localeCode, path string) error {
-	bundle := r.catalog.Bundle(localeCode)
-	for _, localized := range screens {
-		if _, ok := r.catalog.Screens[localized.ID]; !ok {
-			return fmt.Errorf("localized screen %s in %s has no shared base screen", localized.ID, path)
-		}
-
-		bundle.Screens[localized.ID] = domain.ScreenLocale{
-			Text:        localized.Text,
-			ButtonTexts: cloneStringMap(localized.ButtonTexts),
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) applyLocalizedCommands(commands []LocalizedCommand, localeCode, path string) error {
-	bundle := r.catalog.Bundle(localeCode)
-	for _, localized := range commands {
-		if _, found := r.catalog.Commands[localized.Command]; !found {
-			return fmt.Errorf("localized command %s in %s has no shared base command", localized.Command, path)
-		}
-
-		bundle.Commands[localized.Command] = domain.CommandLocale{
-			Description: localized.Description,
-		}
-	}
-
-	return nil
-}
-
-func (r *ContentRepository) applyLocalizedFragments(fragments map[string]string, localeCode string) error {
-	if len(fragments) == 0 {
-		return nil
-	}
-
-	bundle := r.catalog.Bundle(locale.Normalize(localeCode))
-	maps.Copy(bundle.Fragments, fragments)
-
-	return nil
 }
 
 // GetScreenForLocale returns a screen by ID localized for the given Telegram locale.

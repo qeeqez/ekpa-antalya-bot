@@ -10,6 +10,7 @@ import (
 	"github.com/mymmrac/telego/telegoutil"
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
 
 // CommandHandler handles bot commands
@@ -45,15 +46,16 @@ func (h *CommandHandler) Handle(ctx context.Context, update telego.Update) error
 	message := update.Message
 	chatID := telegoutil.ID(message.Chat.ID)
 	command := h.normalizeCommand(message.Text)
+	localeCode := locale.FromUpdate(update)
 
 	slog.Info("Handling command", "command", command, "chat_id", message.Chat.ID, "user_id", message.From.ID)
 
 	// Handle special /start command
 	if command == "/start" {
-		return h.handleStart(ctx, chatID)
+		return h.handleStart(ctx, chatID, localeCode)
 	}
 
-	return h.handleRegisteredCommand(ctx, chatID, command)
+	return h.handleRegisteredCommand(ctx, chatID, command, localeCode)
 }
 
 // normalizeCommand removes bot username from command if present
@@ -71,14 +73,14 @@ func (h *CommandHandler) normalizeCommand(command string) string {
 }
 
 // handleRegisteredCommand handles commands registered in the command registry
-func (h *CommandHandler) handleRegisteredCommand(ctx context.Context, chatID telego.ChatID, command string) error {
+func (h *CommandHandler) handleRegisteredCommand(ctx context.Context, chatID telego.ChatID, command string, localeCode string) error {
 	cmd, found := h.content.GetCommands().GetCommand(command)
 	if !found {
 		slog.Debug("Command not recognized", "command", command)
 		return nil
 	}
 
-	screen, err := h.content.GetScreen(cmd.ScreenID)
+	screen, err := h.content.GetScreenForLocale(cmd.ScreenID, localeCode)
 	if err != nil {
 		slog.Error("Failed to get screen for command", "screen_id", cmd.ScreenID, "command", command, "error", err)
 		return fmt.Errorf("failed to get screen: %w", err)
@@ -92,8 +94,8 @@ func (h *CommandHandler) handleRegisteredCommand(ctx context.Context, chatID tel
 }
 
 // handleStart handles the /start command with special pinning logic
-func (h *CommandHandler) handleStart(ctx context.Context, chatID telego.ChatID) error {
-	screen, err := h.getMainMenuScreen()
+func (h *CommandHandler) handleStart(ctx context.Context, chatID telego.ChatID, localeCode string) error {
+	screen, err := h.getMainMenuScreen(localeCode)
 	if err != nil {
 		return err
 	}
@@ -107,8 +109,8 @@ func (h *CommandHandler) handleStart(ctx context.Context, chatID telego.ChatID) 
 }
 
 // getMainMenuScreen retrieves the main menu screen
-func (h *CommandHandler) getMainMenuScreen() (*domain.Screen, error) {
-	screen, err := h.content.GetScreen("MAIN_MENU")
+func (h *CommandHandler) getMainMenuScreen(localeCode string) (*domain.Screen, error) {
+	screen, err := h.content.GetScreenForLocale("MAIN_MENU", localeCode)
 	if err != nil {
 		return nil, fmt.Errorf("failed to get main menu: %w", err)
 	}

@@ -1,5 +1,7 @@
 package domain
 
+import "github.com/qeeqez/ekpaantalyabot/internal/locale"
+
 // NavigationHierarchy defines the navigation structure and parent-child relationships
 type NavigationHierarchy struct {
 	Parent string // Parent screen ID (auto-detected)
@@ -120,7 +122,7 @@ func (r *NavigationRegistry) GetHierarchy(screenID string) (NavigationHierarchy,
 }
 
 // AddAutoNavigation adds automatic navigation buttons to a screen
-func (r *NavigationRegistry) AddAutoNavigation(screen *Screen) *Screen {
+func (r *NavigationRegistry) AddAutoNavigation(screen *Screen, localeCode string) *Screen {
 	enhanced := r.cloneScreen(screen)
 
 	hierarchy, exists := r.GetHierarchy(screen.ID)
@@ -128,7 +130,7 @@ func (r *NavigationRegistry) AddAutoNavigation(screen *Screen) *Screen {
 		return enhanced
 	}
 
-	navButtons := r.buildNavigationButtons(hierarchy)
+	navButtons := r.buildNavigationButtons(hierarchy, locale.Normalize(localeCode))
 	if len(navButtons) > 0 {
 		r.appendNavigationRow(enhanced, navButtons)
 	}
@@ -145,16 +147,16 @@ func (r *NavigationRegistry) cloneScreen(screen *Screen) *Screen {
 }
 
 // buildNavigationButtons creates navigation buttons based on hierarchy
-func (r *NavigationRegistry) buildNavigationButtons(hierarchy NavigationHierarchy) []Button {
+func (r *NavigationRegistry) buildNavigationButtons(hierarchy NavigationHierarchy, localeCode string) []Button {
 	var navButtons []Button
 
 	// Add back button only if parent is not MAIN_MENU
 	if r.shouldAddBackButton(hierarchy) {
-		navButtons = append(navButtons, r.createBackButton(hierarchy.Parent))
+		navButtons = append(navButtons, r.createBackButton(hierarchy.Parent, localeCode))
 	}
 
 	// Always add main menu button (except for main menu itself)
-	navButtons = append(navButtons, r.createMainMenuButton())
+	navButtons = append(navButtons, r.createMainMenuButton(localeCode))
 
 	return navButtons
 }
@@ -165,20 +167,20 @@ func (r *NavigationRegistry) shouldAddBackButton(hierarchy NavigationHierarchy) 
 }
 
 // createBackButton creates a back button for the given parent
-func (r *NavigationRegistry) createBackButton(parent string) Button {
+func (r *NavigationRegistry) createBackButton(parent string, localeCode string) Button {
 	return Button{
 		ID:           "auto_back",
-		Text:         "◀️ Назад",
+		Text:         locale.Text("auto_back", localeCode),
 		Type:         ButtonTypeCallback,
 		CallbackData: parent + "_BUTTON",
 	}
 }
 
 // createMainMenuButton creates a main menu button
-func (r *NavigationRegistry) createMainMenuButton() Button {
+func (r *NavigationRegistry) createMainMenuButton(localeCode string) Button {
 	return Button{
 		ID:           "auto_main_menu",
-		Text:         "🏠 В главное меню",
+		Text:         locale.Text("auto_main_menu", localeCode),
 		Type:         ButtonTypeCallback,
 		CallbackData: "MAIN_MENU_BUTTON",
 	}

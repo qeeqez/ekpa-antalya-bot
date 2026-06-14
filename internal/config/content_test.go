@@ -9,12 +9,16 @@ import (
 )
 
 const (
-	testMainMenuID    = "MAIN_MENU"
-	testScreenID      = "TEST_SCREEN"
-	testButtonID      = "test_btn"
-	testButtonText    = "🧪 Test Screen"
-	testScreenText    = "Test message"
-	testContentButton = "content_btn"
+	testMainMenuID           = "MAIN_MENU"
+	testScreenID             = "TEST_SCREEN"
+	testButtonID             = "test_btn"
+	testButtonText           = "🧪 Test Screen"
+	testButtonTextEnglish    = "🧪 Test Screen EN"
+	testScreenText           = "Test message"
+	testScreenTextEnglish    = "Test message EN"
+	testCommandDescription   = "Главное меню"
+	testCommandDescriptionEN = "Main menu"
+	testContentButton        = "content_btn"
 )
 
 func TestLoadContentFile(t *testing.T) {
@@ -22,6 +26,13 @@ func TestLoadContentFile(t *testing.T) {
 
 	// Create test YAML file with MAIN_MENU and a child screen
 	testYAML := `version: "1.0"
+commands:
+  - command: "/start"
+    description: "` + testCommandDescription + `"
+    screen_id: "` + testMainMenuID + `"
+    locales:
+      en:
+        description: "` + testCommandDescriptionEN + `"
 screens:
   - id: "` + testMainMenuID + `"
     text: "Main Menu"
@@ -47,6 +58,15 @@ screens:
               text: "Content Button"
               type: "callback"
               callback: "CONTENT_CALLBACK"
+    locales:
+      en:
+        text: "` + testScreenTextEnglish + `"
+        button_texts:
+          ` + testContentButton + `: "Content Button EN"
+      tr:
+        text: "Test mesajı"
+        button_texts:
+          ` + testContentButton + `: "İçerik butonu"
 `
 
 	testFile := filepath.Join(tmpDir, "test.yaml")
@@ -104,6 +124,29 @@ screens:
 
 	if lastRow.Buttons[0].Text != "🏠 В главное меню" {
 		t.Errorf("Expected main menu button, got '%s'", lastRow.Buttons[0].Text)
+	}
+
+	localizedScreen, err := repo.GetScreenForLocale(testScreenID, "en-GB")
+	if err != nil {
+		t.Fatalf("Failed to get localized screen: %v", err)
+	}
+
+	if localizedScreen.Text != testScreenTextEnglish {
+		t.Fatalf("Expected localized text %q, got %q", testScreenTextEnglish, localizedScreen.Text)
+	}
+
+	if got := localizedScreen.InlineKeyboard.Rows[0].Buttons[0].Text; got != "Content Button EN" {
+		t.Fatalf("Expected localized button text %q, got %q", "Content Button EN", got)
+	}
+
+	localizedCommands := repo.GetCommandsForLocale("en")
+	cmd, found := localizedCommands.GetCommand("/start")
+	if !found {
+		t.Fatal("Expected /start command to be present")
+	}
+
+	if cmd.Description != testCommandDescriptionEN {
+		t.Fatalf("Expected localized command description %q, got %q", testCommandDescriptionEN, cmd.Description)
 	}
 }
 

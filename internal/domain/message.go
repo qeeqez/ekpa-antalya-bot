@@ -26,12 +26,19 @@ const (
 
 // Screen represents a single screen/menu in the bot
 type Screen struct {
-	ID                string         `yaml:"id"`
-	Text              string         `yaml:"text"`
-	ParseMode         ParseMode      `yaml:"parse_mode"`
-	DisableWebPreview bool           `yaml:"disable_web_preview"`
-	InlineKeyboard    InlineKeyboard `yaml:"inline_keyboard"`
-	NavigationTargets []Navigation   `yaml:"navigation,omitempty"`
+	ID                string                  `yaml:"id"`
+	Text              string                  `yaml:"text"`
+	ParseMode         ParseMode               `yaml:"parse_mode"`
+	DisableWebPreview bool                    `yaml:"disable_web_preview"`
+	InlineKeyboard    InlineKeyboard          `yaml:"inline_keyboard"`
+	NavigationTargets []Navigation            `yaml:"navigation,omitempty"`
+	Locales           map[string]ScreenLocale `yaml:"locales,omitempty"`
+}
+
+// ScreenLocale stores localized screen text and button labels.
+type ScreenLocale struct {
+	Text        string            `yaml:"text,omitempty"`
+	ButtonTexts map[string]string `yaml:"button_texts,omitempty"`
 }
 
 // Navigation defines how callbacks map to target screens

@@ -9,6 +9,7 @@ import (
 	"github.com/mymmrac/telego/telegoutil"
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
 
 // CallbackHandler handles callback queries from inline buttons
@@ -39,15 +40,16 @@ func (h *CallbackHandler) Priority() int {
 func (h *CallbackHandler) Handle(ctx context.Context, update telego.Update) error {
 	callback := update.CallbackQuery
 	slog.Info("Handling callback", "callback", callback.Data, "user_id", callback.From.ID)
+	localeCode := locale.FromUpdate(update)
 
 	message := h.validateCallbackMessage(callback)
 	if message == nil {
 		return nil
 	}
 
-	targetScreen, err := h.findTargetScreen(callback.Data)
+	targetScreen, err := h.findTargetScreen(callback.Data, localeCode)
 	if err != nil {
-		return h.handleScreenNotFound(ctx, message, callback.Data, err)
+		return h.handleScreenNotFound(ctx, message, callback.Data, localeCode, err)
 	}
 
 	return h.updateMessageWithScreen(ctx, message, targetScreen)
@@ -63,11 +65,11 @@ func (h *CallbackHandler) validateCallbackMessage(callback *telego.CallbackQuery
 }
 
 // handleScreenNotFound handles the case when a target screen cannot be found
-func (h *CallbackHandler) handleScreenNotFound(ctx context.Context, message *telego.Message, callbackData string, err error) error {
+func (h *CallbackHandler) handleScreenNotFound(ctx context.Context, message *telego.Message, callbackData string, localeCode string, err error) error {
 	slog.Error("Failed to find target screen", "callback", callbackData, "error", err)
 
 	chatID := telegoutil.ID(message.Chat.ID)
-	if _, sendErr := h.sender.SendText(ctx, chatID, "Sorry, unhandled message was sent."); sendErr != nil {
+	if _, sendErr := h.sender.SendText(ctx, chatID, locale.Text("fallback_error", localeCode)); sendErr != nil {
 		slog.Error("Failed to send error message", "error", sendErr)
 	}
 
@@ -87,19 +89,19 @@ func (h *CallbackHandler) updateMessageWithScreen(ctx context.Context, message *
 }
 
 // findTargetScreen finds the target screen for a given callback data
-func (h *CallbackHandler) findTargetScreen(callbackData string) (*domain.Screen, error) {
+func (h *CallbackHandler) findTargetScreen(callbackData string, localeCode string) (*domain.Screen, error) {
 	// Special case: MAIN_MENU_BUTTON always goes to MAIN_MENU
 	if callbackData == "MAIN_MENU_BUTTON" {
-		return h.content.GetScreen("MAIN_MENU")
+		return h.content.GetScreenForLocale("MAIN_MENU", localeCode)
 	}
 
 	// Try to find screen through navigation rules
-	if screen, err := h.findScreenByNavigation(callbackData); err == nil {
+	if screen, err := h.findScreenByNavigation(callbackData, localeCode); err == nil {
 		return screen, nil
 	}
 
 	// Try to use callback data as screen ID directly
-	if screen, err := h.content.GetScreen(callbackData); err == nil {
+	if screen, err := h.content.GetScreenForLocale(callbackData, localeCode); err == nil {
 		return screen, nil
 	}
 
@@ -107,18 +109,18 @@ func (h *CallbackHandler) findTargetScreen(callbackData string) (*domain.Screen,
 }
 
 // findScreenByNavigation searches for a screen by checking navigation rules
-func (h *CallbackHandler) findScreenByNavigation(callbackData string) (*domain.Screen, error) {
+func (h *CallbackHandler) findScreenByNavigation(callbackData string, localeCode string) (*domain.Screen, error) {
 	allScreens := h.content.GetAllScreens()
 
 	for _, screen := range allScreens {
 		// Check if this screen has a navigation rule for this callback
 		if targetID, found := screen.GetNavigationTarget(callbackData); found {
-			return h.content.GetScreen(targetID)
+			return h.content.GetScreenForLocale(targetID, localeCode)
 		}
 
 		// Check if the screen ID directly matches the callback
 		if screen.ID == callbackData {
-			return screen, nil
+			return h.content.GetScreenForLocale(screen.ID, localeCode)
 		}
 	}
 

@@ -2,10 +2,16 @@ package domain
 
 // Command represents a bot command
 type Command struct {
-	Command     string `yaml:"command"`
+	Command     string                   `yaml:"command"`
+	Description string                   `yaml:"description"`
+	ScreenID    string                   `yaml:"screen_id"`
+	IsPinned    bool                     `yaml:"is_pinned"`
+	Locales     map[string]CommandLocale `yaml:"locales,omitempty"`
+}
+
+// CommandLocale stores localized command metadata.
+type CommandLocale struct {
 	Description string `yaml:"description"`
-	ScreenID    string `yaml:"screen_id"`
-	IsPinned    bool   `yaml:"is_pinned"`
 }
 
 // CommandRegistry holds all bot commands

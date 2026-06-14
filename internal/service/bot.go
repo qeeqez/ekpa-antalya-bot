@@ -11,6 +11,7 @@ import (
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/handler"
 	"github.com/qeeqez/ekpaantalyabot/internal/health"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"github.com/qeeqez/ekpaantalyabot/internal/middleware"
 )
 
@@ -180,14 +181,16 @@ func (s *BotService) handleUpdateAsync(ctx context.Context, update telego.Update
 
 // setBotCommands sets the bot's command menu
 func (s *BotService) setBotCommands(ctx context.Context) error {
-	commands := s.content.GetCommands()
-	botCommands := convertToTelegramCommands(commands.Commands)
+	for _, localeCode := range locale.SupportedReleaseLocales() {
+		commands := s.content.GetCommandsForLocale(localeCode)
+		botCommands := convertToTelegramCommands(commands.Commands)
 
-	if err := s.sendCommandsToTelegram(ctx, botCommands); err != nil {
-		return err
+		if err := s.sendCommandsToTelegram(ctx, botCommands, localeCode); err != nil {
+			return err
+		}
 	}
 
-	slog.Info("Bot commands configured", "count", len(botCommands))
+	slog.Info("Bot commands configured", "locales", locale.SupportedReleaseLocales())
 	return nil
 }
 
@@ -212,9 +215,10 @@ func stripCommandPrefix(command string) string {
 }
 
 // sendCommandsToTelegram sends the commands to Telegram API
-func (s *BotService) sendCommandsToTelegram(ctx context.Context, commands []telego.BotCommand) error {
+func (s *BotService) sendCommandsToTelegram(ctx context.Context, commands []telego.BotCommand, localeCode string) error {
 	params := new(telego.SetMyCommandsParams{
-		Commands: commands,
+		Commands:     commands,
+		LanguageCode: localeCode,
 	})
 
 	if err := s.bot.SetMyCommands(ctx, params); err != nil {

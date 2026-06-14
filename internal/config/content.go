@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"gopkg.in/yaml.v3"
 )
 
@@ -136,19 +137,45 @@ func (r *ContentRepository) registerCommands(commands []domain.Command) {
 
 // GetScreen returns a screen by ID with automatic navigation buttons
 func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
+	return r.GetScreenForLocale(screenID, locale.DefaultLocale)
+}
+
+// GetScreenForLocale returns a screen by ID localized for the given Telegram locale.
+func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*domain.Screen, error) {
 	screen, ok := r.screens[screenID]
 	if !ok {
 		return nil, domain.ErrScreenNotFound(screenID)
 	}
 
-	// Add automatic navigation buttons
-	enhancedScreen := r.navigation.AddAutoNavigation(screen)
+	enhancedScreen := r.cloneScreen(screen)
+	r.applyScreenLocale(enhancedScreen, locale.Normalize(localeCode))
+
+	// Add automatic navigation buttons using localized labels.
+	enhancedScreen = r.navigation.AddAutoNavigation(enhancedScreen, locale.Normalize(localeCode))
 	return enhancedScreen, nil
 }
 
 // GetCommands returns the command registry
 func (r *ContentRepository) GetCommands() *domain.CommandRegistry {
-	return r.commands
+	return r.GetCommandsForLocale(locale.DefaultLocale)
+}
+
+// GetCommandsForLocale returns the command registry localized for the given Telegram locale.
+func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.CommandRegistry {
+	normalized := locale.Normalize(localeCode)
+	registry := &domain.CommandRegistry{
+		Commands: make([]domain.Command, 0, len(r.commands.Commands)),
+	}
+
+	for _, cmd := range r.commands.Commands {
+		localized := cmd
+		if localeData, ok := cmd.Locales[normalized]; ok && localeData.Description != "" {
+			localized.Description = localeData.Description
+		}
+		registry.Commands = append(registry.Commands, localized)
+	}
+
+	return registry
 }
 
 // GetAllScreens returns all registered screens
@@ -159,4 +186,38 @@ func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
 // GetNavigationRegistry returns the navigation registry (for debugging/inspection)
 func (r *ContentRepository) GetNavigationRegistry() *domain.NavigationRegistry {
 	return r.navigation
+}
+
+func (r *ContentRepository) cloneScreen(screen *domain.Screen) *domain.Screen {
+	clone := *screen
+	clone.InlineKeyboard.Rows = make([]domain.ButtonRow, len(screen.InlineKeyboard.Rows))
+	for i := range screen.InlineKeyboard.Rows {
+		clone.InlineKeyboard.Rows[i].Buttons = make([]domain.Button, len(screen.InlineKeyboard.Rows[i].Buttons))
+		copy(clone.InlineKeyboard.Rows[i].Buttons, screen.InlineKeyboard.Rows[i].Buttons)
+	}
+	return &clone
+}
+
+func (r *ContentRepository) applyScreenLocale(screen *domain.Screen, localeCode string) {
+	localeData, ok := screen.Locales[localeCode]
+	if !ok {
+		return
+	}
+
+	if localeData.Text != "" {
+		screen.Text = localeData.Text
+	}
+
+	if len(localeData.ButtonTexts) == 0 {
+		return
+	}
+
+	for rowIdx := range screen.InlineKeyboard.Rows {
+		for btnIdx := range screen.InlineKeyboard.Rows[rowIdx].Buttons {
+			button := &screen.InlineKeyboard.Rows[rowIdx].Buttons[btnIdx]
+			if text, ok := localeData.ButtonTexts[button.ID]; ok && text != "" {
+				button.Text = text
+			}
+		}
+	}
 }

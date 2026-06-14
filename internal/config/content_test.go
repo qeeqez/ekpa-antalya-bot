@@ -21,6 +21,37 @@ const (
 	testContentButton        = "content_btn"
 )
 
+func writeLocaleFragmentFile(t *testing.T, dir string, localeCode string) {
+	t.Helper()
+
+	localeDir := filepath.Join(dir, "locales", localeCode)
+	if err := os.MkdirAll(localeDir, 0o755); err != nil {
+		t.Fatalf("Failed to create locale dir %s: %v", localeCode, err)
+	}
+
+	content := `version: "1.0"
+fragments:
+  button_main_menu: "` + localeCode + ` main menu"
+`
+	if err := os.WriteFile(filepath.Join(localeDir, "fragments.yaml"), []byte(content), 0o644); err != nil {
+		t.Fatalf("Failed to write locale fragment file for %s: %v", localeCode, err)
+	}
+}
+
+func writeLocaleBundles(t *testing.T, dir string, localeCodes ...string) {
+	t.Helper()
+
+	for _, localeCode := range localeCodes {
+		writeLocaleFragmentFile(t, dir, localeCode)
+	}
+}
+
+func writeRequiredLocaleBundles(t *testing.T, dir string) {
+	t.Helper()
+
+	writeLocaleBundles(t, dir, "ru", "en", "tr", "ar")
+}
+
 func TestLoadContentFile(t *testing.T) {
 	tmpDir := t.TempDir()
 
@@ -62,10 +93,9 @@ screens:
 		t.Fatalf("Failed to write test file: %v", err)
 	}
 
+	writeRequiredLocaleBundles(t, tmpDir)
+
 	enLocaleDir := filepath.Join(tmpDir, "locales", "en")
-	if err := os.MkdirAll(enLocaleDir, 0o755); err != nil {
-		t.Fatalf("Failed to create locale dir: %v", err)
-	}
 
 	enLocaleYAML := `version: "1.0"
 commands:
@@ -185,6 +215,7 @@ screens:
 
 func TestGetNonExistentScreen(t *testing.T) {
 	tmpDir := t.TempDir()
+	writeRequiredLocaleBundles(t, tmpDir)
 
 	repo, err := config.NewContentRepository(tmpDir)
 	if err != nil {
@@ -199,6 +230,7 @@ func TestGetNonExistentScreen(t *testing.T) {
 
 func TestDuplicateScreenID(t *testing.T) {
 	tmpDir := t.TempDir()
+	writeRequiredLocaleBundles(t, tmpDir)
 
 	// Create YAML with duplicate screen ID
 	testYAML := `version: "1.0"
@@ -218,5 +250,55 @@ screens:
 	_, err := config.NewContentRepository(tmpDir)
 	if err == nil {
 		t.Error("Expected error for duplicate screen ID, got nil")
+	}
+}
+
+func TestMissingDefaultFragmentFails(t *testing.T) {
+	tmpDir := t.TempDir()
+
+	testYAML := `version: "1.0"
+commands:
+  - command: "/start"
+    description: "Главное меню"
+screens:
+  - id: "` + testMainMenuID + `"
+    text: "*{{missing_fragment}}*"
+    parse_mode: "MarkdownV2"
+    inline_keyboard:
+      rows: []
+`
+
+	if err := os.WriteFile(filepath.Join(tmpDir, "test.yaml"), []byte(testYAML), 0o644); err != nil {
+		t.Fatalf("Failed to write test file: %v", err)
+	}
+
+	writeRequiredLocaleBundles(t, tmpDir)
+
+	_, err := config.NewContentRepository(tmpDir)
+	if err == nil {
+		t.Fatal("Expected error for missing default fragment, got nil")
+	}
+}
+
+func TestMissingRequiredLocaleBundleFails(t *testing.T) {
+	tmpDir := t.TempDir()
+
+	testYAML := `version: "1.0"
+screens:
+  - id: "` + testMainMenuID + `"
+    text: "Main menu"
+    inline_keyboard:
+      rows: []
+`
+
+	if err := os.WriteFile(filepath.Join(tmpDir, "test.yaml"), []byte(testYAML), 0o644); err != nil {
+		t.Fatalf("Failed to write test file: %v", err)
+	}
+
+	writeLocaleBundles(t, tmpDir, "ru", "en", "tr")
+
+	_, err := config.NewContentRepository(tmpDir)
+	if err == nil {
+		t.Fatal("Expected error for missing required locale bundle, got nil")
 	}
 }

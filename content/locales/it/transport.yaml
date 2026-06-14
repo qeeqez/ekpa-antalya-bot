@@ -45,15 +45,15 @@ screens:
     \- [La filiale più vicina è qui](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), nel passaggio sotterraneo'
 - id: ANTALYA_CARD
   text: "*\U0001F4B3 Kart Antalya*\n\n ℹ️ Con questa carta la tariffa è più economica\n ℹ️ Puoi pagare per due persone, devi\
-    \ attendere dopo il primo pagamento\n\n \U0001F4CD *Dove acquistare?*\n \\- Nel [mercato Soylu] più vicino(https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
-    \ \\- Nell'applicazione *Antalya Kart*, nella sezione *Punto più vicino*, i punti vendita sono contrassegnati in rosso\n\
-    \n \U0001FA99 *Come ricaricare?*\n \\- Puoi ricaricare in contanti nello stesso luogo in cui acquisti\n \\- Ricarica online\
-    \ con una carta bancaria turca nell'applicazione Antalya Kart\n\n ⁉️ *Ho ricaricato la carta, ma i soldi non sono comparsi*\n\
-    \ \\- Al terminal dell'autobus, premi il pulsante rosso di ricarica\n \\- Tieni premuto per 5 secondi\n\n \U0001F68C *Come\
-    \ visualizzare i percorsi nell'applicazione?*\n \\- Trova un percorso adatto in Google Maps\n \\- Nell'applicazione Antalya\
-    \ Kart, inserisci il numero del percorso nella ricerca\n \\- L'intero percorso e gli autobus grigi verranno visualizzati\
-    \ nei luoghi in cui stanno attualmente viaggiando\n \\- Bandiera \\-\\> fine del percorso, Triangolo \\-\\> inizio\n \\\
-    - La direzione del percorso può essere modificata premendo il pulsante verde"
+    \ attendere dopo il primo pagamento\n\n \U0001F4CD *Dove acquistare?*\n \\- Nel [mercato Soylu] più vicino\\(https://goo\\\
+    .gl/maps/XLS1rGdPT9dvaziG9\\)\n \\- Nell'applicazione *Antalya Kart*, nella sezione *Punto più vicino*, i punti vendita\
+    \ sono contrassegnati in rosso\n\n \U0001FA99 *Come ricaricare?*\n \\- Puoi ricaricare in contanti nello stesso luogo\
+    \ in cui acquisti\n \\- Ricarica online con una carta bancaria turca nell'applicazione Antalya Kart\n\n ⁉️ *Ho ricaricato\
+    \ la carta, ma i soldi non sono comparsi*\n \\- Al terminal dell'autobus, premi il pulsante rosso di ricarica\n \\- Tieni\
+    \ premuto per 5 secondi\n\n \U0001F68C *Come visualizzare i percorsi nell'applicazione?*\n \\- Trova un percorso adatto\
+    \ in Google Maps\n \\- Nell'applicazione Antalya Kart, inserisci il numero del percorso nella ricerca\n \\- L'intero percorso\
+    \ e gli autobus grigi verranno visualizzati nei luoghi in cui stanno attualmente viaggiando\n \\- Bandiera \\-\\> fine\
+    \ del percorso, Triangolo \\-\\> inizio\n \\- La direzione del percorso può essere modificata premendo il pulsante verde"
   button_texts:
     antalya_card_android: 🤖 {{button_android}}
     antalya_card_iphone: 📱 {{button_iphone}}

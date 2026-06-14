@@ -118,7 +118,7 @@ screens:
     🪙 Bargeld oder Karte im Büro der Verwaltungsgesellschaft
 
 
-    💳 Online-Überweisung von einer türkischen Bankkarte auf das Konto:
+    💳 Online\-Überweisung von einer türkischen Bankkarte auf das Konto:
 
 
     🏦 `TR24 0013 4000 0203 8787 9000 01`
@@ -131,7 +131,7 @@ screens:
     ℹ️ `Klima Ekpa 1207` Blockwohnung
 
 
-    ⚠️ Geben Sie unbedingt die Block- und Wohnungsnummern an, für die Sie bezahlen'
+    ⚠️ Geben Sie unbedingt die Block\- und Wohnungsnummern an, für die Sie bezahlen'
 - id: HOW_TO_PAY_ELECTRICITY
   text: '*Strom*
 
@@ -161,7 +161,7 @@ screens:
     *Zahlung:*
 
 
-    💳 *Online im türkischen Internet-Banking*
+    💳 *Online im türkischen Internet\-Banking*
 
     1\. Fatura \(Rechnungszahlung\) \-\> Elektrik \(Strom\) \-\> *CK Akdeniz Elektrik*
 
@@ -174,9 +174,9 @@ screens:
 
     🪙 *Bargeld oder Karte*
 
-    \- In der Turkcell-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- In der Turkcell\-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
-    \- Im PTT-Postamt, [Nächstes Postamt](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+    \- Im PTT\-Postamt, [Nächstes Postamt](https://goo.gl/maps/fwskNzeEbtX9hspz6)
 
     \- In jedem Büro von CK Akdeniz Elektrik, [Nächstes Büro](https://goo.gl/maps/nyumU39FQYJTnFZt9)'
 - id: HOW_TO_PAY_WATER
@@ -205,7 +205,7 @@ screens:
     *Zahlung:*
 
 
-    💳 *Online im türkischen Internet-Banking*
+    💳 *Online im türkischen Internet\-Banking*
 
     1\. Fatura \(Rechnung\) \-\> Su \(Wasser\) \-\> *Antalya Su \(ASAT\)*
 
@@ -218,9 +218,9 @@ screens:
 
     🪙 *Bargeld oder Karte*
 
-    \- In der Turkcell-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- In der Turkcell\-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
-    \- Im PTT-Postamt, [Nächstes Postamt](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+    \- Im PTT\-Postamt, [Nächstes Postamt](https://goo.gl/maps/fwskNzeEbtX9hspz6)
 
     \- Im [ASAT-Hauptsitz](https://goo.gl/maps/3GqKDPPnW8gUUz5q6)'
 - id: HOW_TO_PAY_PHONE_AND_INTERNET
@@ -238,7 +238,7 @@ screens:
 
     🪙 *Bargeld oder Karte*
 
-    \- In der Turkcell-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- In der Turkcell\-Filiale mit einer kleinen Provision [Nächste 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nächste 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
     \- In jedem Büro Ihres Telekommunikationsbetreibers'
 - id: HOW_TO_CONNECT
@@ -279,7 +279,7 @@ screens:
     4\. Vollständige Adresse / Tell Ekpa
 
 
-    📍 *Dask in [Nkolay] bestellen(https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
+    📍 *Dask in [Nkolay] bestellen\(https://goo\.gl/maps/nyumU39FQYJTnFZt9\)*'
 - id: HOW_TO_CONNECT_ELECTRICITY
   text: '*⚡️Strom*
 
@@ -302,7 +302,7 @@ screens:
 
     🧑‍💼*Anzeige beim Strafgesetzbuch:*
 
-    Block- und Wohnungsnummer, sowie Teilnehmernummer für Strom\.
+    Block\- und Wohnungsnummer, sowie Teilnehmernummer für Strom\.
 
 
     ℹ️ Innerhalb eines Werktages wird in der Wohnung Licht erscheinen\.
@@ -335,7 +335,7 @@ screens:
 
     🧑‍💼*Anzeige beim Strafgesetzbuch:*
 
-    Block- und Wohnungsnummer, sowie Teilnehmernummer für Wasser\.
+    Block\- und Wohnungsnummer, sowie Teilnehmernummer für Wasser\.
 
 
     ℹ️ Innerhalb von 3 Werktagen wird Wasser in der Wohnung erscheinen\.
@@ -355,7 +355,7 @@ screens:
     ℹ️ *Um sich mit dem Internet zu verbinden, benötigen Sie eine Aufenthaltserlaubnis \(ikamet\)*
 
 
-    ℹ️ *Heim-Internet in der Türkei unter Vertrag*
+    ℹ️ *Heim\-Internet in der Türkei unter Vertrag*
 
     \- Der Vertrag hat eine Laufzeit von ein oder zwei Jahren
 
@@ -461,7 +461,7 @@ screens:
     ⚠️ *Sie können die Verbindung online nur trennen, wenn Sie mit Ikamet verbunden sind*
 
 
-    📍 *Offline-Wasser in [ASAT] umwandeln(https://goo.gl/maps/PMfUJd315NtC9dur6)*
+    📍 *Offline\-Wasser in [ASAT] umwandeln\(https://goo\.gl/maps/PMfUJd315NtC9dur6\)*
 
 
     💼 *Mitnehmen:*

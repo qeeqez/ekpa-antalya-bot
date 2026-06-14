@@ -27,19 +27,19 @@ screens:
 
     ''''''''
 
-    112 - 🚑 Ambulans
+    112 \- 🚑 Ambulans
 
-    155 - 🚓 Polis
+    155 \- 🚓 Polis
 
-    154 - 🚔 Trafik polisi
+    154 \- 🚔 Trafik polisi
 
-    110 - 🚒 Yangından korunma
+    110 \- 🚒 Yangından korunma
 
-    156 - 👮 Jandarma
+    156 \- 👮 Jandarma
 
-    157 - 🛂 Göç Hizmeti
+    157 \- 🛂 Göç Hizmeti
 
-    118 - ℹ️ Bilgi (telefonlar)
+    118 \- ℹ️ Bilgi \(telefonlar\)
 
     '''''''''
 - id: EMBASSY
@@ -159,9 +159,53 @@ screens:
 
     Web sitesi: http://minsk.emb.mfa.gov.tr/Mission/Contact'
 - id: OTHER_PHONES
-  text: "*Faydalı telefon numaraları:*\n\n ''''\n 115 - Uluslararası operatör\n 141 - Telefonla telgraflar\n 144 - Ailenin\
-    \ Sosyal Koruma Bakanlığı\n 170 - Çalışma ve Sosyal Güvenlik Bakanlığı\n 174 - Yiyecekle ilgili şikayetler\n 175 - Tüketicinin\
-    \ korunması\n 135 - Çalar saat\n 158 - Sahil Güvenlik\n 183 - Sosyal hizmet\n 186 - Elektrik acil servisi\n 187 - Gaz\
-    \ servisi\n 189 - Vergi referansı\n 182 - Doktorlardan ücretsiz randevu sistemi\n 126 - Kablolu televizyon\n\n \U0001F3E5\
-    Hastaneler:\n Antalya - 227 43 43, 243 50 60\n Kemer - 814 15 50, 814 11 41\n Yan - 753 12 21, 753 14 45\n\n Otogar (Antalya)\
-    \ - (242)3311250\n Turist Bilgi Bürosu - (242)2411747\n Türkiye Seyahat Acenteleri Birliği - (242)2431934\n ''''"
+  text: '*Faydalı telefon numaraları:*
+
+
+    ```
+
+    115 - Uluslararası operatör
+
+    141 - Telefonla telgraflar
+
+    144 - Ailenin Sosyal Koruma Bakanlığı
+
+    170 - Çalışma ve Sosyal Güvenlik Bakanlığı
+
+    174 - Yiyecekle ilgili şikayetler
+
+    175 - Tüketicinin korunması
+
+    135 - Çalar saat
+
+    158 - Sahil Güvenlik
+
+    183 - Sosyal hizmet
+
+    186 - Elektrik acil servisi
+
+    187 - Gaz servisi
+
+    189 - Vergi referansı
+
+    182 - Doktorlardan ücretsiz randevu sistemi
+
+    126 - Kablolu televizyon
+
+
+    🏥 Hastaneler:
+
+    Antalya - 227 43 43, 243 50 60
+
+    Kemer - 814 15 50, 814 11 41
+
+    Yan - 753 12 21, 753 14 45
+
+
+    Otogar (Antalya) - (242)3311250
+
+    Turist Bilgi Bürosu - (242)2411747
+
+    Türkiye Seyahat Acenteleri Birliği - (242)2431934
+
+    ```'

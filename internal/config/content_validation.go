@@ -155,6 +155,11 @@ func (r *ContentRepository) validateSharedButton(button domain.Button) error {
 }
 
 func (r *ContentRepository) validateMarkdownV2Content() error {
+	const maxMarkdownV2Errors = 50
+
+	var errs []error
+	totalErrors := 0
+
 	for _, screen := range r.catalog.Screens {
 		if screen.ParseMode != domain.ParseModeMarkdownV2 {
 			continue
@@ -163,12 +168,23 @@ func (r *ContentRepository) validateMarkdownV2Content() error {
 		for localeCode := range r.catalog.Bundles {
 			renderedText := r.renderMarkdownV2Text(screen.ID, localeCode)
 			if err := validateMarkdownV2Text(renderedText); err != nil {
-				return fmt.Errorf("invalid MarkdownV2 text for screen %s locale %s: %w", screen.ID, localeCode, err)
+				totalErrors++
+				if len(errs) < maxMarkdownV2Errors {
+					errs = append(errs, fmt.Errorf("invalid MarkdownV2 text for screen %s locale %s: %w", screen.ID, localeCode, err))
+				}
 			}
 		}
 	}
 
-	return nil
+	if totalErrors == 0 {
+		return nil
+	}
+
+	if totalErrors > len(errs) {
+		errs = append(errs, fmt.Errorf("... %d additional MarkdownV2 issues omitted", totalErrors-len(errs)))
+	}
+
+	return errors.Join(errs...)
 }
 
 func (r *ContentRepository) renderMarkdownV2Text(screenID, localeCode string) string {

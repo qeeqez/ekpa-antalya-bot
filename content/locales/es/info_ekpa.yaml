@@ -395,7 +395,7 @@ screens:
 
     \- Comparte Internet desde tu teléfono
 
-    \- Pide ayuda a tus vecinos, comparte Wi-Fi'
+    \- Pide ayuda a tus vecinos, comparte Wi\-Fi'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️ ¿Cómo desactivarlo?*'
   button_texts:

@@ -55,9 +55,9 @@ screens:
 
     \- Blokowany jest nie sam telefon, ale IMEI, czyli\. określone gniazdo karty SIM\.
 
-    \- Żadne karty SIM, połączenia ani SMS-y nie będą działać\. Telefon wyświetla komunikat „Brak sieci” i „Telefon niedozwolony”\.
+    \- Żadne karty SIM, połączenia ani SMS\-y nie będą działać\. Telefon wyświetla komunikat „Brak sieci” i „Telefon niedozwolony”\.
 
-    \- Sam telefon w dalszym ciągu działa, łącznie z Wi-Fi i połączeniami w komunikatorach internetowych przez Internet\.'
+    \- Sam telefon w dalszym ciągu działa, łącznie z Wi\-Fi i połączeniami w komunikatorach internetowych przez Internet\.'
   button_texts:
     phone_unlock_imei_free: 🆓 Opcja bezpłatna
     phone_unlock_imei_paid: 💰 Opcja płatna (30000 TL)

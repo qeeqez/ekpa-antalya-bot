@@ -391,7 +391,7 @@ screens:
 
     \- Udostępnij Internet ze swojego telefonu
 
-    \- Poproś sąsiadów o pomoc, udostępnij Wi-Fi'
+    \- Poproś sąsiadów o pomoc, udostępnij Wi\-Fi'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️ Jak wyłączyć?*'
   button_texts:

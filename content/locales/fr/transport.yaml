@@ -42,18 +42,19 @@ screens:
 
     \- Ne peut être effectué que dans les principales agences AntalyaKart
 
-    \- [L''agence la plus proche est ici] (https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), dans le passage souterrain'
+    \- [L''agence la plus proche est ici](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), dans le passage souterrain'
 - id: ANTALYA_CARD
   text: "*\U0001F4B3 Antalya Kart*\n\n ℹ️ Le tarif est moins cher avec cette carte\n ℹ️ Vous pouvez payer pour deux personnes,\
-    \ vous devez attendre après le premier paiement\n\n \U0001F4CD *Où acheter ?*\n \\- Au [marché Soylu] le plus proche (https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
-    \ \\- Dans l'application *Antalya Kart*, dans la section *Point le plus proche*, les points de vente sont marqués en rouge\n\
-    \n \U0001FA99 *Comment recharger ?*\n \\- Vous pouvez recharger en espèces au même endroit où vous achetez\n \\- Recharger\
-    \ en ligne avec une carte bancaire turque dans l'application Antalya Kart\n\n ⁉️ *J'ai rechargé la carte, mais l'argent\
-    \ n'est pas apparu*\n \\- Au terminal du bus, appuyez sur le bouton de recharge rouge\n \\- Maintenez pendant 5 secondes\n\
-    \n \U0001F68C *Comment visualiser les itinéraires dans l'application ?*\n \\- Trouver un itinéraire approprié dans Google\
-    \ Maps\n \\- Dans l'application Antalya Kart, entrez le numéro de route dans la recherche\n \\- L'intégralité du parcours\
-    \ et les bus gris seront affichés aux endroits où ils voyagent actuellement\n \\- Flag \\-\\> fin du parcours, Triangle\
-    \ \\-\\> début\n \\- La direction de l'itinéraire peut être modifiée en appuyant sur le bouton vert"
+    \ vous devez attendre après le premier paiement\n\n \U0001F4CD *Où acheter ?*\n \\- Au [marché Soylu] le plus proche \\\
+    (https://goo\\.gl/maps/XLS1rGdPT9dvaziG9\\)\n \\- Dans l'application *Antalya Kart*, dans la section *Point le plus proche*,\
+    \ les points de vente sont marqués en rouge\n\n \U0001FA99 *Comment recharger ?*\n \\- Vous pouvez recharger en espèces\
+    \ au même endroit où vous achetez\n \\- Recharger en ligne avec une carte bancaire turque dans l'application Antalya Kart\n\
+    \n ⁉️ *J'ai rechargé la carte, mais l'argent n'est pas apparu*\n \\- Au terminal du bus, appuyez sur le bouton de recharge\
+    \ rouge\n \\- Maintenez pendant 5 secondes\n\n \U0001F68C *Comment visualiser les itinéraires dans l'application ?*\n\
+    \ \\- Trouver un itinéraire approprié dans Google Maps\n \\- Dans l'application Antalya Kart, entrez le numéro de route\
+    \ dans la recherche\n \\- L'intégralité du parcours et les bus gris seront affichés aux endroits où ils voyagent actuellement\n\
+    \ \\- Flag \\-\\> fin du parcours, Triangle \\-\\> début\n \\- La direction de l'itinéraire peut être modifiée en appuyant\
+    \ sur le bouton vert"
   button_texts:
     antalya_card_android: 🤖 {{button_android}}
     antalya_card_iphone: 📱 {{button_iphone}}

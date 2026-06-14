@@ -17,7 +17,7 @@ screens:
 
     ℹ️ *Sadece son çare olarak ambulans çağırın\.*
 
-    Türkiye''de ambulans çağırmak oldukça pahalıya mal olabilir.
+    Türkiye''de ambulans çağırmak oldukça pahalıya mal olabilir\.
 
     Ambulans çağırırken İngilizce deyin, İngilizce operatöre geçmelisiniz\.
 
@@ -64,7 +64,7 @@ screens:
 
     1️⃣️ Sigortaya başvurmak için öncelikle hangi hastanelerle çalıştığını öğrenmeniz gerekiyor
 
-    2️⃣ Sigorta çoğu zaman tedavi tutarının tamamını karşılamaz ancak bu, poliçenize ve sigorta şirketinize bağlıdır.
+    2️⃣ Sigorta çoğu zaman tedavi tutarının tamamını karşılamaz ancak bu, poliçenize ve sigorta şirketinize bağlıdır\.
 
 
     ⁉️ *Sigortanızın hangi hastanelerle çalıştığını nasıl öğrenebilirsiniz:*
@@ -94,7 +94,7 @@ screens:
     \- Sigortanız yoksa oldukça büyük bir miktar hazırlamaya hazırlanın\.
 
 
-    📍 Haritada hastaneleri *Hastane*\ kelimesini kullanarak arayın.'
+    📍 Haritada hastaneleri *Hastane*\ kelimesini kullanarak arayın\.'
   button_texts:
     hospitals_insurance_site: 🌎 {{button_hospital_search}}
 - id: POLYCLINIC
@@ -103,7 +103,7 @@ screens:
 
     💫 Türkiye''de *temel tıbbi bakımı ücretsiz* alabilirsiniz
 
-    \- Bunun için oturma izni aldıktan sonra aile hekimine atanmanız gerekmektedir.
+    \- Bunun için oturma izni aldıktan sonra aile hekimine atanmanız gerekmektedir\.
 
 
     🆓️ *Ne verir:*
@@ -118,7 +118,7 @@ screens:
 
     \- Hastanelerdeki uzmanlardan öneriler alın
 
-    \- e\-Nabız\ uygulamasında tüm analiz ve tetkiklerin geçmişi görüntülenecektir.
+    \- e\-Nabız\ uygulamasında tüm analiz ve tetkiklerin geçmişi görüntülenecektir\.
 
     \- Ve özel hastaneler dahil tüm hastanelerden\.
 
@@ -140,14 +140,14 @@ screens:
 
     3\. Şehir, ilçe seçin
 
-    4\. Mevcut aile kliniklerinin ve uzmanlarının bir listesi açılacaktır.
+    4\. Mevcut aile kliniklerinin ve uzmanlarının bir listesi açılacaktır\.
 
     \- Kırmızıyla vurgulanan doktor seçilemiyor
 
     \- Yeşille vurgulanan doktorlar daha özgürdür
 
     \- Ayın 5''inden 21''ine doktor değişimi aynı gün gerçekleşir\. Ayın 22''sinden 4''üne kadar olan başvurular ayın 5''inde
-    işleme alınacaktır.
+    işleme alınacaktır\.
 
 
     ⚡️*Ek olarak:*
@@ -155,7 +155,7 @@ screens:
     \- [MHRS web sitesine](https://www.mhrs.gov.tr/) \(doktor randevusu almak için web sitesine\) kaydolun
 
 
-    ⭐ Artık e\-Nabız\ web sitesi ve uygulaması üzerinden *Doktor randevusu / Randevu / Randevu* alabilirsiniz.'
+    ⭐ Artık e\-Nabız\ web sitesi ve uygulaması üzerinden *Doktor randevusu / Randevu / Randevu* alabilirsiniz\.'
   button_texts:
     polyclinic_site: 🌎 {{button_doctor_appointment_site}}
     polyclinic_android: 🤖 {{button_android}}
@@ -180,7 +180,7 @@ screens:
 
     Islak: Asetilsistein 600 mg \- günde 1 kez sabahları \(gastrit varsa \- yemeklerden sonra veya omeprazolden sonra\)
 
-    Kuru: Çok sayıda bitkisel kuru öksürük şurubu vardır (örneğin Fitospan\)
+    Kuru: Çok sayıda bitkisel kuru öksürük şurubu vardır \(örneğin Fitospan\)
 
 
     *Burun akıntısı:*
@@ -219,7 +219,7 @@ screens:
 
     Enterosgel \(Enterosgel\) \- jel formunda sorbent
 
-    Eucabon - yerli kömür
+    Eucabon \- yerli kömür
 
     Omeprasol \- omeprazol
 

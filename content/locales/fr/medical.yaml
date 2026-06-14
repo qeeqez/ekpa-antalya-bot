@@ -40,7 +40,7 @@ screens:
 
     📍 De nombreuses pharmacies sont situées sur la route de l''hôpital :
 
-    📍[Kepez Devlet Hastanesi] (https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+    📍[Kepez Devlet Hastanesi](https://goo.gl/maps/b5cnrK2H4apXkqWw9)
 
 
     *🏥 Pharmacies de garde \- Nöbetçi Eczaneler*
@@ -70,7 +70,7 @@ screens:
 
     ⁉️ *Comment savoir avec quels hôpitaux votre assurance travaille :*
 
-    1\. Visitez le site Web [imecedestek] (https://imecedestek.com/ContractedOrganizations)
+    1\. Visitez le site Web [imecedestek](https://imecedestek.com/ContractedOrganizations)
 
     2\. Indiquez le nom de la compagnie d''assurance et le type d''assurance
 
@@ -92,7 +92,7 @@ screens:
     \- Dans ce cas, votre assurance peut également prendre en charge une petite partie du traitement\. \(À lire à ce sujet
     dans sa description et ses conditions d''assurance\)
 
-    \- Si vous n''avez pas d''assurance, alors préparez-vous à préparer une somme assez importante\.
+    \- Si vous n''avez pas d''assurance, alors préparez\-vous à préparer une somme assez importante\.
 
 
     📍 Recherchez des hôpitaux sur la carte en utilisant le mot turc *Hastane*\.'
@@ -115,7 +115,7 @@ screens:
 
     \- Obtenez une ordonnance pour vos médicaments
 
-    \- Faites-vous vacciner pour vous et vos enfants
+    \- Faites\-vous vacciner pour vous et vos enfants
 
     \- Obtenez des recommandations de spécialistes dans les hôpitaux
 
@@ -135,7 +135,7 @@ screens:
 
     🌎 *Comment joindre :*
 
-    1\. Inscrivez-vous sur [site enabiz] (https://enabiz.gov.tr/)
+    1\. Inscrivez\-vous sur [site enabiz](https://enabiz.gov.tr/)
 
     2\. Sélectionnez la fonction *Changer de médecin de famille*
 
@@ -152,11 +152,12 @@ screens:
 
     ⚡️*En plus :*
 
-    \- Inscrivez-vous sur [Site Internet MHRS] (https://www.mhrs.gov.tr/) \(site Internet pour prendre rendez-vous avec un
+    \- Inscrivez\-vous sur [Site Internet MHRS](https://www.mhrs.gov.tr/) \(site Internet pour prendre rendez\-vous avec un
     médecin\)
 
 
-    ⭐ Vous pouvez désormais *Prendre rendez-vous avec un médecin / Rendez-vous / Randevu* via le site et l''application e\-Nabız\'
+    ⭐ Vous pouvez désormais *Prendre rendez\-vous avec un médecin / Rendez\-vous / Randevu* via le site et l''application
+    e\-Nabız\'
   button_texts:
     polyclinic_site: 🌎 {{button_doctor_appointment_site}}
     polyclinic_android: 🤖 {{button_android}}
@@ -220,7 +221,7 @@ screens:
 
     Enterosgel \(Enterosgel\) \- sorbant sous forme de gels
 
-    Eucabon - charbon local
+    Eucabon \- charbon local
 
     Oméprasol \- oméprazole
 

@@ -24,7 +24,7 @@ screens:
     \- Beaucoup plus
 
 
-    🌎 [Lien du site] (https://www.turkiye.gov.tr)
+    🌎 [Lien du site](https://www.turkiye.gov.tr)
 
 
     ⚡️ *Comment se connecter*
@@ -38,7 +38,7 @@ screens:
     \- Pour 20 lires, ils créeront un mot de passe pour le vol, il viendra par SMS
 
 
-    📍 [Bureau de poste le plus proche] (https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\,6 km\)'
+    📍 [Bureau de poste le plus proche](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\,6 km\)'
   button_texts:
     edevlet_site: 🌐 Site Internet
     edevlet_android: 🤖Android
@@ -49,7 +49,7 @@ screens:
 
     ℹ️ *A quoi ça sert ?*
 
-    \- Enregistrement de Dask et des utilitaires pour vous-même
+    \- Enregistrement de Dask et des utilitaires pour vous\-même
 
     \- Permis de séjour
 
@@ -58,22 +58,22 @@ screens:
 
     🌎 *Se connecter*
 
-    \- Accédez au [site Web des impôts] (https://ivd.gib.gov.tr/)
+    \- Accédez au [site Web des impôts](https://ivd.gib.gov.tr/)
 
     \- Sélectionnez le bouton central du bas
 
     \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
 
-    \- *DEMANDE DE NUMÉRO FISCAL POTENTIEL DE NON-CITOYEN*
+    \- *DEMANDE DE NUMÉRO FISCAL POTENTIEL DE NON\-CITOYEN*
 
     \- Remplissez vos coordonnées
 
 
-    💸 *Récupérez-le auprès du bureau des impôts*
+    💸 *Récupérez\-le auprès du bureau des impôts*
 
     \- Parfois, le système en ligne écrit une erreur et vous devez vous rendre au bureau des impôts
 
-    \- Bureau des impôts [Antalya Vergi Dairesi] (https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+    \- Bureau des impôts [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
 - id: ADDRESS_NUMARATAJ
   text: '*🔖 Numarataj \(Numarataj\)*
 
@@ -98,7 +98,7 @@ screens:
 
     ℹ️ *Instructions pour la réception :*
 
-    1\. À [Kepez Belediye] (https://goo.gl/maps/Fb68nczEehmjzf4K9), faites des copies des documents
+    1\. À [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9), faites des copies des documents
 
     2\. Allez au 2ème étage, suivez les panneaux Numarataj et entrez dans le couloir du bloc D
 
@@ -114,9 +114,9 @@ screens:
     dans cette attestation
 
 
-    📍 Tout se fait à [Kepez Belediye] (https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\,5 km\)
+    📍 Tout se fait à [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\,5 km\)
 
-    ⚡️ Au rez-de-chaussée, vous pouvez faire des copies de documents pour 1 TL'
+    ⚡️ Au rez\-de\-chaussée, vous pouvez faire des copies de documents pour 1 TL'
 - id: ADDRESS_REGISTRATION
   text: '*📌Inscription*
 
@@ -159,8 +159,8 @@ screens:
 
     📍 *Comment s''y rendre :*
 
-    \- Venez à [Goc Idaresi] (https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+    \- Venez à [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
 
     \- A l''entrée, dites *Adres* et montrez l''ikamet, ils vous laisseront entrer
 
-    \- Dans le bâtiment, dites *Adres*, attendez un appel dans la pièce à gauche des fenêtres pour un rendez-vous'
+    \- Dans le bâtiment, dites *Adres*, attendez un appel dans la pièce à gauche des fenêtres pour un rendez\-vous'

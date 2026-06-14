@@ -1,7 +1,7 @@
 version: '1.0'
 screens:
 - id: AID_KIT
-  text: '*❤️ Erste-Hilfe-Kasten*'
+  text: '*❤️ Erste\-Hilfe\-Kasten*'
   button_texts:
     ambulance: 🚑 {{button_ambulance}}
     hospitals: 🏥 {{button_hospitals}}
@@ -180,20 +180,20 @@ screens:
 
     *hust:*
 
-    Nass: Acetylcystein 600 mg – 1-mal täglich morgens (bei Gastritis – nach den Mahlzeiten oder nach Omeprazol)
+    Nass: Acetylcystein 600 mg – 1\-mal täglich morgens \(bei Gastritis – nach den Mahlzeiten oder nach Omeprazol\)
 
     Trocken: Es gibt viele pflanzliche trockene Hustensäfte \(zum Beispiel Fitospan\)
 
 
     *laufende Nase:*
 
-    Nasennebenhöhlen-Spülset \- Nase mit Meerwasser spülen \(Delphin-Typ\)
+    Nasennebenhöhlen\-Spülset \- Nase mit Meerwasser spülen \(Delphin\-Typ\)
 
-    Nasovine \- Vasokonstriktor-Spray \(Xylometazolin\)
+    Nasovine \- Vasokonstriktor\-Spray \(Xylometazolin\)
 
     Risonel, 0,05 % – bei allergischer Rhinitis, bei Langzeitanwendung von Vasokonstriktoren\. Entfernt Schwellungen in der
-    Nase, reduziert den Fluss von \(Nasonex-Analogon\), 2 Dosen in jedes Nasenloch 2-mal täglich für 2 Wochen, dann 1 Dosis
-    2-mal täglich für 2 Wochen, dann \. 1 Dosis 1 Mal pro Tag für 2 Wochen\.
+    Nase, reduziert den Fluss von \(Nasonex\-Analogon\), 2 Dosen in jedes Nasenloch 2\-mal täglich für 2 Wochen, dann 1 Dosis
+    2\-mal täglich für 2 Wochen, dann \. 1 Dosis 1 Mal pro Tag für 2 Wochen\.
 
 
     *Bei Schmerzen:*
@@ -233,7 +233,7 @@ screens:
 
     *Übelkeit:*
 
-    Metpamid \(Motilium-Typ\)
+    Metpamid \(Motilium\-Typ\)
 
 
     *Allergien:*
@@ -242,7 +242,7 @@ screens:
 
     Cetrin \(Cetrin\)
 
-    Fenistil-Gel – bei Hautallergien und Stichen gegen Juckreiz
+    Fenistil\-Gel – bei Hautallergien und Stichen gegen Juckreiz
 
 
     *Herpes:*

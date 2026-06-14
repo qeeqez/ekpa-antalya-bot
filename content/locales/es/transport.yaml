@@ -10,7 +10,7 @@ screens:
 - id: BUS
   text: "*\U0001F68ETransporte público*\n\n \U0001F4CD La ruta se planifica mejor en *Google Maps*\n \U0001F9ED La ubicación\
     \ actual de los autobuses se puede ver en la aplicación *AntalyaKart*\n\n \U0001F4B5 *Tarifa*\n AntalyaKart \\- 9\\.6\
-    \ TL\n Tarjeta bancaria \\- 9\\,85 TL\n\n \U0001FA99️ *Costo de transferencia*\n AntalyaKart \\ - 3 TL\n Tarjeta bancaria\
+    \ TL\n Tarjeta bancaria \\- 9\\,85 TL\n\n \U0001FA99️ *Costo de transferencia*\n AntalyaKart \\ \\- 3 TL\n Tarjeta bancaria\
     \ \\- 9\\,85 TL\n\n ℹ️ *Niños menores de 6 años entran gratis*\n ⚠️ *Está prohibido el pago en efectivo en el transporte*"
   button_texts:
     bus_concessionary: 🎫 {{button_benefits}}
@@ -44,15 +44,15 @@ screens:
     \- [La sucursal más cercana está aquí](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), en el pasaje subterráneo'
 - id: ANTALYA_CARD
   text: "*\U0001F4B3 Kart Antalya*\n\n ℹ️ La tarifa es más económica con esta tarjeta\n ℹ️ Puedes pagar por dos personas,\
-    \ debes esperar después del primer pago\\.\n\n \U0001F4CD *¿Dónde comprar?*\n \\- En el [Mercado Soylu] más cercano(https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
-    \ \\- En la aplicación *Antalya Kart*, en la sección *Punto más cercano*, los puntos de venta están marcados en rojo\n\
-    \n \U0001FA99 *¿Cómo recargar?*\n \\- Puedes recargar en efectivo en el mismo lugar donde compras\n \\- Recarga online\
-    \ con una tarjeta bancaria turca en la aplicación Antalya Kart\n\n ⁉️ *Recargué la tarjeta, pero no apareció el dinero*\n\
-    \ \\- En la terminal del autobús, presione el botón rojo de recarga\n \\- Mantenga presionado durante 5 segundos\n\n \U0001F68C\
-    \ *¿Cómo ver rutas en la aplicación?*\n \\- Encuentra una ruta adecuada en Google Maps\n \\- En la aplicación Antalya\
-    \ Kart, ingrese el número de ruta en la búsqueda\n \\- La ruta completa y los autobuses grises se mostrarán en los lugares\
-    \ por donde viajan actualmente\n \\- Bandera \\-\\> final de ruta, Triángulo \\-\\> inicio\n \\- La dirección de la ruta\
-    \ se puede cambiar presionando el botón verde"
+    \ debes esperar después del primer pago\\.\n\n \U0001F4CD *¿Dónde comprar?*\n \\- En el [Mercado Soylu] más cercano\\\
+    (https://goo\\.gl/maps/XLS1rGdPT9dvaziG9\\)\n \\- En la aplicación *Antalya Kart*, en la sección *Punto más cercano*,\
+    \ los puntos de venta están marcados en rojo\n\n \U0001FA99 *¿Cómo recargar?*\n \\- Puedes recargar en efectivo en el\
+    \ mismo lugar donde compras\n \\- Recarga online con una tarjeta bancaria turca en la aplicación Antalya Kart\n\n ⁉️ *Recargué\
+    \ la tarjeta, pero no apareció el dinero*\n \\- En la terminal del autobús, presione el botón rojo de recarga\n \\- Mantenga\
+    \ presionado durante 5 segundos\n\n \U0001F68C *¿Cómo ver rutas en la aplicación?*\n \\- Encuentra una ruta adecuada en\
+    \ Google Maps\n \\- En la aplicación Antalya Kart, ingrese el número de ruta en la búsqueda\n \\- La ruta completa y los\
+    \ autobuses grises se mostrarán en los lugares por donde viajan actualmente\n \\- Bandera \\-\\> final de ruta, Triángulo\
+    \ \\-\\> inicio\n \\- La dirección de la ruta se puede cambiar presionando el botón verde"
   button_texts:
     antalya_card_android: 🤖 {{button_android}}
     antalya_card_iphone: 📱 {{button_iphone}}

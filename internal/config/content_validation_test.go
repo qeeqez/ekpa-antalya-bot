@@ -3,6 +3,7 @@ package config_test
 import (
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"testing"
 
@@ -125,5 +126,17 @@ screens:
 
 	if _, err := config.NewContentRepository(tmpDir); err != nil {
 		t.Fatalf("Expected MarkdownV2 validation to pass, got %v", err)
+	}
+}
+
+func TestProductionContentLoads(t *testing.T) {
+	_, file, _, ok := runtime.Caller(0)
+	if !ok {
+		t.Fatal("Failed to resolve test file location")
+	}
+
+	contentDir := filepath.Join(filepath.Dir(file), "..", "..", "content")
+	if _, err := config.NewContentRepository(contentDir); err != nil {
+		t.Fatalf("Expected production content to load cleanly, got %v", err)
 	}
 }

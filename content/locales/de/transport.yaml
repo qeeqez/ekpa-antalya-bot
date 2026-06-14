@@ -47,10 +47,10 @@ screens:
     \ Sie müssen nach der ersten Zahlung warten\n\n \U0001F4CD *Wo kaufen?*\n \\- Im nächstgelegenen [Soylu-Markt](https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
     \ \\- In der Anwendung *Antalya Kart* sind im Abschnitt *Nächster Punkt* die Verkaufsstellen rot markiert\n\n \U0001FA99\
     \ *Wie lade ich auf?*\n \\- Sie können Ihr Guthaben an der gleichen Stelle, an der Sie einkaufen, mit Bargeld aufladen\n\
-    \ \\- Laden Sie online mit einer türkischen Bankkarte in der Antalya Kart-Anwendung auf\n\n ⁉️ *Ich habe die Karte aufgeladen,\
+    \ \\- Laden Sie online mit einer türkischen Bankkarte in der Antalya Kart\\-Anwendung auf\n\n ⁉️ *Ich habe die Karte aufgeladen,\
     \ aber das Geld ist nicht erschienen*\n \\- Drücken Sie am Terminal im Bus die rote Aufladetaste\n \\- 5 Sekunden lang\
     \ gedrückt halten\n\n \U0001F68C *Wie kann ich Routen in der Anwendung anzeigen?*\n \\- Finden Sie eine passende Route\
-    \ in Google Maps\n \\- Geben Sie in der Antalya Kart-Anwendung die Routennummer in die Suche ein\n \\- Die gesamte Route\
+    \ in Google Maps\n \\- Geben Sie in der Antalya Kart\\-Anwendung die Routennummer in die Suche ein\n \\- Die gesamte Route\
     \ und graue Busse werden an den Orten angezeigt, an denen sie gerade unterwegs sind\n \\- Flag \\-\\> Ende der Route,\
     \ Dreieck \\-\\> Anfang\n \\- Die Routenrichtung kann durch Drücken der grünen Taste geändert werden"
   button_texts:
@@ -67,9 +67,9 @@ screens:
 
     1\. Button vor dem Betreten
 
-    2\. BiTaxi-Anwendung
+    2\. BiTaxi\-Anwendung
 
-    3\. Uber-App
+    3\. Uber\-App
 
 
     💵 *Kosten: Landung 10 TL \+ 14 TL/km*

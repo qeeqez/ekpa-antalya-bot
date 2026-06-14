@@ -85,7 +85,7 @@ screens:
   text: "*\U0001F4B0 Sblocco ufficiale del telefono a pagamento*\n\nℹ️ 1 Una persona può registrare 1 telefono ogni 3 anni\\\
     .\n*Obbligatorio:* questa persona deve essere arrivata dall'estero entro e non oltre 365 giorni fa\n\n\U0001F4B0 *Prezzo\
     \ nel 2024: 30000 TL \U0001F92F*\n\n\U0001F9E7 *Procedura di registrazione:*\n\\- Accedi a Edevlet utilizzando il numero\
-    \ ikamet e la password ricevuti via e-mail\n\\- Vai alla pagina [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
+    \ ikamet e la password ricevuti via e\\-mail\n\\- Vai alla pagina [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
     \ \\(o cerca `IMEI Kaydet`\\)\n\\- Inserisci i tuoi dati \\(tutti gli IMEI del telefono, il tuo passaporto e la data di\
     \ ingresso nel paese\\)\n\\-Paga\n\n\U0001FA99 *Pagamento in contanti*\n\\- Puoi pagare in contanti all'ufficio delle\
     \ imposte\n\\- Dopo il pagamento, è necessario richiedere lo sblocco tramite Edevlet sulla pagina [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\n\

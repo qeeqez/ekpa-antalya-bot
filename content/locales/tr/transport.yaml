@@ -39,12 +39,12 @@ screens:
 
     \- Çocuğun okuldan öğrenci olduğunu belirten bir belgeye ihtiyacı var
 
-    \- Sadece AntalyaKart ana şubelerinde yapılabilmektedir.
+    \- Sadece AntalyaKart ana şubelerinde yapılabilmektedir\.
 
     \- [En yakın şube burada](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), yeraltı geçidinde'
 - id: ANTALYA_CARD
   text: "*\U0001F4B3Antalya Kart*\n\n ℹ️ Bu kartla ücret daha ucuz\n ℹ️İki kişilik ödeme yapabilirsiniz, ilk ödemeden sonra\
-    \ beklemeniz gerekmektedir.\n\n \U0001F4CD *Nereden satın alınır?*\n \\- En yakın [Soylu Pazarı'nda](https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
+    \ beklemeniz gerekmektedir\\.\n\n \U0001F4CD *Nereden satın alınır?*\n \\- En yakın [Soylu Pazarı'nda](https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
     \ \\- *Antalya Kart* uygulamasında *En yakın nokta* bölümünde satış noktaları kırmızı renkle işaretlenmiştir\n\n \U0001FA99\
     \ *Nasıl yükleme yapılır?*\n \\- Satın aldığınız yerde nakit olarak yükleme yapabilirsiniz\n \\- Antalya Kart uygulamasında\
     \ Türk banka kartıyla online yükleme yapın\n\n ⁉️ *Karta para yükledim ama para görünmedi*\n \\- Otobüsteki terminalde\
@@ -80,7 +80,7 @@ screens:
 
     \- Başvurularda maliyet aynı sayaç kullanılarak hesaplanır
 
-    \- Nakit olarak lira veya kartla ödeme yapabilirsiniz.(tüm taksilerde geçerli değildir\)
+    \- Nakit olarak lira veya kartla ödeme yapabilirsiniz\.\(tüm taksilerde geçerli değildir\)
 
     \- Uygulamada bağlantılı kartla ödeme yapmak mümkündür'
 - id: KICK_SCOOTER

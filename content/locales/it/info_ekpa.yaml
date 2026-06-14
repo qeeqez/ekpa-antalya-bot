@@ -248,7 +248,7 @@ screens:
   text: '*🧑‍🔧 Come connettersi/registrarsi nuovamente? ♻️*
 
 
-    1️⃣ Il processo di prima connessione non è diverso dalla ri-registrazione
+    1️⃣ Il processo di prima connessione non è diverso dalla ri\-registrazione
 
     2️⃣ In caso di nuova registrazione, il pagatore precedente non dovrà viaggiare separatamente per disconnettersi'
   button_texts:
@@ -396,7 +396,7 @@ screens:
 
     \- Condividi Internet dal tuo telefono
 
-    \- Chiedi aiuto ai tuoi vicini, condividi il Wi-Fi'
+    \- Chiedi aiuto ai tuoi vicini, condividi il Wi\-Fi'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️Come disabilitarlo?*'
   button_texts:

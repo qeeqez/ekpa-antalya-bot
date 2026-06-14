@@ -109,7 +109,7 @@ screens:
 
     ⏳ Faturanın alındığı tarihten itibaren 7 gün
 
-    ⚠️Ödeme yapılmazsa devre dışı bırakılır\. Uzaktan kumandada bir kilit simgesi ve Merkezi\ görünecektir.
+    ⚠️Ödeme yapılmazsa devre dışı bırakılır\. Uzaktan kumandada bir kilit simgesi ve Merkezi\ görünecektir\.
 
 
     *Ödeme:*
@@ -168,7 +168,7 @@ screens:
 
     3\. Tutarı görecek ve ödeyebileceksiniz
 
-    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir.
+    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir\.
 
 
     🪙 *Nakit veya kart*
@@ -198,7 +198,7 @@ screens:
 
     \- Adrese gelen ödeme makbuzu birinci katta duvardaki bir kutuya konulur
 
-    \- Çevrimiçi olarak [ASAT](https://online.asat.gov.tr/webportal/index.php)\ web sitesinde. HIZLI ÖDEME''ye tıklayın
+    \- Çevrimiçi olarak [ASAT](https://online.asat.gov.tr/webportal/index.php)\ web sitesinde\. HIZLI ÖDEME''ye tıklayın
 
 
     *Ödeme:*
@@ -212,7 +212,7 @@ screens:
 
     3\. Tutarı görecek ve ödeyebileceksiniz
 
-    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir.
+    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir\.
 
 
     🪙 *Nakit veya kart*
@@ -230,7 +230,7 @@ screens:
 
     \- Telefonunuz için bir sonraki aya ait bir paket seçmeniz gerekiyor
 
-    \- Bakiyenizi kolayca doldurabilir ve daha sonra paketler için ödeme yapabilirsiniz.
+    \- Bakiyenizi kolayca doldurabilir ve daha sonra paketler için ödeme yapabilirsiniz\.
 
     \- İnternet için bir önceki aya ait faturayı ödemeniz gerekmektedir
 
@@ -278,7 +278,7 @@ screens:
     4\. Açık adres / Ekpa''ya söyle
 
 
-    📍 *[Nkolay''da] Dask siparişi verin(https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
+    📍 *[Nkolay''da] Dask siparişi verin\(https://goo\.gl/maps/nyumU39FQYJTnFZt9\)*'
 - id: HOW_TO_CONNECT_ELECTRICITY
   text: '*⚡️Elektrik*
 
@@ -293,7 +293,7 @@ screens:
 
     4\. Deprem sigortası *Dask*
 
-    5\. *Depozito için para* (Bağlantı kesildiğinde iade edilir\)
+    5\. *Depozito için para* \(Bağlantı kesildiğinde iade edilir\)
 
 
     📍 *Yalnızca [CK Akdeniz Elektrik merkez ofisinden](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9) bağlanabilirsiniz*
@@ -326,10 +326,10 @@ screens:
 
     4\. Deprem sigortası *Dask*
 
-    5\. *Depozito için para* (Bağlantı kesildiğinde iade edilir\)
+    5\. *Depozito için para* \(Bağlantı kesildiğinde iade edilir\)
 
 
-    📍 *[ASAT]''a su bağlayın(https://goo.gl/maps/PMfUJd315NtC9dur6)*
+    📍 *[ASAT]''a su bağlayın\(https://goo\.gl/maps/PMfUJd315NtC9dur6\)*
 
 
     🧑‍💼*Ceza Kanunu''na bildirin:*
@@ -372,14 +372,14 @@ screens:
     \- [Türksat Kablo](https://www.fiberkablonet.com/)
 
 
-    ℹ️Bağlanmak için ikamet\ ile operatör ofisine başvurmanız gerekir. Fiyat, operatörün web sitesindeki fiyatla aynıdır\.
+    ℹ️Bağlanmak için ikamet\ ile operatör ofisine başvurmanız gerekir\. Fiyat, operatörün web sitesindeki fiyatla aynıdır\.
 
     ⚠️ Ofis adresimizi sistemde bulamayabilir, siteye en yakın ofislerle iletişime geçmenizi öneririz\.
 
 
     🏴‍☠️ *Oturma izni olmadan bağlanın*
 
-    \- Oturma izni olmadan bağlanmak için interneti kendisine ayarlayacak kişiyi bulmanız gerekir.
+    \- Oturma izni olmadan bağlanmak için interneti kendisine ayarlayacak kişiyi bulmanız gerekir\.
 
     \- Bu genellikle daha pahalıdır; birçok “yardımcı” böyle bir hizmet için para talep eder\.
 
@@ -390,7 +390,7 @@ screens:
 
     \- İnternet''i telefonunuzdan paylaşın
 
-    \- Komşularınızdan yardım isteyin, Wi-Fi paylaşın'
+    \- Komşularınızdan yardım isteyin, Wi\-Fi paylaşın'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️ Nasıl devre dışı bırakılır?*'
   button_texts:
@@ -419,7 +419,7 @@ screens:
     ⚠️ *Çevrimiçi bağlantıyı yalnızca İkamet''e bağlıysanız kesebilirsiniz*
 
 
-    📍 *[CK Akdeniz Elektrik merkez ofisinde] elektriği çevrimdışı olarak kapatın(https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+    📍 *[CK Akdeniz Elektrik merkez ofisinde] elektriği çevrimdışı olarak kapatın\(https://goo\.gl/maps/vSsz3eKUWZ7VYqqy9\)*
 
 
     💼 *Yanınızda götürün:*
@@ -433,7 +433,7 @@ screens:
 
     ℹ️ 24 saat içinde dairenin elektriği kesilecektir\.
 
-    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır.'
+    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır\.'
 - id: HOW_TO_DISCONNECT_WATER
   text: '*💧Su*
 
@@ -448,7 +448,7 @@ screens:
     \- [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu) sayfasına
     gidin
 
-    \- Veya arama kısmına `ASAT Abonelik Sözleşmesi Feshi Başvurusu` yazın.
+    \- Veya arama kısmına `ASAT Abonelik Sözleşmesi Feshi Başvurusu` yazın\.
 
     \- *"Yeni Başvuru" \(Yeni Başvuru\)*''ya tıklayın, bir hesap seçin ve bilgilerinizi girin
 
@@ -457,7 +457,7 @@ screens:
     ⚠️ *Çevrimiçi bağlantıyı yalnızca İkamet''e bağlıysanız kesebilirsiniz*
 
 
-    📍 *[ASAT]''ta suyu çevrimdışına alın(https://goo.gl/maps/PMfUJd315NtC9dur6)*
+    📍 *[ASAT]''ta suyu çevrimdışına alın\(https://goo\.gl/maps/PMfUJd315NtC9dur6\)*
 
 
     💼 *Yanınızda götürün:*
@@ -471,4 +471,4 @@ screens:
 
     ℹ️ 3 iş günü içerisinde dairedeki su kaybolacaktır\.
 
-    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır.'
+    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır\.'

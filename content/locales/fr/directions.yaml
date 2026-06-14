@@ -20,80 +20,80 @@ screens:
 
     *Lundi*
 
-    📍[Marché d''Ersoy] (https://goo.gl/maps/6yhUhbb9Zpijy76JA) \(2\.5 km\)
+    📍[Marché d''Ersoy](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \(2\.5 km\)
 
 
     *mercredi*
 
-    📍[Marché Beşkonaklılar] (https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \(500 m, avant le déjeuner\)
+    📍[Marché Beşkonaklılar](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \(500 m, avant le déjeuner\)
 
-    📍[Marché de Demirgül] (https://goo.gl/maps/uqxp8L4RscSe2jpM7) \(1\,7 km\)
+    📍[Marché de Demirgül](https://goo.gl/maps/uqxp8L4RscSe2jpM7) \(1\,7 km\)
 
-    📍[Marché Sütçüler] (https://goo.gl/maps/yFbwpSdE4yNt7ojH7) \(3 km\)
+    📍[Marché Sütçüler](https://goo.gl/maps/yFbwpSdE4yNt7ojH7) \(3 km\)
 
 
     *jeudi*
 
-    📍[Marché Göksu] (https://goo.gl/maps/WakaAx3KK4Vmz9ELA) \(1\,7 km\)
+    📍[Marché Göksu](https://goo.gl/maps/WakaAx3KK4Vmz9ELA) \(1\,7 km\)
 
-    📍[Marché Sütçüler] (https://goo.gl/maps/68DWmnXecWeFLbj4A) \(2\,2 km\)
+    📍[Marché Sütçüler](https://goo.gl/maps/68DWmnXecWeFLbj4A) \(2\,2 km\)
 
 
     *vendredi*
 
-    📍[Marché de Teomanpaşa] (https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \(2\,5 km\)
+    📍[Marché de Teomanpaşa](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \(2\,5 km\)
 
 
     *Samedi*
 
-    📍[Marché de Güneş] (https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\,4 km\)'
+    📍[Marché de Güneş](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\,4 km\)'
   button_texts:
     all_markets: 🧺 {{button_other_markets}}
 - id: ALL_MARKETS
   text: '*Marchés :*
 
 
-    📍 [Marché SİTELER] (https://goo.gl/maps/mYUuZawfTAU2) \(Lundi\)
+    📍 [Marché SİTELER](https://goo.gl/maps/mYUuZawfTAU2) \(Lundi\)
 
-    📍 [Bazar YENIDOĞAN] (https://goo.gl/maps/DSfCL1JxACD2) \(Lundi\)
+    📍 [Bazar YENIDOĞAN](https://goo.gl/maps/DSfCL1JxACD2) \(Lundi\)
 
-    📍 [Marché LIMAN] (https://goo.gl/maps/nA23cv3x6sy) \(mardi\)
+    📍 [Marché LIMAN](https://goo.gl/maps/nA23cv3x6sy) \(mardi\)
 
-    📍 [Bazar BAHÇELİEVLER ] (https://goo.gl/maps/cao3iJC1Dg72) \(mardi\)
+    📍 [Bazar BAHÇELİEVLER ](https://goo.gl/maps/cao3iJC1Dg72) \(mardi\)
 
-    📍 [Marché YEŞİLBAHÇE] (https://goo.gl/maps/nrT3xnr1f7P2) \(mercredi\)
+    📍 [Marché YEŞİLBAHÇE](https://goo.gl/maps/nrT3xnr1f7P2) \(mercredi\)
 
-    📍 [Bazar SİGORTA] (https://goo.gl/maps/xpdVAv743nT2) \(mercredi\)
+    📍 [Bazar SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(mercredi\)
 
-    📍 [Marché PAZAR ÖĞRETMENEVI] (https://goo.gl/maps/6Ya5yxszQp92) \(mercredi\)
+    📍 [Marché PAZAR ÖĞRETMENEVI](https://goo.gl/maps/6Ya5yxszQp92) \(mercredi\)
 
-    📍 [Bazar DEDEMAN] (https://goo.gl/maps/dRU5nL5AR752) \(jeudi\)
+    📍 [Bazar DEDEMAN](https://goo.gl/maps/dRU5nL5AR752) \(jeudi\)
 
-    📍 [Marché BAHÇELİEVLER] (https://goo.gl/maps/usNRD4oQRxH2) \(jeudi\)
+    📍 [Marché BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(jeudi\)
 
-    📍 [Bazar GÜLVEREN] (https://goo.gl/maps/MqwpmNKb7js) \(jeudi\)
+    📍 [Bazar GÜLVEREN](https://goo.gl/maps/MqwpmNKb7js) \(jeudi\)
 
-    📍 [Marché PERŞEMBE SEMT] (https://goo.gl/maps/CEfKqRQTtbN2) \(jeudi\)
+    📍 [Marché PERŞEMBE SEMT](https://goo.gl/maps/CEfKqRQTtbN2) \(jeudi\)
 
-    📍 [Bazar ALTINKUM] (https://goo.gl/maps/4dpRFg4BPcq) \(vendredi\)
+    📍 [Bazar ALTINKUM](https://goo.gl/maps/4dpRFg4BPcq) \(vendredi\)
 
-    📍 [Marché GÜZELOBA] (https://goo.gl/maps/DvVpef5xqZo) \(vendredi\)
+    📍 [Marché GÜZELOBA](https://goo.gl/maps/DvVpef5xqZo) \(vendredi\)
 
-    📍 [Marché KIZILTOPRAK] (https://goo.gl/maps/DGQKNLy5D7J2) \(vendredi\)
+    📍 [Marché KIZILTOPRAK](https://goo.gl/maps/DGQKNLy5D7J2) \(vendredi\)
 
-    📍 [Bazar KIZILTOPRAK] (https://goo.gl/maps/dRKoX3MWrrt) \(vendredi\)
+    📍 [Bazar KIZILTOPRAK](https://goo.gl/maps/dRKoX3MWrrt) \(vendredi\)
 
-    📍 [Bazar KONUKSEVER] (https://goo.gl/maps/fNqtj7SXdaS2) \(samedi\)
+    📍 [Bazar KONUKSEVER](https://goo.gl/maps/fNqtj7SXdaS2) \(samedi\)
 
-    📍 [Marché ZAFER] (https://goo.gl/maps/jGzGvtS6q5L2) \(Samedi\)
+    📍 [Marché ZAFER](https://goo.gl/maps/jGzGvtS6q5L2) \(Samedi\)
 
-    📍 [Bazar PINARBAŞI] (https://goo.gl/maps/FNhE4hF4fSN2) \(dimanche\)
+    📍 [Bazar PINARBAŞI](https://goo.gl/maps/FNhE4hF4fSN2) \(dimanche\)
 
-    📍 [Marché SİGORTA] (https://goo.gl/maps/xpdVAv743nT2) \(dimanche\)
+    📍 [Marché SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(dimanche\)
 
-    📍 [ÇAĞLAYAN Bazaar] (https://goo.gl/maps/DzBmxTcAdTx) \(Dimanche\)
+    📍 [ÇAĞLAYAN Bazaar](https://goo.gl/maps/DzBmxTcAdTx) \(Dimanche\)
 
-    📍 [Bazar BAHÇELİEVLER] (https://goo.gl/maps/usNRD4oQRxH2) \(Dimanche\)'
+    📍 [Bazar BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(Dimanche\)'
   button_texts:
     markets: 🧺 Marchés
 - id: SHOPS
@@ -111,100 +111,100 @@ screens:
 
     *Réseaux*
 
-    📍[Tahtakale] (https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 m\)
+    📍[Tahtakale](https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 m\)
 
     Un magasin pour toutes les occasions\. Y compris les produits\. Le magasin est réparti sur 3 étages\.
 
 
-    🍌[Sok] (https://goo.gl/maps/bz15sV6peBEuQf9Z8) \(600 m\)
+    🍌[Sok](https://goo.gl/maps/bz15sV6peBEuQf9Z8) \(600 m\)
 
-    🍌 [Bim] (https://goo.gl/maps/ZEy8ZHqMTKCEMCdPA) \(650m\)
+    🍌 [Bim](https://goo.gl/maps/ZEy8ZHqMTKCEMCdPA) \(650m\)
 
-    🍌 [A101] (https://goo.gl/maps/UDmQrYRjrhWi7s7V7) \(650 m\)
+    🍌 [A101](https://goo.gl/maps/UDmQrYRjrhWi7s7V7) \(650 m\)
 
-    🍎 [Migros] (https://goo.gl/maps/XXKsLLLMH61ojpnP8) \(1\,1 km\)
+    🍎 [Migros](https://goo.gl/maps/XXKsLLLMH61ojpnP8) \(1\,1 km\)
 
     Le réseau Migros vend de l''alcool\.
 
 
     *Magasins locaux*
 
-    🍞 [Boulangerie] (https://goo.gl/maps/uKP6r6M9wbWnNzF4A) \(200 m\)
+    🍞 [Boulangerie](https://goo.gl/maps/uKP6r6M9wbWnNzF4A) \(200 m\)
 
-    🥩 [Viande] (https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
+    🥩 [Viande](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
 
-    🍷 [Marché des alcools de Soylu] (https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
+    🍷 [Marché des alcools de Soylu](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
 
 
     *Grandes chaînes de magasins*
 
-    🛒 [Métro] (https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \(4\,4 km\)
+    🛒 [Métro](https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \(4\,4 km\)
 
-    🛒 [5M Migros Kepez] (https://goo.gl/maps/exzze46k7XUkAYPVA) \(10\.6 km\)
+    🛒 [5M Migros Kepez](https://goo.gl/maps/exzze46k7XUkAYPVA) \(10\.6 km\)
 
-    🛒 [5M Migros Konyaaltı] (https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\,6 km\)'
+    🛒 [5M Migros Konyaaltı](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\,6 km\)'
 - id: SHOPPING_CENTERS
   text: '*🛍 Centres commerciaux*
 
 
-    📍 [Agora] (https://goo.gl/maps/TshggHds8sAVBACV6) \(3\.8 km\)
+    📍 [Agora](https://goo.gl/maps/TshggHds8sAVBACV6) \(3\.8 km\)
 
-    📍 [Centre commercial d''Antalya] (https://g.page/MallOfAntalya) \(4\,8 km\)
+    📍 [Centre commercial d''Antalya](https://g.page/MallOfAntalya) \(4\,8 km\)
 
-    📍 [MarkAntalya] (https://goo.gl/maps/BjqUUFpYRthDPZFJ9) \(6\,4 km\)
+    📍 [MarkAntalya](https://goo.gl/maps/BjqUUFpYRthDPZFJ9) \(6\,4 km\)
 
-    📍 [Terra City] (https://g.page/TerraCity) \(10\,3 km\)
+    📍 [Terra City](https://g.page/TerraCity) \(10\,3 km\)
 
-    📍 [5M Migros AVM Konyaaltı] (https://g.page/AntalyaMigrosAVM) \(10\,4 km\)
+    📍 [5M Migros AVM Konyaaltı](https://g.page/AntalyaMigrosAVM) \(10\,4 km\)
 
 
-    📍 [Parc Ozdilek] (https://g.page/ozdilekparkantalya) \(6\,6 km\)
+    📍 [Parc Ozdilek](https://g.page/ozdilekparkantalya) \(6\,6 km\)
 
-    📍 [Kipa AVM \(5M Migros Kepez\)] (https://goo.gl/maps/FwRYmYLhETHsdX458) \(7\.0 km\)
+    📍 [Kipa AVM \(5M Migros Kepez\)](https://goo.gl/maps/FwRYmYLhETHsdX458) \(7\.0 km\)
 
-    📍 [Erasta AVM] (https://g.page/erastaantalyaavm) \(8\,3 km\)
+    📍 [Erasta AVM](https://g.page/erastaantalyaavm) \(8\,3 km\)
 
 
     *Construction*
 
-    🛋 [IKEA] (https://goo.gl/maps/zdLcFzx1tnq7EMXJ6) \(3\,9 km\)
+    🛋 [IKEA](https://goo.gl/maps/zdLcFzx1tnq7EMXJ6) \(3\,9 km\)
 
-    🪴 [Koctas] (https://goo.gl/maps/qYwje1sAhz1SQ9ycA) \(5\,6 km\)
+    🪴 [Koctas](https://goo.gl/maps/qYwje1sAhz1SQ9ycA) \(5\,6 km\)
 
-    🪚 [Bauhaus Kepez] (https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\,4 km\)'
+    🪚 [Bauhaus Kepez](https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\,4 km\)'
 - id: PRINT_AND_PHOTO
   text: '*Impression et photo*
 
 
-    📍 [HYT KIRTASİYE] (https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \(350 m\)
+    📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \(350 m\)
 
 
-    📍 [Bella Couleur] (https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \(750 m\)
+    📍 [Bella Couleur](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \(750 m\)
 
     \- Impression couleur 10 TL
 
     \- Photos biométriques 300 TL
 
 
-    📍 [Fotokopi] (https://goo.gl/maps/T6UtpDPoSSve3p58A) \(900 m\)
+    📍 [Fotokopi](https://goo.gl/maps/T6UtpDPoSSve3p58A) \(900 m\)
 
-    📍 [Nebi Fotografcilik] (https://g.page/NebiFoto) \(1\,2 km\)'
+    📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \(1\,2 km\)'
 - id: BARBER
   text: '*Salons de coiffure*
 
 
-    📍 [NZM Salonu] (https://goo.gl/maps/yePJMmDWHJDqcCSS7)
+    📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
 
     Coupe de cheveux \+ Lavage \+ Coiffage 200 TL\.
 
 
-    📍 [Yigit Erkek Kuaforu] (https://goo.gl/maps/KUYj8pheja9Y2QST6)
+    📍 [Yigit Erkek Kuaforu](https://goo.gl/maps/KUYj8pheja9Y2QST6)
 
 
-    📍 [Barbier par Ahmet] (https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
+    📍 [Barbier par Ahmet](https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
 
 
-    📍 [Près de Migros] (https://goo.gl/maps/PiBvkRPMak7bNo23A)'
+    📍 [Près de Migros](https://goo.gl/maps/PiBvkRPMak7bNo23A)'
 - id: TAX_OFFICE
   text: '*💸 Taxe \(Vergi Dairesi\)*
 
@@ -218,19 +218,19 @@ screens:
     \- Payer une amende pour les voitures avec des plaques d''immatriculation étrangères
 
 
-    📍 [Antalya Vergi Dairesi] (https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\,7 km\)'
+    📍 [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\,7 km\)'
 - id: POST_OFFICE
   text: '*✉️ Courrier \(PTT\)*
 
 
-    📍 [PTT Yesilirmak] (https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\,6 km\)
+    📍 [PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\,6 km\)
 
     Le bureau de poste de notre complexe, les ikamets viennent ici
 
 
-    📍 [PTT Teomanpasa] (https://goo.gl/maps/xq1qT8CjHqhzXtKx9) \(2\,1 km\)
+    📍 [PTT Teomanpasa](https://goo.gl/maps/xq1qT8CjHqhzXtKx9) \(2\,1 km\)
 
-    📍 [PTT Sutculer] (https://goo.gl/maps/nd8XwFx2EbUYSCj57) \(2\,9 km\)
+    📍 [PTT Sutculer](https://goo.gl/maps/nd8XwFx2EbUYSCj57) \(2\,9 km\)
 
 
     ℹ️ Où d''autre vous pouvez payer les services publics, lisez la section :
@@ -243,33 +243,33 @@ screens:
     ℹ️ Dans cet établissement vous pouvez obtenir une attestation *Numarataj* \(Numarataj\), nécessaire à l''obtention d''un
     titre de séjour
 
-    ⚡️ Au rez-de-chaussée, vous pouvez faire des copies de documents pour 1 TL
+    ⚡️ Au rez\-de\-chaussée, vous pouvez faire des copies de documents pour 1 TL
 
 
-    📍 [Kepez Belediye] (https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\,5 km\)'
+    📍 [Kepez Belediye](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\,5 km\)'
 - id: POPULATION_OFFICE
   text: '*🧑‍💼 Nufus \(Ministère de l''Enregistrement de la Population\)*
 
 
-    ℹ️ Dans cette institution, le Tapa est délivré, les citoyens turcs sont enregistrés, les nouveau-nés sont enregistrés
+    ℹ️ Dans cette institution, le Tapa est délivré, les citoyens turcs sont enregistrés, les nouveau\-nés sont enregistrés
     et d''autres problèmes de population sont résolus\.
 
     ⚠️ Les étrangers doivent s''inscrire auprès de Goc, pas de Nufus\.
 
 
-    📍 [Kepez Nufus] (https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\,5 km\)'
+    📍 [Kepez Nufus](https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\,5 km\)'
 - id: MIGRATION_OFFICE
   text: '*👮 Goc Idaresi \(Département des migrations d''Antalya\)*
 
 
     1️⃣ Ici, vous devez vous inscrire\.
 
-    2️⃣ Ici a lieu le rendez-vous \(demande de titre de séjour\) et toutes les questions liées au titre de séjour\ sont résolues\.
+    2️⃣ Ici a lieu le rendez\-vous \(demande de titre de séjour\) et toutes les questions liées au titre de séjour\ sont résolues\.
 
     3️⃣ Ceux qui ne l''ont pas encore fait pourront être convoqués ici pour une prise d''empreintes digitales\.
 
 
-    📍 [Goc Idaresi] (https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\,1 km\)'
+    📍 [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\,1 km\)'
 - id: RESIDENCE_FITNESS_SPA
   text: '*🧖‍♀ Ata Wellness Fitness & Spa*
 
@@ -292,4 +292,4 @@ screens:
 
     👨‍💻 Demande de connexion
 
-    [📱 iPhone] (https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android] (https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)'
+    [📱 iPhone](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)'

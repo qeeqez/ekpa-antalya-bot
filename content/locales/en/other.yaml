@@ -42,7 +42,7 @@ screens:
 
     \- As a temporary solution, you can buy a SIM card issued in the name of a local person near the complex
 
-    \- Re-register a Sim for a person with a residence permit'
+    \- Re\-register a Sim for a person with a residence permit'
 - id: PHONE_UNLOCK_IMEI
   text: '*📱 Unlock your phone \(IMEI\)*
 
@@ -53,7 +53,7 @@ screens:
 
     \- Blocked only in Turkey \(continues to work fully in other countries\)
 
-    \- It is not the phone itself that is blocked, but the IMEI, i.e.\. specific SIM card slot\.
+    \- It is not the phone itself that is blocked, but the IMEI, i\.e\.\. specific SIM card slot\.
 
     \- No SIM cards, calls or SMS will work\. The phone says “No Network” and “Phone not allowed”\.
 

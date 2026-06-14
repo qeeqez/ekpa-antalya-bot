@@ -13,12 +13,12 @@ screens:
 
     💼 *Bureau*
 
-    [Bloc C] (https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 étage, depuis l''entrée à gauche
+    [Bloc C](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 étage, depuis l''entrée à gauche
 
 
     🕘 *Lundi \- Samedi*
 
-    08h30 - 12h30
+    08h30 \- 12h30
 
     13h30\- 17h30
 
@@ -131,7 +131,7 @@ screens:
     ℹ️ `Klima Ekpa 1207` Appartement en bloc
 
 
-    ⚠️ Assurez-vous d''indiquer les numéros de bloc et d''appartement pour lesquels vous payez'
+    ⚠️ Assurez\-vous d''indiquer les numéros de bloc et d''appartement pour lesquels vous payez'
 - id: HOW_TO_PAY_ELECTRICITY
   text: '*Électricité*
 
@@ -155,7 +155,7 @@ screens:
 
     \- Le bulletin de versement qui arrive à l''adresse est déposé dans une boîte accrochée au mur du premier étage
 
-    \- En ligne sur le site [CK Akdeniz] (https://online.ckakdeniz.com.tr)
+    \- En ligne sur le site [CK Akdeniz](https://online.ckakdeniz.com.tr)
 
 
     *Paiement :*
@@ -174,12 +174,12 @@ screens:
 
     🪙 *Espèces ou carte*
 
-    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1] (https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
-    2] (https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
+    2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
-    \- Au bureau de poste des PTT, [Bureau de poste le plus proche] (https://goo.gl/maps/fwskNzeEbtX9hspz6)
+    \- Au bureau de poste des PTT, [Bureau de poste le plus proche](https://goo.gl/maps/fwskNzeEbtX9hspz6)
 
-    \- Dans n''importe quel bureau de CK Akdeniz Elektrik, [Bureau le plus proche] (https://goo.gl/maps/nyumU39FQYJTnFZt9)'
+    \- Dans n''importe quel bureau de CK Akdeniz Elektrik, [Bureau le plus proche](https://goo.gl/maps/nyumU39FQYJTnFZt9)'
 - id: HOW_TO_PAY_WATER
   text: '*Eau*
 
@@ -200,7 +200,7 @@ screens:
 
     \- Le bulletin de versement qui arrive à l''adresse est déposé dans une boîte accrochée au mur du premier étage
 
-    \- En ligne sur le site [ASAT] (https://online.asat.gov.tr/webportal/index.php)\. Cliquez sur HIZLI ÖDEME
+    \- En ligne sur le site [ASAT](https://online.asat.gov.tr/webportal/index.php)\. Cliquez sur HIZLI ÖDEME
 
 
     *Paiement :*
@@ -219,12 +219,12 @@ screens:
 
     🪙 *Espèces ou carte*
 
-    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1] (https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
-    2] (https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
+    2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
-    \- Au bureau de poste des PTT, [Bureau de poste le plus proche] (https://goo.gl/maps/fwskNzeEbtX9hspz6)
+    \- Au bureau de poste des PTT, [Bureau de poste le plus proche](https://goo.gl/maps/fwskNzeEbtX9hspz6)
 
-    \- Au [siège social d''ASAT] (https://goo.gl/maps/3GqKDPPnW8gUUz5q6)'
+    \- Au [siège social d''ASAT](https://goo.gl/maps/3GqKDPPnW8gUUz5q6)'
 - id: HOW_TO_PAY_PHONE_AND_INTERNET
   text: '*📱Téléphone portable et Internet 🌎*
 
@@ -233,15 +233,15 @@ screens:
 
     \- Pour votre téléphone, vous devez sélectionner un forfait pour le mois prochain
 
-    \- Vous pouvez simplement recharger votre solde et payer plus tard les forfaits à partir de celui-ci
+    \- Vous pouvez simplement recharger votre solde et payer plus tard les forfaits à partir de celui\-ci
 
     \- Pour Internet, vous devez payer la facture du mois précédent
 
 
     🪙 *Espèces ou carte*
 
-    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1] (https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
-    2] (https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+    \- Dans la succursale de Turkcell avec une petite commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest
+    2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
 
     \- Dans n''importe quel bureau de votre opérateur télécom'
 - id: HOW_TO_CONNECT
@@ -268,7 +268,7 @@ screens:
 
     \- Vous ne pouvez pas le faire dans Dask Bank\.
 
-    \- Vous pouvez le faire auprès de n''importe quelle compagnie d''assurance ou à Nkolay en utilisant le lien ci-dessous\.
+    \- Vous pouvez le faire auprès de n''importe quelle compagnie d''assurance ou à Nkolay en utilisant le lien ci\-dessous\.
 
 
     💼 *Emportez avec vous :*
@@ -277,12 +277,12 @@ screens:
 
     2\. Passeport ou Ikamet
 
-    3\. Numéro fiscal turc \(Le numéro lui-même suffit\)
+    3\. Numéro fiscal turc \(Le numéro lui\-même suffit\)
 
     4\. Adresse complète / Dites à Ekpa
 
 
-    📍 *Commandez Dask à [Nkolay] (https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
+    📍 *Commandez Dask à [Nkolay](https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
 - id: HOW_TO_CONNECT_ELECTRICITY
   text: '*⚡️Électricité*
 
@@ -293,14 +293,14 @@ screens:
 
     2\. *Passeport* ou *Ikamet*
 
-    3\. Turc *numéro fiscal* \(Le numéro lui-même suffit\)
+    3\. Turc *numéro fiscal* \(Le numéro lui\-même suffit\)
 
     4\. Assurance tremblement de terre *Dask*
 
     5\. *Argent* pour le dépôt \(Restitué lors de la déconnexion\)
 
 
-    📍 *Vous pouvez vous connecter uniquement au [siège social de CK Akdeniz Elektrik] (https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+    📍 *Vous pouvez vous connecter uniquement au [siège social de CK Akdeniz Elektrik](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
 
 
     🧑‍💼*Déclaration au Code criminel :*
@@ -315,7 +315,7 @@ screens:
 
     ⚠️ Le panneau électrique est dans le placard\.
 
-    ⚠️ Le compteur électrique est situé au sous-sol derrière une porte fermée\.'
+    ⚠️ Le compteur électrique est situé au sous\-sol derrière une porte fermée\.'
 - id: HOW_TO_CONNECT_WATER
   text: '*💧Eau*
 
@@ -326,14 +326,14 @@ screens:
 
     2\. *Passeport* ou *Ikamet*
 
-    3\. Turc *numéro fiscal* \(Le numéro lui-même suffit\)
+    3\. Turc *numéro fiscal* \(Le numéro lui\-même suffit\)
 
     4\. Assurance tremblement de terre *Dask*
 
     5\. *Argent* pour le dépôt \(Restitué lors de la déconnexion\)
 
 
-    📍 *Connectez l''eau à [ASAT] (https://goo.gl/maps/PMfUJd315NtC9dur6)*
+    📍 *Connectez l''eau à [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
 
 
     🧑‍💼*Déclaration au Code criminel :*
@@ -369,11 +369,11 @@ screens:
 
     🌐 *Opérateurs Internet*
 
-    \- [Turk Telekom] (https://turktelekom.com.tr/)
+    \- [Turk Telekom](https://turktelekom.com.tr/)
 
-    \- [Turkcell Superonline] (https://www.superonline.net/)
+    \- [Turkcell Superonline](https://www.superonline.net/)
 
-    \- [Turksat Kablo] (https://www.fiberkablonet.com/)
+    \- [Turksat Kablo](https://www.fiberkablonet.com/)
 
 
     ℹ️ Pour vous connecter, vous devez contacter le bureau de l''opérateur avec un ikamet\. Le prix est le même que sur le
@@ -383,9 +383,9 @@ screens:
     bureaux les plus proches du complexe\.
 
 
-    🏴‍☠️ *Connectez-vous sans titre de séjour*
+    🏴‍☠️ *Connectez\-vous sans titre de séjour*
 
-    \- Pour vous connecter sans permis de séjour, vous devez trouver une personne qui s''occupera elle-même d''Internet\.
+    \- Pour vous connecter sans permis de séjour, vous devez trouver une personne qui s''occupera elle\-même d''Internet\.
 
     \- C''est généralement plus cher, de nombreux « assistants » facturent de l''argent pour un tel service\.
 
@@ -396,7 +396,7 @@ screens:
 
     \- Partagez Internet depuis votre téléphone
 
-    \- Demandez de l''aide à vos voisins, partagez le Wi-Fi'
+    \- Demandez de l''aide à vos voisins, partagez le Wi\-Fi'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️ Comment désactiver ?*'
   button_texts:
@@ -411,9 +411,9 @@ screens:
 
     🌎 *Désactiver en ligne*
 
-    \- Connectez-vous à Edevlet
+    \- Connectez\-vous à Edevlet
 
-    \- Allez sur la page [Ck Akdeniz Feshi Başvurusu] (https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
+    \- Allez sur la page [Ck Akdeniz Feshi Başvurusu](https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
 
     \- Ou tapez la recherche `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu`
 
@@ -424,7 +424,7 @@ screens:
     ⚠️ *Vous ne pouvez vous déconnecter en ligne que si vous êtes connecté à Ikamet*
 
 
-    📍 *Coupez l''électricité hors ligne au [siège social de CK Akdeniz Elektrik] (https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+    📍 *Coupez l''électricité hors ligne au [siège social de CK Akdeniz Elektrik](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
 
 
     💼 *Emportez avec vous :*
@@ -448,9 +448,9 @@ screens:
 
     🌎 *Désactiver en ligne*
 
-    \- Connectez-vous à Edevlet
+    \- Connectez\-vous à Edevlet
 
-    \- Allez sur la page [ASAT Feshi Başvurusu] (https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu)
+    \- Allez sur la page [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu)
 
     \- Ou tapez recherche `ASAT Abonelik Sözleşme Feshi Başvurusu`
 
@@ -461,7 +461,7 @@ screens:
     ⚠️ *Vous ne pouvez vous déconnecter en ligne que si vous êtes connecté à Ikamet*
 
 
-    📍 *Activez l''eau hors ligne dans [ASAT] (https://goo.gl/maps/PMfUJd315NtC9dur6)*
+    📍 *Activez l''eau hors ligne dans [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
 
 
     💼 *Emportez avec vous :*

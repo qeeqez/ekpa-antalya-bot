@@ -109,7 +109,7 @@ screens:
 
     ⏳ 7 days from the date of receipt of the invoice
 
-    ⚠️ If payment is not made, it will be disabled\. A lock icon and Centralized\ will appear on the remote control.
+    ⚠️ If payment is not made, it will be disabled\. A lock icon and Centralized\ will appear on the remote control\.
 
 
     *Payment:*
@@ -168,7 +168,7 @@ screens:
 
     3\. You will see the amount and can pay
 
-    ⚠️ If the invoice has not yet been issued, the application will display an error.
+    ⚠️ If the invoice has not yet been issued, the application will display an error\.
 
 
     🪙 *Cash or card*
@@ -212,7 +212,7 @@ screens:
 
     3\. You will see the amount and can pay
 
-    ⚠️ If the invoice has not yet been issued, the application will display an error.
+    ⚠️ If the invoice has not yet been issued, the application will display an error\.
 
 
     🪙 *Cash or card*
@@ -241,12 +241,12 @@ screens:
 
     \- In any office of your telecom operator'
 - id: HOW_TO_CONNECT
-  text: '*🧑‍🔧 How to connect / re-register? ♻️*
+  text: '*🧑‍🔧 How to connect / re\-register? ♻️*
 
 
-    1️⃣ The process of first connection is no different from re-registration
+    1️⃣ The process of first connection is no different from re\-registration
 
-    2️⃣ When re-registering, the previous payer does not need to travel separately to disconnect'
+    2️⃣ When re\-registering, the previous payer does not need to travel separately to disconnect'
   button_texts:
     connect_dask: 🛡️ Dask
     connect_electricity: ⚡️ Electricity
@@ -391,7 +391,7 @@ screens:
 
     \- Share Internet from your phone
 
-    \- Ask your neighbors for help, share Wi-Fi'
+    \- Ask your neighbors for help, share Wi\-Fi'
 - id: HOW_TO_DISCONNECT
   text: '*⛔️ How to disable?*'
   button_texts:

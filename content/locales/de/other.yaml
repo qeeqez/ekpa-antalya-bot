@@ -14,34 +14,34 @@ screens:
 
     ℹ️ *In der Türkei gibt es zwei verschiedene Telefonsperren*
 
-    1\. Die SIM-Karte wird nach 90 Tagen gesperrt \(touristisch\)
+    1\. Die SIM\-Karte wird nach 90 Tagen gesperrt \(touristisch\)
 
-    2\. Das Telefon selbst wird nach 120 Tagen gesperrt (nachdem eine türkische SIM-Karte eingelegt wurde)\.'
+    2\. Das Telefon selbst wird nach 120 Tagen gesperrt \(nachdem eine türkische SIM\-Karte eingelegt wurde\)\.'
   button_texts:
     phone_unlock_sim: 📱 SIM entsperren (Tourist)
     phone_unlock_imei: 📱 Entsperren Sie Ihr Telefon (IMEI)
 - id: PHONE_UNLOCK_SIM
-  text: '*📱 SIM-Karte \(Tourist\) entsperren*
+  text: '*📱 SIM\-Karte \(Tourist\) entsperren*
 
 
     ℹ️ *Welche Art von Blockierung?*
 
-    \- Wenn Ihre SIM-Karte für einen Reisepass ausgestellt wurde und nicht für eine Ikamet \(Aufenthaltserlaubnis\)
+    \- Wenn Ihre SIM\-Karte für einen Reisepass ausgestellt wurde und nicht für eine Ikamet \(Aufenthaltserlaubnis\)
 
     \- Dann ist es eine Touristenattraktion und wird in 90 Tagen gesperrt
 
 
     🆓 *So entsperren Sie*
 
-    \- Geben Sie im Antrag des Telekommunikationsbetreibers Ihr Ikamet ein (falls Sie eines haben, reicht die Nummer selbst
-    aus, sodass auch ein Papier-Ikamet funktioniert)
+    \- Geben Sie im Antrag des Telekommunikationsbetreibers Ihr Ikamet ein \(falls Sie eines haben, reicht die Nummer selbst
+    aus, sodass auch ein Papier\-Ikamet funktioniert\)
 
     \- Wenn es kein Ikamet gibt, ist es nicht möglich, es an eine andere Person zu binden
 
 
     ⚡️ *Alternative Methoden*
 
-    \- Als vorübergehende Lösung können Sie eine SIM-Karte kaufen, die auf den Namen einer örtlichen Person in der Nähe des
+    \- Als vorübergehende Lösung können Sie eine SIM\-Karte kaufen, die auf den Namen einer örtlichen Person in der Nähe des
     Komplexes ausgestellt ist
 
     \- Einen Sim für eine Person mit Aufenthaltserlaubnis erneut registrieren'
@@ -51,13 +51,13 @@ screens:
 
     ℹ️ *Welche Art von Blockierung?*
 
-    \- 120 Tage nach dem Einlegen einer türkischen SIM-Karte in das mitgebrachte Telefon wird dieses gesperrt\.
+    \- 120 Tage nach dem Einlegen einer türkischen SIM\-Karte in das mitgebrachte Telefon wird dieses gesperrt\.
 
     \- Nur in der Türkei blockiert \(funktioniert in anderen Ländern weiterhin vollständig\)
 
-    \- Nicht das Telefon selbst wird blockiert, sondern die IMEI, also\. spezifischen SIM-Kartensteckplatz\.
+    \- Nicht das Telefon selbst wird blockiert, sondern die IMEI, also\. spezifischen SIM\-Kartensteckplatz\.
 
-    \- Keine SIM-Karten, Anrufe oder SMS funktionieren\. Das Telefon zeigt „Kein Netzwerk“ und „Telefon nicht erlaubt“ an\.
+    \- Keine SIM\-Karten, Anrufe oder SMS funktionieren\. Das Telefon zeigt „Kein Netzwerk“ und „Telefon nicht erlaubt“ an\.
 
     \- Das Telefon selbst funktioniert weiterhin, einschließlich WLAN und Anrufen in Instant Messenger über das Internet\.'
   button_texts:
@@ -65,9 +65,9 @@ screens:
     phone_unlock_imei_paid: 💰 Bezahlte Option (30000 TL)
     phone_unlock_imei_reblock: 🤯 Wenn das Telefon wieder gesperrt ist
 - id: PHONE_UNLOCK_IMEI_FREE
-  text: '🆓 *Kostenlose Telefon-Entsperrung*
+  text: '🆓 *Kostenlose Telefon\-Entsperrung*
 
-    \- Legen Sie die SIM-Karte in den zweiten Steckplatz ein, falls verfügbar \(auf einigen Telefonen ist ESIM möglich\)
+    \- Legen Sie die SIM\-Karte in den zweiten Steckplatz ein, falls verfügbar \(auf einigen Telefonen ist ESIM möglich\)
 
     \- Von nun an werden 120 Tage heruntergezählt
 
@@ -82,24 +82,24 @@ screens:
 
     \- Kaufen Sie ein günstiges Telefon und verteilen Sie WLAN darüber
 
-    \- Kaufen Sie ein 4G-Modem und verteilen Sie es, aber dann ist es unmöglich, Anrufe zu empfangen'
+    \- Kaufen Sie ein 4G\-Modem und verteilen Sie es, aber dann ist es unmöglich, Anrufe zu empfangen'
 - id: PHONE_UNLOCK_IMEI_PAID
-  text: "*\U0001F4B0 Offizielle kostenpflichtige Telefon-Entsperrung*\n\nℹ️ 1 Eine Person kann alle 3 Jahre 1 Telefon registrieren\\\
+  text: "*\U0001F4B0 Offizielle kostenpflichtige Telefon\\-Entsperrung*\n\nℹ️ 1 Eine Person kann alle 3 Jahre 1 Telefon registrieren\\\
     .\n*Erforderlich:* Diese Person muss spätestens vor 365 Tagen aus dem Ausland eingereist sein\n\n\U0001F4B0 *Preis im\
-    \ Jahr 2024: 30000 TL \U0001F92F*\n\n\U0001F9E7 *Anmeldevorgang:*\n\\- Melden Sie sich bei Edevlet mit der Ikamet-Nummer\
-    \ und dem Passwort an, die Sie per E-Mail erhalten haben\n\\- Gehen Sie zur Seite [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
+    \ Jahr 2024: 30000 TL \U0001F92F*\n\n\U0001F9E7 *Anmeldevorgang:*\n\\- Melden Sie sich bei Edevlet mit der Ikamet\\-Nummer\
+    \ und dem Passwort an, die Sie per E\\-Mail erhalten haben\n\\- Gehen Sie zur Seite [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
     \ \\(oder suchen Sie nach `IMEI Kaydet`\\)\n\\- Geben Sie Ihre Daten ein \\(alle IMEI im Telefon, Ihren Reisepass und\
     \ das Datum der Einreise in das Land\\)\n\\- Bezahlen\n\n\U0001FA99 *Zahlung in bar*\n\\- Sie können beim Finanzamt bar\
     \ bezahlen\n\\- Nach der Zahlung müssen Sie die Freischaltung über Edevlet auf der Seite [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
-    \ beantragen\\.\n\n\U0001F4B5 *Online-Zahlung*\n\\- Die Zahlung ist nur mit einer türkischen Karte möglich\\. Nur Kreditkarte,\
+    \ beantragen\\.\n\n\U0001F4B5 *Online\\-Zahlung*\n\\- Die Zahlung ist nur mit einer türkischen Karte möglich\\. Nur Kreditkarte,\
     \ Lastschrift wird nicht akzeptiert\n\\- Sie können wählen, ob Sie über das Finanzamt bezahlen möchten \\(Vergi Dairesi\\\
     )\n     \\- Anstatt eine Karte einzugeben, wechseln Sie zum zweiten Tab\n     \\- Es wird möglich sein, mit ZiraatPay\
-    \ und VakifPay zu bezahlen, ich habe es über Zirat gemacht\n\n⛔️ *Nachteile*\n\\- Sie müssen eine SIM-Karte verwenden,\
-    \ die bei demselben Ikamet registriert ist\n\\- Diese Regelung ist 3 Jahre gültig, danach können Sie beliebige SIM-Karten\
+    \ und VakifPay zu bezahlen, ich habe es über Zirat gemacht\n\n⛔️ *Nachteile*\n\\- Sie müssen eine SIM\\-Karte verwenden,\
+    \ die bei demselben Ikamet registriert ist\n\\- Diese Regelung ist 3 Jahre gültig, danach können Sie beliebige SIM\\-Karten\
     \ verwenden"
 - id: PHONE_UNLOCK_IMEI_REBLOCK
-  text: "\U0001F92F *Wenn das Telefon wieder gesperrt ist*\n\nℹ️ Das Telefon und die darin enthaltene SIM-Karte müssen bei\
-    \ demselben Ikamet registriert sein\n\n✅ *Wenn alles gut ist*\n\U0001F4F2 Rufen Sie zur Klärung den BTK-Dienst unter der\
-    \ Nummer 120 an \\(es gibt eine Auswahl an englischen Betreibern\\)\n\n\U0001F6A8 *Sonst*\n\\- Übertragen Sie Ihre SIM-Karte\
-    \ von Ihrem Netzbetreiber auf ein anderes Ikamet\n    \\- Das aktuell bezahlte Paket geht verloren\n    \\- Die Übertragung\
-    \ selbst ist möglicherweise nicht kostenlos\n\\- Öffnen Sie eine neue SIM-Karte"
+  text: "\U0001F92F *Wenn das Telefon wieder gesperrt ist*\n\nℹ️ Das Telefon und die darin enthaltene SIM\\-Karte müssen bei\
+    \ demselben Ikamet registriert sein\n\n✅ *Wenn alles gut ist*\n\U0001F4F2 Rufen Sie zur Klärung den BTK\\-Dienst unter\
+    \ der Nummer 120 an \\(es gibt eine Auswahl an englischen Betreibern\\)\n\n\U0001F6A8 *Sonst*\n\\- Übertragen Sie Ihre\
+    \ SIM\\-Karte von Ihrem Netzbetreiber auf ein anderes Ikamet\n    \\- Das aktuell bezahlte Paket geht verloren\n    \\\
+    - Die Übertragung selbst ist möglicherweise nicht kostenlos\n\\- Öffnen Sie eine neue SIM\\-Karte"

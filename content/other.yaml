@@ -1,162 +1,70 @@
-version: "1.0"
+version: '1.0'
 screens:
-    - id: CAR_FINE
-      text: |
-        *🚗 Штраф на Автомобиль на Иностранных номерах*
-
-         ℹ️ *Проверить штрафы*
-         \- Зайти на [сайт налоговой](https://ivd.gib.gov.tr/)
-         \- Выбрать правую нижнюю кнопку
-         \- *Yabancı Plakalı Araç Ödemeleri \(Foreign Vehicle Payments\)*
-         \- Ввести номер авто
-
-         💳 *Оплатить онлайн*
-         \- Можно там же, после проверки штрафа
-         \- Оплатить можно только Турецкой Кредитной картой
-         \- При выборе оплаты через налоговую, если переключиться на вторую вкладку \(второй таб\)
-         \- Появится возможность оплатить через Ziraat или Vakif Pay
-
-         🪙 *Оплатить наличными*
-         \- В отделении налоговой [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-    - id: PHONE_UNLOCK
-      text: |
-        *📲 Разблокировка телефона*
-
-        ℹ️  *Существует 2 разные блокировки телефона в Турции*
-        1\. Блокируется СИМ карта через 90 дней \(туристическая\)
-        2\. Блокируется сам телефон через 120 дней \(после момента как вставили любую Турецкую сим карту\)
-      parse_mode: MarkdownV2
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: phone_unlock_sim
-                  text: "📱 Разблокировка СИМ (Туристической)"
-                  type: callback
-                  callback: PHONE_UNLOCK_SIM_BUTTON
-            - buttons:
-                - id: phone_unlock_imei
-                  text: "📱 Разблокировка телефона (IMEI)"
-                  type: callback
-                  callback: PHONE_UNLOCK_IMEI_BUTTON
-      navigation:
-        - callback: PHONE_UNLOCK_SIM_BUTTON
-          target: PHONE_UNLOCK_SIM
-        - callback: PHONE_UNLOCK_IMEI_BUTTON
-          target: PHONE_UNLOCK_IMEI
-    - id: PHONE_UNLOCK_SIM
-      text: |
-        *📱 Разблокировка СИМ \(Туристической\)*
-
-        ℹ️ *Что за блокировка?*
-        \- Если ваша Сим карта была оформлена на паспорт, а не икамет \(ВНЖ\)
-        \- То она является туристической и будет заблокирована через 90 дней
-
-        🆓 *Как разблокировать*
-        \- В приложении оператора связи ввести свой икамет \(если он есть, достаточно самого номера, потому бумажный тоже подойдет\)
-        \- Если икамета нет, то привязать на другого человека не получится
-
-        ⚡️ *Альтернативные способы*
-        \- Как временное решение, можно недалеко от комплекса купить Сим карту оформленную на местного
-        \- Переоформить Сим на человека с ВНЖ
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-
-    - id: PHONE_UNLOCK_IMEI
-      text: |
-        *📱 Разблокировка телефона \(IMEI\)*
-
-        ℹ️ *Что за блокировка?*
-        \- Через 120 дней с момента, как в привезенный телефон была вставлена Турецкая сим карта, он блокируется\.
-        \- Блокируется только на территории Турции \(в других странах продолжает полноценно работать\)
-        \- Блокируется не сам телефон, а IMEI, т\.е\. конкретный слот сим карты\.
-        \- Не будут работать никакие сим карты, звонки и смс\. Телефон пишет “Нет Сети” и “Phone not allowed”\.
-        \- Сам телефон продолжает работу, в том числе WiFi и звонки в мессенджерах через интернет\.
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: phone_unlock_imei_free
-                  text: "🆓 Бесплатный вариант"
-                  type: callback
-                  callback: PHONE_UNLOCK_IMEI_FREE_BUTTON
-            - buttons:
-                - id: phone_unlock_imei_paid
-                  text: "💰 Платный вариант (30000 TL)"
-                  type: callback
-                  callback: PHONE_UNLOCK_IMEI_PAID_BUTTON
-            - buttons:
-                - id: phone_unlock_imei_reblock
-                  text: "🤯 Если телефон повторно заблокировали"
-                  type: callback
-                  callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
-      navigation:
-        - callback: PHONE_UNLOCK_IMEI_FREE_BUTTON
-          target: PHONE_UNLOCK_IMEI_FREE
-        - callback: PHONE_UNLOCK_IMEI_PAID_BUTTON
-          target: PHONE_UNLOCK_IMEI_PAID
-        - callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
-          target: PHONE_UNLOCK_IMEI_REBLOCK
-    - id: PHONE_UNLOCK_IMEI_FREE
-      text: |
-        🆓 *Бесплатная разблокировка телефона*
-        \- Вставить симку во второй слот, если он есть \(на некоторых телефонах можно сделать ESIM\)
-        \- С этого момента пойдет отсчет 120 дней
-        \- По истечении срока второй слот тоже заблокируется
-
-        ❗️ Бесплатная разблокировка на год через Edevlet больше не работает, это была временная акция в честь Covid
-
-        ⚡️ *Альтернативный вариант*
-        \- Купить дешевый телефон и с него раздавать WiFi
-        \- Купить 4G Модем и с него раздавать, но тогда невозможно принимать звонки
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-
-    - id: PHONE_UNLOCK_IMEI_PAID
-      text: |
-        *💰 Оффициальная платная разблокировка телефона*
-
-        ℹ️ 1 Человек может зарегистрировать 1 телефон раз в 3 года\.
-        *Обязательно:* этот человек должен был приехать из\-за границы не позже 365 дней назад
-
-        💰 *Стоимость в 2024: 30000 TL 🤯*
-
-        🧧 *Процесс регистрации:*
-        \- Зайти в Edevlet по номеру ikamet и паролю, полученному на почте
-        \- Перейти на страницу [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet) \(или найти в поиске `IMEI Kaydet`\)
-        \- Заполнить свои данные \(все IMEI в телефоне, свой паспорт и дату въезда в страну\)
-        \- Оплатить
-
-        🪙 *Оплата наличными*
-        \- Оплатить можно наличными в налоговой
-        \- После оплаты нужно самому подать заявку на разблокировку через Edevlet на странице [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)
-
-        💵 *Оплата онлайн*
-        \- Оплата возможна только Турецкой картой\. Только Кредитной, дебетовая не принимается
-        \- Можно выбрать оплату через налоговую \(Vergi Dairesi\)
-             \- Вместо ввода карты переключиться на вторую вкладку
-             \- Будет возможность оплатить ZiraatPay и VakifPay, у меня получилось через зират
-
-        ⛔️ *Минусы*
-        \- Сим карту обязательно использовать, зарегистрированную на этот же Ikamet
-        \- Это правило действует 3 года, потом можно использовать любые сим карты
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-    - id: PHONE_UNLOCK_IMEI_REBLOCK
-      text: |
-        🤯 *Если телефон повторно заблокировали*
-
-        ℹ️ Телефон и сим карта в нем должны быть зарегистрированы на один и тот же Ikamet
-
-        ✅ *Если все хорошо*
-        📲 Звонить в службу BTK по номеру 120 для уточнения \(есть выбор английского оператора\)
-
-        🚨 *В ином случае*
-        \- Сделать перенос сим на другой Ikamet у своего оператора
-            \- Теряется текущий оплаченный пакет
-            \- Сам перенос может быть не бесплатен
-        \- Открыть новую сим карту
-      parse_mode: MarkdownV2
-      disable_web_preview: true
+- id: CAR_FINE
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: PHONE_UNLOCK
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: phone_unlock_sim
+        text: ''
+        type: callback
+        callback: PHONE_UNLOCK_SIM_BUTTON
+    - buttons:
+      - id: phone_unlock_imei
+        text: ''
+        type: callback
+        callback: PHONE_UNLOCK_IMEI_BUTTON
+  navigation:
+  - callback: PHONE_UNLOCK_SIM_BUTTON
+    target: PHONE_UNLOCK_SIM
+  - callback: PHONE_UNLOCK_IMEI_BUTTON
+    target: PHONE_UNLOCK_IMEI
+- id: PHONE_UNLOCK_SIM
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: PHONE_UNLOCK_IMEI
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: phone_unlock_imei_free
+        text: ''
+        type: callback
+        callback: PHONE_UNLOCK_IMEI_FREE_BUTTON
+    - buttons:
+      - id: phone_unlock_imei_paid
+        text: ''
+        type: callback
+        callback: PHONE_UNLOCK_IMEI_PAID_BUTTON
+    - buttons:
+      - id: phone_unlock_imei_reblock
+        text: ''
+        type: callback
+        callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
+  navigation:
+  - callback: PHONE_UNLOCK_IMEI_FREE_BUTTON
+    target: PHONE_UNLOCK_IMEI_FREE
+  - callback: PHONE_UNLOCK_IMEI_PAID_BUTTON
+    target: PHONE_UNLOCK_IMEI_PAID
+  - callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
+    target: PHONE_UNLOCK_IMEI_REBLOCK
+- id: PHONE_UNLOCK_IMEI_FREE
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: PHONE_UNLOCK_IMEI_PAID
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: PHONE_UNLOCK_IMEI_REBLOCK
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true

@@ -1,158 +1,74 @@
-version: "1.0"
+version: '1.0'
 screens:
-    - id: TRANSPORT
-      text: "*🚌 Транспорт*"
-      parse_mode: MarkdownV2
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: bus
-                  text: "🚌 Автобус"
-                  type: callback
-                  callback: BUS_BUTTON
-            - buttons:
-                - id: antalya_card
-                  text: "🪪 Antalya Kart"
-                  type: callback
-                  callback: ANTALYA_CARD_BUTTON
-            - buttons:
-                - id: taxi
-                  text: "🚕 Такси"
-                  type: callback
-                  callback: TAXI_BUTTON
-            - buttons:
-                - id: kick_scooter
-                  text: "🛴 Самокаты"
-                  type: callback
-                  callback: KICK_SCOOTER_BUTTON
-      navigation:
-        - callback: BUS_BUTTON
-          target: BUS
-        - callback: ANTALYA_CARD_BUTTON
-          target: ANTALYA_CARD
-        - callback: TAXI_BUTTON
-          target: TAXI
-        - callback: KICK_SCOOTER_BUTTON
-          target: KICK_SCOOTER
-    - id: BUS
-      text: |
-        *🚎 Общественный транспорт*
-
-         📍 Маршрут лучше всего планировать в *Google Maps*
-         🧭 Текущее местоположение автобусов можно посмотреть в приложении *AntalyaKart*
-
-         💵 *Стоимость проезда*
-         AntalyaKart \- 9\.6 TL
-         Банковская карта \- 9\.85 TL
-
-         🪙️ *Стоимость пересадки*
-         AntalyaKart \- 3 TL
-         Банковская карта \- 9\.85 TL
-
-         ℹ️ *Детям до 6 лет бесплатно*
-         ⚠️ *Оплата наличными в транспорте запрещена*
-      parse_mode: MarkdownV2
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: bus_concessionary
-                  text: "🎫 Льготы"
-                  type: callback
-                  callback: BUS_CONCESSIONARY_BUTTON
-      navigation:
-        - callback: BUS_CONCESSIONARY_BUTTON
-          target: BUS_CONCESSIONARY
-
-    - id: BUS_CONCESSIONARY
-      text: |
-        🧒👴 *Льготный проезд*
-
-        ℹ️ Для льготного проезда нужно сделать льготную карту
-
-        💵 *Стоимость проезда*
-        Студенты и школьники \- 4 TL
-        Пожилые, Инвалиды, Учителя \- 8\.4 TL
-
-        🪙️ *Стоимость пересадки \- 3 TL*
-
-        ⁉️️ *Как получить льготную карту?*
-        \- Выдается детям, пожилым и инвалидам, учителям
-        \- Карта именная с фото
-        \- Ребенку нужна справка со школы, о том что он ученик
-        \- Сделать можно только в главных отделениях AntalyaKart
-        \- [Ближайшее отделение здесь](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), в подземном переходе
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-
-    - id: ANTALYA_CARD
-      text: |
-        *💳 Antalya Kart*
-
-         ℹ️ Стоимость проезда с этой картой дешевле
-         ℹ️ Можно производить оплату за двоих, нужно подождать после первого платежа
-
-         📍 *Где купить?*
-         \- В ближайшем [Soylu Market](https://goo.gl/maps/XLS1rGdPT9dvaziG9)
-         \- В приложении *Antalya Kart* в разделе *Ближайшая точка* красным отмечены места продажи
-
-         🪙 *Как пополнить?*
-         \- Пополнить можно наличными там же, где и купить
-         \- Пополнить онлайн картой турецкого банка в приложении Antalya Kart
-
-         ⁉️ *Пополнил карту, а деньги не появились*
-         \- На терминале в автобусе нажать справа вверху красную кнопку пополнения
-         \- Подержать 5 секунд
-
-         🚌 *Как смотреть маршруты в приложении?*
-         \- Найти подходящий маршрут в Google Maps
-         \- В приложении Antalya Kart вбить в поиск номер маршрута
-         \- Отобразится весь маршрут и серые автобусы в местах где они сейчас едут
-         \- Флажок \-\> конец маршрута, Треугольник \-\> начало
-         \- Направление маршрута можно поменять нажав зеленую кнопку
-      parse_mode: MarkdownV2
-      disable_web_preview: true
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: antalya_card_android
-                  text: "🤖 Android"
-                  type: url
-                  url: "https://play.google.com/store/apps/details?id=kentkart.mobile.antalyakart"
-                - id: antalya_card_iphone
-                  text: "📱 iPhone"
-                  type: url
-                  url: "https://apps.apple.com/tr/app/antalyakart/id1076290540"
-    - id: TAXI
-      text: |
-        *🚖 Такси*
-
-        ℹ️ Кнопки для вызова такси висят по всей Анталии, машина приезжает даже глубокой ночью
-
-        🤙 *Вызвать можно:*
-        1\. Кнопкой перед въездом
-        2\. Приложение BiTaksi
-        3\. Приложение Uber
-
-        💵 *Стоимость: Посадка 10TL \+ 14TL/км*
-
-        🪙 *Оплата*
-        \- По счетчику в зеркале
-        \- Стоимость в приложениях высчитывается по этому же счетчику
-        \- Оплатить можно наличными лирами или картой \(не во всех такси\)
-        \- В приложении возможно оплатить привязанной картой
-      parse_mode: MarkdownV2
-    - id: KICK_SCOOTER
-      text: |
-        *🛴 Самокаты*
-
-        ℹ️ *Службы проката самокатов в Анталии:*
-        \- *BinBin* \(ездят у нашего комплекса\)
-        \- *Marti*
-        \- *Hop*
-        \- *Beam*
-        \- *Hop*
-        \- *Gez*
-        \- *Tornet*
-
-        ℹ️ Вдоль берега работает служба проката велосипедов *Antbis*
-      parse_mode: MarkdownV2
+- id: TRANSPORT
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: bus
+        text: ''
+        type: callback
+        callback: BUS_BUTTON
+    - buttons:
+      - id: antalya_card
+        text: ''
+        type: callback
+        callback: ANTALYA_CARD_BUTTON
+    - buttons:
+      - id: taxi
+        text: ''
+        type: callback
+        callback: TAXI_BUTTON
+    - buttons:
+      - id: kick_scooter
+        text: ''
+        type: callback
+        callback: KICK_SCOOTER_BUTTON
+  navigation:
+  - callback: BUS_BUTTON
+    target: BUS
+  - callback: ANTALYA_CARD_BUTTON
+    target: ANTALYA_CARD
+  - callback: TAXI_BUTTON
+    target: TAXI
+  - callback: KICK_SCOOTER_BUTTON
+    target: KICK_SCOOTER
+- id: BUS
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: bus_concessionary
+        text: ''
+        type: callback
+        callback: BUS_CONCESSIONARY_BUTTON
+  navigation:
+  - callback: BUS_CONCESSIONARY_BUTTON
+    target: BUS_CONCESSIONARY
+- id: BUS_CONCESSIONARY
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: ANTALYA_CARD
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: antalya_card_android
+        text: ''
+        type: url
+        url: https://play.google.com/store/apps/details?id=kentkart.mobile.antalyakart
+      - id: antalya_card_iphone
+        text: ''
+        type: url
+        url: https://apps.apple.com/tr/app/antalyakart/id1076290540
+- id: TAXI
+  text: ''
+  parse_mode: MarkdownV2
+- id: KICK_SCOOTER
+  text: ''
+  parse_mode: MarkdownV2

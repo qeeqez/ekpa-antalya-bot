@@ -1,196 +1,94 @@
-version: "1.0"
+version: '1.0'
 screens:
-    - id: PHONE_NUMBERS
-      text: "*\U0001F4DE Важные телефоны*"
-      parse_mode: MarkdownV2
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: ekpa_management
-                  text: "☎️ Управление EKPA"
-                  type: callback
-                  callback: EKPA_MANAGEMENT_BUTTON
-            - buttons:
-                - id: emergency
-                  text: "🆘 Экстренные службы"
-                  type: callback
-                  callback: EMERJENCY_BUTTON
-                - id: other_phones
-                  text: "📲 Другое"
-                  type: callback
-                  callback: OTHER_PHONES_BUTTON
-            - buttons:
-                - id: embassy
-                  text: "🏛️ Посольства"
-                  type: callback
-                  callback: EMBASSY_BUTTON
-      navigation:
-        - callback: EKPA_MANAGEMENT_BUTTON
-          target: EKPA_MANAGEMENT
-        - callback: EMERJENCY_BUTTON
-          target: EMERGENCY
-        - callback: EMBASSY_BUTTON
-          target: EMBASSY
-        - callback: OTHER_PHONES_BUTTON
-          target: OTHER_PHONES
-    - id: EKPA_MANAGEMENT
-      text: |
-        *Ekpa:*
-
-        *🧑‍💼Управляющая Компания*
-        \+90 \(539\) 6703316
-        \+90 \(539\) 6703320
-
-        *👮 Охрана*
-        \+90 \(539\) 6703833
-      parse_mode: MarkdownV2
-    - id: EMERGENCY
-      text: |
-        *Телефоны экстренных служб:*
-
-        ```
-        112 - 🚑 Скорая помощь
-        155 - 🚓 Полиция
-        154 - 🚔 Дорожная полиция
-        110 - 🚒 Пожарная охрана
-        156 - 👮 Жандармерия
-        157 - 🛂 Миграционная служба
-        118 - ℹ️ Справочная (телефоны)
-        ```
-      parse_mode: MarkdownV2
-    - id: EMBASSY
-      text: "*🏛️ Посольства*"
-      parse_mode: MarkdownV2
-      inline_keyboard:
-        rows:
-            - buttons:
-                - id: russia_embassy
-                  text: "🇷🇺 России"
-                  type: callback
-                  callback: RUSSIA_EMBASSY_BUTTON
-            - buttons:
-                - id: ukraine_embassy
-                  text: "🇺🇦 Украины"
-                  type: callback
-                  callback: UKRAINE_EMBASSY_BUTTON
-            - buttons:
-                - id: kazakhstan_embassy
-                  text: "🇰🇿 Казахстана"
-                  type: callback
-                  callback: KAZAKHSTAN_EMBASSY_BUTTON
-            - buttons:
-                - id: belarus_embassy
-                  text: "🇧🇾 Беларуси"
-                  type: callback
-                  callback: BELARUS_EMBASSY_BUTTON
-      navigation:
-        - callback: RUSSIA_EMBASSY_BUTTON
-          target: RUSSIA_EMBASSY
-        - callback: UKRAINE_EMBASSY_BUTTON
-          target: UKRAINE_EMBASSY
-        - callback: KAZAKHSTAN_EMBASSY_BUTTON
-          target: KAZAKHSTAN_EMBASSY
-        - callback: BELARUS_EMBASSY_BUTTON
-          target: BELARUS_EMBASSY
-    - id: RUSSIA_EMBASSY
-      text: |
-        <u><b>Генеральное Консульство России в Анталье</b></u>
-        Консульство: +90 (242) 248 32 02
-        Email: ruskonsant@yandex.ru
-        Запись на прием: https://antalya.mid.ru/ru/reception-at-reception/
-        Время работы: 9:00-18:00, Обед: 13:00-14:00
-        Адрес: <a href="https://goo.gl/maps/5uApWF2SymauHg7v9">Ankara, Çankaya Mah., Andrey Karlov Sok., No 5</a>
-        Сайт: https://antalya.mid.ru/ru/contacts/
-
-        <u><b>Посольство Турции в Москве</b></u>
-        Консульство: +7 (495) 994 93 59 (14.00 - 18.00 в будние дни)
-        Email: embassy.moscow@mfa.gov.tr
-        Время работы: 09:00-12:30
-        Адрес: <a href="https://goo.gl/maps/td3ZW6q2VCFfX8kYA">Москва, 7-й Ростовский пер., д. 12</a>
-        Сайт: http://moscow.emb.mfa.gov.tr/Mission/Contact
-      parse_mode: html
-      disable_web_preview: true
-    - id: UKRAINE_EMBASSY
-      text: |
-        <u><b>Консульство Украины в Анталье</b></u>
-        Консульство: +90 (242) 312 33 77
-        Email: gc_tra@mfa.gov.ua
-        Запись на прием: https://online.mfa.gov.ua/application
-        Время работы: 09:30-18:00 в будние дни
-        Адрес: <a href="https://g.page/UkraynaAntalyaKonsoloslugu">Antalya, Muratpasa, Çaybaşı Mah. 1350 Sokak, No: 24</a>
-        Сайт: https://antalia.mfa.gov.ua
-
-        <u><b>Посольство Турции в Киеве</b></u>
-        Посольство: +380 (44) 281 07 50 / +380 (44) 281 07 51
-        Email: embassy.kiev@mfa.gov.tr
-        Время работы: 14:30-17:30 в будние дни
-        Адрес: <a href="https://goo.gl/maps/1V5pqXA1nwTw3tzw6">Киев, ул. Панаса Мирного, д. 22</a>
-        Сайт: http://kiev.emb.mfa.gov.tr/Mission/Contact
-      parse_mode: html
-      disable_web_preview: true
-    - id: KAZAKHSTAN_EMBASSY
-      text: |
-        <u><b>Консульство Казахстана в Анталье</b></u>
-        Консульство: +90 242 324 26 11
-        Email: antalya@mfa.kz
-        Время работы: 09:00-18:30 в будние дни, 12:30-14:30 обед
-        Адрес: <a href="https://goo.gl/maps/oZdrjAQHvSNF2xhf6">Antalya, Muratpasa, Çağlayan Mah. 2070 Sokak, No: 16, Block C, Site Life City</a>
-        Сайт: https://www.gov.kz/memleket/entities/mfa-antalya/contacts
-
-        <u><b>Посольство Турции в Астане</b></u>
-        Посольство: +7 7172 704 704
-        Email: embassy.nur-sultan@mfa.gov.tr
-        Время работы: 09:00-18:30 в будние дни, 12:30-14:00 обед
-        Адрес: <a href="https://goo.gl/maps/k9h6ZVySjQNXZYUy5">Астана, ул. Жұмабек Тәшенов көшесі, д. 3</a>
-        Сайт: http://astana.be.mfa.gov.tr/Mission/Contact
-      parse_mode: html
-      disable_web_preview: true
-    - id: BELARUS_EMBASSY
-      text: |
-        <u><b>Посольство Беларуси в Анкаре</b></u>
-        Посольство: +90 (312) 441 67 69 / +90 (312) 441 67 70
-        Консульская служба: +90 (312) 441 64 50 (консультации и прием граждан с 9.00 до 13.00)
-        Email: turkey@mfa.gov.by
-        Время работы: 08:45-18:00 в будние дини, 08:45-16:45 в пятницу, 13:00-14.00 обед
-        Адрес: <a href="https://goo.gl/maps/srvg11UaaXNzRkKc8">Ankara, Çankaya Mah., Abidin Daver Sk. No 17</a>
-        Сайт: https://turkey.mfa.gov.by/ru/embassy/
-
-        <u><b>Посольство Турции в Минске</b></u>
-        Посольство: +375 (17) 327 13 83
-        Консульский отдел: +375 (17) 327 14 08
-        Email: embassy.minsk@mfa.gov.tr
-        Время работы: 9:00-12:00 в будние дни
-        Адрес: <a href="https://goo.gl/maps/Qepa2qhKDfdu7Qa68">Минск, ул. Володарского, д. 6</a>
-        Сайт: http://minsk.emb.mfa.gov.tr/Mission/Contact
-      parse_mode: html
-      disable_web_preview: true
-    - id: OTHER_PHONES
-      text: |
-        *Полезные телефоны:*
-
-         ```
-         115 - Международный оператор
-         141 - Телеграммы по телефону
-         144 - Министерство социальной защиты семьи
-         170 - Министерство труда и социальной защиты
-         174 - Жалобы на продукты питания
-         175 - Защита потребителей
-         135 - Будильник
-         158 - Береговая охрана
-         183 - Социальная служба
-         186 - Аварийная служба электросети
-         187 - Газовая служба
-         189 - Налоговая справочная
-         182 - Система бесплатной записи к врачам
-         126 - Кабельное телевидение
-
-         🏥 Больницы:
-         Анталья - 227 43 43, 243 50 60
-         Кемер   - 814 15 50, 814 11 41
-         Сиде    - 753 12 21, 753 14 45
-
-         Автовокзал (Анталья)          - (242)3311250
-         Бюро туристической информации - (242)2411747
-         Ассоциация турагенств Турции  - (242)2431934
-         ```
-      parse_mode: MarkdownV2
+- id: PHONE_NUMBERS
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: ekpa_management
+        text: ''
+        type: callback
+        callback: EKPA_MANAGEMENT_BUTTON
+    - buttons:
+      - id: emergency
+        text: ''
+        type: callback
+        callback: EMERJENCY_BUTTON
+      - id: other_phones
+        text: ''
+        type: callback
+        callback: OTHER_PHONES_BUTTON
+    - buttons:
+      - id: embassy
+        text: ''
+        type: callback
+        callback: EMBASSY_BUTTON
+  navigation:
+  - callback: EKPA_MANAGEMENT_BUTTON
+    target: EKPA_MANAGEMENT
+  - callback: EMERJENCY_BUTTON
+    target: EMERGENCY
+  - callback: EMBASSY_BUTTON
+    target: EMBASSY
+  - callback: OTHER_PHONES_BUTTON
+    target: OTHER_PHONES
+- id: EKPA_MANAGEMENT
+  text: ''
+  parse_mode: MarkdownV2
+- id: EMERGENCY
+  text: ''
+  parse_mode: MarkdownV2
+- id: EMBASSY
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: russia_embassy
+        text: ''
+        type: callback
+        callback: RUSSIA_EMBASSY_BUTTON
+    - buttons:
+      - id: ukraine_embassy
+        text: ''
+        type: callback
+        callback: UKRAINE_EMBASSY_BUTTON
+    - buttons:
+      - id: kazakhstan_embassy
+        text: ''
+        type: callback
+        callback: KAZAKHSTAN_EMBASSY_BUTTON
+    - buttons:
+      - id: belarus_embassy
+        text: ''
+        type: callback
+        callback: BELARUS_EMBASSY_BUTTON
+  navigation:
+  - callback: RUSSIA_EMBASSY_BUTTON
+    target: RUSSIA_EMBASSY
+  - callback: UKRAINE_EMBASSY_BUTTON
+    target: UKRAINE_EMBASSY
+  - callback: KAZAKHSTAN_EMBASSY_BUTTON
+    target: KAZAKHSTAN_EMBASSY
+  - callback: BELARUS_EMBASSY_BUTTON
+    target: BELARUS_EMBASSY
+- id: RUSSIA_EMBASSY
+  text: ''
+  parse_mode: html
+  disable_web_preview: true
+- id: UKRAINE_EMBASSY
+  text: ''
+  parse_mode: html
+  disable_web_preview: true
+- id: KAZAKHSTAN_EMBASSY
+  text: ''
+  parse_mode: html
+  disable_web_preview: true
+- id: BELARUS_EMBASSY
+  text: ''
+  parse_mode: html
+  disable_web_preview: true
+- id: OTHER_PHONES
+  text: ''
+  parse_mode: MarkdownV2

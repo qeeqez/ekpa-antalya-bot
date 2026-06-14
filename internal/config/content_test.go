@@ -172,6 +172,15 @@ screens:
 	if cmd.Description != testCommandDescriptionEN {
 		t.Fatalf("Expected localized command description %q, got %q", testCommandDescriptionEN, cmd.Description)
 	}
+
+	fallbackScreen, err := repo.GetScreenForLocale(testScreenID, "de-DE")
+	if err != nil {
+		t.Fatalf("Failed to get fallback screen: %v", err)
+	}
+
+	if fallbackScreen.Text != testScreenText {
+		t.Fatalf("Expected fallback text %q, got %q", testScreenText, fallbackScreen.Text)
+	}
 }
 
 func TestGetNonExistentScreen(t *testing.T) {

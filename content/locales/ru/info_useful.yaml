@@ -1,0 +1,12 @@
+version: '1.0'
+screens:
+- id: INFO_USEFUL
+  text: '*⭐️ Информация*'
+  button_texts:
+    important_docs: 📝 ВНЖ / Прописка / Документы
+    delivery: 🚚 Доставка
+    aid_kit: ❤️ Аптечка
+    transport: 🚌 Транспорт
+    phone_unlock: 📲 Разблокировка телефона
+    car_fine: 🚗 Штраф на Автомобиль
+    phone_numbers: 📱️ Полезные номера телефонов

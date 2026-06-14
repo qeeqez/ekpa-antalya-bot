@@ -1,164 +1,76 @@
-version: "1.0"
-
+version: '1.0'
 screens:
-  - id: "IMPORTANT_DOCUMENTS"
-    text: "*📝 ВНЖ / Прописка / Документы*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "check_application_status"
-              text: "✅ Проверить статус заявки ВНЖ"
-              type: "url"
-              url: "https://e-ikamet.goc.gov.tr/Ikamet/DevamEdenBasvuruGiris"
-        - buttons:
-            - id: "get_id_number"
-              text: "🆔 Узнать номер ВНЖ"
-              type: "url"
-              url: "https://tckimlik.nvi.gov.tr/Modul/YabanciKimlikNoSorgula"
-        - buttons:
-            - id: "tax_number"
-              text: "🪪 ИНН"
-              type: "callback"
-              callback: "TAX_NUMBER_BUTTON"
-            - id: "edevlet"
-              text: "🧧 Edevlet"
-              type: "callback"
-              callback: "EDEVLET_BUTTON"
-        - buttons:
-            - id: "address_numarataj"
-              text: "🔖 Нумаратаж"
-              type: "callback"
-              callback: "ADDRESS_NUMARATAJ_BUTTON"
-            - id: "address_registration"
-              text: "📌 Прописка"
-              type: "callback"
-              callback: "ADDRESS_REGISTRATION_BUTTON"
-    navigation:
-      - callback: "TAX_NUMBER_BUTTON"
-        target: "TAX_NUMBER"
-      - callback: "EDEVLET_BUTTON"
-        target: "EDEVLET"
-      - callback: "ADDRESS_NUMARATAJ_BUTTON"
-        target: "ADDRESS_NUMARATAJ"
-      - callback: "ADDRESS_REGISTRATION_BUTTON"
-        target: "ADDRESS_REGISTRATION"
-
-  - id: "EDEVLET"
-    text: |
-      *🧧 Edevlet*
-      
-      ℹ️ Сайт с самыми разными Гос Услугами:
-      \- Получение справок и выписок
-      \- Бесплатная медицина
-      \- Разблокировка телефона
-      \- Многое другое
-      
-      🌎 [Ссылка на сайт](https://www.turkiye.gov.tr)
-      
-      ⚡️ *Как подключить*
-      \- Получить ВНЖ \(ikamet\)
-      \- Иметь турецкий номер телефона
-      \- На почте \(PTT\), сказать EDevlet
-      \- За 20 лиры сделают пароль для едевлета, придет в смс
-      
-      📍 [Ближайшая почта](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 км\)
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "edevlet_site"
-              text: "🌐 Сайт"
-              type: "url"
-              url: "https://www.turkiye.gov.tr"
-        - buttons:
-            - id: "edevlet_android"
-              text: "🤖 Android"
-              type: "url"
-              url: "https://play.google.com/store/apps/details?id=tr.gov.turkiye.edevlet.kapisi"
-            - id: "edevlet_iphone"
-              text: "📱 iPhone"
-              type: "url"
-              url: "https://apps.apple.com/tr/app/e-devlet/id976505454"
-
-  - id: "TAX_NUMBER"
-    text: |
-      *🪪 ИНН \(Турецкий Налоговый Номер\)*
-      
-      ℹ️ *Для чего нужен?*
-      \- Оформление Dask и коммуналки на себя
-      \- ВНЖ
-      \- Открытие счета в банке
-      
-      🌎 *Получить онлайн*
-      \- Зайти на [сайт налоговой](https://ivd.gib.gov.tr/)
-      \- Выбрать центральную нижнюю кнопку
-      \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
-      \- *APPLICATION FOR NON\-CITIZEN\'S POTENTIAL TAX NUMBER*
-      \- Заполнить свои данные
-      
-      💸 *Получить в налоговой*
-      \- Иногда онлайн система пишет ошибку и приходится ехать в налоговую
-      \- Отделение налоговой [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-
-  - id: "ADDRESS_NUMARATAJ"
-    text: |
-      *🔖 Нумаратаж \(Numarataj\)*
-      
-      ℹ️ *Справка, подтверждающая адрес*
-      \- Требуется для прописки
-      \- Требуется для получения ВНЖ
-      
-      💼 *Взять с собой:*
-      1\. Паспорт
-      2\. Тапу
-      3\. Договор аренды
-      4\. Копии этих документов
-      
-      ℹ️ *Инструкция по получению:*
-      1\. В [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) сделать копии документов
-      2\. Пройти на 2 этаж, по знакам Numarataj зайти в коридор блока D
-      3\. Взять талон, вас вызовут
-      4\. Отдать человеку все копии документов
-      5\. Спуститься на первый этаж, по живой очереди отдать документы в окно, поставят печати
-      6\. Вернуться на второй этаж, выдадут справку Нумаратаж
-      ⚠️ Если вас несколько человек,то дайте копии паспортов всех, кто должен быть прописан в этой справке
-      
-      📍 Делается все в [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 км\)
-      ⚡️ На первом этаже можно сделать копии документов за 1 TL
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
-
-  - id: "ADDRESS_REGISTRATION"
-    text: |
-      *📌 Прописка*
-      
-      ℹ️ *Прописку нужно сделать в течении 20 дней после получения ВНЖ*
-      \- Детей с собой брать не обязательно, взрослым всем быть желательно
-      \- Без прописки не продлят ВНЖ
-      
-      ℹ️ Прописка онлайн иностранцам больше не осуществляется
-      ℹ️ Прописка в Nufus иностранцам не делается, однако в особых случаях там могут вас прописать
-      
-      📌 *Прописка в Goc*
-      
-      💼 *Взять с собой:*
-      1\. Икамет \(ВНЖ\)
-      2\. Тапу или договор аренды
-      3\. Нумаратаж \(Numarataj\)
-      4\. Ксерокопии Тапу / Договора и Нумаратажа
-      5\. Квитанцию за воду или свет на ваше имя
-      
-      ⚡️ *Важно:*
-      \- Квитанция должна быть свежей, иначе откажут
-      \- Могут запросить копию кимлика и тапу хозяина квартиры
-      
-      📍 *Как добраться:*
-      \- Приехать в [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
-      \- На входе сказать *Adres* и показать икамет, вас пропустят
-      \- В здании сказать *Adres*, ждать вызов в комнату слева от окон на рандеву
-    parse_mode: "MarkdownV2"
-    disable_web_preview: true
+- id: IMPORTANT_DOCUMENTS
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: check_application_status
+        text: ''
+        type: url
+        url: https://e-ikamet.goc.gov.tr/Ikamet/DevamEdenBasvuruGiris
+    - buttons:
+      - id: get_id_number
+        text: ''
+        type: url
+        url: https://tckimlik.nvi.gov.tr/Modul/YabanciKimlikNoSorgula
+    - buttons:
+      - id: tax_number
+        text: ''
+        type: callback
+        callback: TAX_NUMBER_BUTTON
+      - id: edevlet
+        text: ''
+        type: callback
+        callback: EDEVLET_BUTTON
+    - buttons:
+      - id: address_numarataj
+        text: ''
+        type: callback
+        callback: ADDRESS_NUMARATAJ_BUTTON
+      - id: address_registration
+        text: ''
+        type: callback
+        callback: ADDRESS_REGISTRATION_BUTTON
+  navigation:
+  - callback: TAX_NUMBER_BUTTON
+    target: TAX_NUMBER
+  - callback: EDEVLET_BUTTON
+    target: EDEVLET
+  - callback: ADDRESS_NUMARATAJ_BUTTON
+    target: ADDRESS_NUMARATAJ
+  - callback: ADDRESS_REGISTRATION_BUTTON
+    target: ADDRESS_REGISTRATION
+- id: EDEVLET
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: edevlet_site
+        text: ''
+        type: url
+        url: https://www.turkiye.gov.tr
+    - buttons:
+      - id: edevlet_android
+        text: ''
+        type: url
+        url: https://play.google.com/store/apps/details?id=tr.gov.turkiye.edevlet.kapisi
+      - id: edevlet_iphone
+        text: ''
+        type: url
+        url: https://apps.apple.com/tr/app/e-devlet/id976505454
+- id: TAX_NUMBER
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: ADDRESS_NUMARATAJ
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true
+- id: ADDRESS_REGISTRATION
+  text: ''
+  parse_mode: MarkdownV2
+  disable_web_preview: true

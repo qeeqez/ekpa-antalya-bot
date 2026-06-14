@@ -1,99 +1,97 @@
-version: "1.0"
-
+version: '1.0'
 screens:
-  - id: "OUR_CHATS"
-    text: "*💬 Наши Чаты*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "trade_chat"
-              text: "🛍️ Барахолка - Товары и Услуги"
-              type: "url"
-              url: "https://t.me/+8YxsSs6NFfg0ZDIy"
-        - buttons:
-            - id: "blocks_chat"
-              text: "🏘 Чаты по блокам"
-              type: "callback"
-              callback: "BLOCKS_CHAT_BUTTON"
-        - buttons:
-            - id: "parents_chat"
-              text: "👶 Для Родителей"
-              type: "url"
-              url: "https://t.me/+vUAbvvlmCkg2NDZi"
-        - buttons:
-            - id: "animals_chat"
-              text: "😸 Животные 🐶"
-              type: "url"
-              url: "https://t.me/+x-GWGnkV4KM4ZDU6"
-        - buttons:
-            - id: "sport_chat"
-              text: "🏃‍♂️ Sport"
-              type: "url"
-              url: "https://t.me/+fG2kg-vSwQFjMWYy"
-            - id: "sport_games_chat"
-              text: "🏀 Sport Games"
-              type: "url"
-              url: "https://t.me/+PyO3tLtwJs05MWM6"
-        - buttons:
-            - id: "board_games_chat"
-              text: "🎲 Настолки"
-              type: "url"
-              url: "https://t.me/+qz0pTNWBiK4wYzAy"
-            - id: "gaming_chat"
-              text: "🎮 Gaming"
-              type: "url"
-              url: "https://t.me/+Iq6NQv3hRDtkMTZi"
-        - buttons:
-            - id: "it_chat"
-              text: "🧑‍💻 IT"
-              type: "url"
-              url: "https://t.me/+Wzk69LQBwFs2YzAy"
-    navigation:
-      - callback: "BLOCKS_CHAT_BUTTON"
-        target: "BLOCKS_CHAT"
-
-  - id: "BLOCKS_CHAT"
-    text: "*🏘 Чаты Блоков*"
-    parse_mode: "MarkdownV2"
-    inline_keyboard:
-      rows:
-        - buttons:
-            - id: "block_a1"
-              text: "A1"
-              type: "url"
-              url: "https://chat.whatsapp.com/Jk1TsfrDgc62EIsRVeVGBj"
-            - id: "block_a2"
-              text: "A2"
-              type: "url"
-              url: "https://chat.whatsapp.com/B7Y9oKu7wXW7ZnGJee4xgN"
-            - id: "block_a3"
-              text: "A3"
-              type: "url"
-              url: "https://chat.whatsapp.com/IhWIxR9JmnA3haN1BtN3ze"
-            - id: "block_a4"
-              text: "A4"
-              type: "url"
-              url: "https://chat.whatsapp.com/FRPjYEeVduO6TWOLgOdtq8"
-        - buttons:
-            - id: "block_b"
-              text: "B"
-              type: "url"
-              url: "https://chat.whatsapp.com/HZ0uPnAEuW62Ef7B17Ob50"
-            - id: "block_c"
-              text: "C"
-              type: "url"
-              url: "https://chat.whatsapp.com/BYFnajaF6WD3OuPClUBTKp"
-            - id: "block_d"
-              text: "D"
-              type: "url"
-              url: "https://chat.whatsapp.com/G7hhAGKqfanGKQdTtlrYrG"
-        - buttons:
-            - id: "block_e1"
-              text: "E1"
-              type: "url"
-              url: "https://chat.whatsapp.com/KLQ8orDpKH3Aq0KkPRYN5o"
-            - id: "block_e2"
-              text: "E2"
-              type: "url"
-              url: "https://chat.whatsapp.com/KLQ8orDpKH3Aq0KkPRYN5o"
+- id: OUR_CHATS
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: trade_chat
+        text: ''
+        type: url
+        url: https://t.me/+8YxsSs6NFfg0ZDIy
+    - buttons:
+      - id: blocks_chat
+        text: ''
+        type: callback
+        callback: BLOCKS_CHAT_BUTTON
+    - buttons:
+      - id: parents_chat
+        text: ''
+        type: url
+        url: https://t.me/+vUAbvvlmCkg2NDZi
+    - buttons:
+      - id: animals_chat
+        text: ''
+        type: url
+        url: https://t.me/+x-GWGnkV4KM4ZDU6
+    - buttons:
+      - id: sport_chat
+        text: ''
+        type: url
+        url: https://t.me/+fG2kg-vSwQFjMWYy
+      - id: sport_games_chat
+        text: ''
+        type: url
+        url: https://t.me/+PyO3tLtwJs05MWM6
+    - buttons:
+      - id: board_games_chat
+        text: ''
+        type: url
+        url: https://t.me/+qz0pTNWBiK4wYzAy
+      - id: gaming_chat
+        text: ''
+        type: url
+        url: https://t.me/+Iq6NQv3hRDtkMTZi
+    - buttons:
+      - id: it_chat
+        text: ''
+        type: url
+        url: https://t.me/+Wzk69LQBwFs2YzAy
+  navigation:
+  - callback: BLOCKS_CHAT_BUTTON
+    target: BLOCKS_CHAT
+- id: BLOCKS_CHAT
+  text: ''
+  parse_mode: MarkdownV2
+  inline_keyboard:
+    rows:
+    - buttons:
+      - id: block_a1
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/Jk1TsfrDgc62EIsRVeVGBj
+      - id: block_a2
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/B7Y9oKu7wXW7ZnGJee4xgN
+      - id: block_a3
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/IhWIxR9JmnA3haN1BtN3ze
+      - id: block_a4
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/FRPjYEeVduO6TWOLgOdtq8
+    - buttons:
+      - id: block_b
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/HZ0uPnAEuW62Ef7B17Ob50
+      - id: block_c
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/BYFnajaF6WD3OuPClUBTKp
+      - id: block_d
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/G7hhAGKqfanGKQdTtlrYrG
+    - buttons:
+      - id: block_e1
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/KLQ8orDpKH3Aq0KkPRYN5o
+      - id: block_e2
+        text: ''
+        type: url
+        url: https://chat.whatsapp.com/KLQ8orDpKH3Aq0KkPRYN5o

@@ -1,0 +1,318 @@
+version: '1.0'
+screens:
+- id: DIRECTIONS
+  text: '*В комплексе и рядом*'
+  button_texts:
+    markets: 🧺 Рынки
+    shops: 🍎 Магазины
+    shopping_centers: 🛍 ТЦ
+    print_photo: 🖨️ Печать и Фото 📸
+    barber: ✂️ Барбершопы
+    residence_fitness_spa: 💪 Residence Fitness & SPA
+    tax_office: 💸 Налоговая
+    post_office: ✉️ Почта
+    city_hall: 🏛 Belediye
+    population_office: 🧑‍💼 Nufus
+    migration_office: 👮 Goc
+- id: MARKETS
+  text: '*🧺 Ближайшие рынки:*
+
+
+    *Понедельник*
+
+    📍[Рынок Ersoy](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \(2\.5 км\)
+
+
+    *Среда*
+
+    📍[Рынок Beşkonaklılar](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \(500 м, до обеда\)
+
+    📍[Рынок Demirgül](https://goo.gl/maps/uqxp8L4RscSe2jpM7) \(1\.7 км\)
+
+    📍[Рынок Sütçüler](https://goo.gl/maps/yFbwpSdE4yNt7ojH7) \(3 км\)
+
+
+    *Четверг*
+
+    📍[Рынок Göksu](https://goo.gl/maps/WakaAx3KK4Vmz9ELA) \(1\.7 км\)
+
+    📍[Рынок Sütçüler](https://goo.gl/maps/68DWmnXecWeFLbj4A) \(2\.2 км\)
+
+
+    *Пятница*
+
+    📍[Рынок Teomanpaşa](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \(2\.5 км\)
+
+
+    *Суббота*
+
+    📍[Рынок Güneş](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 км\)
+
+    '
+  button_texts:
+    all_markets: 🧺 Другие рынки
+- id: ALL_MARKETS
+  text: '*Рынки:*
+
+
+    📍 [Рынок SİTELER](https://goo.gl/maps/mYUuZawfTAU2) \(Понедельник\)
+
+    📍 [Базар YENIDOĞAN](https://goo.gl/maps/DSfCL1JxACD2) \(Понедельник\)
+
+    📍 [Рынок LİMAN](https://goo.gl/maps/nA23cv3x6sy) \(Вторник\)
+
+    📍 [Базар BAHÇELİEVLER ](https://goo.gl/maps/cao3iJC1Dg72) \(Вторник\)
+
+    📍 [Рынок YEŞİLBAHÇE](https://goo.gl/maps/nrT3xnr1f7P2) \(Среда\)
+
+    📍 [Базар SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(Среда\)
+
+    📍 [Рынок PAZAR ÖĞRETMENEVI](https://goo.gl/maps/6Ya5yxszQp92) \(Среда\)
+
+    📍 [Базар DEDEMAN](https://goo.gl/maps/dRU5nL5AR752) \(Четверг\)
+
+    📍 [Рынок BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(Четверг\)
+
+    📍 [Базар GÜLVEREN](https://goo.gl/maps/MqwpmNKb7js) \(Четверг\)
+
+    📍 [Рынок PERŞEMBE SEMT](https://goo.gl/maps/CEfKqRQTtbN2) \(Четверг\)
+
+    📍 [Базар ALTINKUM](https://goo.gl/maps/4dpRFg4BPcq) \(Пятница\)
+
+    📍 [Рынок GÜZELOBA](https://goo.gl/maps/DvVpef5xqZo) \(Пятница\)
+
+    📍 [Рынок KIZILTOPRAK](https://goo.gl/maps/DGQKNLy5D7J2) \(Пятница\)
+
+    📍 [Базар KIZILTOPRAK](https://goo.gl/maps/dRKoX3MWrrt) \(Пятница\)
+
+    📍 [Базар KONUKSEVER](https://goo.gl/maps/fNqtj7SXdaS2) \(Суббота\)
+
+    📍 [Рынок ZAFER](https://goo.gl/maps/jGzGvtS6q5L2) \(Суббота\)
+
+    📍 [Базар PINARBAŞI](https://goo.gl/maps/FNhE4hF4fSN2) \(Воскресенье\)
+
+    📍 [Рынок SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(Воскресенье\)
+
+    📍 [Базар ÇAĞLAYAN](https://goo.gl/maps/DzBmxTcAdTx) \(Воскресенье\)
+
+    📍 [Базар BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(Воскресенье\)
+
+    '
+  button_texts:
+    markets: 🧺 Рынки
+- id: SHOPS
+  text: '*🍎 Ближайшие магазины*
+
+
+    *В Комплексе*
+
+    🍎 *Migros* \- Время работы\: 09\:00 \- 22\:00
+
+    🍎 *A101* \- Время работы\: 09\:00 \- 21\:00
+
+    🍾 *Elit 0709* \- Круглосуточный
+
+
+    *Сетевики*
+
+    📍 [Tahtakale](https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 м\)
+
+    Магазин на все случаи жизни\. В том числе и продукты\. Магазин в 3 этажа\.
+
+
+    🍌 [Sok](https://goo.gl/maps/bz15sV6peBEuQf9Z8) \(600 м\)
+
+    🍌 [Bim](https://goo.gl/maps/ZEy8ZHqMTKCEMCdPA) \(650 м\)
+
+    🍌 [A101](https://goo.gl/maps/UDmQrYRjrhWi7s7V7) \(650 м\)
+
+    🍎 [Migros](https://goo.gl/maps/XXKsLLLMH61ojpnP8) \(1\.1 км\)
+
+    В сети мигрос продается спиртное\.
+
+
+    *Местные магазинчики*
+
+    🍞 [Пекарня](https://goo.gl/maps/uKP6r6M9wbWnNzF4A) \(200 м\)
+
+    🥩 [Мясной](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 м\)
+
+    🍷 [Спиртное Soylu Market](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 м\)
+
+
+    *Большие сетевые магазины*
+
+    🛒 [Metro](https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \(4\.4 км\)
+
+    🛒 [5M Migros Kepez](https://goo.gl/maps/exzze46k7XUkAYPVA) \(10\.6 км\)
+
+    🛒 [5M Migros Konyaaltı](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\.6 км\)
+
+    '
+- id: SHOPPING_CENTERS
+  text: '*🛍 Торговые центры*
+
+
+    📍 [Agora](https://goo.gl/maps/TshggHds8sAVBACV6) \(3\.8 км\)
+
+    📍 [Mall of Antalya](https://g.page/MallOfAntalya) \(4\.8 км\)
+
+    📍 [MarkAntalya](https://goo.gl/maps/BjqUUFpYRthDPZFJ9) \(6\.4 км\)
+
+    📍 [Terra City](https://g.page/TerraCity) \(10\.3 км\)
+
+    📍 [5M Migros AVM Konyaaltı](https://g.page/AntalyaMigrosAVM) \(10\.4 км\)
+
+
+    📍 [Ozdilek Park](https://g.page/ozdilekparkantalya) \(6\.6 км\)
+
+    📍 [Kipa AVM \(5M Migros Kepez\)](https://goo.gl/maps/FwRYmYLhETHsdX458) \(7\.0 км\)
+
+    📍 [Erasta AVM](https://g.page/erastaantalyaavm) \(8\.3 км\)
+
+
+    *Строительные*
+
+    🛋 [IKEA](https://goo.gl/maps/zdLcFzx1tnq7EMXJ6) \(3\.9 км\)
+
+    🪴 [Koctas](https://goo.gl/maps/qYwje1sAhz1SQ9ycA) \(5\.6 км\)
+
+    🪚 [Bauhaus Kepez](https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\.4 км\)
+
+    '
+- id: PRINT_AND_PHOTO
+  text: '*Печать и Фото*
+
+
+    📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \(350 м\)
+
+
+    📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \(750 м\)
+
+    \- Цветная печать 10 TL
+
+    \- Биометрические фото 300 TL
+
+
+    📍 [Fotokopi](https://goo.gl/maps/T6UtpDPoSSve3p58A) \(900 м\)
+
+    📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \(1\.2 км\)
+
+    '
+- id: BARBER
+  text: '*Барбершопы*
+
+
+    📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
+
+    Стрижка \+ Мойка \+ Укладка 200 TL\.
+
+
+    📍 [Yigit Erkek Kuaforu](https://goo.gl/maps/KUYj8pheja9Y2QST6)
+
+
+    📍 [Barber by Ahmet](https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
+
+
+    📍 [Рядом с Migros](https://goo.gl/maps/PiBvkRPMak7bNo23A)
+
+    '
+- id: TAX_OFFICE
+  text: '*💸 Налоговая \(Vergi Dairesi\)*
+
+
+    ℹ️ *Тут можно:*
+
+    \- Получить Турецкий налоговый номер ИНН
+
+    \- Оплатить пошлину за разблокировку телефона
+
+    \- Оплатить штраф за авто на иностранных номерах
+
+
+    📍 [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\.7 км\)
+
+    '
+- id: POST_OFFICE
+  text: '*✉️ Почта \(PTT\)*
+
+
+    📍 [PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 км\)
+
+    Почта нашего комплекса, сюда приходят икаметы
+
+
+    📍 [PTT Teomanpasa](https://goo.gl/maps/xq1qT8CjHqhzXtKx9) \(2\.1 км\)
+
+    📍 [PTT Sutculer](https://goo.gl/maps/nd8XwFx2EbUYSCj57) \(2\.9 км\)
+
+
+    ℹ️ Где еще можно оплатить коммунальные услуги читайте в разделе:
+
+    🌟 Все о Ekpa \-\> 💰 Как Оплатить?
+
+    '
+- id: CITY_HALL
+  text: '*🏛 Belediye \(Муниципалитет\)*
+
+
+    ℹ️ В данном заведении можно получить справку *Нумаратаж* \(Numarataj\), необходимую для получения ВНЖ
+
+    ⚡️ На первом этаже можно сделать копии документов за 1 TL
+
+
+    📍 [Kepez Belediye](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\.5 км\)
+
+    '
+- id: POPULATION_OFFICE
+  text: '*🧑‍💼 Nufus \(Министерство регистрации населения\)*
+
+
+    ℹ️ В данном заведении оформляют Тапу, прописывают Турецких граждан, регистрируют новорожденных и решают другие вопросы
+    народонаселения\.
+
+    ⚠️ Иностранцы должны прописываться в Goc, а не Nufus\.
+
+
+    📍 [Kepez Nufus](https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\.5 км\)
+
+    '
+- id: MIGRATION_OFFICE
+  text: '*👮 Goc Idaresi \(Управление миграции Анталии\)*
+
+
+    1️⃣ Здесь нужно сделать прописку\.
+
+    2️⃣ Здесь происходит рандеву \(подача на ВНЖ\) и решаются все вопросы связанные с ВНЖ\.
+
+    3️⃣ Сюда могут позвать на отпечатки пальцев тех, кто еще это не сделал\.
+
+
+    📍 [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\.1 км\)
+
+    '
+- id: RESIDENCE_FITNESS_SPA
+  text: '*🧖‍♀ Ata Wellness Fitness & Spa*
+
+
+    📍 *Блок E1, \-1 этаж*
+
+
+    🕗 *ПН \- СБ:* 08:00 \- 22:00
+
+    🕛 *ВС:* 12:00 \- 22:00
+
+
+    📞 \+90 \(537\) 658 07 17
+
+
+    📶 WiFi: *Ata\_Spa\_Fitness*
+
+    ℹ️ Пароль: `ataspafitnes1207`
+
+
+    👨‍💻 Приложение для входа
+
+    [📱 iPhone](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)
+
+    '

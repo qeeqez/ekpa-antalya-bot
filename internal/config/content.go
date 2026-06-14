@@ -293,7 +293,10 @@ func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*do
 	}
 
 	enhancedScreen := r.cloneScreen(screen)
-	r.applyScreenLocale(enhancedScreen, locale.Normalize(localeCode))
+	r.applyScreenLocale(enhancedScreen, locale.DefaultLocale)
+	if normalized := locale.Normalize(localeCode); normalized != locale.DefaultLocale {
+		r.applyScreenLocale(enhancedScreen, normalized)
+	}
 
 	// Add automatic navigation buttons using localized labels.
 	enhancedScreen = r.navigation.AddAutoNavigation(enhancedScreen, locale.Normalize(localeCode))
@@ -314,8 +317,13 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 
 	for _, cmd := range r.commands.Commands {
 		localized := cmd
-		if localeData, ok := cmd.Locales[normalized]; ok && localeData.Description != "" {
+		if localeData, ok := cmd.Locales[locale.DefaultLocale]; ok && localeData.Description != "" {
 			localized.Description = localeData.Description
+		}
+		if normalized != locale.DefaultLocale {
+			if localeData, ok := cmd.Locales[normalized]; ok && localeData.Description != "" {
+				localized.Description = localeData.Description
+			}
 		}
 		registry.Commands = append(registry.Commands, localized)
 	}

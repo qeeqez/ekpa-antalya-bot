@@ -15,10 +15,8 @@ import (
 
 // ContentRepository manages all bot content (screens, commands, etc.)
 type ContentRepository struct {
-	screens    map[string]*domain.Screen
-	commands   *domain.CommandRegistry
+	catalog    *domain.ContentCatalog
 	navigation *domain.NavigationRegistry
-	fragments  map[string]map[string]string
 }
 
 // ContentFile represents a content YAML file structure
@@ -52,12 +50,8 @@ type LocalizedCommand struct {
 // NewContentRepository creates and initializes a new content repository
 func NewContentRepository(contentDir string) (*ContentRepository, error) {
 	repo := &ContentRepository{
-		screens: make(map[string]*domain.Screen),
-		commands: &domain.CommandRegistry{
-			Commands: []domain.Command{},
-		},
+		catalog:    domain.NewContentCatalog(),
 		navigation: domain.NewNavigationRegistry(),
-		fragments:  make(map[string]map[string]string),
 	}
 
 	// Load content first
@@ -66,7 +60,7 @@ func NewContentRepository(contentDir string) (*ContentRepository, error) {
 	}
 
 	// Automatically build navigation hierarchy from screen relationships
-	repo.navigation.BuildFromScreens(repo.screens)
+	repo.navigation.BuildFromScreens(repo.catalog.Screens)
 
 	return repo, nil
 }
@@ -165,7 +159,7 @@ func (r *ContentRepository) loadLocaleDirectory(localeDir string, localeCode str
 }
 
 func (r *ContentRepository) validateMergedScreens() error {
-	for _, screen := range r.screens {
+	for _, screen := range r.catalog.Screens {
 		if err := r.validateSharedScreen(screen); err != nil {
 			return fmt.Errorf("invalid shared screen %s: %w", screen.ID, err)
 		}
@@ -190,8 +184,7 @@ func (r *ContentRepository) loadContentFile(path string) error {
 		return err
 	}
 
-	r.registerCommands(content.Commands)
-	return nil
+	return r.registerCommands(content.Commands)
 }
 
 func (r *ContentRepository) loadLocalizedContentFile(path string, localeCode string) error {
@@ -237,10 +230,10 @@ func (r *ContentRepository) parseLocalizedContentFile(data []byte) (*LocaleConte
 func (r *ContentRepository) registerScreens(screens []domain.Screen) error {
 	for i := range screens {
 		screen := &screens[i]
-		if _, exists := r.screens[screen.ID]; exists {
+		if _, exists := r.catalog.Screens[screen.ID]; exists {
 			return fmt.Errorf("duplicate screen ID: %s", screen.ID)
 		}
-		r.screens[screen.ID] = screen
+		r.catalog.Screens[screen.ID] = screen
 	}
 	return nil
 }
@@ -278,14 +271,22 @@ func (r *ContentRepository) validateSharedButton(button domain.Button) error {
 	return nil
 }
 
-// registerCommands registers all commands from a content file
-func (r *ContentRepository) registerCommands(commands []domain.Command) {
-	r.commands.Commands = append(r.commands.Commands, commands...)
+// registerCommands registers all commands from a content file.
+func (r *ContentRepository) registerCommands(commands []domain.Command) error {
+	for i := range commands {
+		command := &commands[i]
+		if _, exists := r.catalog.Commands[command.Command]; exists {
+			return fmt.Errorf("duplicate command: %s", command.Command)
+		}
+		r.catalog.Commands[command.Command] = command
+		r.catalog.CommandOrder = append(r.catalog.CommandOrder, command.Command)
+	}
+	return nil
 }
 
 func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, localeCode, path string) error {
 	for _, localized := range screens {
-		base, ok := r.screens[localized.ID]
+		base, ok := r.catalog.Screens[localized.ID]
 		if !ok {
 			return fmt.Errorf("localized screen %s in %s has no shared base screen", localized.ID, path)
 		}
@@ -305,7 +306,7 @@ func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, loc
 
 func (r *ContentRepository) applyLocalizedCommands(commands []LocalizedCommand, localeCode, path string) error {
 	for _, localized := range commands {
-		base, found := r.commands.GetCommand(localized.Command)
+		base, found := r.catalog.Commands[localized.Command]
 		if !found {
 			return fmt.Errorf("localized command %s in %s has no shared base command", localized.Command, path)
 		}
@@ -328,10 +329,10 @@ func (r *ContentRepository) applyLocalizedFragments(fragments map[string]string,
 	}
 
 	normalized := locale.Normalize(localeCode)
-	if r.fragments[normalized] == nil {
-		r.fragments[normalized] = make(map[string]string, len(fragments))
+	if r.catalog.Fragments[normalized] == nil {
+		r.catalog.Fragments[normalized] = make(map[string]string, len(fragments))
 	}
-	maps.Copy(r.fragments[normalized], fragments)
+	maps.Copy(r.catalog.Fragments[normalized], fragments)
 
 	return nil
 }
@@ -343,7 +344,7 @@ func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
 
 // GetScreenForLocale returns a screen by ID localized for the given Telegram locale.
 func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*domain.Screen, error) {
-	screen, ok := r.screens[screenID]
+	screen, ok := r.catalog.Screens[screenID]
 	if !ok {
 		return nil, domain.ErrScreenNotFound(screenID)
 	}
@@ -372,11 +373,12 @@ func (r *ContentRepository) GetCommands() *domain.CommandRegistry {
 func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.CommandRegistry {
 	normalized := locale.Normalize(localeCode)
 	registry := &domain.CommandRegistry{
-		Commands: make([]domain.Command, 0, len(r.commands.Commands)),
+		Commands: make([]domain.Command, 0, len(r.catalog.CommandOrder)),
 	}
 
-	for _, cmd := range r.commands.Commands {
-		localized := cmd
+	for _, name := range r.catalog.CommandOrder {
+		cmd := r.catalog.Commands[name]
+		localized := *cmd
 		if localeData, ok := cmd.Locales[locale.DefaultLocale]; ok && localeData.Description != "" {
 			localized.Description = localeData.Description
 		}
@@ -394,7 +396,7 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 
 // GetAllScreens returns all registered screens
 func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
-	return r.screens
+	return r.catalog.Screens
 }
 
 // GetNavigationRegistry returns the navigation registry (for debugging/inspection)
@@ -461,11 +463,11 @@ func (r *ContentRepository) replaceFragmentRefs(text, localeCode string) string 
 func (r *ContentRepository) fragmentSet(localeCode string) map[string]string {
 	normalized := locale.Normalize(localeCode)
 	merged := make(map[string]string)
-	if base, ok := r.fragments[locale.DefaultLocale]; ok {
+	if base, ok := r.catalog.Fragments[locale.DefaultLocale]; ok {
 		maps.Copy(merged, base)
 	}
 	if normalized != locale.DefaultLocale {
-		if overlay, ok := r.fragments[normalized]; ok {
+		if overlay, ok := r.catalog.Fragments[normalized]; ok {
 			maps.Copy(merged, overlay)
 		}
 	}

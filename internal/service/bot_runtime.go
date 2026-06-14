@@ -5,12 +5,16 @@ import (
 	"errors"
 	"fmt"
 	"log/slog"
+	"strings"
+	"time"
 
 	"github.com/mymmrac/telego"
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"github.com/qeeqez/ekpaantalyabot/internal/middleware"
 )
+
+var ErrUpdatesChannelClosed = errors.New("updates channel closed")
 
 // Start starts the bot.
 func (s *BotService) Start(ctx context.Context) error {
@@ -23,12 +27,7 @@ func (s *BotService) Start(ctx context.Context) error {
 		return err
 	}
 
-	updates, err := s.startLongPolling(ctx)
-	if err != nil {
-		return err
-	}
-
-	return s.ProcessUpdates(ctx, updates)
+	return s.runPollingLoop(ctx)
 }
 
 // startHealthServer starts the health check server in a goroutine if enabled.
@@ -80,10 +79,51 @@ func (s *BotService) ProcessUpdates(ctx context.Context, updates <-chan telego.U
 			return nil
 		case update, ok := <-updates:
 			if !ok {
-				return errors.New("updates channel closed")
+				return ErrUpdatesChannelClosed
 			}
 			s.handleUpdateAsync(ctx, update)
 		}
+	}
+}
+
+func (s *BotService) runPollingLoop(ctx context.Context) error {
+	retryDelay := time.Second
+	const maxRetryDelay = 30 * time.Second
+
+	for {
+		if ctx.Err() != nil {
+			return nil
+		}
+
+		updates, err := s.startLongPolling(ctx)
+		if err != nil {
+			if !ShouldRetryPollingError(err) {
+				return err
+			}
+
+			slog.Warn("Long polling start failed", "error", err, "retry_in", retryDelay)
+			if err := sleepWithContext(ctx, retryDelay); err != nil {
+				return nil
+			}
+
+			retryDelay = NextRetryDelay(retryDelay, maxRetryDelay)
+			continue
+		}
+
+		err = s.ProcessUpdates(ctx, updates)
+		if err == nil {
+			return nil
+		}
+		if !errors.Is(err, ErrUpdatesChannelClosed) {
+			return err
+		}
+
+		slog.Warn("Long polling channel closed", "retry_in", retryDelay)
+		if err := sleepWithContext(ctx, retryDelay); err != nil {
+			return nil
+		}
+
+		retryDelay = NextRetryDelay(retryDelay, maxRetryDelay)
 	}
 }
 
@@ -95,7 +135,7 @@ func (s *BotService) handleUpdateAsync(ctx context.Context, update telego.Update
 		defer middleware.RecoverPanic()
 
 		if err := s.handler.Handle(ctx, upd); err != nil {
-			slog.Error("Error handling update", "error", err)
+			slog.Error("Error handling update", "error", err, "update_type", updateType(upd))
 			s.health.RecordError()
 		}
 	}(update)
@@ -148,6 +188,55 @@ func (s *BotService) sendCommandsToTelegram(ctx context.Context, commands []tele
 	}
 
 	return nil
+}
+
+func ShouldRetryPollingError(err error) bool {
+	if err == nil {
+		return false
+	}
+
+	message := strings.ToLower(err.Error())
+	if strings.Contains(message, "401") ||
+		strings.Contains(message, "403") ||
+		strings.Contains(message, "400") ||
+		strings.Contains(message, "bad request") ||
+		strings.Contains(message, "unauthorized") ||
+		strings.Contains(message, "forbidden") {
+		return false
+	}
+
+	return true
+}
+
+func sleepWithContext(ctx context.Context, delay time.Duration) error {
+	timer := time.NewTimer(delay)
+	defer timer.Stop()
+
+	select {
+	case <-ctx.Done():
+		return ctx.Err()
+	case <-timer.C:
+		return nil
+	}
+}
+
+func NextRetryDelay(current, maximum time.Duration) time.Duration {
+	next := current * 2
+	if next > maximum {
+		return maximum
+	}
+	return next
+}
+
+func updateType(update telego.Update) string {
+	switch {
+	case update.Message != nil:
+		return "message"
+	case update.CallbackQuery != nil:
+		return "callback"
+	default:
+		return "unknown"
+	}
 }
 
 // Stop stops the bot gracefully.

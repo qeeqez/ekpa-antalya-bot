@@ -1,0 +1,91 @@
+version: '1.0'
+screens:
+- id: DELIVERY
+  text: '*🛵📦 {{button_delivery}}*'
+  button_texts:
+    food_delivery: 🍔 Тамак-аш
+    products_delivery: 🍎 Продукциялар
+    goods_delivery: 📦 Продукциялар
+- id: FOOD_DELIVERY
+  text: '*Тамак-аш жеткирүү*
+
+
+    ❗️Хромдо орнотулган котормочуну колдонуңуз
+
+    💵 \- накталай акча менен төлөөгө болот
+
+    🪪 \- жашоого уруксаты менен гана
+
+
+    🍔 [Yemeksepeti](https://www.yemeksepeti.com/) 💵
+
+    🍔 [TiklaGelsin](https://www.tiklagelsin.com)
+
+    🍔 [Гетир](https://getir.com/)
+
+    🍕 [Доминос](https://www.dominos.com.tr) 💵'
+- id: PRODUCTS_DELIVERY
+  text: '*Продукция жеткирүү*
+
+
+    ❗️ Chrome''до орнотулган котормочуну колдонуңуз
+
+    💵 Накталай төлөм мүмкүн
+
+
+    🍌 [Migros](https://www.migros.com.tr)
+
+    🍌 [Тахтакале](https://tahtakalespot.com)
+
+    🍌 [Carrefour](https://www.carrefoursa.com)
+
+    🧻 [Сок](https://www.sokmarket.com.tr)'
+- id: GOODS_DELIVERY
+  text: '*Товарларды жеткирүү*
+
+
+    ❗️Хромдо орнотулган котормочуну колдонуңуз
+
+    💵 \- накталай акча менен төлөөгө болот
+
+    🪪 \- жашоого уруксаты менен гана
+
+
+    *Төмөн баа агрегаторлор*
+
+    [Akakce](https://www.akakce.com)
+
+    [Cimri](https://www.cimri.com)
+
+
+    *Эң чоң базарлар*
+
+    [Trendyol](https://www.trendyol.com/)
+
+    [Hepsiburada](https://www.hepsiburada.com)
+
+
+    *Башкалар*
+
+    [Amazon](https://www.amazon.com.tr) 🪪
+
+    [Aliexpress](https://tr.aliexpress.com/)
+
+    [n11](https://www.n11.com) 🪪
+
+    [Ciceksepti](https://www.ciceksepeti.com)
+
+
+    *техника*
+
+    [Teknosa](https://www.teknosa.com)
+
+    [A101](https://www.a101.com.tr)
+
+    [Turkcell Pasaj](https://www.turkcell.com.tr/pasaj)
+
+    [Mediamarkt](https://www.mediamarkt.com.tr)
+
+    💻 [Ватан](https://www.vatanbilgisayar.com)
+
+    🪛 [Samm Market](https://market.samm.com) 💵'

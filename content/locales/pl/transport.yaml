@@ -1,0 +1,107 @@
+version: '1.0'
+screens:
+- id: TRANSPORT
+  text: '*🚌 {{button_transport}}*'
+  button_texts:
+    bus: 🚌 {{button_bus}}
+    antalya_card: 🪪 {{button_antalya_card}}
+    taxi: 🚕 {{button_taxi}}
+    kick_scooter: 🛴 {{button_scooters}}
+- id: BUS
+  text: "*\U0001F68ETransport publiczny*\n\n \U0001F4CD Trasę najlepiej zaplanować w *Mapach Google*\n \U0001F9ED Aktualną\
+    \ lokalizację autobusów można sprawdzić w aplikacji *AntalyaKart*\n\n \U0001F4B5 *Opłata*\n AntalyaKart \\- 9\\.6 TL\n\
+    \ Karta bankowa \\- 9\\.85 TL\n\n \U0001FA99️ *Koszt przelewu*\n AntalyaKart \\- 3 TL\n Karta bankowa \\- 9\\.85 TL\n\n\
+    \ ℹ️ *Dzieci do lat 6 bezpłatnie*\n ⚠️ *Zakaz płatności gotówką w transporcie*"
+  button_texts:
+    bus_concessionary: 🎫 {{button_benefits}}
+- id: BUS_CONCESSIONARY
+  text: '🧒👴 *Podróże preferencyjne*
+
+
+    ℹ️ Aby skorzystać ze zniżkowych przejazdów należy wyrobić kartę rabatową
+
+
+    💵 *Opłata*
+
+    Studenci i uczniowie \- 4 TL
+
+    Osoby starsze, niepełnosprawne, nauczyciele \- 8\.4 TL
+
+
+    🪙️ *Koszt przelewu \- 3 TL*
+
+
+    ⁉️️ *Jak zdobyć kartę rabatową?*
+
+    \- Wydawane dzieciom, osobom starszym i niepełnosprawnym, nauczycielom
+
+    \- Spersonalizowana kartka ze zdjęciem
+
+    \- Dziecko potrzebuje zaświadczenia ze szkoły stwierdzającego, że jest uczniem
+
+    \- Można tego dokonać wyłącznie w głównych oddziałach AntalyaKart
+
+    \- [Najbliższy oddział jest tutaj](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), w przejściu podziemnym'
+- id: ANTALYA_CARD
+  text: "*\U0001F4B3 Kartka w Antalyi*\n\n ℹ️ Z tą kartą taryfa jest tańsza\n ℹ️ Można zapłacić za dwie osoby, po pierwszej\
+    \ płatności należy poczekać\n\n \U0001F4CD *Gdzie kupić?*\n \\- W najbliższym [Soylu Market](https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
+    \ \\- W aplikacji *Antalya Kart* w sekcji *Najbliższy punkt* punkty sprzedaży zaznaczone są na czerwono\n\n \U0001FA99\
+    \ *Jak doładować?*\n \\- Możesz doładować gotówką w tym samym miejscu, w którym dokonujesz zakupu\n \\- Doładuj online\
+    \ turecką kartą bankową w aplikacji Antalya Kart\n\n ⁉️ *Doładowałem kartę, ale pieniądze się nie pojawiły*\n \\- Na terminalu\
+    \ w autobusie naciśnij czerwony przycisk doładowania\n \\- Przytrzymaj przez 5 sekund\n\n \U0001F68C *Jak przeglądać trasy\
+    \ w aplikacji?*\n \\- Znajdź odpowiednią trasę w Mapach Google\n \\- W aplikacji Antalya Kart wprowadź numer trasy do\
+    \ wyszukiwania\n \\- Cała trasa i szare autobusy zostaną wyświetlone w miejscach, którymi aktualnie podróżują\n \\- Flaga\
+    \ \\-\\> koniec trasy, początek trójkąta \\-\\>\n \\- Kierunek trasy można zmienić naciskając zielony przycisk"
+  button_texts:
+    antalya_card_android: 🤖 {{button_android}}
+    antalya_card_iphone: 📱 {{button_iphone}}
+- id: TAXI
+  text: '*🚖Taksówka*
+
+
+    ℹ️ Przyciski do wezwania taksówki wiszą w całej Antalyi, samochód przyjeżdża nawet późno w nocy
+
+
+    🤙 *Możesz zadzwonić:*
+
+    1\. Przycisk przed wejściem
+
+    2\. Aplikacja BiTaxi
+
+    3\. Aplikacja Ubera
+
+
+    💵 *Koszt: lądowanie 10 TL \+ 14 TL/km*
+
+
+    🪙 *Płatność*
+
+    \- Według licznika w lustrze
+
+    \- Koszt w aplikacjach jest obliczany przy użyciu tego samego licznika
+
+    \- Można płacić gotówką w lirach lub kartą \(nie we wszystkich taksówkach\)
+
+    \- W aplikacji można płacić powiązaną kartą'
+- id: KICK_SCOOTER
+  text: '*🛴Skutery*
+
+
+    ℹ️ *Wypożyczalnia skuterów w Antalyi:*
+
+    \- *BinBin* \(jedź w pobliżu naszego kompleksu\)
+
+    \- *Marti*
+
+    \- *Hop*
+
+    \- *Promień*
+
+    \- *Hop*
+
+    \- *Gez*
+
+    \- *Tornet*
+
+
+    ℹ️ Wypożyczalnia rowerów *Antbis* działa wzdłuż wybrzeża'

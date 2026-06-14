@@ -1,0 +1,168 @@
+version: '1.0'
+screens:
+- id: PHONE_NUMBERS
+  text: '*📞 {{button_phone_numbers}}*'
+  button_texts:
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
+- id: EKPA_MANAGEMENT
+  text: '*Ekpa:*
+
+
+    *🧑‍💼Società di gestione*
+
+    \+90 \(539\) 6703316
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Sicurezza*
+
+    \+90 \(539\) 6703833'
+- id: EMERGENCY
+  text: '*Numeri di emergenza:*
+
+
+    ```
+
+    112 - 🚑 Ambulance
+
+    155 - 🚓 Police
+
+    154 - 🚔 Traffic police
+
+    110 - 🚒 Fire protection
+
+    156 - 👮 Gendarmerie
+
+    157 - 🛂 Migration Service
+
+    118 - ℹ️ Information (phones)
+
+    ```'
+- id: EMBASSY
+  text: '*🏛️ Ambasciate*'
+  button_texts:
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
+- id: RUSSIA_EMBASSY
+  text: '<u><b>Consolato Generale della Russia ad Antalya</b></u>
+
+    Consolato: +90 (242) 248 32 02
+
+    E-mail: ruskonsant@yandex.ru
+
+    Prendi un appuntamento: https://antalya.mid.ru/ru/reception-at-reception/
+
+    Orari di apertura: 9:00-18:00, Pranzo: 13:00-14:00
+
+    Indirizzo: <a href="https://goo.gl/maps/5uApWF2SymauHg7v9">Ankara, Çankaya Mah., Andrey Karlov Sok., No. 5</a>
+
+    Sito web: https://antalya.mid.ru/ru/contacts/
+
+
+    <u><b>Ambasciata turca a Mosca</b></u>
+
+    Consolato: +7 (495) 994 93 59 (14.00 - 18.00 nei giorni feriali)
+
+    E-mail: embassy.moscow@mfa.gov.tr
+
+    Orari di apertura: 09:00-12:30
+
+    Indirizzo: <a href="https://goo.gl/maps/td3ZW6q2VCFfX8kYA">Moscow, 7a corsia Rostovsky, 12</a>
+
+    Sito web: http://moscow.emb.mfa.gov.tr/Mission/Contact'
+- id: UKRAINE_EMBASSY
+  text: '<u><b>Consolato dell''Ucraina ad Antalya</b></u>
+
+    Consolato: +90 (242) 312 33 77
+
+    E-mail: gc_tra@mfa.gov.ua
+
+    Prendi un appuntamento: https://online.mfa.gov.ua/application
+
+    Orari di apertura: 09:30-18:00 nei giorni feriali
+
+    Indirizzo: <a href="https://g.page/UkraynaAntalyaKonsoloslugu">Antalya, Muratpasa, Çaybaşı Mah. 1350 Sokak, No: 24</a>
+
+    Sito web: https://antalia.mfa.gov.ua
+
+
+    <u><b>Ambasciata turca a Kiev</b></u>
+
+    Ambasciata: +380 (44) 281 07 50 / +380 (44) 281 07 51
+
+    E-mail: embassy.kiev@mfa.gov.tr
+
+    Orari di apertura: 14:30-17:30 nei giorni feriali
+
+    Indirizzo: <a href="https://goo.gl/maps/1V5pqXA1nwTw3tzw6">Kyiv, st. Panasa Mirny, 22 anni</a>
+
+    Sito web: http://kiev.emb.mfa.gov.tr/Mission/Contact'
+- id: KAZAKHSTAN_EMBASSY
+  text: '<u><b>Consolato del Kazakistan ad Antalya</b></u>
+
+    Consolato: +90 242 324 26 11
+
+    E-mail: antalya@mfa.kz
+
+    Orari di apertura: 09:00-18:30 feriali, 12:30-14:30 pranzo
+
+    Indirizzo: <a href="https://goo.gl/maps/oZdrjAQHvSNF2xhf6">Antalya, Muratpasa, Çağlayan Mah. 2070 Sokak, No: 16, Blocco
+    C, Site Life City</a>
+
+    Sito web: https://www.gov.kz/memleket/entities/mfa-antalya/contacts
+
+
+    <u><b>Ambasciata turca ad Astana</b></u>
+
+    Ambasciata: +7 7172 704 704
+
+    E-mail: embassy.nur-sultan@mfa.gov.tr
+
+    Orari di apertura: 09:00-18:30 feriali, 12:30-14:00 pranzo
+
+    Indirizzo: <a href="https://goo.gl/maps/k9h6ZVySjQNXZYUy5">Astana, st. Zhumabek Tashenov koshesi, no. 3</a>
+
+    Sito web: http://astana.be.mfa.gov.tr/Mission/Contact'
+- id: BELARUS_EMBASSY
+  text: '<u><b>Ambasciata della Bielorussia ad Ankara</b></u>
+
+    Ambasciata: +90 (312) 441 67 69 / +90 (312) 441 67 70
+
+    Servizio consolare: +90 (312) 441 64 50 (consultazioni e accoglienza dei cittadini dalle 9.00 alle 13.00)
+
+    E-mail: turchia@mfa.gov.by
+
+    Orari di apertura: 08:45-18:00 feriali, 08:45-16:45 venerdì, 13:00-14:00 pranzo
+
+    Indirizzo: <a href="https://goo.gl/maps/srvg11UaaXNzRkKc8">Ankara, Çankaya Mah., Abidin Daver Sk. No 17</a>
+
+    Sito web: https://turkey.mfa.gov.by/ru/embassy/
+
+
+    <u><b>Ambasciata turca a Minsk</b></u>
+
+    Ambasciata: +375 (17) 327 13 83
+
+    Sezione consolare: +375 (17) 327 14 08
+
+    E-mail: embassy.minsk@mfa.gov.tr
+
+    Orari di apertura: 9:00-12:00 nei giorni feriali
+
+    Indirizzo: <a href="https://goo.gl/maps/Qepa2qhKDfdu7Qa68">Minsk, st. Volodarskogo, 6</a>
+
+    Sito web: http://minsk.emb.mfa.gov.tr/Mission/Contact'
+- id: OTHER_PHONES
+  text: "*Numeri di telefono utili:*\n\n ```\n 115 - International operator\n 141 - Telegrams by telephone\n 144 - Ministry\
+    \ of Social Protection of Family\n 170 - Ministry of Labor and Social Protection\n 174 - Complaints about food\n 175 -\
+    \ Consumer protection\n 135 - Alarm clock\n 158 - Coast Guard\n 183 - Social service\n 186 - Electrical emergency service\n\
+    \ 187 - Gas service\n 189 - Tax reference\n 182 - Free appointment system with doctors\n 126 - Cable TV\n\n \U0001F3E5\
+    Hospitals:\n Antalya - 227 43 43, 243 50 60\n Kemer - 814 15 50, 814 11 41\n Side - 753 12 21, 753 14 45\n\n Bus station\
+    \ (Antalya) - (242)3311250\n Tourist Information Bureau - (242)2411747\n Turkish Travel Agencies Association - (242)2431934\n\
+    \ ```"

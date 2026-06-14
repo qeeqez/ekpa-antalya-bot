@@ -1,0 +1,109 @@
+version: '1.0'
+screens:
+- id: TRANSPORT
+  text: '*🚌 {{button_transport}}*'
+  button_texts:
+    bus: 🚌 {{button_bus}}
+    antalya_card: 🪪 {{button_antalya_card}}
+    taxi: 🚕 {{button_taxi}}
+    kick_scooter: 🛴 {{button_scooters}}
+- id: BUS
+  text: "*\U0001F68ETransports en commun*\n\n \U0001F4CD L'itinéraire est mieux planifié dans *Google Maps*\n \U0001F9ED La\
+    \ localisation actuelle des bus peut être consultée dans l'application *AntalyaKart*\n\n \U0001F4B5 *Tarif*\n AntalyaKart\
+    \ \\- 9\\.6 TL\n Carte bancaire \\- 9\\.85 TL\n\n \U0001FA99️ *Frais de transfert*\n AntalyaKart \\- 3 TL\n Carte bancaire\
+    \ \\- 9\\.85 TL\n\n ℹ️ *Les enfants de moins de 6 ans sont gratuits*\n ⚠️ *Le paiement en espèces dans les transports\
+    \ est interdit*"
+  button_texts:
+    bus_concessionary: 🎫 {{button_benefits}}
+- id: BUS_CONCESSIONARY
+  text: '🧒👴 *Voyage préférentiel*
+
+
+    ℹ️ Pour voyager à prix réduit, vous devez créer une carte de réduction
+
+
+    💵 *Tarif*
+
+    Étudiants et écoliers \- 4 TL
+
+    Personnes âgées, handicapées, enseignants \- 8\.4 TL
+
+
+    🪙️ *Coût de transfert \- 3 TL*
+
+
+    ⁉️️ *Comment obtenir une carte de réduction ?*
+
+    \- Délivré aux enfants, aux personnes âgées et handicapées, aux enseignants
+
+    \- Carte personnalisée avec photo
+
+    \- L''enfant a besoin d''un certificat de l''école attestant qu''il est étudiant
+
+    \- Ne peut être effectué que dans les principales agences AntalyaKart
+
+    \- [L''agence la plus proche est ici] (https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), dans le passage souterrain'
+- id: ANTALYA_CARD
+  text: "*\U0001F4B3 Antalya Kart*\n\n ℹ️ Le tarif est moins cher avec cette carte\n ℹ️ Vous pouvez payer pour deux personnes,\
+    \ vous devez attendre après le premier paiement\n\n \U0001F4CD *Où acheter ?*\n \\- Au [marché Soylu] le plus proche (https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
+    \ \\- Dans l'application *Antalya Kart*, dans la section *Point le plus proche*, les points de vente sont marqués en rouge\n\
+    \n \U0001FA99 *Comment recharger ?*\n \\- Vous pouvez recharger en espèces au même endroit où vous achetez\n \\- Recharger\
+    \ en ligne avec une carte bancaire turque dans l'application Antalya Kart\n\n ⁉️ *J'ai rechargé la carte, mais l'argent\
+    \ n'est pas apparu*\n \\- Au terminal du bus, appuyez sur le bouton de recharge rouge\n \\- Maintenez pendant 5 secondes\n\
+    \n \U0001F68C *Comment visualiser les itinéraires dans l'application ?*\n \\- Trouver un itinéraire approprié dans Google\
+    \ Maps\n \\- Dans l'application Antalya Kart, entrez le numéro de route dans la recherche\n \\- L'intégralité du parcours\
+    \ et les bus gris seront affichés aux endroits où ils voyagent actuellement\n \\- Flag \\-\\> fin du parcours, Triangle\
+    \ \\-\\> début\n \\- La direction de l'itinéraire peut être modifiée en appuyant sur le bouton vert"
+  button_texts:
+    antalya_card_android: 🤖 {{button_android}}
+    antalya_card_iphone: 📱 {{button_iphone}}
+- id: TAXI
+  text: '*🚖Taxi*
+
+
+    ℹ️ Des boutons pour appeler un taxi sont accrochés partout à Antalya, la voiture arrive même tard dans la nuit
+
+
+    🤙 *Vous pouvez appeler :*
+
+    1\. Bouton avant d''entrer
+
+    2\. Application BiTaxi
+
+    3\. Application Uber
+
+
+    💵 *Coût : Atterrissage 10TL \+ 14TL/km*
+
+
+    🪙 *Paiement*
+
+    \- D''après le compteur dans le miroir
+
+    \- Le coût des candidatures est calculé à l''aide du même compteur
+
+    \- Vous pouvez payer en espèces en lires ou par carte \(pas dans tous les taxis\)
+
+    \- Dans l''application, il est possible de payer avec une carte liée'
+- id: KICK_SCOOTER
+  text: '*🛴Trottinettes*
+
+
+    ℹ️ *Services de location de scooters à Antalya :*
+
+    \- *BinBin* \(conduire près de notre complexe\)
+
+    \- *Marti*
+
+    \- *Sauter*
+
+    \- *Faisceau*
+
+    \- *Sauter*
+
+    \- *Gez*
+
+    \- *Tornet*
+
+
+    ℹ️ Le service de location de vélos *Antbis* opère le long de la côte'

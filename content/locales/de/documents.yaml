@@ -1,0 +1,165 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 {{button_important_documents}}*'
+  button_texts:
+    check_application_status: ✅ Überprüfen Sie den Status Ihres Antrags auf Aufenthaltserlaubnis
+    get_id_number: 🆔 Finden Sie die Aufenthaltserlaubnisnummer heraus
+    tax_number: 🪪 INN
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖 Numaratage
+    address_registration: 📌 Anmeldung
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Website mit einer Vielzahl von Regierungsdiensten:
+
+    \- Einholen von Zertifikaten und Erklärungen
+
+    \- Kostenlose Medizin
+
+    \- Entsperren Sie Ihr Telefon
+
+    \- Viel mehr
+
+
+    🌎 [Site-Link](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *So verbinden Sie sich*
+
+    \- Holen Sie sich eine Aufenthaltserlaubnis \(ikamet\)
+
+    \- Eine türkische Telefonnummer haben
+
+    \- Bei der Post \(PTT\), sagen Sie EDevlet
+
+    \- Für 20 Lira erstellen sie ein Passwort für den Flug, es kommt per SMS
+
+
+    📍 [Nächstes Postamt](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\,6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Website
+    edevlet_android: 🤖Android
+    edevlet_iphone: 📱 iPhone
+- id: TAX_NUMBER
+  text: '*🪪TIN \(Türkische Steuernummer\)*
+
+
+    ℹ️ *Wofür ist es?*
+
+    \- Registrierung von Dask und Dienstprogrammen für sich
+
+    \- Aufenthaltserlaubnis
+
+    \- Eröffnung eines Bankkontos
+
+
+    🌎 *Online gehen*
+
+    \- Gehen Sie zu [Steuer-Website](https://ivd.gib.gov.tr/)
+
+    \- Wählen Sie die mittlere untere Schaltfläche
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- *Antrag auf Erteilung einer potenziellen Steuernummer für Nichtstaatsangehörige*
+
+    \- Geben Sie Ihre Daten ein
+
+
+    💸 *beim Finanzamt abholen*
+
+    \- Manchmal schreibt das Online-System einen Fehler und Sie müssen zum Finanzamt gehen
+
+    \- Finanzamt [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖 Numarataj \(Numarataj\)*
+
+
+    ℹ️ *Zertifikat zur Bestätigung der Adresse*
+
+    \- Erforderlich für die Registrierung
+
+    \- Erforderlich, um eine Aufenthaltserlaubnis zu erhalten
+
+
+    💼 *Mitnehmen:*
+
+    1\. Reisepass
+
+    2\. Tapu
+
+    3\. Mietvertrag
+
+    4\. Kopien dieser Dokumente
+
+
+    ℹ️ *Anleitung zum Empfang:*
+
+    1\. Erstellen Sie in [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) Kopien von Dokumenten
+
+    2\. Gehen Sie in die 2. Etage, folgen Sie den Numarataj-Schildern und betreten Sie den Korridor von Block D
+
+    3\. Nehmen Sie ein Ticket, sie werden Sie anrufen
+
+    4\. Geben Sie der Person alle Kopien der Dokumente
+
+    5\. Gehen Sie einer nach dem anderen in den ersten Stock, geben Sie Ihre Dokumente aus dem Fenster, sie werden Sie stempeln
+
+    6\. Kehren Sie in den zweiten Stock zurück, dort wird Ihnen ein Numaratazh-Zertifikat ausgestellt
+
+    ⚠️ Wenn Sie mehrere Personen sind, geben Sie Kopien der Reisepässe aller Personen ab, die in dieser Bescheinigung eingetragen
+    werden sollen
+
+
+    📍 Alles ist in [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\,5 km\) erledigt
+
+    ⚡️ Im Erdgeschoss können Sie für 1 TL Kopien von Dokumenten erstellen'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Anmeldung*
+
+
+    ℹ️ *Die Anmeldung muss innerhalb von 20 Tagen nach Erhalt der Aufenthaltserlaubnis erfolgen*
+
+    \- Es ist nicht notwendig, Kinder mitzunehmen, es wird empfohlen, dass jeder ein Erwachsener ist
+
+    \- Die Aufenthaltserlaubnis wird ohne Registrierung nicht verlängert
+
+
+    ℹ️ Eine Online-Anmeldung für Ausländer ist nicht mehr möglich
+
+    ℹ️ Ausländer müssen sich nicht bei Nufus registrieren, können Sie aber in besonderen Fällen dort registrieren
+
+
+    📌 *Registrierung in Goc*
+
+
+    💼 *Mitnehmen:*
+
+    1\. Ikamet \(Aufenthaltserlaubnis\)
+
+    2\. Tapu oder Mietvertrag
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Fotokopien von Tapu/Vertrag und Numaratage
+
+    5\. Quittung für Wasser oder Strom auf Ihren Namen
+
+
+    ⚡️ *Wichtig:*
+
+    \- Die Quittung muss frisch sein, sonst wird sie abgelehnt
+
+    \- Sie können eine Kopie des Kymlik und der Tapa des Wohnungseigentümers anfordern
+
+
+    📍 *Anfahrt:*
+
+    \- Komm nach [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- Sagen Sie am Eingang *Adres* und zeigen Sie das Ikamet, sie werden Sie hereinlassen
+
+    \- Sagen Sie im Gebäude *Adresse* und warten Sie auf einen Anruf im Raum links von den Fenstern für ein Rendezvous'

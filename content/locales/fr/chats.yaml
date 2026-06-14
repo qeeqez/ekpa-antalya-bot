@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Nos discussions*'
+  button_texts:
+    trade_chat: 🛍️ Marché aux puces - Produits et services
+    blocks_chat: 🏘 Chats par blocs
+    parents_chat: 👶 Pour les parents
+    animals_chat: 😸Animaux 🐶
+    sport_chat: 🏃‍♂️Sport
+    sport_games_chat: 🏀 Jeux de sport
+    board_games_chat: 🎲 Planches
+    gaming_chat: 🎮 Jeux
+    it_chat: 🧑‍💻IT
+- id: BLOCKS_CHAT
+  text: '*🏘 Bloquer les discussions*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

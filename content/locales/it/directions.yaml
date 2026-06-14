@@ -1,0 +1,296 @@
+version: '1.0'
+screens:
+- id: DIRECTIONS
+  text: '*{{button_directions}}*'
+  button_texts:
+    markets: 🧺 {{button_markets}}
+    shops: 🍎Negozi
+    shopping_centers: 🛍 centro commerciale
+    print_photo: 🖨️ Stampa e Foto 📸
+    barber: ✂️ Barbieri
+    residence_fitness_spa: 💪Residenza Fitness & SPA
+    tax_office: 💸 Tasse
+    post_office: ✉️ Posta
+    city_hall: 🏛 Belediye
+    population_office: 🧑‍💼 Nufus
+    migration_office: 👮Goc
+- id: MARKETS
+  text: '*🧺 Mercati più vicini:*
+
+
+    *lunedì*
+
+    📍[Mercato di Ersoy](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \(2\.5 km\)
+
+
+    *Mercoledì*
+
+    📍[Mercato Beşkonaklılar](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \(500 m, prima di pranzo\)
+
+    📍[Mercato Demirgül](https://goo.gl/maps/uqxp8L4RscSe2jpM7) \(1\.7 km\)
+
+    📍[Mercato di Sütçüler](https://goo.gl/maps/yFbwpSdE4yNt7ojH7) \(3 km\)
+
+
+    *giovedì*
+
+    📍[Mercato Göksu](https://goo.gl/maps/WakaAx3KK4Vmz9ELA) \(1\.7 km\)
+
+    📍[Mercato di Sütçüler](https://goo.gl/maps/68DWmnXecWeFLbj4A) \(2\.2 km\)
+
+
+    *venerdì*
+
+    📍[Mercato di Teomanpaşa](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \(2\,5 km\)
+
+
+    *Sabato*
+
+    📍[Mercato di Güneş](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 km\)'
+  button_texts:
+    all_markets: 🧺 {{button_other_markets}}
+- id: ALL_MARKETS
+  text: '*Mercati:*
+
+
+    📍 [Mercato SİTELER](https://goo.gl/maps/mYUuZawfTAU2) \(Lunedì\)
+
+    📍 [YENIDOĞAN Bazaar](https://goo.gl/maps/DSfCL1JxACD2) \(Lunedì\)
+
+    📍 [Mercato LIMAN](https://goo.gl/maps/nA23cv3x6sy) \(Martedì\)
+
+    📍 [Bazar BAHÇELİEVLER ](https://goo.gl/maps/cao3iJC1Dg72) \(Martedì\)
+
+    📍 [Mercato YEŞİLBAHÇE](https://goo.gl/maps/nrT3xnr1f7P2) \(Mercoledì\)
+
+    📍 [Bazar SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(Mercoledì\)
+
+    📍 [Mercato PAZAR ÖĞRETMENEVI](https://goo.gl/maps/6Ya5yxszQp92) \(Mercoledì\)
+
+    📍 [DEDEMAN Bazaar](https://goo.gl/maps/dRU5nL5AR752) \(Giovedì\)
+
+    📍 [Mercato BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(Giovedì\)
+
+    📍 [GÜLVEREN Bazaar](https://goo.gl/maps/MqwpmNKb7js) \(Giovedì\)
+
+    📍 [Mercato PERŞEMBE SEMT](https://goo.gl/maps/CEfKqRQTtbN2) \(Giovedì\)
+
+    📍 [ALTINKUM Bazaar](https://goo.gl/maps/4dpRFg4BPcq) \(Venerdì\)
+
+    📍 [Mercato GÜZELOBA](https://goo.gl/maps/DvVpef5xqZo) \(venerdì\)
+
+    📍 [Mercato KIZILTOPRAK](https://goo.gl/maps/DGQKNLy5D7J2) \(venerdì\)
+
+    📍 [KIZILTOPRAK Bazar](https://goo.gl/maps/dRKoX3MWrrt) \(venerdì\)
+
+    📍 [KONUKSEVER Bazaar](https://goo.gl/maps/fNqtj7SXdaS2) \(Sabato\)
+
+    📍 [Mercato ZAFER](https://goo.gl/maps/jGzGvtS6q5L2) \(Sabato\)
+
+    📍 [Bazar PINARBAŞI](https://goo.gl/maps/FNhE4hF4fSN2) \(domenica\)
+
+    📍 [Mercato di SİGORTA](https://goo.gl/maps/xpdVAv743nT2) \(domenica\)
+
+    📍 [ÇAĞLAYAN Bazaar](https://goo.gl/maps/DzBmxTcAdTx) \(domenica\)
+
+    📍 [Bazar BAHÇELİEVLER](https://goo.gl/maps/usNRD4oQRxH2) \(domenica\)'
+  button_texts:
+    markets: 🧺 Mercati
+- id: SHOPS
+  text: '*🍎 Negozi più vicini*
+
+
+    *Nel Complesso*
+
+    🍎 *Migros* \- Orari di apertura\: 09\:00 \- 22\:00
+
+    🍎 *A101* \- Orari di apertura\: 09\:00 \- 21\:00
+
+    🍾 *Elit 0709* \- 24 ore
+
+
+    *Rete*
+
+    📍 [Tahtakale](https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 m\)
+
+    Un negozio per tutte le occasioni\. Compresi i prodotti\. Il negozio è disposto su 3 piani\.
+
+
+    🍌 [Sok](https://goo.gl/maps/bz15sV6peBEuQf9Z8) \(600 m\)
+
+    🍌 [Bim](https://goo.gl/maps/ZEy8ZHqMTKCEMCdPA) \(650 m\)
+
+    🍌 [A101](https://goo.gl/maps/UDmQrYRjrhWi7s7V7) \(650 m\)
+
+    🍎 [Migros](https://goo.gl/maps/XXKsLLLMH61ojpnP8) \(1\.1 km\)
+
+    La rete Migros vende alcolici\.
+
+
+    *Negozi locali*
+
+    🍞 [Panetteria](https://goo.gl/maps/uKP6r6M9wbWnNzF4A) \(200 m\)
+
+    🥩 [Carne](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
+
+    🍷 [Mercato del liquore Soylu](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 m\)
+
+
+    *Grandi catene di negozi*
+
+    🛒 [Metro](https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \(4\.4 km\)
+
+    🛒 [5M Migros Kepez](https://goo.gl/maps/exzze46k7XUkAYPVA) \(10\.6 km\)
+
+    🛒 [5M Migros Konyaaltı](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\.6 km\)'
+- id: SHOPPING_CENTERS
+  text: '*🛍 Centri commerciali*
+
+
+    📍 [Agorà](https://goo.gl/maps/TshggHds8sAVBACV6) \(3\.8 km\)
+
+    📍 [Centro commerciale di Antalya](https://g.page/MallOfAntalya) \(4\.8 km\)
+
+    📍 [MarkAntalya](https://goo.gl/maps/BjqUUFpYRthDPZFJ9) \(6\.4 km\)
+
+    📍 [Terra City](https://g.page/TerraCity) \(10\.3 km\)
+
+    📍 [5M Migros AVM Konyaaltı](https://g.page/AntalyaMigrosAVM) \(10\.4 km\)
+
+
+    📍 [Parco Ozdilek](https://g.page/ozdilekparkantalya) \(6\.6 km\)
+
+    📍 [Kipa AVM \(5M Migros Kepez\)](https://goo.gl/maps/FwRYmYLhETHsdX458) \(7\.0 km\)
+
+    📍 [Erasta AVM](https://g.page/erastaantalyaavm) \(8\.3 km\)
+
+
+    *Costruzione*
+
+    🛋 [IKEA](https://goo.gl/maps/zdLcFzx1tnq7EMXJ6) \(3\.9 km\)
+
+    🪴 [Koctas](https://goo.gl/maps/qYwje1sAhz1SQ9ycA) \(5\.6 km\)
+
+    🪚 [Bauhaus Kepez](https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\.4 km\)'
+- id: PRINT_AND_PHOTO
+  text: '*Stampa e foto*
+
+
+    📍 [HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \(350 m\)
+
+
+    📍 [Bella Color](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \(750 m\)
+
+    \- Stampa a colori 10 TL
+
+    \- Foto biometriche 300 TL
+
+
+    📍 [Fotografia](https://goo.gl/maps/T6UtpDPoSSve3p58A) \(900 m\)
+
+    📍 [Nebi Fotografcilik](https://g.page/NebiFoto) \(1\.2 km\)'
+- id: BARBER
+  text: '*Barbieri*
+
+
+    📍 [NZM Salonu](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
+
+    Taglio di capelli \+ Lavaggio \+ Styling 200 TL\.
+
+
+    📍 [Yigit Erkek Kuaforu](https://goo.gl/maps/KUYj8pheja9Y2QST6)
+
+
+    📍 [Barbiere di Ahmet](https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
+
+
+    📍 [Vicino a Migros](https://goo.gl/maps/PiBvkRPMak7bNo23A)'
+- id: TAX_OFFICE
+  text: '*💸 Tassa \(Vergi Dairesi\)*
+
+
+    ℹ️ *Qui puoi:*
+
+    \- Ottieni un numero di identificazione fiscale turco
+
+    \- Paga la tariffa per sbloccare il telefono
+
+    \- Paga una multa per le auto con targa straniera
+
+
+    📍 [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\.7 km\)'
+- id: POST_OFFICE
+  text: '*✉️ Mail \(PTT\)*
+
+
+    📍 [PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)
+
+    L''ufficio postale del nostro complesso, ikamets vengono qui
+
+
+    📍 [PTT Teomanpasa](https://goo.gl/maps/xq1qT8CjHqhzXtKx9) \(2\.1 km\)
+
+    📍 [PTT Sutculer](https://goo.gl/maps/nd8XwFx2EbUYSCj57) \(2\.9 km\)
+
+
+    ℹ️ Dove altro puoi pagare le utenze, leggi la sezione:
+
+    🌟 Tutto su Ekpa \-\> 💰 Come pagare?'
+- id: CITY_HALL
+  text: '*🏛 Belediye \(Comune\)*
+
+
+    ℹ️ In questa struttura è possibile ottenere il certificato *Numarataj* \(Numarataj\), necessario per ottenere il permesso
+    di soggiorno
+
+    ⚡️ Al piano terra puoi fare copie di documenti per 1 TL
+
+
+    📍 [Kepez Belediye](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\.5 km\)'
+- id: POPULATION_OFFICE
+  text: '*🧑‍💼 Nufus \(Ministero della Registrazione della Popolazione\)*
+
+
+    ℹ️ In questa istituzione si rilascia la Tapa, si registrano i cittadini turchi, si registrano i neonati e si risolvono
+    altri problemi relativi alla popolazione\.
+
+    ⚠️ Gli stranieri devono registrarsi presso Goc, non Nufus\.
+
+
+    📍 [Kepez Nufus](https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\.5 km\)'
+- id: MIGRATION_OFFICE
+  text: '*👮 Goc Idaresi \(Dipartimento Migrazione di Antalya\)*
+
+
+    1️⃣ Qui devi registrarti\.
+
+    2️⃣ Qui si svolge l''appuntamento \(domanda di permesso di soggiorno\) e vengono risolte tutte le questioni relative al
+    permesso di soggiorno\.
+
+    3️⃣ Chi non lo avesse ancora fatto potrà essere chiamato qui per il rilevamento delle impronte digitali.
+
+
+    📍 [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\.1 km\)'
+- id: RESIDENCE_FITNESS_SPA
+  text: '*🧖‍♀ Ata Wellness Fitness & Spa*
+
+
+    📍 *Blocco E1, \-1° piano*
+
+
+    🕗 *Lun\-Sab:* 08:00\-22:00
+
+    🕛 *Domenica:* 12:00 \- 22:00
+
+
+    📞 \+90 \(537\) 658 07 17
+
+
+    📶 WiFi: *Ata\_Spa\_Fitness*
+
+    ℹ️ Password: `ataspafitnes1207`
+
+
+    👨‍💻 Applicazione di accesso
+
+    [📱 iPhone](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 Android](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)'

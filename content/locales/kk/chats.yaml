@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Біздің чаттар*'
+  button_texts:
+    trade_chat: 🛍️ "Барахолка" - Өнімдер мен қызметтер
+    blocks_chat: 🏘 Блоктар бойынша чаттар
+    parents_chat: 👶 Ата-аналарға арналған
+    animals_chat: 😸 Жануарлар 🐶
+    sport_chat: 🏃‍♂️ Спорт
+    sport_games_chat: 🏀 Спорттық ойындар
+    board_games_chat: 🎲 Тақталар
+    gaming_chat: 🎮 Ойын
+    it_chat: 🧑‍💻БҰЛ
+- id: BLOCKS_CHAT
+  text: '*🏘 Чаттарды блоктау*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: Б
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

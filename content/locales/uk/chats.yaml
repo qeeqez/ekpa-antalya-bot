@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Наші чати*'
+  button_texts:
+    trade_chat: 🛍️ Барахолка - продукти та послуги
+    blocks_chat: 🏘 Чати по блоках
+    parents_chat: 👶 Для батьків
+    animals_chat: 😸 Тварини 🐶
+    sport_chat: 🏃‍♂️ Спорт
+    sport_games_chat: 🏀 Спортивні ігри
+    board_games_chat: 🎲 Дошки
+    gaming_chat: 🎮 Ігри
+    it_chat: 🧑‍💻ЦЕ
+- id: BLOCKS_CHAT
+  text: '*🏘 Блокуйте чати*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: Б
+    block_c: C
+    block_d: Д
+    block_e1: E1
+    block_e2: E2

@@ -1,0 +1,168 @@
+version: '1.0'
+screens:
+- id: PHONE_NUMBERS
+  text: '*📞 {{button_phone_numbers}}*'
+  button_texts:
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
+- id: EKPA_MANAGEMENT
+  text: '*Екпа:*
+
+
+    *🧑‍💼Басқарушы компания*
+
+    \+90 \(539\) 6703316
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Қауіпсіздік*
+
+    \+90 \(539\) 6703833'
+- id: EMERGENCY
+  text: '*Төтенше телефон нөмірлері:*
+
+
+    ```
+
+    112 - 🚑 Ambulance
+
+    155 - 🚓 Police
+
+    154 - 🚔 Traffic police
+
+    110 - 🚒 Fire protection
+
+    156 - 👮 Gendarmerie
+
+    157 - 🛂 Migration Service
+
+    118 - ℹ️ Information (phones)
+
+    ```'
+- id: EMBASSY
+  text: '*🏛️ Елшіліктер*'
+  button_texts:
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
+- id: RUSSIA_EMBASSY
+  text: '<u><b>Ресейдің Анталиядағы Бас консулдығы</b></u>
+
+    Консулдық: +90 (242) 248 32 02
+
+    Электрондық пошта: ruskonsant@yandex.ru
+
+    Кездесуге жазылу: https://antalya.mid.ru/ru/reception-at-reception/
+
+    Жұмыс уақыты: 9:00-18:00, түскі ас: 13:00-14:00
+
+    Мекенжайы: <a href="https://goo.gl/maps/5uApWF2SymauHg7v9">Ankara, Чанкая м., Андрей Карлов көшесі, № 5</a>
+
+    Веб-сайт: https://antalya.mid.ru/ru/contacts/
+
+
+    <u><b>Мәскеудегі Түркия елшілігі</b></u>
+
+    Консулдық: +7 (495) 994 93 59 (жұмыс күндері 14.00 - 18.00)
+
+    Электрондық поштасы: embasy.moscow@mfa.gov.tr
+
+    Жұмыс уақыты: 09:00-12:30
+
+    Мекен-жайы: <a href="https://goo.gl/maps/td3ZW6q2VCFfX8kYA">Moscow, 7-ші Ростовский жолағы, 12</a>
+
+    Веб-сайт: http://moscow.emb.mfa.gov.tr/Mission/Contact'
+- id: UKRAINE_EMBASSY
+  text: '<u><b>Украинаның Анталиядағы консулдығы</b></u>
+
+    Консулдық: +90 (242) 312 33 77
+
+    Электрондық поштасы: gc_tra@mfa.gov.ua
+
+    Кездесуге жазылу: https://online.mfa.gov.ua/application
+
+    Жұмыс уақыты: жұмыс күндері 09:30-18:00
+
+    Мекен-жайы: <a href="https://g.page/UkraynaAntalyaKonsoloslugu">Antalya, Мұратпаша, Чайбашы м., 1350 Сокак, №: 24</a>
+
+    Веб-сайт: https://antalia.mfa.gov.ua
+
+
+    <u><b>Киевтегі Түркия елшілігі</b></u>
+
+    Елшілік: +380 (44) 281 07 50 / +380 (44) 281 07 51
+
+    Электрондық поштасы: embasy.kiev@mfa.gov.tr
+
+    Жұмыс уақыты: жұмыс күндері 14:30-17:30
+
+    Мекенжайы: <a href="https://goo.gl/maps/1V5pqXA1nwTw3tzw6">Kyiv, ст. Панаса Мирный, 22</a>
+
+    Веб-сайт: http://kiev.emb.mfa.gov.tr/Mission/Contact'
+- id: KAZAKHSTAN_EMBASSY
+  text: '<u><b>Қазақстанның Анталиядағы консулдығы</b></u>
+
+    Консулдық: +90 242 324 26 11
+
+    Электрондық поштасы: antalya@mfa.kz
+
+    Жұмыс уақыты: жұмыс күндері 09:00-18:30, түскі ас 12:30-14:30
+
+    Мекен-жайы: <a href="https://goo.gl/maps/oZdrjAQHvSNF2xhf6">Antalya, Мұратпаша, Чаглаян м. 2070 Сокак, №: 16, С блогы,
+    Site Life City</a>
+
+    Веб-сайт: https://www.gov.kz/memleket/entities/mfa-antalya/contacts
+
+
+    <u><b>Астанадағы Түркия елшілігі</b></u>
+
+    Елшілік: +7 7172 704 704
+
+    Электрондық поштасы: embasy.nur-sultan@mfa.gov.tr
+
+    Жұмыс уақыты: жұмыс күндері 09:00-18:30, түскі ас 12:30-14:00
+
+    Мекенжайы: <a href="https://goo.gl/maps/k9h6ZVySjQNXZYUy5">Astana, ст. Жұмабек Тәшенов көші, н. 3</a>
+
+    Веб-сайт: http://astana.be.mfa.gov.tr/Mission/Contact'
+- id: BELARUS_EMBASSY
+  text: '<u><b>Анкарадағы Беларусь елшілігі</b></u>
+
+    Елшілік: +90 (312) 441 67 69 / +90 (312) 441 67 70
+
+    Консулдық қызмет: +90 (312) 441 64 50 (сағат 9.00-ден 13.00-ге дейін азаматтарды қабылдау және консультация беру)
+
+    Электрондық пошта: turkey@mfa.gov.by
+
+    Жұмыс уақыты: жұмыс күндері 08:45-18:00, жұмада 08:45-16:45, түскі ас 13:00-14:00
+
+    Мекенжайы: <a href="https://goo.gl/maps/srvg11UaaXNzRkKc8">Ankara, Чанкая м., Абидин Давер көшесі № 17</a>
+
+    Веб-сайт: https://turkey.mfa.gov.by/ru/embassy/
+
+
+    <u><b>Минсктегі Түркия елшілігі</b></u>
+
+    Елшілік: +375 (17) 327 13 83
+
+    Консулдық бөлім: +375 (17) 327 14 08
+
+    Электрондық поштасы: embasy.minsk@mfa.gov.tr
+
+    Жұмыс уақыты: жұмыс күндері 9:00-12:00
+
+    Мекенжайы: <a href="https://goo.gl/maps/Qepa2qhKDfdu7Qa68">Minsk, ст. Володарского, 6</a>
+
+    Веб-сайт: http://minsk.emb.mfa.gov.tr/Mission/Contact'
+- id: OTHER_PHONES
+  text: "*Пайдалы телефон нөмірлері:*\n\n ```\n 115 - International operator\n 141 - Telegrams by telephone\n 144 - Ministry\
+    \ of Social Protection of Family\n 170 - Ministry of Labor and Social Protection\n 174 - Complaints about food\n 175 -\
+    \ Consumer protection\n 135 - Alarm clock\n 158 - Coast Guard\n 183 - Social service\n 186 - Electrical emergency service\n\
+    \ 187 - Gas service\n 189 - Tax reference\n 182 - Free appointment system with doctors\n 126 - Cable TV\n\n \U0001F3E5\
+    Hospitals:\n Antalya - 227 43 43, 243 50 60\n Kemer - 814 15 50, 814 11 41\n Side - 753 12 21, 753 14 45\n\n Bus station\
+    \ (Antalya) - (242)3311250\n Tourist Information Bureau - (242)2411747\n Turkish Travel Agencies Association - (242)2431934\n\
+    \ ```"

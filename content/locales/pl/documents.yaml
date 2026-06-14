@@ -1,0 +1,164 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 {{button_important_documents}}*'
+  button_texts:
+    check_application_status: ✅ Sprawdź status swojego wniosku o zezwolenie na pobyt
+    get_id_number: 🆔 Poznaj numer pozwolenia na pobyt
+    tax_number: 🪪 ZAJAZD
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖 Numarataż
+    address_registration: 📌 Rejestracja
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Strona internetowa z szeroką gamą usług rządowych:
+
+    \- Uzyskanie certyfikatów i oświadczeń
+
+    \- Bezpłatne lekarstwa
+
+    \- Odblokuj telefon
+
+    \- Dużo więcej
+
+
+    🌎 [Link do strony](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *Jak się połączyć*
+
+    \- Uzyskaj zezwolenie na pobyt \(ikamet\)
+
+    \- Posiadaj turecki numer telefonu
+
+    \- Na poczcie \(PTT\) powiedz EDevlet
+
+    \- Za 20 lirów zrobią hasło do lotu, przyjdzie ono SMS-em
+
+
+    📍 [Najbliższa poczta](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Strona internetowa
+    edevlet_android: 🤖Androida
+    edevlet_iphone: 📱 iPhone'a
+- id: TAX_NUMBER
+  text: '*🪪Numer NIP \(turecki numer podatkowy\)*
+
+
+    ℹ️ *Do czego to służy?*
+
+    \- Rejestracja Daska i narzędzi dla siebie
+
+    \- Zezwolenie na pobyt
+
+    \- Otwarcie konta bankowego
+
+
+    🌎 *Połącz się z Internetem*
+
+    \- Przejdź do [strony podatkowej](https://ivd.gib.gov.tr/)
+
+    \- Wybierz środkowy dolny przycisk
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- *WNIOSEK O POTENCJALNY NUMER PODATKOWY NIE-OBYWATELA*
+
+    \- Podaj swoje dane
+
+
+    💸 *Odbierz go w urzędzie skarbowym*
+
+    \- Czasami system internetowy zapisuje błąd i trzeba udać się do urzędu skarbowego
+
+    \- Urząd skarbowy [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖 Numarataj \(Numarataj\)*
+
+
+    ℹ️ *Certyfikat potwierdzający adres*
+
+    \- Wymagane do rejestracji
+
+    \- Wymagane uzyskanie pozwolenia na pobyt
+
+
+    💼 *Zabierz ze sobą:*
+
+    1\. Paszport
+
+    2\. Tapu
+
+    3\. Umowa najmu
+
+    4\. Kopie tych dokumentów
+
+
+    ℹ️ *Instrukcja odbioru:*
+
+    1\. W [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) rób kopie dokumentów
+
+    2\. Idź na drugie piętro, kieruj się znakami Numarataj i wejdź na korytarz bloku D
+
+    3\. Weź bilet, zadzwonią do ciebie
+
+    4\. Przekaż tej osobie wszystkie kopie dokumentów
+
+    5\. Schodźcie pojedynczo na pierwsze piętro, wydawajcie dokumenty przez okno, to was opatrzą pieczątkami
+
+    6\. Wróć na drugie piętro, wydadzą certyfikat Numaratazh
+
+    ⚠️Jeśli jest Was kilku to przekażcie kopie paszportów wszystkich, którzy powinni być zarejestrowani w tym zaświadczeniu
+
+
+    📍 Wszystko odbywa się w [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 km\)
+
+    ⚡️ Na parterze można wykonać kopie dokumentów za 1 TL'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Rejestracja*
+
+
+    ℹ️ *Rejestracja musi zostać dokonana w ciągu 20 dni od otrzymania zezwolenia na pobyt*
+
+    \- Nie ma konieczności zabierania ze sobą dzieci, wskazane jest, aby każdy był osobą dorosłą
+
+    \- Zezwolenie na pobyt nie zostanie przedłużone bez rejestracji
+
+
+    ℹ️ Rejestracja online dla obcokrajowców nie jest już możliwa
+
+    ℹ️ Cudzoziemcy nie mają obowiązku rejestrowania się w Nufusie, jednak w szczególnych przypadkach mogą Cię tam zarejestrować
+
+
+    📌 *Zapisy w Gocu*
+
+
+    💼 *Zabierz ze sobą:*
+
+    1\. Ikamet \(zezwolenie na pobyt\)
+
+    2\. Tapu lub umowa najmu
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Kserokopie Tapu/Traktatu i Numaratage
+
+    5\. Rachunek za wodę lub prąd na Twoje nazwisko
+
+
+    ⚡️ *Ważne:*
+
+    \- Paragon musi być świeży, w przeciwnym razie odmówią
+
+    \- Mogą poprosić o kopię kymliku i tapy właściciela apartamentu
+
+
+    📍 *Jak dojechać:*
+
+    \- Przyjdź do [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- Przy wejściu powiedz *Adres* i pokaż ikamet, a cię wpuszczą
+
+    \- W budynku powiedz *Adres*, poczekaj na wezwanie do pokoju na lewo od okien w celu umówienia się na spotkanie'

@@ -1,0 +1,260 @@
+version: '1.0'
+screens:
+- id: AID_KIT
+  text: '*❤️Apteczka pierwszej pomocy*'
+  button_texts:
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
+- id: AMBULANCE
+  text: '*🚑 Ambulans*
+
+
+    ☎️ `112`
+
+
+    ℹ️ *Wezwij karetkę tylko w ostateczności\.*
+
+    W Turcji wezwanie karetki może kosztować całkiem grosza.
+
+    Dzwoniąc po karetkę, mów po angielsku, musisz przełączyć się na angielskiego operatora\.
+
+
+    😷️ *Infolinia dla obcokrajowców*
+
+
+    ☎️ `+90 850 288 38 38`
+
+
+    ℹ️ *Na infolinii mówi się wszystkimi językami*
+
+    Pomagają we wszystkich kwestiach medycznych, łącznie z wezwaniem karetki.'
+- id: PHARMACIES
+  text: '*🧑‍⚕️ Apteki \- Eczane*
+
+
+    ℹ️ W niedzielę zwykłe apteki są nieczynne
+
+
+    📍Wiele aptek znajduje się przy drodze do szpitala:
+
+    📍 [Kepez Devlet Hastanesi](https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+
+
+    *🏥 Apteki dyżurne \- Nöbetçi Eczaneler*
+
+
+    \- Pracują przez całą dobę
+
+    \- Każdego dnia są inni
+
+    \- Aktualne można obejrzeć na stronie internetowej lub w aplikacji'
+  button_texts:
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
+- id: HOSPITALS
+  text: '*🏥Szpitale\- Hastane*
+
+
+    🛡️ *Przez ubezpieczenie*
+
+
+    1️⃣️ Aby ubiegać się o ubezpieczenie, najpierw musisz dowiedzieć się, z którymi szpitalami ono współpracuje
+
+    2️⃣ Ubezpieczenie często nie pokrywa całej kwoty leczenia, ale jest to zależne od posiadanej polisy i firmy ubezpieczeniowej
+
+
+    ⁉️ *Jak sprawdzić, z którymi szpitalami współpracuje Twoje ubezpieczenie:*
+
+    1\. Odwiedź stronę [imecedestek](https://imecedestek.com/ContractedOrganizations)
+
+    2\. Należy podać nazwę firmy ubezpieczeniowej i rodzaj ubezpieczenia
+
+    3\. Wybierz obszar, w którym chcesz wyświetlić organizacje kontraktowe
+
+    4\. Wybierz typ placówki
+
+    5\. Naciśnij *Ara / Szukaj*
+
+
+    ⭐️ W ten sposób otrzymasz listę szpitali i innych placówek medycznych, w których posiadasz ubezpieczenie.
+
+
+    ❤️‍🩹 *Bez ubezpieczenia*
+
+
+    \- Można udać się do szpitali i przychodni prywatnych, a nie z listy ubezpieczonych\.
+
+    \- W takim przypadku Twoje ubezpieczenie może również pokryć niewielką część leczenia\. \(Przeczytaj o tym w jego opisie
+    i warunkach ubezpieczenia\)
+
+    \- Jeśli nie masz żadnego ubezpieczenia, przygotuj dość dużą kwotę\.
+
+
+    📍 Szukaj szpitali na mapie, używając tureckiego słowa *Hastane*\.'
+  button_texts:
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
+- id: POLYCLINIC
+  text: '*🧑‍⚕️ Bezpłatne lekarstwa*
+
+
+    💫 W Turcji możesz uzyskać *podstawową opiekę medyczną bezpłatnie*
+
+    \- W tym celu po otrzymaniu zezwolenia na pobyt należy zostać skierowanym do lekarza rodzinnego
+
+
+    🆓️ *Co daje:*
+
+    \- Możesz uzyskać ogólne badanie od swojego lekarza rodzinnego
+
+    \- Zdaj podstawowe testy
+
+    \- Zdobądź receptę na leki
+
+    \- Zaszczep się dla siebie i swoich dzieci
+
+    \- Uzyskaj rekomendacje od specjalistów w szpitalach
+
+    \- Historia wszystkich analiz i badań zostanie wyświetlona w aplikacji e\-Nabız\.
+
+    \- I ze wszystkich szpitali, także prywatnych.
+
+
+    💼 *Czego potrzebujesz:*
+
+    \- Turecki numer telefonu
+
+    \- e\-Devlet \(sporządzono na poczcie\)
+
+    \- Rejestracja pod Twoim adresem
+
+
+    🌎 *Jak dołączyć:*
+
+    1\. Zarejestruj się na [stronie enabiz](https://enabiz.gov.tr/)
+
+    2\. Wybierz funkcję *Zmień lekarza rodzinnego*
+
+    3\. Wybierz miasto, dzielnicę
+
+    4\. Otworzy się lista dostępnych poradni rodzinnych i specjalistów.
+
+    \- Nie można wybrać lekarza zaznaczonego na czerwono
+
+    \- Lekarze zaznaczeni na zielono są bardziej wolni
+
+    \- Zmiana lekarza z 5 na 21 odbywa się tego samego dnia. Zgłoszenia od 22 do 4 będą rozpatrywane 5-tego.
+
+
+    ⚡️*Dodatkowo:*
+
+    \- Zarejestruj się na [stronie MHRS](https://www.mhrs.gov.tr/) \(strona umożliwiająca umówienie wizyty u lekarza\)
+
+
+    ⭐ Teraz możesz *Umówić się na wizytę u lekarza / Wizytę / Randevu* za pośrednictwem strony internetowej i aplikacji e\-Nabız\'
+  button_texts:
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
+- id: MEDICINE
+  text: '*💊Tureckie leki*
+
+
+    *Nadtlenek wodoru:*
+
+    Oksijenli Su
+
+
+    *Ból gardła:*
+
+    Tantum Verde \- spray
+
+    Strepsils\- lizaki
+
+
+    *Kaszel:*
+
+    Na mokro: Acetylocysteina 600 mg \- 1 raz dziennie rano \(w przypadku zapalenia błony śluzowej żołądka \- po posiłkach
+    lub po omeprazolu\)
+
+    Suchy: ziołowych syropów na suchy kaszel jest bardzo dużo \(np. Fitospan\)
+
+
+    *Katar:*
+
+    Zestaw do płukania zatok \- przepłucz nos wodą morską \(typ Delfin\)
+
+    Nasowina \- spray zwężający naczynia krwionośne \(Ksylometazolina\)
+
+    Risonel 0,05% \- na alergiczny nieżyt nosa, przy długotrwałym stosowaniu leków zwężających naczynia krwionośne. Usuwa
+    obrzęk nosa, zmniejsza wypływ \(analogu Nasonex\), 2 dawki do każdego nozdrza 2 razy dziennie przez 2 tygodnie, następnie
+    1 dawka 2 razy dziennie przez 2 tygodnie, następnie \. 1 dawka 1 raz dziennie przez 2 tygodnie.
+
+
+    *Na ból:*
+
+    Nimes 100 mg \(Nimesulid\) \- nise
+
+    Brufen 400 mg \(Ibuprofen\) \- ibuprofen
+
+    Panadol \- paracetamol
+
+    Profenid żel \- Fastum żel
+
+    Artril \- żel znieczulający do wcierania w skórę w okolicy stawów
+
+    Tylohot \- theraflu
+
+
+    *Na brzuch:*
+
+    Buscopan \- środek przeciwskurczowy na kolkę brzuszną \(noshpa\)
+
+    Reflor \- na długotrwałą biegunkę \(na przykład podczas przyjmowania antybiotyków\)
+
+    Linex \- tam też
+
+    Enterosgel \(Enterosgel\) \- sorbent w postaci żeli
+
+    Eucabon - lokalny węgiel
+
+    Omeprazol \- omeprazol
+
+
+    *Na zaparcia:*
+
+    Duphalac \(Dufalak\)
+
+
+    *Mdłości:*
+
+    Metpamid \(typ motilium\)
+
+
+    *Alergia:*
+
+    Aerius \(Erius\)
+
+    Cetrin \(Cetrin\)
+
+    Fenistil żel \- na alergie skórne i ukąszenia przeciw swędzeniu
+
+
+    *Opryszczka:*
+
+    Zovirax \(krem taki sam jak w Rosji\)
+
+    Bepanthen \- Bepanten \(oparzenia, pęknięcia\)
+
+
+    *Oczy:*
+
+    VİSİNE \(Vizin\) \- bez recepty na swędzenie i suchość oczu
+
+
+    *Uszy:*
+
+    Otipax \- krople z lidokainą łagodzą ból, zmniejszają stany zapalne, bez recepty'

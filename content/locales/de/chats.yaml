@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Unsere Chats*'
+  button_texts:
+    trade_chat: 🛍️ Flohmarkt – Produkte und Dienstleistungen
+    blocks_chat: 🏘 Chats nach Blöcken
+    parents_chat: 👶 Für Eltern
+    animals_chat: 😸 Tiere 🐶
+    sport_chat: 🏃‍♂️ Sport
+    sport_games_chat: 🏀 Sportspiele
+    board_games_chat: 🎲 Bretter
+    gaming_chat: 🎮 Gaming
+    it_chat: 🧑‍💻ES
+- id: BLOCKS_CHAT
+  text: '*🏘 Chats blockieren*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

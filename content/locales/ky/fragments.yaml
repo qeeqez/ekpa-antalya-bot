@@ -3,18 +3,18 @@ fragments:
   button_main_menu: Башкы меню
   button_our_chats: Биздин чаттар
   button_info_general: Маалымат
-  button_info_ekpa: EKPA жөнүндө баары
+  button_info_ekpa: Бардык EKPA жөнүндө
   button_delivery: Жеткирүү
   button_transport: Транспорт
-  button_phone_numbers: Маанилүү телефондор
-  button_important_documents: Жашап туруу уруксаты / Каттоо / Документтер
+  button_phone_numbers: Маанилүү телефон номерлери
+  button_important_documents: Жашоого уруксат / Каттоо / Документтер
   button_android: Android
   button_iphone: iPhone
   button_markets: Базарлар
   button_other_markets: Башка базарлар
-  button_main_chat: EKPA негизги чаты
+  button_main_chat: EKPA Негизги чат
   button_suggest_changes: Өзгөртүүлөрдү сунуштоо
   button_address: Биздин дарек
-  button_directions: Комплекс ичинде жана жанында
-  button_aid_kit: Алгачкы жардам кутусу
+  button_directions: Комплекстин ичинде жана айланасында
+  button_aid_kit: Биринчи жардам аптечкасы
   button_bot_link: Бот шилтемеси

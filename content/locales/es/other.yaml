@@ -1,0 +1,101 @@
+version: '1.0'
+screens:
+- id: CAR_FINE
+  text: "*\U0001F697 Multa para un automóvil con placas extranjeras*\n\n ℹ️ *Consultar multas*\n \\- Ir al [sitio web de impuestos](https://ivd.gib.gov.tr/)\n\
+    \ \\- Seleccione el botón inferior derecho\n \\- *Yabancı Plakalı Araç Ödemeleri \\(Pagos de vehículos extranjeros\\)*\n\
+    \ \\- Ingrese el número de automóvil\n\n \U0001F4B3 *Paga en línea*\n \\- Puedes hacerlo allí, después de comprobar la\
+    \ multa.\n \\- El pago sólo se puede realizar con tarjeta de crédito turca\n \\- Al elegir el pago a través de la oficina\
+    \ de impuestos, si cambia a la segunda pestaña \\(segunda pestaña\\)\n \\- Será posible pagar a través de Ziraat o Vakif\
+    \ Pay\n\n \U0001FA99 *Paga en efectivo*\n \\- En la oficina de impuestos [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)"
+- id: PHONE_UNLOCK
+  text: '*📲 Desbloquea tu teléfono*
+
+
+    ℹ️ *Hay 2 bloqueos telefónicos diferentes en Turquía*
+
+    1\. La tarjeta SIM se bloquea después de 90 días \(turista\)
+
+    2\. El teléfono en sí se bloquea después de 120 días \(después de insertar cualquier tarjeta SIM turca\)'
+  button_texts:
+    phone_unlock_sim: 📱 Desbloquear SIM (Turista)
+    phone_unlock_imei: 📱 Desbloquea tu teléfono (IMEI)
+- id: PHONE_UNLOCK_SIM
+  text: '*📱 Desbloquear SIM \(Turista\)*
+
+
+    ℹ️ *¿Qué tipo de bloqueo?*
+
+    \- Si su tarjeta SIM fue emitida para un pasaporte y no para un Ikamet \(permiso de residencia\)
+
+    \- Entonces es un sitio turístico y será bloqueado en 90 días.
+
+
+    🆓 *Cómo desbloquear*
+
+    \- En la aplicación del operador de telecomunicaciones, ingrese su ikamet \(si tiene uno, el número en sí es suficiente,
+    por lo que uno en papel también funcionará\)
+
+    \- Si no hay ikamet, entonces no será posible vincularlo a otra persona
+
+
+    ⚡️ *Métodos alternativos*
+
+    \- Como solución temporal, puedes comprar una tarjeta SIM emitida a nombre de una persona local cerca del complejo.
+
+    \- Volver a registrar un Sim para una persona con permiso de residencia'
+- id: PHONE_UNLOCK_IMEI
+  text: '*📱 Desbloquea tu teléfono \(IMEI\)*
+
+
+    ℹ️ *¿Qué tipo de bloqueo?*
+
+    \- Después de 120 días desde el momento en que se insertó la tarjeta SIM turca en el teléfono traído, éste se bloquea\.
+
+    \- Bloqueado sólo en Turquía \(continúa funcionando plenamente en otros países\)
+
+    \- No es el teléfono en sí el que está bloqueado, sino el IMEI, es decir\. Ranura para tarjeta SIM específica\.
+
+    \- No funcionarán tarjetas SIM, llamadas o SMS\. El teléfono dice "Sin red" y "Teléfono no permitido"\.
+
+    \- El teléfono en sí sigue funcionando, incluido WiFi y llamadas en mensajería instantánea a través de Internet\.'
+  button_texts:
+    phone_unlock_imei_free: 🆓 Opción gratuita
+    phone_unlock_imei_paid: 💰 Opción paga (30000 TL)
+    phone_unlock_imei_reblock: 🤯 Si el teléfono se vuelve a bloquear
+- id: PHONE_UNLOCK_IMEI_FREE
+  text: '🆓 *Desbloqueo de teléfono gratuito*
+
+    \- Inserte la tarjeta SIM en la segunda ranura, si está disponible \(en algunos teléfonos puede hacer ESIM\)
+
+    \- A partir de ahora, 120 días contarán regresivamente.
+
+    \- Después de que expire el plazo, el segundo espacio también se bloqueará
+
+
+    ❗️ El desbloqueo gratuito durante un año a través de Edevlet ya no funciona, fue una promoción temporal en honor al Covid
+
+
+    ⚡️ *Opción alternativa*
+
+    \- Compra un teléfono barato y distribuye WiFi desde él.
+
+    \- Compre un módem 4G y distribúyalo, pero luego es imposible recibir llamadas'
+- id: PHONE_UNLOCK_IMEI_PAID
+  text: "*\U0001F4B0 Desbloqueo oficial de teléfono pago*\n\nℹ️ 1 Una persona puede registrar 1 teléfono cada 3 años\\.\n\
+    *Requerido:* esta persona debe haber llegado del extranjero a más tardar 365 días atrás\n\n\U0001F4B0 *Precio en 2024:\
+    \ 30000 TL \U0001F92F*\n\n\U0001F9E7 *Proceso de registro:*\n\\- Inicie sesión en Edevlet utilizando el número de ikamet\
+    \ y la contraseña recibidos por correo\n\\- Ir a la página [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet) \\\
+    (o buscar `IMEI Kaydet`\\)\n\\- Completa tus datos \\(todo el IMEI del teléfono, tu pasaporte y fecha de entrada al país\\\
+    )\n\\- Pagar\n\n\U0001FA99 *Pago en efectivo*\n\\- Puedes pagar en efectivo en la oficina de impuestos\n\\- Después del\
+    \ pago, debes solicitar el desbloqueo a través de Edevlet en la página [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\n\
+    \n\U0001F4B5 *Pago en línea*\n\\- El pago sólo es posible con una tarjeta turca\\. Sólo crédito, no se acepta débito\n\
+    \\- Puedes elegir pagar a través de la oficina de impuestos \\(Vergi Dairesi\\)\n     \\- En lugar de ingresar una tarjeta,\
+    \ cambie a la segunda pestaña\n     \\- Será posible pagar con ZiraatPay y VakifPay, yo lo hice a través de zirat\n\n\
+    ⛔️ *Contras*\n\\- Debes utilizar una tarjeta SIM registrada en el mismo Ikamet\n\\- Esta regla es válida por 3 años, luego\
+    \ puedes usar cualquier tarjeta SIM"
+- id: PHONE_UNLOCK_IMEI_REBLOCK
+  text: "\U0001F92F *Si el teléfono se vuelve a bloquear*\n\nℹ️ El teléfono y la tarjeta SIM que contiene deben estar registrados\
+    \ en el mismo Ikamet\n\n✅ *Si todo está bien*\n\U0001F4F2 Llame al servicio BTK al número 120 para aclaraciones \\(hay\
+    \ opción de operador en inglés\\)\n\n\U0001F6A8 *De lo contrario*\n\\- Transfiere tu SIM a otro Ikamet de tu operador\n\
+    \    \\- El paquete pago actual se pierde\n    \\- La transferencia en sí puede no ser gratuita\n\\- Abrir una nueva tarjeta\
+    \ SIM"

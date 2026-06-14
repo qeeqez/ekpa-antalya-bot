@@ -1,75 +1,78 @@
 version: '1.0'
 commands:
-  - command: /start
-    description: '{{button_main_menu}}'
-  - command: /menu
-    description: '{{button_main_menu}}'
-  - command: /botlink
-    description: '{{button_bot_link}}'
-  - command: /ourchats
-    description: '{{button_our_chats}}'
+- command: /start
+  description: '{{button_main_menu}}'
+- command: /menu
+  description: '{{button_main_menu}}'
+- command: /botlink
+  description: '{{button_bot_link}}'
+- command: /ourchats
+  description: '{{button_our_chats}}'
 screens:
-  - id: MAIN_MENU
-    text: |-
-      *{{button_main_menu}}*
-    button_texts:
-      ekpa_main_chat: 🏠 {{button_main_chat}}
-      our_chats: 💬 {{button_our_chats}}
-      directions: 🏡 {{button_directions}}
-      info_useful: ⭐️ {{button_info_general}}
-      info_ekpa: 🌟 {{button_info_ekpa}}
-      address: 📍 {{button_address}}
-      suggest_changes: ✍️ {{button_suggest_changes}}
-  - id: ADDRESS
-    text: |-
-      *Біздің мекенжай:*
+- id: MAIN_MENU
+  text: '*{{button_main_menu}}*'
+  button_texts:
+    ekpa_main_chat: 🏠 {{button_main_chat}}
+    our_chats: 💬 {{button_our_chats}}
+    directions: 🏡 {{button_directions}}
+    info_useful: ⭐️ {{button_info_general}}
+    info_ekpa: 🌟 {{button_info_ekpa}}
+    address: 📍 {{button_address}}
+    suggest_changes: ✍️ {{button_suggest_changes}}
+- id: ADDRESS
+  text: '*Біздің мекенжай:*
 
-      *il:* `Antalya`
 
-      *ilçe:* `Kepez`
+    *il:* `Antalya`
 
-      *Mahalle:* `Güneş`
+    *ilçe:* `Kepez`
 
-      *Caddesi:* `Şehit Astsubay Ömer Halis Demir`
+    *Махалле:* `Güneş`
 
-      *Site:* `Ekpa 1207`
+    *Caddesi:* `Şehit Astsubay Ömer Halis Demir`
 
-      *Block* \(Блок\), *Daire* \(Пәтер\), *Kat* \(Қабат\)
+    *Сайт:* `Ekpa 1207`
 
-      *Пошта индексі:* `07260`
+    *Блок* \(Блок\), *Daire* \(Пәтер\), *Kat* \(Қабат\)
 
-      *Блок нөмірлеуі:*
 
-      `A1` \- `95A`
+    *Индекс:* `07260`
 
-      `A2` \- `95AA`
 
-      `A3` \- `95AB`
+    *Блоктар саны:*
 
-      `A4` \- `95AC`
 
-      `В`  \- `95В`
+    `A1` \- `95A`
 
-      `С`  \- `95С`
+    `A2` \- `95AA`
 
-      `D`  \- `95D`
+    `A3` \- `95AB`
 
-      `E1` \- `95E`
+    `A4` \- `95AC`
 
-      `E2` \- `95EA`
+    `В` \- `95В`
 
-      *Көшіру үшін басыңыз:*
+    `С` \- `95С`
 
-      `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
-  - id: BOT_LINK
-    text: |-
-      *{{button_bot_link}}:*
+    `D` \- `95D`
 
-      https://t\.me/EkpaAntalyaBot
+    `E1` \- `95E`
 
-      Сілтемені көршілермен бөлісіңіз 😊
-  - id: OUR_CHATS_INFO
-    text: |-
-      *💬 {{button_our_chats}}*
-    button_texts:
-      our_chats_detailed: 📋 {{button_our_chats}}
+    `E2` \- `95EA`
+
+
+    *Көшіру үшін басыңыз:*
+
+    `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`'
+- id: BOT_LINK
+  text: '*{{button_bot_link}}:*
+
+
+    https://t\.me/EkpaAntalyaBot
+
+
+    Сілтемені көршілеріңізбен бөлісіңіз 😊'
+- id: OUR_CHATS_INFO
+  text: '*💬 {{button_our_chats}}*'
+  button_texts:
+    our_chats_detailed: 📋 {{button_our_chats}}

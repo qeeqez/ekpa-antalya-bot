@@ -3,18 +3,18 @@ fragments:
   button_main_menu: Головне меню
   button_our_chats: Наші чати
   button_info_general: Інформація
-  button_info_ekpa: Все про EKPA
+  button_info_ekpa: Все про ЕКПА
   button_delivery: Доставка
   button_transport: Транспорт
-  button_phone_numbers: Важливі телефони
-  button_important_documents: ВНП / Реєстрація / Документи
+  button_phone_numbers: Важливі номери телефонів
+  button_important_documents: Прописка / Реєстрація / Документи
   button_android: Android
   button_iphone: iPhone
   button_markets: Ринки
   button_other_markets: Інші ринки
   button_main_chat: Головний чат EKPA
-  button_suggest_changes: Запропонувати зміни
+  button_suggest_changes: Запропонуйте зміни
   button_address: Наша адреса
-  button_directions: У комплексі та поруч
-  button_aid_kit: Аптечка
+  button_directions: В комплексі та навколо нього
+  button_aid_kit: Аптечка першої допомоги
   button_bot_link: Посилання на бота

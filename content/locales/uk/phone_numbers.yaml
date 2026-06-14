@@ -1,0 +1,167 @@
+version: '1.0'
+screens:
+- id: PHONE_NUMBERS
+  text: '*📞 {{button_phone_numbers}}*'
+  button_texts:
+    ekpa_management: ☎️ {{button_ekpa_management}}
+    emergency: 🆘 {{button_emergency_services}}
+    other_phones: 📲 {{button_other}}
+    embassy: 🏛️ {{button_embassies}}
+- id: EKPA_MANAGEMENT
+  text: '*Екпа:*
+
+
+    *🧑‍💼Керуюча компанія*
+
+    \+90 \(539\) 6703316
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Безпека*
+
+    \+90 \(539\) 6703833'
+- id: EMERGENCY
+  text: '*Телефони екстрених служб:*
+
+
+    ```
+
+    112 - 🚑 Ambulance
+
+    155 - 🚓 Police
+
+    154 - 🚔 Traffic police
+
+    110 - 🚒 Fire protection
+
+    156 - 👮 Gendarmerie
+
+    157 - 🛂 Migration Service
+
+    118 - ℹ️ Information (phones)
+
+    ```'
+- id: EMBASSY
+  text: '*🏛️ Посольства*'
+  button_texts:
+    russia_embassy: 🇷🇺 {{button_russia}}
+    ukraine_embassy: 🇺🇦 {{button_ukraine}}
+    kazakhstan_embassy: 🇰🇿 {{button_kazakhstan}}
+    belarus_embassy: 🇧🇾 {{button_belarus}}
+- id: RUSSIA_EMBASSY
+  text: '<u><b>Генеральне консульство Росії в Анталії</b></u>
+
+    Консульство: +90 (242) 248 32 02
+
+    Електронна адреса: ruskonsant@yandex.ru
+
+    Запишіться на прийом: https://antalya.mid.ru/ru/reception-at-reception/
+
+    Графік роботи: 9:00-18:00, обід: 13:00-14:00
+
+    Адреса: <a href="https://goo.gl/maps/5uApWF2SymauHg7v9">Ankara, Çankaya Mah., Andrey Karlov Sok., No. 5</a>
+
+    Веб-сайт: https://antalya.mid.ru/ru/contacts/
+
+
+    <u><b>Посольство Туреччини в Москві</b></u>
+
+    Консульство: +7 (495) 994 93 59 (14.00 - 18.00 у будні)
+
+    Електронна адреса: embassy.moscow@mfa.gov.tr
+
+    Графік роботи: 09:00-12:30
+
+    Адреса: <a href="https://goo.gl/maps/td3ZW6q2VCFfX8kYA">Moscow, 7-й Ростовський провулок, 12</a>
+
+    Веб-сайт: http://moscow.emb.mfa.gov.tr/Mission/Contact'
+- id: UKRAINE_EMBASSY
+  text: '<u><b>Консульство України в Анталії</b></u>
+
+    Консульство: +90 (242) 312 33 77
+
+    Електронна адреса: gc_tra@mfa.gov.ua
+
+    Запишіться на прийом: https://online.mfa.gov.ua/application
+
+    Графік роботи: 09:30-18:00 в будні
+
+    Адреса: <a href="https://g.page/UkraynaAntalyaKonsoloslugu">Antalya, Muratpasa, Çaybaşı Mah. 1350 Sokak, No: 24</a>
+
+    Веб-сайт: https://antalia.mfa.gov.ua
+
+
+    <u><b>Посольство Туреччини в Києві</b></u>
+
+    Посольство: +380 (44) 281 07 50 / +380 (44) 281 07 51
+
+    Електронна адреса: embassy.kiev@mfa.gov.tr
+
+    Час роботи: 14:30-17:30 в будні
+
+    Адреса: <a href="https://goo.gl/maps/1V5pqXA1nwTw3tzw6">Kyiv, вул. Панаса Мирного, 22</a>
+
+    Веб-сайт: http://kiev.emb.mfa.gov.tr/Mission/Contact'
+- id: KAZAKHSTAN_EMBASSY
+  text: '<u><b>Консульство Казахстану в Анталії</b></u>
+
+    Консульство: +90 242 324 26 11
+
+    Електронна адреса: antalya@mfa.kz
+
+    Графік роботи: 09:00-18:30 будні дні, 12:30-14:30 обід
+
+    Адреса: <a href="https://goo.gl/maps/oZdrjAQHvSNF2xhf6">Antalya, Muratpasa, Çağlayan Mah. 2070 Sokak, No: 16, Block C,
+    Site Life City</a>
+
+    Веб-сайт: https://www.gov.kz/memleket/entities/mfa-antalya/contacts
+
+
+    <u><b>Посольство Туреччини в Астані</b></u>
+
+    Посольство: +7 7172 704 704
+
+    Електронна адреса: embassy.nur-sultan@mfa.gov.tr
+
+    Графік роботи: 09:00-18:30 будні дні, 12:30-14:00 обід
+
+    Адреса: <a href="https://goo.gl/maps/k9h6ZVySjQNXZYUy5">Astana, вул. Жумабек Ташенов кошесі, вип. 3</a>
+
+    Веб-сайт: http://astana.be.mfa.gov.tr/Mission/Contact'
+- id: BELARUS_EMBASSY
+  text: '<u><b>Посольство Білорусі в Анкарі</b></u>
+
+    Посольство: +90 (312) 441 67 69 / +90 (312) 441 67 70
+
+    Консульська служба: +90 (312) 441 64 50 (консультації та прийом громадян з 9.00 до 13.00)
+
+    Електронна адреса: turkey@mfa.gov.by
+
+    Графік роботи: 08:45-18:00 будні, 08:45-16:45 п''ятниця, 13:00-14:00 обід
+
+    Адреса: <a href="https://goo.gl/maps/srvg11UaaXNzRkKc8">Ankara, Çankaya Mah., Abidin Daver Sk. No 17</a>
+
+    Веб-сайт: https://turkey.mfa.gov.by/ru/embassy/
+
+
+    <u><b>Посольство Туреччини в Мінську</b></u>
+
+    Посольство: +375 (17) 327 13 83
+
+    Консульський відділ: +375 (17) 327 14 08
+
+    Електронна адреса: embassy.minsk@mfa.gov.tr
+
+    Графік роботи: 9:00-12:00 в будні
+
+    Адреса: <a href="https://goo.gl/maps/Qepa2qhKDfdu7Qa68">Minsk, вул. Володарського, 6</a>
+
+    Веб-сайт: http://minsk.emb.mfa.gov.tr/Mission/Contact'
+- id: OTHER_PHONES
+  text: "*Корисні телефони:*\n\n ```\n 115 - International operator\n 141 - Telegrams by telephone\n 144 - Ministry of Social\
+    \ Protection of Family\n 170 - Ministry of Labor and Social Protection\n 174 - Complaints about food\n 175 - Consumer\
+    \ protection\n 135 - Alarm clock\n 158 - Coast Guard\n 183 - Social service\n 186 - Electrical emergency service\n 187\
+    \ - Gas service\n 189 - Tax reference\n 182 - Free appointment system with doctors\n 126 - Cable TV\n\n \U0001F3E5Hospitals:\n\
+    \ Antalya - 227 43 43, 243 50 60\n Kemer - 814 15 50, 814 11 41\n Side - 753 12 21, 753 14 45\n\n Bus station (Antalya)\
+    \ - (242)3311250\n Tourist Information Bureau - (242)2411747\n Turkish Travel Agencies Association - (242)2431934\n ```"

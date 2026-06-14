@@ -1,0 +1,164 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 {{button_important_documents}}*'
+  button_texts:
+    check_application_status: ✅ Consulta el estado de tu solicitud de permiso de residencia
+    get_id_number: 🆔 Descubra el número de permiso de residencia
+    tax_number: 🪪 POSADA
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖 Numaratación
+    address_registration: 📌 Registro
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Sitio web con una amplia variedad de Servicios Gubernamentales:
+
+    \- Obtención de certificados y declaraciones
+
+    \- Medicina gratuita
+
+    \- Desbloquea tu teléfono
+
+    \- Mucho más
+
+
+    🌎 [Enlace al sitio](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *Cómo conectarse*
+
+    \- Obtener un permiso de residencia \(ikamet\)
+
+    \- Tener un número de teléfono turco
+
+    \- En la oficina de correos \(PTT\), diga EDevlet
+
+    \- Por 20 liras te harán una contraseña para el vuelo, te llegará por SMS
+
+
+    📍 [Oficina de correos más cercana](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Sitio web
+    edevlet_android: 🤖Android
+    edevlet_iphone: 📱 iPhone
+- id: TAX_NUMBER
+  text: '*🪪TIN \(Número fiscal turco\)*
+
+
+    ℹ️ *¿Para qué sirve?*
+
+    \- Registro de Dask y utilidades para usted
+
+    \- Permiso de residencia
+
+    \- Abrir una cuenta bancaria
+
+
+    🌎 *Conéctate*
+
+    \- Ir al [sitio web de impuestos](https://ivd.gib.gov.tr/)
+
+    \- Seleccione el botón central inferior
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- * SOLICITUD DE NÚMERO TRIBUTARIO POTENCIAL DE NO CIUDADANO *
+
+    \- Completa tus datos
+
+
+    💸 *Recibelo en la oficina de impuestos*
+
+    \- A veces el sistema online escribe un error y hay que ir a la oficina de impuestos
+
+    \- Oficina de impuestos [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖Numarataj\(Numarataj\)*
+
+
+    ℹ️ *Certificado que confirma la dirección*
+
+    \- Requerido para el registro
+
+    \- Requerido para obtener un permiso de residencia
+
+
+    💼 *Llévate contigo:*
+
+    1\. Pasaporte
+
+    2\. Tapú
+
+    3\. contrato de arrendamiento
+
+    4\. Copias de estos documentos.
+
+
+    ℹ️ *Instrucciones para recibir:*
+
+    1\. En [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) haga copias de documentos
+
+    2\. Vaya al segundo piso, siga las señales de Numarataj y entre al corredor del bloque D.
+
+    3\. Coge un billete, te llamarán
+
+    4\. Entregue a la persona todas las copias de los documentos.
+
+    5\. Baja al primer piso, uno por uno, saca tus documentos por la ventana, te pondrán sellos.
+
+    6\. Regrese al segundo piso, le emitirán un certificado de Numaratazh.
+
+    ⚠️ Si son varios, entreguen copias de los pasaportes de todas las personas que deban estar registradas en este certificado.
+
+
+    📍 Todo se hace en [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\,5 km\)
+
+    ⚡️ En la planta baja puedes hacer copias de documentos por 1 TL'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Registro*
+
+
+    ℹ️ *El registro debe realizarse dentro de los 20 días posteriores a la recepción del permiso de residencia*
+
+    \- No es necesario llevar niños consigo, es recomendable que todos sean mayores de edad
+
+    \- El permiso de residencia no se renovará sin registrarse
+
+
+    ℹ️ Ya no es posible el registro online para extranjeros
+
+    ℹ️ Los extranjeros no están obligados a registrarse en Nufus, pero en casos especiales podrán registrarte allí
+
+
+    📌 *Registro en Goc*
+
+
+    💼 *Llévate contigo:*
+
+    1\. Ikamet \(permiso de residencia\)
+
+    2\. Tapu o contrato de arrendamiento
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Fotocopias de Tapu/Tratado y Numaratage
+
+    5\. Recibo de agua o luz a tu nombre
+
+
+    ⚡️ *Importante:*
+
+    \- El recibo debe estar fresco, de lo contrario lo rechazarán.
+
+    \- Pueden solicitar una copia del kymlik y tapa del propietario del apartamento.
+
+
+    📍 *Cómo llegar:*
+
+    \- Ven a [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- En la entrada, di *Dirección* y muestra el ikamet, te dejarán entrar.
+
+    \- En el edificio, diga *Dirección*, espere una llamada a la habitación a la izquierda de las ventanas para una cita'

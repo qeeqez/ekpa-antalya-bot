@@ -1,0 +1,164 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 {{button_important_documents}}*'
+  button_texts:
+    check_application_status: ✅ Controlla lo stato della tua richiesta di permesso di soggiorno
+    get_id_number: 🆔 Scopri il numero del permesso di soggiorno
+    tax_number: 🪪 LOCANDA
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖Numarataggio
+    address_registration: 📌 Registrazione
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Sito web con un''ampia varietà di servizi governativi:
+
+    \- Ottenimento di certificati e dichiarazioni
+
+    \- Medicina gratuita
+
+    \- Sblocca il telefono
+
+    \- Molto di più
+
+
+    🌎 [Link al sito](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *Come connettersi*
+
+    \- Ottieni un permesso di soggiorno \(ikamet\)
+
+    \- Avere un numero di telefono turco
+
+    \- All''ufficio postale \(PTT\), ad esempio EDevlet
+
+    \- Per 20 lire faranno la password per il volo, arriverà via SMS
+
+
+    📍 [Ufficio postale più vicino](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Sito web
+    edevlet_android: 🤖Android
+    edevlet_iphone: 📱 iPhone
+- id: TAX_NUMBER
+  text: '*🪪TIN \(Codice fiscale turco\)*
+
+
+    ℹ️ *A cosa serve?*
+
+    \- Registrazione di Dask e utilità per te stesso
+
+    \- Permesso di soggiorno
+
+    \- Apertura di un conto bancario
+
+
+    🌎 *Connettiti*
+
+    \- Vai al [sito web fiscale](https://ivd.gib.gov.tr/)
+
+    \- Seleziona il pulsante centrale in basso
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- *RICHIESTA DI CODICE FISCALE POTENZIALE PER NON CITTADINO*
+
+    \- Inserisci i tuoi dati
+
+
+    💸 *Richiedilo all''ufficio delle imposte*
+
+    \- A volte il sistema online scrive un errore e devi andare all''ufficio delle imposte
+
+    \- Ufficio delle imposte [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖 Numarataj \(Numarataj\)*
+
+
+    ℹ️ *Indirizzo di conferma del certificato*
+
+    \- Necessario per la registrazione
+
+    \- Necessario per ottenere il permesso di soggiorno
+
+
+    💼 *Porta con te:*
+
+    1\. Passaporto
+
+    2\. Tapu
+
+    3\. Contratto di locazione
+
+    4\. Copie di questi documenti
+
+
+    ℹ️ *Istruzioni per ricevere:*
+
+    1\. In [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) fai copie dei documenti
+
+    2\. Recarsi al 2° piano, seguire le indicazioni Numarataj ed entrare nel corridoio del blocco D
+
+    3\. Prendi un biglietto, ti chiameranno
+
+    4\. Consegnare alla persona tutte le copie dei documenti
+
+    5\. Scendete al primo piano, uno per uno, date i vostri documenti dalla finestra, vi metteranno i timbri
+
+    6\. Ritorna al secondo piano, rilasceranno un certificato Numaratazh
+
+    ⚠️ Se siete in molti, fornite copie dei passaporti di tutti coloro che dovrebbero essere registrati in questo certificato
+
+
+    📍 Tutto si fa a [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 km\)
+
+    ⚡️ Al piano terra puoi fare copie di documenti per 1 TL'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Registrazione*
+
+
+    ℹ️ *La registrazione deve essere effettuata entro 20 giorni dal ricevimento del permesso di soggiorno*
+
+    \- Non è necessario portare con sé bambini, è consigliabile che tutti siano maggiorenni
+
+    \- Il permesso di soggiorno non verrà rinnovato senza registrazione
+
+
+    ℹ️ La registrazione online per gli stranieri non è più possibile
+
+    ℹ️ Gli stranieri non sono tenuti a registrarsi su Nufus, ma in casi particolari possono registrarti lì
+
+
+    📌 *Registrazione in Goc*
+
+
+    💼 *Porta con te:*
+
+    1\. Ikamet \(permesso di soggiorno\)
+
+    2\. Tapu o contratto di locazione
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Fotocopie di Tapu/Trattato e Numaratage
+
+    5\. Ricevuta dell''acqua o dell''elettricità a tuo nome
+
+
+    ⚡️ *Importante:*
+
+    \- La ricevuta deve essere fresca, altrimenti verrà rifiutata
+
+    \- Possono richiedere una copia del kymlik e della tapa del proprietario dell''appartamento
+
+
+    📍 *Come arrivare:*
+
+    \- Vieni a [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- All''ingresso dite *Adres* e mostrate l''ikamet, vi faranno entrare
+
+    \- Nell''edificio dire *Adres*, attendere una chiamata nella stanza a sinistra delle finestre per un appuntamento'

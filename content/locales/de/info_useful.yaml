@@ -1,0 +1,12 @@
+version: '1.0'
+screens:
+- id: INFO_USEFUL
+  text: '*⭐️ {{button_info_general}}*'
+  button_texts:
+    important_docs: 📝 {{button_important_documents}}
+    delivery: 🚚 {{button_delivery}}
+    aid_kit: ❤️ {{button_aid_kit}}
+    transport: 🚌 {{button_transport}}
+    phone_unlock: 📲 Entsperren Sie Ihr Telefon
+    car_fine: 🚗 Auto in Ordnung
+    phone_numbers: 📱️ {{button_phone_numbers}}

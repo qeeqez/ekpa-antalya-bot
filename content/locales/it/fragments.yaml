@@ -1,20 +1,20 @@
 version: '1.0'
 fragments:
-  button_main_menu: Menu principale
+  button_main_menu: Menù principale
   button_our_chats: Le nostre chat
   button_info_general: Informazioni
-  button_info_ekpa: Tutto su EKPA
+  button_info_ekpa: Tutto sull'EKPA
   button_delivery: Consegna
-  button_transport: Trasporti
-  button_phone_numbers: Numeri importanti
-  button_important_documents: Permesso di soggiorno / Registrazione / Documenti
-  button_android: Android
+  button_transport: Trasporto
+  button_phone_numbers: Numeri di telefono importanti
+  button_important_documents: Permesso di soggiorno/Registrazione/Documenti
+  button_android: Androide
   button_iphone: iPhone
   button_markets: Mercati
   button_other_markets: Altri mercati
-  button_main_chat: Chat principale EKPA
-  button_suggest_changes: Suggerisci modifiche
+  button_main_chat: Chat principale dell'EKPA
+  button_suggest_changes: Suggerire modifiche
   button_address: Il nostro indirizzo
-  button_directions: Nel complesso e nei dintorni
-  button_aid_kit: Cassetta di pronto soccorso
-  button_bot_link: Link del bot
+  button_directions: Dentro e intorno al complesso
+  button_aid_kit: Kit di pronto soccorso
+  button_bot_link: Collegamento al bot

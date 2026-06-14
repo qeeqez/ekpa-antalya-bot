@@ -1,20 +1,20 @@
 version: '1.0'
 fragments:
-  button_main_menu: Басты мәзір
+  button_main_menu: Негізгі мәзір
   button_our_chats: Біздің чаттар
   button_info_general: Ақпарат
-  button_info_ekpa: EKPA туралы бәрі
+  button_info_ekpa: Барлығы EKPA туралы
   button_delivery: Жеткізу
   button_transport: Көлік
-  button_phone_numbers: Маңызды телефондар
-  button_important_documents: Тұруға рұқсат / Тіркеу / Құжаттар
+  button_phone_numbers: Маңызды телефон нөмірлері
+  button_important_documents: Тұруға ықтиярхат / Тіркеу / Құжаттар
   button_android: Android
   button_iphone: iPhone
   button_markets: Нарықтар
   button_other_markets: Басқа нарықтар
   button_main_chat: EKPA негізгі чаты
-  button_suggest_changes: Өзгерістер ұсыну
-  button_address: Біздің мекенжай
-  button_directions: Кешен ішінде және жанында
-  button_aid_kit: Алғашқы көмек қобдишасы
+  button_suggest_changes: Өзгерістерді ұсыну
+  button_address: Біздің мекен-жайымыз
+  button_directions: Кешен ішінде және айналасында
+  button_aid_kit: Алғашқы көмек жинағы
   button_bot_link: Бот сілтемесі

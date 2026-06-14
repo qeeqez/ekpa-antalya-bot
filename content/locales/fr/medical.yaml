@@ -1,0 +1,261 @@
+version: '1.0'
+screens:
+- id: AID_KIT
+  text: '*❤️ Trousse de premiers secours*'
+  button_texts:
+    ambulance: 🚑 {{button_ambulance}}
+    hospitals: 🏥 {{button_hospitals}}
+    pharmacies: 🧬 {{button_pharmacies}}
+    medicine: 💊 {{button_medicine}}
+    polyclinic: 🧑‍⚕️ {{button_free_medicine}}
+- id: AMBULANCE
+  text: '*🚑Ambulance*
+
+
+    ☎️ `112`
+
+
+    ℹ️ *Appelez une ambulance uniquement en dernier recours\.*
+
+    En Turquie, appeler une ambulance peut coûter très cher.
+
+    Lorsque vous appelez une ambulance, disons en anglais, vous devez passer à un opérateur anglais.
+
+
+    😷️ *Hotline pour les étrangers*
+
+
+    ☎️ `+90 850 288 38 38`
+
+
+    ℹ️ *Toutes les langues sont parlées dans la Hotline*
+
+    Ils aident avec tous les problèmes médicaux, y compris en appelant une ambulance.'
+- id: PHARMACIES
+  text: '*🧑‍⚕️ Pharmacies \- Eczane*
+
+
+    ℹ️ Les pharmacies ordinaires sont fermées le dimanche
+
+
+    📍 De nombreuses pharmacies sont situées sur la route de l''hôpital :
+
+    📍[Kepez Devlet Hastanesi] (https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+
+
+    *🏥 Pharmacies de garde \- Nöbetçi Eczaneler*
+
+
+    \- Ils travaillent 24 heures sur 24
+
+    \- Chaque jour, ils sont différents
+
+    \- Les actuels peuvent être consultés sur le site Internet ou dans l''application'
+  button_texts:
+    pharmacies_site: 🌎 {{button_pharmacies_site}}
+    pharmacies_android: 🤖 {{button_android}}
+    pharmacies_iphone: 📱 {{button_iphone}}
+- id: HOSPITALS
+  text: '*🏥Hôpitaux\- Hastane*
+
+
+    🛡️ *Par assurance*
+
+
+    1️⃣️ Pour souscrire une assurance, vous devez d''abord savoir avec quels hôpitaux elle travaille
+
+    2️⃣ L''assurance ne couvre souvent pas la totalité du montant du traitement, mais cela dépend de votre police et de votre
+    compagnie d''assurance.
+
+
+    ⁉️ *Comment savoir avec quels hôpitaux votre assurance travaille :*
+
+    1\. Visitez le site Web [imecedestek] (https://imecedestek.com/ContractedOrganizations)
+
+    2\. Indiquez le nom de la compagnie d''assurance et le type d''assurance
+
+    3\. Sélectionnez la zone dans laquelle vous souhaitez visualiser les organisations sous contrat
+
+    4\. Sélectionnez le type d''établissement
+
+    5\. Appuyez sur *Ara / Rechercher*
+
+
+    ⭐️ De cette façon, vous recevrez une liste des hôpitaux et autres établissements médicaux où vous avez une assurance.
+
+
+    ❤️‍🩹 *Sans assurance*
+
+
+    \- Vous pouvez vous rendre dans les hôpitaux et cliniques privées et non sur la liste des assurances\.
+
+    \- Dans ce cas, votre assurance peut également prendre en charge une petite partie du traitement. \(À lire à ce sujet
+    dans sa description et ses conditions d''assurance\)
+
+    \- Si vous n''avez pas d''assurance, alors préparez-vous à préparer une somme assez importante\.
+
+
+    📍 Recherchez des hôpitaux sur la carte en utilisant le mot turc *Hastane*\.'
+  button_texts:
+    hospitals_insurance_site: 🌎 {{button_hospital_search}}
+- id: POLYCLINIC
+  text: '*🧑‍⚕️ Médicaments gratuits*
+
+
+    💫 En Turquie, vous pouvez bénéficier de *soins médicaux de base gratuits*
+
+    \- Pour ce faire, après avoir obtenu un titre de séjour, vous devez être assigné à un médecin de famille
+
+
+    🆓️ *Ce qui donne :*
+
+    \- Vous pouvez passer un examen général auprès de votre médecin de famille
+
+    \- Réussir les tests de base
+
+    \- Obtenez une ordonnance pour vos médicaments
+
+    \- Faites-vous vacciner pour vous et vos enfants
+
+    \- Obtenez des recommandations de spécialistes dans les hôpitaux
+
+    \- L''historique de toutes les analyses et examens sera affiché dans l''application e\-Nabız\.
+
+    \- Et de tous les hôpitaux, y compris privés\.
+
+
+    💼 *Ce dont vous avez besoin :*
+
+    \- Numéro de téléphone turc
+
+    \- e\-Devlet \(fait à la poste\)
+
+    \- Inscription à votre adresse
+
+
+    🌎 *Comment joindre :*
+
+    1\. Inscrivez-vous sur [site enabiz] (https://enabiz.gov.tr/)
+
+    2\. Sélectionnez la fonction *Changer de médecin de famille*
+
+    3\. Sélectionnez la ville, le quartier
+
+    4\. Une liste des cliniques familiales et des spécialistes disponibles s’ouvrira.
+
+    \- Le médecin surligné en rouge ne peut pas être sélectionné
+
+    \- Les médecins surlignés en vert sont plus libres
+
+    \- Le changement de médecin du 5 au 21 a lieu le même jour\. Les candidatures du 22 au 4 seront traitées le 5.
+
+
+    ⚡️*En plus :*
+
+    \- Inscrivez-vous sur [Site Internet MHRS] (https://www.mhrs.gov.tr/) \(site Internet pour prendre rendez-vous avec un
+    médecin\)
+
+
+    ⭐ Vous pouvez désormais *Prendre rendez-vous avec un médecin / Rendez-vous / Randevu* via le site et l''application e\-Nabız\'
+  button_texts:
+    polyclinic_site: 🌎 {{button_doctor_appointment_site}}
+    polyclinic_android: 🤖 {{button_android}}
+    polyclinic_iphone: 📱 {{button_iphone}}
+- id: MEDICINE
+  text: '*💊 Médicaments turcs*
+
+
+    *Peroxyde d''hydrogène :*
+
+    Oksijenli Su
+
+
+    *Mal de gorge :*
+
+    Tantum Verde \-spray
+
+    Strepsils\- sucettes
+
+
+    *Toux :*
+
+    Humide : Acétylcystéine 600 mg \- 1 fois par jour le matin \(si gastrite \- après les repas ou après l''oméprazole\)
+
+    Sec : il existe de nombreux sirops contre la toux sèche à base de plantes \(par exemple Fitospan\)
+
+
+    *Nez qui coule :*
+
+    Kit de rinçage sinus \- rincer le nez à l''eau de mer \(type Dauphin\)
+
+    Nasovine \- spray vasoconstricteur \(Xylométazoline\)
+
+    Risonel, 0,05% \- pour la rhinite allergique, avec utilisation à long terme de vasoconstricteurs\. Supprime l''enflure
+    du nez, réduit le débit de \(analogue Nasonex\), 2 doses dans chaque narine 2 fois par jour pendant 2 semaines, puis 1
+    dose 2 fois par jour pendant 2 semaines, puis \. 1 dose 1 fois par jour pendant 2 semaines\.
+
+
+    *Pour la douleur :*
+
+    Nîmes 100 mg \(Nimesulid\) \- nise
+
+    Brufen 400 mg \(Ibuprofène\) \- ibuprofène
+
+    Panadol \- paracétamol
+
+    Profenid jel \- Gel Fastum
+
+    Artril \- gel anesthésique à frictionner sur la peau au niveau des articulations
+
+    Tylohot \- theraflu
+
+
+    *Pour le ventre :*
+
+    Buscopan \- antispasmodique pour les coliques abdominales \(noshpa\)
+
+    Reflor \- en cas de diarrhée à long terme \(par exemple, lors de la prise d''antibiotiques\)
+
+    Linex \- là aussi
+
+    Enterosgel \(Enterosgel\) \- sorbant sous forme de gels
+
+    Eucabon - charbon local
+
+    Oméprasol \- oméprazole
+
+
+    *Pour la constipation :*
+
+    Duphalac \(Dufalak\)
+
+
+    *Nausées :*
+
+    Metpamide \(type Motilium\)
+
+
+    *Allergies :*
+
+    Aérius \(Erius\)
+
+    Cétrin \(Cétrin\)
+
+    Gel Fenistil \- pour les allergies cutanées et les piqûres contre les démangeaisons
+
+
+    *Herpès :*
+
+    Zovirax \(crème, comme en Russie\)
+
+    Bepanthen \- Bepanten \(brûlures, fissures\)
+
+
+    *Yeux :*
+
+    VİSİNE \(Vizin\) \- en vente libre, pour les yeux secs et les démangeaisons
+
+
+    *Oreilles :*
+
+    Otipax \- gouttes avec lidocaïne, soulagent la douleur, réduisent l''inflammation, sans ordonnance'

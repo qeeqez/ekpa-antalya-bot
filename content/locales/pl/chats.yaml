@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Nasze czaty*'
+  button_texts:
+    trade_chat: 🛍️ Pchli Targ - Produkty i usługi
+    blocks_chat: 🏘 Czaty według bloków
+    parents_chat: 👶 Dla Rodziców
+    animals_chat: 😸 Zwierzęta 🐶
+    sport_chat: 🏃‍♂️Sport
+    sport_games_chat: 🏀 Gry sportowe
+    board_games_chat: 🎲 Deski
+    gaming_chat: 🎮 Gry
+    it_chat: 🧑‍💻IT
+- id: BLOCKS_CHAT
+  text: '*🏘 Blokuj czaty*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

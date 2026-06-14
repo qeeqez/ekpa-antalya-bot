@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Le nostre chat*'
+  button_texts:
+    trade_chat: 🛍️ Mercatino delle pulci - Prodotti e Servizi
+    blocks_chat: 🏘 Chat per blocchi
+    parents_chat: 👶 Per i genitori
+    animals_chat: 😸 Animali 🐶
+    sport_chat: 🏃‍♂️ Sport
+    sport_games_chat: 🏀 Giochi sportivi
+    board_games_chat: 🎲 Tavole
+    gaming_chat: 🎮Gioco
+    it_chat: 🧑‍💻IT
+- id: BLOCKS_CHAT
+  text: '*🏘 Blocca le chat*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

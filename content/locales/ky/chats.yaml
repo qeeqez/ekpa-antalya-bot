@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Биздин чаттар*'
+  button_texts:
+    trade_chat: 🛍️ Flea Market - Продукциялар жана Кызматтар
+    blocks_chat: 🏘 Блок боюнча баарлашуу
+    parents_chat: 👶 Ата-энелер үчүн
+    animals_chat: 😸 Жаныбарлар 🐶
+    sport_chat: 🏃‍♂️ Спорт
+    sport_games_chat: 🏀 Спорт оюндары
+    board_games_chat: 🎲 такталар
+    gaming_chat: 🎮 Оюн
+    it_chat: 🧑‍💻IT
+- id: BLOCKS_CHAT
+  text: '*🏘 Чаттарды бөгөттөө*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: В
+    block_c: C
+    block_d: Д
+    block_e1: E1
+    block_e2: E2

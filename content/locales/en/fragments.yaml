@@ -18,3 +18,24 @@ fragments:
   button_directions: In and around the complex
   button_aid_kit: First aid kit
   button_bot_link: Bot link
+  button_ambulance: Ambulance
+  button_antalya_card: Antalya Card
+  button_belarus: Belarus
+  button_benefits: Benefits
+  button_bus: Bus
+  button_doctor_appointment_site: Doctor appointment site
+  button_ekpa_management: EKPA management
+  button_embassies: Embassies
+  button_emergency_services: Emergency services
+  button_free_medicine: Free medicine
+  button_hospital_search: Hospital search
+  button_hospitals: Hospitals
+  button_kazakhstan: Kazakhstan
+  button_medicine: Medicine
+  button_other: Other
+  button_pharmacies: Pharmacies
+  button_pharmacies_site: Pharmacies site
+  button_russia: Russia
+  button_scooters: Scooters
+  button_taxi: Taxi
+  button_ukraine: Ukraine

@@ -18,3 +18,24 @@ fragments:
   button_directions: В комплексі та навколо нього
   button_aid_kit: Аптечка першої допомоги
   button_bot_link: Посилання на бота
+  button_ambulance: Швидка допомога
+  button_antalya_card: Карта Анталії
+  button_belarus: Білорусь
+  button_benefits: Переваги
+  button_bus: Автобус
+  button_doctor_appointment_site: Сайт запису на прийом до лікаря
+  button_ekpa_management: Управління ЕКПА
+  button_embassies: Посольства
+  button_emergency_services: Аварійні служби
+  button_free_medicine: Безкоштовні ліки
+  button_hospital_search: Пошук лікарні
+  button_hospitals: Лікарні
+  button_kazakhstan: Казахстан
+  button_medicine: Ліки
+  button_other: інше
+  button_pharmacies: Аптеки
+  button_pharmacies_site: Сайт аптек
+  button_russia: Росія
+  button_scooters: Скутери
+  button_taxi: Таксі
+  button_ukraine: Україна

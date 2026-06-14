@@ -18,3 +18,24 @@ fragments:
   button_directions: В Комплексе и рядом
   button_aid_kit: Аптечка
   button_bot_link: Ссылка на бота
+  button_ambulance: Скорая помощь
+  button_antalya_card: Карта Анталии
+  button_belarus: Беларусь
+  button_benefits: Преимущества
+  button_bus: Автобус
+  button_doctor_appointment_site: Сайт записи к врачу
+  button_ekpa_management: Руководство ЭКПА
+  button_embassies: Посольства
+  button_emergency_services: Аварийные службы
+  button_free_medicine: Бесплатная медицина
+  button_hospital_search: Поиск больницы
+  button_hospitals: Больницы
+  button_kazakhstan: Казахстан
+  button_medicine: Лекарство
+  button_other: Другой
+  button_pharmacies: Аптеки
+  button_pharmacies_site: Сайт аптек
+  button_russia: Россия
+  button_scooters: Скутеры
+  button_taxi: Такси
+  button_ukraine: Украина

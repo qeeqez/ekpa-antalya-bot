@@ -18,3 +18,24 @@ fragments:
   button_directions: Комплекстин ичинде жана айланасында
   button_aid_kit: Биринчи жардам аптечкасы
   button_bot_link: Бот шилтемеси
+  button_ambulance: Тез жардам
+  button_antalya_card: Анталия картасы
+  button_belarus: Беларус
+  button_benefits: Артыкчылыктары
+  button_bus: Автобус
+  button_doctor_appointment_site: Дарыгер кабыл алуу сайты
+  button_ekpa_management: EKPA башкаруу
+  button_embassies: Элчиликтер
+  button_emergency_services: Тез жардам кызматтары
+  button_free_medicine: Акысыз дары
+  button_hospital_search: Оорукана издөө
+  button_hospitals: Ооруканалар
+  button_kazakhstan: Казакстан
+  button_medicine: Дары
+  button_other: Башка
+  button_pharmacies: Аптекалар
+  button_pharmacies_site: Аптека сайты
+  button_russia: Орусия
+  button_scooters: Скутерлер
+  button_taxi: Такси
+  button_ukraine: Украина

@@ -18,3 +18,24 @@ fragments:
   button_directions: في المجمع وما حوله
   button_aid_kit: حقيبة الإسعافات الأولية
   button_bot_link: رابط البوت
+  button_ambulance: سيارة إسعاف
+  button_antalya_card: بطاقة أنطاليا
+  button_belarus: بيلاروسيا
+  button_benefits: فوائد
+  button_bus: حافلة
+  button_doctor_appointment_site: موقع موعد الطبيب
+  button_ekpa_management: إدارة إكبا
+  button_embassies: السفارات
+  button_emergency_services: خدمات الطوارئ
+  button_free_medicine: دواء مجاني
+  button_hospital_search: بحث المستشفى
+  button_hospitals: المستشفيات
+  button_kazakhstan: كازاخستان
+  button_medicine: الدواء
+  button_other: آخر
+  button_pharmacies: الصيدليات
+  button_pharmacies_site: موقع الصيدليات
+  button_russia: روسيا
+  button_scooters: الدراجات البخارية
+  button_taxi: تاكسي
+  button_ukraine: أوكرانيا

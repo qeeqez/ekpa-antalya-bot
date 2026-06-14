@@ -16,14 +16,15 @@ import (
 // ContentRepository manages all bot content (screens, commands, etc.)
 type ContentRepository struct {
 	catalog    *domain.ContentCatalog
+	screens    map[string]*domain.Screen
 	navigation *domain.NavigationRegistry
 }
 
 // ContentFile represents a content YAML file structure
 type ContentFile struct {
-	Version  string           `yaml:"version"`
-	Screens  []domain.Screen  `yaml:"screens"`
-	Commands []domain.Command `yaml:"commands,omitempty"`
+	Version  string                   `yaml:"version"`
+	Screens  []domain.ScreenTemplate  `yaml:"screens"`
+	Commands []domain.CommandTemplate `yaml:"commands,omitempty"`
 }
 
 // LocaleContentFile represents localized overrides for screens and commands.
@@ -51,6 +52,7 @@ type LocalizedCommand struct {
 func NewContentRepository(contentDir string) (*ContentRepository, error) {
 	repo := &ContentRepository{
 		catalog:    domain.NewContentCatalog(),
+		screens:    make(map[string]*domain.Screen),
 		navigation: domain.NewNavigationRegistry(),
 	}
 
@@ -59,8 +61,10 @@ func NewContentRepository(contentDir string) (*ContentRepository, error) {
 		return nil, err
 	}
 
+	repo.screens = repo.materializeScreens()
+
 	// Automatically build navigation hierarchy from screen relationships
-	repo.navigation.BuildFromScreens(repo.catalog.Screens)
+	repo.navigation.BuildFromScreens(repo.screens)
 
 	return repo, nil
 }
@@ -227,7 +231,7 @@ func (r *ContentRepository) parseLocalizedContentFile(data []byte) (*LocaleConte
 }
 
 // registerScreens registers all screens from a content file
-func (r *ContentRepository) registerScreens(screens []domain.Screen) error {
+func (r *ContentRepository) registerScreens(screens []domain.ScreenTemplate) error {
 	for i := range screens {
 		screen := &screens[i]
 		if _, exists := r.catalog.Screens[screen.ID]; exists {
@@ -238,7 +242,7 @@ func (r *ContentRepository) registerScreens(screens []domain.Screen) error {
 	return nil
 }
 
-func (r *ContentRepository) validateSharedScreen(screen *domain.Screen) error {
+func (r *ContentRepository) validateSharedScreen(screen *domain.ScreenTemplate) error {
 	if screen.ID == "" {
 		return errors.New("screen ID cannot be empty")
 	}
@@ -272,7 +276,7 @@ func (r *ContentRepository) validateSharedButton(button domain.Button) error {
 }
 
 // registerCommands registers all commands from a content file.
-func (r *ContentRepository) registerCommands(commands []domain.Command) error {
+func (r *ContentRepository) registerCommands(commands []domain.CommandTemplate) error {
 	for i := range commands {
 		command := &commands[i]
 		if _, exists := r.catalog.Commands[command.Command]; exists {
@@ -282,6 +286,14 @@ func (r *ContentRepository) registerCommands(commands []domain.Command) error {
 		r.catalog.CommandOrder = append(r.catalog.CommandOrder, command.Command)
 	}
 	return nil
+}
+
+func (r *ContentRepository) materializeScreens() map[string]*domain.Screen {
+	screens := make(map[string]*domain.Screen, len(r.catalog.Screens))
+	for id, template := range r.catalog.Screens {
+		screens[id] = template.ToScreen()
+	}
+	return screens
 }
 
 func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, localeCode, path string) error {
@@ -333,7 +345,7 @@ func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
 
 // GetScreenForLocale returns a screen by ID localized for the given Telegram locale.
 func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*domain.Screen, error) {
-	screen, ok := r.catalog.Screens[screenID]
+	screen, ok := r.screens[screenID]
 	if !ok {
 		return nil, domain.ErrScreenNotFound(screenID)
 	}
@@ -367,13 +379,13 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 
 	for _, name := range r.catalog.CommandOrder {
 		cmd := r.catalog.Commands[name]
-		localized := *cmd
-		r.applyCommandLocale(&localized, locale.DefaultLocale)
+		localized := cmd.ToCommand()
+		r.applyCommandLocale(localized, locale.DefaultLocale)
 		if normalized != locale.DefaultLocale {
-			r.applyCommandLocale(&localized, normalized)
+			r.applyCommandLocale(localized, normalized)
 		}
 		localized.Description = r.expandText(localized.Description, normalized)
-		registry.Commands = append(registry.Commands, localized)
+		registry.Commands = append(registry.Commands, *localized)
 	}
 
 	return registry
@@ -381,7 +393,7 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 
 // GetAllScreens returns all registered screens
 func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
-	return r.catalog.Screens
+	return r.screens
 }
 
 // GetNavigationRegistry returns the navigation registry (for debugging/inspection)

@@ -2,8 +2,8 @@ package domain
 
 // ContentCatalog is the root domain object for all bot content.
 type ContentCatalog struct {
-	Screens      map[string]*Screen
-	Commands     map[string]*Command
+	Screens      map[string]*ScreenTemplate
+	Commands     map[string]*CommandTemplate
 	CommandOrder []string
 	Bundles      map[string]*LocalizedBundle
 }
@@ -11,8 +11,8 @@ type ContentCatalog struct {
 // NewContentCatalog creates an empty content catalog.
 func NewContentCatalog() *ContentCatalog {
 	return &ContentCatalog{
-		Screens:      make(map[string]*Screen),
-		Commands:     make(map[string]*Command),
+		Screens:      make(map[string]*ScreenTemplate),
+		Commands:     make(map[string]*CommandTemplate),
 		CommandOrder: make([]string, 0),
 		Bundles:      make(map[string]*LocalizedBundle),
 	}

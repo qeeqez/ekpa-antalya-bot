@@ -3,6 +3,7 @@ package config
 import (
 	"errors"
 	"fmt"
+	"maps"
 	"regexp"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
@@ -10,6 +11,19 @@ import (
 )
 
 var fragmentPattern = regexp.MustCompile(`\{\{([a-zA-Z0-9_]+)\}\}`)
+var markdownV2RenderableStripPatterns = []*regexp.Regexp{
+	regexp.MustCompile("(?s)```.*?```"),
+	regexp.MustCompile("`[^`]*`"),
+	regexp.MustCompile(`\[[^\]]*\]\([^)]+\)`),
+}
+
+var markdownV2ReservedPlain = map[byte]struct{}{
+	'.': {},
+	'!': {},
+	'(': {},
+	')': {},
+	'-': {},
+}
 
 func (r *ContentRepository) validateLoadedCatalog() error {
 	if err := r.validateMergedScreens(); err != nil {
@@ -21,6 +35,10 @@ func (r *ContentRepository) validateLoadedCatalog() error {
 	}
 
 	if err := r.validateDefaultFragments(); err != nil {
+		return err
+	}
+
+	if err := r.validateMarkdownV2Content(); err != nil {
 		return err
 	}
 
@@ -131,6 +149,100 @@ func (r *ContentRepository) validateSharedButton(button domain.Button) error {
 		}
 	default:
 		return domain.ErrInvalidButton("unknown button type: " + string(button.Type))
+	}
+
+	return nil
+}
+
+func (r *ContentRepository) validateMarkdownV2Content() error {
+	for _, screen := range r.catalog.Screens {
+		if screen.ParseMode != domain.ParseModeMarkdownV2 {
+			continue
+		}
+
+		for localeCode := range r.catalog.Bundles {
+			renderedText := r.renderMarkdownV2Text(screen.ID, localeCode)
+			if err := validateMarkdownV2Text(renderedText); err != nil {
+				return fmt.Errorf("invalid MarkdownV2 text for screen %s locale %s: %w", screen.ID, localeCode, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+func (r *ContentRepository) renderMarkdownV2Text(screenID, localeCode string) string {
+	screen := r.catalog.Screens[screenID]
+	if screen == nil {
+		return ""
+	}
+
+	text := screen.Text
+	normalized := locale.Normalize(localeCode)
+	if bundle, ok := r.catalog.Bundles[normalized]; ok {
+		if localizedScreen, ok := bundle.Screens[screenID]; ok && localizedScreen.Text != "" {
+			text = localizedScreen.Text
+		}
+	}
+
+	return expandMarkdownV2Text(text, r.renderMarkdownV2Fragments(localeCode))
+}
+
+func (r *ContentRepository) renderMarkdownV2Fragments(localeCode string) map[string]string {
+	normalized := locale.Normalize(localeCode)
+	merged := make(map[string]string)
+
+	if base, ok := r.catalog.Bundles[locale.DefaultLocale]; ok {
+		maps.Copy(merged, base.Fragments)
+	}
+
+	if normalized != locale.DefaultLocale {
+		if overlay, ok := r.catalog.Bundles[normalized]; ok {
+			maps.Copy(merged, overlay.Fragments)
+		}
+	}
+
+	return merged
+}
+
+func expandMarkdownV2Text(text string, fragments map[string]string) string {
+	if text == "" {
+		return text
+	}
+
+	expanded := text
+	for range 5 {
+		next := expanded
+		for key, value := range fragments {
+			next = replaceFragment(next, key, value)
+		}
+		if next == expanded {
+			break
+		}
+		expanded = next
+	}
+
+	return expanded
+}
+
+func validateMarkdownV2Text(text string) error {
+	if text == "" {
+		return nil
+	}
+
+	sanitized := text
+	for _, pattern := range markdownV2RenderableStripPatterns {
+		sanitized = pattern.ReplaceAllString(sanitized, "")
+	}
+
+	for i := range len(sanitized) {
+		if _, ok := markdownV2ReservedPlain[sanitized[i]]; !ok {
+			continue
+		}
+		if i > 0 && sanitized[i-1] == '\\' {
+			continue
+		}
+		return fmt.Errorf("unescaped reserved character %q", sanitized[i])
 	}
 
 	return nil

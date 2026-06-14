@@ -5,15 +5,43 @@ commands:
     description: "Главное меню"
     screen_id: "MAIN_MENU"
     is_pinned: true
+    locales:
+      en:
+        description: "Main menu"
+      tr:
+        description: "Ana menü"
+      ar:
+        description: "القائمة الرئيسية"
   - command: "/menu"
     description: "Главное меню"
     screen_id: "MAIN_MENU"
+    locales:
+      en:
+        description: "Main menu"
+      tr:
+        description: "Ana menü"
+      ar:
+        description: "القائمة الرئيسية"
   - command: "/botlink"
     description: "Ссылка на Бота"
     screen_id: "BOT_LINK"
+    locales:
+      en:
+        description: "Bot link"
+      tr:
+        description: "Bot bağlantısı"
+      ar:
+        description: "رابط البوت"
   - command: "/ourchats"
     description: "Наши Чаты"
     screen_id: "OUR_CHATS_INFO"
+    locales:
+      en:
+        description: "Our chats"
+      tr:
+        description: "Sohbetlerimiz"
+      ar:
+        description: "محادثاتنا"
 
 screens:
   - id: "MAIN_MENU"
@@ -55,6 +83,37 @@ screens:
               text: "✍️ Предложить изменения"
               type: "url"
               url: "https://t.me/qeeqez"
+    locales:
+      en:
+        text: "*Main menu*"
+        button_texts:
+          ekpa_main_chat: "🏠 EKPA Main Chat"
+          our_chats: "💬 Our Chats"
+          directions: "🏡 In and around the complex"
+          info_useful: "⭐️ Information"
+          info_ekpa: "🌟 All about EKPA"
+          address: "📍 Our Address"
+          suggest_changes: "✍️ Suggest changes"
+      tr:
+        text: "*Ana menü*"
+        button_texts:
+          ekpa_main_chat: "🏠 EKPA Ana Sohbet"
+          our_chats: "💬 Sohbetlerimiz"
+          directions: "🏡 Sitede ve çevresinde"
+          info_useful: "⭐️ Bilgi"
+          info_ekpa: "🌟 EKPA hakkında her şey"
+          address: "📍 Adresimiz"
+          suggest_changes: "✍️ Değişiklik öner"
+      ar:
+        text: "*القائمة الرئيسية*"
+        button_texts:
+          ekpa_main_chat: "🏠 الدردشة الرئيسية EKPA"
+          our_chats: "💬 محادثاتنا"
+          directions: "🏡 في المجمع وما حوله"
+          info_useful: "⭐️ معلومات"
+          info_ekpa: "🌟 كل شيء عن EKPA"
+          address: "📍 عنواننا"
+          suggest_changes: "✍️ اقترح تغييرات"
     navigation:
       - callback: "OUR_CHATS_BUTTON"
         target: "OUR_CHATS"
@@ -99,6 +158,88 @@ screens:
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows: []
+    locales:
+      en:
+        text: |
+          *Our address:*
+
+          *il:* `Antalya`
+          *ilçe:* `Kepez`
+          *Mahalle:* `Güneş`
+          *Street:* `Şehit Astsubay Ömer Halis Demir`
+          *Site:* `Ekpa 1207`
+          *Block* \(Block\), *Apartment* \(Flat\), *Floor* \(Floor\)
+
+          *Postal code:* `07260`
+
+          *Block numbering:*
+
+          `A1` \- `95A`
+          `A2` \- `95AA`
+          `A3` \- `95AB`
+          `A4` \- `95AC`
+          `B`  \- `95B`
+          `C`  \- `95C`
+          `D`  \- `95D`
+          `E1` \- `95E`
+          `E2` \- `95EA`
+
+          *Tap to copy:*
+          `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
+      tr:
+        text: |
+          *Adresimiz:*
+
+          *il:* `Antalya`
+          *ilçe:* `Kepez`
+          *Mahalle:* `Güneş`
+          *Cadde:* `Şehit Astsubay Ömer Halis Demir`
+          *Site:* `Ekpa 1207`
+          *Blok* \(Blok\), *Daire* \(Daire\), *Kat* \(Kat\)
+
+          *Posta kodu:* `07260`
+
+          *Blok numaraları:*
+
+          `A1` \- `95A`
+          `A2` \- `95AA`
+          `A3` \- `95AB`
+          `A4` \- `95AC`
+          `B`  \- `95B`
+          `C`  \- `95C`
+          `D`  \- `95D`
+          `E1` \- `95E`
+          `E2` \- `95EA`
+
+          *Kopyalamak için dokunun:*
+          `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
+      ar:
+        text: |
+          *عنواننا:*
+
+          *الولاية:* `Antalya`
+          *المنطقة:* `Kepez`
+          *الحي:* `Güneş`
+          *الشارع:* `Şehit Astsubay Ömer Halis Demir`
+          *المجمع:* `Ekpa 1207`
+          *الكتلة* \(Block\)، *الشقة* \(Apartment\)، *الطابق* \(Floor\)
+
+          *الرمز البريدي:* `07260`
+
+          *ترقيم الكتل:*
+
+          `A1` \- `95A`
+          `A2` \- `95AA`
+          `A3` \- `95AB`
+          `A4` \- `95AC`
+          `B`  \- `95B`
+          `C`  \- `95C`
+          `D`  \- `95D`
+          `E1` \- `95E`
+          `E2` \- `95EA`
+
+          *اضغط للنسخ:*
+          `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
 
   - id: "BOT_LINK"
     text: |
@@ -110,6 +251,28 @@ screens:
     parse_mode: "MarkdownV2"
     inline_keyboard:
       rows: []
+    locales:
+      en:
+        text: |
+          *Bot link:*
+
+          https://t\.me/EkpaAntalyaBot
+
+          Share the link with your neighbors 😊
+      tr:
+        text: |
+          *Bot bağlantısı:*
+
+          https://t\.me/EkpaAntalyaBot
+
+          Linki komşularınla paylaş 😊
+      ar:
+        text: |
+          *رابط البوت:*
+
+          https://t\.me/EkpaAntalyaBot
+
+          شارك الرابط مع الجيران 😊
 
   - id: "OUR_CHATS_INFO"
     text: |
@@ -127,3 +290,25 @@ screens:
     navigation:
       - callback: "OUR_CHATS_BUTTON"
         target: "OUR_CHATS"
+    locales:
+      en:
+        text: |
+          *💬 Our Chats*
+
+          Choose the chat you want from the menu below\.
+        button_texts:
+          our_chats_detailed: "📋 Chat list"
+      tr:
+        text: |
+          *💬 Sohbetlerimiz*
+
+          Aşağıdaki menüden istediğiniz sohbeti seçin\.
+        button_texts:
+          our_chats_detailed: "📋 Sohbet listesi"
+      ar:
+        text: |
+          *💬 محادثاتنا*
+
+          اختر الدردشة التي تريدها من القائمة أدناه\.
+        button_texts:
+          our_chats_detailed: "📋 قائمة المحادثات"

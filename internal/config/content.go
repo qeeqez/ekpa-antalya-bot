@@ -285,17 +285,13 @@ func (r *ContentRepository) registerCommands(commands []domain.Command) error {
 }
 
 func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, localeCode, path string) error {
+	bundle := r.catalog.Bundle(localeCode)
 	for _, localized := range screens {
-		base, ok := r.catalog.Screens[localized.ID]
-		if !ok {
+		if _, ok := r.catalog.Screens[localized.ID]; !ok {
 			return fmt.Errorf("localized screen %s in %s has no shared base screen", localized.ID, path)
 		}
 
-		if base.Locales == nil {
-			base.Locales = make(map[string]domain.ScreenLocale)
-		}
-
-		base.Locales[localeCode] = domain.ScreenLocale{
+		bundle.Screens[localized.ID] = domain.ScreenLocale{
 			Text:        localized.Text,
 			ButtonTexts: cloneStringMap(localized.ButtonTexts),
 		}
@@ -305,17 +301,13 @@ func (r *ContentRepository) applyLocalizedScreens(screens []LocalizedScreen, loc
 }
 
 func (r *ContentRepository) applyLocalizedCommands(commands []LocalizedCommand, localeCode, path string) error {
+	bundle := r.catalog.Bundle(localeCode)
 	for _, localized := range commands {
-		base, found := r.catalog.Commands[localized.Command]
-		if !found {
+		if _, found := r.catalog.Commands[localized.Command]; !found {
 			return fmt.Errorf("localized command %s in %s has no shared base command", localized.Command, path)
 		}
 
-		if base.Locales == nil {
-			base.Locales = make(map[string]domain.CommandLocale)
-		}
-
-		base.Locales[localeCode] = domain.CommandLocale{
+		bundle.Commands[localized.Command] = domain.CommandLocale{
 			Description: localized.Description,
 		}
 	}
@@ -328,11 +320,8 @@ func (r *ContentRepository) applyLocalizedFragments(fragments map[string]string,
 		return nil
 	}
 
-	normalized := locale.Normalize(localeCode)
-	if r.catalog.Fragments[normalized] == nil {
-		r.catalog.Fragments[normalized] = make(map[string]string, len(fragments))
-	}
-	maps.Copy(r.catalog.Fragments[normalized], fragments)
+	bundle := r.catalog.Bundle(locale.Normalize(localeCode))
+	maps.Copy(bundle.Fragments, fragments)
 
 	return nil
 }
@@ -379,13 +368,9 @@ func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.Comm
 	for _, name := range r.catalog.CommandOrder {
 		cmd := r.catalog.Commands[name]
 		localized := *cmd
-		if localeData, ok := cmd.Locales[locale.DefaultLocale]; ok && localeData.Description != "" {
-			localized.Description = localeData.Description
-		}
+		r.applyCommandLocale(&localized, locale.DefaultLocale)
 		if normalized != locale.DefaultLocale {
-			if localeData, ok := cmd.Locales[normalized]; ok && localeData.Description != "" {
-				localized.Description = localeData.Description
-			}
+			r.applyCommandLocale(&localized, normalized)
 		}
 		localized.Description = r.expandText(localized.Description, normalized)
 		registry.Commands = append(registry.Commands, localized)
@@ -463,12 +448,12 @@ func (r *ContentRepository) replaceFragmentRefs(text, localeCode string) string 
 func (r *ContentRepository) fragmentSet(localeCode string) map[string]string {
 	normalized := locale.Normalize(localeCode)
 	merged := make(map[string]string)
-	if base, ok := r.catalog.Fragments[locale.DefaultLocale]; ok {
-		maps.Copy(merged, base)
+	if base, ok := r.catalog.Bundles[locale.DefaultLocale]; ok {
+		maps.Copy(merged, base.Fragments)
 	}
 	if normalized != locale.DefaultLocale {
-		if overlay, ok := r.catalog.Fragments[normalized]; ok {
-			maps.Copy(merged, overlay)
+		if overlay, ok := r.catalog.Bundles[normalized]; ok {
+			maps.Copy(merged, overlay.Fragments)
 		}
 	}
 	return merged
@@ -480,7 +465,12 @@ func replaceFragment(text, key, value string) string {
 }
 
 func (r *ContentRepository) applyScreenLocale(screen *domain.Screen, localeCode string) {
-	localeData, ok := screen.Locales[localeCode]
+	bundle, ok := r.catalog.Bundles[localeCode]
+	if !ok {
+		return
+	}
+
+	localeData, ok := bundle.Screens[screen.ID]
 	if !ok {
 		return
 	}
@@ -500,5 +490,21 @@ func (r *ContentRepository) applyScreenLocale(screen *domain.Screen, localeCode 
 				button.Text = text
 			}
 		}
+	}
+}
+
+func (r *ContentRepository) applyCommandLocale(command *domain.Command, localeCode string) {
+	bundle, ok := r.catalog.Bundles[localeCode]
+	if !ok {
+		return
+	}
+
+	localeData, ok := bundle.Commands[command.Command]
+	if !ok {
+		return
+	}
+
+	if localeData.Description != "" {
+		command.Description = localeData.Description
 	}
 }

@@ -1,10 +1,23 @@
 package locale_test
 
 import (
+	"slices"
 	"testing"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
+
+func TestSupportedLocales(t *testing.T) {
+	want := []string{"ru", "en", "tr", "ar", "de", "es", "fr", "it", "uk", "kk", "ky", "pl"}
+
+	if got := locale.SupportedLocales; !slices.Equal(got, want) {
+		t.Fatalf("SupportedLocales() = %v, want %v", got, want)
+	}
+
+	if got := locale.SupportedReleaseLocales(); !slices.Equal(got, want) {
+		t.Fatalf("SupportedReleaseLocales() = %v, want %v", got, want)
+	}
+}
 
 func TestNormalize(t *testing.T) {
 	tests := []struct {
@@ -16,6 +29,7 @@ func TestNormalize(t *testing.T) {
 		{name: "base language", code: "en", want: "en"},
 		{name: "regional variant", code: "en-GB", want: "en"},
 		{name: "arabic variant", code: "ar-EG", want: "ar"},
+		{name: "script and region variant", code: "de-DE", want: "de"},
 		{name: "unsupported language", code: "ja", want: locale.DefaultLocale},
 	}
 

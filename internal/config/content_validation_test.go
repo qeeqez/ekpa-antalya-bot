@@ -53,11 +53,18 @@ screens:
 		t.Fatalf("Failed to write test file: %v", err)
 	}
 
-	writeLocaleBundles(t, tmpDir, locale.SupportedLocales[:len(locale.SupportedLocales)-1]...)
+	writeLocaleBundles(t, tmpDir, locale.SupportedLocales...)
+	if err := os.RemoveAll(filepath.Join(tmpDir, "locales", "pl")); err != nil {
+		t.Fatalf("Failed to remove locale bundle: %v", err)
+	}
 
 	_, err := config.NewContentRepository(tmpDir)
 	if err == nil {
 		t.Fatal("Expected error for missing required locale bundle, got nil")
+	}
+
+	if !strings.Contains(err.Error(), "missing locale bundle for pl") {
+		t.Fatalf("Expected missing pl bundle error, got %v", err)
 	}
 }
 

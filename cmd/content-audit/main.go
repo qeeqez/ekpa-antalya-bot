@@ -9,6 +9,7 @@ import (
 	"sort"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"gopkg.in/yaml.v3"
 )
 
@@ -26,6 +27,7 @@ func main() {
 	}
 
 	stats, repeated := collectLocaleStats("content/locales")
+	issues := repo.AuditLocaleParity()
 
 	out := bufio.NewWriter(os.Stdout)
 	defer func() {
@@ -45,14 +47,16 @@ func main() {
 		exitWithError(err)
 	}
 
-	locales := make([]string, 0, len(stats))
-	for locale := range stats {
-		locales = append(locales, locale)
+	locales := make([]localeProfileView, 0, len(stats))
+	for _, profile := range locale.Profiles() {
+		if _, ok := stats[profile.Code]; ok {
+			locales = append(locales, localeProfileView{Code: profile.Code, Name: profile.Name, Tier: string(profile.Tier)})
+		}
 	}
-	sort.Strings(locales)
-	for _, locale := range locales {
-		s := stats[locale]
-		if err := writef(out, "  %s: %d screens, %d commands, %d fragments\n", locale, s.Screens, s.Commands, s.Fragments); err != nil {
+	sort.SliceStable(locales, func(i, j int) bool { return locales[i].Code < locales[j].Code })
+	for _, localeInfo := range locales {
+		s := stats[localeInfo.Code]
+		if err := writef(out, "  %s (%s, %s): %d screens, %d commands, %d fragments\n", localeInfo.Code, localeInfo.Name, localeInfo.Tier, s.Screens, s.Commands, s.Fragments); err != nil {
 			exitWithError(err)
 		}
 	}
@@ -67,6 +71,27 @@ func main() {
 			}
 		}
 	}
+
+	if len(issues) > 0 {
+		if err := writeLine(out, "locale parity issues:"); err != nil {
+			exitWithError(err)
+		}
+		for _, issue := range issues {
+			if err := writef(out, "  - %s\n", issue); err != nil {
+				exitWithError(err)
+			}
+		}
+		if err := out.Flush(); err != nil {
+			exitWithError(err)
+		}
+		exitWithError(fmt.Errorf("content audit failed with %d locale parity issue(s)", len(issues)))
+	}
+}
+
+type localeProfileView struct {
+	Code string
+	Name string
+	Tier string
 }
 
 func writeLine(w io.Writer, text string) error {

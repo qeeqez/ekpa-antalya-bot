@@ -7,23 +7,11 @@ import (
 	"regexp"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
+	"github.com/qeeqez/ekpaantalyabot/internal/format"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
 
 var fragmentPattern = regexp.MustCompile(`\{\{([a-zA-Z0-9_]+)\}\}`)
-var markdownV2RenderableStripPatterns = []*regexp.Regexp{
-	regexp.MustCompile("(?s)```.*?```"),
-	regexp.MustCompile("`[^`]*`"),
-	regexp.MustCompile(`\[[^\]]*\]\([^)]+\)`),
-}
-
-var markdownV2ReservedPlain = map[byte]struct{}{
-	'.': {},
-	'!': {},
-	'(': {},
-	')': {},
-	'-': {},
-}
 
 func (r *ContentRepository) validateLoadedCatalog() error {
 	if err := r.validateMergedScreens(); err != nil {
@@ -242,24 +230,5 @@ func expandMarkdownV2Text(text string, fragments map[string]string) string {
 }
 
 func validateMarkdownV2Text(text string) error {
-	if text == "" {
-		return nil
-	}
-
-	sanitized := text
-	for _, pattern := range markdownV2RenderableStripPatterns {
-		sanitized = pattern.ReplaceAllString(sanitized, "")
-	}
-
-	for i := range len(sanitized) {
-		if _, ok := markdownV2ReservedPlain[sanitized[i]]; !ok {
-			continue
-		}
-		if i > 0 && sanitized[i-1] == '\\' {
-			continue
-		}
-		return fmt.Errorf("unescaped reserved character %q", sanitized[i])
-	}
-
-	return nil
+	return format.ValidateMarkdownV2Text(text)
 }

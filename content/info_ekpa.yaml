@@ -1,28 +1,23 @@
 version: '1.0'
 screens:
 - id: INFO_EKPA
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: management_office
-        text: ''
         type: callback
         callback: MANAGEMENT_OFFICE_BUTTON
     - buttons:
       - id: how_to_pay
-        text: ''
         type: callback
         callback: HOW_TO_PAY_BUTTON
     - buttons:
       - id: how_to_connect
-        text: ''
         type: callback
         callback: HOW_TO_CONNECT_BUTTON
     - buttons:
       - id: how_to_disconnect
-        text: ''
         type: callback
         callback: HOW_TO_DISCONNECT_BUTTON
   navigation:
@@ -35,36 +30,29 @@ screens:
   - callback: HOW_TO_DISCONNECT_BUTTON
     target: HOW_TO_DISCONNECT
 - id: MANAGEMENT_OFFICE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_PAY
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: how_to_pay_aidat
-        text: ''
         type: callback
         callback: HOW_TO_PAY_AIDAT_BUTTON
     - buttons:
       - id: how_to_pay_conditioner
-        text: ''
         type: callback
         callback: HOW_TO_PAY_CONDITIONER_BUTTON
     - buttons:
       - id: how_to_pay_electricity
-        text: ''
         type: callback
         callback: HOW_TO_PAY_ELECTRICITY_BUTTON
       - id: how_to_pay_water
-        text: ''
         type: callback
         callback: HOW_TO_PAY_WATER_BUTTON
     - buttons:
       - id: how_to_pay_phone_internet
-        text: ''
         type: callback
         callback: HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON
   navigation:
@@ -79,48 +67,38 @@ screens:
   - callback: HOW_TO_PAY_PHONE_AND_INTERNET_BUTTON
     target: HOW_TO_PAY_PHONE_AND_INTERNET
 - id: HOW_TO_PAY_AIDAT
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_PAY_CONDITIONER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_PAY_ELECTRICITY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_PAY_WATER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_PAY_PHONE_AND_INTERNET
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_CONNECT
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: connect_dask
-        text: ''
         type: callback
         callback: HOW_TO_CONNECT_DASK_INSURANCE_BUTTON
     - buttons:
       - id: connect_electricity
-        text: ''
         type: callback
         callback: HOW_TO_CONNECT_ELECTRICITY_BUTTON
     - buttons:
       - id: connect_water
-        text: ''
         type: callback
         callback: HOW_TO_CONNECT_WATER_BUTTON
     - buttons:
       - id: connect_internet
-        text: ''
         type: callback
         callback: HOW_TO_CONNECT_INTERNET_BUTTON
   navigation:
@@ -133,34 +111,27 @@ screens:
   - callback: HOW_TO_CONNECT_INTERNET_BUTTON
     target: HOW_TO_CONNECT_INTERNET
 - id: HOW_TO_CONNECT_DASK
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_CONNECT_ELECTRICITY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_CONNECT_WATER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_CONNECT_INTERNET
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_DISCONNECT
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: disconnect_electricity
-        text: ''
         type: callback
         callback: HOW_TO_DISCONNECT_ELECTRICITY_BUTTON
     - buttons:
       - id: disconnect_water
-        text: ''
         type: callback
         callback: HOW_TO_DISCONNECT_WATER_BUTTON
   navigation:
@@ -169,10 +140,8 @@ screens:
   - callback: HOW_TO_DISCONNECT_WATER_BUTTON
     target: HOW_TO_DISCONNECT_WATER
 - id: HOW_TO_DISCONNECT_ELECTRICITY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: HOW_TO_DISCONNECT_WATER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

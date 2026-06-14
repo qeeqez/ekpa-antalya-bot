@@ -1,41 +1,33 @@
 version: '1.0'
 screens:
 - id: INFO_USEFUL
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: important_docs
-        text: ''
         type: callback
         callback: IMPORTANT_DOCUMENTS_BUTTON
     - buttons:
       - id: delivery
-        text: ''
         type: callback
         callback: DELIVERY_BUTTON
       - id: aid_kit
-        text: ''
         type: callback
         callback: AID_KIT_BUTTON
       - id: transport
-        text: ''
         type: callback
         callback: TRANSPORT_BUTTON
     - buttons:
       - id: phone_unlock
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_BUTTON
     - buttons:
       - id: car_fine
-        text: ''
         type: callback
         callback: CAR_FINE_BUTTON
     - buttons:
       - id: phone_numbers
-        text: ''
         type: callback
         callback: PHONE_NUMBERS_BUTTON
   navigation:

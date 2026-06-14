@@ -1,23 +1,19 @@
 version: '1.0'
 screens:
 - id: DELIVERY
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: food_delivery
-        text: ''
         type: callback
         callback: FOOD_DELIVERY_BUTTON
     - buttons:
       - id: products_delivery
-        text: ''
         type: callback
         callback: PRODUCTS_DELIVERY_BUTTON
     - buttons:
       - id: goods_delivery
-        text: ''
         type: callback
         callback: GOODS_DELIVERY_BUTTON
   navigation:
@@ -28,14 +24,11 @@ screens:
   - callback: GOODS_DELIVERY_BUTTON
     target: GOODS_DELIVERY
 - id: FOOD_DELIVERY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PRODUCTS_DELIVERY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: GOODS_DELIVERY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

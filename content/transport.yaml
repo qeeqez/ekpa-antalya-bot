@@ -1,28 +1,23 @@
 version: '1.0'
 screens:
 - id: TRANSPORT
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: bus
-        text: ''
         type: callback
         callback: BUS_BUTTON
     - buttons:
       - id: antalya_card
-        text: ''
         type: callback
         callback: ANTALYA_CARD_BUTTON
     - buttons:
       - id: taxi
-        text: ''
         type: callback
         callback: TAXI_BUTTON
     - buttons:
       - id: kick_scooter
-        text: ''
         type: callback
         callback: KICK_SCOOTER_BUTTON
   navigation:
@@ -35,40 +30,32 @@ screens:
   - callback: KICK_SCOOTER_BUTTON
     target: KICK_SCOOTER
 - id: BUS
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: bus_concessionary
-        text: ''
         type: callback
         callback: BUS_CONCESSIONARY_BUTTON
   navigation:
   - callback: BUS_CONCESSIONARY_BUTTON
     target: BUS_CONCESSIONARY
 - id: BUS_CONCESSIONARY
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: ANTALYA_CARD
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: antalya_card_android
-        text: ''
         type: url
         url: https://play.google.com/store/apps/details?id=kentkart.mobile.antalyakart
       - id: antalya_card_iphone
-        text: ''
         type: url
         url: https://apps.apple.com/tr/app/antalyakart/id1076290540
 - id: TAXI
-  text: ''
   parse_mode: MarkdownV2
 - id: KICK_SCOOTER
-  text: ''
   parse_mode: MarkdownV2

@@ -1,6 +1,7 @@
 package config
 
 import (
+	"errors"
 	"fmt"
 	"maps"
 	"os"
@@ -76,7 +77,7 @@ func (r *ContentRepository) loadContent(contentDir string) error {
 		return err
 	}
 
-	return r.validateAllScreens()
+	return r.validateMergedScreens()
 }
 
 func (r *ContentRepository) loadSharedContent(contentDir string) error {
@@ -159,13 +160,13 @@ func (r *ContentRepository) loadLocaleDirectory(localeDir string, localeCode str
 	return nil
 }
 
-// validateAllScreens validates all loaded screens
-func (r *ContentRepository) validateAllScreens() error {
+func (r *ContentRepository) validateMergedScreens() error {
 	for _, screen := range r.screens {
-		if err := screen.Validate(); err != nil {
-			return fmt.Errorf("invalid screen %s: %w", screen.ID, err)
+		if err := r.validateSharedScreen(screen); err != nil {
+			return fmt.Errorf("invalid shared screen %s: %w", screen.ID, err)
 		}
 	}
+
 	return nil
 }
 
@@ -236,6 +237,39 @@ func (r *ContentRepository) registerScreens(screens []domain.Screen) error {
 	return nil
 }
 
+func (r *ContentRepository) validateSharedScreen(screen *domain.Screen) error {
+	if screen.ID == "" {
+		return errors.New("screen ID cannot be empty")
+	}
+
+	for rowIdx, row := range screen.InlineKeyboard.Rows {
+		for btnIdx, btn := range row.Buttons {
+			if err := r.validateSharedButton(btn); err != nil {
+				return fmt.Errorf("invalid button at row %d, position %d: %w", rowIdx, btnIdx, err)
+			}
+		}
+	}
+
+	return nil
+}
+
+func (r *ContentRepository) validateSharedButton(button domain.Button) error {
+	switch button.Type {
+	case domain.ButtonTypeCallback:
+		if button.CallbackData == "" {
+			return domain.ErrInvalidButton("callback button must have callback data")
+		}
+	case domain.ButtonTypeURL:
+		if button.URL == "" {
+			return domain.ErrInvalidButton("URL button must have URL")
+		}
+	default:
+		return domain.ErrInvalidButton("unknown button type: " + string(button.Type))
+	}
+
+	return nil
+}
+
 // registerCommands registers all commands from a content file
 func (r *ContentRepository) registerCommands(commands []domain.Command) {
 	r.commands.Commands = append(r.commands.Commands, commands...)
@@ -300,6 +334,9 @@ func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*do
 
 	// Add automatic navigation buttons using localized labels.
 	enhancedScreen = r.navigation.AddAutoNavigation(enhancedScreen, locale.Normalize(localeCode))
+	if err := enhancedScreen.Validate(); err != nil {
+		return nil, fmt.Errorf("invalid localized screen %s: %w", screenID, err)
+	}
 	return enhancedScreen, nil
 }
 

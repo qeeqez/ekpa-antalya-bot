@@ -1,27 +1,22 @@
 version: '1.0'
 screens:
 - id: PHONE_NUMBERS
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: ekpa_management
-        text: ''
         type: callback
         callback: EKPA_MANAGEMENT_BUTTON
     - buttons:
       - id: emergency
-        text: ''
         type: callback
         callback: EMERJENCY_BUTTON
       - id: other_phones
-        text: ''
         type: callback
         callback: OTHER_PHONES_BUTTON
     - buttons:
       - id: embassy
-        text: ''
         type: callback
         callback: EMBASSY_BUTTON
   navigation:
@@ -34,34 +29,27 @@ screens:
   - callback: OTHER_PHONES_BUTTON
     target: OTHER_PHONES
 - id: EKPA_MANAGEMENT
-  text: ''
   parse_mode: MarkdownV2
 - id: EMERGENCY
-  text: ''
   parse_mode: MarkdownV2
 - id: EMBASSY
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: russia_embassy
-        text: ''
         type: callback
         callback: RUSSIA_EMBASSY_BUTTON
     - buttons:
       - id: ukraine_embassy
-        text: ''
         type: callback
         callback: UKRAINE_EMBASSY_BUTTON
     - buttons:
       - id: kazakhstan_embassy
-        text: ''
         type: callback
         callback: KAZAKHSTAN_EMBASSY_BUTTON
     - buttons:
       - id: belarus_embassy
-        text: ''
         type: callback
         callback: BELARUS_EMBASSY_BUTTON
   navigation:
@@ -74,21 +62,16 @@ screens:
   - callback: BELARUS_EMBASSY_BUTTON
     target: BELARUS_EMBASSY
 - id: RUSSIA_EMBASSY
-  text: ''
   parse_mode: html
   disable_web_preview: true
 - id: UKRAINE_EMBASSY
-  text: ''
   parse_mode: html
   disable_web_preview: true
 - id: KAZAKHSTAN_EMBASSY
-  text: ''
   parse_mode: html
   disable_web_preview: true
 - id: BELARUS_EMBASSY
-  text: ''
   parse_mode: html
   disable_web_preview: true
 - id: OTHER_PHONES
-  text: ''
   parse_mode: MarkdownV2

@@ -1,32 +1,26 @@
 version: '1.0'
 screens:
 - id: AID_KIT
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: ambulance
-        text: ''
         type: callback
         callback: AMBULANCE_BUTTON
     - buttons:
       - id: hospitals
-        text: ''
         type: callback
         callback: HOSPITALS_BUTTON
       - id: pharmacies
-        text: ''
         type: callback
         callback: PHARMACIES_BUTTON
     - buttons:
       - id: medicine
-        text: ''
         type: callback
         callback: MEDICINE_BUTTON
     - buttons:
       - id: polyclinic
-        text: ''
         type: callback
         callback: POLYCLINIC_BUTTON
   navigation:
@@ -41,60 +35,48 @@ screens:
   - callback: POLYCLINIC_BUTTON
     target: POLYCLINIC
 - id: AMBULANCE
-  text: ''
   parse_mode: MarkdownV2
 - id: PHARMACIES
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: pharmacies_site
-        text: ''
         type: url
         url: https://www.antalyaeo.org.tr/tr/nobetci-eczaneler
     - buttons:
       - id: pharmacies_android
-        text: ''
         type: url
         url: https://play.google.com/store/apps/details?id=com.adcinteractive.eczane
       - id: pharmacies_iphone
-        text: ''
         type: url
         url: https://apps.apple.com/tr/app/n%C3%B6bet%C3%A7i-eczane-pharmacies/id1315296205
 - id: HOSPITALS
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: hospitals_insurance_site
-        text: ''
         type: url
         url: https://imecedestek.com/ContractedOrganizations
 - id: POLYCLINIC
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: polyclinic_site
-        text: ''
         type: url
         url: https://enabiz.gov.tr/
     - buttons:
       - id: polyclinic_android
-        text: ''
         type: url
         url: https://play.google.com/store/apps/details?id=tr.gov.saglik.enabiz
       - id: polyclinic_iphone
-        text: ''
         type: url
         url: https://apps.apple.com/tr/app/e-nab%C4%B1z/id980446169
 - id: MEDICINE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

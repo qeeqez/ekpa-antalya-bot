@@ -1,22 +1,18 @@
 version: '1.0'
 screens:
 - id: CAR_FINE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PHONE_UNLOCK
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: phone_unlock_sim
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_SIM_BUTTON
     - buttons:
       - id: phone_unlock_imei
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_IMEI_BUTTON
   navigation:
@@ -25,28 +21,23 @@ screens:
   - callback: PHONE_UNLOCK_IMEI_BUTTON
     target: PHONE_UNLOCK_IMEI
 - id: PHONE_UNLOCK_SIM
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PHONE_UNLOCK_IMEI
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: phone_unlock_imei_free
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_IMEI_FREE_BUTTON
     - buttons:
       - id: phone_unlock_imei_paid
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_IMEI_PAID_BUTTON
     - buttons:
       - id: phone_unlock_imei_reblock
-        text: ''
         type: callback
         callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
   navigation:
@@ -57,14 +48,11 @@ screens:
   - callback: PHONE_UNLOCK_IMEI_REBLOCK_BUTTON
     target: PHONE_UNLOCK_IMEI_REBLOCK
 - id: PHONE_UNLOCK_IMEI_FREE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PHONE_UNLOCK_IMEI_PAID
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PHONE_UNLOCK_IMEI_REBLOCK
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

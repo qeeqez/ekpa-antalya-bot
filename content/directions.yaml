@@ -1,58 +1,46 @@
 version: '1.0'
 screens:
 - id: DIRECTIONS
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: markets
-        text: ''
         type: callback
         callback: MARKETS_BUTTON
       - id: shops
-        text: ''
         type: callback
         callback: SHOPS_BUTTON
       - id: shopping_centers
-        text: ''
         type: callback
         callback: SHOPPING_CENTERS_BUTTON
     - buttons:
       - id: print_photo
-        text: ''
         type: callback
         callback: PRINT_AND_PHOTO_BUTTON
     - buttons:
       - id: barber
-        text: ''
         type: callback
         callback: BARBER_BUTTON
     - buttons:
       - id: residence_fitness_spa
-        text: ''
         type: callback
         callback: RESIDENCE_FITNESS_SPA_BUTTON
     - buttons:
       - id: tax_office
-        text: ''
         type: callback
         callback: TAX_OFFICE_BUTTON
       - id: post_office
-        text: ''
         type: callback
         callback: POST_OFFICE_BUTTON
     - buttons:
       - id: city_hall
-        text: ''
         type: callback
         callback: CITY_HALL_BUTTON
       - id: population_office
-        text: ''
         type: callback
         callback: POPULATION_OFFICE_BUTTON
       - id: migration_office
-        text: ''
         type: callback
         callback: MIGRATION_OFFICE_BUTTON
   navigation:
@@ -79,70 +67,56 @@ screens:
   - callback: MIGRATION_OFFICE_BUTTON
     target: MIGRATION_OFFICE
 - id: MARKETS
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: all_markets
-        text: ''
         type: callback
         callback: ALL_MARKETS_BUTTON
   navigation:
   - callback: ALL_MARKETS_BUTTON
     target: ALL_MARKETS
 - id: ALL_MARKETS
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: markets
-        text: ''
         type: callback
         callback: MARKETS_BUTTON
   navigation:
   - callback: MARKETS_BUTTON
     target: MARKETS
 - id: SHOPS
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: SHOPPING_CENTERS
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: PRINT_AND_PHOTO
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: BARBER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: TAX_OFFICE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: POST_OFFICE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: CITY_HALL
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: POPULATION_OFFICE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: MIGRATION_OFFICE
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: RESIDENCE_FITNESS_SPA
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

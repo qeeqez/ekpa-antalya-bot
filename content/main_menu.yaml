@@ -1,56 +1,44 @@
 version: '1.0'
 commands:
 - command: /start
-  description: ''
   screen_id: MAIN_MENU
   is_pinned: true
 - command: /menu
-  description: ''
   screen_id: MAIN_MENU
 - command: /botlink
-  description: ''
   screen_id: BOT_LINK
 - command: /ourchats
-  description: ''
   screen_id: OUR_CHATS_INFO
 screens:
 - id: MAIN_MENU
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: ekpa_main_chat
-        text: ''
         type: url
         url: https://t.me/+14s_2-3hZzVmODAy
     - buttons:
       - id: our_chats
-        text: ''
         type: callback
         callback: OUR_CHATS_BUTTON
     - buttons:
       - id: directions
-        text: ''
         type: callback
         callback: DIRECTIONS_BUTTON
     - buttons:
       - id: info_useful
-        text: ''
         type: callback
         callback: INFO_USEFUL_BUTTON
       - id: info_ekpa
-        text: ''
         type: callback
         callback: INFO_EKPA_BUTTON
     - buttons:
       - id: address
-        text: ''
         type: callback
         callback: ADDRESS_BUTTON
     - buttons:
       - id: suggest_changes
-        text: ''
         type: url
         url: https://t.me/qeeqez
   navigation:
@@ -67,23 +55,19 @@ screens:
   - callback: ADDRESS_BUTTON
     target: ADDRESS
 - id: ADDRESS
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows: []
 - id: BOT_LINK
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows: []
 - id: OUR_CHATS_INFO
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: our_chats_detailed
-        text: ''
         type: callback
         callback: OUR_CHATS_BUTTON
   navigation:

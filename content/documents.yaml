@@ -1,36 +1,29 @@
 version: '1.0'
 screens:
 - id: IMPORTANT_DOCUMENTS
-  text: ''
   parse_mode: MarkdownV2
   inline_keyboard:
     rows:
     - buttons:
       - id: check_application_status
-        text: ''
         type: url
         url: https://e-ikamet.goc.gov.tr/Ikamet/DevamEdenBasvuruGiris
     - buttons:
       - id: get_id_number
-        text: ''
         type: url
         url: https://tckimlik.nvi.gov.tr/Modul/YabanciKimlikNoSorgula
     - buttons:
       - id: tax_number
-        text: ''
         type: callback
         callback: TAX_NUMBER_BUTTON
       - id: edevlet
-        text: ''
         type: callback
         callback: EDEVLET_BUTTON
     - buttons:
       - id: address_numarataj
-        text: ''
         type: callback
         callback: ADDRESS_NUMARATAJ_BUTTON
       - id: address_registration
-        text: ''
         type: callback
         callback: ADDRESS_REGISTRATION_BUTTON
   navigation:
@@ -43,34 +36,27 @@ screens:
   - callback: ADDRESS_REGISTRATION_BUTTON
     target: ADDRESS_REGISTRATION
 - id: EDEVLET
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
   inline_keyboard:
     rows:
     - buttons:
       - id: edevlet_site
-        text: ''
         type: url
         url: https://www.turkiye.gov.tr
     - buttons:
       - id: edevlet_android
-        text: ''
         type: url
         url: https://play.google.com/store/apps/details?id=tr.gov.turkiye.edevlet.kapisi
       - id: edevlet_iphone
-        text: ''
         type: url
         url: https://apps.apple.com/tr/app/e-devlet/id976505454
 - id: TAX_NUMBER
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: ADDRESS_NUMARATAJ
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true
 - id: ADDRESS_REGISTRATION
-  text: ''
   parse_mode: MarkdownV2
   disable_web_preview: true

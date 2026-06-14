@@ -74,7 +74,7 @@ func (h *CommandHandler) normalizeCommand(command string) string {
 
 // handleRegisteredCommand handles commands registered in the command registry
 func (h *CommandHandler) handleRegisteredCommand(ctx context.Context, chatID telego.ChatID, command string, localeCode string) error {
-	cmd, found := h.content.GetCommands().GetCommand(command)
+	cmd, found := h.content.GetCommandsForLocale(localeCode).GetCommand(command)
 	if !found {
 		slog.Debug("Command not recognized", "command", command)
 		return nil

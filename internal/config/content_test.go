@@ -92,7 +92,7 @@ screens:
 	}
 
 	// Test main menu screen retrieval (no navigation added)
-	mainMenu, err := repo.GetScreen(testMainMenuID)
+	mainMenu, err := repo.GetScreenForLocale(testMainMenuID, "ru")
 	if err != nil {
 		t.Fatalf("Failed to get main menu: %v", err)
 	}
@@ -120,7 +120,7 @@ screens:
 	}
 
 	// Test child screen retrieval (should have auto-navigation)
-	screen, err := repo.GetScreen(testScreenID)
+	screen, err := repo.GetScreenForLocale(testScreenID, "ru")
 	if err != nil {
 		t.Fatalf("Failed to get test screen: %v", err)
 	}
@@ -191,7 +191,7 @@ func TestGetNonExistentScreen(t *testing.T) {
 		t.Fatalf("Failed to create repository: %v", err)
 	}
 
-	_, err = repo.GetScreen("NON_EXISTENT")
+	_, err = repo.GetScreenForLocale("NON_EXISTENT", "ru")
 	if err == nil {
 		t.Error("Expected error for non-existent screen, got nil")
 	}

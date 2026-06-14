@@ -339,19 +339,9 @@ func (r *ContentRepository) applyLocalizedFragments(fragments map[string]string,
 	return nil
 }
 
-// GetScreen returns a screen by ID with automatic navigation buttons
-func (r *ContentRepository) GetScreen(screenID string) (*domain.Screen, error) {
-	return r.GetScreenForLocale(screenID, locale.DefaultLocale)
-}
-
 // GetScreenForLocale returns a screen by ID localized for the given Telegram locale.
 func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*domain.Screen, error) {
 	return r.renderer.Screen(screenID, localeCode, r.screens)
-}
-
-// GetCommands returns the command registry
-func (r *ContentRepository) GetCommands() *domain.CommandRegistry {
-	return r.GetCommandsForLocale(locale.DefaultLocale)
 }
 
 // GetCommandsForLocale returns the command registry localized for the given Telegram locale.

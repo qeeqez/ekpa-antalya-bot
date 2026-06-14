@@ -38,7 +38,7 @@ func main() {
 	if err := writef(out, "screens: %d\n", len(repo.GetAllScreens())); err != nil {
 		exitWithError(err)
 	}
-	if err := writef(out, "commands: %d\n", len(repo.GetCommands().Commands)); err != nil {
+	if err := writef(out, "commands: %d\n", len(repo.GetCommandsForLocale("ru").Commands)); err != nil {
 		exitWithError(err)
 	}
 	if err := writeLine(out, "locale stats:"); err != nil {

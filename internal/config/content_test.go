@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
 
 const (
@@ -49,7 +50,7 @@ func writeLocaleBundles(t *testing.T, dir string, localeCodes ...string) {
 func writeRequiredLocaleBundles(t *testing.T, dir string) {
 	t.Helper()
 
-	writeLocaleBundles(t, dir, "ru", "en", "tr", "ar")
+	writeLocaleBundles(t, dir, locale.SupportedLocales...)
 }
 
 func TestLoadContentFile(t *testing.T) {

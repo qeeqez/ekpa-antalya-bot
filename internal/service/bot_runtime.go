@@ -143,7 +143,7 @@ func (s *BotService) handleUpdateAsync(ctx context.Context, update telego.Update
 
 // setBotCommands sets the bot's command menu.
 func (s *BotService) setBotCommands(ctx context.Context) error {
-	for _, localeCode := range locale.SupportedReleaseLocales() {
+	for _, localeCode := range locale.SupportedLocales {
 		commands := s.content.GetCommandsForLocale(localeCode)
 		botCommands := convertToTelegramCommands(commands.Commands)
 
@@ -152,7 +152,7 @@ func (s *BotService) setBotCommands(ctx context.Context) error {
 		}
 	}
 
-	slog.Info("Bot commands configured", "locales", locale.SupportedReleaseLocales())
+	slog.Info("Bot commands configured", "locales", locale.SupportedLocales)
 	return nil
 }
 

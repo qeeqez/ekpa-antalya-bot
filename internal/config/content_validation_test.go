@@ -8,6 +8,7 @@ import (
 	"testing"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/config"
+	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 )
 
 func TestMissingDefaultFragmentFails(t *testing.T) {
@@ -52,7 +53,7 @@ screens:
 		t.Fatalf("Failed to write test file: %v", err)
 	}
 
-	writeLocaleBundles(t, tmpDir, "ru", "en", "tr")
+	writeLocaleBundles(t, tmpDir, locale.SupportedLocales[:len(locale.SupportedLocales)-1]...)
 
 	_, err := config.NewContentRepository(tmpDir)
 	if err == nil {

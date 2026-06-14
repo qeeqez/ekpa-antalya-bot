@@ -6,32 +6,24 @@ const (
 	DefaultLocale = "ru"
 )
 
-type Tier string
-
-const (
-	TierPrimary   Tier = "primary"
-	TierSecondary Tier = "secondary"
-)
-
 type Profile struct {
 	Code string
 	Name string
-	Tier Tier
 }
 
 var localeProfiles = []Profile{
-	{Code: "ru", Name: "Russian", Tier: TierPrimary},
-	{Code: "en", Name: "English", Tier: TierPrimary},
-	{Code: "tr", Name: "Turkish", Tier: TierPrimary},
-	{Code: "ar", Name: "Arabic", Tier: TierPrimary},
-	{Code: "de", Name: "German", Tier: TierSecondary},
-	{Code: "es", Name: "Spanish", Tier: TierSecondary},
-	{Code: "fr", Name: "French", Tier: TierSecondary},
-	{Code: "it", Name: "Italian", Tier: TierSecondary},
-	{Code: "uk", Name: "Ukrainian", Tier: TierSecondary},
-	{Code: "kk", Name: "Kazakh", Tier: TierSecondary},
-	{Code: "ky", Name: "Kyrgyz", Tier: TierSecondary},
-	{Code: "pl", Name: "Polish", Tier: TierSecondary},
+	{Code: "ru", Name: "Russian"},
+	{Code: "en", Name: "English"},
+	{Code: "tr", Name: "Turkish"},
+	{Code: "ar", Name: "Arabic"},
+	{Code: "de", Name: "German"},
+	{Code: "es", Name: "Spanish"},
+	{Code: "fr", Name: "French"},
+	{Code: "it", Name: "Italian"},
+	{Code: "uk", Name: "Ukrainian"},
+	{Code: "kk", Name: "Kazakh"},
+	{Code: "ky", Name: "Kyrgyz"},
+	{Code: "pl", Name: "Polish"},
 }
 
 var SupportedLocales = supportedLocaleCodes()
@@ -58,14 +50,9 @@ func Normalize(code string) string {
 	return DefaultLocale
 }
 
-// SupportedReleaseLocales are the locales we actively localize in the first rollout.
+// SupportedReleaseLocales returns all supported locales in display order.
 func SupportedReleaseLocales() []string {
-	return localeCodesByTier(TierPrimary)
-}
-
-// SupportedSecondaryLocales are the locales that ship after the primary rollout.
-func SupportedSecondaryLocales() []string {
-	return localeCodesByTier(TierSecondary)
+	return supportedLocaleCodes()
 }
 
 // Profiles returns all supported locale profiles in display order.
@@ -79,16 +66,6 @@ func supportedLocaleCodes() []string {
 	out := make([]string, 0, len(localeProfiles))
 	for _, profile := range localeProfiles {
 		out = append(out, profile.Code)
-	}
-	return out
-}
-
-func localeCodesByTier(tier Tier) []string {
-	out := make([]string, 0)
-	for _, profile := range localeProfiles {
-		if profile.Tier == tier {
-			out = append(out, profile.Code)
-		}
 	}
 	return out
 }

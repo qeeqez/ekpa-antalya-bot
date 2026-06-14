@@ -50,13 +50,13 @@ func main() {
 	locales := make([]localeProfileView, 0, len(stats))
 	for _, profile := range locale.Profiles() {
 		if _, ok := stats[profile.Code]; ok {
-			locales = append(locales, localeProfileView{Code: profile.Code, Name: profile.Name, Tier: string(profile.Tier)})
+			locales = append(locales, localeProfileView{Code: profile.Code, Name: profile.Name})
 		}
 	}
 	sort.SliceStable(locales, func(i, j int) bool { return locales[i].Code < locales[j].Code })
 	for _, localeInfo := range locales {
 		s := stats[localeInfo.Code]
-		if err := writef(out, "  %s (%s, %s): %d screens, %d commands, %d fragments\n", localeInfo.Code, localeInfo.Name, localeInfo.Tier, s.Screens, s.Commands, s.Fragments); err != nil {
+		if err := writef(out, "  %s (%s): %d screens, %d commands, %d fragments\n", localeInfo.Code, localeInfo.Name, s.Screens, s.Commands, s.Fragments); err != nil {
 			exitWithError(err)
 		}
 	}
@@ -91,7 +91,6 @@ func main() {
 type localeProfileView struct {
 	Code string
 	Name string
-	Tier string
 }
 
 func writeLine(w io.Writer, text string) error {

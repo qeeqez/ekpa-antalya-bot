@@ -24,15 +24,12 @@ const (
 func TestLoadContentFile(t *testing.T) {
 	tmpDir := t.TempDir()
 
-	// Create test YAML file with MAIN_MENU and a child screen
+	// Create shared test YAML file with MAIN_MENU and a child screen
 	testYAML := `version: "1.0"
 commands:
   - command: "/start"
     description: "` + testCommandDescription + `"
     screen_id: "` + testMainMenuID + `"
-    locales:
-      en:
-        description: "` + testCommandDescriptionEN + `"
 screens:
   - id: "` + testMainMenuID + `"
     text: "Main Menu"
@@ -58,20 +55,34 @@ screens:
               text: "Content Button"
               type: "callback"
               callback: "CONTENT_CALLBACK"
-    locales:
-      en:
-        text: "` + testScreenTextEnglish + `"
-        button_texts:
-          ` + testContentButton + `: "Content Button EN"
-      tr:
-        text: "Test mesajı"
-        button_texts:
-          ` + testContentButton + `: "İçerik butonu"
 `
 
 	testFile := filepath.Join(tmpDir, "test.yaml")
 	if err := os.WriteFile(testFile, []byte(testYAML), 0644); err != nil {
 		t.Fatalf("Failed to write test file: %v", err)
+	}
+
+	enLocaleDir := filepath.Join(tmpDir, "locales", "en")
+	if err := os.MkdirAll(enLocaleDir, 0o755); err != nil {
+		t.Fatalf("Failed to create locale dir: %v", err)
+	}
+
+	enLocaleYAML := `version: "1.0"
+commands:
+  - command: "/start"
+    description: "` + testCommandDescriptionEN + `"
+screens:
+  - id: "` + testMainMenuID + `"
+    text: "*Main menu*"
+    button_texts:
+      ` + testButtonID + `: "` + testButtonTextEnglish + `"
+  - id: "` + testScreenID + `"
+    text: "` + testScreenTextEnglish + `"
+    button_texts:
+      ` + testContentButton + `: "Content Button EN"
+`
+	if err := os.WriteFile(filepath.Join(enLocaleDir, "test.yaml"), []byte(enLocaleYAML), 0o644); err != nil {
+		t.Fatalf("Failed to write locale test file: %v", err)
 	}
 
 	// Load content (navigation builds automatically)
@@ -93,6 +104,19 @@ screens:
 	// Main menu should have only original buttons (no auto-navigation)
 	if len(mainMenu.InlineKeyboard.Rows) != 1 {
 		t.Errorf("Expected 1 button row for MAIN_MENU, got %d", len(mainMenu.InlineKeyboard.Rows))
+	}
+
+	localizedMainMenu, err := repo.GetScreenForLocale(testMainMenuID, "en-GB")
+	if err != nil {
+		t.Fatalf("Failed to get localized main menu: %v", err)
+	}
+
+	if localizedMainMenu.Text != "*Main menu*" {
+		t.Fatalf("Expected localized main menu text %q, got %q", "*Main menu*", localizedMainMenu.Text)
+	}
+
+	if got := localizedMainMenu.InlineKeyboard.Rows[0].Buttons[0].Text; got != testButtonTextEnglish {
+		t.Fatalf("Expected localized main menu button text %q, got %q", testButtonTextEnglish, got)
 	}
 
 	// Test child screen retrieval (should have auto-navigation)

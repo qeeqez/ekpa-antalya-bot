@@ -1,0 +1,64 @@
+version: "1.0"
+
+commands:
+  - command: "/start"
+    description: "القائمة الرئيسية"
+  - command: "/menu"
+    description: "القائمة الرئيسية"
+  - command: "/botlink"
+    description: "رابط البوت"
+  - command: "/ourchats"
+    description: "محادثاتنا"
+
+screens:
+  - id: "MAIN_MENU"
+    text: "*القائمة الرئيسية*"
+    button_texts:
+      ekpa_main_chat: "🏠 الدردشة الرئيسية EKPA"
+      our_chats: "💬 محادثاتنا"
+      directions: "🏡 في المجمع وما حوله"
+      info_useful: "⭐️ معلومات"
+      info_ekpa: "🌟 كل شيء عن EKPA"
+      address: "📍 عنواننا"
+      suggest_changes: "✍️ اقترح تغييرات"
+  - id: "ADDRESS"
+    text: |
+      *عنواننا:*
+
+      *الولاية:* `Antalya`
+      *المنطقة:* `Kepez`
+      *الحي:* `Güneş`
+      *الشارع:* `Şehit Astsubay Ömer Halis Demir`
+      *المجمع:* `Ekpa 1207`
+      *الكتلة* \(Block\)، *الشقة* \(Apartment\)، *الطابق* \(Floor\)
+
+      *الرمز البريدي:* `07260`
+
+      *ترقيم الكتل:*
+
+      `A1` \- `95A`
+      `A2` \- `95AA`
+      `A3` \- `95AB`
+      `A4` \- `95AC`
+      `B`  \- `95B`
+      `C`  \- `95C`
+      `D`  \- `95D`
+      `E1` \- `95E`
+      `E2` \- `95EA`
+
+      *اضغط للنسخ:*
+      `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
+  - id: "BOT_LINK"
+    text: |
+      *رابط البوت:*
+
+      https://t\.me/EkpaAntalyaBot
+
+      شارك الرابط مع الجيران 😊
+  - id: "OUR_CHATS_INFO"
+    text: |
+      *💬 محادثاتنا*
+
+      اختر الدردشة التي تريدها من القائمة أدناه\.
+    button_texts:
+      our_chats_detailed: "📋 قائمة المحادثات"

@@ -1,0 +1,164 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 İkamet izni / Kayıt / Belgeler*'
+  button_texts:
+    check_application_status: ✅ Oturma izni başvurunuzun durumunu kontrol edin
+    get_id_number: 🆔 Oturma izni numarasını öğrenin
+    tax_number: 🪪 HAN
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖 Numarataj
+    address_registration: 📌 Kayıt
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Çok çeşitli Devlet Hizmetlerine sahip web sitesi:
+
+    \- Sertifika ve beyanların alınması
+
+    \- Bedava ilaç
+
+    \- Telefonunuzun kilidini açın
+
+    \- Çok daha fazlası
+
+
+    🌎[Site linki](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *Nasıl bağlanılır*
+
+    \- Oturma izni alın \(ikamet\)
+
+    \-Türkçe telefon numarasına sahip olun
+
+    \- Postanede \(PTT\), EDevlet deyin
+
+    \- 20 liraya uçuş şifresi yapacaklar, SMS ile gelecek
+
+
+    📍 [En yakın postane](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Web sitesi
+    edevlet_android: 🤖Android
+    edevlet_iphone: 📱iPhone
+- id: TAX_NUMBER
+  text: '*🪪TIN \(Türk Vergi Numarası\)*
+
+
+    ℹ️ *Ne için?*
+
+    \- Kendiniz için Dask ve yardımcı programların kaydı
+
+    \- Oturma izni
+
+    \- Banka hesabı açmak
+
+
+    🌎 *Çevrimiçi olun*
+
+    \- [Vergi web sitesine](https://ivd.gib.gov.tr/) gidin
+
+    \- Orta alt düğmeyi seçin
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- *VATANDAŞ OLMAYANLARIN POTANSİYEL VERGİ NUMARASI BAŞVURUSU*
+
+    \- Bilgilerinizi girin
+
+
+    💸 *Vergi dairesinden alın*
+
+    \- Bazen online sistem hata veriyor ve vergi dairesine gitmeniz gerekiyor
+
+    \- Vergi Dairesi [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖 Numarataj \(Numarataj\)*
+
+
+    ℹ️ *Sertifika onay adresi*
+
+    \- Kayıt için gerekli
+
+    \- Oturma izni almak için gerekli
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. Pasaport
+
+    2\. Tapu
+
+    3\. Kira sözleşmesi
+
+    4\. Bu belgelerin kopyaları
+
+
+    ℹ️ *Alma talimatları:*
+
+    1\. [Kepez Belediye''de](https://goo.gl/maps/Fb68nczEehmjzf4K9) belgelerin kopyalarını alın
+
+    2\. 2. kata çıkıp Numarataj tabelalarını takip ederek D blok koridoruna giriniz.
+
+    3\. Bilet al, seni arayacaklar
+
+    4\. Kişiye belgelerin tüm kopyalarını verin
+
+    5\. Tek tek birinci kata inin, evraklarınızı pencereden dışarı verin, üzerinize pul basacaklar
+
+    6\. İkinci kata dönün, Numaratazh sertifikası verecekler
+
+    ⚠️ Eğer birkaçınız varsa, bu sertifikaya kayıtlı olması gereken herkesin pasaportlarının fotokopilerini verin.
+
+
+    📍[Kepez Belediye''de](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 km\)''de her şey yapılıyor.
+
+    ⚡️ Zemin katta 1 TL karşılığında evrak fotokopisi yaptırabilirsiniz.'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Kayıt*
+
+
+    ℹ️ *Oturma izni alındıktan sonraki 20 gün içerisinde kayıt yaptırılmalıdır*
+
+    \- Yanınıza çocuk almanıza gerek yok, herkesin yetişkin olması tavsiye edilir
+
+    \- İkamet izni kayıt olmadan yenilenmeyecektir
+
+
+    ℹ️ Yabancılar için online kayıt artık mümkün değildir
+
+    ℹ️ Yabancıların Nufus''a kaydolmasına gerek yoktur, ancak özel durumlarda sizi oraya kaydettirebilirler
+
+
+    📌 *Göç''te kayıt*
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. İkamet \(oturma izni\)
+
+    2\. Tapu veya kira sözleşmesi
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Tapu/Antlaşma ve Numarataj fotokopileri
+
+    5\. Adınıza su veya elektrik makbuzu
+
+
+    ⚡️ *Önemli:*
+
+    \- Fişin taze olması gerekmektedir, aksi takdirde reddedeceklerdir
+
+    \- Daire sahibinin kimlik ve tapa fotokopisini isteyebilirler.
+
+
+    📍 *Oraya nasıl gidilir:*
+
+    \- [Goc İdaresi]''ne gelin(https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- Girişte *Adres* deyin ve ikametinizi gösterin, sizi içeri alacaklar
+
+    \- Binada *Adres* deyin, randevu için pencerelerin solundaki odaya çağrı gelmesini bekleyin'

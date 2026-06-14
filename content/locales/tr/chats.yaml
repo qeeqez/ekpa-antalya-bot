@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Sohbetlerimiz*'
+  button_texts:
+    trade_chat: 🛍️ Bit Pazarı - Ürün ve Hizmetler
+    blocks_chat: 🏘 Bloklara göre sohbetler
+    parents_chat: 👶 Ebeveynler için
+    animals_chat: 😸 Hayvanlar 🐶
+    sport_chat: 🏃‍♂️ Spor
+    sport_games_chat: 🏀 Spor Oyunları
+    board_games_chat: 🎲 Panolar
+    gaming_chat: 🎮 Oyun
+    it_chat: 🧑‍💻BT
+- id: BLOCKS_CHAT
+  text: '*🏘 Sohbetleri Engelle*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

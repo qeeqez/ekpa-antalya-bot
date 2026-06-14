@@ -1,0 +1,107 @@
+version: '1.0'
+screens:
+- id: TRANSPORT
+  text: '*🚌 Ulaşım*'
+  button_texts:
+    bus: 🚌 Otobüs
+    antalya_card: 🪪Antalya Kart
+    taxi: 🚕 Taksi
+    kick_scooter: 🛴 Scooterlar
+- id: BUS
+  text: "*\U0001F68EToplu taşıma*\n\n \U0001F4CD Rota en iyi şekilde *Google Haritalar*'da planlanır\n \U0001F9ED Otobüslerin\
+    \ güncel konumunu *AntalyaKart* uygulamasından görebilirsiniz\n\n \U0001F4B5 *Ücret*\n AntalyaKart \\- 9\\.6 TL\n Banka\
+    \ kartı \\- 9\\.85 TL\n\n \U0001FA99️ *Transfer ücreti*\n AntalyaKart \\- 3 TL\n Banka kartı \\- 9\\.85 TL\n\n ℹ️ *6 yaş\
+    \ altı çocuklar ücretsizdir*\n ⚠️ *Ulaşımda nakit ödeme yasaktır*"
+  button_texts:
+    bus_concessionary: 🎫 Faydaları
+- id: BUS_CONCESSIONARY
+  text: '🧒👴 *Tercihli seyahat*
+
+
+    ℹ️ İndirimli seyahat için indirim kartı oluşturmanız gerekir
+
+
+    💵 *Ücret*
+
+    Öğrenciler ve okul çocukları \- 4 TL
+
+    Yaşlı, Engelli, Öğretmen \- 8\.4 TL
+
+
+    🪙️ *Transfer ücreti \- 3 TL*
+
+
+    ⁉️️ *İndirim kartı nasıl alınır?*
+
+    \- Çocuklara, yaşlılara ve engellilere, öğretmenlere verilir
+
+    \- Fotoğraflı kişiselleştirilmiş kart
+
+    \- Çocuğun okuldan öğrenci olduğunu belirten bir belgeye ihtiyacı var
+
+    \- Sadece AntalyaKart ana şubelerinde yapılabilmektedir.
+
+    \- [En yakın şube burada](https://goo.gl/maps/UHUeQU8AqJ9D4DSy6), yeraltı geçidinde'
+- id: ANTALYA_CARD
+  text: "*\U0001F4B3Antalya Kart*\n\n ℹ️ Bu kartla ücret daha ucuz\n ℹ️İki kişilik ödeme yapabilirsiniz, ilk ödemeden sonra\
+    \ beklemeniz gerekmektedir.\n\n \U0001F4CD *Nereden satın alınır?*\n \\- En yakın [Soylu Pazarı'nda](https://goo.gl/maps/XLS1rGdPT9dvaziG9)\n\
+    \ \\- *Antalya Kart* uygulamasında *En yakın nokta* bölümünde satış noktaları kırmızı renkle işaretlenmiştir\n\n \U0001FA99\
+    \ *Nasıl yükleme yapılır?*\n \\- Satın aldığınız yerde nakit olarak yükleme yapabilirsiniz\n \\- Antalya Kart uygulamasında\
+    \ Türk banka kartıyla online yükleme yapın\n\n ⁉️ *Karta para yükledim ama para görünmedi*\n \\- Otobüsteki terminalde\
+    \ kırmızı kontör yükleme düğmesine basın\n \\- 5 saniye basılı tutun\n\n \U0001F68C *Uygulamada rotalar nasıl görüntülenir?*\n\
+    \ \\- Google Haritalar'da uygun bir rota bulun\n \\- Antalya Kart uygulamasında arama kısmına güzergah numarasını giriniz\n\
+    \ \\- Güzergahın tamamı ve gri otobüsler, o anda seyahat ettikleri yerlerde görüntülenecek\n \\- İşaretle \\-\\> rotanın\
+    \ sonu, Üçgen \\-\\> başlangıcı\n \\- Yeşil tuşa basılarak rota yönü değiştirilebilir"
+  button_texts:
+    antalya_card_android: 🤖Android
+    antalya_card_iphone: 📱iPhone
+- id: TAXI
+  text: '*🚖 Taksi*
+
+
+    ℹ️Taksi çağırma düğmeleri Antalya''nın her yerinde asılı, araba gece geç saatte bile geliyor
+
+
+    🤙 *Arayabilirsiniz:*
+
+    1\. Girmeden önce düğme
+
+    2\. BiTaksi uygulaması
+
+    3\. Uber uygulaması
+
+
+    💵 *Maliyet: İniş 10TL \+ 14TL/km*
+
+
+    🪙 *Ödeme*
+
+    \- Aynadaki tezgaha göre
+
+    \- Başvurularda maliyet aynı sayaç kullanılarak hesaplanır
+
+    \- Nakit olarak lira veya kartla ödeme yapabilirsiniz.(tüm taksilerde geçerli değildir\)
+
+    \- Uygulamada bağlantılı kartla ödeme yapmak mümkündür'
+- id: KICK_SCOOTER
+  text: '*🛴 Scooterlar*
+
+
+    ℹ️ *Antalya''da scooter kiralama hizmetleri:*
+
+    \- *BinBin* \(kompleksimizin yakınına gidin\)
+
+    \- *Marti*
+
+    \- *Atlama*
+
+    \- *Işın*
+
+    \- *Atlama*
+
+    \- *Gez*
+
+    \- *Tornet*
+
+
+    ℹ️ Bisiklet kiralama hizmeti *Antbis* sahil boyunca faaliyet göstermektedir'

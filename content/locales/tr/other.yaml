@@ -1,0 +1,100 @@
+version: '1.0'
+screens:
+- id: CAR_FINE
+  text: "*\U0001F697 Yabancı Plakalı Araçlara Ceza*\n\n ℹ️ *Cezaları kontrol edin*\n \\- [Vergi web sitesine](https://ivd.gib.gov.tr/)\
+    \ gidin\n \\- Sağ alttaki düğmeyi seçin\n \\- *Yabancı Plakalı Araç Ödemeleri \\(Yabancı Araç Ödemeleri\\)*\n \\- Araba\
+    \ numarasını girin\n\n \U0001F4B3 *Çevrimiçi ödeme yapın*\n \\- Cezayı kontrol ettikten sonra orada yapabilirsiniz\n \\\
+    - Ödeme yalnızca Türk Kredi Kartı ile yapılabilir\n \\- Vergi dairesi aracılığıyla ödeme seçerken ikinci sekmeye \\(ikinci\
+    \ sekme\\) geçerseniz\n \\- Ziraat veya Vakıf Pay üzerinden ödeme yapılabilecek\n\n \U0001FA99 *Nakit ödeyin*\n \\- Vergi\
+    \ dairesinde [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)"
+- id: PHONE_UNLOCK
+  text: '*📲Telefonunuzun kilidini açın*
+
+
+    ℹ️ *Türkiye''de 2 farklı telefon kilidi bulunmaktadır*
+
+    1\. SIM kart 90 gün sonra bloke edilir \(turist\)
+
+    2\. 120 gün sonra \(herhangi bir Türk SIM kartı takıldıktan sonra\) telefonun kendisi bloke edilir.'
+  button_texts:
+    phone_unlock_sim: 📱 SIM'in kilidini açın (Turist)
+    phone_unlock_imei: 📱 Telefonunuzun kilidini açın (IMEI)
+- id: PHONE_UNLOCK_SIM
+  text: '*📱 SIM''in kilidini açın \(Turist\)*
+
+
+    ℹ️ *Ne tür bir engelleme?*
+
+    \- SIM kartınız İkamet \(oturma izni\) için değil de pasaport için verilmişse
+
+    \- O halde burası turistik bir yer ve 90 gün içinde kapatılacak
+
+
+    🆓 *Kilit nasıl açılır*
+
+    \- Telekom operatörünün başvurusuna ikamet numaranızı girin \(eğer varsa, numaranın kendisi yeterlidir, dolayısıyla kağıt
+    üzerinde olan da işe yarayacaktır\)
+
+    \- İkamet yoksa başka bir kişiye bağlamak mümkün olmayacaktır.
+
+
+    ⚡️ *Alternatif yöntemler*
+
+    \- Geçici bir çözüm olarak kompleksin yakınındaki yerel bir kişi adına verilen SIM kartı satın alabilirsiniz.
+
+    \- Oturma izni olan bir kişi için Sim''i yeniden kaydedin'
+- id: PHONE_UNLOCK_IMEI
+  text: '*📱 Telefonunuzun kilidini açın \(IMEI\)*
+
+
+    ℹ️ *Ne tür bir engelleme?*
+
+    \- Getirilen telefona Türk SIM kartı takıldığı andan itibaren 120 gün sonra bloke oluyor\.
+
+    \- Yalnızca Türkiye''de engellendi \(diğer ülkelerde tam olarak çalışmaya devam ediyor\)
+
+    \- Engellenen telefonun kendisi değil, IMEI yani\. belirli SIM kart yuvası\.
+
+    \- Hiçbir SIM kart, çağrı veya SMS çalışmayacaktır\. Telefonda “Ağ Yok” ve “Telefona izin verilmiyor”\ yazıyor.
+
+    \- Telefonun kendisi, Wi-Fi ve İnternet üzerinden anlık mesajlaşma programlarındaki aramalar da dahil olmak üzere çalışmaya
+    devam ediyor\.'
+  button_texts:
+    phone_unlock_imei_free: 🆓 Ücretsiz seçenek
+    phone_unlock_imei_paid: 💰 Ücretli seçeneği (30000 TL)
+    phone_unlock_imei_reblock: 🤯 Telefon yine engellenirse
+- id: PHONE_UNLOCK_IMEI_FREE
+  text: '🆓 *Ücretsiz telefon kilidini açma*
+
+    \- SIM kartı varsa ikinci yuvaya takın \(bazı telefonlarda ESIM yapabilirsiniz\)
+
+    \- Artık 120 gün geri sayılacak
+
+    \- Süre dolduktan sonra ikinci slot da bloke edilecek
+
+
+    ❗️ Edevlet aracılığıyla bir yıl boyunca ücretsiz kilit açma artık işe yaramıyor, Kovid onuruna geçici bir promosyondu
+
+
+    ⚡️ *Alternatif seçenek*
+
+    \- Ucuz bir telefon satın alın ve WiFi''yi ondan dağıtın
+
+    \- 4G Modem satın alın ve dağıtımını yapın, ancak o zaman çağrı almak imkansız hale gelir'
+- id: PHONE_UNLOCK_IMEI_PAID
+  text: "*\U0001F4B0 Resmi ücretli telefon kilidini açma*\n\nℹ️ 1 Kişi 3 yılda bir 1 telefon kaydedebilir\\.\n*Gerekli:* bu\
+    \ kişinin en geç 365 gün önce yurt dışından gelmiş olması gerekir\n\n\U0001F4B0 *2024 fiyatı: 30000 TL \U0001F92F*\n\n\
+    \U0001F9E7 *Kayıt süreci:*\n\\- Mail yoluyla gelen ikamet numarası ve şifrenizi kullanarak Edevlet'e giriş yapın\n\\-\
+    \ [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet) sayfasına gidin \\(veya `IMEI Kaydet`\\'i arayın)\n\\- Bilgilerinizi\
+    \ girin \\(telefondaki tüm IMEI'ler, pasaportunuz ve ülkeye giriş tarihiniz\\)\n\\- Ödeme\n\n\U0001FA99 *Nakit ödeme*\n\
+    \\- Vergi dairesine nakit olarak ödeyebilirsiniz\n\\- Ödeme yapıldıktan sonra Edevlet üzerinden [imei kaydet](https://www.turkiye.gov.tr/btk-imei-kaydet)\
+    \ sayfasından kilit açma başvurusu yapmanız gerekmektedir.\n\n\U0001F4B5 *Çevrimiçi ödeme*\n\\- Ödeme yalnızca Türk kartıyla\
+    \ mümkündür\\. Yalnızca kredi, banka kartı kabul edilmez\n\\- Vergi dairesi \\(Vergi Dairesi\\) aracılığıyla ödeme yapmayı\
+    \ seçebilirsiniz.\n     \\- Kart girmek yerine ikinci sekmeye geçin\n     \\- ZiraatPay ve VakıfPay ile ödeme yapılabilecek,\
+    \ zirat üzerinden yaptım\n\n⛔️ *Eksileri*\n\\- Aynı İkamet'e kayıtlı bir SIM kart kullanmalısınız\n\\- Bu kural 3 yıl\
+    \ süreyle geçerlidir, ardından herhangi bir SIM kartı kullanabilirsiniz."
+- id: PHONE_UNLOCK_IMEI_REBLOCK
+  text: "\U0001F92F *Telefon tekrar engellenirse*\n\nℹ️Telefon ve içindeki SIM kartın aynı İkamet'e kayıtlı olması gerekir\n\
+    \n✅ *Her şey yolundaysa*\n\U0001F4F2 Açıklama için 120 numaralı BTK servisini arayın \\(İngilizce operatör seçeneği mevcuttur\\\
+    )\n\n\U0001F6A8 *Aksi takdirde*\n\\- SIM'inizi operatörünüzden başka bir İkamet'e aktarın\n    \\- Mevcut ücretli paket\
+    \ kayboldu\n    \\- Aktarımın kendisi ücretsiz olmayabilir\n\\- Yeni bir SIM kart açın"

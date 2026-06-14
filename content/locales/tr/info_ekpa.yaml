@@ -1,0 +1,474 @@
+version: '1.0'
+screens:
+- id: INFO_EKPA
+  text: '*🌟 Ekpa hakkında her şey*'
+  button_texts:
+    management_office: 🧑‍💼 Yönetim Ofisi
+    how_to_pay: 💰 Ödeme
+    how_to_connect: 🧑‍🔧 Bağlan / Yeniden kaydol ♻️
+    how_to_disconnect: ⛔️ Devre dışı bırak
+- id: MANAGEMENT_OFFICE
+  text: '*Yönetim Şirketi*
+
+
+    💼 *Ofis*
+
+    [C Blok](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 kat, girişten sola
+
+
+    🕘 *Pazartesi \- Cumartesi*
+
+    08:30\- 12:30
+
+    13:30\- 17:30
+
+
+    *🛠️ Arızalar ve Şikayetler*
+
+    \+90 \(539\) 6703316
+
+
+    *💰 Ödeme \- Aydat ve Klimalar*
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Güvenlik*
+
+    \+90 \(539\) 6703833
+
+
+    *🧑‍💼Yönetici*
+
+    EBRU HANIM'
+- id: HOW_TO_PAY
+  text: '*💰 Nasıl ödeme yapılır?*'
+  button_texts:
+    how_to_pay_aidat: 💸 Aidat
+    how_to_pay_conditioner: ❄️Klima
+    how_to_pay_electricity: ⚡️ Elektrik
+    how_to_pay_water: 💧 Su
+    how_to_pay_phone_internet: 📱Cep telefonu ve İnternet 🌎
+- id: HOW_TO_PAY_AIDAT
+  text: '*Aidat*
+
+
+    ℹ️ Kompleksin aylık bakım ücreti\.
+
+    ⚠️Apartman dairesinde yaşamasanız bile ödeme yapmanız gerekmektedir\.
+
+
+    *Maliyet:*
+
+    ''''''''
+
+    1\+1\- 840 TL
+
+    2\+1\- 1310 TL
+
+    2\+1\- 1590 TL \(Ayrı mutfak\)
+
+    3\+1\- 1970 TL
+
+    ''''''''
+
+    *Ödeme süresi:*
+
+    ⏳ Her ayın 5’ine kadar
+
+
+    *Ödeme:*
+
+    🪙 Yönetim Şirketi Ofisinde nakit veya kart
+
+
+    💳 Türk banka kartından hesaba online transfer:
+
+
+    🏦`TR24 0013 4000 0203 8787 9000 01`
+
+
+    *Alıcının adı ve ödeme açıklaması*
+
+    🧑`EKPA 1207 SİTESİ YÖNETİMİ`
+
+    ℹ️`Aidat Ekpa 1207` Blok Daire Ayı
+
+
+    ⚠️Ödeme yaptığınız blok, daire ve ayın numarasını mutlaka belirtin'
+- id: HOW_TO_PAY_CONDITIONER
+  text: '*Klima*
+
+
+    ℹ️ Merkezi klima sistemi elektrik faturasına dahil değildir\.
+
+    ⚠️Türkiye''nin sıcak bir ülke olduğunu ve burada elektriğin pahalı olduğunu unutmayın\.
+
+
+    *Ödeme süresi:*
+
+    ⏳ Faturanın alındığı tarihten itibaren 7 gün
+
+    ⚠️Ödeme yapılmazsa devre dışı bırakılır\. Uzaktan kumandada bir kilit simgesi ve Merkezi\ görünecektir.
+
+
+    *Ödeme:*
+
+    🪙 Yönetim Şirketi Ofisinde nakit veya kart
+
+
+    💳 Türk banka kartından hesaba online transfer:
+
+
+    🏦`TR24 0013 4000 0203 8787 9000 01`
+
+
+    *Alıcının adı ve ödeme açıklaması*
+
+    🧑`EKPA 1207 SİTESİ YÖNETİMİ`
+
+    ℹ️`Klima Ekpa 1207` Blok Daire
+
+
+    ⚠️Ödeme yaptığınız blok ve daire numaralarını mutlaka belirtin'
+- id: HOW_TO_PAY_ELECTRICITY
+  text: '*Elektrik*
+
+
+    ℹ️Klima elektrik faturasına dahil değildir\.
+
+
+    ℹ️ *Abone numarası* bağlantı sırasında verilir ve ödeme kartının üzerinde de belirtilir\.
+
+
+    *Ödeme süresi:*
+
+    ℹ️Fatura ay sonunda kesilir
+
+    ⏳ Ödemenin fatura kesildikten sonraki 10 gün içinde yapılması gerekmektedir\.
+
+
+    *Elektrik faturanızı nasıl öğrenirsiniz:*
+
+    \- Ödeme yaparken Türk İnternet bankasında
+
+    \- Adrese gelen ödeme makbuzu birinci katta duvardaki bir kutuya konulur
+
+    \- Online olarak [CK Akdeniz](https://online.ckakdeniz.com.tr) web sitesinde
+
+
+    *Ödeme:*
+
+
+    💳 *Türk İnternet Bankacılığında Online*
+
+    1\. Fatura \(Fatura Ödeme\) \-\> Elektrik \(Elektrik\) \-\> *CK Akdeniz Elektrik*
+
+    2\. *abone numaranızı* girin
+
+    3\. Tutarı görecek ve ödeyebileceksiniz
+
+    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir.
+
+
+    🪙 *Nakit veya kart*
+
+    \- Turkcell şubesinde küçük bir komisyonla [En Yakın 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [En Yakın 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- PTT postanesinde, [En yakın postane](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+
+    \- CK Akdeniz Elektrik''in herhangi bir ofisinde, [En yakın ofis](https://goo.gl/maps/nyumU39FQYJTnFZt9)'
+- id: HOW_TO_PAY_WATER
+  text: '*Su*
+
+
+    ℹ️ *Abone numarası* bağlantı sırasında verilir ve ödeme kartının üzerinde de belirtilir\.
+
+
+    *Ödeme süresi:*
+
+    ℹ️Fatura ay sonunda kesilir
+
+    ⏳ Ödemenin fatura kesildikten sonraki 10 gün içinde yapılması gerekmektedir\.
+
+
+    *Su faturanızı nasıl öğrenirsiniz:*
+
+    \- Ödeme yaparken Türk İnternet bankasında
+
+    \- Adrese gelen ödeme makbuzu birinci katta duvardaki bir kutuya konulur
+
+    \- Çevrimiçi olarak [ASAT](https://online.asat.gov.tr/webportal/index.php)\ web sitesinde. HIZLI ÖDEME''ye tıklayın
+
+
+    *Ödeme:*
+
+
+    💳 *Türk İnternet Bankacılığında Online*
+
+    1\. Fatura \(Fatura Ödeme\) \-\> Su \(Su\) \-\> *Antalya Su \(ASAT\)*
+
+    2\. *Abone numaranızı* girin \(Numaranın soluna birkaç sıfır ekleyin\)
+
+    3\. Tutarı görecek ve ödeyebileceksiniz
+
+    ⚠️Fatura henüz kesilmemişse uygulama hata verecektir.
+
+
+    🪙 *Nakit veya kart*
+
+    \- Turkcell şubesinde küçük bir komisyonla [En Yakın 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [En Yakın 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- PTT postanesinde, [En yakın postane](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+
+    \- [ASAT Merkez Ofisinde](https://goo.gl/maps/3GqKDPPnW8gUUz5q6)'
+- id: HOW_TO_PAY_PHONE_AND_INTERNET
+  text: '*📱Cep telefonu ve İnternet 🌎*
+
+
+    💳 *Online uygulamada veya operatörünüzün web sitesinde*
+
+    \- Telefonunuz için bir sonraki aya ait bir paket seçmeniz gerekiyor
+
+    \- Bakiyenizi kolayca doldurabilir ve daha sonra paketler için ödeme yapabilirsiniz.
+
+    \- İnternet için bir önceki aya ait faturayı ödemeniz gerekmektedir
+
+
+    🪙 *Nakit veya kart*
+
+    \- Turkcell şubesinde küçük bir komisyonla [En Yakın 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [En Yakın 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- Telekom operatörünüzün herhangi bir ofisinde'
+- id: HOW_TO_CONNECT
+  text: '*🧑‍🔧 Nasıl bağlanılır/yeniden kayıt olunur? ♻️*
+
+
+    1️⃣ İlk bağlantı süreci yeniden kayıttan farklı değildir
+
+    2️⃣ Yeniden kaydolurken, önceki ödeme yapan kişinin bağlantıyı kesmek için ayrıca seyahat etmesine gerek yoktur'
+  button_texts:
+    connect_dask: 🛡️ Dask
+    connect_electricity: ⚡️ Elektrik
+    connect_water: 💧 Su
+    connect_internet: 🌎 İnternet
+- id: HOW_TO_CONNECT_DASK
+  text: '*🛡️Dask Deprem Sigortası*
+
+
+    ℹ️ *Bilgi:*
+
+    \- Su ve elektrik hesabı açmak için gereklidir\.
+
+    \- Asat veya CK Akdeniz Elektrik''e gitmeden önce *zaten Dask''a sahip olmalısınız*\.
+
+    \- Dask Bank''ta yapamazsınız\.
+
+    \- Bunu aşağıdaki bağlantıyı kullanarak herhangi bir sigorta şirketinden veya Nkolay''dan yapabilirsiniz\.
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. Tapu veya kira sözleşmesi
+
+    2\. Pasaport veya İkamet
+
+    3\. Türk Vergi Numarası \(Numaranın kendisi yeterlidir\)
+
+    4\. Açık adres / Ekpa''ya söyle
+
+
+    📍 *[Nkolay''da] Dask siparişi verin(https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
+- id: HOW_TO_CONNECT_ELECTRICITY
+  text: '*⚡️Elektrik*
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. *Tapu* veya *kira sözleşmesi*
+
+    2\. *Pasaport* veya *İkamet*
+
+    3\. Türkçe *vergi numarası* \(Numaranın kendisi yeterlidir\)
+
+    4\. Deprem sigortası *Dask*
+
+    5\. *Depozito için para* (Bağlantı kesildiğinde iade edilir\)
+
+
+    📍 *Yalnızca [CK Akdeniz Elektrik merkez ofisinden](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9) bağlanabilirsiniz*
+
+
+    🧑‍💼*Ceza Kanunu''na bildirin:*
+
+    Blok ve daire numarası ile elektrik abone numarası\.
+
+
+    ℹ️ Dairede 1 iş günü içinde ışık görünecektir\.
+
+    ℹ️ Elektrikle ilgili sorun varsa\- Ceza Kanunu''na bildirin\.
+
+
+    ⚠️Elektrik panosu dolapta\.
+
+    ⚠️ Elektrik sayacı bodrum katında kapalı bir kapının arkasında bulunmaktadır\.'
+- id: HOW_TO_CONNECT_WATER
+  text: '*💧Su*
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. *Tapu* veya *kira sözleşmesi*
+
+    2\. *Pasaport* veya *İkamet*
+
+    3\. Türkçe *vergi numarası* \(Numaranın kendisi yeterlidir\)
+
+    4\. Deprem sigortası *Dask*
+
+    5\. *Depozito için para* (Bağlantı kesildiğinde iade edilir\)
+
+
+    📍 *[ASAT]''a su bağlayın(https://goo.gl/maps/PMfUJd315NtC9dur6)*
+
+
+    🧑‍💼*Ceza Kanunu''na bildirin:*
+
+    Blok ve daire numarası ile su abone numarası\.
+
+
+    ℹ️ 3 iş günü içerisinde daireye su gelecektir\.
+
+    ℹ️ Musluklarda su veya basınç sorunu varsa\- Ceza Kanunu''na bildirin\.
+
+
+    ⚠️ Dairede suyu kesecek vana bulunmaktadır\.
+
+    \- 1\+1''de lavabonun altına bakın\.
+
+    \- 2\+1''de ruh vardır\.'
+- id: HOW_TO_CONNECT_INTERNET
+  text: '*🌎İnternet*
+
+
+    ℹ️ *İnternete bağlanmak için oturma iznine ihtiyacınız var \(ikamet\)*
+
+
+    ℹ️ *Türkiye''de ev interneti sözleşmeli*
+
+    \- Sözleşme bir veya iki yıllıktır
+
+    \-Sözleşmenin erken feshedilmesi durumunda ceza ödenir
+
+    \- Ödeme aylık olarak yapılır
+
+
+    🌐 *İnternet operatörleri*
+
+    \- [Türk Telekom](https://turktelekom.com.tr/)
+
+    \- [Turkcell Superonline](https://www.superonline.net/)
+
+    \- [Türksat Kablo](https://www.fiberkablonet.com/)
+
+
+    ℹ️Bağlanmak için ikamet\ ile operatör ofisine başvurmanız gerekir. Fiyat, operatörün web sitesindeki fiyatla aynıdır\.
+
+    ⚠️ Ofis adresimizi sistemde bulamayabilir, siteye en yakın ofislerle iletişime geçmenizi öneririz\.
+
+
+    🏴‍☠️ *Oturma izni olmadan bağlanın*
+
+    \- Oturma izni olmadan bağlanmak için interneti kendisine ayarlayacak kişiyi bulmanız gerekir.
+
+    \- Bu genellikle daha pahalıdır; birçok “yardımcı” böyle bir hizmet için para talep eder\.
+
+    \- Emlakçınız veya İnternet operatörlerinin ofisleri aracılığıyla bir yardımcı bulabilirsiniz\.
+
+
+    ⚡️ *Alternatif yöntemler*
+
+    \- İnternet''i telefonunuzdan paylaşın
+
+    \- Komşularınızdan yardım isteyin, Wi-Fi paylaşın'
+- id: HOW_TO_DISCONNECT
+  text: '*⛔️ Nasıl devre dışı bırakılır?*'
+  button_texts:
+    disconnect_electricity: ⚡️ Elektrik
+    disconnect_water: 💧 Su
+- id: HOW_TO_DISCONNECT_ELECTRICITY
+  text: '*⚡️Elektrik*
+
+
+    💰 Bağlantıyı keserseniz, bağlantı sırasında ödenen depozito, ödeme bakiyesi düşülerek iade edilir
+
+
+    🌎 *Çevrimiçi devre dışı bırak*
+
+    \- Edevlet''e Giriş Yapın
+
+    \- [Ck Akdeniz Feshi Başvurusu](https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
+    sayfasına gidin
+
+    \- Veya arama kısmına `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu` yazın
+
+    \- *"Yeni Başvuru" \(Yeni Başvuru\)*''ya tıklayın, bir hesap seçin ve bilgilerinizi girin
+
+    \- Paranın aktarılacağı IBAN''ı girin
+
+    ⚠️ *Çevrimiçi bağlantıyı yalnızca İkamet''e bağlıysanız kesebilirsiniz*
+
+
+    📍 *[CK Akdeniz Elektrik merkez ofisinde] elektriği çevrimdışı olarak kapatın(https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. *Abone numarası* \(sistemde daha hızlı bulunacaktır\)
+
+    2\. *Pasaport* veya *İkamet*
+
+    3\. Paranın aktarılacağı *IBAN*
+
+
+    ℹ️ 24 saat içinde dairenin elektriği kesilecektir\.
+
+    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır.'
+- id: HOW_TO_DISCONNECT_WATER
+  text: '*💧Su*
+
+
+    💰 Bağlantıyı keserseniz, bağlantı sırasında ödenen depozito, ödeme bakiyesi düşülerek iade edilir
+
+
+    🌎 *Çevrimiçi devre dışı bırak*
+
+    \- Edevlet''e Giriş Yapın
+
+    \- [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu) sayfasına
+    gidin
+
+    \- Veya arama kısmına `ASAT Abonelik Sözleşmesi Feshi Başvurusu` yazın.
+
+    \- *"Yeni Başvuru" \(Yeni Başvuru\)*''ya tıklayın, bir hesap seçin ve bilgilerinizi girin
+
+    \- Paranın aktarılacağı IBAN''ı girin
+
+    ⚠️ *Çevrimiçi bağlantıyı yalnızca İkamet''e bağlıysanız kesebilirsiniz*
+
+
+    📍 *[ASAT]''ta suyu çevrimdışına alın(https://goo.gl/maps/PMfUJd315NtC9dur6)*
+
+
+    💼 *Yanınızda götürün:*
+
+    1\. *Abone numarası* \(sistemde daha hızlı bulunacaktır\)
+
+    2\. *Pasaport* veya *İkamet*
+
+    3\. Paranın aktarılacağı *IBAN*
+
+
+    ℹ️ 3 iş günü içerisinde dairedeki su kaybolacaktır\.
+
+    ℹ️Para ancak bağlantı kesildikten sonra 7\-30 gün\ içinde Türk hesabına aktarılacaktır.'

@@ -1,0 +1,164 @@
+version: '1.0'
+screens:
+- id: IMPORTANT_DOCUMENTS
+  text: '*📝 Residence permit / Registration / Documents*'
+  button_texts:
+    check_application_status: ✅ Check the status of your residence permit application
+    get_id_number: 🆔 Find out the residence permit number
+    tax_number: 🪪 INN
+    edevlet: 🧧Edevlet
+    address_numarataj: 🔖 Numaratage
+    address_registration: 📌 Registration
+- id: EDEVLET
+  text: '*🧧Edevlet*
+
+
+    ℹ️ Website with a wide variety of Government Services:
+
+    \- Obtaining certificates and statements
+
+    \- Free medicine
+
+    \- Unlock your phone
+
+    \- Much more
+
+
+    🌎 [Site link](https://www.turkiye.gov.tr)
+
+
+    ⚡️ *How to connect*
+
+    \- Get a residence permit \(ikamet\)
+
+    \- Have a Turkish phone number
+
+    \- At the post office \(PTT\), say EDevlet
+
+    \- For 20 liras they will make a password for the flight, it will come via SMS
+
+
+    📍 [Nearest post office](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 km\)'
+  button_texts:
+    edevlet_site: 🌐 Website
+    edevlet_android: 🤖Android
+    edevlet_iphone: 📱 iPhone
+- id: TAX_NUMBER
+  text: '*🪪TIN \(Turkish Tax Number\)*
+
+
+    ℹ️ *What is it for?*
+
+    \- Registration of Dask and utilities for yourself
+
+    \- Residence permit
+
+    \- Opening a bank account
+
+
+    🌎 *Get online*
+
+    \- Go to [tax website](https://ivd.gib.gov.tr/)
+
+    \- Select the central bottom button
+
+    \- *Yabancılar İçin Potansiyel Vergi Kimlik Numarası*
+
+    \- *APPLICATION FOR NON\-CITIZEN\''S POTENTIAL TAX NUMBER*
+
+    \- Fill in your details
+
+
+    💸 *Get it from the tax office*
+
+    \- Sometimes the online system writes an error and you have to go to the tax office
+
+    \- Tax office [Antalya Vergi Dairesi](https://goo.gl/maps/qtCJEGf4cYfD1QXR6)'
+- id: ADDRESS_NUMARATAJ
+  text: '*🔖 Numarataj \(Numarataj\)*
+
+
+    ℹ️ *Certificate confirming address*
+
+    \- Required for registration
+
+    \- Required to obtain a residence permit
+
+
+    💼 *Take with you:*
+
+    1\. Passport
+
+    2\. Tapu
+
+    3\. Lease agreement
+
+    4\. Copies of these documents
+
+
+    ℹ️ *Instructions for receiving:*
+
+    1\. In [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) make copies of documents
+
+    2\. Go to the 2nd floor, follow the Numarataj signs and enter the corridor of block D
+
+    3\. Take a ticket, they will call you
+
+    4\. Give the person all copies of documents
+
+    5\. Go down to the first floor, one by one, give your documents out the window, they will put stamps on you
+
+    6\. Return to the second floor, they will issue a Numaratazh certificate
+
+    ⚠️ If there are several of you, then give copies of the passports of everyone who should be registered in this certificate
+
+
+    📍 Everything is done in [Kepez Belediye](https://goo.gl/maps/Fb68nczEehmjzf4K9) \(3\.5 km\)
+
+    ⚡️ On the ground floor you can make copies of documents for 1 TL'
+- id: ADDRESS_REGISTRATION
+  text: '*📌 Registration*
+
+
+    ℹ️ *Registration must be done within 20 days after receiving a residence permit*
+
+    \- It is not necessary to take children with you, it is advisable for everyone to be an adult
+
+    \- Residence permit will not be renewed without registration
+
+
+    ℹ️ Online registration for foreigners is no longer possible
+
+    ℹ️ Foreigners are not required to register with Nufus, but in special cases they may register you there
+
+
+    📌 *Registration in Goc*
+
+
+    💼 *Take with you:*
+
+    1\. Ikamet \(residence permit\)
+
+    2\. Tapu or lease agreement
+
+    3\. Numarataj \(Numarataj\)
+
+    4\. Photocopies of Tapu/Treaty and Numaratage
+
+    5\. Receipt for water or electricity in your name
+
+
+    ⚡️ *Important:*
+
+    \- The receipt must be fresh, otherwise they will refuse
+
+    \- They may request a copy of the apartment owner’s kymlik and tapa
+
+
+    📍 *How to get there:*
+
+    \- Come to [Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9)
+
+    \- At the entrance, say *Adres* and show the ikamet, they will let you in
+
+    \- In the building, say *Adres*, wait for a call to the room to the left of the windows for a rendezvous'

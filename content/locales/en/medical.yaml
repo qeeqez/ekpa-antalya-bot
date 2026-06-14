@@ -1,0 +1,260 @@
+version: '1.0'
+screens:
+- id: AID_KIT
+  text: '*❤️ First aid kit*'
+  button_texts:
+    ambulance: 🚑 Ambulance
+    hospitals: 🏥Hospitals
+    pharmacies: 🧬 Pharmacies
+    medicine: 💊 Turkish medicines
+    polyclinic: 🧑‍⚕️ Free medicine
+- id: AMBULANCE
+  text: '*🚑 Ambulance*
+
+
+    ☎️ `112`
+
+
+    ℹ️ *Call an ambulance only as a last resort\.*
+
+    In Turkey, calling an ambulance can cost a pretty penny.
+
+    When calling an ambulance, say English, you must switch to an English operator\.
+
+
+    😷️ *Hotline for foreigners*
+
+
+    ☎️ `+90 850 288 38 38`
+
+
+    ℹ️ *All languages are spoken in the Hotline*
+
+    They help with all medical issues, including calling an ambulance\.'
+- id: PHARMACIES
+  text: '*🧑‍⚕️ Pharmacies \- Eczane*
+
+
+    ℹ️ Regular pharmacies are closed on Sunday
+
+
+    📍 Many pharmacies are located on the road to the hospital:
+
+    📍 [Kepez Devlet Hastanesi](https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+
+
+    *🏥 Pharmacies on duty \- Nöbetçi Eczaneler*
+
+
+    \- They work around the clock
+
+    \- Every day they are different
+
+    \- Current ones can be viewed on the website or in the application'
+  button_texts:
+    pharmacies_site: 🌎 Website with duty pharmacies
+    pharmacies_android: 🤖Android
+    pharmacies_iphone: 📱 iPhone
+- id: HOSPITALS
+  text: '*🏥Hospitals\- Hastane*
+
+
+    🛡️ *By Insurance*
+
+
+    1️⃣️ To apply for insurance, first you need to find out which hospitals it works with
+
+    2️⃣ Insurance often does not cover the entire amount of treatment, but this depends on your policy and insurance company
+
+
+    ⁉️ *How to find out which hospitals your insurance works with:*
+
+    1\. Visit the website [imecedestek](https://imecedestek.com/ContractedOrganizations)
+
+    2\. Indicate the name of the insurance company and type of insurance
+
+    3\. Select the area in which you want to view contract organizations
+
+    4\. Select establishment type
+
+    5\. Press *Ara / Search*
+
+
+    ⭐️ This way you will receive a list of hospitals and other medical institutions where you have insurance\.
+
+
+    ❤️‍🩹 *Without Insurance*
+
+
+    \- You can go to hospitals and private clinics and not from the insurance list\.
+
+    \- In this case, your insurance may also cover a small part of the treatment\. \(Read about this in its description and
+    insurance conditions\)
+
+    \- If you don’t have any insurance, then get ready to prepare a rather large amount\.
+
+
+    📍 Search for hospitals on the map using the Turkish word *Hastane*\.'
+  button_texts:
+    hospitals_insurance_site: 🌎 Search for a medical institution with insurance
+- id: POLYCLINIC
+  text: '*🧑‍⚕️ Free medicine*
+
+
+    💫 In Turkey you can get *basic medical care for free*
+
+    \- To do this, after receiving a residence permit, you need to be assigned to a family doctor
+
+
+    🆓️ *What gives:*
+
+    \- You can get a general examination from your family doctor
+
+    \- Pass basic tests
+
+    \- Get a prescription for medications
+
+    \- Get vaccinated for yourself and your children
+
+    \- Get recommendations from specialists in hospitals
+
+    \- The history of all analyzes and examinations will be displayed in the e\-Nabız\ application.
+
+    \- And from all hospitals, including private ones\.
+
+
+    💼 *What you need:*
+
+    \- Turkish phone number
+
+    \- e\-Devlet \(done at the post office\)
+
+    \- Registration at your address
+
+
+    🌎 *How to attach:*
+
+    1\. Register on [enabiz website](https://enabiz.gov.tr/)
+
+    2\. Select function *Change your family physician*
+
+    3\. Select city, district
+
+    4\. A list of available family clinics and specialists will open.
+
+    \- The doctor highlighted in red cannot be selected
+
+    \- Doctors highlighted in green are more free
+
+    \- The doctor change from the 5th to the 21st takes place on the same day\. Applications from the 22nd to the 4th will
+    be processed on the 5th\.
+
+
+    ⚡️*Additionally:*
+
+    \- Register on [MHRS website](https://www.mhrs.gov.tr/) \(website for making an appointment with a doctor\)
+
+
+    ⭐ Now you can *Make an appointment with a doctor / Appointment / Randevu* through the website and application e\-Nabız\'
+  button_texts:
+    polyclinic_site: 🌎 Website for making an appointment with a doctor
+    polyclinic_android: 🤖Android
+    polyclinic_iphone: 📱 iPhone
+- id: MEDICINE
+  text: '*💊 Turkish medicines*
+
+
+    *Hydrogen peroxide:*
+
+    Oksijenli Su
+
+
+    *Sore throat:*
+
+    Tantum Verde \- spray
+
+    Strepsils\- lollipops
+
+
+    *Cough:*
+
+    Wet: Acetylcystein 600 mg \- 1 time per day in the morning \(if gastritis \- after meals or after omeprazole\)
+
+    Dry: there are a lot of herbal dry cough syrups \(for example Fitospan\)
+
+
+    *Runny nose:*
+
+    Sinus rinse kit \- rinse the nose with sea water \(Dolphin type\)
+
+    Nasovine \- vasoconstrictor spray \(Xylometazoline\)
+
+    Risonel, 0.05% \- for allergic rhinitis, with long-term use of vasoconstrictors\. Removes swelling in the nose, reduces
+    the flow of \(Nasonex analog\), 2 doses in each nostril 2 times a day for 2 weeks, then 1 dose 2 times a day for 2 weeks,
+    then \. 1 dose 1 time per day for 2 weeks\.
+
+
+    *For pain:*
+
+    Nimes 100 mg \(Nimesulid\) \- nise
+
+    Brufen 400 mg \(Ibuprofen\) \- ibuprofen
+
+    Panadol \- paracetamol
+
+    Profenid jel \- Fastum gel
+
+    Artril \- anesthetic gel for rubbing into the skin in the joint area
+
+    Tylohot \- theraflu
+
+
+    *For the belly:*
+
+    Buscopan \- antispasmodic for abdominal colic \(noshpa\)
+
+    Reflor \- for long-term diarrhea \(for example, when taking antibiotics\)
+
+    Linex \- there too
+
+    Enterosgel \(Enterosgel\) \- sorbent in the form of gels
+
+    Eucabon - local coal
+
+    Omeprasol \- omeprazole
+
+
+    *For constipation:*
+
+    Duphalac \(Dufalak\)
+
+
+    *Nausea:*
+
+    Metpamid \(Motilium type\)
+
+
+    *Allergies:*
+
+    Aerius \(Erius\)
+
+    Cetrin \(Cetrin\)
+
+    Fenistil gel \- for skin allergies and bites against itching
+
+
+    *Herpes:*
+
+    Zovirax \(cream, same as in Russia\)
+
+    Bepanthen \- Bepanten \(burns, cracks\)
+
+
+    *Eyes:*
+
+    VİSİNE \(Vizin\) \- from over-the-counter, for itching, dry eyes
+
+
+    *Ears:*
+
+    Otipax \- drops with lidocaine, relieve pain, reduce inflammation, without a prescription'

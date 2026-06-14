@@ -1,0 +1,91 @@
+version: '1.0'
+screens:
+- id: DELIVERY
+  text: '*🛵📦التوصيل اون لاين*'
+  button_texts:
+    food_delivery: 🍔الطعام
+    products_delivery: 🍎 المنتجات
+    goods_delivery: 📦 المنتجات
+- id: FOOD_DELIVERY
+  text: '*توصيل الطعام*
+
+
+    ❗️استخدم المترجم المدمج في الكروم
+
+    💵\-ممكن الدفع نقدا
+
+    🪪\- فقط بتصريح الإقامة
+
+
+    🍔[يمكسيبيتي](https://www.yemeksepeti.com/) 💵
+
+    🍔 [تيكلاجيلسين](https://www.tiklagelsin.com)
+
+    🍔 [جيتير](https://getir.com/)
+
+    🍕[الدومينو](https://www.dominos.com.tr) 💵'
+- id: PRODUCTS_DELIVERY
+  text: '*تسليم المنتج*
+
+
+    ❗️ استخدم المترجم المدمج في الكروم
+
+    💵إمكانية الدفع كاش
+
+
+    🍌 [ميغروس](https://www.migros.com.tr)
+
+    🍌 [تاهتاكالي](https://tahtakalespot.com)
+
+    🍌 [كارفور](https://www.carrefoursa.com)
+
+    🧻 [سوك](https://www.sokmarket.com.tr)'
+- id: GOODS_DELIVERY
+  text: '*تسليم البضائع*
+
+
+    ❗️استخدم المترجم المدمج في الكروم
+
+    💵\-ممكن الدفع نقدا
+
+    🪪\- فقط بتصريح الإقامة
+
+
+    * مجمعات السعر المنخفض *
+
+    [أكاكجي](https://www.akakce.com)
+
+    [سيمري](https://www.cimri.com)
+
+
+    *أكبر الأسواق*
+
+    [ترينديول](https://www.trendyol.com/)
+
+    [هيبسيبورادا](https://www.hepsiburada.com)
+
+
+    *أخرى*
+
+    [أمازون](https://www.amazon.com.tr) 🪪
+
+    [aliexpress](https://tr.aliexpress.com/)
+
+    [n11](https://www.n11.com) 🪪
+
+    [جيجيكسيبيتي](https://www.ciceksepeti.com)
+
+
+    *التقنية*
+
+    [تكنوسا](https://www.teknosa.com)
+
+    [A101](https://www.a101.com.tr)
+
+    [توركسيل باساج](https://www.turkcell.com.tr/pasaj)
+
+    [ميدياماركت](https://www.mediamarkt.com.tr)
+
+    💻 [وطن](https://www.vatanbilgisayar.com)
+
+    🪛 [سوق سام](https://market.samm.com) 💵'

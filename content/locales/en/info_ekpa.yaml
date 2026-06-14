@@ -1,0 +1,473 @@
+version: '1.0'
+screens:
+- id: INFO_EKPA
+  text: '*🌟 All about Ekpa*'
+  button_texts:
+    management_office: 🧑‍💼 Management Office
+    how_to_pay: 💰 Pay
+    how_to_connect: 🧑‍🔧 Connect / Re-register ♻️
+    how_to_disconnect: ⛔️ Disable
+- id: MANAGEMENT_OFFICE
+  text: '*Management Company*
+
+
+    💼 *Office*
+
+    [Block C](https://goo.gl/maps/6GBmdg7VeaWgvKMA9), 0 floor, from the entrance to the left
+
+
+    🕘 *Monday \- Saturday*
+
+    08:30\- 12:30
+
+    13:30\- 17:30
+
+
+    *🛠️ Breakdowns and Complaints*
+
+    \+90 \(539\) 6703316
+
+
+    *💰 Payment \- Aydat and Air Conditioners*
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Security*
+
+    \+90 \(539\) 6703833
+
+
+    *🧑‍💼Manager*
+
+    EBRU HANIM'
+- id: HOW_TO_PAY
+  text: '*💰 How to pay?*'
+  button_texts:
+    how_to_pay_aidat: 💸 Aidat
+    how_to_pay_conditioner: ❄️ Air conditioning
+    how_to_pay_electricity: ⚡️ Electricity
+    how_to_pay_water: 💧 Water
+    how_to_pay_phone_internet: 📱 Mobile phone and Internet 🌎
+- id: HOW_TO_PAY_AIDAT
+  text: '*Aidat*
+
+
+    ℹ️ Monthly maintenance fee for the complex\.
+
+    ⚠️ You must pay, even if you do not live in an apartment\.
+
+
+    *Cost:*
+
+    ```
+
+    1\+1\- 840 TL
+
+    2\+1\- 1310 TL
+
+    2\+1\- 1590 TL \(Separate kitchen\)
+
+    3\+1\- 1970 TL
+
+    ```
+
+    *Payment term:*
+
+    ⏳ Until the 5th of every month
+
+
+    *Payment:*
+
+    🪙 Cash or card at the Management Company Office
+
+
+    💳 Online transfer from a Turkish bank card to the account:
+
+
+    🏦 `TR24 0013 4000 0203 8787 9000 01`
+
+
+    *Recipient''s name and payment description*
+
+    🧑 `EKPA 1207 SITESI YONETIMI`
+
+    ℹ️ `Aidat Ekpa 1207` Block Apartment Month
+
+
+    ⚠️ Be sure to indicate the numbers of the block, apartment and month for which you are paying'
+- id: HOW_TO_PAY_CONDITIONER
+  text: '*Air conditioning*
+
+
+    ℹ️ The central air conditioning system is not included in the electricity bill\.
+
+    ⚠️ Keep in mind that Türkiye is a hot country, and electricity is expensive here\.
+
+
+    *Payment term:*
+
+    ⏳ 7 days from the date of receipt of the invoice
+
+    ⚠️ If payment is not made, it will be disabled\. A lock icon and Centralized\ will appear on the remote control.
+
+
+    *Payment:*
+
+    🪙 Cash or card at the Management Company Office
+
+
+    💳 Online transfer from a Turkish bank card to the account:
+
+
+    🏦 `TR24 0013 4000 0203 8787 9000 01`
+
+
+    *Recipient''s name and payment description*
+
+    🧑 `EKPA 1207 SITESI YONETIMI`
+
+    ℹ️ `Klima Ekpa 1207` Block Apartment
+
+
+    ⚠️ Be sure to indicate the block and apartment numbers for which you are paying'
+- id: HOW_TO_PAY_ELECTRICITY
+  text: '*Electricity*
+
+
+    ℹ️ Air conditioning is not included in the electricity bill\.
+
+
+    ℹ️ *Subscriber number* is issued upon connection, it is also indicated on the payment card\.
+
+
+    *Payment term:*
+
+    ℹ️ Invoice is issued at the end of the month
+
+    ⏳ Payment must be made within 10 days after the invoice is issued\.
+
+
+    *How to find out your electricity bill:*
+
+    \- In the Turkish Internet bank when paying
+
+    \- The payment slip that arrives at the address is placed in a box on the wall on the first floor
+
+    \- Online on the website [CK Akdeniz](https://online.ckakdeniz.com.tr)
+
+
+    *Payment:*
+
+
+    💳 *Online in Turkish Internet Banking*
+
+    1\. Fatura \(Bill Payment\) \-\> Elektrik \(Electricity\) \-\> *CK Akdeniz Elektrik*
+
+    2\. Enter your *subscriber number*
+
+    3\. You will see the amount and can pay
+
+    ⚠️ If the invoice has not yet been issued, the application will display an error.
+
+
+    🪙 *Cash or card*
+
+    \- In the Turkcell branch with a small commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- At the PTT post office, [Nearest post office](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+
+    \- In any office of CK Akdeniz Elektrik, [Nearest office](https://goo.gl/maps/nyumU39FQYJTnFZt9)'
+- id: HOW_TO_PAY_WATER
+  text: '*Water*
+
+
+    ℹ️ *Subscriber number* is issued upon connection, it is also indicated on the payment card\.
+
+
+    *Payment term:*
+
+    ℹ️ Invoice is issued at the end of the month
+
+    ⏳ Payment must be made within 10 days after the invoice is issued\.
+
+
+    *How to find out your water bill:*
+
+    \- In the Turkish Internet bank when paying
+
+    \- The payment slip that arrives at the address is placed in a box on the wall on the first floor
+
+    \- Online on the website [ASAT](https://online.asat.gov.tr/webportal/index.php)\. Click HIZLI ÖDEME
+
+
+    *Payment:*
+
+
+    💳 *Online in Turkish Internet Banking*
+
+    1\. Fatura \(Bill Payment\) \-\> Su \(Water\) \-\> *Antalya Su \(ASAT\)*
+
+    2\. Enter your *subscriber number* \(Add a few zeros to the left of the number\)
+
+    3\. You will see the amount and can pay
+
+    ⚠️ If the invoice has not yet been issued, the application will display an error.
+
+
+    🪙 *Cash or card*
+
+    \- In the Turkcell branch with a small commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- At the PTT post office, [Nearest post office](https://goo.gl/maps/fwskNzeEbtX9hspz6)
+
+    \- At [ASAT Head Office](https://goo.gl/maps/3GqKDPPnW8gUUz5q6)'
+- id: HOW_TO_PAY_PHONE_AND_INTERNET
+  text: '*📱 Mobile phone and Internet 🌎*
+
+
+    💳 *Online in the application or on your operator’s website*
+
+    \- For your phone you need to select a package for the next month
+
+    \- You can simply top up your balance and later pay for packages from it
+
+    \- For the Internet you need to pay the bill for the previous month
+
+
+    🪙 *Cash or card*
+
+    \- In the Turkcell branch with a small commission [Nearest 1](https://goo.gl/maps/M3DtmNhv5wfqFGqx7), [Nearest 2](https://goo.gl/maps/wn9ixfN5vDJqqLQn6)
+
+    \- In any office of your telecom operator'
+- id: HOW_TO_CONNECT
+  text: '*🧑‍🔧 How to connect / re-register? ♻️*
+
+
+    1️⃣ The process of first connection is no different from re-registration
+
+    2️⃣ When re-registering, the previous payer does not need to travel separately to disconnect'
+  button_texts:
+    connect_dask: 🛡️ Dask
+    connect_electricity: ⚡️ Electricity
+    connect_water: 💧 Water
+    connect_internet: 🌎 Internet
+- id: HOW_TO_CONNECT_DASK
+  text: '*🛡️Dask Earthquake Insurance*
+
+
+    ℹ️ *Information:*
+
+    \- Required to open an account for water and electricity\.
+
+    \- Before going to Asat or CK Akdeniz Elektrik you *should already have Dask*\.
+
+    \- You can’t do it in Dask Bank\.
+
+    \- You can do this at any insurance company or at Nkolay using the link below\.
+
+
+    💼 *Take with you:*
+
+    1\. Tapu or lease agreement
+
+    2\. Passport or Ikamet
+
+    3\. Turkish Tax Number \(The number itself is enough\)
+
+    4\. Full address / Tell Ekpa
+
+
+    📍 *Order Dask in [Nkolay](https://goo.gl/maps/nyumU39FQYJTnFZt9)*'
+- id: HOW_TO_CONNECT_ELECTRICITY
+  text: '*⚡️Electricity*
+
+
+    💼 *Take with you:*
+
+    1\. *Tapu* or *lease agreement*
+
+    2\. *Passport* or *Ikamet*
+
+    3\. Turkish *tax number* \(The number itself is enough\)
+
+    4\. Earthquake insurance *Dask*
+
+    5\. *Money* for deposit \(Returned upon disconnection\)
+
+
+    📍 *You can connect only at [CK Akdeniz Elektrik head office](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+
+
+    🧑‍💼*Report to the Criminal Code:*
+
+    Block and apartment number, as well as subscriber number for electricity\.
+
+
+    ℹ️ Light will appear in the apartment within 1 working day\.
+
+    ℹ️ If there are problems with electricity\- notify the Criminal Code\.
+
+
+    ⚠️ The electrical panel is in the closet\.
+
+    ⚠️ The electric meter is located in the basement behind a closed door\.'
+- id: HOW_TO_CONNECT_WATER
+  text: '*💧Water*
+
+
+    💼 *Take with you:*
+
+    1\. *Tapu* or *lease agreement*
+
+    2\. *Passport* or *Ikamet*
+
+    3\. Turkish *tax number* \(The number itself is enough\)
+
+    4\. Earthquake insurance *Dask*
+
+    5\. *Money* for deposit \(Returned upon disconnection\)
+
+
+    📍 *Connect water to [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
+
+
+    🧑‍💼*Report to the Criminal Code:*
+
+    Block and apartment number, as well as subscriber number for water\.
+
+
+    ℹ️ Within 3 working days, water will appear in the apartment\.
+
+    ℹ️ If you have problems with water or pressure in the taps\- notify the Criminal Code\.
+
+
+    ⚠️ The apartment has a valve to shut off the water\.
+
+    \- At 1\+1, look under the sink\.
+
+    \- In 2\+1 is in the soul\.'
+- id: HOW_TO_CONNECT_INTERNET
+  text: '*🌎 Internet*
+
+
+    ℹ️ *To connect to the Internet you need a residence permit \(ikamet\)*
+
+
+    ℹ️ *Home Internet in Turkey under contract*
+
+    \- The contract is for a year or two years
+
+    \- In case of early termination of the contract, a penalty is paid
+
+    \- Payment is made monthly
+
+
+    🌐 *Internet operators*
+
+    \- [Turk Telekom](https://turktelekom.com.tr/)
+
+    \- [Turkcell Superonline](https://www.superonline.net/)
+
+    \- [Turksat Kablo](https://www.fiberkablonet.com/)
+
+
+    ℹ️ To connect, you need to contact the operator’s office with an ikamet\. The price is the same as on the operator''s
+    website\.
+
+    ⚠️ The office may not find our address in the system, we recommend contacting the offices closest to the complex\.
+
+
+    🏴‍☠️ *Connect without a residence permit*
+
+    \- To connect without a residence permit, you need to find a person who will arrange the Internet for themselves\.
+
+    \- This is usually more expensive, many “helpers” charge money for such a service\.
+
+    \- A helper can be found through your realtor or through the offices of Internet operators\.
+
+
+    ⚡️ *Alternative methods*
+
+    \- Share Internet from your phone
+
+    \- Ask your neighbors for help, share Wi-Fi'
+- id: HOW_TO_DISCONNECT
+  text: '*⛔️ How to disable?*'
+  button_texts:
+    disconnect_electricity: ⚡️ Electricity
+    disconnect_water: 💧 Water
+- id: HOW_TO_DISCONNECT_ELECTRICITY
+  text: '*⚡️Electricity*
+
+
+    💰 If you disconnect, the deposit that was paid upon connection is returned, minus the balance for payment
+
+
+    🌎 *Disable online*
+
+    \- Login to Edevlet
+
+    \- Go to the page [Ck Akdeniz Feshi Başvurusu](https://www.turkiye.gov.tr/ck-akdeniz-elektrik-perakende-satis-bireysel-abonelik-fesih-basvurusu)
+
+    \- Or type in the search `Ck Akdeniz Bireysel Abonelik Fesih Başvurusu`
+
+    \- Click *"New Application" \(Yeni Başvuru\)*, select an account and fill in your details
+
+    \- Fill in the IBAN to which the money will be transferred
+
+    ⚠️ *You can disconnect online only if you connected to Ikamet*
+
+
+    📍 *Turn off the electricity offline at [CK Akdeniz Elektrik head office](https://goo.gl/maps/vSsz3eKUWZ7VYqqy9)*
+
+
+    💼 *Take with you:*
+
+    1\. *Subscriber number* \(it will be found faster in the system\)
+
+    2\. *Passport* or *Ikamet*
+
+    3\. *IBAN* to which the money will be transferred
+
+
+    ℹ️ Within 24 hours, the apartment will lose electricity\.
+
+    ℹ️ Money will be credited to the Turkish account only after disconnection, within 7\-30 days\.'
+- id: HOW_TO_DISCONNECT_WATER
+  text: '*💧Water*
+
+
+    💰 If you disconnect, the deposit that was paid upon connection is returned, minus the balance for payment
+
+
+    🌎 *Disable online*
+
+    \- Login to Edevlet
+
+    \- Go to the page [ASAT Feshi Başvurusu](https://www.turkiye.gov.tr/antalya-su-kanalizasyon-abonelik-sozlesme-feshi-basvurusu)
+
+    \- Or type in search `ASAT Abonelik Sözleşme Feshi Başvurusu`
+
+    \- Click *"New Application" \(Yeni Başvuru\)*, select an account and fill in your details
+
+    \- Fill in the IBAN to which the money will be transferred
+
+    ⚠️ *You can disconnect online only if you connected to Ikamet*
+
+
+    📍 *Turn offline water in [ASAT](https://goo.gl/maps/PMfUJd315NtC9dur6)*
+
+
+    💼 *Take with you:*
+
+    1\. *Subscriber number* \(it will be found faster in the system\)
+
+    2\. *Passport* or *Ikamet*
+
+    3\. *IBAN* to which the money will be transferred
+
+
+    ℹ️ Within 3 working days, the water in the apartment will disappear\.
+
+    ℹ️ Money will be credited to the Turkish account only after disconnection, within 7\-30 days\.'

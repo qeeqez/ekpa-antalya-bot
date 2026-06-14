@@ -1,0 +1,260 @@
+version: '1.0'
+screens:
+- id: AID_KIT
+  text: '*❤️ İlk yardım çantası*'
+  button_texts:
+    ambulance: 🚑 Ambulans
+    hospitals: 🏥Hastaneler
+    pharmacies: 🧬 Eczaneler
+    medicine: 💊Türk ilaçları
+    polyclinic: 🧑‍⚕️ Ücretsiz ilaç
+- id: AMBULANCE
+  text: '*🚑 Ambulans*
+
+
+    ☎️`112`
+
+
+    ℹ️ *Sadece son çare olarak ambulans çağırın\.*
+
+    Türkiye''de ambulans çağırmak oldukça pahalıya mal olabilir.
+
+    Ambulans çağırırken İngilizce deyin, İngilizce operatöre geçmelisiniz\.
+
+
+    😷️ *Yabancılar için yardım hattı*
+
+
+    ☎️`+90 850 288 38 38`
+
+
+    ℹ️ *Yardım Hattında tüm diller konuşulmaktadır*
+
+    Ambulans çağırma dahil tüm tıbbi konularda yardımcı oluyorlar\.'
+- id: PHARMACIES
+  text: '*🧑‍⚕️ Eczaneler \- Eczane*
+
+
+    ℹ️ Pazar günleri normal eczaneler kapalıdır
+
+
+    📍 Birçok eczane hastaneye giden yol üzerinde bulunmaktadır:
+
+    📍 [Kepez Devlet Hastanesi](https://goo.gl/maps/b5cnrK2H4apXkqWw9)
+
+
+    *🏥 Nöbetçi eczaneler \- Nöbetçi Eczaneler*
+
+
+    \- 24 saat çalışıyorlar
+
+    \- Her gün farklılar
+
+    \- Güncel olanlar web sitesinde veya uygulamada görüntülenebilir'
+  button_texts:
+    pharmacies_site: 🌎 Nöbetçi eczanelerin bulunduğu web sitesi
+    pharmacies_android: 🤖Android
+    pharmacies_iphone: 📱iPhone
+- id: HOSPITALS
+  text: '*🏥Hastaneler\- Hastane*
+
+
+    🛡️ *Sigorta ile*
+
+
+    1️⃣️ Sigortaya başvurmak için öncelikle hangi hastanelerle çalıştığını öğrenmeniz gerekiyor
+
+    2️⃣ Sigorta çoğu zaman tedavi tutarının tamamını karşılamaz ancak bu, poliçenize ve sigorta şirketinize bağlıdır.
+
+
+    ⁉️ *Sigortanızın hangi hastanelerle çalıştığını nasıl öğrenebilirsiniz:*
+
+    1\. [imecedestek](https://imecedestek.com/ContractedOrganizations) web sitesini ziyaret edin
+
+    2\. Sigorta şirketinin adını ve sigorta türünü belirtiniz
+
+    3\. Sözleşmeli kuruluşları görüntülemek istediğiniz alanı seçin
+
+    4\. Kuruluş türünü seçin
+
+    5\. *Ara / Ara* tuşuna basın
+
+
+    ⭐️ Bu şekilde sigortanızın olduğu hastanelerin ve diğer sağlık kurumlarının bir listesini alacaksınız\.
+
+
+    ❤️‍🩹 *Sigortasız*
+
+
+    \- Sigorta listesinden değil, hastanelere ve özel kliniklere gidebilirsiniz\.
+
+    \- Bu durumda sigortanız tedavinin küçük bir kısmını da karşılayabilir\. \(Bununla ilgili açıklamayı ve sigorta koşullarını
+    okuyun\)
+
+    \- Sigortanız yoksa oldukça büyük bir miktar hazırlamaya hazırlanın\.
+
+
+    📍 Haritada hastaneleri *Hastane*\ kelimesini kullanarak arayın.'
+  button_texts:
+    hospitals_insurance_site: 🌎 Sigortalı bir sağlık kurumu arayın
+- id: POLYCLINIC
+  text: '*🧑‍⚕️ Ücretsiz ilaç*
+
+
+    💫 Türkiye''de *temel tıbbi bakımı ücretsiz* alabilirsiniz
+
+    \- Bunun için oturma izni aldıktan sonra aile hekimine atanmanız gerekmektedir.
+
+
+    🆓️ *Ne verir:*
+
+    \- Aile hekiminizden genel muayene yaptırabilirsiniz
+
+    \- Temel testleri geçin
+
+    \- İlaçlar için reçete alın
+
+    \- Kendiniz ve çocuklarınız için aşı olun
+
+    \- Hastanelerdeki uzmanlardan öneriler alın
+
+    \- e\-Nabız\ uygulamasında tüm analiz ve tetkiklerin geçmişi görüntülenecektir.
+
+    \- Ve özel hastaneler dahil tüm hastanelerden\.
+
+
+    💼 *İhtiyacınız olan şey:*
+
+    \- Türkçe telefon numarası
+
+    \- e\-Devlet \(postanede yapılır\)
+
+    \- Adresinizde kayıt
+
+
+    🌎 *Nasıl takılır:*
+
+    1\. [enabiz web sitesine](https://enabiz.gov.tr/) kaydolun
+
+    2\. Fonksiyonu seçin *Aile hekiminizi değiştirin*
+
+    3\. Şehir, ilçe seçin
+
+    4\. Mevcut aile kliniklerinin ve uzmanlarının bir listesi açılacaktır.
+
+    \- Kırmızıyla vurgulanan doktor seçilemiyor
+
+    \- Yeşille vurgulanan doktorlar daha özgürdür
+
+    \- Ayın 5''inden 21''ine doktor değişimi aynı gün gerçekleşir\. Ayın 22''sinden 4''üne kadar olan başvurular ayın 5''inde
+    işleme alınacaktır.
+
+
+    ⚡️*Ek olarak:*
+
+    \- [MHRS web sitesine](https://www.mhrs.gov.tr/) \(doktor randevusu almak için web sitesine\) kaydolun
+
+
+    ⭐ Artık e\-Nabız\ web sitesi ve uygulaması üzerinden *Doktor randevusu / Randevu / Randevu* alabilirsiniz.'
+  button_texts:
+    polyclinic_site: 🌎 Doktor randevusu alabileceğiniz web sitesi
+    polyclinic_android: 🤖Android
+    polyclinic_iphone: 📱iPhone
+- id: MEDICINE
+  text: '*💊Türk ilaçları*
+
+
+    *Hidrojen peroksit:*
+
+    Oksijenli Su
+
+
+    *Boğaz ağrısı:*
+
+    Tantum Verde \- sprey
+
+    Strepsils\- lolipoplar
+
+
+    *Öksürük:*
+
+    Islak: Asetilsistein 600 mg \- günde 1 kez sabahları \(gastrit varsa \- yemeklerden sonra veya omeprazolden sonra\)
+
+    Kuru: Çok sayıda bitkisel kuru öksürük şurubu vardır (örneğin Fitospan\)
+
+
+    *Burun akıntısı:*
+
+    Sinüs durulama kiti \- burnu deniz suyuyla yıkayın \(Yunus tipi\)
+
+    Nasovine \- vazokonstriktör sprey \(Ksilometazolin\)
+
+    Risonel, %0,05 \- alerjik rinit için, uzun süreli vazokonstriktör kullanımıyla\. Burundaki şişliği giderir, \(Nasonex
+    analoğu\) akışını azaltır, 2 hafta boyunca her burun deliğine günde 2 defa 2 doz, ardından 2 hafta boyunca günde 2 defa
+    1 doz, daha sonra \. 2 hafta boyunca günde 1 kez 1 doz\.
+
+
+    *Acı için:*
+
+    Nimes 100 mg \(Nimesulid\) \- nise
+
+    Brufen 400 mg \(İbuprofen\) \- ibuprofen
+
+    Panadol \- parasetamol
+
+    Profenid jel \- Fastum jel
+
+    Artril \- eklem bölgesindeki cilde sürtünmek için anestezik jel
+
+    Tylohot \- theraflu
+
+
+    *Karın için:*
+
+    Buscopan \- karın koliği için antispazmodik \(noshpa\)
+
+    Reflor \- uzun süreli ishal için \(örneğin antibiyotik alırken\)
+
+    Linex \- orada da var
+
+    Enterosgel \(Enterosgel\) \- jel formunda sorbent
+
+    Eucabon - yerli kömür
+
+    Omeprasol \- omeprazol
+
+
+    *Kabızlık için:*
+
+    Duphalac \(Dufalak\)
+
+
+    *Bulantı:*
+
+    Metpamid \(Motilium tipi\)
+
+
+    *Alerjiler:*
+
+    Aerius \(Erius\)
+
+    Çetrin \(Çetrin\)
+
+    Fenistil jel \- cilt alerjileri ve kaşıntıya karşı ısırıklar için
+
+
+    *Uçuk:*
+
+    Zovirax \(krem, Rusya''dakiyle aynı\)
+
+    Bepanthen \- Bepanten \(yanıklar, çatlaklar\)
+
+
+    *Gözler:*
+
+    VİSİNE \(Vizin\) \- tezgah üstü, kaşıntı, göz kuruluğu için
+
+
+    *Kulaklar:*
+
+    Otipax \- lidokainli damlalar, ağrıyı hafifletir, iltihabı azaltır, reçetesiz'

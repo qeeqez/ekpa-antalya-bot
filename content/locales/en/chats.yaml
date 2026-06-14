@@ -1,0 +1,26 @@
+version: '1.0'
+screens:
+- id: OUR_CHATS
+  text: '*💬 Our Chats*'
+  button_texts:
+    trade_chat: 🛍️ Flea Market - Products and Services
+    blocks_chat: 🏘 Chats by blocks
+    parents_chat: 👶 For Parents
+    animals_chat: 😸 Animals 🐶
+    sport_chat: 🏃‍♂️ Sport
+    sport_games_chat: 🏀 Sports Games
+    board_games_chat: 🎲 Boards
+    gaming_chat: 🎮 Gaming
+    it_chat: 🧑‍💻IT
+- id: BLOCKS_CHAT
+  text: '*🏘 Block Chats*'
+  button_texts:
+    block_a1: A1
+    block_a2: A2
+    block_a3: A3
+    block_a4: A4
+    block_b: B
+    block_c: C
+    block_d: D
+    block_e1: E1
+    block_e2: E2

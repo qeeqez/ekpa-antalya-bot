@@ -1,0 +1,167 @@
+version: '1.0'
+screens:
+- id: PHONE_NUMBERS
+  text: '*📞 Önemli telefon numaraları*'
+  button_texts:
+    ekpa_management: ☎️EKPA yönetimi
+    emergency: 🆘 Acil servisler
+    other_phones: 📲 Diğer
+    embassy: 🏛️ Elçilikler
+- id: EKPA_MANAGEMENT
+  text: '*Ekpa:*
+
+
+    *🧑‍💼Yönetim Şirketi*
+
+    \+90 \(539\) 6703316
+
+    \+90 \(539\) 6703320
+
+
+    *👮 Güvenlik*
+
+    \+90 \(539\) 6703833'
+- id: EMERGENCY
+  text: '*Acil telefon numaraları:*
+
+
+    ''''''''
+
+    112 - 🚑 Ambulans
+
+    155 - 🚓 Polis
+
+    154 - 🚔 Trafik polisi
+
+    110 - 🚒 Yangından korunma
+
+    156 - 👮 Jandarma
+
+    157 - 🛂 Göç Hizmeti
+
+    118 - ℹ️ Bilgi (telefonlar)
+
+    '''''''''
+- id: EMBASSY
+  text: '*🏛️ Elçilikler*'
+  button_texts:
+    russia_embassy: 🇷🇺 Rusya
+    ukraine_embassy: 🇺🇦 Ukrayna
+    kazakhstan_embassy: 🇰🇿Kazakistan
+    belarus_embassy: 🇧🇾 Beyaz Rusya
+- id: RUSSIA_EMBASSY
+  text: '<u><b>Rusya''nın Antalya Başkonsolosluğu</b></u>
+
+    Konsolosluk: +90 (242) 248 32 02
+
+    E-posta: ruskonsant@yandex.ru
+
+    Randevu alın: https://antalya.mid.ru/ru/reception-at-reception/
+
+    Çalışma saatleri: 9:00-18:00, Öğle Yemeği: 13:00-14:00
+
+    Adres: <a href="https://goo.gl/maps/5uApWF2SymauHg7v9">Ankara, Çankaya Mah., Andrey Karlov Sok., No. 5</a>
+
+    Web sitesi: https://antalya.mid.ru/ru/contacts/
+
+
+    <u><b>Moskova''daki Türkiye Büyükelçiliği</b></u>
+
+    Konsolosluk: +7 (495) 994 93 59 (Hafta içi 14.00 - 18.00)
+
+    E-posta: embassy.moscow@mfa.gov.tr
+
+    Açılış saatleri: 09:00-12:30
+
+    Adres: <a href="https://goo.gl/maps/td3ZW6q2VCFfX8kYA">Moskova, 7. Rostovsky şeridi, 12</a>
+
+    Web sitesi: http://moscow.emb.mfa.gov.tr/Mission/Contact'
+- id: UKRAINE_EMBASSY
+  text: '<u><b>Antalya''daki Ukrayna Konsolosluğu</b></u>
+
+    Konsolosluk: +90 (242) 312 33 77
+
+    E-posta: gc_tra@mfa.gov.ua
+
+    Randevu alın: https://online.mfa.gov.ua/application
+
+    Çalışma saatleri: Hafta içi 09:30-18:00
+
+    Adres: <a href="https://g.page/UkraynaAntalyaKonsoloslugu">Antalya, Muratpasa, Çaybaşı Mah. 1350 Sokak, No: 24</a>
+
+    Web sitesi: https://antalia.mfa.gov.ua
+
+
+    <u><b>Kiev''deki Türkiye Büyükelçiliği</b></u>
+
+    Büyükelçilik: +380 (44) 281 07 50 / +380 (44) 281 07 51
+
+    E-posta: embassy.kiev@mfa.gov.tr
+
+    Çalışma saatleri: Hafta içi 14:30-17:30
+
+    Adres: <a href="https://goo.gl/maps/1V5pqXA1nwTw3tzw6">Kiev, st. Panasa Mirny, 22</a>
+
+    Web sitesi: http://kiev.emb.mfa.gov.tr/Mission/Contact'
+- id: KAZAKHSTAN_EMBASSY
+  text: '<u><b>Kazakistan''ın Antalya Konsolosluğu</b></u>
+
+    Konsolosluk: +90 242 324 26 11
+
+    E-posta: antalya@mfa.kz
+
+    Çalışma saatleri: Hafta içi 09:00-18:30, öğle yemeği 12:30-14:30
+
+    Adres: <a href="https://goo.gl/maps/oZdrjAQHvSNF2xhf6">Antalya, Muratpaşa, Çağlayan Mah. 2070 Sokak, No: 16, C Blok, Site
+    Life City</a>
+
+    Web sitesi: https://www.gov.kz/memleket/entities/mfa-antalya/contacts
+
+
+    <u><b>Astana''daki Türkiye Büyükelçiliği</b></u>
+
+    Büyükelçilik: +7 7172 704 704
+
+    E-posta: embassy.nur-sultan@mfa.gov.tr
+
+    Çalışma saatleri: Hafta içi 09:00-18:30, öğle yemeği 12:30-14:00
+
+    Adres: <a href="https://goo.gl/maps/k9h6ZVySjQNXZYUy5">Astana, st. Zhumabek Tashenov koshesi, no. 3</a>
+
+    Web sitesi: http://astana.be.mfa.gov.tr/Mission/Contact'
+- id: BELARUS_EMBASSY
+  text: '<u><b>Belarus''un Ankara Büyükelçiliği</b></u>
+
+    Büyükelçilik: +90 (312) 441 67 69 / +90 (312) 441 67 70
+
+    Konsolosluk hizmeti: +90 (312) 441 64 50 (9.00 - 13.00 arası vatandaşların danışması ve kabulü)
+
+    E-posta: türkiye@mfa.gov.by
+
+    Çalışma saatleri: Hafta içi 08:45-18:00, Cuma 08:45-16:45, öğle yemeği 13:00-14:00
+
+    Adres: <a href="https://goo.gl/maps/srvg11UaaXNzRkKc8">Ankara, Çankaya Mah., Abidin Daver Sk. Hayır 17</a>
+
+    Web sitesi: https://turkey.mfa.gov.by/ru/embassy/
+
+
+    <u><b>Minsk''teki Türkiye Büyükelçiliği</b></u>
+
+    Büyükelçilik: +375 (17) 327 13 83
+
+    Konsolosluk Bölümü: +375 (17) 327 14 08
+
+    E-posta: embassy.minsk@mfa.gov.tr
+
+    Çalışma saatleri: Hafta içi 9:00-12:00
+
+    Adres: <a href="https://goo.gl/maps/Qepa2qhKDfdu7Qa68">Minsk, st. Volodarskogo, 6</a>
+
+    Web sitesi: http://minsk.emb.mfa.gov.tr/Mission/Contact'
+- id: OTHER_PHONES
+  text: "*Faydalı telefon numaraları:*\n\n ''''\n 115 - Uluslararası operatör\n 141 - Telefonla telgraflar\n 144 - Ailenin\
+    \ Sosyal Koruma Bakanlığı\n 170 - Çalışma ve Sosyal Güvenlik Bakanlığı\n 174 - Yiyecekle ilgili şikayetler\n 175 - Tüketicinin\
+    \ korunması\n 135 - Çalar saat\n 158 - Sahil Güvenlik\n 183 - Sosyal hizmet\n 186 - Elektrik acil servisi\n 187 - Gaz\
+    \ servisi\n 189 - Vergi referansı\n 182 - Doktorlardan ücretsiz randevu sistemi\n 126 - Kablolu televizyon\n\n \U0001F3E5\
+    Hastaneler:\n Antalya - 227 43 43, 243 50 60\n Kemer - 814 15 50, 814 11 41\n Yan - 753 12 21, 753 14 45\n\n Otogar (Antalya)\
+    \ - (242)3311250\n Turist Bilgi Bürosu - (242)2411747\n Türkiye Seyahat Acenteleri Birliği - (242)2431934\n ''''"

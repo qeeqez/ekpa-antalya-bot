@@ -1,0 +1,293 @@
+version: '1.0'
+screens:
+- id: DIRECTIONS
+  text: '*في المجمع والقريب*'
+  button_texts:
+    markets: 🧺 الأسواق
+    shops: 🍎 متاجر
+    shopping_centers: 🛍 مركز تسوق
+    print_photo: 🖨️ طباعة وتصوير 📸
+    barber: ✂️ صالونات الحلاقة
+    residence_fitness_spa: 💪 ريزيدنس فيتنس آند سبا
+    tax_office: 💸 الضريبة
+    post_office: ✉️ البريد
+    city_hall: 🏛 بيليدية
+    population_office: 🧑‍💼 نفوس
+    migration_office: 👮جوك
+- id: MARKETS
+  text: '*🧺 أقرب الأسواق:*
+
+
+    *الإثنين*
+
+    📍[سوق إرسوي](https://goo.gl/maps/6yhUhbb9Zpijy76JA) \(2\.5 كم\)
+
+
+    *الأربعاء*
+
+    📍[سوق بشكوناكلار](https://goo.gl/maps/RGH5rS8h7b2AMfCU6) \(500 م، قبل الغداء\)
+
+    📍[سوق ديميرغول](https://goo.gl/maps/uqxp8L4RscSe2jpM7) \(1\.7 كم\)
+
+    📍[سوق سوتكولر](https://goo.gl/maps/yFbwpSdE4yNt7ojH7) \(3 كم\)
+
+
+    *الخميس*
+
+    📍[سوق جوكسو](https://goo.gl/maps/WakaAx3KK4Vmz9ELA) \(1\.7 كم\)
+
+    📍[سوق سوتكولر](https://goo.gl/maps/68DWmnXecWeFLbj4A) \(2\.2 كم\)
+
+
+    *الجمعة*
+
+    📍[سوق تيومان باشا](https://goo.gl/maps/nRZKwLYFBEuVV6BJ7) \(2\.5 كم\)
+
+
+    *السبت*
+
+    📍[سوق جونيش](https://maps.app.goo.gl/AKJnVMJmheDE4g2dA) \(1\.4 كم\)'
+  button_texts:
+    all_markets: 🧺 أسواق أخرى
+- id: ALL_MARKETS
+  text: '*الأسواق:*
+
+
+    📍 [سوق SISTELER](https://goo.gl/maps/mYUuZawfTAU2) \(الاثنين\)
+
+    📍[بازار ينيدوجان](https://goo.gl/maps/DSfCL1JxACD2) \(الاثنين\)
+
+    📍[سوق ليمان](https://goo.gl/maps/nA23cv3x6sy) \(الثلاثاء\)
+
+    📍[بازار باهشيليفلر](https://goo.gl/maps/cao3iJC1Dg72) \(الثلاثاء\)
+
+    📍[سوق يشيلباهتشه](https://goo.gl/maps/nrT3xnr1f7P2) \(الأربعاء\)
+
+    📍 [بازار سيجورتا](https://goo.gl/maps/xpdVAv743nT2) \(الأربعاء\)
+
+    📍 [سوق بازار أوتريتمينيفي](https://goo.gl/maps/6Ya5yxszQp92) \(الأربعاء\)
+
+    📍 [ديديمان بازار](https://goo.gl/maps/dRU5nL5AR752) \(الخميس\)
+
+    📍[سوق باهشيلييفلر](https://goo.gl/maps/usNRD4oQRxH2) \(الخميس\)
+
+    📍 [بازار غولفيرين](https://goo.gl/maps/MqwpmNKb7js) \(الخميس\)
+
+    📍 [سوق بيرسيمبي SEMT](https://goo.gl/maps/CEfKqRQTtbN2) \(الخميس\)
+
+    📍[بازار التينكوم](https://goo.gl/maps/4dpRFg4BPcq) \(الجمعة\)
+
+    📍 [سوق جوزيلوبا](https://goo.gl/maps/DvVpef5xqZo) \(الجمعة\)
+
+    📍[سوق كيزيلتوبراك](https://goo.gl/maps/DGQKNLy5D7J2) \(الجمعة\)
+
+    📍 [بازار كيزيلتوبراك](https://goo.gl/maps/dRKoX3MWrrt) \(الجمعة\)
+
+    📍 [بازار كونوكسفير](https://goo.gl/maps/fNqtj7SXdaS2) \(السبت\)
+
+    📍[سوق ظافر](https://goo.gl/maps/jGzGvtS6q5L2) \(السبت\)
+
+    📍 [بازار بينارباشي](https://goo.gl/maps/FNhE4hF4fSN2) \(الأحد\)
+
+    📍 [سوق سيجورتا](https://goo.gl/maps/xpdVAv743nT2) \(الأحد\)
+
+    📍 [بازار تشاغليان](https://goo.gl/maps/DzBmxTcAdTx) \(الأحد\)
+
+    📍[بازار باهشيلييفلر](https://goo.gl/maps/usNRD4oQRxH2) \(الأحد\)'
+  button_texts:
+    markets: 🧺 الأسواق
+- id: SHOPS
+  text: '*🍎أقرب المتاجر*
+
+
+    *في المجمع*
+
+    🍎 *ميغروس* \- ساعات العمل\: 09\:00 \- 22\:00
+
+    🍎 *A101* \- ساعات العمل\: 09\:00 \- 21\:00
+
+    🍾 *إيليت 0709* \- 24 ساعة
+
+
+    *الشبكات*
+
+    📍[تاهتاكالي](https://goo.gl/maps/trZCbiCLrSVKujrm7) \(900 م\)
+
+    متجر لجميع المناسبات\. بما في ذلك المنتجات\. المحل مكون من 3 طوابق.
+
+
+    🍌 [سوك](https://goo.gl/maps/bz15sV6peBEuQf9Z8) \(600 م\)
+
+    🍌 [بيم](https://goo.gl/maps/ZEy8ZHqMTKCEMCdPA) \(650 م\)
+
+    🍌 [A101](https://goo.gl/maps/UDmQrYRjrhWi7s7V7) \(650 م\)
+
+    🍎 [ميغروس](https://goo.gl/maps/XXKsLLLMH61ojpnP8) \(1\.1 كم\)
+
+    شبكة ميغروس تبيع الكحول.
+
+
+    *المتاجر المحلية*
+
+    🍞 [مخبز](https://goo.gl/maps/uKP6r6M9wbWnNzF4A)\(200م\)
+
+    🥩 [لحم](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 م\)
+
+    🍷[سوق مشروبات صويلو](https://goo.gl/maps/o4TSPiKd99Q7bUEEA) \(650 م\)
+
+
+    * سلسلة متاجر كبيرة *
+
+    🛒 [المترو](https://goo.gl/maps/nCPd4qcC4ssJCk4E9) \(4\.4 كم\)
+
+    🛒 [5M ميغروس كيبيز](https://goo.gl/maps/exzze46k7XUkAYPVA) \(10\.6 كم\)
+
+    🛒 [5M ميغروس كونيالتي](https://goo.gl/maps/Z6PwMLrPprPGSwW47) \(10\.6 كم\)'
+- id: SHOPPING_CENTERS
+  text: '*🛍 مراكز التسوق*
+
+
+    📍[أغورا](https://goo.gl/maps/TshggHds8sAVBACV6) \(3\.8 كم\)
+
+    📍[مول أنطاليا](https://g.page/MallOfAntalya) \(4\.8 كم\)
+
+    📍[مارك أنطاليا](https://goo.gl/maps/BjqUUFpYRthDPZFJ9) \(6\.4 كم\)
+
+    📍[تيرا سيتي](https://g.page/TerraCity) \(10\.3 كم\)
+
+    📍[5M Migros AVM Konyaaltı](https://g.page/AntalyaMigrosAVM) \(10\.4 كم\)
+
+
+    📍[حديقة أوزديليك](https://g.page/ozdilekparkantalya) \(6\.6 كم\)
+
+    📍[Kipa AVM \(5M Migros Kepez\)](https://goo.gl/maps/FwRYmYLhETHsdX458) \(7\.0 كم\)
+
+    📍[Erasta AVM](https://g.page/erastaantalyaavm) \(8\.3 كم\)
+
+
+    *البناء*
+
+    🛋 [ايكيا](https://goo.gl/maps/zdLcFzx1tnq7EMXJ6) \(3\.9 كم\)
+
+    🪴 [كوكتاس](https://goo.gl/maps/qYwje1sAhz1SQ9ycA) \(5\.6 كم\)
+
+    🪚 [باوهاوس كيبيز](https://goo.gl/maps/1VpdQAqd7giKGgbD8) \(8\.4 كم\)'
+- id: PRINT_AND_PHOTO
+  text: '*الطباعة والصور*
+
+
+    📍[HYT KIRTASİYE](https://goo.gl/maps/sxUvXUzyxyj5LXnD6) \(350 م\)
+
+
+    📍[لون بيلا](https://goo.gl/maps/u3tRZcm2DXbC7Bh49) \(750 م\)
+
+    \- طباعة ملونة 10 ليرة تركية
+
+    \- الصور البيومترية 300 ليرة تركية
+
+
+    📍[الفوتوكوبي](https://goo.gl/maps/T6UtpDPoSSve3p58A) \(900 م\)
+
+    📍[ نيبي فوتوغرافسيليك ](https://g.page/NebiFoto) \(1\.2 كم\)'
+- id: BARBER
+  text: '*صالونات الحلاقة*
+
+
+    📍[صالون NZM](https://goo.gl/maps/yePJMmDWHJDqcCSS7)
+
+    قص شعر \+ غسيل \+ تصفيف 200 ليرة تركية\.
+
+
+    📍[يجيت إركيك كوافورو](https://goo.gl/maps/KUYj8pheja9Y2QST6)
+
+
+    📍 [حلاق أحمد](https://goo.gl/maps/uvpYxdxAJTF1bfYx5)
+
+
+    📍 [بالقرب من ميغروس](https://goo.gl/maps/PiBvkRPMak7bNo23A)'
+- id: TAX_OFFICE
+  text: '*💸 الضريبة \(فيرجي ديريسي\)*
+
+
+    ℹ️ *هنا يمكنك:*
+
+    \- الحصول على رقم التعريف الضريبي التركي
+
+    \- ادفع الرسوم لفتح هاتفك
+
+    \- دفع غرامة السيارات التي تحمل لوحات أجنبية
+
+
+    📍[أنطاليا فيرجي ديريسي](https://goo.gl/maps/qtCJEGf4cYfD1QXR6) \(7\.7 كم\)'
+- id: POST_OFFICE
+  text: '*✉️ البريد \(PTT\)*
+
+
+    📍[PTT Yesilirmak](https://goo.gl/maps/sCWvbXQSn5nhR1U48) \(2\.6 كم\)
+
+    مكتب بريد مجمعنا، ikamets يأتون إلى هنا
+
+
+    📍[PTT تيومانباسا](https://goo.gl/maps/xq1qT8CjHqhzXtKx9) \(2\.1 كم\)
+
+    📍[PTT Sutculer](https://goo.gl/maps/nd8XwFx2EbUYSCj57) \(2\.9 كم\)
+
+
+    ℹ️ أين يمكنك الدفع مقابل المرافق، اقرأ القسم:
+
+    🌟 كل شيء عن إكبا \-\> 💰 كيفية الدفع؟'
+- id: CITY_HALL
+  text: '*🏛 البلدية \(البلدية\)*
+
+
+    ℹ️ في هذه المؤسسة يمكنك الحصول على شهادة *نوماراتاج* \(نوماراتاج\) اللازمة للحصول على تصريح الإقامة
+
+    ⚡️ في الطابق الأرضي يمكنك عمل نسخ من المستندات مقابل 1 ليرة تركية
+
+
+    📍[كبيز بيليدي](https://goo.gl/maps/5WBP63uMR5dCa1HcA) \(3\.5 كم\)'
+- id: POPULATION_OFFICE
+  text: '*🧑‍💼النفوس \(وزارة التسجيل السكاني\)*
+
+
+    ℹ️ في هذه المؤسسة يتم إصدار التابا وتسجيل المواطنين الأتراك وتسجيل المواليد الجدد وحل القضايا السكانية الأخرى\.
+
+    ⚠️ يجب على الأجانب التسجيل في Goc وليس Nufus\.
+
+
+    📍[كبيز نوفوس](https://goo.gl/maps/1u4SiTYfYBVbRNFs8) \(3\.5 كم\)'
+- id: MIGRATION_OFFICE
+  text: '*👮 جوك إدريسي \(إدارة الهجرة في أنطاليا\)*
+
+
+    1️⃣ هنا تحتاج إلى التسجيل\.
+
+    2️⃣ هنا يتم اللقاء \(طلب الحصول على تصريح الإقامة\) ويتم حل كافة المسائل المتعلقة بتصريح الإقامة\.
+
+    3️⃣ أولئك الذين لم يفعلوا ذلك بعد قد يتم استدعاؤهم هنا لأخذ بصمات أصابعهم.
+
+
+    📍[Goc Idaresi](https://goo.gl/maps/Q46vs5Dj9ipu32cS9) \(8\.1 كم\)'
+- id: RESIDENCE_FITNESS_SPA
+  text: '*🧖‍♀ أتا ويلنيس فيتنس آند سبا*
+
+
+    📍 *بلوك E1، \-الطابق الأول*
+
+
+    🕗 *الاثنين \- السبت:* 08:00 \- 22:00
+
+    🕛 *الأحد:* 12:00\- 22:00
+
+
+    📞 \+90 \(537\) 658 07 17
+
+
+    📶 WiFi: *Ata\_Spa\_Fitness*
+
+    ℹ️ كلمة المرور: `ataspafitnes1207`
+
+
+    👨‍💻 تطبيق تسجيل الدخول
+
+    [📱 آيفون](https://apps.apple.com/tr/app/maksigym/id1456092029) [🤖 أندرويد](https://play.google.com/store/apps/details?id=com.maksigym.maksisoft.maksisoftmobile)'

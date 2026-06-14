@@ -1,0 +1,75 @@
+version: '1.0'
+commands:
+  - command: /start
+    description: '{{button_main_menu}}'
+  - command: /menu
+    description: '{{button_main_menu}}'
+  - command: /botlink
+    description: '{{button_bot_link}}'
+  - command: /ourchats
+    description: '{{button_our_chats}}'
+screens:
+  - id: MAIN_MENU
+    text: |-
+      *{{button_main_menu}}*
+    button_texts:
+      ekpa_main_chat: 🏠 {{button_main_chat}}
+      our_chats: 💬 {{button_our_chats}}
+      directions: 🏡 {{button_directions}}
+      info_useful: ⭐️ {{button_info_general}}
+      info_ekpa: 🌟 {{button_info_ekpa}}
+      address: 📍 {{button_address}}
+      suggest_changes: ✍️ {{button_suggest_changes}}
+  - id: ADDRESS
+    text: |-
+      *Биздин дарек:*
+
+      *il:* `Antalya`
+
+      *ilçe:* `Kepez`
+
+      *Mahalle:* `Güneş`
+
+      *Caddesi:* `Şehit Astsubay Ömer Halis Demir`
+
+      *Site:* `Ekpa 1207`
+
+      *Block* \(Блок\), *Daire* \(Квартира\), *Kat* \(Кабат\)
+
+      *Почта индекси:* `07260`
+
+      *Блоктордун нумерациясы:*
+
+      `A1` \- `95A`
+
+      `A2` \- `95AA`
+
+      `A3` \- `95AB`
+
+      `A4` \- `95AC`
+
+      `В`  \- `95В`
+
+      `С`  \- `95С`
+
+      `D`  \- `95D`
+
+      `E1` \- `95E`
+
+      `E2` \- `95EA`
+
+      *Көчүрүү үчүн басыңыз:*
+
+      `Antalya, Kepez, Gunes Mah., Sehit Astsubay Omer Halis Demir Cad., Ekpa 1207 Sitesi`
+  - id: BOT_LINK
+    text: |-
+      *{{button_bot_link}}:*
+
+      https://t\.me/EkpaAntalyaBot
+
+      Шилтемени кошуналар менен бөлүшүңүз 😊
+  - id: OUR_CHATS_INFO
+    text: |-
+      *💬 {{button_our_chats}}*
+    button_texts:
+      our_chats_detailed: 📋 {{button_our_chats}}

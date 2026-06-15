@@ -22,6 +22,7 @@ func (s *BotService) Start(ctx context.Context) error {
 
 	s.startHealthServer()
 	s.initializeBotCommands(ctx)
+	s.startContentWatcher(ctx)
 
 	if err := s.logBotInfo(ctx); err != nil {
 		return err
@@ -48,6 +49,25 @@ func (s *BotService) startHealthServer() {
 func (s *BotService) initializeBotCommands(ctx context.Context) {
 	if err := s.setBotCommands(ctx); err != nil {
 		slog.Warn("Failed to set bot commands", "error", err)
+	}
+}
+
+// startContentWatcher enables live reload of bot content from disk.
+func (s *BotService) startContentWatcher(ctx context.Context) {
+	if err := s.content.Watch(ctx, func(err error) {
+		if err != nil {
+			slog.Warn("Content reload failed", "error", err)
+			return
+		}
+
+		slog.Info("Content reloaded from disk")
+		s.health.RecordContentLoad()
+
+		if reloadErr := s.setBotCommands(ctx); reloadErr != nil {
+			slog.Warn("Failed to refresh bot commands after content reload", "error", reloadErr)
+		}
+	}); err != nil {
+		slog.Warn("Failed to start content watcher", "error", err)
 	}
 }
 

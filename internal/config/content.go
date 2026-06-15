@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"sync"
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
@@ -12,10 +13,11 @@ import (
 
 // ContentRepository manages all bot content (screens, commands, etc.)
 type ContentRepository struct {
+	mu         sync.RWMutex
+	contentDir string
 	catalog    *domain.ContentCatalog
 	screens    map[string]*domain.Screen
 	navigation *domain.NavigationRegistry
-	renderer   *LocalizedContentRenderer
 }
 
 // ContentFile represents a content YAML file structure
@@ -48,21 +50,27 @@ type LocalizedCommand struct {
 
 // NewContentRepository creates and initializes a new content repository
 func NewContentRepository(contentDir string) (*ContentRepository, error) {
+	repo, err := loadContentRepository(contentDir)
+	if err != nil {
+		return nil, err
+	}
+
+	return repo, nil
+}
+
+func loadContentRepository(contentDir string) (*ContentRepository, error) {
 	repo := &ContentRepository{
+		contentDir: contentDir,
 		catalog:    domain.NewContentCatalog(),
 		screens:    make(map[string]*domain.Screen),
 		navigation: domain.NewNavigationRegistry(),
 	}
 
-	// Load content first
 	if err := repo.loadContent(contentDir); err != nil {
 		return nil, err
 	}
 
 	repo.screens = repo.materializeScreens()
-	repo.renderer = NewLocalizedContentRenderer(repo.catalog, repo.navigation)
-
-	// Automatically build navigation hierarchy from screen relationships
 	repo.navigation.BuildFromScreens(repo.screens)
 
 	return repo, nil
@@ -221,20 +229,34 @@ func (r *ContentRepository) parseLocalizedContentFile(data []byte) (*LocaleConte
 
 // GetScreenForLocale returns a screen by ID localized for the given Telegram locale.
 func (r *ContentRepository) GetScreenForLocale(screenID, localeCode string) (*domain.Screen, error) {
-	return r.renderer.Screen(screenID, localeCode, r.screens)
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+
+	renderer := NewLocalizedContentRenderer(r.catalog, r.navigation)
+	return renderer.Screen(screenID, localeCode, r.screens)
 }
 
 // GetCommandsForLocale returns the command registry localized for the given Telegram locale.
 func (r *ContentRepository) GetCommandsForLocale(localeCode string) *domain.CommandRegistry {
-	return r.renderer.Commands(localeCode)
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+
+	renderer := NewLocalizedContentRenderer(r.catalog, r.navigation)
+	return renderer.Commands(localeCode)
 }
 
 // GetAllScreens returns all registered screens
 func (r *ContentRepository) GetAllScreens() map[string]*domain.Screen {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+
 	return r.screens
 }
 
 // GetNavigationRegistry returns the navigation registry (for debugging/inspection)
 func (r *ContentRepository) GetNavigationRegistry() *domain.NavigationRegistry {
+	r.mu.RLock()
+	defer r.mu.RUnlock()
+
 	return r.navigation
 }

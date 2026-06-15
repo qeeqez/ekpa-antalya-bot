@@ -1,23 +1,35 @@
 package config
 
 import (
+	"crypto/sha256"
+	"encoding/hex"
 	"fmt"
 	"log/slog"
 	"os"
 	"path/filepath"
+	"sort"
+	"strings"
 	"time"
 
 	"github.com/fsnotify/fsnotify"
+	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 )
 
 const contentReloadDebounce = 150 * time.Millisecond
 
+// ReloadResult reports what changed during a content reload.
+type ReloadResult struct {
+	CommandsChanged bool
+}
+
 // Reload reloads content from disk and swaps in the new snapshot atomically.
-func (r *ContentRepository) Reload() error {
+func (r *ContentRepository) Reload() (ReloadResult, error) {
 	fresh, err := loadContentRepository(r.contentDir)
 	if err != nil {
-		return err
+		return ReloadResult{}, err
 	}
+
+	commandsChanged := commandSignature(r.catalog) != commandSignature(fresh.catalog)
 
 	r.mu.Lock()
 	defer r.mu.Unlock()
@@ -26,11 +38,11 @@ func (r *ContentRepository) Reload() error {
 	r.screens = fresh.screens
 	r.navigation = fresh.navigation
 
-	return nil
+	return ReloadResult{CommandsChanged: commandsChanged}, nil
 }
 
 // Watch starts a filesystem watcher for the content directory.
-func (r *ContentRepository) Watch(ctx DoneContext, onReload func(error)) error {
+func (r *ContentRepository) Watch(ctx DoneContext, onReload func(ReloadResult, error)) error {
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
 		return fmt.Errorf("failed to create content watcher: %w", err)
@@ -61,7 +73,7 @@ type DoneContext interface {
 	Done() <-chan struct{}
 }
 
-func (r *ContentRepository) runContentWatchLoop(ctx DoneContext, watcher *fsnotify.Watcher, onReload func(error)) {
+func (r *ContentRepository) runContentWatchLoop(ctx DoneContext, watcher *fsnotify.Watcher, onReload func(ReloadResult, error)) {
 	defer func() {
 		_ = watcher.Close()
 	}()
@@ -99,7 +111,7 @@ func shouldReloadContent(event fsnotify.Event) bool {
 	return event.Op&(fsnotify.Create|fsnotify.Write|fsnotify.Remove|fsnotify.Rename) != 0
 }
 
-func handleContentWatchEvent(event fsnotify.Event, watcher *fsnotify.Watcher, onReload func(error)) bool {
+func handleContentWatchEvent(event fsnotify.Event, watcher *fsnotify.Watcher, onReload func(ReloadResult, error)) bool {
 	if !shouldReloadContent(event) {
 		return false
 	}
@@ -111,22 +123,23 @@ func handleContentWatchEvent(event fsnotify.Event, watcher *fsnotify.Watcher, on
 	return true
 }
 
-func reportContentWatchError(err error, onReload func(error)) {
+func reportContentWatchError(err error, onReload func(ReloadResult, error)) {
 	if onReload != nil {
-		onReload(fmt.Errorf("content watcher error: %w", err))
+		onReload(ReloadResult{}, fmt.Errorf("content watcher error: %w", err))
 	}
 }
 
-func reportContentReload(r *ContentRepository, onReload func(error)) {
-	if err := r.Reload(); err != nil {
+func reportContentReload(r *ContentRepository, onReload func(ReloadResult, error)) {
+	result, err := r.Reload()
+	if err != nil {
 		if onReload != nil {
-			onReload(err)
+			onReload(ReloadResult{}, err)
 		}
 		return
 	}
 
 	if onReload != nil {
-		onReload(nil)
+		onReload(result, nil)
 	}
 }
 
@@ -173,6 +186,45 @@ func addWatchedDirs(watcher *fsnotify.Watcher, root string) error {
 	}
 
 	return nil
+}
+
+func commandSignature(catalog *domain.ContentCatalog) string {
+	if catalog == nil {
+		return ""
+	}
+
+	var parts []string
+	parts = append(parts, strings.Join(catalog.CommandOrder, ","))
+
+	shared := make([]string, 0, len(catalog.Commands))
+	for name, command := range catalog.Commands {
+		shared = append(shared, fmt.Sprintf("%s|%s|%s|%t", name, command.Command, command.ScreenID, command.IsPinned))
+	}
+	sort.Strings(shared)
+	parts = append(parts, strings.Join(shared, ";"))
+
+	localeCodes := make([]string, 0, len(catalog.Bundles))
+	for localeCode := range catalog.Bundles {
+		localeCodes = append(localeCodes, localeCode)
+	}
+	sort.Strings(localeCodes)
+
+	for _, localeCode := range localeCodes {
+		bundle := catalog.Bundles[localeCode]
+		if bundle == nil {
+			continue
+		}
+
+		localized := make([]string, 0, len(bundle.Commands))
+		for commandName, command := range bundle.Commands {
+			localized = append(localized, fmt.Sprintf("%s|%s", commandName, command.Description))
+		}
+		sort.Strings(localized)
+		parts = append(parts, localeCode+":"+strings.Join(localized, ";"))
+	}
+
+	sum := sha256.Sum256([]byte(strings.Join(parts, "||")))
+	return hex.EncodeToString(sum[:])
 }
 
 type contentReloadScheduler struct {

@@ -9,6 +9,7 @@ import (
 	"time"
 
 	"github.com/mymmrac/telego"
+	"github.com/qeeqez/ekpaantalyabot/internal/config"
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
 	"github.com/qeeqez/ekpaantalyabot/internal/middleware"
@@ -54,7 +55,7 @@ func (s *BotService) initializeBotCommands(ctx context.Context) {
 
 // startContentWatcher enables live reload of bot content from disk.
 func (s *BotService) startContentWatcher(ctx context.Context) {
-	if err := s.content.Watch(ctx, func(err error) {
+	if err := s.content.Watch(ctx, func(result config.ReloadResult, err error) {
 		if err != nil {
 			slog.Warn("Content reload failed", "error", err)
 			return
@@ -62,6 +63,10 @@ func (s *BotService) startContentWatcher(ctx context.Context) {
 
 		slog.Info("Content reloaded from disk")
 		s.health.RecordContentLoad()
+
+		if !result.CommandsChanged {
+			return
+		}
 
 		if reloadErr := s.setBotCommands(ctx); reloadErr != nil {
 			slog.Warn("Failed to refresh bot commands after content reload", "error", reloadErr)

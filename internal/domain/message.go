@@ -18,10 +18,12 @@ type MessageSender interface {
 type ParseMode string
 
 const (
-	ParseModeMarkdownV2 ParseMode = "MarkdownV2"
-	ParseModeHTML       ParseMode = "HTML"
-	ParseModeMarkdown   ParseMode = "Markdown"
-	ParseModeNone       ParseMode = ""
+	ParseModeMarkdownV2   ParseMode = "MarkdownV2"
+	ParseModeHTML         ParseMode = "HTML"
+	ParseModeMarkdown     ParseMode = "Markdown"
+	ParseModeRichHTML     ParseMode = "RichHTML"
+	ParseModeRichMarkdown ParseMode = "RichMarkdown"
+	ParseModeNone         ParseMode = ""
 )
 
 // Screen represents a single screen/menu in the bot

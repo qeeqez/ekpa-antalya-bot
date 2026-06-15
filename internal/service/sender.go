@@ -24,6 +24,10 @@ func NewMessageSender(bot *telego.Bot) domain.MessageSender {
 
 // SendScreen sends a screen as a new message
 func (s *TelegramSender) SendScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error) {
+	if s.shouldUseRichMessage(screen) {
+		return s.sendRichScreen(ctx, chatID, screen)
+	}
+
 	msg := telegoutil.Message(chatID, screen.Text)
 	s.applyScreenSettingsToSendMessage(msg, screen)
 
@@ -37,6 +41,10 @@ func (s *TelegramSender) SendScreen(ctx context.Context, chatID telego.ChatID, s
 
 // EditScreen edits an existing message with a screen
 func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error) {
+	if s.shouldUseRichMessage(screen) {
+		return s.editRichScreen(ctx, chatID, messageID, screen)
+	}
+
 	msg := new(telego.EditMessageTextParams{
 		ChatID:    chatID,
 		MessageID: messageID,
@@ -47,6 +55,65 @@ func (s *TelegramSender) EditScreen(ctx context.Context, chatID telego.ChatID, m
 	message, err := s.bot.EditMessageText(ctx, msg)
 	if err != nil {
 		return nil, fmt.Errorf("failed to edit message: %w", err)
+	}
+
+	return message, nil
+}
+
+func (s *TelegramSender) shouldUseRichMessage(screen *domain.Screen) bool {
+	return screen != nil && (screen.ParseMode == domain.ParseModeRichHTML || screen.ParseMode == domain.ParseModeRichMarkdown)
+}
+
+func (s *TelegramSender) sendRichScreen(ctx context.Context, chatID telego.ChatID, screen *domain.Screen) (*telego.Message, error) {
+	params := &telego.SendRichMessageParams{
+		ChatID: chatID,
+	}
+
+	if screen.ParseMode == domain.ParseModeRichMarkdown {
+		params.RichMessage = telego.InputRichMessage{Markdown: screen.Text}
+	} else {
+		params.RichMessage = telego.InputRichMessage{HTML: screen.Text}
+	}
+
+	if screen.DisableWebPreview {
+		slog.Debug("Ignoring disable_web_preview for rich message", "screen_id", screen.ID)
+	}
+
+	if len(screen.InlineKeyboard.Rows) > 0 {
+		params.ReplyMarkup = s.buildInlineKeyboard(screen.InlineKeyboard)
+	}
+
+	message, err := s.bot.SendRichMessage(ctx, params)
+	if err != nil {
+		return nil, fmt.Errorf("failed to send rich message: %w", err)
+	}
+
+	return message, nil
+}
+
+func (s *TelegramSender) editRichScreen(ctx context.Context, chatID telego.ChatID, messageID int, screen *domain.Screen) (*telego.Message, error) {
+	params := &telego.EditMessageTextParams{
+		ChatID:    chatID,
+		MessageID: messageID,
+	}
+
+	if screen.ParseMode == domain.ParseModeRichMarkdown {
+		params.RichMessage = &telego.InputRichMessage{Markdown: screen.Text}
+	} else {
+		params.RichMessage = &telego.InputRichMessage{HTML: screen.Text}
+	}
+
+	if screen.DisableWebPreview {
+		slog.Debug("Ignoring disable_web_preview for rich message", "screen_id", screen.ID)
+	}
+
+	if len(screen.InlineKeyboard.Rows) > 0 {
+		params.ReplyMarkup = s.buildInlineKeyboard(screen.InlineKeyboard)
+	}
+
+	message, err := s.bot.EditMessageText(ctx, params)
+	if err != nil {
+		return nil, fmt.Errorf("failed to edit rich message: %w", err)
 	}
 
 	return message, nil

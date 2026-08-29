@@ -1,0 +1,19 @@
+[tools]
+go = '1.27'
+golangci-lint = '2.13.2'
+lefthook = '2.1.12'
+
+[hooks]
+postinstall = 'lefthook install'
+
+[tasks.fmt]
+run = 'gofmt -w -s .'
+
+[tasks.lint]
+run = 'golangci-lint run'
+
+[tasks.test]
+run = 'go test -race ./...'
+
+[tasks.build]
+run = 'go build ./...'

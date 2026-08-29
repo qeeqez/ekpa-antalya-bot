@@ -47,3 +47,25 @@ func TestTextFallsBackToRussian(t *testing.T) {
 		t.Fatalf("unexpected fallback text: %q", got)
 	}
 }
+
+func TestIsRTL(t *testing.T) {
+	tests := []struct {
+		name string
+		code string
+		want bool
+	}{
+		{name: "arabic", code: "ar", want: true},
+		{name: "arabic variant", code: "ar-EG", want: true},
+		{name: "english", code: "en", want: false},
+		{name: "russian", code: "ru", want: false},
+		{name: "unknown", code: "ja", want: false},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := locale.IsRTL(tt.code); got != tt.want {
+				t.Fatalf("IsRTL(%q) = %v, want %v", tt.code, got, tt.want)
+			}
+		})
+	}
+}

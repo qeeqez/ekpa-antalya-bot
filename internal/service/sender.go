@@ -74,6 +74,7 @@ func (s *TelegramSender) sendRichScreen(ctx context.Context, chatID telego.ChatI
 	} else {
 		params.RichMessage = telegoutil.RichMessageHTML(screen.Text)
 	}
+	params.RichMessage.IsRtl = screen.IsRTL
 
 	if screen.DisableWebPreview {
 		slog.Debug("Ignoring disable_web_preview for rich message", "screen_id", screen.ID)
@@ -102,6 +103,7 @@ func (s *TelegramSender) editRichScreen(ctx context.Context, chatID telego.ChatI
 	} else {
 		params.RichMessage = new(telego.InputRichMessage).WithHTML(screen.Text)
 	}
+	params.RichMessage.IsRtl = screen.IsRTL
 
 	if screen.DisableWebPreview {
 		slog.Debug("Ignoring disable_web_preview for rich message", "screen_id", screen.ID)

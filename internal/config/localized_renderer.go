@@ -37,6 +37,9 @@ func (r *LocalizedContentRenderer) Screen(screenID, localeCode string, screens m
 
 	enhancedScreen = r.navigation.AddAutoNavigation(enhancedScreen, locale.Normalize(localeCode))
 	r.expandScreenFragments(enhancedScreen, locale.Normalize(localeCode))
+
+	enhancedScreen.IsRTL = locale.IsRTL(localeCode)
+
 	if err := enhancedScreen.Validate(); err != nil {
 		return nil, err
 	}

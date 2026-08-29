@@ -69,3 +69,9 @@ func supportedLocaleCodes() []string {
 	}
 	return out
 }
+
+// IsRTL reports whether messages for the given locale should be rendered
+// right-to-left.
+func IsRTL(code string) bool {
+	return Normalize(code) == "ar"
+}

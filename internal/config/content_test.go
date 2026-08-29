@@ -214,6 +214,44 @@ screens:
 	}
 }
 
+func TestScreenRTL(t *testing.T) {
+	tmpDir := t.TempDir()
+
+	testYAML := `version: "1.0"
+screens:
+  - id: "MAIN_MENU"
+    text: "Main Menu"
+    parse_mode: "RichHTML"
+`
+	testFile := filepath.Join(tmpDir, "test.yaml")
+	if err := os.WriteFile(testFile, []byte(testYAML), 0o644); err != nil {
+		t.Fatalf("Failed to write test file: %v", err)
+	}
+
+	writeRequiredLocaleBundles(t, tmpDir)
+
+	repo, err := config.NewContentRepository(tmpDir)
+	if err != nil {
+		t.Fatalf("Failed to load content: %v", err)
+	}
+
+	arScreen, err := repo.GetScreenForLocale("MAIN_MENU", "ar-EG")
+	if err != nil {
+		t.Fatalf("Failed to get Arabic screen: %v", err)
+	}
+	if !arScreen.IsRTL {
+		t.Fatalf("Expected Arabic screen to be RTL")
+	}
+
+	ruScreen, err := repo.GetScreenForLocale("MAIN_MENU", "ru")
+	if err != nil {
+		t.Fatalf("Failed to get Russian screen: %v", err)
+	}
+	if ruScreen.IsRTL {
+		t.Fatalf("Expected Russian screen not to be RTL")
+	}
+}
+
 func TestGetNonExistentScreen(t *testing.T) {
 	tmpDir := t.TempDir()
 	writeRequiredLocaleBundles(t, tmpDir)

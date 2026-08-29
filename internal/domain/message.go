@@ -35,6 +35,10 @@ type Screen struct {
 	InlineKeyboard    InlineKeyboard          `yaml:"inline_keyboard"`
 	NavigationTargets []Navigation            `yaml:"navigation,omitempty"`
 	Locales           map[string]ScreenLocale `yaml:"locales,omitempty"`
+	// IsRTL is set at runtime by the content renderer and indicates that the
+	// screen should be rendered right-to-left. Currently only rich messages can
+	// carry the is_rtl flag.
+	IsRTL bool `yaml:"-"`
 }
 
 // ScreenLocale stores localized screen text and button labels.

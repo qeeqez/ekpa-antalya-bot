@@ -70,9 +70,9 @@ func (s *TelegramSender) sendRichScreen(ctx context.Context, chatID telego.ChatI
 	}
 
 	if screen.ParseMode == domain.ParseModeRichMarkdown {
-		params.RichMessage = telego.InputRichMessage{Markdown: screen.Text}
+		params.RichMessage = telegoutil.RichMessageMarkdown(screen.Text)
 	} else {
-		params.RichMessage = telego.InputRichMessage{HTML: screen.Text}
+		params.RichMessage = telegoutil.RichMessageHTML(screen.Text)
 	}
 
 	if screen.DisableWebPreview {
@@ -98,9 +98,9 @@ func (s *TelegramSender) editRichScreen(ctx context.Context, chatID telego.ChatI
 	}
 
 	if screen.ParseMode == domain.ParseModeRichMarkdown {
-		params.RichMessage = &telego.InputRichMessage{Markdown: screen.Text}
+		params.RichMessage = new(telego.InputRichMessage).WithMarkdown(screen.Text)
 	} else {
-		params.RichMessage = &telego.InputRichMessage{HTML: screen.Text}
+		params.RichMessage = new(telego.InputRichMessage).WithHTML(screen.Text)
 	}
 
 	if screen.DisableWebPreview {

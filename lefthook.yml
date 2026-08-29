@@ -2,10 +2,18 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      glob: "*.{go}"
-      run: golangci-lint run --new
+      glob: '*.go'
+      run: mise exec -- golangci-lint run --new
       stage_fixed: true
     format:
-      glob: "*.{go}"
-      run: gofmt -w {staged_files}
+      glob: '*.go'
+      run: mise exec -- gofmt -s -w {staged_files}
       stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    build:
+      run: mise run build
+    test:
+      run: mise run test

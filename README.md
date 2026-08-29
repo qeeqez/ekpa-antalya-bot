@@ -1,6 +1,6 @@
 # EKPA 1207 Telegram Bot
 
-[![Go Version](https://img.shields.io/badge/Go-1.26+-00ADD8?style=flat&logo=go)](https://golang.org)
+[![Go Version](https://img.shields.io/badge/Go-1.27+-00ADD8?style=flat&logo=go)](https://golang.org)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **🤖 Bot:** [@EkpaAntalyaBot](https://t.me/EkpaAntalyaBot)
@@ -84,7 +84,7 @@ go test ./...
 
 ## Tech Stack
 
-- Go 1.26+ with [telego](https://github.com/mymmrac/telego)
+- Go 1.27+ with [telego](https://github.com/mymmrac/telego)
 - YAML for content
 - Docker & GitHub Actions
 - Health check endpoint on :8080

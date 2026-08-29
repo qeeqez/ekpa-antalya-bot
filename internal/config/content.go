@@ -8,7 +8,7 @@ import (
 
 	"github.com/qeeqez/ekpaantalyabot/internal/domain"
 	"github.com/qeeqez/ekpaantalyabot/internal/locale"
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v3"
 )
 
 // ContentRepository manages all bot content (screens, commands, etc.)

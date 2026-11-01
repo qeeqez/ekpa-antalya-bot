@@ -6,7 +6,7 @@ require (
 	github.com/caarlos0/env/v11 v11.4.1
 	github.com/fsnotify/fsnotify v1.10.1
 	github.com/mymmrac/telego v1.12.1
-	go.yaml.in/yaml/v3 v3.0.5
+	go.yaml.in/yaml/v3 v3.0.6
 )
 
 require (
